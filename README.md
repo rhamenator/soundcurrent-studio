@@ -1,4 +1,21 @@
-# SoundCurrent EQ
+# SoundCurrent Studio
+
+Private C++ audio development starting from the SoundCurrent EQ 0.7.0 shared
+Linux/Windows application. The aim is a reusable processing library for
+arbitrary channel layouts, effects, and a separate digital audio workstation suite.
+
+The current processing core implements stereo equalization. The next development
+phase will generalize channel state and routing, add composable effects such as
+delay and reverb, and expose a device-independent library for reuse by the DAW.
+The desktop application and platform audio adapters remain consumers of that library.
+
+The complete source history and tags were imported from
+[SoundCurrent EQ](https://github.com/rhamenator/soundcurrent-eq).
+`main` starts from the current shared application; `public-main` preserves the
+original public default branch and `windows-port` preserves the imported development branch.
+Existing GPL-3.0-only licensing and third-party notices are included.
+
+## Equalizer baseline
 
 SoundCurrent EQ is a native C++ desktop equalizer for Linux and Windows. It
 gives every app that plays through the default output the same adjustable sound
