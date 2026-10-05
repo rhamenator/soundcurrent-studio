@@ -4,16 +4,48 @@ Private C++ audio development starting from the SoundCurrent EQ 0.7.0 shared
 Linux/Windows application. The aim is a reusable processing library for
 arbitrary channel layouts, effects, and a separate digital audio workstation suite.
 
-The current processing core implements stereo equalization. The next development
-phase will generalize channel state and routing, add composable effects such as
-delay and reverb, and expose a device-independent library for reuse by the DAW.
-The desktop application and platform audio adapters remain consumers of that library.
+The **Studio engine 0.1** milestone provides a C++20 library for 1–256 logical
+channels, independent channel EQ, explicit routing matrices, feedback delay and
+algorithmic reverb. An offline WAVE renderer exercises multichannel processing
+without a surround sound device. The library builds without Qt and can be reused
+by a separate DAW through its exported CMake package.
+
+The inherited desktop app still uses its stereo processing path. Connecting the
+new engine to live Linux/Windows device routing and adding Studio effect controls
+are the next development steps; this milestone is an engine preview.
 
 The complete source history and tags were imported from
 [SoundCurrent EQ](https://github.com/rhamenator/soundcurrent-eq).
 `main` starts from the current shared application; `public-main` preserves the
 original public default branch and `windows-port` preserves the imported development branch.
 Existing GPL-3.0-only licensing and third-party notices are included.
+
+## Studio engine quick start
+
+Use a C++20 compiler and CMake 3.20 or newer. Python 3 enables the WAVE file tests.
+No audio device, Qt installation or virtual audio driver is needed:
+
+```bash
+cmake -S . -B build-engine -DSOUNDCURRENT_BUILD_DESKTOP=OFF -DCMAKE_BUILD_TYPE=Release
+cmake --build build-engine --config Release --parallel 2
+ctest --test-dir build-engine -C Release --output-on-failure
+cmake --install build-engine --config Release --prefix "$PWD/engine-sdk"
+```
+
+On Windows, use a Visual Studio 2022 developer terminal. The renderer is in
+`build-engine/Release/`; on Linux it is in `build-engine/`.
+For example, render a new file with delay and reverb:
+
+```bash
+build-engine/soundcurrent-studio-render --input music.wav --output music-effects.wav \
+  --delay-ms 250 --delay-feedback 0.3 --delay-mix 0.15 \
+  --reverb-decay 1.5 --reverb-mix 0.12 --tail 3
+```
+
+Existing output files are never overwritten. CI builds and tests the standalone
+engine on Linux and native Windows, and provides SDK artifacts in this private
+repository. See [engine usage, routing and limits](docs/studio-engine.md) and the
+[independent C++ consumer](examples/engine_consumer) for integration details.
 
 ## Equalizer baseline
 

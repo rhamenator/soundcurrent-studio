@@ -23,7 +23,7 @@ presets, output device selection, and background tray controls for PipeWire.
 %setup -q
 
 %build
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%{_prefix}
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%{_prefix} -DCMAKE_INSTALL_LIBDIR=%{_libdir}
 cmake --build build --parallel %{_smp_build_ncpus}
 
 %install
@@ -33,11 +33,18 @@ DESTDIR=%{buildroot} cmake --install build
 %license LICENSE
 %doc README.md
 %{_bindir}/soundcurrent-eq
+%{_bindir}/soundcurrent-studio-render
+%{_libdir}/libsoundcurrent-dsp.a
+%{_libdir}/libsoundcurrent-engine.a
+%{_libdir}/libsoundcurrent-wave.a
+%{_libdir}/cmake/SoundCurrentEngine
+%{_includedir}/soundcurrent
 %{_datadir}/applications/io.github.rhamenator.SoundCurrentEQ.desktop
 %{_datadir}/icons/hicolor/scalable/apps/io.github.rhamenator.SoundCurrentEQ.svg
 %{_datadir}/doc/soundcurrent-eq/copyright
 %{_datadir}/doc/soundcurrent-eq/LICENSE
 %{_datadir}/doc/soundcurrent-eq/THIRD-PARTY-NOTICES.md
+%{_datadir}/doc/soundcurrent-eq/studio-engine.md
 %{_datadir}/doc/soundcurrent-eq/speakers
 
 %changelog

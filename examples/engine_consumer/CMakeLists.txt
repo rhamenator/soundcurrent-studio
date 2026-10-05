@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(soundcurrent-engine-consumer LANGUAGES CXX)
+find_package(SoundCurrentEngine 0.1 REQUIRED CONFIG)
+add_executable(engine-consumer main.cpp)
+target_link_libraries(engine-consumer PRIVATE SoundCurrent::Engine)

@@ -1,0 +1,55 @@
+name: Studio engine
+on:
+  push:
+    branches: [main]
+    paths: ['src/**', 'tests/**', 'cmake/**', 'examples/**', 'docs/studio-engine.md', 'CMakeLists.txt', '.github/workflows/studio-engine.yml']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  engine:
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          persist-credentials: false
+      - name: Configure standalone C++ engine
+        run: cmake -S . -B build-engine -DSOUNDCURRENT_BUILD_DESKTOP=OFF -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build-engine --config Release --parallel 2
+      - name: Test synthetic audio and WAVE files
+        run: ctest --test-dir build-engine -C Release --output-on-failure
+      - name: Install reusable SDK
+        run: cmake --install build-engine --config Release --prefix "${{ github.workspace }}/engine-sdk"
+      - name: Include Windows renderer runtime
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $vs = & $vswhere -latest -version '[17.0,18.0)' -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          $redist = Get-ChildItem "$vs\VC\Redist\MSVC" -Directory |
+            Where-Object { $_.Name -match '^\d+\.\d+\.\d+$' } |
+            Sort-Object { [version]$_.Name } -Descending |
+            ForEach-Object { Join-Path $_.FullName 'x64\Microsoft.VC143.CRT' } |
+            Where-Object { Test-Path $_ } | Select-Object -First 1
+          if (!$redist) { throw 'Visual Studio 2022 redistributable CRT not found' }
+          Copy-Item "$redist\*.dll" "${{ github.workspace }}/engine-sdk/bin"
+      - name: Build an independent consumer
+        run: cmake -S examples/engine_consumer -B consumer-build -DCMAKE_PREFIX_PATH="${{ github.workspace }}/engine-sdk" -DCMAKE_BUILD_TYPE=Release
+      - name: Compile consumer
+        run: cmake --build consumer-build --config Release --parallel 2
+      - name: Run consumer on Linux
+        if: runner.os == 'Linux'
+        run: ./consumer-build/engine-consumer
+      - name: Run consumer on Windows
+        if: runner.os == 'Windows'
+        run: ./consumer-build/Release/engine-consumer.exe
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: studio-engine-${{ runner.os }}
+          path: engine-sdk/**

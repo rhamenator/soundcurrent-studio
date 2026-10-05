@@ -57,6 +57,10 @@ FilterCoefficients filterCoefficients(const EqBand &band, int sampleRate) {
         b0 = (1 + cosine) / 2; b1 = -(1 + cosine); b2 = b0;
         a0 = 1 + alpha; a1 = -2 * cosine; a2 = 1 - alpha;
         break;
+    case FilterType::LowPass:
+        b0 = (1 - cosine) / 2; b1 = 1 - cosine; b2 = b0;
+        a0 = 1 + alpha; a1 = -2 * cosine; a2 = 1 - alpha;
+        break;
     default:
         b0 = 1 + alpha * a; b1 = -2 * cosine; b2 = 1 - alpha * a;
         a0 = 1 + alpha / a; a1 = -2 * cosine; a2 = 1 - alpha / a;

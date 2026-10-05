@@ -7,7 +7,7 @@
 
 namespace soundcurrent {
 
-enum class FilterType { Peaking, LowShelf, HighShelf, HighPass };
+enum class FilterType { Peaking, LowShelf, HighShelf, HighPass, LowPass };
 
 struct EqBand {
     double frequency;

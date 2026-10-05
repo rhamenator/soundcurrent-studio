@@ -1,6 +1,9 @@
 /build/
 /build-windows/
 /build-windows-native/
+/build-engine/
+/engine-sdk/
+/consumer-build/
 /dist/
 /.cache/
 *.swp
