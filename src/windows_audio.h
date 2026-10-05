@@ -100,6 +100,7 @@ private:
     std::atomic<bool> stopRequested_{false};
     std::atomic<bool> running_{false};
     std::atomic<float> peak_{0.0f};
+    std::atomic<std::size_t> processingChannels_{0};
     std::thread worker_;
     std::mutex profileMutex_;
     Profile profile_;

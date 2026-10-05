@@ -20,7 +20,7 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake ninja-build g++ qt6-base-dev
+          sudo apt-get install -y cmake ninja-build g++ qt6-base-dev libpipewire-0.3-dev
       - name: Build package
         run: ./scripts/build-deb.sh
       - name: Check DSP and shared UI
@@ -29,19 +29,19 @@ jobs:
         run: |
           docker run --rm -v "$PWD:/src" -w /src fedora:44 bash -lc '
             set -euo pipefail
-            dnf install -y cmake gcc-c++ qt6-qtbase-devel rpm-build tar gzip
+            dnf install -y cmake gcc-c++ qt6-qtbase-devel pipewire-devel pkgconf-pkg-config rpm-build tar gzip
             ./scripts/build-rpm.sh
             dnf install -y --allowerasing dist/x86_64/*fc44*.rpm
-            QT_QPA_PLATFORM=offscreen /usr/bin/soundcurrent-eq --ui-self-test
+            QT_QPA_PLATFORM=offscreen /usr/bin/soundcurrent-studio --ui-self-test
           '
       - name: Build and check RHEL 10 compatible RPM
         run: |
           docker run --rm -v "$PWD:/src" -w /src almalinux:10 bash -lc '
             set -euo pipefail
-            dnf install -y cmake gcc-c++ qt6-qtbase-devel rpm-build tar gzip
+            dnf install -y cmake gcc-c++ qt6-qtbase-devel pipewire-devel pkgconf-pkg-config rpm-build tar gzip
             ./scripts/build-rpm.sh
             dnf install -y --allowerasing dist/x86_64/*el10*.rpm
-            QT_QPA_PLATFORM=offscreen /usr/bin/soundcurrent-eq --ui-self-test
+            QT_QPA_PLATFORM=offscreen /usr/bin/soundcurrent-studio --ui-self-test
           '
       - name: Verify package checksums
         run: |
@@ -74,4 +74,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mapfile -d '' assets < <(find packages -type f \( -name '*.deb' -o -name '*.rpm' -o -name '*-setup.exe' -o -name '*.sha256' -o -name 'qtbase*.tar.xz' \) -print0)
-          gh release create "$GITHUB_REF_NAME" "${assets[@]}" --repo "$GITHUB_REPOSITORY" --title "SoundCurrent EQ $GITHUB_REF_NAME" --generate-notes
+          gh release create "$GITHUB_REF_NAME" "${assets[@]}" --repo "$GITHUB_REPOSITORY" --title "SoundCurrent Studio $GITHUB_REF_NAME" --generate-notes

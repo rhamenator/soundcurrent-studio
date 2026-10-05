@@ -1,9 +1,9 @@
 # SoundCurrent Studio engine 0.1
 
 This preview separates processing from device access. It supports 1–256 logical
-channels at 8–384 kHz, with independent state on every channel. The inherited
-desktop application still runs its existing stereo engine. Studio effects and
-multichannel live device routing are not connected to that interface yet.
+channels at 8–384 kHz, with independent state on every channel. The desktop application uses this engine for Studio playback through its native
+PipeWire and WASAPI adapters. The shared EQ, channel filters, routing, delay and
+reverb feed the same processing path.
 
 ## Processing
 
@@ -127,9 +127,9 @@ independent project builds against the installed CMake package in Linux and
 Windows CI. Local AddressSanitizer and UndefinedBehaviorSanitizer checks also
 cover the engine and renderer.
 
-These checks do not require expensive multichannel hardware. Actual speaker
-mapping, device formats, latency and live routing still need platform adapter
-work and hardware verification before a surround desktop release. The current
-desktop equalizer is left on its existing audio path during development.
+These checks do not require expensive multichannel hardware. Native platform adapters and Studio controls are implemented. Actual speaker
+mapping, driver-specific formats, latency and device changes still need physical
+hardware verification before a production surround release. Linux live streams
+are limited to PipeWire’s 64-channel format; offline processing supports 256.
 
 GPL-3.0-only and the inherited copyright/third-party notices remain in force.

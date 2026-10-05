@@ -38,6 +38,7 @@ private:
     void saveProfile();
     void openProfile();
     void render();
+    void renderFiles(const QString &input, const QString &output);
     void tick();
     void startPreview();
     Session session_;

@@ -637,6 +637,8 @@ public:
         bool found = false;
         for (const auto &available : devices()) if (available.name == device.name) found = true;
         if (!found) throw std::runtime_error("Selected output device is no longer available");
+        if (nodeId("soundcurrent_eq") >= 0)
+            throw std::runtime_error("SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.");
         if (nodeId(kSink) >= 0) throw std::runtime_error("Another SoundCurrent Studio sink is already running");
         int deviceChannels=2;
         for(const auto &value:pactlList("sinks"))if(value.toObject().value("name").toString()==device.name)

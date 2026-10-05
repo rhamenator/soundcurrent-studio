@@ -204,6 +204,39 @@ int main(int argc, char **argv) {
             throw std::runtime_error("Restarted audio is silent or changed level");
         bridge.stop();
         constexpr int calibrationRate = 96000;
+        soundcurrent::studio::EngineSettings studio;
+        studio.channels.resize(2);
+        const std::array<double, 4> identity{1,0,0,1};
+        if (!bridge.setStudio(studio, identity) || !bridge.start(cableOutput, speakers))
+            throw std::runtime_error("Studio bridge did not start: " + bridge.error());
+        const auto studioFlat = probe.measure(1000);
+        if (std::abs(decibels(studioFlat.left, flat.left)) > .5)
+            throw std::runtime_error("Studio dry route changed level");
+        studio.postGainDb = 6;
+        if (!bridge.setStudio(studio, identity)) throw std::runtime_error("Studio live gain rejected");
+        const auto studioGain = probe.measure(1000);
+        if (std::abs(decibels(studioGain.left, studioFlat.left)-6) > .5)
+            throw std::runtime_error("Studio live post gain failed");
+        studio.postGainDb = 0; studio.channels[0].bands.push_back({1000,-12,1});
+        bridge.setStudio(studio, identity); const auto studioCut = probe.measure(1000);
+        if (std::abs(decibels(studioCut.left,studioFlat.left)+12) > .5 ||
+            std::abs(decibels(studioCut.right,studioFlat.right)) > .5)
+            throw std::runtime_error("Studio independent channel EQ failed");
+        studio.channels[0].bands.clear(); studio.channels[1].muted = true;
+        studio.delay={true,50,.3,.25}; studio.reverb={true,.5,.4,.15};
+        bridge.setStudio(studio,identity); const auto effects = probe.measure(1000);
+        if (effects.left < .0001 || effects.right > studioFlat.right * .001)
+            throw std::runtime_error("Studio effects or mute failed");
+        studio.bypass=true;bridge.setStudio(studio,identity);const auto studioBypass=probe.measure(1000);
+        if(std::abs(decibels(studioBypass.left,studioFlat.left))>.5 ||
+           std::abs(decibels(studioBypass.right,studioFlat.right))>.5)
+            throw std::runtime_error("Studio bypass failed");
+        auto incompatible=studio;incompatible.channels.resize(8);
+        if(bridge.setStudio(incompatible,std::vector<double>(64)))throw std::runtime_error("Live incompatible layout accepted");
+        if(!bridge.running())throw std::runtime_error("Rejected layout stopped playback");
+        std::printf("Studio live: gain %.2f dB, channel cut %.2f dB; independent mute, effects, bypass and rejected-layout preservation passed.\n",
+            decibels(studioGain.left,studioFlat.left),decibels(studioCut.left,studioFlat.left));
+        bridge.stop();
         std::vector<std::int16_t> stereo(calibrationRate * 2);
         for (int i = 0; i < calibrationRate; ++i) {
             const auto value = std::int16_t(std::lround(100 * std::sin(2 * std::numbers::pi * 1000 * i / calibrationRate)));

@@ -249,6 +249,7 @@ void WindowsBridge::stop() {
     if (worker_.joinable()) worker_.join();
     running_ = false;
     peak_ = 0.0f;
+    processingChannels_ = 0;
     { std::lock_guard lock(meterMutex_); meterSamples_ = 0; }
 }
 
@@ -270,6 +271,7 @@ bool WindowsBridge::setProfile(std::span<const EqBand> bands, double postGainDb,
 }
 
 bool WindowsBridge::setStudio(const studio::EngineSettings &settings, std::span<const double> matrix) {
+    if (running_ && settings.channels.size() != processingChannels_) return false;
     try {
         studio::AudioEngine validate(48000, settings.channels.size());
         studio::ChannelRouter router(settings.channels.size(), settings.channels.size());
@@ -305,6 +307,7 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
         std::shared_ptr<const Profile::Studio> initialStudio;
         { std::lock_guard lock(profileMutex_); if (!microphone) initialStudio = profile_.studio; }
         const std::size_t processingChannels = initialStudio ? initialStudio->settings.channels.size() : 2;
+        processingChannels_ = processingChannels;
         if (microphone) {
             WAVEFORMATEX *mix = nullptr;
             check(captureAudio->GetMixFormat(&mix), "Read microphone mix format");
@@ -322,6 +325,20 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
             captureFormat.nChannels = channels; captureFormat.nBlockAlign = channels * 4;
             captureFormat.nAvgBytesPerSec = captureFormat.nSamplesPerSec * captureFormat.nBlockAlign;
         } else checkFormat(captureAudio.Get(), &captureFormat, "Cable recording endpoint");
+        WAVEFORMATEXTENSIBLE studioCapture{};
+        studioCapture.Format = captureFormat;
+        studioCapture.Format.wFormatTag = WAVE_FORMAT_EXTENSIBLE;
+        studioCapture.Format.cbSize = 22;
+        studioCapture.Samples.wValidBitsPerSample = 32;
+        studioCapture.SubFormat = KSDATAFORMAT_SUBTYPE_IEEE_FLOAT;
+        if (initialStudio) {
+            WAVEFORMATEX *mix = nullptr;
+            check(captureAudio->GetMixFormat(&mix), "Read cable speaker mask");
+            if (mix->wFormatTag == WAVE_FORMAT_EXTENSIBLE && mix->cbSize >= 22)
+                studioCapture.dwChannelMask = reinterpret_cast<WAVEFORMATEXTENSIBLE *>(mix)->dwChannelMask;
+            else if (captureFormat.nChannels == 2) studioCapture.dwChannelMask = SPEAKER_FRONT_LEFT | SPEAKER_FRONT_RIGHT;
+            CoTaskMemFree(mix);
+        }
         WAVEFORMATEX *mixFormatRaw = nullptr;
         check(outputAudio->GetMixFormat(&mixFormatRaw), "Read speaker mix format");
         std::unique_ptr<WAVEFORMATEX, decltype(&CoTaskMemFree)> outputFormat(mixFormatRaw, CoTaskMemFree);
@@ -334,7 +351,7 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
         constexpr REFERENCE_TIME bufferTime = 2000000; // 200 ms, in 100 ns units
         check(captureAudio->Initialize(AUDCLNT_SHAREMODE_SHARED,
                                         (microphone || initialStudio) ? AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM | AUDCLNT_STREAMFLAGS_SRC_DEFAULT_QUALITY : 0,
-                                        bufferTime, 0, &captureFormat, nullptr), "Initialize cable capture");
+                                        bufferTime, 0, initialStudio ? &studioCapture.Format : &captureFormat, nullptr), "Initialize cable capture");
         check(outputAudio->Initialize(AUDCLNT_SHAREMODE_SHARED, 0, bufferTime, 0,
                                        outputFormat.get(), nullptr), "Initialize speaker output");
         UINT32 captureBufferFrames = 0, outputBufferFrames = 0;

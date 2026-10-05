@@ -6,6 +6,7 @@
 #include <QDoubleSpinBox>
 #include <QFile>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QFormLayout>
 #include <QGroupBox>
 #include <QHeaderView>
@@ -54,7 +55,7 @@ std::filesystem::path path(const QString &s) {
 StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persist_(persist) {
     if (persist) try {
         const auto data = QSettings().value("studioSession").toByteArray();
-        if (!data.isEmpty() && data.size() <= 1024 * 1024) session_ = Session::parse(QJsonDocument::fromJson(data).object());
+        if (!data.isEmpty() && data.size() <= 8 * 1024 * 1024) session_ = Session::parse(QJsonDocument::fromJson(data).object());
     } catch (const std::exception &) {} // Malformed saved state falls back to dry stereo.
     auto *root = new QVBoxLayout(this);
     auto *layoutBox = new QGroupBox("Channels and routing"); auto *layoutForm = new QFormLayout(layoutBox);
@@ -204,7 +205,7 @@ void StudioPanel::saveProfile() {
 }
 void StudioPanel::openProfile() {
     if(locked_)return;const auto filename=QFileDialog::getOpenFileName(this,"Open Studio setup",{},"Studio setup (*.scstudio)");if(filename.isEmpty())return;
-    try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>1024*1024)throw std::runtime_error("Setup cannot be read or exceeds 1 MiB");
+    try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error("Setup cannot be read or exceeds 8 MiB");
         auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText("Studio setup loaded for offline review. Uncheck offline editing to use it live.");
     }catch(const std::exception &e){status_->setText(e.what());}
 }
@@ -233,11 +234,15 @@ void StudioPanel::tick() {
 void StudioPanel::render() {
     if(renderJob_.valid())return;const auto input=QFileDialog::getOpenFileName(this,"Input WAVE file",{},"WAVE audio (*.wav)");if(input.isEmpty())return;
     const auto output=QFileDialog::getSaveFileName(this,"New rendered WAVE file",{},"WAVE audio (*.wav)");if(output.isEmpty())return;
+    renderFiles(input,output);
+}
+void StudioPanel::renderFiles(const QString &input,const QString &output) {
+    if(renderJob_.valid())return;
     const auto s=session_;const auto shared=shared_;const double gain=sharedGain_,tail=tail_->value();const int balance=balance_;
     cancelJob_=false;jobProgress_=0;render_->setEnabled(false);cancel_->setEnabled(true);status_->setText("Rendering…");
     renderJob_=std::async(std::launch::async,[this,s,shared,gain,tail,balance,input,output]() -> QString {
         try {const auto final=path(output);if(std::filesystem::exists(final))throw std::runtime_error("Output already exists; select a new filename");
-            const auto parent=final.parent_path();QTemporaryDir staging(QString::fromStdString(parent.string())+"/.soundcurrent-render-XXXXXX");
+            QTemporaryDir staging(QFileInfo(output).absolutePath()+"/.soundcurrent-render-XXXXXX");
             if(!staging.isValid())throw std::runtime_error("Cannot create output staging directory");
             WaveReader reader(path(input));const auto source=reader.format();const auto n=s.engine.channels.size();
             if(source.channels>n)throw std::runtime_error("Input has more channels than the Studio layout; choose a matching or larger layout");
@@ -264,7 +269,17 @@ void StudioPanel::selfTest() {
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");
     count_->setValue(2);effectPreset(6);if(!session_.engine.delay.enabled||!session_.engine.reverb.enabled)qFatal("Studio effect preset failed");
     const auto roundtrip=Session::parse(session_.json());if(roundtrip.json()!=session_.json())qFatal("Studio profile round trip failed");
+    auto broken=session_.json();broken["postGain"]=100;bool rejected=false;
+    try{Session::parse(broken);}catch(const std::exception &){rejected=true;}if(!rejected)qFatal("Invalid Studio setup gain accepted");
     setLocked(true);const auto locked=session_.json();change([](Session &s){s.engine.delay.milliseconds=100;});if(session_.json()!=locked)qFatal("Studio lock failed");setLocked(false);
+    session_=Session(256);session_.routing[255*256]=.5;session_.routing[255*256+255]=0;rebuild();tail_->setValue(0);
+    QTemporaryDir files;const auto input=files.filePath("input.wav"),output=files.filePath("output.wav");
+    {WaveWriter writer(path(input),{48000,2,3,8});std::vector<float> audio(16);for(int f=0;f<8;++f){audio[2*f]=.2f;audio[2*f+1]=.3f;}writer.write(audio);writer.finish();}
+    renderFiles(input,output);const auto rendered=renderJob_.get();if(!QFile::exists(output))qFatal("UI renderer did not publish output: %s",qPrintable(rendered));
+    {WaveReader reader(path(output));std::vector<float> audio(256*8);reader.read(audio);
+        if(reader.format().channels!=256||std::abs(audio[255]-.1f)>1e-5||std::abs(audio[1]-.3f)>1e-5)qFatal("UI renderer lost channel routing");}
+    renderFiles(input,output);const auto duplicate=renderJob_.get();if(!duplicate.contains("already exists"))qFatal("UI renderer replaced existing output");
+    render_->setEnabled(true);cancel_->setEnabled(false);tail_->setValue(3);status_->setText("Ready. Effects are dry until enabled.");
     session_=Session::parse(initial);history_.clear();rebuild();
 }
 }
