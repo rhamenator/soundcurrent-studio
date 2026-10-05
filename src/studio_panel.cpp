@@ -80,12 +80,18 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     reverb_ = new QCheckBox("Reverb"); decay_ = spin(.1,10,1.5); decay_->setSuffix(" s");
     damping_ = spin(0,.95,.4,.01); wetReverb_ = slider(0,100,15); wetReverb_->setAccessibleName("Reverb wet mix percent");
     fxForm->addRow(reverb_); fxForm->addRow("Decay", decay_); fxForm->addRow("Damping", damping_); fxForm->addRow("Reverb wet mix", wetReverb_);
+    auto *delayLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetDelay_));
+    auto *reverbLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetReverb_));
+    connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString("Delay wet mix · %1%").arg(v));});
+    connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString("Reverb wet mix · %1%").arg(v));});
     editRoot->addWidget(fx);
     auto *channelBox = new QGroupBox("Selected channel"); auto *ch = new QFormLayout(channelBox);
     channel_ = new QComboBox; channel_->setAccessibleName("Studio selected channel"); name_ = new QLineEdit; name_->setMaxLength(80);
     trim_ = slider(-120,48,0); trim_->setAccessibleName("Channel gain in half dB steps");
     mute_ = new QCheckBox("Mute"); solo_ = new QCheckBox("Solo"); auto *muteRow = new QHBoxLayout; muteRow->addWidget(mute_); muteRow->addWidget(solo_);
     ch->addRow("Channel", channel_); ch->addRow("Name", name_); ch->addRow("Trim", trim_); ch->addRow(muteRow);
+    auto *trimLabel=qobject_cast<QLabel *>(ch->labelForField(trim_));
+    connect(trim_,&QSlider::valueChanged,this,[trimLabel](int v){trimLabel->setText(QString("Trim · %1 dB").arg(v/2.0,0,'f',1));});
     filters_ = table({"Type", "Hz", "dB", "Q"}); filters_->setAccessibleName("Selected channel EQ filters"); ch->addRow(filters_);
     filterType_ = new QComboBox; filterType_->addItems({"Peaking", "Low shelf", "High shelf", "High pass", "Low pass"});
     filterHz_ = spin(20,20000,1000,10); filterDb_ = spin(-24,24,0,.5); filterQ_ = spin(.1,20,1);
@@ -221,6 +227,13 @@ void StudioPanel::setLiveLevels(std::span<const float> levels) {
     for(int c=0;c<meters_->rowCount();++c){const float value=std::size_t(c)<levels.size()?levels[std::size_t(c)]:0;
         auto *item=meters_->item(c,1);item->setText(value>1e-8?QString::number(20*std::log10(value),'f',1)+" dBFS":"−∞ dBFS");
         item->setForeground(value>=1?QColor("#ff6868"):value>=.7?QColor("#ffc66d"):QColor("#55d7c3"));}
+}
+void StudioPanel::liveStatus(const QString &message,bool rejected) {
+    status_->setText(message);
+    if(rejected) {
+        session_.offline=true;offline_->blockSignals(true);offline_->setChecked(true);offline_->blockSignals(false);
+        if(persist_)QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));
+    }
 }
 void StudioPanel::tick() {
     if(isVisible()&&previewEngine_&&preview_->isChecked()){

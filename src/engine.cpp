@@ -310,11 +310,22 @@ ChannelRouter::ChannelRouter(std::size_t inputs, std::size_t outputs) : inputs_(
         throw std::invalid_argument("Unsupported routing channel count");
     weights_.resize(inputs * outputs);
     for (std::size_t c = 0; c < std::min(inputs, outputs); ++c) weights_[c * inputs + c] = 1;
+    setMatrix(weights_);
 }
 bool ChannelRouter::setMatrix(std::span<const double> weights) {
     if (weights.size() != weights_.size() ||
         !std::all_of(weights.begin(), weights.end(), [](double w) { return range(w, -4, 4); })) return false;
+    std::vector<Connection> connections;
+    connections.reserve(std::count_if(weights.begin(), weights.end(), [](double w) { return w != 0; }));
+    std::array<std::size_t, maxChannels + 1> offsets{};
+    for (std::size_t out = 0; out < outputs_; ++out) {
+        offsets[out] = connections.size();
+        for (std::size_t in = 0; in < inputs_; ++in)
+            if (weights[out * inputs_ + in] != 0) connections.push_back({in, weights[out * inputs_ + in]});
+    }
+    offsets[outputs_] = connections.size();
     std::copy(weights.begin(), weights.end(), weights_.begin());
+    connections_.swap(connections); offsets_ = offsets;
     return true;
 }
 bool ChannelRouter::process(std::span<const float> input, std::span<float> output) const noexcept {
@@ -328,7 +339,8 @@ bool ChannelRouter::process(std::span<const float> input, std::span<float> outpu
             frame[c] = std::isfinite(input[f * inputs_ + c]) ? input[f * inputs_ + c] : 0;
         for (std::size_t c = 0; c < outputs_; ++c) {
             double value = 0;
-            for (std::size_t in = 0; in < inputs_; ++in) value += frame[in] * weights_[c * inputs_ + in];
+            for (std::size_t edge = offsets_[c]; edge < offsets_[c + 1]; ++edge)
+                value += frame[connections_[edge].input] * connections_[edge].gain;
             output[f * outputs_ + c] = static_cast<float>(std::clamp(value,
                 -static_cast<double>(std::numeric_limits<float>::max()),
                  static_cast<double>(std::numeric_limits<float>::max())));

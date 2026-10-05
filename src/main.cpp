@@ -2231,8 +2231,11 @@ public:
         auto *undoShortcut = new QShortcut(QKeySequence::Undo, this);
         connect(undoShortcut, &QShortcut::activated, this, [this] { if(tabs_->currentIndex()==1)studio_->undo();else undoChange(); });
         studio_->onChanged=[this]{
-            try { audio_.setStudio(studio_->session());applyChanges(); }
-            catch(const std::exception &error){showError(error.what());}
+            try { audio_.setStudio(studio_->session());applyChanges();
+                studio_->liveStatus(studio_->session().offline?"Offline editing. Current playback keeps its last live Studio setup.":
+                                    audio_.active()?"Studio settings applied to live playback.":"Studio settings ready. Enable playback on the Equalizer tab.");
+            }
+            catch(const std::exception &error){showError(error.what());studio_->liveStatus(error.what(),true);}
         };
         auto *studioLevels=new QTimer(this);studioLevels->setInterval(40);
         connect(studioLevels,&QTimer::timeout,this,[this]{if(!studio_->session().offline)studio_->setLiveLevels(audio_.levels());});studioLevels->start();
@@ -3158,6 +3161,7 @@ private:
             } catch (const std::exception &error) {
                 power_->setChecked(false);
                 showError(error.what());
+                studio_->liveStatus(error.what(),true);
             }
         } else {
             meter_.stop();

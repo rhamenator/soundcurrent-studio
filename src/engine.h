@@ -85,7 +85,10 @@ public:
     std::size_t inputs() const noexcept { return inputs_; }
     std::size_t outputs() const noexcept { return outputs_; }
 private:
+    struct Connection { std::size_t input; double gain; };
     std::size_t inputs_, outputs_;
     std::vector<double> weights_;
+    std::vector<Connection> connections_;
+    std::array<std::size_t, maxChannels + 1> offsets_{};
 };
 } // namespace soundcurrent::studio

@@ -27,6 +27,7 @@ public:
     void setLocked(bool);
     void undo();
     void setLiveLevels(std::span<const float>);
+    void liveStatus(const QString &, bool rejected = false);
     void selfTest();
     std::function<void()> onChanged;
 private:

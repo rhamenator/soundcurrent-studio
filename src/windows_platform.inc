@@ -59,6 +59,8 @@ public:
     bool legacyVolumeManaged() const { return false; }
     void setStudio(const soundcurrent::studio::Session &s) {
         if(s.offline)return;
+        if(active()&&s.engine.channels.size()!=session_.engine.channels.size())
+            throw std::runtime_error("Turn playback off before applying a different live channel layout");
         auto filters=nativeBands(bands_);
         if(!bridge_.setStudio(s.effective(filters,gain_,balance_),s.routing))throw std::runtime_error("Invalid Studio settings");
         session_=s;
