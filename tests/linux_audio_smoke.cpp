@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "linux_audio.h"
 #include <QCoreApplication>
+#include <QElapsedTimer>
 #include <QProcess>
 #include <QThread>
 #include <cmath>
@@ -25,8 +26,11 @@ double runTone(LinuxBridge &bridge,EngineSettings settings,const std::vector<dou
     require(play.waitForStarted(3000),"Cannot start virtual test playback");
     std::vector<float> tone(48000*n);for(int f=0;f<48000;++f)tone[std::size_t(f*n+channel)]=float(.1*std::sin(2*std::numbers::pi*1000*f/48000));
     play.write(reinterpret_cast<const char *>(tone.data()),qint64(tone.size()*sizeof(float)));play.closeWriteChannel();
-    require(play.waitForFinished(6000)&&play.exitCode()==0,"Virtual playback did not finish");QThread::msleep(300);record.terminate();record.waitForFinished(1000);
-    const auto bytes=record.readAllStandardOutput();double energy=0,other=0;std::size_t active=0;
+    QByteArray bytes;QElapsedTimer clock;clock.start();
+    while(play.state()!=QProcess::NotRunning&&clock.elapsed()<6000){record.waitForReadyRead(10);bytes+=record.readAllStandardOutput();QCoreApplication::processEvents();}
+    require(play.state()==QProcess::NotRunning&&play.exitCode()==0,"Virtual playback did not finish");clock.restart();
+    while(clock.elapsed()<300){record.waitForReadyRead(10);bytes+=record.readAllStandardOutput();}
+    record.terminate();record.waitForFinished(1000);bytes+=record.readAllStandardOutput();double energy=0,other=0;std::size_t active=0;
     for(qsizetype i=0;i+qsizetype(n*sizeof(float))<=bytes.size();i+=qsizetype(n*sizeof(float))){float x=0;std::memcpy(&x,bytes.constData()+i+channel*sizeof(float),sizeof(float));
         if(std::abs(x)>1e-6){energy+=double(x)*x;++active;}if(n>=2){float y=0;std::memcpy(&y,bytes.constData()+i+((channel+1)%n)*sizeof(float),sizeof(float));other+=double(y)*y;}}
     require(active>1000,"No audio reached the virtual output");if(rightMustBeSilent)require(other<1e-8,"Live processing mixed channels");
