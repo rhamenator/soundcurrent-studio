@@ -2152,9 +2152,8 @@ public:
         rebuildPresetList("Flat");
         rebuildBandControls();
         syncBandControls();
-        refreshDevices();
-        if (startEnabled) refreshInputs();
-        else {
+        if (!startEnabled) refreshDevices();
+        if (!startEnabled) {
             inputCombo_->addItem("Automatic (follow connected microphones)", QString());
             try {
                 for (const auto &device : inputDevices())
@@ -2317,7 +2316,10 @@ public:
         currentSnapshot_ = snapshot();
         snapshotReady_ = true;
         if (startEnabled) setupTray();
-        if (startEnabled && power_->isEnabled()) power_->setChecked(true);
+        if (startEnabled) QTimer::singleShot(100,this,[this]{
+            refreshDevices();refreshInputs();
+            if(power_->isEnabled())power_->setChecked(true);
+        });
     }
 
     ~MainWindow() override {

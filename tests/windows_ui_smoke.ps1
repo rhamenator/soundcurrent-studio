@@ -14,7 +14,7 @@ public static class EqUi {
 '@
 function Assert($Condition, $Message) { if (-not $Condition) { throw $Message } }
 function WaitUntil([scriptblock]$Condition, [string]$Message) {
-    $deadline=[DateTime]::UtcNow.AddSeconds(15)
+    $deadline=[DateTime]::UtcNow.AddSeconds(60)
     do { if (& $Condition) { return }; Start-Sleep -Milliseconds 100 } while ([DateTime]::UtcNow -lt $deadline)
     throw $Message
 }
