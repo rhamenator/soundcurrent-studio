@@ -82,6 +82,8 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     fxForm->addRow(reverb_); fxForm->addRow("Decay", decay_); fxForm->addRow("Damping", damping_); fxForm->addRow("Reverb wet mix", wetReverb_);
     auto *delayLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetDelay_));
     auto *reverbLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetReverb_));
+    delayLabel->setText(QString("Delay wet mix · %1%").arg(wetDelay_->value()));
+    reverbLabel->setText(QString("Reverb wet mix · %1%").arg(wetReverb_->value()));
     connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString("Delay wet mix · %1%").arg(v));});
     connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString("Reverb wet mix · %1%").arg(v));});
     editRoot->addWidget(fx);
@@ -91,6 +93,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     mute_ = new QCheckBox("Mute"); solo_ = new QCheckBox("Solo"); auto *muteRow = new QHBoxLayout; muteRow->addWidget(mute_); muteRow->addWidget(solo_);
     ch->addRow("Channel", channel_); ch->addRow("Name", name_); ch->addRow("Trim", trim_); ch->addRow(muteRow);
     auto *trimLabel=qobject_cast<QLabel *>(ch->labelForField(trim_));
+    trimLabel->setText(QString("Trim · %1 dB").arg(trim_->value()/2.0,0,'f',1));
     connect(trim_,&QSlider::valueChanged,this,[trimLabel](int v){trimLabel->setText(QString("Trim · %1 dB").arg(v/2.0,0,'f',1));});
     filters_ = table({"Type", "Hz", "dB", "Q"}); filters_->setAccessibleName("Selected channel EQ filters"); ch->addRow(filters_);
     filterType_ = new QComboBox; filterType_->addItems({"Peaking", "Low shelf", "High shelf", "High pass", "Low pass"});

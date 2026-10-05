@@ -2482,8 +2482,11 @@ private:
         if (!display) return;
         const auto area = display->availableGeometry().adjusted(24, 24, -24, -24);
         if (!area.isValid()) return;
-        setMinimumSize(std::min(480, area.width()), std::min(320, area.height()));
-        resize(std::min(width(), area.width()), std::min(height(), area.height()));
+        const auto frame = frameGeometry().size() - geometry().size();
+        const auto clientWidth = std::max(1, area.width() - std::max(0, frame.width()));
+        const auto clientHeight = std::max(1, area.height() - std::max(0, frame.height()));
+        setMinimumSize(std::min(480, clientWidth), std::min(320, clientHeight));
+        resize(std::min(width(), clientWidth), std::min(height(), clientHeight));
         if (!area.contains(frameGeometry())) {
             const auto maxX = std::max(area.left(), area.right() - frameGeometry().width() + 1);
             const auto maxY = std::max(area.top(), area.bottom() - frameGeometry().height() + 1);
