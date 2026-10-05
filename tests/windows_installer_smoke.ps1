@@ -40,12 +40,12 @@ function Next {
     Start-Sleep -Milliseconds 500
 }
 try {
-    Assert (-not (Get-Process soundcurrent-eq -ErrorAction SilentlyContinue)) 'Quit the EQ before testing setup'
+    Assert (-not (Get-Process soundcurrent-studio -ErrorAction SilentlyContinue)) 'Quit the EQ before testing setup'
     $process=Start-Process $InstallerPath -PassThru
     $deadline=[DateTime]::UtcNow.AddSeconds(30)
     do {
         Start-Sleep -Milliseconds 100
-        $script:window=[SetupUi]::FindWindow('#32770','SoundCurrent EQ Setup')
+        $script:window=[SetupUi]::FindWindow('#32770','SoundCurrent Studio Setup')
     } while($script:window -eq [IntPtr]::Zero -and [DateTime]::UtcNow -lt $deadline)
     Assert ($script:window -ne [IntPtr]::Zero) 'Setup window missing'
     Next # Welcome
@@ -78,10 +78,10 @@ try {
     }
     Next
     Assert ($process.WaitForExit(5000)) 'Setup did not exit'
-    $folder="$env:LOCALAPPDATA\Programs\SoundCurrent EQ"
+    $folder="$env:LOCALAPPDATA\Programs\SoundCurrent Studio"
     Assert (Test-Path "$folder\audio-setup.ps1") 'Retry helper missing'
     Assert (Test-Path "$folder\VBCABLE_Driver_Pack45.zip") 'Vendor archive missing'
-    Assert (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\SoundCurrent EQ\Install VB-CABLE.lnk") 'Retry shortcut missing'
+    Assert (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\SoundCurrent Studio\Install VB-CABLE.lnk") 'Retry shortcut missing'
     "PASS: $CableState driver detection, default option, vendor notices, app installation and retry shortcut" | Set-Content $ResultPath
 } catch {
     "FAIL: $_" | Set-Content $ResultPath

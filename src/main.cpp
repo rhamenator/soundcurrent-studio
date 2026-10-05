@@ -2,6 +2,10 @@
 // Copyright (C) 2026 rhamenator
 
 #include "dsp.h"
+#include "studio_panel.h"
+#ifndef _WIN32
+#include "linux_audio.h"
+#endif
 #ifdef _WIN32
 #include "windows_audio.h"
 #endif
@@ -88,10 +92,10 @@
 
 namespace {
 
-constexpr auto kSink = "soundcurrent_eq";
-constexpr auto kOutput = "soundcurrent_eq_output";
-constexpr auto kMicSource = "soundcurrent_mic";
-constexpr auto kMicInput = "soundcurrent_mic_input";
+constexpr auto kSink = "soundcurrent_studio";
+constexpr auto kOutput = "soundcurrent_studio_output";
+constexpr auto kMicSource = "soundcurrent_studio_mic";
+constexpr auto kMicInput = "soundcurrent_studio_mic_input";
 constexpr int kMinBands = 5;
 constexpr int kDefaultBands = 15;
 constexpr int kMaxBands = 31;
@@ -436,8 +440,8 @@ context.modules = [
   { name = libpipewire-module-adapter }
   { name = libpipewire-module-filter-chain
     args = {
-      node.description = "SoundCurrent EQ"
-      media.name = "SoundCurrent EQ"
+      node.description = "SoundCurrent Studio"
+      media.name = "SoundCurrent Studio"
       audio.rate = 48000
       audio.channels = 2
       audio.position = [ FL FR ]
@@ -615,10 +619,16 @@ QString gainControls(double outputGainDb, int balancePercent) {
 #ifndef Q_OS_WIN
 class AudioEngine {
 public:
-    bool active() const { return process_.state() != QProcess::NotRunning; }
+    bool active() const { return bridge_.running(); }
     QString target() const { return target_.name; }
     bool smart() const { return smart_; }
     bool legacyVolumeManaged() const { return legacyVolumeManaged_; }
+    void setStudio(const soundcurrent::studio::Session &s) {
+        if(s.offline)return;
+        if(active()){std::vector<soundcurrent::EqBand> filters;for(const auto &b:bands_)filters.push_back({b.frequency,b.gain,b.q,b.type});bridge_.update(s.effective(filters,gain_,balance_),s.routing);}
+        session_=s;
+    }
+    std::vector<float> levels() const { return bridge_.levels(); }
 
     void start(const Device &device, const Bands &bands, double outputGainDb = 0.0,
                int balancePercent = 0) {
@@ -627,32 +637,25 @@ public:
         bool found = false;
         for (const auto &available : devices()) if (available.name == device.name) found = true;
         if (!found) throw std::runtime_error("Selected output device is no longer available");
-        if (nodeId(kSink) >= 0) throw std::runtime_error("Another SoundCurrent EQ sink is already running");
-        if (!directory_.isValid()) throw std::runtime_error("Could not create temporary audio configuration");
-        const auto path = directory_.filePath("filter.conf");
-        QFile config(path);
-        if (!config.open(QIODevice::WriteOnly | QIODevice::Truncate))
-            throw std::runtime_error("Could not write temporary audio configuration");
-        const bool smart = smartFiltersAvailable();
-        config.write(filterConfig(device.name, bands, outputGainDb, balancePercent, smart).toUtf8());
-        config.close();
-        process_.setProgram("pipewire");
-        process_.setArguments({"-c", path});
-        process_.setProcessChannelMode(QProcess::MergedChannels);
-        process_.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
-        process_.start();
-        if (!process_.waitForStarted(2000)) throw std::runtime_error("Could not start PipeWire filter");
+        if (nodeId(kSink) >= 0) throw std::runtime_error("Another SoundCurrent Studio sink is already running");
+        int deviceChannels=2;
+        for(const auto &value:pactlList("sinks"))if(value.toObject().value("name").toString()==device.name)
+            deviceChannels=value.toObject().value("channel_map").toString().split(',',Qt::SkipEmptyParts).size();
+        if(int(session_.engine.channels.size())>deviceChannels)throw std::runtime_error("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.");
+        std::vector<soundcurrent::EqBand> filters;for(const auto &b:bands)filters.push_back({b.frequency,b.gain,b.q,b.type});
+        bands_=bands;gain_=outputGainDb;balance_=balancePercent;
+        bridge_.start(device.name.toStdString(),kSink,kOutput,session_.effective(filters,outputGainDb,balancePercent),session_.routing);
+        const bool smart = false;
         QElapsedTimer clock;
         clock.start();
         while (clock.elapsed() < 3000) {
-            if (process_.state() == QProcess::NotRunning)
-                throw std::runtime_error(QString::fromUtf8(process_.readAll()).trimmed().toStdString());
+            if (!bridge_.running()) throw std::runtime_error(bridge_.error());
             try { if (nodeId(kSink) >= 0) break; } catch (const std::exception &) {}
             QThread::msleep(100);
         }
         const int id = nodeId(kSink);
         if (id < 0) {
-            const auto details = QString::fromUtf8(process_.readAll()).trimmed();
+            const auto details = QString::fromStdString(bridge_.error());
             stop();
             throw std::runtime_error(("Timed out waiting for the equalizer sink: " + details).toStdString());
         }
@@ -693,14 +696,13 @@ public:
 
     void update(const Bands &bands, double outputGainDb = 0.0, int balancePercent = 0) {
         if (!active()) return;
-        if (sinkId_ < 0) throw std::runtime_error("Equalizer sink disappeared");
-        command("pw-cli", {"set-param", QString::number(sinkId_), "Props", filterControls(bands, outputGainDb, balancePercent)});
+        std::vector<soundcurrent::EqBand> filters;for(const auto &b:bands)filters.push_back({b.frequency,b.gain,b.q,b.type});
+        bridge_.update(session_.effective(filters,outputGainDb,balancePercent),session_.routing);
+        bands_=bands;gain_=outputGainDb;balance_=balancePercent;
     }
 
     void updateGain(double outputGainDb, int balancePercent) {
-        if (!active()) return;
-        if (sinkId_ < 0) throw std::runtime_error("Equalizer sink disappeared");
-        command("pw-cli", {"set-param", QString::number(sinkId_), "Props", gainControls(outputGainDb, balancePercent)});
+        update(bands_,outputGainDb,balancePercent);
     }
 
     void stop() {
@@ -740,13 +742,7 @@ public:
                 // A removed target cannot be restored; PipeWire selects the remaining default.
             }
         }
-        if (active()) {
-            process_.terminate();
-            if (!process_.waitForFinished(2000)) {
-                process_.kill();
-                process_.waitForFinished(2000);
-            }
-        }
+        bridge_.stop();
         if (guardian_.state() != QProcess::NotRunning) {
             if (volumeRestored) guardian_.write("Q", 1);
             guardian_.closeWriteChannel();
@@ -762,8 +758,11 @@ public:
     ~AudioEngine() { stop(); }
 
 private:
-    QTemporaryDir directory_{QDir::tempPath() + "/soundcurrent-eq-XXXXXX"};
-    QProcess process_;
+    soundcurrent::studio::LinuxBridge bridge_;
+    soundcurrent::studio::Session session_;
+    Bands bands_;
+    double gain_=0;
+    int balance_=0;
     QProcess guardian_;
     Device target_;
     SinkState originalState_;
@@ -1776,8 +1775,8 @@ protected:
 class MainWindow : public QMainWindow {
 public:
     explicit MainWindow(bool startEnabled = true) : bands_(builtinProfile("Flat", kDefaultBands)) {
-        setWindowTitle("SoundCurrent EQ");
-        setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentEQ", QIcon(":/app.ico")));
+        setWindowTitle("SoundCurrent Studio");
+        setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")));
         setMinimumSize(480, 320);
         if (auto *display = QGuiApplication::primaryScreen()) {
             const auto available = display->availableGeometry();
@@ -1804,6 +1803,9 @@ public:
         settingsRoot->setSpacing(16);
         settingsScroll->setWidget(settingsContainer);
         tabs_->addTab(settingsScroll, "Settings && calibration");
+        auto *studioScroll=new QScrollArea;studioScroll->setWidgetResizable(true);
+        studio_=new soundcurrent::studio::StudioPanel(startEnabled);studioScroll->setWidget(studio_);
+        tabs_->insertTab(1,studioScroll,"Studio channels && effects");
         tabs_->setCurrentIndex(0);
 
         auto *deviceBox = new QGroupBox("Output device");
@@ -1827,8 +1829,8 @@ public:
         outputRow->addWidget(power_);
         outputRow->addStretch();
         auto *quit = new QPushButton("Quit app");
-        quit->setAccessibleName("Quit SoundCurrent EQ");
-        quit->setToolTip("Exit SoundCurrent EQ and restore normal audio");
+        quit->setAccessibleName("Quit SoundCurrent Studio");
+        quit->setToolTip("Exit SoundCurrent Studio and restore normal audio");
         outputRow->addWidget(quit);
         outputLayout->addLayout(outputRow);
         auto *gainRow = new QHBoxLayout;
@@ -2225,7 +2227,14 @@ public:
         });
         connect(undoButton_, &QPushButton::clicked, this, [this] { undoChange(); });
         auto *undoShortcut = new QShortcut(QKeySequence::Undo, this);
-        connect(undoShortcut, &QShortcut::activated, this, [this] { undoChange(); });
+        connect(undoShortcut, &QShortcut::activated, this, [this] { if(tabs_->currentIndex()==1)studio_->undo();else undoChange(); });
+        studio_->onChanged=[this]{
+            try { audio_.setStudio(studio_->session());applyChanges(); }
+            catch(const std::exception &error){showError(error.what());}
+        };
+        auto *studioLevels=new QTimer(this);studioLevels->setInterval(40);
+        connect(studioLevels,&QTimer::timeout,this,[this]{if(!studio_->session().offline)studio_->setLiveLevels(audio_.levels());});studioLevels->start();
+        audio_.setStudio(studio_->session());
         connect(outputGain_, &QSlider::valueChanged, this, [this](int) {
             recordChange(outputGain_);
             const double value = outputGainDb();
@@ -2233,7 +2242,7 @@ public:
             outputGainValue_->setText(QString("%1%2 dB").arg(value > 0 ? "+" : "")
                                           .arg(value, 0, 'f', 1));
             meter_.setProfile(bands_, value, balance_->value(), speakerCorrection());
-            try { audio_.updateGain(value, balance_->value()); }
+            try { applyChanges(); }
             catch (const std::exception &error) { showError(error.what()); }
             commitChange();
         });
@@ -2243,7 +2252,7 @@ public:
             balanceValue_->setText(value == 0 ? "Center"
                                    : QString("%1 %2%").arg(value < 0 ? "L" : "R").arg(std::abs(value)));
             meter_.setProfile(bands_, outputGainDb(), value, speakerCorrection());
-            try { audio_.updateGain(outputGainDb(), value); }
+            try { applyChanges(); }
             catch (const std::exception &error) { showError(error.what()); }
             commitChange();
         });
@@ -2277,7 +2286,7 @@ public:
         meter_.setInterval(levelRefresh_->value());
         monitor_.setInterval(1500);
         connect(&monitor_, &QTimer::timeout, this, [this] { refreshDevices(); refreshInputs(); });
-        monitor_.start();
+        if(startEnabled)monitor_.start();
 #ifndef Q_OS_WIN
         volumeEvents_.setProgram("pactl");
         volumeEvents_.setArguments({"subscribe"});
@@ -2295,7 +2304,7 @@ public:
                 }
             }
         });
-        volumeEvents_.start();
+        if(startEnabled)volumeEvents_.start();
 #endif
         for (auto *widget : findChildren<QWidget *>())
             if (qobject_cast<QComboBox *>(widget) || qobject_cast<QAbstractSpinBox *>(widget) ||
@@ -2364,7 +2373,7 @@ protected:
             hide();
             event->ignore();
             if (!backgroundNoticeShown_) {
-                tray_->showMessage("SoundCurrent EQ", "Equalizer is still running. Use the tray icon to reopen or quit.");
+                tray_->showMessage("SoundCurrent Studio", "Equalizer is still running. Use the tray icon to reopen or quit.");
                 backgroundNoticeShown_ = true;
             }
             return;
@@ -2441,6 +2450,7 @@ private:
     }
 
     void updateControlsLock() {
+        studio_->setLocked(lockButton_->isChecked());
         const bool editable = !lockButton_->isChecked();
         lockButton_->setText(editable ? "Lock EQ" : "Unlock EQ");
         outputGain_->setEnabled(editable);
@@ -2658,17 +2668,17 @@ private:
 
     void setupTray() {
         if (!QSystemTrayIcon::isSystemTrayAvailable()) return;
-        tray_ = new QSystemTrayIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentEQ", QIcon(":/app.ico")), this);
-        tray_->setToolTip("SoundCurrent EQ");
+        tray_ = new QSystemTrayIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")), this);
+        tray_->setToolTip("SoundCurrent Studio");
         auto *menu = new QMenu(this);
-        menu->addAction("Open SoundCurrent EQ", this, [this] { reopen(); });
+        menu->addAction("Open SoundCurrent Studio", this, [this] { reopen(); });
         trayToggle_ = menu->addAction("Turn equalizer off", this, [this] { power_->setChecked(!power_->isChecked()); });
         connect(power_, &QCheckBox::toggled, this, [this](bool on) {
             trayToggle_->setText(on ? "Turn equalizer off" : "Turn equalizer on");
-            tray_->setToolTip(on ? "SoundCurrent EQ · On" : "SoundCurrent EQ · Off");
+            tray_->setToolTip(on ? "SoundCurrent Studio · On" : "SoundCurrent Studio · Off");
         });
         menu->addSeparator();
-        menu->addAction("Quit SoundCurrent EQ", qApp, [] { qApp->quit(); });
+        menu->addAction("Quit SoundCurrent Studio", qApp, [] { qApp->quit(); });
         tray_->setContextMenu(menu);
         connect(tray_, &QSystemTrayIcon::activated, this, [this](QSystemTrayIcon::ActivationReason reason) {
             if (reason == QSystemTrayIcon::Trigger || reason == QSystemTrayIcon::DoubleClick) reopen();
@@ -2923,8 +2933,11 @@ private:
     QStringList micCableIds_;
 #endif
     QComboBox *speakerCombo_ = nullptr;
+    soundcurrent::studio::StudioPanel *studio_ = nullptr;
 
     void applyChanges() {
+        std::vector<soundcurrent::EqBand> shared;for(const auto &b:processingBands())shared.push_back({b.frequency,b.gain,b.q,b.type});
+        studio_->setShared(shared,outputGainDb(),balance_->value());
         meter_.setProfile(bands_, outputGainDb(), balance_->value(), speakerCorrection());
         try { audio_.update(processingBands(), outputGainDb(), balance_->value()); }
         catch (const std::exception &error) { showError(error.what()); }
@@ -3254,9 +3267,9 @@ int main(int argc, char **argv) {
 #endif
     QApplication app(argc, argv);
     QCoreApplication::setOrganizationName("SoundCurrent");
-    QCoreApplication::setApplicationName("soundcurrent-eq");
+    QCoreApplication::setApplicationName("soundcurrent-studio");
     QTemporaryDir testSettings;
-    if (app.arguments().contains("--ui-self-test")) {
+    if (app.arguments().contains("--ui-self-test") || app.arguments().contains("--preview")) {
 #ifndef Q_OS_WIN
         const QJsonArray unpluggedPorts{QJsonObject{{"name", "rear-mic"}, {"availability", "not available"}}};
         if (inputPortAvailable(QJsonObject{{"active_port", "rear-mic"}, {"ports", unpluggedPorts}}))
@@ -3268,8 +3281,8 @@ int main(int argc, char **argv) {
         QSettings::setDefaultFormat(QSettings::IniFormat);
         QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, testSettings.path());
     }
-    QGuiApplication::setDesktopFileName("io.github.rhamenator.SoundCurrentEQ");
-    app.setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentEQ", QIcon(":/app.ico")));
+    QGuiApplication::setDesktopFileName("io.github.rhamenator.SoundCurrentStudio");
+    app.setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")));
     if (app.arguments().size() == 3 && app.arguments()[1] == "--check-amplifier-profile") {
         QFile file(app.arguments()[2]);
         if (!file.open(QIODevice::ReadOnly) || file.size() > 65536) return 2;
@@ -3388,6 +3401,8 @@ int main(int argc, char **argv) {
         QGroupBox::title { subcontrol-origin: margin; left: 14px; padding: 0 5px; }
         QLabel { background: transparent; }
         QCheckBox { background: transparent; }
+        QCheckBox::indicator { width: 15px; height: 15px; border: 1px solid #7892af; background: #111827; border-radius: 3px; }
+        QCheckBox::indicator:checked { background: #55d7c3; border-color: #55d7c3; }
         QCheckBox#powerToggle { background: #2d405a; border: 1px solid #4a5d77;
                                 border-radius: 7px; padding: 7px 10px; }
         QCheckBox#powerToggle:hover { background: #385572; }
@@ -3419,6 +3434,8 @@ int main(int argc, char **argv) {
         ampTest.insert("conditions", "8 ohms"); ampTest.insert("filters", QJsonArray{});
         if (parseAmplifierProfile(ampTest)) qFatal("Empty amplifier profile accepted");
         MainWindow testWindow(false);
+        for(auto *widget:testWindow.findChildren<QWidget *>())
+            if(auto *panel=dynamic_cast<soundcurrent::studio::StudioPanel *>(widget))panel->selfTest();
         SpectrumMonitor spectrumTest(true);
         if (spectrumTest.interval() != 16) qFatal("Default level interval is not 16 ms");
         spectrumTest.setInterval(5);
@@ -3557,9 +3574,9 @@ int main(int argc, char **argv) {
         if (overallWithMarker == overallWithoutMarker)
             qFatal("Overall meter peak marker did not follow its toggle");
         if (builtinShapes().size() < 30) qFatal("Preset library is incomplete");
-        if (testWindow.windowTitle() != "SoundCurrent EQ") qFatal("Window title is missing");
+        if (testWindow.windowTitle() != "SoundCurrent Studio") qFatal("Window title is missing");
         for (const auto *label : testWindow.findChildren<QLabel *>()) {
-            if (label->text() == "SoundCurrent EQ" ||
+            if (label->text() == "SoundCurrent Studio" ||
                 label->text() == "Shape your sound with an adjustable parametric equalizer.")
                 qFatal("Removed in-window heading is still visible");
         }
@@ -3584,7 +3601,7 @@ int main(int argc, char **argv) {
         if (!presets) qFatal("Preset menu is missing");
         QPushButton *quit = nullptr;
         for (auto *button : testWindow.findChildren<QPushButton *>())
-            if (button->accessibleName() == "Quit SoundCurrent EQ") quit = button;
+            if (button->accessibleName() == "Quit SoundCurrent Studio") quit = button;
         if (!quit) qFatal("Quit button is missing");
         QCheckBox *power = nullptr;
         for (auto *check : testWindow.findChildren<QCheckBox *>())
@@ -3748,10 +3765,10 @@ int main(int argc, char **argv) {
         testWindow.show();
         app.processEvents();
         auto *tabs = qobject_cast<QTabWidget *>(testWindow.centralWidget());
-        if (!tabs || tabs->count() != 2 || tabs->currentIndex() != 0 || tabs->tabText(0) != "Equalizer")
+        if (!tabs || tabs->count() != 3 || tabs->currentIndex() != 0 || tabs->tabText(0) != "Equalizer")
             qFatal("Equalizer must be the first and initially selected tab");
         auto *outer = qobject_cast<QScrollArea *>(tabs->widget(0));
-        auto *settingsPage = qobject_cast<QScrollArea *>(tabs->widget(1));
+        auto *settingsPage = qobject_cast<QScrollArea *>(tabs->widget(2));
         if (!outer || !settingsPage || !outer->isAncestorOf(firstBandSlider()) ||
             !outer->isAncestorOf(presets) || !outer->isAncestorOf(outputGain) ||
             !settingsPage->isAncestorOf(speakers))
@@ -3773,11 +3790,15 @@ int main(int argc, char **argv) {
                 !testWindow.grab().save(QDir(screenshotDirectory).filePath("equalizer.png")))
                 qFatal("Cannot save equalizer UI test screenshot");
         }
-        tabs->setCurrentIndex(1);
+        tabs->setCurrentIndex(2);
         app.processEvents();
         if (!screenshotDirectory.isEmpty() &&
             !testWindow.grab().save(QDir(screenshotDirectory).filePath("settings.png")))
             qFatal("Cannot save settings UI test screenshot");
+        tabs->setCurrentIndex(1);app.processEvents();
+        if (!screenshotDirectory.isEmpty() && !testWindow.grab().save(QDir(screenshotDirectory).filePath("studio.png")))
+            qFatal("Cannot save Studio UI screenshot");
+        tabs->setCurrentIndex(2);app.processEvents();
         if (!speakers->isVisible()) qFatal("Settings tab does not display its controls");
         tabs->setCurrentIndex(0);
         testWindow.resize(testWindow.width(), 400);
@@ -3793,7 +3814,7 @@ int main(int argc, char **argv) {
         QCoreApplication::sendEvent(band, &wheel);
         if (band->value() != beforeWheel || outer->verticalScrollBar()->value() <= 0)
             qFatal("Mouse wheel changed an EQ band instead of scrolling the window");
-        tabs->setCurrentIndex(1);
+        tabs->setCurrentIndex(2);
         app.processEvents();
         settingsPage->verticalScrollBar()->setValue(0);
         const int beforeCalibrationWheel = calibrationLevel->value();
@@ -3827,11 +3848,11 @@ int main(int argc, char **argv) {
         return 1;
     }
     #ifdef Q_OS_WIN
-    const auto socketPath = QString("SoundCurrentEQ-%1").arg(QString::number(qHash(runtime), 16));
+    const auto socketPath = QString("SoundCurrentStudio-%1").arg(QString::number(qHash(runtime), 16));
 #else
-    const auto socketPath = QDir(runtime).filePath("soundcurrent-eq.sock");
+    const auto socketPath = QDir(runtime).filePath("soundcurrent-studio.sock");
 #endif
-    QLockFile instanceLock(QDir(runtime).filePath("soundcurrent-eq.lock"));
+    QLockFile instanceLock(QDir(runtime).filePath("soundcurrent-studio.lock"));
     instanceLock.setStaleLockTime(0);
     if (!instanceLock.tryLock(200)) {
         if (instanceLock.error() == QLockFile::LockFailedError) {
@@ -3849,7 +3870,7 @@ int main(int argc, char **argv) {
                 QThread::msleep(50);
             }
         }
-        qCritical("SoundCurrent EQ is already running or its instance lock is unavailable");
+        qCritical("SoundCurrent Studio is already running or its instance lock is unavailable");
         return 1;
     }
     if (app.arguments().contains("--quit")) return 0;
@@ -3857,10 +3878,10 @@ int main(int argc, char **argv) {
     instanceServer.setSocketOptions(QLocalServer::UserAccessOption);
     QLocalServer::removeServer(socketPath);
     if (!instanceServer.listen(socketPath)) {
-        qCritical("Could not create SoundCurrent EQ's local activation socket: %s", qPrintable(instanceServer.errorString()));
+        qCritical("Could not create SoundCurrent Studio's local activation socket: %s", qPrintable(instanceServer.errorString()));
         return 1;
     }
-    MainWindow window;
+    MainWindow window(!app.arguments().contains("--preview"));
     QObject::connect(&instanceServer, &QLocalServer::newConnection, &window, [&] {
         while (instanceServer.hasPendingConnections()) {
             auto *client = instanceServer.nextPendingConnection();

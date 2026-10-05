@@ -1,14 +1,16 @@
-Name:           soundcurrent-eq
+Name:           soundcurrent-studio
 %global debug_package %{nil}
-Version:        0.7.0
+Version:        0.8.0
 Release:        1%{?dist}
 Summary:        Adjustable desktop equalizer for PipeWire
 License:        GPL-3.0-only
-URL:            https://github.com/rhamenator/soundcurrent-eq
+URL:            https://github.com/rhamenator/soundcurrent-studio
 Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires:  cmake >= 3.20
 BuildRequires:  gcc-c++
+BuildRequires:  pipewire-devel
+BuildRequires:  pkgconf-pkg-config
 BuildRequires:  qt6-qtbase-devel >= 6.4
 Requires:       pipewire-pulseaudio
 Requires:       pipewire-utils
@@ -16,7 +18,7 @@ Requires:       pulseaudio-utils
 Requires:       wireplumber
 
 %description
-SoundCurrent EQ is a C++ desktop equalizer with adjustable bands, listening
+SoundCurrent Studio is a C++ desktop equalizer with adjustable bands, listening
 presets, output device selection, and background tray controls for PipeWire.
 
 %prep
@@ -32,20 +34,20 @@ DESTDIR=%{buildroot} cmake --install build
 %files
 %license LICENSE
 %doc README.md
-%{_bindir}/soundcurrent-eq
+%{_bindir}/soundcurrent-studio
 %{_bindir}/soundcurrent-studio-render
 %{_libdir}/libsoundcurrent-dsp.a
 %{_libdir}/libsoundcurrent-engine.a
 %{_libdir}/libsoundcurrent-wave.a
 %{_libdir}/cmake/SoundCurrentEngine
 %{_includedir}/soundcurrent
-%{_datadir}/applications/io.github.rhamenator.SoundCurrentEQ.desktop
-%{_datadir}/icons/hicolor/scalable/apps/io.github.rhamenator.SoundCurrentEQ.svg
-%{_datadir}/doc/soundcurrent-eq/copyright
-%{_datadir}/doc/soundcurrent-eq/LICENSE
-%{_datadir}/doc/soundcurrent-eq/THIRD-PARTY-NOTICES.md
-%{_datadir}/doc/soundcurrent-eq/studio-engine.md
-%{_datadir}/doc/soundcurrent-eq/speakers
+%{_datadir}/applications/io.github.rhamenator.SoundCurrentStudio.desktop
+%{_datadir}/icons/hicolor/scalable/apps/io.github.rhamenator.SoundCurrentStudio.svg
+%{_datadir}/doc/soundcurrent-studio/copyright
+%{_datadir}/doc/soundcurrent-studio/LICENSE
+%{_datadir}/doc/soundcurrent-studio/THIRD-PARTY-NOTICES.md
+%{_datadir}/doc/soundcurrent-studio/studio-engine.md
+%{_datadir}/doc/soundcurrent-studio/speakers
 
 %changelog
 * Mon Oct 05 2026 rhamenator <rhamenator@gmail.com> - 0.7.0-1

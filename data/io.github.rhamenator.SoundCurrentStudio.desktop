@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-Name=SoundCurrent EQ
+Name=SoundCurrent Studio
 Comment=Adjustable system-wide equalizer for PipeWire
-Exec=soundcurrent-eq
-Icon=io.github.rhamenator.SoundCurrentEQ
-StartupWMClass=soundcurrent-eq
+Exec=soundcurrent-studio
+Icon=io.github.rhamenator.SoundCurrentStudio
+StartupWMClass=soundcurrent-studio
 Categories=Audio;AudioVideo;
 Terminal=false

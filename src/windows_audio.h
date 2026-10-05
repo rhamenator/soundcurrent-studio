@@ -2,6 +2,7 @@
 #pragma once
 
 #include "dsp.h"
+#include "engine.h"
 
 #include <array>
 #include <cstdint>
@@ -80,9 +81,13 @@ public:
     void setStatusCallback(StatusCallback callback) { status_ = std::move(callback); }
     bool setProfile(std::span<const EqBand> bands, double postGainDb,
                     int balancePercent, bool enabled, bool automaticHeadroom = true);
+    bool setStudio(const studio::EngineSettings &, std::span<const double> matrix);
+    std::vector<float> channelLevels();
 
 private:
     struct Profile {
+        struct Studio { studio::EngineSettings settings; std::vector<double> matrix; };
+        std::shared_ptr<const Studio> studio;
         std::array<EqBand, kMaxProcessingBands> bands{};
         std::size_t count = 0;
         double postGainDb = 0.0;
@@ -107,6 +112,7 @@ private:
     std::mutex meterMutex_;
     std::array<std::int16_t, 32768> meterPcm_{};
     std::size_t meterSamples_ = 0;
+    std::vector<float> channelPeaks_;
 };
 
 } // namespace soundcurrent

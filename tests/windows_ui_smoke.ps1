@@ -18,21 +18,21 @@ function WaitUntil([scriptblock]$Condition, [string]$Message) {
     do { if (& $Condition) { return }; Start-Sleep -Milliseconds 100 } while ([DateTime]::UtcNow -lt $deadline)
     throw $Message
 }
-$key='HKCU\Software\SoundCurrent\soundcurrent-eq'
+$key='HKCU\Software\SoundCurrent\soundcurrent-studio'
 $backup=Join-Path $env:TEMP ('soundcurrent-settings-'+[guid]::NewGuid()+'.reg')
-$hadSettings=Test-Path 'HKCU:\Software\SoundCurrent\soundcurrent-eq'
+$hadSettings=Test-Path 'HKCU:\Software\SoundCurrent\soundcurrent-studio'
 $app=$null
 $settingsIsolated=$false
 try {
-    Assert (-not (Get-Process soundcurrent-eq -ErrorAction SilentlyContinue)) 'Quit the app before this test'
+    Assert (-not (Get-Process soundcurrent-studio -ErrorAction SilentlyContinue)) 'Quit the app before this test'
     if ($InstallerPath) {
         $installer=Start-Process $InstallerPath -ArgumentList '/S' -Wait -PassThru
         Assert ($installer.ExitCode -eq 0) 'Installer failed'
     }
-    $exe="$env:LOCALAPPDATA\Programs\SoundCurrent EQ\soundcurrent-eq.exe"
+    $exe="$env:LOCALAPPDATA\Programs\SoundCurrent Studio\soundcurrent-studio.exe"
     Assert (Test-Path $exe) 'Installed executable missing'
-    Assert (Test-Path "$env:USERPROFILE\Desktop\SoundCurrent EQ.lnk") 'Desktop shortcut missing'
-    Assert (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\SoundCurrent EQ\SoundCurrent EQ.lnk") 'Start menu shortcut missing'
+    Assert (Test-Path "$env:USERPROFILE\Desktop\SoundCurrent Studio.lnk") 'Desktop shortcut missing'
+    Assert (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\SoundCurrent Studio\SoundCurrent Studio.lnk") 'Start menu shortcut missing'
     # Exercise the shared Qt controls using isolated temporary INI settings.
     $log=Join-Path $env:TEMP 'soundcurrent-ui-self-test.log'
     $env:QT_QPA_PLATFORM='offscreen'
@@ -46,7 +46,7 @@ try {
     if ($hadSettings) { & reg delete $key /f | Out-Null }
     $settingsIsolated=$true
     $app=Start-Process $exe -PassThru
-    WaitUntil { $script:window=[EqUi]::FindWindow([NullString]::Value,'SoundCurrent EQ'); $script:window -ne [IntPtr]::Zero } 'App window missing'
+    WaitUntil { $script:window=[EqUi]::FindWindow([NullString]::Value,'SoundCurrent Studio'); $script:window -ne [IntPtr]::Zero } 'App window missing'
     WaitUntil { [EqUi]::IsWindowVisible($script:window) } 'App window is hidden'
     [void][EqUi]::PostMessage($script:window,0x10,[IntPtr]::Zero,[IntPtr]::Zero)
     WaitUntil { -not [EqUi]::IsWindowVisible($script:window) } 'Closing the window did not hide it'
@@ -57,7 +57,7 @@ try {
     $quit=Start-Process $exe -ArgumentList '--quit' -PassThru
     Assert ($quit.WaitForExit(5000)) 'Quit request failed'
     Assert ($app.WaitForExit(10000)) 'Quit did not unload the app'
-    Assert (-not (Get-Process soundcurrent-eq -ErrorAction SilentlyContinue)) 'An equalizer process remains after quit'
+    Assert (-not (Get-Process soundcurrent-studio -ErrorAction SilentlyContinue)) 'An equalizer process remains after quit'
     'PASS: installer shortcuts, shared Qt controls, background close/reopen, single instance, and graceful quit' | Set-Content $ResultPath
 } catch {
     "FAIL: $_" | Set-Content $ResultPath
@@ -65,7 +65,7 @@ try {
 } finally {
     Remove-Item Env:\QT_QPA_PLATFORM -ErrorAction SilentlyContinue
     if ($settingsIsolated -and (!$app -or $app.HasExited)) {
-        if (Test-Path 'HKCU:\Software\SoundCurrent\soundcurrent-eq') { & reg delete $key /f | Out-Null }
+        if (Test-Path 'HKCU:\Software\SoundCurrent\soundcurrent-studio') { & reg delete $key /f | Out-Null }
         if (Test-Path $backup) { & reg import $backup | Out-Null; Remove-Item $backup }
     }
     # Leave a failed desktop check running for inspection and graceful recovery.

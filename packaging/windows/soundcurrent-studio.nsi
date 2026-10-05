@@ -5,7 +5,7 @@ Unicode true
 !include "LogicLib.nsh"
 
 !ifndef APP_EXE
-  !error "Pass /DAPP_EXE=path-to-soundcurrent-eq.exe"
+  !error "Pass /DAPP_EXE=path-to-soundcurrent-studio.exe"
 !endif
 !ifndef OUTPUT
   !error "Pass /DOUTPUT=path-to-installer.exe"
@@ -25,14 +25,14 @@ Var CableCheck
 Var CableChoice
 Var InstallCable
 
-Name "SoundCurrent EQ"
+Name "SoundCurrent Studio"
 OutFile "${OUTPUT}"
-InstallDir "$LOCALAPPDATA\Programs\SoundCurrent EQ"
+InstallDir "$LOCALAPPDATA\Programs\SoundCurrent Studio"
 RequestExecutionLevel user
 SetCompressor /SOLID lzma
-BrandingText "SoundCurrent EQ • GPL-3.0-only"
-Icon "${SOURCE_ROOT}\data\soundcurrent-eq.ico"
-UninstallIcon "${SOURCE_ROOT}\data\soundcurrent-eq.ico"
+BrandingText "SoundCurrent Studio • GPL-3.0-only"
+Icon "${SOURCE_ROOT}\data\soundcurrent-studio.ico"
+UninstallIcon "${SOURCE_ROOT}\data\soundcurrent-studio.ico"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "${SOURCE_ROOT}\LICENSE"
@@ -40,7 +40,7 @@ UninstallIcon "${SOURCE_ROOT}\data\soundcurrent-eq.ico"
 Page custom AudioPage AudioPageLeave
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_REBOOTLATER_DEFAULT
-!define MUI_FINISHPAGE_RUN "$INSTDIR\soundcurrent-eq.exe"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\soundcurrent-studio.exe"
 !insertmacro MUI_PAGE_FINISH
 !insertmacro MUI_UNPAGE_CONFIRM
 !insertmacro MUI_UNPAGE_INSTFILES
@@ -57,7 +57,7 @@ Function .onInit
 FunctionEnd
 
 Function AudioPage
-  !insertmacro MUI_HEADER_TEXT "Connect your audio" "Set up the virtual cable used by SoundCurrent EQ."
+  !insertmacro MUI_HEADER_TEXT "Connect your audio" "Set up the virtual cable used by SoundCurrent Studio."
   nsDialogs::Create 1018
   Pop $0
   ${If} $0 == error
@@ -101,16 +101,16 @@ Function AudioPageLeave
   ${NSD_GetState} $CableChoice $InstallCable
 FunctionEnd
 
-Section "SoundCurrent EQ" main
-  FindWindow $0 "" "SoundCurrent EQ"
+Section "SoundCurrent Studio" main
+  FindWindow $0 "" "SoundCurrent Studio"
   StrCmp $0 0 +3
-    MessageBox MB_ICONEXCLAMATION "Quit SoundCurrent EQ before installing this version."
+    MessageBox MB_ICONEXCLAMATION "Quit SoundCurrent Studio before installing this version."
     Abort
   SetOutPath "$INSTDIR"
 !ifdef DLL_DIR
   File /r "${DLL_DIR}\*"
 !else
-  File "/oname=soundcurrent-eq.exe" "${APP_EXE}"
+  File "/oname=soundcurrent-studio.exe" "${APP_EXE}"
 !endif
   File "${SOURCE_ROOT}\LICENSE"
   File "${SOURCE_ROOT}\COPYRIGHT"
@@ -119,18 +119,18 @@ Section "SoundCurrent EQ" main
   File "/oname=VBCABLE_Driver_Pack45.zip" "${CABLE_ZIP}"
   File "${SOURCE_ROOT}\packaging\windows\VB-CABLE-NOTICE.txt"
   WriteUninstaller "$INSTDIR\uninstall.exe"
-  CreateDirectory "$SMPROGRAMS\SoundCurrent EQ"
-  CreateShortcut "$SMPROGRAMS\SoundCurrent EQ\SoundCurrent EQ.lnk" "$INSTDIR\soundcurrent-eq.exe"
-  CreateShortcut "$SMPROGRAMS\SoundCurrent EQ\Uninstall.lnk" "$INSTDIR\uninstall.exe"
-  CreateShortcut "$SMPROGRAMS\SoundCurrent EQ\Install VB-CABLE.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" '-NoProfile -ExecutionPolicy RemoteSigned -File "$INSTDIR\audio-setup.ps1" -Install' "$INSTDIR\soundcurrent-eq.exe"
-  CreateShortcut "$DESKTOP\SoundCurrent EQ.lnk" "$INSTDIR\soundcurrent-eq.exe"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "DisplayName" "SoundCurrent EQ"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "UninstallString" '"$INSTDIR\uninstall.exe"'
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "DisplayIcon" "$INSTDIR\soundcurrent-eq.exe"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "Publisher" "SoundCurrent EQ contributors"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "DisplayVersion" "${APP_VERSION}"
-  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "NoModify" 1
-  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ" "NoRepair" 1
+  CreateDirectory "$SMPROGRAMS\SoundCurrent Studio"
+  CreateShortcut "$SMPROGRAMS\SoundCurrent Studio\SoundCurrent Studio.lnk" "$INSTDIR\soundcurrent-studio.exe"
+  CreateShortcut "$SMPROGRAMS\SoundCurrent Studio\Uninstall.lnk" "$INSTDIR\uninstall.exe"
+  CreateShortcut "$SMPROGRAMS\SoundCurrent Studio\Install VB-CABLE.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" '-NoProfile -ExecutionPolicy RemoteSigned -File "$INSTDIR\audio-setup.ps1" -Install' "$INSTDIR\soundcurrent-studio.exe"
+  CreateShortcut "$DESKTOP\SoundCurrent Studio.lnk" "$INSTDIR\soundcurrent-studio.exe"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "DisplayName" "SoundCurrent Studio"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "UninstallString" '"$INSTDIR\uninstall.exe"'
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "DisplayIcon" "$INSTDIR\soundcurrent-studio.exe"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "Publisher" "SoundCurrent Studio contributors"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "DisplayVersion" "${APP_VERSION}"
+  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "NoModify" 1
+  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "NoRepair" 1
   ${If} $InstallCable == ${BST_CHECKED}
     DetailPrint "Opening VB-Audio's signed driver installer..."
     nsExec::ExecToStack '"$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy RemoteSigned -File "$INSTDIR\audio-setup.ps1" -Install -Quiet'
@@ -141,25 +141,25 @@ Section "SoundCurrent EQ" main
       SetRebootFlag true
     ${ElseIf} $0 != 0
       DetailPrint "VB-CABLE setup did not finish. Retry using the Start menu shortcut."
-      MessageBox MB_OK|MB_ICONINFORMATION "VB-CABLE was not installed. SoundCurrent EQ itself is installed. Use Install VB-CABLE in the Start menu to retry; see setup details for the reason."
+      MessageBox MB_OK|MB_ICONINFORMATION "VB-CABLE was not installed. SoundCurrent Studio itself is installed. Use Install VB-CABLE in the Start menu to retry; see setup details for the reason."
     ${EndIf}
   ${EndIf}
 SectionEnd
 
 Section "Uninstall"
-  FindWindow $0 "" "SoundCurrent EQ"
+  FindWindow $0 "" "SoundCurrent Studio"
   StrCmp $0 0 +3
-    MessageBox MB_ICONEXCLAMATION "Quit SoundCurrent EQ before uninstalling it."
+    MessageBox MB_ICONEXCLAMATION "Quit SoundCurrent Studio before uninstalling it."
     Abort
-  Delete "$DESKTOP\SoundCurrent EQ.lnk"
-  Delete "$SMPROGRAMS\SoundCurrent EQ\SoundCurrent EQ.lnk"
-  Delete "$SMPROGRAMS\SoundCurrent EQ\Uninstall.lnk"
-  Delete "$SMPROGRAMS\SoundCurrent EQ\Install VB-CABLE.lnk"
-  RMDir "$SMPROGRAMS\SoundCurrent EQ"
+  Delete "$DESKTOP\SoundCurrent Studio.lnk"
+  Delete "$SMPROGRAMS\SoundCurrent Studio\SoundCurrent Studio.lnk"
+  Delete "$SMPROGRAMS\SoundCurrent Studio\Uninstall.lnk"
+  Delete "$SMPROGRAMS\SoundCurrent Studio\Install VB-CABLE.lnk"
+  RMDir "$SMPROGRAMS\SoundCurrent Studio"
 !ifdef UNINSTALL_PAYLOAD
   !include "${UNINSTALL_PAYLOAD}"
 !else
-  Delete "$INSTDIR\soundcurrent-eq.exe"
+  Delete "$INSTDIR\soundcurrent-studio.exe"
 !endif
   Delete "$INSTDIR\LICENSE"
   Delete "$INSTDIR\COPYRIGHT"
@@ -169,5 +169,5 @@ Section "Uninstall"
   Delete "$INSTDIR\VB-CABLE-NOTICE.txt"
   Delete "$INSTDIR\uninstall.exe"
   RMDir "$INSTDIR"
-  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentEQ"
+  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio"
 SectionEnd

@@ -57,12 +57,21 @@ public:
     QString target() const { return target_.name; }
     bool smart() const { return false; }
     bool legacyVolumeManaged() const { return false; }
+    void setStudio(const soundcurrent::studio::Session &s) {
+        if(s.offline)return;
+        auto filters=nativeBands(bands_);
+        if(!bridge_.setStudio(s.effective(filters,gain_,balance_),s.routing))throw std::runtime_error("Invalid Studio settings");
+        session_=s;
+    }
+    std::vector<float> levels() { return bridge_.channelLevels(); }
     void start(const Device &device, const Bands &bands, double gain = 0, int balance = 0) {
         stop();
         const auto available = devices();
         if (std::none_of(available.begin(), available.end(), [&](const Device &d) { return d.name == device.name; }))
             throw std::runtime_error("Selected speakers are disconnected");
         const auto capture = standardCable(true), render = standardCable(false);
+        for(const auto &d:soundcurrent::windowsAudioEndpoints(false))if(d.id==device.name.toStdWString()&&session_.engine.channels.size()>d.channels)
+            throw std::runtime_error("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.");
         update(bands, gain, balance);
         try {
             route_ = std::make_unique<soundcurrent::WindowsRouteLease>(false, render.toStdWString(),
@@ -75,9 +84,10 @@ public:
     }
     void update(const Bands &bands, double gain = 0, int balance = 0) {
         auto filters = nativeBands(bands);
-        if (!bridge_.setProfile(filters, gain, balance, true))
+        if (!bridge_.setStudio(session_.effective(filters,gain,balance),session_.routing))
             throw std::runtime_error("Invalid equalizer settings");
         bands_ = bands;
+        gain_=gain;balance_=balance;
     }
     void updateGain(double gain, int balance) { update(bands_, gain, balance); }
     void stop() {
@@ -92,6 +102,9 @@ private:
     std::unique_ptr<soundcurrent::WindowsRouteLease> route_;
     Device target_;
     Bands bands_;
+    soundcurrent::studio::Session session_;
+    double gain_=0;
+    int balance_=0;
 };
 
 struct MicCable { QString render, capture, description; };

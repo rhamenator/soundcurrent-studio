@@ -91,6 +91,7 @@ struct AudioEngine::Impl {
     DelaySettings delay;
     ReverbSettings reverb;
     bool bypass = false;
+    bool automaticHeadroom = true;
     double postGain = 1;
 
     float sample(float input, std::size_t index, ProcessReport &report) noexcept {
@@ -202,7 +203,15 @@ bool AudioEngine::configure(const EngineSettings &settings, std::string *error) 
                 channel.eq[band] = impl_->state[i].eq[band];
             for (std::size_t band = 0; band < profile.bands.size(); ++band)
                 channel.eq[band].c = filterCoefficients(profile.bands[band], sampleRate());
-            headrooms[i] = settings.automaticHeadroom ? headroom(channel.eq, sampleRate()) : 0;
+            const auto sameFilters = [](std::span<const Biquad> a, std::span<const Biquad> b) {
+                return a.size() == b.size() && std::equal(a.begin(), a.end(), b.begin(), [](const Biquad &x, const Biquad &y) {
+                    return x.c.b0==y.c.b0 && x.c.b1==y.c.b1 && x.c.b2==y.c.b2 && x.c.a1==y.c.a1 && x.c.a2==y.c.a2;
+                });
+            };
+            if (!settings.automaticHeadroom) headrooms[i] = 0;
+            else if (impl_->automaticHeadroom && sameFilters(channel.eq, impl_->state[i].eq)) headrooms[i] = impl_->headrooms[i];
+            else if (i && sameFilters(channel.eq, next[i-1].eq)) headrooms[i] = headrooms[i-1];
+            else headrooms[i] = headroom(channel.eq, sampleRate());
             channel.preamp = std::pow(10.0, headrooms[i] / 20);
             channel.trim = std::pow(10.0, profile.gainDb / 20);
             channel.outputGain = channel.trim * std::pow(10.0, settings.postGainDb / 20);
@@ -243,6 +252,7 @@ bool AudioEngine::configure(const EngineSettings &settings, std::string *error) 
         impl_->delay = delay;
         impl_->reverb = reverb;
         impl_->bypass = settings.bypass;
+        impl_->automaticHeadroom = settings.automaticHeadroom;
         impl_->postGain = std::pow(10.0, settings.postGainDb / 20);
         if (error) error->clear();
         return true;

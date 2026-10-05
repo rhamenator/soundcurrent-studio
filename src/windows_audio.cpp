@@ -269,6 +269,22 @@ bool WindowsBridge::setProfile(std::span<const EqBand> bands, double postGainDb,
     return true;
 }
 
+bool WindowsBridge::setStudio(const studio::EngineSettings &settings, std::span<const double> matrix) {
+    try {
+        studio::AudioEngine validate(48000, settings.channels.size());
+        studio::ChannelRouter router(settings.channels.size(), settings.channels.size());
+        if (!validate.configure(settings) || !router.setMatrix(matrix)) return false;
+        auto proposed = std::make_shared<Profile::Studio>();
+        proposed->settings = settings; proposed->matrix.assign(matrix.begin(), matrix.end());
+        std::lock_guard guard(profileMutex_); profile_.studio = std::move(proposed); ++profileVersion_;
+        return true;
+    } catch (const std::exception &) { return false; }
+}
+std::vector<float> WindowsBridge::channelLevels() {
+    std::lock_guard lock(meterMutex_); auto result = channelPeaks_;
+    std::fill(channelPeaks_.begin(), channelPeaks_.end(), 0.0f); return result;
+}
+
 void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool microphone) {
     try {
         Apartment apartment;
@@ -286,6 +302,9 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                                      reinterpret_cast<void **>(outputAudio.GetAddressOf())),
               "Open speaker render stream");
         auto captureFormat = stereoFloat48k();
+        std::shared_ptr<const Profile::Studio> initialStudio;
+        { std::lock_guard lock(profileMutex_); if (!microphone) initialStudio = profile_.studio; }
+        const std::size_t processingChannels = initialStudio ? initialStudio->settings.channels.size() : 2;
         if (microphone) {
             WAVEFORMATEX *mix = nullptr;
             check(captureAudio->GetMixFormat(&mix), "Read microphone mix format");
@@ -295,11 +314,18 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                 captureFormat.nAvgBytesPerSec = 48000 * 4;
             }
             CoTaskMemFree(mix);
+        } else if (initialStudio) {
+            WAVEFORMATEX *mix = nullptr;
+            check(captureAudio->GetMixFormat(&mix), "Read cable channel layout");
+            const auto channels = mix->nChannels; CoTaskMemFree(mix);
+            if (!channels || channels > studio::maxChannels) throw std::runtime_error("Unsupported cable channel count");
+            captureFormat.nChannels = channels; captureFormat.nBlockAlign = channels * 4;
+            captureFormat.nAvgBytesPerSec = captureFormat.nSamplesPerSec * captureFormat.nBlockAlign;
         } else checkFormat(captureAudio.Get(), &captureFormat, "Cable recording endpoint");
         WAVEFORMATEX *mixFormatRaw = nullptr;
         check(outputAudio->GetMixFormat(&mixFormatRaw), "Read speaker mix format");
         std::unique_ptr<WAVEFORMATEX, decltype(&CoTaskMemFree)> outputFormat(mixFormatRaw, CoTaskMemFree);
-        if (!outputFormat || outputFormat->nChannels < 2 ||
+        if (!outputFormat || outputFormat->nChannels < processingChannels || outputFormat->nChannels > studio::maxChannels ||
             outputFormat->nSamplesPerSec < 8000 || outputFormat->nSamplesPerSec > 384000 ||
             outputFormat->nBlockAlign != outputFormat->nChannels * outputFormat->wBitsPerSample / 8)
             throw std::runtime_error("Unsupported speaker channel layout or sample rate");
@@ -307,7 +333,7 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
         OutputVolumeLease volume(outputDevice.Get());
         constexpr REFERENCE_TIME bufferTime = 2000000; // 200 ms, in 100 ns units
         check(captureAudio->Initialize(AUDCLNT_SHAREMODE_SHARED,
-                                        microphone ? AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM | AUDCLNT_STREAMFLAGS_SRC_DEFAULT_QUALITY : 0,
+                                        (microphone || initialStudio) ? AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM | AUDCLNT_STREAMFLAGS_SRC_DEFAULT_QUALITY : 0,
                                         bufferTime, 0, &captureFormat, nullptr), "Initialize cable capture");
         check(outputAudio->Initialize(AUDCLNT_SHAREMODE_SHARED, 0, bufferTime, 0,
                                        outputFormat.get(), nullptr), "Initialize speaker output");
@@ -320,13 +346,21 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
               "Read cable capture interface");
         check(outputAudio->GetService(IID_PPV_ARGS(writer.GetAddressOf())),
               "Read speaker render interface");
-        std::vector<float> scratch(std::max<UINT32>(captureBufferFrames, 1) * 2);
+        std::vector<float> scratch(std::max<UINT32>(captureBufferFrames, 1) * processingChannels);
+        std::vector<float> routed(scratch.size());
         constexpr std::size_t ringCapacity = 48000;
-        std::vector<float> ring(ringCapacity * 2);
+        std::vector<float> ring(ringCapacity * processingChannels);
         std::size_t readPosition = 0, writePosition = 0, queued = 0;
         double resamplePhase = 0.0;
         const double sourceFramesPerOutputFrame = 48000.0 / outputFormat->nSamplesPerSec;
         StereoEqualizer eq(48000);
+        std::unique_ptr<studio::AudioEngine> studioEngine;
+        std::unique_ptr<studio::ChannelRouter> studioRouter;
+        if (initialStudio) {
+            studioEngine = std::make_unique<studio::AudioEngine>(48000, processingChannels);
+            studioRouter = std::make_unique<studio::ChannelRouter>(processingChannels, processingChannels);
+        }
+        { std::lock_guard lock(meterMutex_); channelPeaks_.assign(processingChannels, 0.0f); }
         unsigned long long appliedVersion = 0;
         DWORD mmcssTask = 0;
         HANDLE mmcss = AvSetMmThreadCharacteristicsW(L"Pro Audio", &mmcssTask);
@@ -346,7 +380,12 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                 }
                 profileMutex_.unlock();
             }
-            if (changed && !eq.setProfile(std::span(pending.bands.data(), pending.count),
+            if (changed && studioEngine) {
+                std::string error;
+                if (!pending.studio || pending.studio->settings.channels.size() != processingChannels ||
+                    !studioEngine->configure(pending.studio->settings, &error) || !studioRouter->setMatrix(pending.studio->matrix))
+                    throw std::runtime_error(error.empty() ? "Turn playback off before changing the live layout" : error);
+            } else if (changed && !eq.setProfile(std::span(pending.bands.data(), pending.count),
                                           pending.postGainDb, pending.balancePercent,
                                           pending.enabled, pending.automaticHeadroom))
                 throw std::runtime_error("The selected EQ settings are invalid");
@@ -360,21 +399,31 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                       "Read cable audio");
                 if (packetFrames > captureBufferFrames)
                     throw std::runtime_error("Cable packet exceeds its capture buffer");
-                const std::size_t samples = static_cast<std::size_t>(packetFrames) * 2;
+                const std::size_t samples = static_cast<std::size_t>(packetFrames) * processingChannels;
                 if (flags & AUDCLNT_BUFFERFLAGS_SILENT) std::fill_n(scratch.data(), samples, 0.0f);
-                else if (captureFormat.nChannels == 1) {
+                else if (studioEngine) {
+                    const auto *input = reinterpret_cast<const float *>(data);
+                    for (UINT32 f = 0; f < packetFrames; ++f) for (std::size_t c = 0; c < processingChannels; ++c)
+                        scratch[f * processingChannels + c] = c < captureFormat.nChannels ? input[f * captureFormat.nChannels + c] : 0.0f;
+                } else if (captureFormat.nChannels == 1) {
                     const auto *mono = reinterpret_cast<const float *>(data);
                     for (UINT32 i = 0; i < packetFrames; ++i)
                         scratch[i * 2] = scratch[i * 2 + 1] = mono[i];
                 } else std::memcpy(scratch.data(), data, samples * sizeof(float));
-                peak_ = eq.process(scratch.data(), packetFrames);
+                if (studioEngine) {
+                    auto block = std::span(scratch).first(samples), destination = std::span(routed).first(samples);
+                    studioRouter->process(block, destination); const auto report = studioEngine->process(destination);
+                    std::copy(destination.begin(), destination.end(), block.begin()); peak_ = float(report.peakBeforeClip);
+                } else peak_ = eq.process(scratch.data(), packetFrames);
                 if (!microphone && meterMutex_.try_lock()) {
+                    if (studioEngine) for (std::size_t c = 0; c < processingChannels; ++c)
+                        channelPeaks_[c] = std::max(channelPeaks_[c], studioEngine->channelPeaks()[c]);
                     // Only the visible UI consumes this bounded tap. Never block audio.
                     constexpr std::size_t limit = 32768;
-                    if (meterSamples_ + samples > limit) meterSamples_ = 0;
-                    if (samples <= limit) for (std::size_t i = 0; i < samples; ++i)
+                    if (meterSamples_ + packetFrames * 2 > limit) meterSamples_ = 0;
+                    if (packetFrames * 2 <= limit) for (UINT32 f = 0; f < packetFrames; ++f) for (std::size_t c = 0; c < 2; ++c)
                         meterPcm_[meterSamples_++] = static_cast<std::int16_t>(std::lround(
-                            std::clamp(scratch[i], -1.0f, 1.0f) * 32767.0f));
+                            std::clamp(scratch[f * processingChannels + std::min(c, processingChannels - 1)], -1.0f, 1.0f) * 32767.0f));
                     meterMutex_.unlock();
                 }
                 for (UINT32 frame = 0; frame < packetFrames; ++frame) {
@@ -382,8 +431,8 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                         readPosition = (readPosition + 1) % ringCapacity;
                         --queued;
                     }
-                    ring[writePosition * 2] = scratch[frame * 2];
-                    ring[writePosition * 2 + 1] = scratch[frame * 2 + 1];
+                    std::copy_n(scratch.data() + frame * processingChannels, processingChannels,
+                                ring.data() + writePosition * processingChannels);
                     writePosition = (writePosition + 1) % ringCapacity;
                     ++queued;
                 }
@@ -399,13 +448,15 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                 check(writer->GetBuffer(writable, &raw), "Write speaker buffer");
                 const std::size_t bytesPerSample = outputFormat->wBitsPerSample / 8;
                 for (UINT32 frame = 0; frame < writable; ++frame) {
-                    float left = 0.0f, right = 0.0f;
+                    BYTE *destination = raw + static_cast<std::size_t>(frame) * outputFormat->nBlockAlign;
+                    std::memset(destination, 0, outputFormat->nBlockAlign);
                     if (queued >= 2) {
                         const auto next = (readPosition + 1) % ringCapacity;
-                        left = static_cast<float>(ring[readPosition * 2] * (1.0 - resamplePhase) +
-                                                  ring[next * 2] * resamplePhase);
-                        right = static_cast<float>(ring[readPosition * 2 + 1] * (1.0 - resamplePhase) +
-                                                   ring[next * 2 + 1] * resamplePhase);
+                        for (std::size_t c = 0; c < processingChannels; ++c) {
+                            const auto sample = float(ring[readPosition * processingChannels + c] * (1.0 - resamplePhase) +
+                                                      ring[next * processingChannels + c] * resamplePhase);
+                            writeSample(destination + c * bytesPerSample, sampleType, sample);
+                        }
                         resamplePhase += sourceFramesPerOutputFrame;
                         while (resamplePhase >= 1.0 && queued) {
                             readPosition = (readPosition + 1) % ringCapacity;
@@ -413,10 +464,6 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                             resamplePhase -= 1.0;
                         }
                     }
-                    BYTE *destination = raw + static_cast<std::size_t>(frame) * outputFormat->nBlockAlign;
-                    std::memset(destination, 0, outputFormat->nBlockAlign);
-                    writeSample(destination, sampleType, left);
-                    writeSample(destination + bytesPerSample, sampleType, right);
                 }
                 check(writer->ReleaseBuffer(writable, 0), "Release speaker buffer");
             }

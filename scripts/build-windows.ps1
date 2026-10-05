@@ -6,7 +6,7 @@ $ProgressPreference = 'SilentlyContinue'
 $root = Split-Path $PSScriptRoot -Parent
 Push-Location $root
 try {
-    $version = [regex]::Match((Get-Content CMakeLists.txt -Raw), '(?m)^project\(soundcurrent-eq VERSION ([0-9.]+)').Groups[1].Value
+    $version = [regex]::Match((Get-Content CMakeLists.txt -Raw), '(?m)^project\(soundcurrent-studio VERSION ([0-9.]+)').Groups[1].Value
     $stage = Join-Path $root 'build-windows-native\package'
     & cmake -S . -B build-windows-native -G 'Visual Studio 17 2022' -A x64 -T v143 "-DCMAKE_PREFIX_PATH=$QtPrefix"
     if ($LASTEXITCODE -ne 0) { throw 'Windows configure failed' }
@@ -14,8 +14,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Windows build failed' }
     if (Test-Path $stage) { Remove-Item -Recurse -Force $stage }
     New-Item -ItemType Directory -Force $stage | Out-Null
-    Copy-Item build-windows-native\Release\soundcurrent-eq.exe $stage
-    & "$QtPrefix\bin\windeployqt.exe" --release --no-translations --no-opengl-sw --no-compiler-runtime "$stage\soundcurrent-eq.exe"
+    Copy-Item build-windows-native\Release\soundcurrent-studio.exe $stage
+    & "$QtPrefix\bin\windeployqt.exe" --release --no-translations --no-opengl-sw --no-compiler-runtime "$stage\soundcurrent-studio.exe"
     if ($LASTEXITCODE -ne 0) { throw 'Qt runtime deployment failed' }
     Copy-Item "$QtPrefix\plugins\platforms\qoffscreen.dll" "$stage\platforms"
     # App-local redistributable DLLs avoid another privileged installer. UCRT is
@@ -76,7 +76,7 @@ try {
     if ($dsp.ExitCode -ne 0) { throw "DSP test failed: $($dsp.ExitCode)" }
     $env:QT_QPA_PLATFORM = 'offscreen'
     $uiLog = Join-Path $root 'build-windows-native\ui-self-test.log'
-    $ui = Start-Process "$stage\soundcurrent-eq.exe" -ArgumentList '--ui-self-test' -PassThru -RedirectStandardError $uiLog
+    $ui = Start-Process "$stage\soundcurrent-studio.exe" -ArgumentList '--ui-self-test' -PassThru -RedirectStandardError $uiLog
     $null = $ui.Handle
     if (!$ui.WaitForExit(90000)) {
         Stop-Process -Id $ui.Id -Force
@@ -104,8 +104,8 @@ try {
     }
     $delete | Set-Content -Encoding utf8 build-windows-native\uninstall-payload.nsh
     New-Item -ItemType Directory -Force dist | Out-Null
-    $installer = Join-Path $root "dist\SoundCurrent-EQ-$version-windows-x64-setup.exe"
-    & $Nsis "/DAPP_EXE=$stage\soundcurrent-eq.exe" "/DDLL_DIR=$stage" "/DAPP_VERSION=$version" "/DOUTPUT=$installer" "/DCABLE_ZIP=$cable" "/DSOURCE_ROOT=$root" "/DUNINSTALL_PAYLOAD=$root\build-windows-native\uninstall-payload.nsh" packaging\windows\soundcurrent-eq.nsi
+    $installer = Join-Path $root "dist\SoundCurrent-Studio-$version-windows-x64-setup.exe"
+    & $Nsis "/DAPP_EXE=$stage\soundcurrent-studio.exe" "/DDLL_DIR=$stage" "/DAPP_VERSION=$version" "/DOUTPUT=$installer" "/DCABLE_ZIP=$cable" "/DSOURCE_ROOT=$root" "/DUNINSTALL_PAYLOAD=$root\build-windows-native\uninstall-payload.nsh" packaging\windows\soundcurrent-studio.nsi
     if ($LASTEXITCODE -ne 0) { throw 'Windows installer build failed' }
     Copy-Item $sourceArchive dist
     $sourceHash = (Get-FileHash $sourceArchive).Hash.ToLowerInvariant()
