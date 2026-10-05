@@ -1,5 +1,39 @@
 # Windows preview verification
 
+## SoundCurrent Studio 0.8.0
+
+The private Studio desktop and native WASAPI adapter were checked on 2026-10-05
+in a signed-in, full independent Windows 11 26H2 clone. Its standard signed
+VB-CABLE input and virtual High Definition Audio output provide stereo audio;
+no original Copperfin VM was changed.
+
+The installed application passed shortcut creation, shared Qt controls,
+window fit above the taskbar, background close/reopen, single-instance activation
+and graceful Quit. The
+Studio controls also passed 256-channel editing, undo/lock, setup validation,
+and an actual 256-channel WAVE render including a route into channel 256.
+A visible desktop screenshot confirmed the Studio tab is usable in the VM.
+
+Native live measurements of the Studio processing route gave +6.00 dB for a
++6 dB post-gain change and −12.00 dB for a −12 dB filter on one channel, while
+the other channel retained its level. Independent mute, delay/reverb output,
+bypass and rejection of a live layout change with playback preserved passed.
+The inherited route tests also verified balance, stop/restart, restoration of
+all three default playback roles and a 1.022-second stereo calibration signal.
+The final installed package came from commit `03b1c14`, release workflow
+`37271794116`; the independent SDK consumer checks came from workflow
+`37271793716`. These results verify the software in a stereo VM, not a physical multichannel
+interface, real room response, microphone cable or hotplug operation.
+
+Ubuntu passed all four CTest suites and ASan/UBSan checks. A separate eight-channel
+PipeWire null-output test measured −12.00 dB EQ and +6.00 dB post gain, channel
+isolation and delay/reverb output without using the workstation's speakers.
+Native Windows CI and Ubuntu/Fedora 44/RHEL 10 compatible package builds pass.
+The core, silent meter test and offline renderer support 256 logical channels;
+live Linux formats are capped at 64 and Windows requires matching endpoint formats.
+
+## Inherited SoundCurrent EQ 0.7.0 baseline
+
 Version 0.7.0 builds the shared Qt interface on Windows. Speaker and
 amplifier profile selection, adjustable frequency/Q controls, level meters,
 microphone EQ and the calibration preview use the same UI as Linux. Windows
@@ -27,16 +61,17 @@ deferred. No original Copperfin VM was modified for these installer checks.
 Build on Windows with `scripts/build-windows.ps1 -QtPrefix <Qt SDK path>`.
 The script tests the shared DSP and the Qt UI, with bounded process waits.
 The packaged application includes Qt and the Microsoft app-local runtime.
-CTest also provides `dsp-response` and `shared-ui` checks.
+CTest provides `dsp-response`, `studio-engine`, `studio-wave` and `shared-ui` checks.
 
 The opt-in `build-windows-native/Release/soundcurrent-windows-audio-smoke.exe` integration
 check lists endpoints by default. Run it with `--run` only in an isolated,
 signed-in Windows test system with VB-CABLE installed and a physical output
-available. Quit other copies of SoundCurrent EQ first. It plays a quiet
+available. Quit other copies of SoundCurrent EQ and Studio first. It plays a quiet
 1 kHz tone at approximately -34 dBFS into CABLE Input and measures the
 physical output through WASAPI loopback. It temporarily changes all three
 Windows default playback roles to the cable and verifies their restoration
-before testing the bridge. It checks Flat playback, a live +6 dB post-gain
+before testing the bridge. The Studio stage also checks native independent channel filters,
+mute, effects, bypass and preservation of playback after a rejected layout. It checks Flat playback, a live +6 dB post-gain
 change, a -12 dB EQ cut, bypass, full-left balance, stopping/restarting the
 bridge, and the duration of a one-second stereo calibration signal. An
 unsigned-in Windows VM returned silence from the cable; signing into its
@@ -48,7 +83,8 @@ first and quit the app. An optional `-InstallerPath` argument installs the
 preview silently as the current user before the check. An optional
 `-ResultPath` chooses where to save the result. The test verifies desktop
 and Start menu shortcuts, runs the shared Qt control checks with isolated INI
-settings, then verifies closing to the notification area, restoring the
+settings, then verifies that the decorated window fits the desktop working area,
+closing to the notification area, restoring the
 existing instance and gracefully quitting through the app's activation channel.
 The shared UI check also verifies that the Equalizer tab opens first with the
 bands at the top, that device and sweep controls belong to Settings & calibration,
