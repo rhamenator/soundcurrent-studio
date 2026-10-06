@@ -1,6 +1,6 @@
 # SoundCurrent Studio
 
-Local development build: **0.8.3** (not yet published).
+Local development build: **0.8.4** (not yet published).
 
 SoundCurrent Studio is the private C++ development line for the premium desktop
 processor and a reusable audio library for a future DAW. It starts from

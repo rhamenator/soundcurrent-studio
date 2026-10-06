@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-only
+#include "accelerating_spinbox.h"
 #include "studio_panel.h"
 #include "wav.h"
 #include <QCheckBox>
@@ -33,7 +34,7 @@
 namespace soundcurrent::studio {
 namespace {
 QDoubleSpinBox *spin(double low, double high, double value, double step = .1) {
-    auto *s = new QDoubleSpinBox; s->setRange(low, high); s->setValue(value); s->setSingleStep(step); return s;
+    auto *s = new soundcurrent::AcceleratingDoubleSpinBox; s->setRange(low, high); s->setValue(value); s->setSingleStep(step); return s;
 }
 QSlider *slider(int low, int high, int value) {
     auto *s = new QSlider(Qt::Horizontal); s->setRange(low, high); s->setValue(value); return s;
@@ -61,7 +62,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     auto *root = new QVBoxLayout(this);
     auto *layoutBox = new QGroupBox("Channels and routing"); auto *layoutForm = new QFormLayout(layoutBox);
     layout_ = new QComboBox; layout_->addItems({"Stereo", "Mono", "5.1", "7.1", "16 channels", "Custom"});
-    count_ = new QSpinBox; count_->setRange(1, int(maxChannels)); count_->setAccessibleName("Studio channel count");
+    count_ = new soundcurrent::AcceleratingSpinBox; count_->setRange(1, int(maxChannels)); count_->setAccessibleName("Studio channel count");
     auto *layoutRow = new QHBoxLayout; layoutRow->addWidget(layout_); layoutRow->addWidget(count_);
     layoutForm->addRow("Layout", layoutRow);
     offline_ = new QCheckBox("Offline editing — keep current playback unchanged"); layoutForm->addRow(offline_);
@@ -106,7 +107,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     auto *add = new QPushButton("Add filter"), *replace = new QPushButton("Update selected"), *remove = new QPushButton("Remove selected");
     auto *filterButtons = new QHBoxLayout; filterButtons->addWidget(add); filterButtons->addWidget(replace); filterButtons->addWidget(remove); ch->addRow(filterButtons);
     routes_ = table({"Input channel", "Gain / polarity"}); routes_->setAccessibleName("Routes into selected output channel"); ch->addRow(routes_);
-    routeInput_ = new QSpinBox; routeInput_->setRange(1,2); routeGain_ = spin(-4,4,1,.05);
+    routeInput_ = new soundcurrent::AcceleratingSpinBox; routeInput_->setRange(1,2); routeGain_ = spin(-4,4,1,.05);
     ch->addRow("Input channel", routeInput_); ch->addRow("Linear route gain (negative = invert)", routeGain_);
     auto *route = new QPushButton("Set route"), *unroute = new QPushButton("Remove selected route"), *identity = new QPushButton("Reset all routing");
     auto *routeButtons = new QHBoxLayout; routeButtons->addWidget(route); routeButtons->addWidget(unroute); routeButtons->addWidget(identity); ch->addRow(routeButtons);
