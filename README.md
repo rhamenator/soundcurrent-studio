@@ -1,4 +1,12 @@
+> **Interim Windows route:** current local installer builds use VB-CABLE, with an in-app control-panel button and a cable removal option in the last-app uninstaller. Our native driver is preserved for later signing. See [interim setup](docs/windows-cable-interim.md) and [native bookmark](docs/windows-native-driver-bookmark.md).
+
 # SoundCurrent Studio
+
+> **Unreleased Windows driver work:** the source now includes integrated
+> SoundCurrent Audio installer/setup plumbing. Public releases still use the
+> previously shipped audio route. The new driver and privileged manager must be
+> production-signed before this becomes an installable release. See
+> [implementation status](native/windows/virtual-driver/IMPLEMENTATION-STATUS.md).
 
 Local development build: **0.8.4** (not yet published).
 
