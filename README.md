@@ -1,21 +1,26 @@
-> **Interim Windows route:** current local installer builds use VB-CABLE, with an in-app control-panel button and a cable removal option in the last-app uninstaller. Our native driver is preserved for later signing. See [interim setup](docs/windows-cable-interim.md) and [native bookmark](docs/windows-native-driver-bookmark.md).
+> **Interim Windows route:** the current Windows preview uses VB-CABLE, with an in-app control-panel button and a cable removal option in the last-app uninstaller. Our native driver is preserved for later signing. See [interim setup](docs/windows-cable-interim.md) and [native bookmark](docs/windows-native-driver-bookmark.md).
 
 # SoundCurrent Studio
 
 > **Unreleased Windows driver work:** the source now includes integrated
 > SoundCurrent Audio installer/setup plumbing. Public releases still use the
 > previously shipped audio route. The new driver and privileged manager must be
-> production-signed before this becomes an installable release. See
+> production-signed before the native-driver variant can be distributed. See
 > [implementation status](native/windows/virtual-driver/IMPLEMENTATION-STATUS.md).
 
-Local development build: **0.8.4** (not yet published).
+## Download the Windows preview — 0.8.4
 
-SoundCurrent Studio is the private C++ development line for the premium desktop
-processor and a reusable audio library for a future DAW. It starts from
+- [Windows x64 installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/windows-preview-0.8.4/SoundCurrent-Studio-0.8.4-windows-x64-VBCABLE-preview.exe)
+- [Release notes, checksums and corresponding source](https://github.com/rhamenator/soundcurrent-studio/releases/tag/windows-preview-0.8.4)
+
+This is a Windows testing preview using the signed VB-CABLE route. The SoundCurrent app/installer remain unsigned; Windows security policies may warn or block them. Quit the running app before updating. Our native-driver code remains preserved for later signing.
+
+SoundCurrent Studio is a public, GPL-3.0-only C++ desktop audio processor
+and a reusable audio library for a future DAW. It starts from
 [SoundCurrent EQ](https://github.com/rhamenator/soundcurrent-eq), preserving its
 source history, GPL-3.0-only license and third-party notices.
 
-## Premium features
+## Studio features
 
 - **1–256 logical channels:** independent channel EQ, trim, mute, solo and names.
 - **Routing:** explicit channel-to-channel gains, including polarity inversion.
@@ -40,7 +45,7 @@ automatic device selection, background operation and Quit are retained.
 ## Use
 
 The **Equalizer** tab opens first, with the frequency controls at the top.
-**Studio channels & effects** contains the premium controls;
+**Studio channels & effects** contains the Studio controls;
 **Settings & calibration** contains devices and measurements.
 
 1. Use the shared EQ for the general listening curve. Per-channel filters add
@@ -171,7 +176,7 @@ and a 256-channel file render. Linux live integration checks use a virtual
 8-channel output, so no physical speakers or expensive receiver are required.
 Windows desktop and audio checks run on an independent test VM.
 
-See [premium coverage](docs/premium-features.md) and
+See [Studio feature coverage](docs/premium-features.md) and
 [Windows verification](docs/windows-testing.md). These checks establish software
 behavior. Real surround hardware still needs verification for speaker mapping,
 latency, device changes and driver-specific formats before a production release.
