@@ -2,6 +2,7 @@
 // Copyright (C) 2026 rhamenator
 
 #include "dsp.h"
+#include "update_panel.h"
 #include "equipment_profiles.h"
 #include "processing_guard.h"
 #include "studio_panel.h"
@@ -119,6 +120,7 @@ using Bands = QVector<Band>;
 
 struct SpeakerProfile {
     QString id, name, attribution;
+    QString brand, equipmentType = "Unclassified";
     QStringList links;
     Bands filters;
 };
@@ -158,6 +160,19 @@ const QVector<SpeakerProfile> &speakerProfiles() {
                 throw std::runtime_error("Invalid speaker correction filter count");
             result.append(profile);
         }
+        for(const auto &p:soundcurrent::equipment::bundledProfiles()) {
+            if(p.kind!="speaker")continue;
+            const QString fullName=p.brand+" "+p.model;
+            bool existing=false;
+            for(auto &legacy:result)if(legacy.id.compare(fullName,Qt::CaseInsensitive)==0) {legacy.brand=p.brand;legacy.equipmentType=p.equipmentType;existing=true;break;}
+            if(existing)continue;
+            SpeakerProfile entry;entry.id=p.id;entry.name=fullName;entry.brand=p.brand;entry.equipmentType=p.equipmentType;
+            entry.attribution=p.conditions+"\n"+p.provenance;entry.links={p.source};
+            for(const auto &b:p.filters)entry.filters.append({b.frequency,b.gainDb,b.q,b.type});
+            result.append(entry);
+        }
+        for(auto &p:result)if(p.brand.isEmpty())p.brand=p.id.section(' ',0,0);
+        std::sort(result.begin(),result.end(),[](const auto &a,const auto &b){return a.name.compare(b.name,Qt::CaseInsensitive)<0;});
         return result;
     }();
     return profiles;
@@ -1960,12 +1975,19 @@ public:
         speakerRow->addWidget(speakerCombo_, 1);
         auto *speakerDetails = new QPushButton("Profile details");
         speakerRow->addWidget(speakerDetails);
-        speakerLayout->addLayout(speakerRow);
+        auto *taxonomy=new QHBoxLayout;
+        taxonomy->addWidget(new QLabel("Manufacturer"));speakerBrand_=new PresetComboBox;speakerBrand_->setAccessibleName("Speaker manufacturer");speakerBrand_->addItem("All manufacturers");
+        taxonomy->addWidget(speakerBrand_,1);taxonomy->addWidget(new QLabel("Type"));speakerType_=new PresetComboBox;speakerType_->setAccessibleName("Speaker type");speakerType_->addItem("All speaker types");taxonomy->addWidget(speakerType_,1);
+        QStringList brands,types;for(const auto &p:speakerProfiles()){if(!brands.contains(p.brand))brands<<p.brand;if(!types.contains(p.equipmentType))types<<p.equipmentType;}
+        brands.sort(Qt::CaseInsensitive);types.sort(Qt::CaseInsensitive);speakerBrand_->addItems(brands);speakerType_->addItems(types);
+        speakerLayout->addLayout(taxonomy);speakerLayout->addLayout(speakerRow);
+        connect(speakerBrand_,&QComboBox::currentIndexChanged,this,[this]{filterSpeakers();});
+        connect(speakerType_,&QComboBox::currentIndexChanged,this,[this]{filterSpeakers();});
         auto *speakerHelp = new QLabel("Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.");
         speakerHelp->setWordWrap(true);
         speakerLayout->addWidget(speakerHelp);
         connect(speakerDetails, &QPushButton::clicked, this, [this] { showSpeakerDetails(); });
-        auto *equipmentButton = new QPushButton("Equipment profile library / editor");
+        auto *equipmentButton = new QPushButton("Browse all equipment profiles / editor");
         equipmentButton->setAccessibleName("Import create and edit equipment profiles");
         speakerLayout->addWidget(equipmentButton);
         equipmentStatus_ = new QLabel;
@@ -2104,6 +2126,9 @@ public:
         calibrationStatus_->setWordWrap(true);
         calibrationLayout->addWidget(calibrationStatus_);
         settingsRoot->addWidget(calibrationBox);
+        auto *updates=new soundcurrent::UpdatePanel("soundcurrent-studio","SoundCurrent Studio",SOUNDCURRENT_VERSION,startEnabled);
+        updates->onReminder=[this](const QString &message){if(tray_)tray_->showMessage("Application update",message,QSystemTrayIcon::Information,10000);};
+        settingsRoot->addWidget(updates);
         settingsRoot->addStretch();
 
         auto *presetBox = new QGroupBox("Listening preset");
@@ -2460,7 +2485,7 @@ private:
 
     void recordChange(QObject *source) {
         if (!snapshotReady_ || restoring_) return;
-        if (source != lastChangeSource_ || !changeClock_.isValid() || changeClock_.elapsed() > 450) {
+        if (qobject_cast<QComboBox *>(source) || source != lastChangeSource_ || !changeClock_.isValid() || changeClock_.elapsed() > 450) {
             undoStack_.append(currentSnapshot_);
             if (undoStack_.size() > 50) undoStack_.removeFirst();
         }
@@ -2488,6 +2513,7 @@ private:
             selected_ = std::clamp(previous.selected, 0, int(bands_.size()) - 1);
             countBox_->setValue(int(bands_.size()));
             presetCombo_->setCurrentText(previous.preset);
+            ensureSpeakerChoice(previous.speaker);
             speakerCombo_->setCurrentIndex(std::max(0, speakerCombo_->findData(previous.speaker)));
             QSettings().setValue("speakerModelId", previous.speaker);
             ampCombo_->setCurrentIndex(std::max(0, ampCombo_->findData(previous.amplifier)));
@@ -2522,6 +2548,7 @@ private:
         lockButton_->setText(editable ? "Lock EQ" : "Unlock EQ");
         outputGain_->setEnabled(editable);
         balance_->setEnabled(editable);
+        speakerBrand_->setEnabled(editable);speakerType_->setEnabled(editable);
         presetCombo_->setEnabled(editable);
         speakerCombo_->setEnabled(editable);
         ampCombo_->setEnabled(editable);
@@ -3006,6 +3033,20 @@ private:
     QComboBox *ampCombo_ = nullptr;
     QPushButton *ampImport_ = nullptr;
 
+    QComboBox *speakerBrand_=nullptr,*speakerType_=nullptr;
+    void ensureSpeakerChoice(const QString &id){
+        if(id.isEmpty() || speakerCombo_->findData(id)>=0)return;
+        for(const auto &p:speakerProfiles())if(p.id==id){speakerCombo_->addItem(p.name+" (restored selection)",p.id);return;}
+    }
+    void filterSpeakers(){
+        const auto selected=speakerCombo_->currentData().toString();const QSignalBlocker block(speakerCombo_);
+        speakerCombo_->clear();speakerCombo_->addItem("None — use my own EQ",QString());
+        for(const auto &p:speakerProfiles()){
+            const bool matches=(speakerBrand_->currentIndex()==0 || p.brand==speakerBrand_->currentText()) && (speakerType_->currentIndex()==0 || p.equipmentType==speakerType_->currentText());
+            if(matches || p.id==selected)speakerCombo_->addItem(p.name+(matches?QString():" (currently selected)"),p.id);
+        }
+        speakerCombo_->setCurrentIndex(std::max(0,speakerCombo_->findData(selected)));
+    }
     void showSpeakerDetails() {
         const auto id = speakerCombo_->currentData().toString();
         for (const auto &p : speakerProfiles()) if (p.id == id) {
@@ -3859,6 +3900,12 @@ int main(int argc, char **argv) {
             if (combo->accessibleName() == "Speaker model profile") speakers = combo;
         if (!speakers || speakers->count() != speakerProfiles().size() + 1 || speakers->currentData().toString() != "")
             qFatal("Speaker profiles are missing or correction is enabled by default");
+        QComboBox *manufacturer=nullptr,*speakerType=nullptr;
+        for(auto *combo:testWindow.findChildren<QComboBox *>()){if(combo->accessibleName()=="Speaker manufacturer")manufacturer=combo;if(combo->accessibleName()=="Speaker type")speakerType=combo;}
+        if(!manufacturer || !speakerType || manufacturer->count()<200 || speakerType->count()<10 || speakers->count()<1000)qFatal("Full speaker taxonomy missing");
+        manufacturer->setCurrentText("JBL");if(speakers->count()<10 || !speakers->currentData().toString().isEmpty())qFatal("Speaker filtering applied a correction");
+        speakerType->setCurrentText("Bookshelf");if(speakers->count()<2)qFatal("Speaker type filtering failed");
+        manufacturer->setCurrentIndex(0);speakerType->setCurrentIndex(0);
         const int kali = speakers->findData("Kali LP-6v2");
         speakers->setCurrentIndex(kali);
         presets->setCurrentText("Bass Boost");
@@ -3867,6 +3914,11 @@ int main(int argc, char **argv) {
         if (speakers->currentIndex() != kali) qFatal("Undo preset removed speaker correction");
         undo->click();
         if (!speakers->currentData().toString().isEmpty()) qFatal("Undo did not restore speaker selection");
+        speakers->setCurrentIndex(speakers->findData("Kali LP-6v2"));
+        manufacturer->setCurrentText("JBL");if(speakers->currentData().toString()!="Kali LP-6v2")qFatal("Browsing changed active correction");
+        const int jbl=speakers->findData("JBL 305P Mark ii");if(jbl<0)qFatal("Filtered JBL speaker missing");speakers->setCurrentIndex(jbl);
+        manufacturer->setCurrentText("KEF");undo->click();if(speakers->currentData().toString()!="Kali LP-6v2")qFatal("Undo lost filtered speaker");
+        undo->click();manufacturer->setCurrentIndex(0);speakerType->setCurrentIndex(0);
         lock->click();
         if (!lock->isChecked() || firstBandSlider()->isEnabled() || presets->isEnabled() ||
             outputGain->isEnabled() || balance->isEnabled() || speakers->isEnabled())

@@ -3,6 +3,7 @@ Unicode true
 !include "MUI2.nsh"
 !include "nsDialogs.nsh"
 !include "LogicLib.nsh"
+!include "FileFunc.nsh"
 
 !ifndef APP_EXE
   !error "Pass /DAPP_EXE=path-to-soundcurrent-studio.exe"
@@ -18,7 +19,7 @@ Unicode true
 !endif
 
 !ifndef APP_VERSION
-  !define APP_VERSION "0.8.2"
+  !define APP_VERSION "0.8.3"
 !endif
 
 Var CableCheck
@@ -28,12 +29,14 @@ Var InstallCable
 Name "SoundCurrent Studio"
 OutFile "${OUTPUT}"
 InstallDir "$LOCALAPPDATA\Programs\SoundCurrent Studio"
+InstallDirRegKey HKCU "Software\SoundCurrent\SoundCurrent Studio" "InstallDir"
 RequestExecutionLevel user
 SetCompressor /SOLID lzma
 BrandingText "SoundCurrent Studio • GPL-3.0-only"
 Icon "${SOURCE_ROOT}\data\soundcurrent-studio.ico"
 UninstallIcon "${SOURCE_ROOT}\data\soundcurrent-studio.ico"
 
+!define MUI_WELCOMEPAGE_TEXT "Install or update SoundCurrent Studio. You do not need to uninstall an older version. Your settings, presets and equipment profiles will be kept.$\r$\n$\r$\nSave your work and use Quit to exit the running app before continuing. Closing its window keeps it running in the background."
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "${SOURCE_ROOT}\LICENSE"
 !insertmacro MUI_PAGE_DIRECTORY
@@ -47,6 +50,13 @@ Page custom AudioPage AudioPageLeave
 !insertmacro MUI_LANGUAGE "English"
 
 Function .onInit
+  ; Migrate the old install location, including custom folders.
+  ReadRegStr $1 HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\SoundCurrentStudio" "DisplayIcon"
+  ${If} $1 != ""
+    ${GetParent} $1 $2
+    IfFileExists "$2\soundcurrent-studio.exe" 0 +2
+      StrCpy $INSTDIR $2
+  ${EndIf}
   StrCpy $InstallCable 0 ; Silent app updates never install/elevate a driver.
   InitPluginsDir
   SetOutPath "$PLUGINSDIR"
@@ -104,7 +114,7 @@ FunctionEnd
 Section "SoundCurrent Studio" main
   FindWindow $0 "" "SoundCurrent Studio"
   StrCmp $0 0 +3
-    MessageBox MB_ICONEXCLAMATION "Quit SoundCurrent Studio before installing this version."
+    MessageBox MB_ICONEXCLAMATION "Quit SoundCurrent Studio before updating. Closing the window keeps it running. No uninstall is needed."
     Abort
   SetOutPath "$INSTDIR"
 !ifdef DLL_DIR
@@ -118,6 +128,7 @@ Section "SoundCurrent Studio" main
   File "${SOURCE_ROOT}\packaging\windows\audio-setup.ps1"
   File "/oname=VBCABLE_Driver_Pack45.zip" "${CABLE_ZIP}"
   File "${SOURCE_ROOT}\packaging\windows\VB-CABLE-NOTICE.txt"
+  WriteRegStr HKCU "Software\SoundCurrent\SoundCurrent Studio" "InstallDir" "$INSTDIR"
   WriteUninstaller "$INSTDIR\uninstall.exe"
   CreateDirectory "$SMPROGRAMS\SoundCurrent Studio"
   CreateShortcut "$SMPROGRAMS\SoundCurrent Studio\SoundCurrent Studio.lnk" "$INSTDIR\soundcurrent-studio.exe"
