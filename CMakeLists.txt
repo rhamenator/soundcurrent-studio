@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(soundcurrent-studio VERSION 0.8.1 LANGUAGES CXX)
+project(soundcurrent-studio VERSION 0.8.2 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -33,7 +33,7 @@ endif()
 
 endif() # SOUNDCURRENT_BUILD_DESKTOP
 
-add_library(soundcurrent-dsp STATIC src/dsp.cpp)
+add_library(soundcurrent-dsp STATIC src/dsp.cpp src/enhancement.cpp)
 target_include_directories(soundcurrent-dsp PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
   $<INSTALL_INTERFACE:include/soundcurrent>)
@@ -104,7 +104,7 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 install(TARGETS soundcurrent-engine soundcurrent-dsp soundcurrent-wave EXPORT SoundCurrentEngineTargets
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
-install(FILES src/engine.h src/dsp.h src/wav.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/soundcurrent)
+install(FILES src/engine.h src/dsp.h src/enhancement.h src/wav.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/soundcurrent)
 install(EXPORT SoundCurrentEngineTargets NAMESPACE SoundCurrent::
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SoundCurrentEngine)
 configure_package_config_file(cmake/SoundCurrentEngineConfig.cmake.in
@@ -155,3 +155,8 @@ if(MSVC)
 endif()
 
 endif()
+
+add_executable(soundcurrent-enhancement-test tests/enhancement_response.cpp)
+target_link_libraries(soundcurrent-enhancement-test PRIVATE soundcurrent-dsp)
+add_test(NAME sound-enhancements COMMAND soundcurrent-enhancement-test)
+set_tests_properties(sound-enhancements PROPERTIES TIMEOUT 45)

@@ -33,6 +33,7 @@ struct EngineSettings {
     std::vector<ChannelSettings> channels;
     DelaySettings delay;
     ReverbSettings reverb;
+    EnhancementSettings enhancements;
     double postGainDb = 0;
     bool automaticHeadroom = true;
     bool bypass = false;

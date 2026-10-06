@@ -84,6 +84,7 @@ struct AudioEngine::Impl {
             for (auto &ring : diffuser) ring.reset();
         }
     };
+    std::unique_ptr<StereoEnhancer> enhancer;
     int rate;
     std::vector<Channel> state;
     std::vector<double> headrooms;
@@ -94,7 +95,7 @@ struct AudioEngine::Impl {
     bool automaticHeadroom = true;
     double postGain = 1;
 
-    float sample(float input, std::size_t index, ProcessReport &report) noexcept {
+    double sample(float input, std::size_t index, ProcessReport &report) noexcept {
         double value = input;
         if (!std::isfinite(value)) { value = 0; ++report.invalidSamples; }
         auto &channel = state[index];
@@ -124,8 +125,13 @@ struct AudioEngine::Impl {
                 }
                 value = value * (1 - reverb.mix) + wet * reverb.mix;
             }
-            value = channel.muted ? 0 : value * channel.outputGain;
+
         }
+        return value;
+    }
+    float finish(double value, std::size_t index, ProcessReport &report) noexcept {
+        auto &channel=state[index];
+        if(!bypass)value=channel.muted?0:value*channel.outputGain;
         if (!std::isfinite(value)) { channel.reset(); value = 0; ++report.invalidSamples; }
         report.peakBeforeClip = std::max(report.peakBeforeClip, std::abs(value));
         peaks[index] = std::max(peaks[index], static_cast<float>(std::min(
@@ -140,6 +146,7 @@ AudioEngine::AudioEngine(int sampleRate, std::size_t channels) {
         throw std::invalid_argument("Unsupported sample rate or channel count");
     impl_ = std::make_unique<Impl>();
     impl_->rate = sampleRate;
+    impl_->enhancer = std::make_unique<StereoEnhancer>(sampleRate);
     impl_->state.resize(channels);
     impl_->headrooms.resize(channels);
     impl_->peaks.resize(channels);
@@ -158,6 +165,7 @@ bool AudioEngine::configure(const EngineSettings &settings, std::string *error) 
     if (!range(settings.postGainDb, -24, 24)) return reject("Post gain must be finite and within -24 to +24 dB");
     const auto &delay = settings.delay;
     const auto &reverb = settings.reverb;
+    if(!settings.enhancements.valid())return reject("Invalid enhancement settings");
     if (!range(delay.milliseconds, 1, 2000) || !range(delay.feedback, 0, .9) || !range(delay.mix, 0, 1))
         return reject("Delay settings are outside the supported range");
     if (!range(reverb.decaySeconds, .1, 10) || !range(reverb.damping, 0, .95) || !range(reverb.mix, 0, 1))
@@ -251,6 +259,8 @@ bool AudioEngine::configure(const EngineSettings &settings, std::string *error) 
         impl_->headrooms.swap(headrooms);
         impl_->delay = delay;
         impl_->reverb = reverb;
+        if(impl_->bypass != settings.bypass)impl_->enhancer->reset();
+        impl_->enhancer->configure(settings.enhancements);
         impl_->bypass = settings.bypass;
         impl_->automaticHeadroom = settings.automaticHeadroom;
         impl_->postGain = std::pow(10.0, settings.postGainDb / 20);
@@ -282,7 +292,14 @@ ProcessReport AudioEngine::process(std::span<float> data) noexcept {
     ProcessReport report;
     if (data.size() % channels()) { report.validBuffer = false; return report; }
     std::fill(impl_->peaks.begin(), impl_->peaks.end(), 0);
-    for (std::size_t i = 0; i < data.size(); ++i) data[i] = impl_->sample(data[i], i % channels(), report);
+    std::array<double,maxChannels> frame{};
+    for(std::size_t f=0;f<data.size()/channels();++f) {
+        for(std::size_t c=0;c<channels();++c)frame[c]=impl_->sample(data[f*channels()+c],c,report);
+        double right=channels()>1?frame[1]:frame[0];
+        if(!impl_->bypass)impl_->enhancer->process(frame[0],right,channels()>1);
+        if(channels()>1)frame[1]=right;
+        for(std::size_t c=0;c<channels();++c)data[f*channels()+c]=impl_->finish(frame[c],c,report);
+    }
     return report;
 }
 ProcessReport AudioEngine::processPlanar(std::span<const std::span<float>> planes) noexcept {
@@ -296,11 +313,18 @@ ProcessReport AudioEngine::processPlanar(std::span<const std::span<float>> plane
             }
     }
     std::fill(impl_->peaks.begin(), impl_->peaks.end(), 0);
-    for (std::size_t c = 0; c < channels(); ++c)
-        for (auto &sample : planes[c]) sample = impl_->sample(sample, c, report);
+    std::array<double,maxChannels> frame{};
+    for(std::size_t f=0;f<planes[0].size();++f) {
+        for(std::size_t c=0;c<channels();++c)frame[c]=impl_->sample(planes[c][f],c,report);
+        double right=channels()>1?frame[1]:frame[0];
+        if(!impl_->bypass)impl_->enhancer->process(frame[0],right,channels()>1);
+        if(channels()>1)frame[1]=right;
+        for(std::size_t c=0;c<channels();++c)planes[c][f]=impl_->finish(frame[c],c,report);
+    }
     return report;
 }
 void AudioEngine::reset() noexcept {
+    impl_->enhancer->reset();
     for (auto &channel : impl_->state) channel.reset();
     std::fill(impl_->peaks.begin(), impl_->peaks.end(), 0);
 }

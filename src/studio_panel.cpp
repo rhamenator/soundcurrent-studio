@@ -12,6 +12,7 @@
 #include <QHeaderView>
 #include <QHBoxLayout>
 #include <QJsonDocument>
+#include <QJsonArray>
 #include <QLabel>
 #include <QLineEdit>
 #include <QProgressBar>
@@ -86,6 +87,9 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     reverbLabel->setText(QString("Reverb wet mix · %1%").arg(wetReverb_->value()));
     connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString("Delay wet mix · %1%").arg(v));});
     connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString("Reverb wet mix · %1%").arg(v));});
+    enhancements_=new soundcurrent::EnhancementControls(true);
+    editRoot->addWidget(enhancements_);
+    enhancements_->onEdited=[this]{change([this](Session &s){s.engine.enhancements=enhancements_->settings();});if(!rebuilding_)preset_->setCurrentIndex(7);};
     editRoot->addWidget(fx);
     auto *channelBox = new QGroupBox("Selected channel"); auto *ch = new QFormLayout(channelBox);
     channel_ = new QComboBox; channel_->setAccessibleName("Studio selected channel"); name_ = new QLineEdit; name_->setMaxLength(80);
@@ -119,7 +123,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     status_ = new QLabel("Ready. Effects are dry until enabled."); status_->setWordWrap(true); root->addWidget(status_); root->addStretch();
     connect(count_, &QSpinBox::valueChanged, this, [this](int count) {
         if (rebuilding_) return;
-        change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb;
+        change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb; next.engine.enhancements=s.engine.enhancements;
             next.engine.automaticHeadroom=s.engine.automaticHeadroom; next.engine.bypass=s.engine.bypass; next.offline = true;
             for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; next.names[c]=s.names[c]; next.solo[c]=s.solo[c]; }
             s=std::move(next); }); rebuild();
@@ -185,11 +189,12 @@ void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
     offline_->setChecked(session_.offline);channel_->clear();channel_->addItems(session_.names);channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
+    enhancements_->setSettings(session_.engine.enhancements);
     const auto &d=session_.engine.delay;const auto &r=session_.engine.reverb;
     delay_->setChecked(d.enabled);delayMs_->setValue(d.milliseconds);feedback_->setValue(d.feedback);wetDelay_->setValue(int(std::lround(d.mix*100)));
     reverb_->setChecked(r.enabled);decay_->setValue(r.decaySeconds);damping_->setValue(r.damping);wetReverb_->setValue(int(std::lround(r.mix*100)));
     bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);undo_->setEnabled(!locked_&&!history_.empty());
-    preset_->setCurrentIndex(!d.enabled && !r.enabled ? 0 : 7);
+    preset_->setCurrentIndex(!d.enabled && !r.enabled && !session_.engine.enhancements.active() ? 0 : 7);
     meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(c+1).arg(session_.names[c]));cell(meters_,c,1,"−∞ dBFS");}
     rebuilding_=false;loadChannel();
 }
@@ -202,7 +207,7 @@ void StudioPanel::loadChannel() {
     rebuilding_=false;
 }
 void StudioPanel::effectPreset(int i) {
-    if(i==7)return;change([i](Session &s){s.engine.delay=DelaySettings{};s.engine.reverb=ReverbSettings{};
+    if(i==7)return;change([i](Session &s){s.engine.delay=DelaySettings{};s.engine.reverb=ReverbSettings{};s.engine.enhancements={};
         if(i==1)s.engine.delay={true,90,.15,.25};if(i==2)s.engine.delay={true,375,.45,.25};
         if(i==3)s.engine.reverb={true,.5,.6,.18};if(i==4)s.engine.reverb={true,1.8,.55,.2};
         if(i==5)s.engine.reverb={true,4,.35,.25};if(i==6){s.engine.delay={true,250,.3,.15};s.engine.reverb={true,1.5,.4,.15};}});rebuild();preset_->setCurrentIndex(i);
@@ -284,7 +289,17 @@ void StudioPanel::selfTest() {
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");
     count_->setValue(2);effectPreset(6);if(!session_.engine.delay.enabled||!session_.engine.reverb.enabled)qFatal("Studio effect preset failed");
+    const auto beforeEnhancement=session_.engine.enhancements;
+    auto *bass=enhancements_->findChildren<QSlider *>().at(4);bass->setValue(50);
+    if(session_.engine.enhancements.values[BassBoost]!=.5)qFatal("Studio enhancement control failed");
+    undo();if(!(session_.engine.enhancements==beforeEnhancement))qFatal("Studio enhancement undo failed");
+    auto *threshold=enhancements_->findChildren<QDoubleSpinBox *>().at(5);threshold->setValue(-30);
+    if(session_.engine.enhancements.values[Threshold]!=-30)qFatal("Advanced enhancement control failed");
     const auto roundtrip=Session::parse(session_.json());if(roundtrip.json()!=session_.json())qFatal("Studio profile round trip failed");
+    auto legacy=session_.json();legacy.remove("enhancements");
+    if(Session::parse(legacy).engine.enhancements.active())qFatal("Legacy setup enhancements not dry");
+    auto invalid=session_.json();invalid["enhancements"]=QJsonArray{1};bool badEffects=false;
+    try{Session::parse(invalid);}catch(const std::exception &){badEffects=true;}if(!badEffects)qFatal("Malformed effects accepted");
     auto broken=session_.json();broken["postGain"]=100;bool rejected=false;
     try{Session::parse(broken);}catch(const std::exception &){rejected=true;}if(!rejected)qFatal("Invalid Studio setup gain accepted");
     setLocked(true);const auto locked=session_.json();change([](Session &s){s.engine.delay.milliseconds=100;});if(session_.json()!=locked)qFatal("Studio lock failed");setLocked(false);

@@ -62,7 +62,8 @@ QJsonObject Session::json() const {
                 routes.append(QJsonArray{int(c), int(in), routing[c * engine.channels.size() + in]});
     }
     const auto &d = engine.delay; const auto &r = engine.reverb;
-    return {{"schema", 1}, {"channels", channels}, {"routing", routes}, {"offline", offline},
+    QJsonArray enhancements;for(double v:engine.enhancements.values)enhancements.append(v);
+    return {{"enhancements",enhancements},{"schema", 1}, {"channels", channels}, {"routing", routes}, {"offline", offline},
             {"postGain", engine.postGainDb}, {"headroom", engine.automaticHeadroom}, {"bypass", engine.bypass},
             {"delay", QJsonObject{{"enabled", d.enabled}, {"milliseconds", d.milliseconds}, {"feedback", d.feedback}, {"mix", d.mix}}},
             {"reverb", QJsonObject{{"enabled", r.enabled}, {"decay", r.decaySeconds}, {"damping", r.damping}, {"mix", r.mix}}}};
@@ -106,6 +107,11 @@ Session Session::parse(const QJsonObject &o) {
     const auto d = o.value("delay").toObject(), r = o.value("reverb").toObject();
     s.engine.delay = {boolean(d, "enabled"), numeric(d, "milliseconds", 1, 2000), numeric(d, "feedback", 0, .9), numeric(d, "mix", 0, 1)};
     s.engine.reverb = {boolean(r, "enabled"), numeric(r, "decay", .1, 10), numeric(r, "damping", 0, .95), numeric(r, "mix", 0, 1)};
+    if(o.contains("enhancements")) {
+        const auto values=o.value("enhancements").toArray();require(values.size()==EffectParameterCount,"Invalid enhancement parameter count");
+        for(int i=0;i<values.size();++i) {require(values[i].isDouble(),"Invalid enhancement parameter type");s.engine.enhancements.values[std::size_t(i)]=values[i].toDouble();}
+        require(s.engine.enhancements.valid(),"Enhancements outside supported ranges");
+    }
     AudioEngine validator(48000, channels.size()); std::string error;
     require(validator.configure(s.engine, &error), error.c_str());
     return s;

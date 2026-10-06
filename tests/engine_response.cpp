@@ -29,6 +29,16 @@ namespace {
 void check(bool okay, const char *message) { if (!okay) throw std::runtime_error(message); }
 EngineSettings settingsFor(std::size_t count) { EngineSettings s; s.channels.resize(count); return s; }
 bool near(double a, double b, double tolerance = 1e-6) { return std::abs(a-b) <= tolerance; }
+void enhancementIntegration() {
+    auto s=settingsFor(6);s.enhancements.values[soundcurrent::BassBoost]=.7;s.enhancements.values[soundcurrent::Ambience]=.4;s.enhancements.values[soundcurrent::Surround]=.8;
+    AudioEngine a(48000,6),b(48000,6);check(a.configure(s)&&b.configure(s),"Enhancement engine configuration");
+    std::vector<float> packed(4800*6);std::vector<std::vector<float>> planar(6,std::vector<float>(4800));std::vector<std::span<float>> planes;
+    for(std::size_t c=0;c<6;++c){for(std::size_t f=0;f<4800;++f)packed[f*6+c]=planar[c][f]=float(.05*std::sin(f*.01+c));planes.push_back(planar[c]);}
+    const auto dry=packed;trackAllocations=true;a.process(packed);b.processPlanar(planes);trackAllocations=false;
+    check(allocations==0,"Enhanced engine processing allocated");bool audible=false;
+    for(std::size_t f=0;f<4800;++f)for(std::size_t c=0;c<6;++c){check(packed[f*6+c]==planar[c][f],"Enhanced planar mismatch");if(c>=2)check(packed[f*6+c]==dry[f*6+c],"Enhancement touched other channels/LFE");else audible|=packed[f*6+c]!=dry[f*6+c];}
+    check(audible,"Engine ignored enhancements");s.bypass=true;check(a.configure(s),"Enhanced bypass configure");auto bypass=dry;a.process(bypass);check(bypass==dry,"Enhancements active during bypass");
+}
 void identityAndBounds() {
     for (const auto channels : {1, 2, 3, 6, 8, 16, 64, 256}) {
         AudioEngine engine(48000, channels);
@@ -194,7 +204,7 @@ void safetyAndRouting() {
 }
 int main() {
     try {
-        identityAndBounds(); eqResponse(); delayAndLiveGain(); reverbAndBlocks(); safetyAndRouting();
+        enhancementIntegration(); identityAndBounds(); eqResponse(); delayAndLiveGain(); reverbAndBlocks(); safetyAndRouting();
         std::puts("PASS: 1-256 channels, independent EQ/gain, delay/reverb tails, routing, planar/block equivalence, bounds and allocation-free processing");
         return 0;
     } catch (const std::exception &error) {

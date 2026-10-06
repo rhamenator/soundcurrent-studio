@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #pragma once
 #include "studio_model.h"
+#include "enhancement_controls.h"
 #include <QWidget>
 #include <QTimer>
 #include <atomic>
@@ -42,6 +43,7 @@ private:
     void renderFiles(const QString &input, const QString &output);
     void tick();
     void startPreview();
+    soundcurrent::EnhancementControls *enhancements_;
     Session session_;
     std::vector<Session> history_;
     std::vector<EqBand> shared_;
