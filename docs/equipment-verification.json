@@ -1,7 +1,7 @@
 {
   "date": "2026-10-05",
   "version": "0.8.1",
-  "linuxCtestGroups": 5,
+  "linuxCtestGroups": 6,
   "result": "passed",
   "bundledSpeakerCorrections": 1087,
   "speakerBrands": 255,
@@ -12,16 +12,17 @@
     "complete bundled catalog validation",
     "atomic library save / reopen",
     "modal dirty editor Save creates copy and preserves reference",
-    "existing shared UI and DSP; premium engine and WAVE where applicable"
+    "existing shared UI and DSP; premium engine and WAVE where applicable",
+    "shared processing guard: cross-process exclusion, crash recovery and release"
   ],
   "visualInspection": [
     "library taxonomy, sources and curve",
     "editor correction points, filter table and save controls"
   ],
-  "windows": "Shared source updated; new Windows build and live audio not verified",
+  "windows": "Native MSVC x64 build passed DSP, equipment editor, processing guard and shared UI tests; Studio engine tests passed. Physical Windows audio and interactive installer not tested.",
   "hardware": "No tones, microphone capture or physical route changes in this task",
   "installedUserBuild": true,
   "runningAppRestarted": false,
   "published": false,
-  "packageSha256": "132ec38742b9157444f58c1a65727013714032751aba0f1fb8967478feb346b4"
+  "packageSha256": "cacc4cc7d3e12a31ab714db4d733c30e0aa7c4c1710756855f612720ae550479"
 }

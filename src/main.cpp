@@ -3,6 +3,7 @@
 
 #include "dsp.h"
 #include "equipment_profiles.h"
+#include "processing_guard.h"
 #include "studio_panel.h"
 #ifndef _WIN32
 #include "linux_audio.h"
@@ -2385,6 +2386,11 @@ public:
         microphone_.stop();
     }
 
+    void stopForConflict() {
+        if (calibrating_) { calibrationCancelled_=true; calibration_.kill(); calibration_.waitForFinished(1000); }
+        meter_.stop(); audio_.stop(); microphone_.stop();
+        const QSignalBlocker a(power_),b(micPower_);power_->setChecked(false);micPower_->setChecked(false);
+    }
     void reopen() {
         showNormal();
         fitToDisplay();
@@ -3986,7 +3992,20 @@ int main(int argc, char **argv) {
         qCritical("Could not create SoundCurrent Studio's local activation socket: %s", qPrintable(instanceServer.errorString()));
         return 1;
     }
+    soundcurrent::ProcessingGuard processingGuard;
+    auto showConflict=[&](const QString &reason){QMessageBox box(QMessageBox::Warning,"Equalizer conflict",reason,QMessageBox::Ok);box.setTextFormat(Qt::PlainText);box.exec();};
+    if (!processingGuard.acquire(soundcurrent::processingGuardDirectory())) { showConflict(processingGuard.error()); return 1; }
+    const auto conflict=soundcurrent::otherEqualizerConflict(kSink);
+    if (!conflict.isEmpty()) { showConflict(conflict); return 1; }
     MainWindow window(!app.arguments().contains("--preview"));
+    QTimer conflictMonitor;
+    conflictMonitor.setInterval(2000);
+    QObject::connect(&conflictMonitor,&QTimer::timeout,&window,[&]{
+        const auto reason=soundcurrent::otherEqualizerConflict(kSink);
+        if(!reason.isEmpty()){conflictMonitor.stop();window.stopForConflict();showConflict(reason);qApp->quit();}
+    });
+    conflictMonitor.start();
+
     QObject::connect(&instanceServer, &QLocalServer::newConnection, &window, [&] {
         while (instanceServer.hasPendingConnections()) {
             auto *client = instanceServer.nextPendingConnection();
