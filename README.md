@@ -1,5 +1,11 @@
 # SoundCurrent Studio
 
+> **Unreleased Windows driver work:** the source now includes integrated
+> SoundCurrent Audio installer/setup plumbing. Public releases still use the
+> previously shipped audio route. The new driver and privileged manager must be
+> production-signed before this becomes an installable release. See
+> [implementation status](native/windows/virtual-driver/IMPLEMENTATION-STATUS.md).
+
 Local development build: **0.8.4** (not yet published).
 
 SoundCurrent Studio is the private C++ development line for the premium desktop
@@ -135,7 +141,9 @@ Windows desktop builds use Visual Studio 2022 C++ tools, CMake, 7-Zip and NSIS:
 
 ```powershell
 ./scripts/install-windows-qt.ps1
-./scripts/build-windows.ps1 -QtPrefix C:\Qt\6.12.0\msvc2022_64
+./scripts/build-windows.ps1 -QtPrefix C:\Qt\6.12.0\msvc2022_64 `
+    -SignedDriverPackage C:\SoundCurrent-Signed\driver `
+    -SignedDriverManager C:\SoundCurrent-Signed\soundcurrent-driver-manager.exe
 ```
 
 SDK/source/driver downloads use pinned checksums and official hosts. Windows

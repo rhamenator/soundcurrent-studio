@@ -57,3 +57,15 @@ Stash's January 29, 2025 Parts Express forum post, supplied by the user as a PDF
 It retains source attribution, PDF hash, measurement conditions and uncertainty.
 No original PDF pages, photographs or forum prose are redistributed. Other
 microphone/amplifier source links are research metadata, not bundled curves.
+
+## Microsoft SYSVAD driver source (development dependency)
+
+`native/windows/virtual-driver/vendor/sysvad` derives from Microsoft's
+Windows-driver-samples at commit
+`2dc3fd3a0cc84a2933f2194e7ec0871584979071`. Copyright Microsoft Corporation.
+This independently built kernel driver source, including SoundCurrent
+modifications within that directory, retains the Microsoft Public License
+(MS-PL); see `native/windows/virtual-driver/vendor/LICENSE-MS-PL.txt`.
+It is not linked into the GPL application binary. No demonstration Microsoft
+APOs or proprietary FxSound processing code are bundled by this work.
+SDK/WDK tools are build dependencies and are not application payloads.
