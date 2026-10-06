@@ -234,3 +234,16 @@ Files must be smaller than 64 KiB; at most 32 imported profiles are retained.
 Gain is a **correction**, not the measured response itself. This EQ addresses
 frequency response; it cannot remove amplifier noise, clipping or distortion.
 
+
+## Equipment profile development
+
+The current local development build adds a searchable equipment library organized
+by brand, family and model, microphone/speaker/amplifier imports, a response-curve
+editor, and Save/Discard/Cancel for modified profiles. Published references stay
+intact; edits save custom copies. The catalog contains 1,087 adapted speaker EQ
+profiles across 255 brands and a qualified Pyle PDA29BU electrical reference.
+Successful sweep checks can also save a whole-system response profile.
+
+See [equipment profiles](docs/equipment-profiles.md) for importing measured data,
+creating your own profiles, provenance, limits, verification and source coverage.
+This work is not yet published in the linked GitHub release.
