@@ -14,7 +14,7 @@ mkdir -p "$topdir"/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS} "$project_dir/dist
 tar -C "$project_dir" \
     --transform="s,^,soundcurrent-studio-$version/," \
     -czf "$topdir/SOURCES/soundcurrent-studio-$version.tar.gz" \
-    CMakeLists.txt COPYRIGHT LICENSE README.md THIRD-PARTY-NOTICES.md cmake examples src data tests docs/studio-engine.md native/windows/virtual-driver/vendor/sysvad/soundcurrent_mic_transport.h native/windows/virtual-driver/vendor/LICENSE-MS-PL.txt
+    CMakeLists.txt COPYRIGHT LICENSE README.md THIRD-PARTY-NOTICES.md cmake examples src data tests docs native/windows/virtual-driver/vendor/sysvad/soundcurrent_mic_transport.h native/windows/virtual-driver/vendor/LICENSE-MS-PL.txt
 
 rpmbuild -bb "$@" --define "_topdir $topdir" \
     --define "_rpmdir $project_dir/dist" \
