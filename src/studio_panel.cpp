@@ -286,6 +286,16 @@ void StudioPanel::renderFiles(const QString &input,const QString &output) {
     });
 }
 void StudioPanel::selfTest() {
+    Session lowGain(2);
+    lowGain.engine.postGainDb = -24;
+    const auto effective = lowGain.effective({}, -60, 0);
+    AudioEngine quietEngine(48000, 2);
+    if (effective.postGainDb != -84 || !quietEngine.configure(effective))
+        qFatal("Studio clipped the shared low post gain");
+    std::array<float, 2> quietFrame{.5f, .5f};
+    quietEngine.process(quietFrame);
+    if (std::abs(quietFrame[0] - .5 * std::pow(10., -84. / 20)) > 1e-9)
+        qFatal("Studio low post gain amplitude is incorrect");
     const auto initial=session_.json();count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline)qFatal("Studio 256-channel UI failed");
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");
