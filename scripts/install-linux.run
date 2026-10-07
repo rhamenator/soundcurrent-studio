@@ -6,9 +6,9 @@ version='1.0.0'
 release='v1.0.0'
 repo="rhamenator/$product"
 # Published, reviewed package hashes; never execute an unverified download.
-deb_hash='a6e888950ac27c2b2788fa35bdf634d5d380d6513cce69516066b28e590d4cd8'
-fedora_hash='9a119b8418ae82c76f92ff57688d7ec4e86e4cc8f46fef9d744d84d0eb1bea75'
-rhel_hash='42437ea4e2aa08292518334835bd74789f1e1dc9260eca844878cdf91aa30dfa'
+deb_hash='f7bb2a3ce1e43848daef258a15f48d4773e27b703440c92f191eb33ae9171a38'
+fedora_hash='b41385ae766cb03ee226298b7359e3ff9b84a8dbc2b5c63968140a0a10cc7b06'
+rhel_hash='00ef7194a08f8feb9b5f701c5e7490ed0ea10c1b1c75d17acd103545e4417cd9'
 select_package() {
     local id=$1 like=$2 major=${3%%.*}
     case " $id $like " in
