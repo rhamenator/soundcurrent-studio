@@ -1,6 +1,6 @@
 ## Easy Linux installer
 
-[Download the Linux installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/windows-preview-0.8.5/SoundCurrent-Studio-Linux-Installer.run). Save it, then run:
+[Download the Linux installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/preview-0.8.5/SoundCurrent-Studio-Linux-Installer.run). Save it, then run:
 
 ```bash
 bash ~/Downloads/SoundCurrent-Studio-Linux-Installer.run

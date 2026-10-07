@@ -10,7 +10,7 @@
 
 ## Easy Linux installer
 
-[Download the Linux installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/windows-preview-0.8.5/SoundCurrent-Studio-Linux-Installer.run). Save it, then run:
+[Download the Linux installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/preview-0.8.5/SoundCurrent-Studio-Linux-Installer.run). Save it, then run:
 
 ```bash
 bash ~/Downloads/SoundCurrent-Studio-Linux-Installer.run
@@ -33,8 +33,8 @@ To uninstall, Quit the app and remove its package with `sudo apt remove soundcur
 
 ## Download the Windows preview — 0.8.5
 
-- [Windows x64 installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/windows-preview-0.8.5/SoundCurrent-Studio-0.8.5-windows-x64-VBCABLE-preview.exe)
-- [Release notes, checksums and corresponding source](https://github.com/rhamenator/soundcurrent-studio/releases/tag/windows-preview-0.8.5)
+- [Windows x64 installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/preview-0.8.5/SoundCurrent-Studio-0.8.5-windows-x64-VBCABLE-preview.exe)
+- [Release notes, checksums and corresponding source](https://github.com/rhamenator/soundcurrent-studio/releases/tag/preview-0.8.5)
 
 This is a Windows testing preview using the signed VB-CABLE route. The SoundCurrent app/installer remain unsigned; Windows security policies may warn or block them. Quit the running app before updating. Our native-driver code remains preserved for later signing.
 
