@@ -1428,6 +1428,7 @@ public:
 protected:
     void paintEvent(QPaintEvent *) override {
         QPainter painter(this);
+        painter.setLayoutDirection(Qt::LeftToRight);
         painter.setRenderHint(QPainter::Antialiasing);
         painter.fillRect(rect(), QColor("#172337"));
         const QRectF plot(38, 12, width() - 54, height() - 31);
@@ -1546,6 +1547,7 @@ public:
 protected:
     void paintEvent(QPaintEvent *) override {
         QPainter painter(this);
+        painter.setLayoutDirection(Qt::LeftToRight);
         painter.fillRect(rect(), QColor("#30425c"));
         const auto colorFor = [](double db) {
             return QColor(db >= -3.0 ? "#f16b76" : db >= -12.0 ? "#e6b450" : "#50d1ba");
@@ -1595,6 +1597,7 @@ public:
 protected:
     void paintEvent(QPaintEvent *) override {
         QPainter painter(this);
+        painter.setLayoutDirection(Qt::LeftToRight);
         painter.fillRect(rect(), QColor("#30425c"));
         const auto xFor = [this](double db) {
             return std::clamp(int(std::lround((db + 60.0) * width() / 60.0)), 0, width());
