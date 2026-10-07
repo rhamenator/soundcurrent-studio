@@ -210,6 +210,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Balance</source>
+      <extracomment>Left/right audio channel balance. Not bank balance or physical equilibrium.</extracomment>
       <translation>Balansz</translation>
     </message>
     <message>
@@ -226,7 +227,8 @@ Import into your library?</source>
     </message>
     <message>
       <source>Bands</source>
-      <translation>Sávok</translation>
+      <extracomment>Frequency bands in an audio equalizer. Not music groups, belts or radio stations.</extracomment>
+      <translation>Frekvenciasávok</translation>
     </message>
     <message>
       <source>Bars beside the sliders show estimated post-EQ levels. Red peak text warns of possible clipping.</source>
@@ -518,6 +520,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Equalizer</source>
+      <extracomment>Audio frequency-response processor, not social equality.</extracomment>
       <translation>Hangszínszabályzó</translation>
     </message>
     <message>
@@ -654,6 +657,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Flat</source>
+      <extracomment>Preset with zero equalizer gain at every frequency. Not an apartment; does not imply muted audio.</extracomment>
       <translation>Sík</translation>
     </message>
     <message>
@@ -670,7 +674,8 @@ Import into your library?</source>
     </message>
     <message>
       <source>Gain</source>
-      <translation>Erősítés</translation>
+      <extracomment>Audio signal level adjustment in dB, positive or negative. Not financial profit.</extracomment>
+      <translation>Jelerősítés</translation>
     </message>
     <message>
       <source>Gain / polarity</source>
@@ -798,6 +803,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Listening preset</source>
+      <extracomment>Saved equalizer settings for playback. Not a listening device.</extracomment>
       <translation>Hallgatási előbeállítás</translation>
     </message>
     <message>
@@ -814,6 +820,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Lock EQ</source>
+      <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>EQ zárolása</translation>
     </message>
     <message>
@@ -930,6 +937,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Natural mic EQ</source>
+      <extracomment>Microphone equalization feature intended to produce natural-sounding audio. Not a claim that the microphone has a measured neutral response.</extracomment>
       <translation>Természetes mikrofon-EQ</translation>
     </message>
     <message>
@@ -1078,7 +1086,8 @@ Import into your library?</source>
     </message>
     <message>
       <source>Post gain</source>
-      <translation>Kimeneti erősítés</translation>
+      <extracomment>Signal level adjustment after EQ processing, in dB; permits attenuation as well as amplification. Not financial profit.</extracomment>
+      <translation>Kimeneti jelerősítés</translation>
     </message>
     <message>
       <source>Post gain after equalization</source>
@@ -1138,6 +1147,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Quit app</source>
+      <extracomment>Exit the process and unload audio processing; closing the window alone keeps the app running.</extracomment>
       <translation>Kilépés</translation>
     </message>
     <message>
@@ -1194,6 +1204,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Reset to flat</source>
+      <extracomment>Restore zero gain in all EQ bands. Does not mute playback.</extracomment>
       <translation>Sík válasz visszaállítása</translation>
     </message>
     <message>
@@ -1282,7 +1293,8 @@ Import into your library?</source>
     </message>
     <message>
       <source>Selected band</source>
-      <translation>Kijelölt sáv</translation>
+      <extracomment>Currently selected frequency band in the equalizer.</extracomment>
+      <translation>Kijelölt frekvenciasáv</translation>
     </message>
     <message>
       <source>Selected band filter Q</source>
@@ -1510,6 +1522,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Undo</source>
+      <extracomment>Reverse the previous editable setting change.</extracomment>
       <translation>Visszavonás</translation>
     </message>
     <message>
@@ -1550,7 +1563,8 @@ Import into your library?</source>
     </message>
     <message>
       <source>Use system locale</source>
-      <translation>Rendszerterület használata</translation>
+      <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
+      <translation>A rendszer területi beállításainak használata</translation>
     </message>
     <message>
       <source>VB-CABLE settings</source>
