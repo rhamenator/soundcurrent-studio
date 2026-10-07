@@ -28,6 +28,9 @@ presets, output device selection, and background tray controls for PipeWire.
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=%{_prefix} -DCMAKE_INSTALL_LIBDIR=%{_libdir}
 cmake --build build --parallel %{_smp_build_ncpus}
 
+%check
+ctest --test-dir build --output-on-failure --no-tests=error
+
 %install
 DESTDIR=%{buildroot} cmake --install build
 
