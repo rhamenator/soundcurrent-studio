@@ -143,7 +143,7 @@ try {
     $delete | Set-Content -Encoding utf8 build-windows-native\uninstall-payload.nsh
     New-Item -ItemType Directory -Force dist | Out-Null
     $installer = Join-Path $root "dist\SoundCurrent-Studio-$version-windows-x64-setup.exe"
-    $audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") } else { @("/DCABLE_ZIP=$CablePackage") }
+    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") } else { @("/DCABLE_ZIP=$CablePackage") }
     $installerScript = if ($AudioRoute -eq 'Native') { 'packaging\windows\soundcurrent-studio-native.nsi' } else { 'packaging\windows\soundcurrent-studio.nsi' }
     & $Nsis "/DAPP_EXE=$stage\soundcurrent-studio.exe" "/DDLL_DIR=$stage" "/DAPP_VERSION=$version" "/DOUTPUT=$installer" @audioOptions "/DSOURCE_ROOT=$root" "/DUNINSTALL_PAYLOAD=$root\build-windows-native\uninstall-payload.nsh" $installerScript
     if ($LASTEXITCODE -ne 0) { throw 'Windows installer build failed' }
