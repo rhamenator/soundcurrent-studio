@@ -162,7 +162,7 @@ std::span<const float> AudioEngine::channelPeaks() const noexcept { return impl_
 bool AudioEngine::configure(const EngineSettings &settings, std::string *error) {
     const auto reject = [&](const char *message) { if (error) *error = message; return false; };
     if (settings.channels.size() != channels()) return reject("Channel configuration count does not match engine");
-    if (!range(settings.postGainDb, -24, 24)) return reject("Post gain must be finite and within -24 to +24 dB");
+    if (!range(settings.postGainDb, kMinPostGainDb - 24, 24)) return reject("Post gain must be finite and within -84 to +24 dB");
     const auto &delay = settings.delay;
     const auto &reverb = settings.reverb;
     if(!settings.enhancements.valid())return reject("Invalid enhancement settings");
@@ -270,7 +270,7 @@ bool AudioEngine::configure(const EngineSettings &settings, std::string *error) 
 }
 
 bool AudioEngine::setPostGainDb(double db) noexcept {
-    if (!range(db, -24, 24)) return false;
+    if (!range(db, kMinPostGainDb - 24, 24)) return false;
     impl_->postGain = std::pow(10.0, db / 20);
     for (auto &channel : impl_->state) channel.outputGain = channel.trim * impl_->postGain;
     return true;

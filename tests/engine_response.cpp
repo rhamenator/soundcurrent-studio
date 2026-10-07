@@ -57,6 +57,12 @@ void identityAndBounds() {
     std::vector<float> bad(7, .2f);
     const auto before = bad;
     check(!engine.process(bad).validBuffer && bad == before, "Partial frame changed memory");
+    check(engine.setPostGainDb(-60), "Low live post gain rejected");
+    std::array<float, 6> quiet{.5f,.5f,.5f,.5f,.5f,.5f};
+    engine.process(quiet);
+    for (const auto sample : quiet) check(std::abs(sample-.0005f)<1e-9, "Low gain not immediate");
+    check(!engine.setPostGainDb(-84.5), "Out-of-range low gain accepted");
+    check(engine.setPostGainDb(0), "Post gain restore failed");
     auto s = settingsFor(6);
     s.channels[3].gainDb = -6.020599913;
     check(engine.configure(s), "Channel trim rejected");

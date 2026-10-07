@@ -59,7 +59,7 @@ source history, GPL-3.0-only license and third-party notices.
   or device dependencies in the processing library.
 
 The shared first-page EQ retains Flat as its default, 34 listening presets,
-5–31 editable bands, post gain, balance, colored FFT meters and peak markers.
+5–31 editable bands, post gain (-60 to +12 dB in 0.5 dB steps), balance, colored FFT meters and peak markers.
 Speaker/amplifier profiles, microphone EQ, quiet sweep calibration with a preview,
 automatic device selection, background operation and Quit are retained.
 

@@ -34,7 +34,8 @@ Session::Session(std::size_t count) {
 EngineSettings Session::effective(std::span<const EqBand> sharedBands, double gainDb, int balance) const {
     auto result = engine;
     const bool anySolo = std::find(solo.begin(), solo.end(), true) != solo.end();
-    result.postGainDb = std::clamp(result.postGainDb + gainDb, -24.0, 24.0);
+    // Include the shared -60 dB fader and the saved Studio post gain (down to -24 dB).
+    result.postGainDb = std::clamp(result.postGainDb + gainDb, kMinPostGainDb - 24.0, 24.0);
     for (std::size_t c = 0; c < result.channels.size(); ++c) {
         auto &channel = result.channels[c];
         require(channel.bands.size() + sharedBands.size() <= kMaxProcessingBands,
