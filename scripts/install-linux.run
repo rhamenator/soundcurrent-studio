@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: GPL-3.0-only
 set -euo pipefail
 product='soundcurrent-studio'
-version='0.8.5'
-release='preview-0.8.5'
+version='1.0.0'
+release='v1.0.0'
 repo="rhamenator/$product"
 # Published, reviewed package hashes; never execute an unverified download.
 deb_hash='a6e888950ac27c2b2788fa35bdf634d5d380d6513cce69516066b28e590d4cd8'
