@@ -2,13 +2,13 @@
 # SPDX-License-Identifier: GPL-3.0-only
 set -euo pipefail
 product='soundcurrent-studio'
-version='0.8.0'
-release='studio-preview-0.8.0'
+version='0.8.5'
+release='windows-preview-0.8.5'
 repo="rhamenator/$product"
 # Published, reviewed package hashes; never execute an unverified download.
-deb_hash='f1ce471d7a5c7d8a640e0c843f941215cda30f398b0e672a781b56ff700f2fcd'
-fedora_hash='bc091e87fd5b67ff49b4e9c8222cf222f280fed973c660e003659f2ebc147030'
-rhel_hash='dbc83a50a2361cd3e063b424bcbf8e4441720680f93ecac684846ab802cb982e'
+deb_hash='a6e888950ac27c2b2788fa35bdf634d5d380d6513cce69516066b28e590d4cd8'
+fedora_hash='9a119b8418ae82c76f92ff57688d7ec4e86e4cc8f46fef9d744d84d0eb1bea75'
+rhel_hash='42437ea4e2aa08292518334835bd74789f1e1dc9260eca844878cdf91aa30dfa'
 select_package() {
     local id=$1 like=$2 major=${3%%.*}
     case " $id $like " in

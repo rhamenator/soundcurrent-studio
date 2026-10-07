@@ -18,7 +18,18 @@ bash ~/Downloads/SoundCurrent-Studio-Linux-Installer.run
 
 It identifies your distribution, verifies the selected package against a pinned SHA-256, and installs or updates through APT or DNF with administrator approval. Presets and profiles are retained; an application-menu icon is included. Use Quit before updating. GTK/KDE confirmation dialogs are used when Zenity or KDialog is available.
 
-The installer uses the published Linux preview (Studio 0.8.0), separate from the newer Windows build. It supports Debian/Ubuntu derivatives with compatible Qt 6.4+ and glibc, Fedora 44+, and RHEL 10-compatible systems including Rocky/AlmaLinux 10. Dependency availability still depends on enabled distribution repositories. Unsupported distributions or architectures are reported; Arch and openSUSE packages are not provided yet. Use `--dry-run` to see its selection, or `--download-only` to save a verified package.
+The installer installs Studio 0.8.5, including the current profile library and editor. It supports Debian/Ubuntu derivatives with compatible Qt 6.4+ and glibc, Fedora 44+, and RHEL 10-compatible systems including Rocky/AlmaLinux 10. Dependency availability still depends on enabled distribution repositories. Unsupported distributions or architectures are reported; Arch and openSUSE packages are not provided yet. Use `--dry-run` to see its selection, or `--download-only` to save a verified package.
+
+
+For an offline installation, download the matching DEB or RPM from the same release and run:
+
+```bash
+bash SoundCurrent-Studio-Linux-Installer.run --package-file /path/to/package
+```
+
+The local package must match the same pinned SHA-256 as the online package. Dependencies still require distribution repositories unless they are already installed.
+
+To uninstall, Quit the app and remove its package with `sudo apt remove soundcurrent-studio` or `sudo dnf remove soundcurrent-studio`. Your personal presets and profiles are retained for reinstallation.
 
 ## Download the Windows preview — 0.8.5
 
@@ -102,8 +113,8 @@ processing, while the first-page on/off control unloads the live route.
 
 ## Installation
 
-Private preview packages are built by this repository's release workflow.
-The public EQ release is a separate application. Studio version 0.8.0 installs
+Public preview packages are built and validated by this repository's release workflow.
+The public EQ release is a separate application. Studio version 0.8.5 installs
 with its own application icon and shortcuts.
 
 ### Ubuntu 24.04 and newer
@@ -132,7 +143,7 @@ PipeWire desktop session. RHEL 9 is not a build target.
 
 ### Windows 10/11 x64
 
-Run `SoundCurrent-Studio-0.8.0-windows-x64-setup.exe`. It installs for the current
+Run `SoundCurrent-Studio-0.8.5-windows-x64-VBCABLE-preview.exe`. It installs for the current
 user, bundles Qt and the Microsoft runtime, and adds desktop/Start menu shortcuts.
 The optional standard signed VB-CABLE setup is retained from the EQ installer;
 restart Windows after installing the driver. Multichannel playback requires a
