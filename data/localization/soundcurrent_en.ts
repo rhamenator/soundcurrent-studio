@@ -2416,6 +2416,16 @@ Import into your library?</translation>
       <translation>Studio effect preset</translation>
     </message>
     <message>
+      <source>Studio profile has an invalid boolean field</source>
+      <translation>Studio profile has an invalid boolean field</translation>
+      <extracomment>Saved Studio setup requires a JSON true/false field. Wrong type or missing value is rejected; do not confuse this with an audio level or textual yes/no preference.</extracomment>
+    </message>
+    <message>
+      <source>Studio profile has an invalid numeric field</source>
+      <translation>Studio profile has an invalid numeric field</translation>
+      <extracomment>Saved Studio setup numeric field is wrong type, nonfinite or outside its supported range. JSON numbers use invariant syntax; do not reinterpret them according to the interface locale.</extracomment>
+    </message>
+    <message>
       <source>Studio selected channel</source>
       <translation>Studio selected channel</translation>
     </message>
@@ -2582,6 +2592,11 @@ Import into your library?</translation>
     <message>
       <source>Unmute speaker for EQ</source>
       <translation>Unmute speaker for EQ</translation>
+    </message>
+    <message>
+      <source>Unsupported Studio profile schema</source>
+      <translation>Unsupported Studio profile schema</translation>
+      <extracomment>Saved Studio setup schema/version or required top-level structure is unsupported. This is a file format, not a visual theme or room calibration profile.</extracomment>
     </message>
     <message>
       <source>Unsupported cable channel count</source>

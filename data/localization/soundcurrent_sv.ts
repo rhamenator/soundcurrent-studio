@@ -2416,6 +2416,16 @@ Importera till ditt bibliotek?</translation>
       <translation>Studio-effektförinställning</translation>
     </message>
     <message>
+      <source>Studio profile has an invalid boolean field</source>
+      <translation>Studio-profilen innehåller ett ogiltigt booleskt fält</translation>
+      <extracomment>Saved Studio setup requires a JSON true/false field. Wrong type or missing value is rejected; do not confuse this with an audio level or textual yes/no preference.</extracomment>
+    </message>
+    <message>
+      <source>Studio profile has an invalid numeric field</source>
+      <translation>Studio-profilen innehåller ett ogiltigt numeriskt fält</translation>
+      <extracomment>Saved Studio setup numeric field is wrong type, nonfinite or outside its supported range. JSON numbers use invariant syntax; do not reinterpret them according to the interface locale.</extracomment>
+    </message>
+    <message>
       <source>Studio selected channel</source>
       <translation>Vald Studio-kanal</translation>
     </message>
@@ -2582,6 +2592,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Unmute speaker for EQ</source>
       <translation>Slå på högtalarljudet för equalizern</translation>
+    </message>
+    <message>
+      <source>Unsupported Studio profile schema</source>
+      <translation>Studio-profilformatet stöds inte</translation>
+      <extracomment>Saved Studio setup schema/version or required top-level structure is unsupported. This is a file format, not a visual theme or room calibration profile.</extracomment>
     </message>
     <message>
       <source>Unsupported cable channel count</source>

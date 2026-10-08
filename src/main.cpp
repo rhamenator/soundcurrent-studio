@@ -4139,6 +4139,29 @@ int main(int argc, char **argv) {
     if (app.arguments().contains("--localization-ui-test")) {
         auto ownedWindow=std::make_unique<MainWindow>(false);
         auto &window=*ownedWindow;
+        for(const auto &reason:QStringList{"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field"})
+            if(soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(reason.toUtf8().constData()))
+                qFatal("Studio validation diagnostic missed the localized display boundary");
+        // Reject malformed persisted fields before localizing their display diagnostics.
+        const auto profileSnapshot=soundcurrent::studio::Session(2).json();
+        const QStringList profileKeys={"schema","postGain","offline"};
+        const QStringList profileReasons={"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field"};
+        for(int index=0;index<profileKeys.size();++index) {
+            auto malformed=profileSnapshot;
+            if(index==0)malformed[profileKeys[index]]=99;
+            else if(index==1)malformed[profileKeys[index]]=QStringLiteral("1,5");
+            else malformed[profileKeys[index]]=QStringLiteral("true");
+            const auto unchanged=malformed;bool rejected=false;
+            try {soundcurrent::studio::Session::parse(malformed);}
+            catch(const std::exception &error) {
+                rejected=true;const auto reason=QString::fromUtf8(error.what());
+                if(reason!=profileReasons[index] || soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(reason.toUtf8().constData()))
+                    qFatal("Session rejection changed invariant diagnostics or missed translation");
+            }
+            if(!rejected || malformed!=unchanged)qFatal("Locale reinterpreted or rewrote malformed Studio profile data");
+        }
+        if(soundcurrent::studio::Session::parse(profileSnapshot).json()!=profileSnapshot)
+            qFatal("Localized session validation changed a valid saved profile");
         QComboBox *speakerTaxonomy=nullptr;
         for(auto *combo:window.findChildren<QComboBox *>())
             if(combo->accessibleName()==SC_TR("Speaker type"))speakerTaxonomy=combo;

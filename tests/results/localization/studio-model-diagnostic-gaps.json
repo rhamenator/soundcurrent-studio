@@ -19,14 +19,17 @@
     "Invalid route indexes or weight",
     "Invalid route number",
     "Shared and channel EQ exceed 64 filters; remove some channel filters",
-    "Studio profile has an invalid boolean field",
-    "Studio profile has an invalid numeric field",
     "Too many Studio channel filters",
-    "Too many Studio routes",
-    "Unsupported Studio profile schema"
+    "Too many Studio routes"
   ],
-  "unmappedCount": 17,
+  "unmappedCount": 14,
   "inference": "These owned error strings can reach the visible status via audioErrorText, whose unknown-message fallback preserves English text. They need explicit translated boundary mappings. This is not an exhaustive backend/UI inventory.",
   "nativeSpeakerVerification": "unverified",
-  "wholeInterfaceCoverageProven": false
+  "wholeInterfaceCoverageProven": false,
+  "resolvedDiagnostics": [
+    "Unsupported Studio profile schema",
+    "Studio profile has an invalid numeric field",
+    "Studio profile has an invalid boolean field"
+  ],
+  "resolvedNonEnglishLocales": 33
 }
