@@ -95,3 +95,5 @@ Norwegian Bokmål/Finnish recovery and effects batch: 181/527 messages each. Fou
 Norwegian Bokmål/Finnish filter and editor batch: 254/527 messages each. Four focused Linux checks passed per app. Filter Q, compressor parameters, equipment editing and estimated meters reviewed contextually. Catalogs remain incomplete and unverified. Completed Swedish/Danish commits passed Windows CI, with exact runs recorded in their reports.
 
 Norwegian Bokmål/Finnish microphone and measurement batch: 329/527 messages each. Four focused Linux checks passed per app. Additive correction, system measurement limits, clipping, polarity and balance reviewed contextually. Both balance endpoint captions match their instructions. Catalogs remain incomplete and unverified.
+
+Norwegian Bokmål/Finnish startup and rendering batch: 401/527 messages each. Four focused Linux checks passed per app. Shared startup registration, saved-profile reference preservation, calibration links and neutral render counts reviewed contextually. Catalogs remain incomplete and unverified.
