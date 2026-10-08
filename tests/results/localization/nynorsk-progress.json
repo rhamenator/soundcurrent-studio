@@ -1,24 +1,24 @@
 {
-  "stage": "Nynorsk catalog registration and initial batch",
+  "stage": "Nynorsk recovery and effects batch",
   "catalogs": [
     {
       "tag": "nn",
       "name": "Norsk nynorsk",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "21aa2133eb3ece0bb68b30b63a10da73c4f57e7cb219c3d0d82ead739a915239",
-      "qmSha256": "bcd61f9f53a43369c6926403aac3f4c69c854389386b4a03ad19e0ef25141206"
+      "tsSha256": "0187f783989f4c7ff93dd5c6fa0c8a017497516f90fa4b6ebd26201a609032e1",
+      "qmSha256": "4a1cbe764436acac0a751aa7b52e6637e6cc3cf76c62cec17f7ef9daf3c3b704"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization with distinct nn-NO/nb-NO resolution, Nynorsk main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-nn-first-tests.log"
+    "log": "/tmp/soundcurrent-studio-nn-second-tests.log"
   },
-  "review": "Contextual AI review; unverified. Nynorsk wording, gain/headroom, clipping, amplifier measurement requirements and recovery reviewed. No native-speaker verification claimed.",
+  "review": "Contextual AI review; unverified. Processing refusal, kept settings, render cancellation and effect duration versus contribution reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Nynorsk and 12 original target catalogs incomplete."
