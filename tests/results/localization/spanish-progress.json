@@ -1,25 +1,32 @@
 {
-  "stage": "Spanish partial catalog checkpoint",
+  "stage": "Spanish complete extracted catalog checkpoint",
   "catalog": {
     "tag": "es",
     "name": "Español",
-    "translated": 237,
+    "translated": 523,
     "total": 523,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "9f769cf5c2e80b6a112ca8b0984ac77a1a9242e781e27ce02b32bce74c05fc11",
-    "qmSha256": "2894e29b91dfa162483af940bfd5124292726b813707390b82caa252fc0b18b1"
+    "tsSha256": "d9a681661ca3b09e19e819f1268382834296462ee2af2425e67c1306a510dd42",
+    "qmSha256": "663c139e6b1cedf9512657020fcc6679ba77ef16bf16155ab3d1a675035c4b37"
   },
   "linguisticReview": "Contextual AI translation; unverified; no native-speaker review",
   "linuxTests": {
-    "passed": 2,
-    "total": 2,
-    "scope": [
-      "compiled localization runtime",
-      "Spanish main-window fixture"
-    ],
-    "log": "/tmp/sc-es-studio-tests.log"
+    "passed": 52,
+    "total": 52,
+    "scope": "Full CTest suite including Spanish equipment workflow and main window",
+    "log": "/tmp/sc-es-complete-studio-tests.log"
   },
-  "windows": "Pending CI after correcting fixture staging",
-  "remaining": "Complete the remaining Spanish entries, then continue other target locales."
+  "linuxVisualReview": {
+    "locale": "es",
+    "platform": "xcb/Xvfb",
+    "screen": "1280x720",
+    "tabsCaptured": 3,
+    "reviewedTabs": [
+      1
+    ],
+    "notes": "Inspected captions and controls; scrolling remains necessary. EQ shows a horizontal scrollbar; broader layout qualification remains outstanding."
+  },
+  "windows": "Pending CI for this checkpoint",
+  "remaining": "29 other target locales have incomplete catalogs; native-speaker review remains unverified."
 }

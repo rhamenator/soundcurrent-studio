@@ -8,7 +8,7 @@
     "data/localization/soundcurrent_da.ts": "2c3cd238dddcd25b3f8b9da7cd159e84b5c46be2b2fc596a497e658dcfc9f541",
     "data/localization/soundcurrent_de.ts": "dc4f6f84d68027861b9d763db670bc15e96990025a5825c244fea127190dd343",
     "data/localization/soundcurrent_el.ts": "a1cd5fb9f65e39de5a19ab16e7ab27488191f8cd36385a82e35350c51a9501e5",
-    "data/localization/soundcurrent_es.ts": "9f769cf5c2e80b6a112ca8b0984ac77a1a9242e781e27ce02b32bce74c05fc11",
+    "data/localization/soundcurrent_es.ts": "d9a681661ca3b09e19e819f1268382834296462ee2af2425e67c1306a510dd42",
     "data/localization/soundcurrent_fa.ts": "2ccb3c72640ef7bfb6580bb2415cb13e98de08c5a99ef6d070311095a3e7a299",
     "data/localization/soundcurrent_fi.ts": "395ea0f04c4b76ca6db77e47cfeb55cf7bf82e97a12543f9ffde5232d2ef9bc6",
     "data/localization/soundcurrent_fr.ts": "47a602d9ba9ea6ff52c6bd18b45e1545d395cf4229eb3a14ef9ac071715d9808",
@@ -129,7 +129,7 @@
       "file": "data/localization/soundcurrent_es.ts",
       "locale": "es",
       "total": 523,
-      "translated": 237,
+      "translated": 523,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     },
@@ -343,7 +343,7 @@
     }
   ],
   "findingCounts": {
-    "untranslated": 14583
+    "untranslated": 14297
   },
-  "reportNote": "Compact report: all metrics and input hashes retained; three sample findings. Counts include all findings. Linguistic verification and runtime qualification remain separate from this structural audit."
+  "reportNote": "Compact structural report: all metrics/input hashes retained, three sample findings. Linguistic review and runtime qualification remain separate."
 }
