@@ -199,3 +199,5 @@ Traditional Chinese equipment, filters and metering batch: 254/527 messages popu
 Traditional Chinese microphone and measurement batch: 328/527 messages populated. Three focused Linux checks passed. Additive correction, microphone clipping, balance endpoints and signed routing gain reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
 
 Traditional Chinese startup, output and rendering batch: 401/527 messages populated. Three focused Linux checks passed. Startup registration, reference-preserving edits, calibration links, post gain and render counts reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
+
+Traditional Chinese saving, speaker profiles and device recovery batch: 466/527 messages populated. Three focused Linux checks passed. Saving, speaker correction bounds, peak hold, device recovery and reverb versus echo reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
