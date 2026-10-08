@@ -1,34 +1,34 @@
 {
-  "stage": "Romanian/Hungarian filter and editor batch",
+  "stage": "Romanian/Hungarian microphone and measurement batch",
   "catalogs": [
     {
       "tag": "ro",
       "name": "Română",
-      "translated": 254,
+      "translated": 329,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "5c8d7ba7b2bc09c7b56c05e21c0edcc1afe46019201154586777b4b264e9513e",
-      "qmSha256": "0551a3db5980c68cd12727c3c5cd520736a5b95057d634a524863a16f6de98d1"
+      "tsSha256": "b70df23f513698bee86b062acc7c800e0524d93a55dda0b423b6ede993163e9e",
+      "qmSha256": "ad1d2c78c5bf86451efc249ffc16e0705fd2029932f492ea100a24bdfad15fde"
     },
     {
       "tag": "hu",
       "name": "Magyar",
-      "translated": 254,
+      "translated": 329,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "22d65148a78b75ce7c5df531c91e593e351b296636906b1684e6687575614261",
-      "qmSha256": "c4622a49ef3028bb14cfb9fbd255ce7572f349c62e3c5eb418f5a2341204447c"
+      "tsSha256": "933791561b6295a41e787752b61551a18544233abbf6f181ec41b90f0ecdfdcb",
+      "qmSha256": "ec0aaa30b7d101078fb33f75badc98c71fdd9784760a67f4867fa4dad69a309d"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Romanian/Hungarian main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-ro-hu-third-tests.log"
+    "log": "/tmp/soundcurrent-studio-ro-hu-fourth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Dimensionless Q, shelving versus pass filters, compressor makeup versus post gain, estimated meters and exit behavior reviewed.",
+  "review": "Contextual AI review; unverified. Whole-system measurement limits, microphone clipping, additive correction, polarity and attenuation-only balance reviewed. Both endpoint captions match localized balance instructions.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Romanian, Hungarian and 12 other target catalogs incomplete."
