@@ -3,21 +3,15 @@
   <context>
     <name>SoundCurrent</name>
     <message>
-      <source>
-Apply this correction to the </source>
-      <translation type="unfinished" />
-    </message>
-    <message>
-      <source>
-Import into your library?</source>
-      <translation type="unfinished" />
-    </message>
-    <message>
       <source> (currently selected)</source>
       <translation type="unfinished" />
     </message>
     <message>
       <source> (restored selection)</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source> [custom]</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -29,11 +23,11 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
-      <source> route?</source>
+      <source> · mono</source>
       <translation type="unfinished" />
     </message>
     <message>
-      <source> · mono</source>
+      <source> · no USB microphone detected</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -45,11 +39,39 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>%1 / %2
+%3
+Apply this correction to the %4 route?</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>%1 / %2
+%3
+Import into your library?</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>%1 Hz: measured %2%3 dB; suggested %4%5 dB</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>%1 Hz: too quiet to measure</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>%1 disconnected. </source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation type="unfinished" />
     </message>
     <message>
       <source>16 channels</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Abort</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -121,6 +143,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Amplifier</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Amplifier / receiver</source>
       <translation type="unfinished" />
     </message>
@@ -141,6 +167,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Another SoundCurrent Studio sink is already running</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Another SoundCurrent app or audio driver setup is running. Quit it before opening this app.</source>
       <translation type="unfinished" />
     </message>
@@ -149,7 +179,11 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
-      <source>Another equalizer route is present: </source>
+      <source>Another SoundCurrent microphone filter is running</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Another equalizer route is present: %1. Quit it before using SoundCurrent.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -161,7 +195,19 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Apply</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Apply correction?</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Apply profile</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Apply suggested EQ</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -259,6 +305,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Brand, family and model are required (maximum 120 characters each).</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Bright</source>
       <translation type="unfinished" />
     </message>
@@ -279,6 +329,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Cancel</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Cancel render</source>
       <translation type="unfinished" />
     </message>
@@ -288,6 +342,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Cannot create amplifier profile folder.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Cannot create output staging directory</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Cannot create profile folder.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -303,6 +365,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Cannot finish saving profile library.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Cannot finish saving setup.</source>
       <translation type="unfinished" />
     </message>
@@ -311,7 +377,23 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Cannot read profile library.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Cannot read profile or file exceeds 1 MiB.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Cannot read response or file exceeds 1 MiB.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Cannot save amplifier profile.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Cannot save profile library.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -391,6 +473,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Close</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Conditions</source>
       <translation type="unfinished" />
     </message>
@@ -403,7 +489,23 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Could not create a private test folder</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not create microphone configuration folder</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Could not create preset folder.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not create quiet frequency sweep</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not create test tone</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -411,11 +513,59 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Could not open test waveform</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not play quiet test audio</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not play test audio through the selected output</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not read output volume</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not run %1</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Could not save preset.</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Could not start microphone capture</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not start microphone filter</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not start output volume safety guard</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not write frequency sweep</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not write microphone configuration</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Could not write test tone</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Create profile</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -463,6 +613,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Discard</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Drag curve points or tune the selected band below.</source>
       <translation type="unfinished" />
     </message>
@@ -500,6 +654,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>Echo and space</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Edit / save copy</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -564,7 +722,15 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Equipment kind must be speaker, microphone or amplifier.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Equipment profile (*.json)</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Equipment profile editor</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -573,6 +739,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Equipment profiles by brand family and model</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Equipment profiles — brand / family / model</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Equipment resource missing.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -632,7 +806,19 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Expected frequency Hz and relative measured response dB on every data line.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Export</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Export JSON</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -653,6 +839,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Filter type</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Filter values must be numbers.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Filters exceed frequency, gain or Q limits.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -694,6 +888,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Help</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Hide advanced controls</source>
       <translation type="unfinished" />
     </message>
@@ -710,7 +908,15 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Ignore</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Import</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Import JSON</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -738,6 +944,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Import response text</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Include preview releases</source>
       <translation type="unfinished" />
     </message>
@@ -750,11 +960,15 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation type="unfinished" />
     </message>
     <message>
-      <source>Installed version: </source>
+      <source>Installed version: %1</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -762,11 +976,55 @@ Import into your library?</source>
       <translation>表示言語</translation>
     </message>
     <message>
+      <source>Invalid equipment subtype or power type</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid filter.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Invalid or unordered measured response.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid or unordered response data.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid profile library.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid response from pactl</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid response point.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid speaker correction filter count</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid speaker filter type</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Invalid speaker identity</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Jazz</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Keep current EQ</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -795,6 +1053,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>Level refresh</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Library exceeds 16 MiB.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -864,6 +1126,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Measurement conditions are required.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Measurement data was incomplete.</source>
       <translation type="unfinished" />
     </message>
@@ -896,7 +1162,23 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Microphone capture stopped during playback</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Microphone capture stopped during the test</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Microphone error: %1</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Microphone filter did not appear</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Microphone filter disappeared</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -905,6 +1187,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>Microphone input device</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -941,7 +1227,7 @@ Import into your library?</source>
       <translation>自然なマイクEQ</translation>
     </message>
     <message>
-      <source>Natural mic EQ on · </source>
+      <source>Natural mic EQ on · %1</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -954,6 +1240,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>Night Listening</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>No</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -985,6 +1275,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>No to All</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>None — use my own EQ</source>
       <translation type="unfinished" />
     </message>
@@ -997,6 +1291,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>OK</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation type="unfinished" />
     </message>
@@ -1006,6 +1304,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>On · Playing through %1</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Open</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1033,8 +1335,20 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Output already exists; select a new filename</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Output device</source>
       <translation>出力デバイス</translation>
+    </message>
+    <message>
+      <source>Output device is no longer available</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Output has no volume channels</source>
+      <translation type="unfinished" />
     </message>
     <message>
       <source>Overall output</source>
@@ -1114,11 +1428,31 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Profile exceeds the 1 MiB limit.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Profile library exceeds 16 MiB.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Profile metadata is too long.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Profiles need 1–16 correction filters.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Published profiles need an HTTPS measurement source.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1167,6 +1501,12 @@ Import into your library?</source>
       <translation>デバイスを更新</translation>
     </message>
     <message>
+      <source>Relative measurements include the speaker, room, and microphone response. The proposed changes are limited to 3 dB per measured frequency.
+
+%1</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Remind me when updates are available or a restart is needed</source>
       <translation type="unfinished" />
     </message>
@@ -1187,7 +1527,23 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Render cancelled; no output file published</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Render: %1</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Rendered %1 channels. Clipped samples: %2. %3</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Rendering…</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Reset</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1212,11 +1568,35 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Response exceeds 4096 points.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Response frequencies must increase, with finite bounded values.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Response has no usable audio range.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Response import</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Response needs 2–4096 measured points.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Restore Defaults</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Restore the previous EQ setting (Ctrl+Z)</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Retry</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1252,6 +1632,14 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Save</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Save All</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Save EQ preset</source>
       <translation type="unfinished" />
     </message>
@@ -1272,6 +1660,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Save system response profile</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Saved preset “%1”.</source>
       <translation type="unfinished" />
     </message>
@@ -1284,11 +1676,19 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Select a filter to update, or remove filters before adding more</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Select band %1</source>
       <translation type="unfinished" />
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Selected audio device is unavailable</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1317,6 +1717,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Selected output device is no longer available</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Selected output was unplugged. Switched to automatic output.</source>
       <translation type="unfinished" />
     </message>
@@ -1331,6 +1735,10 @@ Import into your library?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>設定 &amp;&amp; キャリブレーション</translation>
+    </message>
+    <message>
+      <source>Setup cannot be read or exceeds 8 MiB</source>
+      <translation type="unfinished" />
     </message>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
@@ -1373,7 +1781,19 @@ Import into your library?</source>
       <translation>音質向上</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio provides its own microphone route when installed. With VB-CABLE, simultaneous microphone and speaker EQ needs a separately installed second cable (A or B). Select that cable in recording apps. Automatic prefers the SoundCurrent route when available.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Source</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Speaker</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1382,6 +1802,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Speaker + room check</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Speaker and room measurement</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Speaker filter is outside conservative bounds</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1398,6 +1826,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>Speaker profile details</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Speaker profile resource is missing</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1422,6 +1854,10 @@ Import into your library?</source>
     </message>
     <message>
       <source>Studio channel output levels</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Studio channels &amp;&amp; effects</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1477,11 +1913,23 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Test level is outside the allowed range</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>The audio processor stopped unexpectedly.</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>The custom library holds up to 256 profiles.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>The update response was invalid. No installer was opened.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>This Studio layout has more channels than the output device. Use offline editing or select a compatible device.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1490,6 +1938,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Timed out waiting for the equalizer sink: %1</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1539,6 +1995,22 @@ Import into your library?</source>
     </message>
     <message>
       <source>Unlock controls and finish measurement before editing profiles.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Unsupported equipment profile schema (expected 2).</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Unsupported filter type.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Unsupported microphone channel layout</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Unsupported speaker profile schema</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -1596,6 +2068,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Width (Q)</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Yes</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Yes to All</source>
       <translation type="unfinished" />
     </message>
     <message>
