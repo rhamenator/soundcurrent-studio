@@ -273,6 +273,12 @@ int main(int argc,char **argv){
     const auto mapped=audioErrorText(QString::fromUtf8(source));
     require(mapped==text(source)&&mapped!=QString::fromUtf8(source),"Studio live diagnostic was not localized");
    }
+   for(const char *source:{"Channel configuration count does not match engine","Post gain must be finite and within -84 to +24 dB","Invalid enhancement settings","Delay settings are outside the supported range","Reverb settings are outside the supported range","Invalid channel gain or too many EQ bands","Invalid EQ band","Effects exceed the preview's 128 MiB state budget","Could not allocate effect state"}) {
+    const auto mapped=audioErrorText(QString::fromUtf8(source));
+    require(mapped==text(source)&&mapped!=QString::fromUtf8(source),"Studio engine diagnostic was not localized");
+   }
+   for(const char *source:{"Offline editing. Current playback keeps its last live Studio setup.","Studio settings applied to live playback.","Studio settings ready. Enable playback on the Equalizer tab."})
+    require(text(source)!=QString::fromUtf8(source),"Studio live status fell back to English");
    require(audioErrorText(QString::fromUtf8("Driver diagnostic 0x80070005 / Ω"))==QString::fromUtf8("Driver diagnostic 0x80070005 / Ω"),"Unknown backend detail changed");
    for(const char *source:{"Selected speakers are disconnected","Audio bridge did not start","Install the Windows audio route using Audio driver setup, then reopen the app."}) {
     const auto translated=text(source);

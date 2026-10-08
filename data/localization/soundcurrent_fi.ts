@@ -485,6 +485,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Kanava</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Kanavakokoonpanojen määrä ei vastaa moottoria</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Kanavavahvistus puolen dB:n askelin</translation>
     </message>
@@ -555,6 +559,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Korjausprofiili (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Tehostetilan muistia ei voitu varata</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Viive / kaiku</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Viiveasetukset ovat tuetun alueen ulkopuolella</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Viiveaika</translation>
     </message>
@@ -759,6 +771,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Effects</source>
       <translation>Efektit</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Tehosteet ylittävät esikuuntelun tilamuistin 128 MiB:n rajan</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Käyttöliittymän kieli</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Virheellinen EQ-kaista</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Virheellinen Studion reititysmatriisi</translation>
     </message>
@@ -1111,6 +1131,14 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Virheellinen kalibrointiääni</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Virheellinen kanavavahvistus tai liian monta EQ-kaistaa</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Virheelliset äänenparannusasetukset</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Offline-muokkaus — säilytä nykyinen toisto ennallaan</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offline-muokkaus. Nykyinen toisto säilyttää viimeisimmän reaaliaikaisen Studio-kokoonpanonsa.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Päällä · Toisto laitteen %1 kautta</translation>
     </message>
@@ -1615,6 +1647,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Vahvistus taajuuskorjauksen jälkeen</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Ulostulovahvistuksen on oltava äärellinen ja välillä -84–+24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Kaikunta</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Kaikuasetukset ovat tuetun alueen ulkopuolella</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Kaikuntaefektin osuus</translation>
     </message>
@@ -2258,6 +2298,14 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Valittu Studio-kanava</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studion asetukset otettu käyttöön reaaliaikaisessa toistossa.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studion asetukset ovat valmiit. Ota toisto käyttöön Taajuuskorjain-välilehdellä.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

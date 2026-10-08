@@ -485,6 +485,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Kênh</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Số cấu hình kênh không khớp với bộ máy xử lý</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Gain kênh theo bước 0,5 dB</translation>
     </message>
@@ -555,6 +559,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Cấu hình hiệu chỉnh (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Không thể cấp phát bộ nhớ trạng thái hiệu ứng</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Delay / tiếng vọng</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Cài đặt độ trễ nằm ngoài phạm vi được hỗ trợ</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Thời gian delay</translation>
     </message>
@@ -759,6 +771,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Effects</source>
       <translation>Hiệu ứng</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Hiệu ứng vượt quá giới hạn 128 MiB bộ nhớ trạng thái của bản nghe thử</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Ngôn ngữ giao diện</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Dải EQ không hợp lệ</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Ma trận định tuyến Studio không hợp lệ</translation>
     </message>
@@ -1111,6 +1131,14 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Âm thanh hiệu chuẩn không hợp lệ</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Độ khuếch đại kênh không hợp lệ hoặc có quá nhiều dải EQ</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Cài đặt cải thiện âm thanh không hợp lệ</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Chỉnh sửa ngoại tuyến — giữ nguyên phát âm thanh hiện tại</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Chỉnh sửa ngoại tuyến. Phát âm thanh hiện tại giữ nguyên cấu hình Studio thời gian thực gần nhất.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Bật · Đang phát qua %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Gain sau cân bằng âm</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Độ khuếch đại đầu ra phải hữu hạn và nằm trong khoảng -84 đến +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Vang âm</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Cài đặt âm vang nằm ngoài phạm vi được hỗ trợ</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Tỷ lệ trộn vang âm</translation>
     </message>
@@ -2258,6 +2298,14 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Kênh Studio đã chọn</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Đã áp dụng cài đặt Studio cho phát âm thanh thời gian thực.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Cài đặt Studio đã sẵn sàng. Bật phát âm thanh trên thẻ Bộ cân bằng âm thanh.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

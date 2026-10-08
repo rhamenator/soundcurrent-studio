@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>Канал</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Количество конфигураций каналов не соответствует движку</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Усиление канала с шагом в полдецибела</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Профиль коррекции (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Не удалось выделить память для состояния эффектов</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>Задержка / эхо</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Настройки задержки выходят за поддерживаемый диапазон</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Время задержки</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>Эффекты</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Эффекты превышают лимит памяти состояния предварительного прослушивания в 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>Язык интерфейса</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Некорректная полоса эквалайзера</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Некорректная матрица маршрутизации Studio</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Недопустимый калибровочный аудиосигнал</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Некорректное усиление канала или слишком много полос эквалайзера</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Некорректные настройки улучшения звука</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>Офлайн-редактирование — не изменять текущее воспроизведение</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Автономное редактирование. Текущее воспроизведение сохраняет последнюю конфигурацию Studio для обработки в реальном времени.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Включено · Воспроизведение через %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>Выходное усиление после эквализации</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Выходное усиление должно быть конечным и в пределах от -84 до +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>Реверберация</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Настройки реверберации выходят за поддерживаемый диапазон</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Доля эффекта реверберации</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Выбранный канал Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Настройки Studio применены к воспроизведению в реальном времени.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Настройки Studio готовы. Включите воспроизведение на вкладке Эквалайзер.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

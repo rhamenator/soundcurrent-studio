@@ -485,6 +485,10 @@ Importați în bibliotecă?</translation>
       <translation>Canal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Numărul configurațiilor de canale nu corespunde motorului</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Câștig de canal în pași de jumătate de dB</translation>
     </message>
@@ -555,6 +559,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Profil de corecție (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Nu s-a putut aloca memoria pentru starea efectelor</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importați în bibliotecă?</translation>
       <translation>Întârziere / ecou</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Setările de întârziere sunt în afara intervalului acceptat</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Timp de întârziere</translation>
     </message>
@@ -759,6 +771,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Effects</source>
       <translation>Efecte</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Efectele depășesc limita de 128 MiB pentru memoria stării previzualizării</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importați în bibliotecă?</translation>
       <translation>Limba interfeței</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Bandă EQ nevalidă</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Matrice de rutare Studio nevalidă</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Semnal audio de calibrare nevalid</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Câștig de canal nevalid sau prea multe benzi EQ</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Setări de îmbunătățire a sunetului nevalide</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importați în bibliotecă?</translation>
       <translation>Editare offline — păstrați redarea curentă neschimbată</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Editare offline. Redarea curentă păstrează ultima configurație Studio pentru procesarea în timp real.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Pornit · Redare prin %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Câștig final după egalizare</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Câștigul de ieșire trebuie să fie finit și între -84 și +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importați în bibliotecă?</translation>
       <translation>Reverberație</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Setările de reverberație sunt în afara intervalului acceptat</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Proporția efectului de reverberație</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Canal Studio selectat</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Setările Studio au fost aplicate redării în timp real.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Setările Studio sunt pregătite. Activați redarea în fila Egalizator.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

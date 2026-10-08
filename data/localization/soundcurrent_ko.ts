@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>채널</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>채널 구성 수가 엔진과 일치하지 않습니다</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>채널 게인 (0.5 dB 단위)</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>보정 프로파일 (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>효과 상태 메모리를 할당할 수 없습니다</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>딜레이 / 에코</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>딜레이 설정이 지원 범위를 벗어났습니다</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>딜레이 시간</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>이펙트</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>효과가 미리 듣기의 상태 메모리 한도인 128 MiB를 초과합니다</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>인터페이스 언어</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>잘못된 EQ 밴드</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>잘못된 Studio 라우팅 행렬</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>잘못된 보정 오디오</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>채널 게인이 잘못되었거나 EQ 밴드가 너무 많습니다</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>잘못된 음질 향상 설정</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>오프라인 편집 — 현재 재생 유지</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>오프라인 편집. 현재 재생은 마지막 실시간 Studio 구성을 유지합니다.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>켜짐 · %1에서 재생 중</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>이퀄라이저 적용 후 포스트 게인</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>출력 게인은 유한한 값이어야 하며 -84에서 +24 dB 사이여야 합니다</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>리버브</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>리버브 설정이 지원 범위를 벗어났습니다</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>리버브 웨트 믹스</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio 선택 채널</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio 설정이 실시간 재생에 적용되었습니다.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio 설정이 준비되었습니다. 이퀄라이저 탭에서 재생을 켜세요.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

@@ -485,6 +485,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Canal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Le nombre de configurations de canaux ne correspond pas au moteur</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Gain du canal par pas de 0,5 dB</translation>
     </message>
@@ -555,6 +559,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Profil de correction (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Impossible d’allouer la mémoire d’état des effets</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Retard / écho</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Les paramètres de délai sont hors de la plage prise en charge</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Temps de retard</translation>
     </message>
@@ -759,6 +771,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Effects</source>
       <translation>Effets</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Les effets dépassent le budget mémoire d’état de 128 MiB de l’aperçu</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Langue de l’interface</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Bande d’égalisation non valide</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Matrice de routage Studio non valide</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Audio de calibration non valide</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Gain de canal non valide ou trop de bandes d’égalisation</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Paramètres d’amélioration du son non valides</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Modification hors ligne — conserver la lecture actuelle</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Édition hors ligne. La lecture actuelle conserve sa dernière configuration Studio en direct.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Activé · Lecture sur %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Gain de sortie après égalisation</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Le gain de sortie doit être fini et compris entre -84 et +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Réverbération</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Les paramètres de réverbération sont hors de la plage prise en charge</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Proportion de signal réverbéré</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Canal Studio sélectionné</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Paramètres Studio appliqués à la lecture en direct.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Paramètres Studio prêts. Activez la lecture dans l’onglet Égaliseur.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

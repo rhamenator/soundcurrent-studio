@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>ערוץ</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>מספר תצורות הערוצים אינו תואם למנוע</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>הגבר הערוץ בצעדים של חצי dB</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>פרופיל תיקון (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>לא ניתן להקצות זיכרון למצב האפקטים</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>השהיה / הד</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>הגדרות ההשהיה מחוץ לטווח הנתמך</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>זמן ההשהיה</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>אפקטים</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>האפקטים חורגים מתקציב זיכרון המצב של התצוגה המקדימה, 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>שפת הממשק</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>תחום אקולייזר אינו תקין</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>מטריצת ניתוב Studio אינה תקינה</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>שמע כיול אינו תקין</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>הגבר הערוץ אינו תקין או שיש יותר מדי תחומי אקולייזר</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>הגדרות שיפור השמע אינן תקינות</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>עריכה ללא חיבור — השארת ההשמעה הנוכחית ללא שינוי</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>עריכה שאינה בזמן אמת. הניגון הנוכחי שומר על תצורת Studio האחרונה שלו לעיבוד בזמן אמת.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>פועל · השמעה דרך %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>הגבר לאחר האקולייזר</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>הגבר הפלט חייב להיות סופי ובטווח שבין -84 ל־+24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>הדהוד</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>הגדרות ההדהוד מחוץ לטווח הנתמך</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>מיזוג אות ההדהוד המעובד</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>הערוץ הנבחר ב־Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>הגדרות Studio הוחלו על הניגון בזמן אמת.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>הגדרות Studio מוכנות. יש להפעיל ניגון בלשונית אקולייזר.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

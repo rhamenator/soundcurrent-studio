@@ -485,6 +485,10 @@ Importér til dit bibliotek?</translation>
       <translation>Kanal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Antallet af kanalkonfigurationer svarer ikke til motoren</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Kanalforstærkning i trin på en halv dB</translation>
     </message>
@@ -555,6 +559,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Korrektionsprofil (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Kunne ikke allokere hukommelse til effekttilstanden</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importér til dit bibliotek?</translation>
       <translation>Forsinkelse / ekko</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Forsinkelsesindstillingerne ligger uden for det understøttede interval</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Forsinkelsestid</translation>
     </message>
@@ -759,6 +771,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Effects</source>
       <translation>Effekter</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Effekterne overskrider forhåndslytningens budget på 128 MiB til tilstandshukommelse</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importér til dit bibliotek?</translation>
       <translation>Grænsefladesprog</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Ugyldigt EQ-bånd</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Ugyldig Studio-routingmatrix</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Ugyldig kalibreringslyd</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Ugyldig kanalforstærkning eller for mange EQ-bånd</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Ugyldige indstillinger for lydforbedring</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importér til dit bibliotek?</translation>
       <translation>Offline-redigering — behold aktuel afspilning uændret</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offlineredigering. Den aktuelle afspilning beholder den seneste Studio-konfiguration til realtid.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Til · Afspiller gennem %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Udgangsforstærkning efter equalizeren</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Udgangsforstærkningen skal være endelig og ligge mellem -84 og +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importér til dit bibliotek?</translation>
       <translation>Rumklang</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Rumklangsindstillingerne ligger uden for det understøttede interval</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Rumklangens effektandel</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Valgt Studio-kanal</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio-indstillingerne er anvendt på afspilningen i realtid.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio-indstillingerne er klar. Aktivér afspilning på fanen Equalizer.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

@@ -485,6 +485,10 @@ Import into your library?</translation>
       <translation>Channel</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Channel configuration count does not match engine</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Channel gain in half dB steps</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Correction profile (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Could not allocate effect state</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</translation>
       <translation>Delay / echo</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Delay settings are outside the supported range</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Delay time</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</translation>
     <message>
       <source>Effects</source>
       <translation>Effects</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Effects exceed the preview's 128 MiB state budget</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</translation>
       <translation>Interface language</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Invalid EQ band</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Invalid Studio routing matrix</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Invalid calibration audio</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Invalid channel gain or too many EQ bands</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Invalid enhancement settings</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</translation>
       <translation>Offline editing — keep current playback unchanged</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offline editing. Current playback keeps its last live Studio setup.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>On · Playing through %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Post gain after equalization</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Post gain must be finite and within -84 to +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</translation>
       <translation>Reverb</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Reverb settings are outside the supported range</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Reverb wet mix</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio selected channel</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio settings applied to live playback.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio settings ready. Enable playback on the Equalizer tab.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

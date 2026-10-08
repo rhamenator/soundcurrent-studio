@@ -485,6 +485,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Kanaal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Het aantal kanaalconfiguraties komt niet overeen met de engine</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Kanaalversterking in stappen van een halve dB</translation>
     </message>
@@ -555,6 +559,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Correctieprofiel (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Kan geen geheugen voor de effecttoestand toewijzen</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Vertraging / echo</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>De vertragingsinstellingen liggen buiten het ondersteunde bereik</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Vertragingstijd</translation>
     </message>
@@ -759,6 +771,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Effects</source>
       <translation>Effecten</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>De effecten overschrijden het toestandsgeheugenbudget van 128 MiB voor het voorbeeld</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Interfacetaal</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Ongeldige EQ-band</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Ongeldige Studio-routeringsmatrix</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Ongeldige kalibratieaudio</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Ongeldige kanaalversterking of te veel EQ-banden</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Ongeldige instellingen voor geluidsverbetering</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Offline bewerken — huidige weergave ongewijzigd laten</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offline bewerken. De huidige weergave behoudt de laatste live Studio-configuratie.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Aan · Afspelen via %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Versterking na de equalizer</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>De uitgangsversterking moet eindig zijn en tussen -84 en +24 dB liggen</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Galm</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>De galminstellingen liggen buiten het ondersteunde bereik</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Mix van galmsignaal</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Geselecteerd Studio-kanaal</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio-instellingen toegepast op live weergave.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio-instellingen gereed. Schakel afspelen in op het tabblad Equalizer.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

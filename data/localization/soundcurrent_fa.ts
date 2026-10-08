@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>کانال</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>تعداد پیکربندی‌های کانال با موتور مطابقت ندارد</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>بهره کانال با گام‌های نیم dB</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>پروفایل اصلاح (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>تخصیص حافظه برای وضعیت افکت‌ها ممکن نشد</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>تأخیر / اکو</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>تنظیمات تأخیر خارج از محدودهٔ پشتیبانی‌شده است</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>زمان تأخیر</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>افکت‌ها</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>افکت‌ها از بودجهٔ 128 MiB حافظهٔ وضعیت پیش‌شنوی فراتر می‌روند</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>زبان رابط</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>باند اکولایزر نامعتبر است</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>ماتریس مسیریابی Studio نامعتبر است</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>صدای کالیبراسیون نامعتبر است</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>بهرهٔ کانال نامعتبر است یا تعداد باندهای اکولایزر بیش از حد است</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>تنظیمات بهبود صدا نامعتبر است</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>ویرایش آفلاین — پخش فعلی بدون تغییر بماند</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>ویرایش غیربلادرنگ. پخش فعلی آخرین پیکربندی بلادرنگ Studio خود را حفظ می‌کند.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>روشن · پخش از طریق %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>بهره پس از اکولایزر</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>بهرهٔ خروجی باید متناهی و بین -84 و +24 dB باشد</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>ریورب</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>تنظیمات طنین خارج از محدودهٔ پشتیبانی‌شده است</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>ترکیب سیگنال ریورب پردازش‌شده</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>کانال انتخاب‌شده Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>تنظیمات Studio روی پخش بلادرنگ اعمال شد.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>تنظیمات Studio آماده است. پخش را در زبانهٔ اکولایزر فعال کنید.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

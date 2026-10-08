@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>聲道</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>聲道設定數量與引擎不符</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>以半 dB 為步長調整聲道增益</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>校正設定檔 (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>無法配置效果狀態記憶體</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>延遲 / 回音</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>延遲設定超出支援範圍</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>延遲時間</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>音效</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>效果超出預聽的 128 MiB 狀態記憶體預算</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>介面語言</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>等化器頻段無效</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Studio 路由矩陣無效</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>校準音訊無效</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>聲道增益無效或等化器頻段過多</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>音效增強設定無效</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>離線編輯 — 保持目前播放不變</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>離線編輯。目前播放保留上一次即時 Studio 設定。</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>開啟 · 透過 %1 播放</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>等化處理後的增益</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>輸出增益必須為有限值，且介於 -84 和 +24 dB 之間</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>殘響</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>殘響設定超出支援範圍</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>殘響濕聲混合量</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio 所選聲道</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio 設定已套用至即時播放。</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio 設定已就緒。請在等化器分頁中啟用播放。</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

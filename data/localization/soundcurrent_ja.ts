@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>チャンネル</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>チャンネル設定数がエンジンと一致しません</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>チャンネルゲイン（0.5 dB 刻み）</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>補正プロファイル (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>エフェクト状態のメモリを確保できませんでした</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>ディレイ / エコー</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>ディレイ設定が対応範囲外です</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>ディレイ時間</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>エフェクト</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>エフェクトがプレビューの状態メモリ上限 128 MiB を超えています</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>表示言語</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>EQ バンドが無効です</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Studio のルーティングマトリックスが無効です</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>キャリブレーション音声が無効です</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>チャンネルゲインが無効か、EQ バンドが多すぎます</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>音質改善設定が無効です</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>オフライン編集 — 現在の再生はそのまま維持</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>オフライン編集。現在の再生は直前のリアルタイム Studio 設定を保持します。</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>オン · %1 で再生中</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>イコライザー適用後のポストゲイン</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>出力ゲインは有限値で、-84 から +24 dB の範囲内である必要があります</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>リバーブ</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>リバーブ設定が対応範囲外です</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>リバーブのウェットミックス</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio の選択チャンネル</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio 設定をリアルタイム再生に適用しました。</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio 設定の準備ができました。イコライザータブで再生を有効にしてください。</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

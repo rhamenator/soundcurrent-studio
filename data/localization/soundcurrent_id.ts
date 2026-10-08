@@ -485,6 +485,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Kanal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Jumlah konfigurasi kanal tidak sesuai dengan mesin</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Gain kanal dengan langkah 0,5 dB</translation>
     </message>
@@ -555,6 +559,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Profil koreksi (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Tidak dapat mengalokasikan memori status efek</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Delay / gema</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Pengaturan delay berada di luar rentang yang didukung</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Waktu delay</translation>
     </message>
@@ -759,6 +771,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Effects</source>
       <translation>Efek</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Efek melampaui anggaran memori status pratinjau sebesar 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Bahasa antarmuka</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Band EQ tidak valid</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Matriks perutean Studio tidak valid</translation>
     </message>
@@ -1111,6 +1131,14 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Audio kalibrasi tidak valid</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Gain kanal tidak valid atau terlalu banyak band EQ</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Pengaturan peningkatan suara tidak valid</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Pengeditan offline — pertahankan pemutaran saat ini</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Pengeditan offline. Pemutaran saat ini mempertahankan konfigurasi Studio waktu nyata terakhirnya.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Aktif · Memutar melalui %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Gain setelah ekualisasi</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Gain keluaran harus berupa nilai berhingga dan berada antara -84 dan +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Reverb</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Pengaturan reverb berada di luar rentang yang didukung</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Campuran wet reverb</translation>
     </message>
@@ -2258,6 +2298,14 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Kanal Studio yang dipilih</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Pengaturan Studio diterapkan ke pemutaran waktu nyata.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Pengaturan Studio siap. Aktifkan pemutaran pada tab Equalizer.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

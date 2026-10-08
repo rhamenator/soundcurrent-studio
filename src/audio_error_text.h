@@ -49,6 +49,24 @@ inline QString audioErrorText(const QString &diagnostic) {
         return SC_TR("Cannot connect PipeWire streams");
     if (diagnostic == QStringLiteral("Turn playback off before applying a new live channel layout"))
         return SC_TR("Turn playback off before applying a new live channel layout");
+    if (diagnostic == QStringLiteral("Channel configuration count does not match engine"))
+        return SC_TR("Channel configuration count does not match engine");
+    if (diagnostic == QStringLiteral("Post gain must be finite and within -84 to +24 dB"))
+        return SC_TR("Post gain must be finite and within -84 to +24 dB");
+    if (diagnostic == QStringLiteral("Invalid enhancement settings"))
+        return SC_TR("Invalid enhancement settings");
+    if (diagnostic == QStringLiteral("Delay settings are outside the supported range"))
+        return SC_TR("Delay settings are outside the supported range");
+    if (diagnostic == QStringLiteral("Reverb settings are outside the supported range"))
+        return SC_TR("Reverb settings are outside the supported range");
+    if (diagnostic == QStringLiteral("Invalid channel gain or too many EQ bands"))
+        return SC_TR("Invalid channel gain or too many EQ bands");
+    if (diagnostic == QStringLiteral("Invalid EQ band"))
+        return SC_TR("Invalid EQ band");
+    if (diagnostic == QStringLiteral("Effects exceed the preview's 128 MiB state budget"))
+        return SC_TR("Effects exceed the preview's 128 MiB state budget");
+    if (diagnostic == QStringLiteral("Could not allocate effect state"))
+        return SC_TR("Could not allocate effect state");
     // Match only this backend's invariant HRESULT message format. Unknown
     // operations are not guessed, and the hexadecimal error code is preserved.
     static const QRegularExpression failure(QStringLiteral("^(.+) failed \\(0x([0-9A-Fa-f]{1,8})\\)$"));

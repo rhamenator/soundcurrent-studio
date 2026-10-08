@@ -485,6 +485,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Chaneli</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Idadi ya usanidi wa chaneli hailingani na injini</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Gain ya chaneli kwa hatua za nusu dB</translation>
     </message>
@@ -555,6 +559,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Wasifu wa usahihishaji (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Haikuwezekana kutenga kumbukumbu ya hali ya athari</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Ucheleweshaji / mwangwi</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Mipangilio ya ucheleweshaji iko nje ya masafa yanayotumika</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Muda wa ucheleweshaji</translation>
     </message>
@@ -759,6 +771,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Effects</source>
       <translation>Athari</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Athari zinazidi bajeti ya 128 MiB ya kumbukumbu ya hali ya usikilizaji wa majaribio</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Lugha ya kiolesura</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Bendi ya EQ si halali</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Matriksi ya uelekezaji ya Studio si halali</translation>
     </message>
@@ -1111,6 +1131,14 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Sauti ya urekebishaji si sahihi</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Ukuzaji wa chaneli si halali au kuna bendi nyingi sana za EQ</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Mipangilio ya kuboresha sauti si halali</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Uhariri nje ya mtandao — acha uchezaji wa sasa bila kubadilika</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Uhariri nje ya wakati halisi. Uchezaji wa sasa huhifadhi usanidi wake wa mwisho wa Studio wa wakati halisi.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Imewashwa · Inacheza kupitia %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Gain baada ya kusawazisha</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Ukuzaji wa toleo lazima uwe thamani yenye kikomo na uwe kati ya -84 na +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Reverb</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Mipangilio ya mwangwi wa reverberation iko nje ya masafa yanayotumika</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Mchanganyiko wa sauti ya reverb</translation>
     </message>
@@ -2258,6 +2298,14 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Chaneli iliyochaguliwa ya Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Mipangilio ya Studio imetumika kwa uchezaji wa wakati halisi.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Mipangilio ya Studio iko tayari. Washa uchezaji kwenye kichupo cha Kisawazishi.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

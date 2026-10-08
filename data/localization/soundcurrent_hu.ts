@@ -485,6 +485,10 @@ Importálja a könyvtárba?</translation>
       <translation>Csatorna</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>A csatornakonfigurációk száma nem egyezik a motoréval</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Csatornaerősítés fél dB-es lépésekben</translation>
     </message>
@@ -555,6 +559,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Korrekciós profil (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Nem sikerült memóriát lefoglalni az effektállapothoz</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importálja a könyvtárba?</translation>
       <translation>Késleltetés / visszhang</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>A késleltetési beállítások kívül esnek a támogatott tartományon</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Késleltetési idő</translation>
     </message>
@@ -759,6 +771,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Effects</source>
       <translation>Effektek</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Az effektek túllépik az előhallgatás állapotmemóriájának 128 MiB-os keretét</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importálja a könyvtárba?</translation>
       <translation>Felület nyelve</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Érvénytelen EQ-sáv</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Érvénytelen Studio útválasztási mátrix</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Érvénytelen kalibrációs hang</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Érvénytelen csatornaerősítés vagy túl sok EQ-sáv</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Érvénytelen hangjavítási beállítások</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importálja a könyvtárba?</translation>
       <translation>Offline szerkesztés — jelenlegi lejátszás változatlanul hagyása</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offline szerkesztés. Az aktuális lejátszás megtartja a legutóbbi valós idejű Studio-konfigurációját.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Bekapcsolva · Lejátszás ezen: %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Utóerősítés a hangszínszabályzás után</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>A kimeneti erősítésnek végesnek és -84 és +24 dB közötti értékűnek kell lennie</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importálja a könyvtárba?</translation>
       <translation>Zengetés</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>A zengetési beállítások kívül esnek a támogatott tartományon</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Zengetett effekt aránya</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio kiválasztott csatornája</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>A Studio-beállítások alkalmazva a valós idejű lejátszásra.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>A Studio-beállítások készen állnak. Kapcsolja be a lejátszást a Hangszínszabályzó lapon.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

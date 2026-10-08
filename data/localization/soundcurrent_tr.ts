@@ -485,6 +485,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Kanal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Kanal yapılandırması sayısı motorla eşleşmiyor</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Yarım dB adımlarıyla kanal kazancı</translation>
     </message>
@@ -555,6 +559,10 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Düzeltme profili (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Efekt durumu için bellek ayrılamadı</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Gecikme / yankı</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Gecikme ayarları desteklenen aralığın dışında</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Gecikme süresi</translation>
     </message>
@@ -759,6 +771,10 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Effects</source>
       <translation>Efektler</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Efektler önizlemenin 128 MiB durum belleği sınırını aşıyor</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Arayüz dili</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Geçersiz EQ bandı</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Geçersiz Studio yönlendirme matrisi</translation>
     </message>
@@ -1111,6 +1131,14 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Geçersiz kalibrasyon sesi</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Geçersiz kanal kazancı veya çok fazla EQ bandı</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Geçersiz ses iyileştirme ayarları</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Çevrimdışı düzenleme — geçerli oynatmayı değiştirme</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Çevrimdışı düzenleme. Geçerli oynatma son canlı Studio yapılandırmasını korur.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Açık · %1 üzerinden oynatılıyor</translation>
     </message>
@@ -1615,6 +1647,10 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Ekolayzır sonrası çıkış kazancı</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Çıkış kazancı sonlu olmalı ve -84 ile +24 dB arasında olmalıdır</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Reverb</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Yankılanma ayarları desteklenen aralığın dışında</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Reverb efekti oranı</translation>
     </message>
@@ -2258,6 +2298,14 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio seçili kanalı</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio ayarları canlı oynatmaya uygulandı.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio ayarları hazır. Ekolayzır sekmesinde oynatmayı etkinleştirin.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

@@ -485,6 +485,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Kanál</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Počet konfigurácií kanálov nezodpovedá enginu</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Zosilnenie kanála v krokoch po pol dB</translation>
     </message>
@@ -555,6 +559,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Profil korekcie (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Nemožno prideliť pamäť pre stav efektov</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Oneskorenie / echo</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Nastavenia oneskorenia sú mimo podporovaného rozsahu</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Doba oneskorenia</translation>
     </message>
@@ -759,6 +771,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Effects</source>
       <translation>Efekty</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Efekty prekračujú limit 128 MiB pamäte stavu náhľadu</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Jazyk rozhrania</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Neplatné pásmo EQ</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Neplatná smerovacia matica Studio</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Neplatný kalibračný zvuk</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Neplatné zosilnenie kanála alebo príliš veľa pásiem EQ</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Neplatné nastavenia vylepšenia zvuku</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Offline úpravy — zachovať súčasné prehrávanie bez zmeny</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offline úpravy. Aktuálne prehrávanie si ponechá poslednú konfiguráciu Studio pre živé spracovanie.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Zapnuté · Prehrávanie cez %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Výstupné zosilnenie za ekvalizérom</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Výstupné zosilnenie musí byť konečné a v rozsahu -84 až +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Dozvuk</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Nastavenia dozvuku sú mimo podporovaného rozsahu</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Podiel efektu dozvuku</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Vybraný kanál Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Nastavenia Studio boli použité na živé prehrávanie.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Nastavenia Studio sú pripravené. Zapnite prehrávanie na karte Ekvalizér.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

@@ -485,6 +485,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Kanal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Talet på kanalkonfigurasjonar samsvarar ikkje med motoren</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Kanalforsterking i steg på ein halv dB</translation>
     </message>
@@ -555,6 +559,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Korreksjonsprofil (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Kunne ikkje tildele minne til effekttilstanden</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Forseinking / ekko</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Forseinkingsinnstillingane er utanfor det støtta området</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Forseinkingstid</translation>
     </message>
@@ -759,6 +771,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Effects</source>
       <translation>Effektar</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Effektane overskrid budsjettet på 128 MiB for tilstandsminnet til førehandslyttinga</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Grensesnittspråk</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Ugyldig EQ-band</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Ugyldig Studio-rutingsmatrise</translation>
     </message>
@@ -1111,6 +1131,14 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Ugyldig kalibreringslyd</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Ugyldig kanalforsterking eller for mange EQ-band</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Ugyldige innstillingar for lydforbetring</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Offline-redigering — hald gjeldande avspeling uendra</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Fråkopla redigering. Den gjeldande avspelinga beheld den siste Studio-konfigurasjonen for sanntid.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>På · Spelar gjennom %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Etterforsterking etter equalizeren</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Utgangsforsterkinga må vere endeleg og liggje mellom -84 og +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Romklang</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Romklanginnstillingane er utanfor det støtta området</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Effektdel for romklang</translation>
     </message>
@@ -2258,6 +2298,14 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Vald Studio-kanal</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio-innstillingane er brukte på sanntidsavspelinga.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio-innstillingane er klare. Aktiver avspeling på fana Equalizer.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

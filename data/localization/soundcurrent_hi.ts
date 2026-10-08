@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>चैनल</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>चैनल कॉन्फ़िगरेशन की संख्या इंजन से मेल नहीं खाती</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>चैनल गेन (0.5 dB के चरणों में)</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>सुधार प्रोफ़ाइल (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>इफ़ेक्ट स्टेट के लिए मेमोरी आवंटित नहीं की जा सकी</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>डिले / इको</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>डिले सेटिंग्स समर्थित सीमा से बाहर हैं</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>डिले समय</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>इफ़ेक्ट</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>इफ़ेक्ट पूर्वावलोकन की स्टेट मेमोरी की 128 MiB सीमा से अधिक हैं</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>इंटरफ़ेस की भाषा</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>अमान्य EQ बैंड</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>अमान्य Studio रूटिंग मैट्रिक्स</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>अमान्य कैलिब्रेशन ऑडियो</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>चैनल गेन अमान्य है या EQ बैंड बहुत अधिक हैं</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>अमान्य ध्वनि सुधार सेटिंग्स</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>ऑफ़लाइन संपादन — वर्तमान प्लेबैक यथावत रखें</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>ऑफ़लाइन संपादन। वर्तमान प्लेबैक अपना पिछला रीयल-टाइम Studio कॉन्फ़िगरेशन बनाए रखता है।</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>चालू · %1 से चल रहा है</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>इक्वलाइज़ेशन के बाद पोस्ट गेन</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>आउटपुट गेन सीमित मान होना चाहिए और -84 से +24 dB के बीच होना चाहिए</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>रीवर्ब</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>रीवर्ब सेटिंग्स समर्थित सीमा से बाहर हैं</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>रीवर्ब वेट मिक्स</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio में चयनित चैनल</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio सेटिंग्स रीयल-टाइम प्लेबैक पर लागू की गईं।</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio सेटिंग्स तैयार हैं। इक्वलाइज़र टैब में प्लेबैक चालू करें।</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

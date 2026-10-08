@@ -2386,8 +2386,8 @@ public:
         connect(undoShortcut, &QShortcut::activated, this, [this] { if(tabs_->currentIndex()==1)studio_->undo();else undoChange(); });
         studio_->onChanged=[this]{
             try { audio_.setStudio(studio_->session());applyChanges();
-                studio_->liveStatus(studio_->session().offline?"Offline editing. Current playback keeps its last live Studio setup.":
-                                    audio_.active()?"Studio settings applied to live playback.":"Studio settings ready. Enable playback on the Equalizer tab.");
+                studio_->liveStatus(studio_->session().offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):
+                                    audio_.active()?SC_TR("Studio settings applied to live playback."):SC_TR("Studio settings ready. Enable playback on the Equalizer tab."));
             }
             catch(const std::exception &error){showError(error.what());studio_->liveStatus(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what())),true);}
         };

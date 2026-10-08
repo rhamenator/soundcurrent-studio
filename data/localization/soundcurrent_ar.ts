@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>القناة</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>عدد إعدادات القنوات لا يطابق المحرك</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>كسب القناة بخطوات مقدارها نصف dB</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>ملف تعريف التصحيح (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>تعذر تخصيص ذاكرة لحالة التأثيرات</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>تأخير / صدى</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>إعدادات التأخير خارج النطاق المدعوم</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>زمن التأخير</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>المؤثرات</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>تتجاوز التأثيرات حد ذاكرة الحالة للمعاينة البالغ 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>لغة الواجهة</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>نطاق المعادل غير صالح</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>مصفوفة توجيه Studio غير صالحة</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>صوت معايرة غير صالح</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>كسب القناة غير صالح أو عدد نطاقات المعادل كبير جدًا</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>إعدادات تحسين الصوت غير صالحة</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>تحرير دون اتصال — إبقاء التشغيل الحالي كما هو</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>تحرير غير فوري. يحتفظ التشغيل الحالي بآخر إعداد Studio للمعالجة في الوقت الفعلي.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>يعمل · تشغيل عبر %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>الكسب اللاحق بعد المعادلة</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>يجب أن يكون كسب الخرج عددًا منتهيًا وبين -84 و+24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>ارتداد صوتي</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>إعدادات الصدى الترددي خارج النطاق المدعوم</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>مزج إشارة الارتداد الصوتي المعالجة</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>القناة المحددة في Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>تم تطبيق إعدادات Studio على التشغيل في الوقت الفعلي.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>إعدادات Studio جاهزة. فعّل التشغيل في علامة تبويب المعادل.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

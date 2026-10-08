@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>Κανάλι</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Ο αριθμός των διαμορφώσεων καναλιών δεν αντιστοιχεί στη μηχανή</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Ενίσχυση καναλιού σε βήματα μισού dB</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Προφίλ διόρθωσης (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Δεν ήταν δυνατή η δέσμευση μνήμης για την κατάσταση των εφέ</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>Καθυστέρηση / ηχώ</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Οι ρυθμίσεις καθυστέρησης είναι εκτός του υποστηριζόμενου εύρους</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Χρόνος καθυστέρησης</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>Εφέ</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Τα εφέ υπερβαίνουν το όριο μνήμης κατάστασης της προεπισκόπησης των 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>Γλώσσα διεπαφής</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Μη έγκυρη ζώνη ισοστάθμισης</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Μη έγκυρος πίνακας δρομολόγησης Studio</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Μη έγκυρος ήχος βαθμονόμησης</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Μη έγκυρο κέρδος καναλιού ή υπερβολικά πολλές ζώνες ισοστάθμισης</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Μη έγκυρες ρυθμίσεις βελτίωσης ήχου</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>Επεξεργασία εκτός ζωντανής λειτουργίας — διατήρηση της τρέχουσας αναπαραγωγής</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Επεξεργασία εκτός πραγματικού χρόνου. Η τρέχουσα αναπαραγωγή διατηρεί την τελευταία διαμόρφωση Studio σε πραγματικό χρόνο.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Ενεργό · Αναπαραγωγή μέσω %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>Τελική ενίσχυση μετά την ισοστάθμιση</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Το κέρδος εξόδου πρέπει να είναι πεπερασμένο και μεταξύ -84 και +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>Αντήχηση</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Οι ρυθμίσεις αντήχησης είναι εκτός του υποστηριζόμενου εύρους</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Ποσοστό εφέ αντήχησης</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Επιλεγμένο κανάλι Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Οι ρυθμίσεις Studio εφαρμόστηκαν στην αναπαραγωγή σε πραγματικό χρόνο.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Οι ρυθμίσεις Studio είναι έτοιμες. Ενεργοποιήστε την αναπαραγωγή στην καρτέλα Ισοσταθμιστής.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

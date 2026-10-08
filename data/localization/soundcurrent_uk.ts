@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>Канал</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Кількість конфігурацій каналів не відповідає рушію</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Підсилення каналу з кроком пів децибела</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Профіль корекції (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Не вдалося виділити пам’ять для стану ефектів</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>Затримка / ехо</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Налаштування затримки виходять за підтримуваний діапазон</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Час затримки</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>Ефекти</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Ефекти перевищують ліміт пам’яті стану попереднього прослуховування у 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>Мова інтерфейсу</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Некоректна смуга еквалайзера</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Некоректна матриця маршрутизації Studio</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Неприпустимий калібрувальний аудіосигнал</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Некоректне підсилення каналу або забагато смуг еквалайзера</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Некоректні налаштування покращення звуку</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>Офлайн-редагування — не змінювати поточне відтворення</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Автономне редагування. Поточне відтворення зберігає останню конфігурацію Studio для обробки в реальному часі.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Увімкнено · Відтворення через %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>Вихідне підсилення після еквалізації</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Вихідне підсилення має бути скінченним і в межах від -84 до +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>Реверберація</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Налаштування реверберації виходять за підтримуваний діапазон</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Частка ефекту реверберації</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Вибраний канал Studio</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Налаштування Studio застосовано до відтворення в реальному часі.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Налаштування Studio готові. Увімкніть відтворення на вкладці Еквалайзер.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

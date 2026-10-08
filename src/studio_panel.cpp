@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "accelerating_spinbox.h"
 #include "studio_panel.h"
+#include "audio_error_text.h"
 #include "wav.h"
 #include <QCheckBox>
 #include <QComboBox>
@@ -176,7 +177,7 @@ void StudioPanel::change(const std::function<void(Session &)> &fn) {
     try {fn(session_);AudioEngine validate(48000,session_.engine.channels.size());std::string error;
         if(!validate.configure(session_.effective(shared_,sharedGain_,balance_),&error))throw std::runtime_error(error);
         commit(before);
-    } catch(const std::exception &e){session_=before;status_->setText(e.what());rebuild();}
+    } catch(const std::exception &e){session_=before;status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));rebuild();}
 }
 void StudioPanel::commit(const Session &before) {
     if(session_.json()==before.json())return;
@@ -223,14 +224,14 @@ void StudioPanel::openProfile() {
     if(locked_)return;const auto filename=QFileDialog::getOpenFileName(this,SC_TR("Open Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
     try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
         auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));
-    }catch(const std::exception &e){status_->setText(e.what());}
+    }catch(const std::exception &e){status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::startPreview() {
     try {previewEngine_=std::make_unique<AudioEngine>(48000,session_.engine.channels.size());std::string error;
         if(!previewEngine_->configure(session_.effective(shared_,sharedGain_,balance_),&error))throw std::runtime_error(error);
         previewRouter_=std::make_unique<ChannelRouter>(count_->value(),count_->value());previewRouter_->setMatrix(session_.routing);
         raw_.resize(960*session_.engine.channels.size());processed_.resize(raw_.size());previewFrame_=0;
-    }catch(const std::exception &e){previewEngine_.reset();status_->setText(e.what());}
+    }catch(const std::exception &e){previewEngine_.reset();status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::setLiveLevels(std::span<const float> levels) {
     if(preview_->isChecked()&& !levels.empty())return;
@@ -283,7 +284,7 @@ void StudioPanel::renderFiles(const QString &input,const QString &output) {
             }
             writer.finish();if(cancelJob_)throw std::runtime_error(SC_TR("Render cancelled; no output file published").toStdString());std::filesystem::create_hard_link(temporary,final);
             return SC_TR("Rendered %1 channels. Clipped samples: %2. %3").arg(n).arg(clips).arg(output);
-        }catch(const std::exception &e){return SC_TR("Render: %1").arg(QString::fromUtf8(e.what()));}
+        }catch(const std::exception &e){return SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
     });
 }
 void StudioPanel::selfTest() {

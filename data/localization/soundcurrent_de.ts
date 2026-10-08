@@ -485,6 +485,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Kanal</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>Die Anzahl der Kanalkonfigurationen stimmt nicht mit der Engine überein</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>Kanalverstärkung in Schritten von 0,5 dB</translation>
     </message>
@@ -555,6 +559,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>Korrekturprofil (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>Speicher für den Effektzustand konnte nicht zugewiesen werden</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Verzögerung / Echo</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>Die Verzögerungseinstellungen liegen außerhalb des unterstützten Bereichs</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>Verzögerungszeit</translation>
     </message>
@@ -759,6 +771,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Effects</source>
       <translation>Effekte</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>Die Effekte überschreiten das Zustandsbudget der Vorschau von 128 MiB</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Oberflächensprache</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>Ungültiges EQ-Band</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Ungültige Studio-Routingmatrix</translation>
     </message>
@@ -1111,6 +1131,14 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Invalid calibration audio</source>
       <translation>Ungültiges Kalibrierungsaudio</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>Ungültige Kanalverstärkung oder zu viele EQ-Bänder</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>Ungültige Klangverbesserungseinstellungen</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Offline-Bearbeitung — aktuelle Wiedergabe unverändert lassen</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>Offline-Bearbeitung. Die aktuelle Wiedergabe behält die letzte Live-Studio-Konfiguration bei.</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>An · Wiedergabe über %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Post gain after equalization</source>
       <translation>Ausgangsverstärkung nach der Entzerrung</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>Die Nachverstärkung muss endlich sein und zwischen -84 und +24 dB liegen</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Hall</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>Die Halleinstellungen liegen außerhalb des unterstützten Bereichs</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>Hallanteil</translation>
     </message>
@@ -2258,6 +2298,14 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Ausgewählter Studio-Kanal</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio-Einstellungen auf die Live-Wiedergabe angewendet.</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio-Einstellungen bereit. Aktivieren Sie die Wiedergabe auf der Registerkarte Equalizer.</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

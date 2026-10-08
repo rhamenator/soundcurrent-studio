@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>แชนเนล</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>จำนวนการกำหนดค่าช่องเสียงไม่ตรงกับเอนจิน</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>เกนแชนเนล ปรับครั้งละ 0.5 dB</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>โปรไฟล์ชดเชย (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>ไม่สามารถจัดสรรหน่วยความจำสถานะเอฟเฟกต์ได้</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>ดีเลย์ / เสียงสะท้อน</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>การตั้งค่าดีเลย์อยู่นอกช่วงที่รองรับ</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>เวลาดีเลย์</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>เอฟเฟกต์</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>เอฟเฟกต์ใช้หน่วยความจำสถานะเกินขีดจำกัด 128 MiB ของการฟังตัวอย่าง</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>ภาษาของส่วนติดต่อ</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>แถบ EQ ไม่ถูกต้อง</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>เมทริกซ์กำหนดเส้นทางของ Studio ไม่ถูกต้อง</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>เสียงปรับเทียบไม่ถูกต้อง</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>เกนช่องเสียงไม่ถูกต้องหรือมีแถบ EQ มากเกินไป</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>การตั้งค่าปรับปรุงเสียงไม่ถูกต้อง</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>แก้ไขออฟไลน์ — คงการเล่นเสียงปัจจุบันไว้</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>การแก้ไขแบบออฟไลน์ การเล่นเสียงปัจจุบันยังคงใช้การกำหนดค่า Studio แบบเรียลไทม์ล่าสุด</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>เปิด · เล่นผ่าน %1</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>เกนหลังอีควอไลซ์</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>เกนเอาต์พุตต้องเป็นค่าจำกัดและอยู่ระหว่าง -84 ถึง +24 dB</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>รีเวิร์บ</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>การตั้งค่ารีเวิร์บอยู่นอกช่วงที่รองรับ</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>สัดส่วนผสมเสียงรีเวิร์บ</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>แชนเนล Studio ที่เลือก</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>ใช้การตั้งค่า Studio กับการเล่นเสียงแบบเรียลไทม์แล้ว</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>การตั้งค่า Studio พร้อมแล้ว เปิดการเล่นเสียงในแท็บอีควอไลเซอร์</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>

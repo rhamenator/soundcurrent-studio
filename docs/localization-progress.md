@@ -553,3 +553,31 @@ Studio live diagnostic checkpoint: Korean, Hindi and Indonesian added. Thirty cu
 Studio live diagnostic catalog batch complete: Vietnamese, Thai and Swahili added. All 33 current non-English catalogs are structurally complete. Channel limits and stop-playback advice retained. Translations unverified; compiled runtime/UI qualification pending. Engine rejection strings, helper/installer gaps and visual/Windows qualification remain outside this batch.
 
 Studio live diagnostic qualification: app and tests rebuilt; four focused Linux tests passed. Actual embedded catalogs mapped all six live errors in every non-English locale without English fallback. Panel exception paths compiled with the desktop mapper. Visual panel error display, Windows/package and other engine/helper/installer gaps remain pending. Translations remain unverified.
+
+Second-pass engine/panel audit: nine engine configure rejection messages and three direct live-status literals inspected and recorded in studio-engine-message-gaps.json. StudioPanel load/preview/render exception detail now uses the desktop mapper with explicit UTF-8 conversion. Engine messages and live statuses still need catalog mappings/translations; panel rebuild and runtime verification pending. Backend engine unchanged.
+
+Studio engine/status batch started: desktop mappings for nine engine validation errors and SC_TR markers for three live-status branches added. German current catalog structurally complete; 32 non-English locales need these entries. Original engine diagnostics/processing numbers remain unchanged. Global completeness temporarily failing; translations unverified and runtime/UI qualification pending.
+
+Studio engine/status checkpoint: French and Spanish added. Three current locale catalogs structurally complete; thirty remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Italian and European/Brazilian Portuguese added. Six current locale catalogs structurally complete; twenty-seven remain. Portuguese retains regional definições/configurações, separador/aba and pré-visualização/prévia terminology. Finite gain/range constraints and 128 MiB state budget retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Dutch, Polish and Czech added. Nine current locale catalogs structurally complete; twenty-four remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Slovak, Ukrainian and Russian added. Twelve current locale catalogs structurally complete; twenty-one remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Greek, Turkish and Swedish added. Fifteen current locale catalogs structurally complete; eighteen remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Danish, Norwegian Bokmål and Finnish added. Eighteen current locale catalogs structurally complete; fifteen remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Romanian, Hungarian and Nynorsk added. Twenty-one current locale catalogs structurally complete; twelve remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Arabic, Hebrew and Persian added. Twenty-four current locale catalogs structurally complete; nine remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified. Mixed-direction rendering and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Simplified/Traditional Chinese and Japanese added. Twenty-seven current locale catalogs structurally complete; six remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status checkpoint: Korean, Hindi and Indonesian added. Thirty current locale catalogs structurally complete; three remain. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Global completeness still failing; translations unverified and runtime/UI tests pending.
+
+Studio engine/status catalog batch complete: Vietnamese, Thai and Swahili added. All 33 current non-English catalogs structurally complete. Finite gain/range constraints, 128 MiB state budget and live/offline status meanings retained. Translations unverified; runtime/UI tests pending. This batch does not complete the remaining session/WAVE/helper/installer audit or Windows/package qualification.
+
+Studio engine/status Linux qualification: rebuilt app, panel and tests. Six focused CTests passed, including actual embedded engine-error translations and live-status coverage across every non-English locale, plus automated German/Arabic UI fixtures. These are not visual/native-speaker or Windows/package qualification. Engine sources/processing unchanged; translations unverified.

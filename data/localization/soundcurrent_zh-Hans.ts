@@ -485,6 +485,10 @@ Import into your library?</source>
       <translation>声道</translation>
     </message>
     <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>声道配置数量与引擎不匹配</translation>
+    </message>
+    <message>
       <source>Channel gain in half dB steps</source>
       <translation>以半 dB 为步长调节声道增益</translation>
     </message>
@@ -555,6 +559,10 @@ Import into your library?</source>
     <message>
       <source>Correction profile (*.json)</source>
       <translation>校正配置 (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>无法分配效果状态内存</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
@@ -681,6 +689,10 @@ Import into your library?</source>
       <translation>延迟 / 回声</translation>
     </message>
     <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>延迟设置超出支持范围</translation>
+    </message>
+    <message>
       <source>Delay time</source>
       <translation>延迟时间</translation>
     </message>
@@ -759,6 +771,10 @@ Import into your library?</source>
     <message>
       <source>Effects</source>
       <translation>音效</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>效果超出预览的 128 MiB 状态内存预算</translation>
     </message>
     <message>
       <source>Electronic</source>
@@ -1101,6 +1117,10 @@ Import into your library?</source>
       <translation>界面语言</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>均衡器频段无效</translation>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Studio 路由矩阵无效</translation>
     </message>
@@ -1111,6 +1131,14 @@ Import into your library?</source>
     <message>
       <source>Invalid calibration audio</source>
       <translation>校准音频无效</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>声道增益无效或均衡器频段过多</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>声音增强设置无效</translation>
     </message>
     <message>
       <source>Invalid equalizer settings</source>
@@ -1468,6 +1496,10 @@ Import into your library?</source>
       <translation>离线编辑 — 保持当前播放不变</translation>
     </message>
     <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>离线编辑。当前播放保留上一次实时 Studio 配置。</translation>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>开启 · 通过 %1 播放</translation>
     </message>
@@ -1615,6 +1647,10 @@ Import into your library?</source>
     <message>
       <source>Post gain after equalization</source>
       <translation>均衡处理后的增益</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>输出增益必须为有限值，且介于 -84 和 +24 dB 之间</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
@@ -1939,6 +1975,10 @@ Import into your library?</source>
       <translation>混响</translation>
     </message>
     <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>混响设置超出支持范围</translation>
+    </message>
+    <message>
       <source>Reverb wet mix</source>
       <translation>混响湿声混合量</translation>
     </message>
@@ -2258,6 +2298,14 @@ Import into your library?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio 所选声道</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio 设置已应用于实时播放。</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio 设置已就绪。请在均衡器选项卡中启用播放。</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>
