@@ -542,6 +542,11 @@ Importálja a könyvtárba?</translation>
       <translation>Frissítési mappa kiválasztása…</translation>
     </message>
     <message>
+      <source>Cinema speaker</source>
+      <translation>Mozihangsugárzó</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
+    </message>
+    <message>
       <source>Clarity</source>
       <translation>Tisztaság</translation>
     </message>
@@ -574,12 +579,22 @@ Importálja a könyvtárba?</translation>
       <translation>Bezárás</translation>
     </message>
     <message>
+      <source>Column speaker</source>
+      <translation>Oszlopos hangsugárzó</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Körülmények</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
       <translation>Mérés előtt csatlakoztasson kimenetet és mikrofont.</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>Állandó nyalábszélességű hangsugárzó</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
       <source>Correction filters:</source>
@@ -1565,6 +1580,11 @@ Importálja a könyvtárba?</translation>
       <translation>Offline szerkesztés. Az aktuális lejátszás megtartja a legutóbbi valós idejű Studio-konfigurációját.</translation>
     </message>
     <message>
+      <source>Omnidirectional speaker</source>
+      <translation>Körsugárzó hangsugárzó</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Bekapcsolva · Lejátszás ezen: %1</translation>
     </message>
@@ -1637,6 +1657,11 @@ Importálja a könyvtárba?</translation>
       <translation>Narancs: mért frekvenciamenet, ha rendelkezésre áll. Türkiz: korrekció 48 kHz-en. Húzza a türkiz vezérlőpontokat vagy szerkessze a táblázatot. A mentés megőrzi a referenciát és egyéni másolatot hoz létre.</translation>
     </message>
     <message>
+      <source>Outdoor speaker</source>
+      <translation>Kültéri hangsugárzó</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
       <source>Output already exists; select a new filename</source>
       <translation>A kimenet már létezik; válasszon új fájlnevet</translation>
     </message>
@@ -1655,6 +1680,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Overall output</source>
       <translation>Teljes kimenet</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>Paneles hangsugárzó</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
@@ -1708,6 +1738,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Pop</source>
       <translation>Pop</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>Hordozható PA-hangsugárzó</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
@@ -2262,6 +2297,11 @@ Importálja a könyvtárba?</translation>
       <translation>A SoundCurrent EQ már feldolgozza a lejátszást. Lépjen ki belőle a SoundCurrent Studio bekapcsolása előtt.</translation>
     </message>
     <message>
+      <source>Soundbar</source>
+      <translation>Hangprojektor</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
+    </message>
+    <message>
       <source>Source</source>
       <translation>Forrás</translation>
     </message>
@@ -2412,6 +2452,11 @@ Importálja a könyvtárba?</translation>
       <translation>Surround hang</translation>
     </message>
     <message>
+      <source>Surround speaker</source>
+      <translation>Surround hangsugárzó</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
+    </message>
+    <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>A rendszer-frekvenciamenetprofil szerkesztője megnyílt. A mentett profilok az eszközkönyvtárban érhetők el.</translation>
     </message>
@@ -2466,6 +2511,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>Túl kevés teszthang jutott a mikrofonhoz. Vigye közelebb vagy kissé emelje a tesztszintet.</translation>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>Turnékon használt PA-hangsugárzó</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>

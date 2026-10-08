@@ -542,6 +542,11 @@ Import into your library?</source>
       <translation>انتخاب پوشه به‌روزرسانی…</translation>
     </message>
     <message>
+      <source>Cinema speaker</source>
+      <translation>بلندگوی سینما</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
+    </message>
+    <message>
       <source>Clarity</source>
       <translation>وضوح</translation>
     </message>
@@ -574,12 +579,22 @@ Import into your library?</source>
       <translation>بستن</translation>
     </message>
     <message>
+      <source>Column speaker</source>
+      <translation>بلندگوی ستونی</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>شرایط</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
       <translation>پیش از اندازه‌گیری یک خروجی و یک میکروفون وصل کنید.</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>بلندگو با پهنای پرتو ثابت</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
       <source>Correction filters:</source>
@@ -1565,6 +1580,11 @@ Import into your library?</source>
       <translation>ویرایش غیربلادرنگ. پخش فعلی آخرین پیکربندی بلادرنگ Studio خود را حفظ می‌کند.</translation>
     </message>
     <message>
+      <source>Omnidirectional speaker</source>
+      <translation>بلندگوی همه‌جهته</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>روشن · پخش از طریق %1</translation>
     </message>
@@ -1637,6 +1657,11 @@ Import into your library?</source>
       <translation>نارنجی: پاسخ اندازه‌گیری‌شده در صورت وجود. سبزآبی: اصلاح در 48 kHz. نقاط کنترل سبزآبی را بکشید یا جدول را ویرایش کنید. ذخیره، مرجع را حفظ می‌کند و نسخه سفارشی می‌سازد.</translation>
     </message>
     <message>
+      <source>Outdoor speaker</source>
+      <translation>بلندگوی فضای باز</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
       <source>Output already exists; select a new filename</source>
       <translation>خروجی از قبل وجود دارد؛ نام فایل جدیدی انتخاب کنید</translation>
     </message>
@@ -1655,6 +1680,11 @@ Import into your library?</source>
     <message>
       <source>Overall output</source>
       <translation>خروجی کلی</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>بلندگوی پنلی</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
@@ -1708,6 +1738,11 @@ Import into your library?</source>
     <message>
       <source>Pop</source>
       <translation>پاپ</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>بلندگوی قابل‌حمل سامانهٔ صوت عمومی</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
@@ -2262,6 +2297,11 @@ Import into your library?</source>
       <translation>SoundCurrent EQ از قبل در حال پردازش پخش است. پیش از فعال کردن SoundCurrent Studio از آن خارج شوید.</translation>
     </message>
     <message>
+      <source>Soundbar</source>
+      <translation>ساندبار</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
+    </message>
+    <message>
       <source>Source</source>
       <translation>منبع</translation>
     </message>
@@ -2412,6 +2452,11 @@ Import into your library?</source>
       <translation>صدای فراگیر</translation>
     </message>
     <message>
+      <source>Surround speaker</source>
+      <translation>بلندگوی صدای فراگیر</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
+    </message>
+    <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>ویرایشگر پروفایل پاسخ سیستم باز شد. پروفایل‌های ذخیره‌شده در کتابخانه تجهیزات در دسترس هستند.</translation>
     </message>
@@ -2466,6 +2511,11 @@ Import into your library?</source>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>صدای آزمون بسیار کمی به میکروفون رسید. آن را نزدیک‌تر کنید یا سطح آزمون را کمی افزایش دهید.</translation>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>بلندگوی سامانهٔ صوت عمومی برای تورهای اجرا</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>

@@ -542,6 +542,11 @@ Importér til dit bibliotek?</translation>
       <translation>Vælg opdateringsmappe…</translation>
     </message>
     <message>
+      <source>Cinema speaker</source>
+      <translation>Biografhøjttaler</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
+    </message>
+    <message>
       <source>Clarity</source>
       <translation>Klarhed</translation>
     </message>
@@ -574,12 +579,22 @@ Importér til dit bibliotek?</translation>
       <translation>Luk</translation>
     </message>
     <message>
+      <source>Column speaker</source>
+      <translation>Søjlehøjttaler</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Forhold</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
       <translation>Tilslut en udgang og en mikrofon før målingen.</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>Højttaler med konstant strålebredde</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
       <source>Correction filters:</source>
@@ -1565,6 +1580,11 @@ Importér til dit bibliotek?</translation>
       <translation>Offlineredigering. Den aktuelle afspilning beholder den seneste Studio-konfiguration til realtid.</translation>
     </message>
     <message>
+      <source>Omnidirectional speaker</source>
+      <translation>Rundstrålende højttaler</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Til · Afspiller gennem %1</translation>
     </message>
@@ -1637,6 +1657,11 @@ Importér til dit bibliotek?</translation>
       <translation>Orange: målt frekvensgang, når den findes. Turkis: korrektion ved 48 kHz. Træk turkise punkter, eller redigér tabellen. Når du gemmer, bevares referencen, og en egen kopi oprettes.</translation>
     </message>
     <message>
+      <source>Outdoor speaker</source>
+      <translation>Udendørshøjttaler</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
       <source>Output already exists; select a new filename</source>
       <translation>Output findes allerede; vælg et nyt filnavn</translation>
     </message>
@@ -1655,6 +1680,11 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Overall output</source>
       <translation>Samlet udgang</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>Panelhøjttaler</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
@@ -1708,6 +1738,11 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Pop</source>
       <translation>Pop</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>Bærbar PA-højttaler</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
@@ -2262,6 +2297,11 @@ Importér til dit bibliotek?</translation>
       <translation>SoundCurrent EQ behandler allerede afspilningen. Afslut det, før du aktiverer SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>Soundbar</source>
+      <translation>Lydbar</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
+    </message>
+    <message>
       <source>Source</source>
       <translation>Kilde</translation>
     </message>
@@ -2412,6 +2452,11 @@ Importér til dit bibliotek?</translation>
       <translation>Surroundlyd</translation>
     </message>
     <message>
+      <source>Surround speaker</source>
+      <translation>Surroundhøjttaler</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
+    </message>
+    <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Profileditoren for systemets frekvensgang er åbnet. Gemte profiler findes i udstyrsbiblioteket.</translation>
     </message>
@@ -2466,6 +2511,11 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>For lidt testlyd nåede mikrofonen. Flyt den tættere på, eller hæv testniveauet lidt.</translation>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>PA-højttaler til turnéer</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>

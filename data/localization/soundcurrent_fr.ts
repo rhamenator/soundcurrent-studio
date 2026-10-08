@@ -542,6 +542,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Choisir le dossier des mises à jour…</translation>
     </message>
     <message>
+      <source>Cinema speaker</source>
+      <translation>Enceinte de cinéma</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
+    </message>
+    <message>
       <source>Clarity</source>
       <translation>Clarté</translation>
     </message>
@@ -574,12 +579,22 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Fermer</translation>
     </message>
     <message>
+      <source>Column speaker</source>
+      <translation>Enceinte colonne de sonorisation</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Conditions</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
       <translation>Connectez une sortie audio et un microphone avant de mesurer.</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>Enceinte à largeur de faisceau constante</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
       <source>Correction filters:</source>
@@ -1565,6 +1580,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Édition hors ligne. La lecture actuelle conserve sa dernière configuration Studio en direct.</translation>
     </message>
     <message>
+      <source>Omnidirectional speaker</source>
+      <translation>Enceinte omnidirectionnelle</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Activé · Lecture sur %1</translation>
     </message>
@@ -1637,6 +1657,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Orange : réponse mesurée, si fournie. Turquoise : correction à 48 kHz. Déplacez les points turquoise ou modifiez le tableau. L’enregistrement conserve la référence et crée une copie personnalisée.</translation>
     </message>
     <message>
+      <source>Outdoor speaker</source>
+      <translation>Enceinte extérieure</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
       <source>Output already exists; select a new filename</source>
       <translation>La sortie existe déjà ; choisissez un nouveau nom de fichier</translation>
     </message>
@@ -1655,6 +1680,11 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Overall output</source>
       <translation>Sortie globale</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>Enceinte à panneau</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
@@ -1708,6 +1738,11 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Pop</source>
       <translation>Pop</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>Enceinte de sonorisation portable</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
@@ -2262,6 +2297,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>SoundCurrent EQ traite déjà la lecture. Quittez-le avant d’activer SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>Soundbar</source>
+      <translation>Barre de son</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
+    </message>
+    <message>
       <source>Source</source>
       <translation>Source</translation>
     </message>
@@ -2412,6 +2452,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Son surround</translation>
     </message>
     <message>
+      <source>Surround speaker</source>
+      <translation>Enceinte surround</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
+    </message>
+    <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Éditeur de profil de réponse du système ouvert. Les profils enregistrés sont disponibles dans la bibliothèque d’équipement.</translation>
     </message>
@@ -2466,6 +2511,11 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>Le signal de test reçu par le microphone est trop faible. Rapprochez-le ou augmentez légèrement le niveau de test.</translation>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>Enceinte de sonorisation de tournée</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>

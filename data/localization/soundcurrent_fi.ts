@@ -542,6 +542,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Valitse päivityskansio…</translation>
     </message>
     <message>
+      <source>Cinema speaker</source>
+      <translation>Elokuvateatterikaiutin</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
+    </message>
+    <message>
       <source>Clarity</source>
       <translation>Selkeys</translation>
     </message>
@@ -574,12 +579,22 @@ Tuodaanko kirjastoon?</translation>
       <translation>Sulje</translation>
     </message>
     <message>
+      <source>Column speaker</source>
+      <translation>Pylväskaiutin</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Olosuhteet</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
       <translation>Liitä lähtölaite ja mikrofoni ennen mittausta.</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>Kaiutin, jonka keilanleveys on vakio</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
       <source>Correction filters:</source>
@@ -1565,6 +1580,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Offline-muokkaus. Nykyinen toisto säilyttää viimeisimmän reaaliaikaisen Studio-kokoonpanonsa.</translation>
     </message>
     <message>
+      <source>Omnidirectional speaker</source>
+      <translation>Ympärisäteilevä kaiutin</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>Päällä · Toisto laitteen %1 kautta</translation>
     </message>
@@ -1637,6 +1657,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Oranssi: mitattu taajuusvaste, jos saatavilla. Turkoosi: korjaus 48 kHz:n taajuudella. Vedä turkooseja ohjauspisteitä tai muokkaa taulukkoa. Tallennus säilyttää vertailuprofiilin ja luo oman kopion.</translation>
     </message>
     <message>
+      <source>Outdoor speaker</source>
+      <translation>Ulkokaiutin</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
       <source>Output already exists; select a new filename</source>
       <translation>Lähtötiedosto on jo olemassa; valitse uusi tiedostonimi</translation>
     </message>
@@ -1655,6 +1680,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Overall output</source>
       <translation>Kokonaislähtö</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>Paneelikaiutin</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
@@ -1708,6 +1738,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Pop</source>
       <translation>Pop</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>Kannettava PA-kaiutin</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
@@ -2262,6 +2297,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>SoundCurrent EQ käsittelee jo toistoa. Lopeta se ennen SoundCurrent Studion käyttöönottoa.</translation>
     </message>
     <message>
+      <source>Soundbar</source>
+      <translation>Äänipalkki</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
+    </message>
+    <message>
       <source>Source</source>
       <translation>Lähde</translation>
     </message>
@@ -2412,6 +2452,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Surround-ääni</translation>
     </message>
     <message>
+      <source>Surround speaker</source>
+      <translation>Surround-kaiutin</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
+    </message>
+    <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Järjestelmän taajuusvasteprofiilin muokkain avattiin. Tallennetut profiilit ovat saatavilla laitekirjastossa.</translation>
     </message>
@@ -2466,6 +2511,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>Mikrofoniin päätyi liian vähän testiääntä. Siirrä sitä lähemmäs tai nosta testitasoa hieman.</translation>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>Kiertueiden PA-kaiutin</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>

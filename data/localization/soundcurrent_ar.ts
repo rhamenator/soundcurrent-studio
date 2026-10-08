@@ -542,6 +542,11 @@ Import into your library?</source>
       <translation>اختيار مجلد التحديث…</translation>
     </message>
     <message>
+      <source>Cinema speaker</source>
+      <translation>مكبر صوت للسينما</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
+    </message>
+    <message>
       <source>Clarity</source>
       <translation>الوضوح</translation>
     </message>
@@ -574,12 +579,22 @@ Import into your library?</source>
       <translation>إغلاق</translation>
     </message>
     <message>
+      <source>Column speaker</source>
+      <translation>مكبر صوت عمودي</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>الظروف</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
       <translation>وصّل مخرجًا وميكروفونًا قبل القياس.</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>مكبر صوت بعرض حزمة ثابت</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
       <source>Correction filters:</source>
@@ -1565,6 +1580,11 @@ Import into your library?</source>
       <translation>تحرير غير فوري. يحتفظ التشغيل الحالي بآخر إعداد Studio للمعالجة في الوقت الفعلي.</translation>
     </message>
     <message>
+      <source>Omnidirectional speaker</source>
+      <translation>مكبر صوت شامل الاتجاهات</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
+    </message>
+    <message>
       <source>On · Playing through %1</source>
       <translation>يعمل · تشغيل عبر %1</translation>
     </message>
@@ -1637,6 +1657,11 @@ Import into your library?</source>
       <translation>البرتقالي: الاستجابة المقاسة عند توفرها. الأزرق المخضر: التصحيح عند 48 kHz. اسحب نقاط التحكم الزرقاء المخضرة أو حرر الجدول. يحافظ الحفظ على المرجع وينشئ نسخة مخصصة.</translation>
     </message>
     <message>
+      <source>Outdoor speaker</source>
+      <translation>مكبر صوت للاستخدام الخارجي</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
       <source>Output already exists; select a new filename</source>
       <translation>المخرج موجود بالفعل؛ اختر اسم ملف جديدًا</translation>
     </message>
@@ -1655,6 +1680,11 @@ Import into your library?</source>
     <message>
       <source>Overall output</source>
       <translation>المخرج العام</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>مكبر صوت لوحي</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
@@ -1708,6 +1738,11 @@ Import into your library?</source>
     <message>
       <source>Pop</source>
       <translation>بوب</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>مكبر صوت محمول لنظام مخاطبة الجمهور</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
@@ -2262,6 +2297,11 @@ Import into your library?</source>
       <translation>يعالج SoundCurrent EQ صوت التشغيل بالفعل. أنهِه قبل تفعيل SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>Soundbar</source>
+      <translation>شريط صوت</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
+    </message>
+    <message>
       <source>Source</source>
       <translation>المصدر</translation>
     </message>
@@ -2412,6 +2452,11 @@ Import into your library?</source>
       <translation>صوت محيطي</translation>
     </message>
     <message>
+      <source>Surround speaker</source>
+      <translation>مكبر صوت محيطي</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
+    </message>
+    <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>تم فتح محرر ملف تعريف استجابة النظام. تتوفر ملفات التعريف المحفوظة في مكتبة المعدات.</translation>
     </message>
@@ -2466,6 +2511,11 @@ Import into your library?</source>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>وصل صوت اختبار ضعيف جدًا إلى الميكروفون. قرّبه أو ارفع مستوى الاختبار قليلًا.</translation>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>مكبر صوت لنظام مخاطبة الجمهور في الجولات</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
