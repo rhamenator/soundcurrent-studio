@@ -2491,6 +2491,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>SoundCurrent Audio fournit son propre chemin audio pour microphone lorsqu’il est installé. Avec VB-CABLE, l’égalisation simultanée du microphone et des enceintes nécessite un deuxième câble installé séparément (A ou B). Sélectionnez ce câble dans les applications d’enregistrement. Le mode automatique privilégie le chemin SoundCurrent lorsqu’il est disponible.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio fait passer la lecture par l’application. Choisissez vos enceintes ou votre casque physiques dans l’application. Leurs pilotes matériels sont conservés.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ traite déjà la lecture. Quittez-le avant d’activer SoundCurrent Studio.</translation>
     </message>

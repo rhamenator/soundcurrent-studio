@@ -2491,6 +2491,10 @@ Import into your library?</source>
       <translation>SoundCurrent Audio がインストールされている場合は、専用のマイク経路を提供します。VB-CABLE でマイクとスピーカーの EQ を同時に使用するには、別途インストールした 2 本目のケーブル（A または B）が必要です。録音アプリでそのケーブルを選択してください。自動設定では、利用可能な場合は SoundCurrent の経路を優先します。</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio は再生音声をアプリ経由で送ります。アプリ内で実際のスピーカーまたはヘッドホンを選択してください。それらのハードウェアドライバーは保持されます。</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ がすでに再生音声を処理しています。終了してから SoundCurrent Studio を有効にしてください。</translation>
     </message>

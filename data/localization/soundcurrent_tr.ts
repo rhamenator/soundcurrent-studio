@@ -2491,6 +2491,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>SoundCurrent Audio yüklendiğinde kendi mikrofon ses yolunu sağlar. VB-CABLE ile eşzamanlı mikrofon ve hoparlör EQ'su, ayrıca yüklenmiş ikinci bir kablo (A veya B) gerektirir. Kayıt uygulamalarında bu kabloyu seçin. Otomatik seçim, kullanılabiliyorsa SoundCurrent ses yolunu tercih eder.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio, oynatılan sesi uygulama üzerinden yönlendirir. Uygulama içinde fiziksel hoparlörlerinizi veya kulaklığınızı seçin. Donanım sürücüleri korunur.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ zaten oynatmayı işliyor. SoundCurrent Studio'yu etkinleştirmeden önce ondan çıkın.</translation>
     </message>

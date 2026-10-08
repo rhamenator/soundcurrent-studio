@@ -2491,6 +2491,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>SoundCurrent Audio hutoa njia yake ya maikrofoni inaposakinishwa. Kwa VB-CABLE, EQ ya maikrofoni na spika kwa wakati mmoja inahitaji kebo ya pili (A au B) iliyosakinishwa kando. Chagua kebo hiyo kwenye programu za kurekodi. Hali ya kiotomatiki hupendelea njia ya SoundCurrent inapopatikana.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio huelekeza sauti inayochezwa kupitia programu. Chagua spika au vipokea sauti vyako halisi ndani ya programu. Viendeshi vya vifaa hivyo huhifadhiwa.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ tayari inachakata uchezaji. Toka ndani yake kabla ya kuwasha SoundCurrent Studio.</translation>
     </message>

@@ -2491,6 +2491,10 @@ Importar para a sua biblioteca?</translation>
       <translation>O SoundCurrent Audio fornece a própria rota de microfone quando instalado. Com o VB-CABLE, a equalização simultânea de microfone e alto-falantes requer um segundo cabo instalado separadamente (A ou B). Selecione esse cabo nos aplicativos de gravação. O modo automático prefere a rota SoundCurrent quando disponível.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>O SoundCurrent Audio encaminha a reprodução pelo aplicativo. Escolha suas caixas de som ou fones de ouvido físicos no aplicativo. Os respectivos drivers de hardware são preservados.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>O SoundCurrent EQ já está processando a reprodução. Saia antes de ativar o SoundCurrent Studio.</translation>
     </message>

@@ -2491,6 +2491,10 @@ Import into your library?</source>
       <translation>SoundCurrent Audio پس از نصب مسیر میکروفون خود را فراهم می‌کند. با VB-CABLE، اکولایزر هم‌زمان میکروفون و بلندگو به یک کابل دوم (A یا B) با نصب جداگانه نیاز دارد. آن کابل را در برنامه‌های ضبط انتخاب کنید. حالت خودکار در صورت دسترس بودن مسیر SoundCurrent را ترجیح می‌دهد.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio پخش صدا را از طریق برنامه هدایت می‌کند. بلندگوها یا هدفون فیزیکی خود را در برنامه انتخاب کنید. درایورهای سخت‌افزاری آن‌ها حفظ می‌شوند.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ از قبل در حال پردازش پخش است. پیش از فعال کردن SoundCurrent Studio از آن خارج شوید.</translation>
     </message>

@@ -2491,6 +2491,10 @@ Import into your library?</source>
       <translation>SoundCurrent Audio가 설치되어 있으면 자체 마이크 경로를 제공합니다. VB-CABLE에서 마이크와 스피커 EQ를 동시에 사용하려면 별도로 설치한 두 번째 케이블 (A 또는 B)이 필요합니다. 녹음 앱에서 해당 케이블을 선택하세요. 자동 설정은 사용할 수 있는 경우 SoundCurrent 경로를 우선합니다.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio는 재생 오디오를 앱을 통해 전달합니다. 앱 안에서 실제 스피커나 헤드폰을 선택하세요. 해당 하드웨어 드라이버는 유지됩니다.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ가 이미 재생 오디오를 처리 중입니다. 종료한 후 SoundCurrent Studio를 활성화하세요.</translation>
     </message>

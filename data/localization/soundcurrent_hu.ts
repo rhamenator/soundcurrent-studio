@@ -2491,6 +2491,10 @@ Importálja a könyvtárba?</translation>
       <translation>A SoundCurrent Audio telepítve saját mikrofonútvonalat biztosít. VB-CABLE esetén az egyidejű mikrofon- és hangsugárzó-EQ-hoz külön telepített második kábel (A vagy B) szükséges. Válassza ezt a kábelt a felvevőalkalmazásokban. Az Automatikus mód az elérhető SoundCurrent-útvonalat részesíti előnyben.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>A SoundCurrent Audio az alkalmazáson keresztül irányítja a lejátszást. Válassza ki a fizikai hangszóróit vagy fejhallgatóját az alkalmazásban. A hardveres illesztőprogramjaik megmaradnak.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>A SoundCurrent EQ már feldolgozza a lejátszást. Lépjen ki belőle a SoundCurrent Studio bekapcsolása előtt.</translation>
     </message>

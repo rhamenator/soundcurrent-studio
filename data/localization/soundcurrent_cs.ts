@@ -2491,6 +2491,10 @@ Importovat do vaší knihovny?</translation>
       <translation>SoundCurrent Audio po instalaci poskytuje vlastní mikrofonní signálovou cestu. S VB-CABLE vyžaduje současné mikrofonní a reproduktorové EQ samostatně nainstalovaný druhý kabel (A nebo B). Tento kabel vyberte v aplikacích pro záznam. Automatická volba upřednostňuje signálovou cestu SoundCurrent, pokud je dostupná.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio směruje přehrávání přes aplikaci. V aplikaci vyberte své fyzické reproduktory nebo sluchátka. Jejich hardwarové ovladače zůstanou zachovány.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ již zpracovává přehrávání. Před zapnutím SoundCurrent Studio jej ukončete.</translation>
     </message>

@@ -2491,6 +2491,10 @@ Importera till ditt bibliotek?</translation>
       <translation>SoundCurrent Audio tillhandahåller en egen mikrofonroutning när det är installerat. Med VB-CABLE kräver samtidig mikrofon- och högtalar-EQ en separat installerad andra kabel (A eller B). Välj den kabeln i inspelningsappar. Automatiskt läge föredrar SoundCurrent-routningen när den är tillgänglig.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio leder uppspelningen genom appen. Välj dina fysiska högtalare eller hörlurar i appen. Deras hårdvarudrivrutiner bevaras.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ bearbetar redan uppspelningen. Avsluta det innan du aktiverar SoundCurrent Studio.</translation>
     </message>

@@ -2491,6 +2491,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>SoundCurrent Audio cung cấp tuyến micrô riêng khi được cài đặt. Với VB-CABLE, EQ micrô và loa đồng thời cần một cáp thứ hai (A hoặc B) được cài đặt riêng. Chọn cáp đó trong ứng dụng ghi âm. Chế độ tự động ưu tiên tuyến SoundCurrent khi có sẵn.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio định tuyến âm thanh phát qua ứng dụng. Chọn loa hoặc tai nghe vật lý của bạn trong ứng dụng. Trình điều khiển phần cứng của chúng được giữ nguyên.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ đang xử lý âm thanh phát. Hãy thoát ứng dụng đó trước khi bật SoundCurrent Studio.</translation>
     </message>

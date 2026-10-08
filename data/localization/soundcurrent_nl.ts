@@ -2491,6 +2491,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>SoundCurrent Audio biedt na installatie een eigen microfoonroute. Met VB-CABLE vereist gelijktijdige microfoon- en luidspreker-EQ een afzonderlijk geïnstalleerde tweede kabel (A of B). Selecteer die kabel in opname-apps. Automatisch geeft de voorkeur aan de SoundCurrent-route als deze beschikbaar is.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio leidt de weergave door de app. Kies uw fysieke luidsprekers of hoofdtelefoon in de app. De bijbehorende hardwarestuurprogramma’s blijven behouden.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ verwerkt de weergave al. Sluit die app af voordat u SoundCurrent Studio inschakelt.</translation>
     </message>

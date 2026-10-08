@@ -2491,6 +2491,10 @@ Import into your library?</source>
       <translation>SoundCurrent Audio після встановлення надає власний мікрофонний аудіотракт. Із VB-CABLE одночасний мікрофонний і акустичний EQ потребує окремо встановленого другого кабелю (A або B). Виберіть цей кабель у програмах запису. Автоматичний вибір надає перевагу аудіотракту SoundCurrent, якщо він доступний.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio спрямовує відтворення через програму. Виберіть у програмі свої фізичні динаміки або навушники. Їхні апаратні драйвери зберігаються.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ уже обробляє відтворення. Завершіть його роботу перед увімкненням SoundCurrent Studio.</translation>
     </message>

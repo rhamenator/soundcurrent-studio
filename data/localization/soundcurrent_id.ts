@@ -2491,6 +2491,10 @@ Impor ke pustaka Anda?</translation>
       <translation>SoundCurrent Audio menyediakan jalur mikrofon sendiri saat diinstal. Dengan VB-CABLE, EQ mikrofon dan speaker secara bersamaan memerlukan kabel kedua (A atau B) yang diinstal terpisah. Pilih kabel tersebut di aplikasi perekaman. Opsi Otomatis mengutamakan jalur SoundCurrent jika tersedia.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio mengarahkan pemutaran melalui aplikasi. Pilih speaker atau headphone fisik Anda di dalam aplikasi. Driver perangkat kerasnya dipertahankan.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ sudah memproses pemutaran. Keluar dari aplikasi tersebut sebelum mengaktifkan SoundCurrent Studio.</translation>
     </message>

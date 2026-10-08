@@ -2491,6 +2491,10 @@ Import into your library?</source>
       <translation>SoundCurrent Audio מספק נתיב מיקרופון משלו כשהוא מותקן. עם VB-CABLE, שימוש בו־זמני באקולייזר למיקרופון ולרמקולים דורש כבל שני המותקן בנפרד (A או B). יש לבחור כבל זה באפליקציות הקלטה. מצב אוטומטי מעדיף את נתיב SoundCurrent כשהוא זמין.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio מנתב את ההשמעה דרך היישום. בחרו את הרמקולים או האוזניות הפיזיים בתוך היישום. מנהלי ההתקנים של החומרה נשמרים.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ כבר מעבד את ההשמעה. יש לצאת ממנו לפני הפעלת SoundCurrent Studio.</translation>
     </message>

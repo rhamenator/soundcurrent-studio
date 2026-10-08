@@ -2491,6 +2491,10 @@ Zaimportować do biblioteki?</translation>
       <translation>SoundCurrent Audio po instalacji udostępnia własny tor mikrofonu. Z VB-CABLE jednoczesna korekcja mikrofonu i głośników wymaga osobno zainstalowanego drugiego kabla (A lub B). Wybierz ten kabel w aplikacjach nagrywających. Tryb automatyczny preferuje tor SoundCurrent, gdy jest dostępny.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio kieruje odtwarzany dźwięk przez aplikację. Wybierz fizyczne głośniki lub słuchawki w aplikacji. Ich sterowniki sprzętowe zostają zachowane.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ już przetwarza odtwarzanie. Zakończ jego działanie przed włączeniem SoundCurrent Studio.</translation>
     </message>

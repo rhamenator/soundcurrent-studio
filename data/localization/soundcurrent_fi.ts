@@ -2491,6 +2491,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>SoundCurrent Audio tarjoaa oman mikrofonireitin, kun se on asennettu. VB-CABLE edellyttää erikseen asennettua toista kaapelia (A tai B) mikrofonin ja kaiuttimien samanaikaiseen taajuuskorjaukseen. Valitse tämä kaapeli tallennussovelluksissa. Automaattinen tila suosii SoundCurrent-reittiä, kun se on saatavilla.</translation>
     </message>
     <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio reitittää toiston sovelluksen kautta. Valitse fyysiset kaiuttimet tai kuulokkeet sovelluksessa. Niiden laiteajurit säilytetään.</translation>
+    </message>
+    <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
       <translation>SoundCurrent EQ käsittelee jo toistoa. Lopeta se ennen SoundCurrent Studion käyttöönottoa.</translation>
     </message>
