@@ -282,12 +282,12 @@
   {
     "tag": "hi",
     "name": "हिन्दी",
-    "translated": 466,
+    "translated": 527,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "491cb30097d58705275616f3fedc9afd5a3c9ab065d7b944baee1f004db44611",
-    "qmSha256": "f86a04840ea05cf5e09c866aba5b830458fd557a8e28462b39098b003a90bf67"
+    "tsSha256": "e2009267a7872a5009601888dc10de1087d9e1e6814b14c6238bbcab4211233e",
+    "qmSha256": "06c191a30340e071a9b635ac097ea5d23ddb547be2b9f4a6467035afd9adf8f1"
   },
   {
     "tag": "id",
