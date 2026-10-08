@@ -23,8 +23,14 @@
   ],
   "nativeReviewed": false,
   "pending": [
-    "Windows CI and installer qualification",
-    "actual desktop sign-in test"
+    "Actual desktop sign-in test",
+    "Windows install/update/uninstall qualification",
+    "Studio Linux package lifecycle CI"
   ],
-  "catalogIndexSha256": "cb439bc4c071471a3daeba938797c0e259916fd601b922786d56d813b3d609a2"
+  "catalogIndexSha256": "cb439bc4c071471a3daeba938797c0e259916fd601b922786d56d813b3d609a2",
+  "windowsCI": {
+    "runId": 37719067831,
+    "conclusion": "success",
+    "sourceCommit": "c0cabd5c42b42d39ae978bc7f9df849a13c1f9e6"
+  }
 }

@@ -49,3 +49,5 @@ Startup option: implemented in Settings for both apps. One shared per-user regis
 Czech and Slovak initial batch: cs: 106/527, sk: 106/527. Four focused Linux checks passed in each repository. Includes calibration/profile prompts, gain/headroom and audio setup errors. Both remain incomplete and unverified.
 
 Czech and Slovak second batch: cs: 181/527, sk: 181/527. Four focused Linux checks passed for the compiled catalogs, both main windows and catalog regressions. Error recovery, updates, routing and delay controls are covered; catalogs remain incomplete and unverified.
+
+Czech and Slovak through microphone/measurement batch: cs: 328/527, sk: 328/527. Full Linux CTest passed 58/58. Filters, compressor parameters, equipment editing and calibration limitations were reviewed contextually. Catalogs remain incomplete and unverified. Corrected startup code passed Windows CI; see startup-progress.json for exact tested commits.

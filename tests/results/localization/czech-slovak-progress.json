@@ -1,34 +1,35 @@
 {
-  "stage": "Czech and Slovak second catalog batch",
+  "stage": "Czech and Slovak through microphone and measurement batch",
   "catalogs": [
     {
       "tag": "cs",
       "name": "Čeština",
-      "translated": 181,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "8e9f17357339852f2c3a0e2efbd3ded0a62cb67cc7965f73c4c8109341ff906f",
-      "qmSha256": "b5212d2dd12b1b5f5e2ddfbd144deb3dc592b526851eb951f27a172a179f0edd"
+      "tsSha256": "8a849ed6ab719d42bba4d1d4c9f34b0d2af8b0984d7216801c45db7a6144f77c",
+      "qmSha256": "c4033d109c2d9dce7c25377da639207a8ad0b04b164713baa75edebd9a21dd0b"
     },
     {
       "tag": "sk",
       "name": "Slovenčina",
-      "translated": 181,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "1e2fbe0efa1f327f059eb5138b514190a341fd4f5d703c06d2d424b7af4d0968",
-      "qmSha256": "20cac5a64a23023ce30a3497b632064a6b8e4d66611cb874fb86aa06f4c75402"
+      "tsSha256": "1087f1ea6bf4dd12854a156419d352a523a3ba9a3de0fdae1655e0bb6aa140d3",
+      "qmSha256": "b8872cf774ff45b36c339ec1f38445f6ac2d6b0532f9dc7b57254eab5ff484dc"
     }
   ],
   "linuxTests": {
-    "passed": 4,
-    "total": 4,
-    "scope": "compiled localization, Czech and Slovak main windows, catalog regressions"
+    "passed": 58,
+    "total": 58,
+    "scope": "Full CTest, including compiled localization, all configured main-window locales and catalog regressions",
+    "log": "/tmp/soundcurrent-studio-cs-sk-fourth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Wet mix means effect contribution, sweep means a test signal whose frequency changes continuously. Error prompts retain safe failure and app-open behavior.",
+  "review": "Contextual AI review; unverified. Distinguishes compressor timing and makeup gain, dimensionless filter Q, shelving filters, low-volume loudness compensation and estimated clipping. Published correction does not replace system measurement.",
   "nativeReviewed": false,
-  "windows": "Pending CI",
+  "windows": "Pending CI for these new catalogs",
   "remaining": "Czech and Slovak and 22 other target catalogs remain incomplete."
 }
