@@ -1,20 +1,20 @@
 {
   "date": "2026-10-08",
-  "sourceCommit": "94aad56",
-  "packagePath": "/home/rich/Downloads/SoundCurrent-localization-qa/linux-f425218-94aad56/soundcurrent-studio_1.1.0_amd64.deb",
-  "sha256": "f06ab91c4b898bb6c790b8a4aab88f3c8c8c47e44e838711fc905cb48d63e08c",
+  "sourceCommit": "c0ae560",
+  "packagePath": "/home/rich/Downloads/SoundCurrent-localization-qa/linux-88b4337-c0ae560/soundcurrent-studio_1.1.0_amd64.deb",
+  "sha256": "4d01fb1969c0099345965ce24bbcad7701ab5f20ab0f6486bf7660b2b61768b1",
   "distribution": "Ubuntu 26.04.1 LTS",
   "vm": "soundcurrent-ubuntu-qa; independent QCOW2 without backing image",
-  "previousVersion": "0.8.5",
+  "previousVersion": "1.1.0 earlier localization preview",
   "candidateVersion": "1.1.0 unreleased localization preview",
   "checks": [
-    "In-place DEB upgrade from prior installed version",
-    "33 installed offscreen locale/control fixtures loaded expected catalogs",
-    "Arabic UI/German decimal-format live slider check",
-    "Same-version update, apt removal and reinstallation",
-    "Settings/profile fixture hashes unchanged through lifecycle",
-    "Unknown user file preserved through update and removal",
-    "Reinstalled UI/control fixture passed"
+    "In-place DEB update from earlier 1.1.0 localization candidate",
+    "33 installed offscreen locale/control fixtures",
+    "Arabic UI/German number-format live slider check",
+    "Same-version update, removal and reinstallation",
+    "Owned settings/profile fixture hashes preserved",
+    "Unknown user file preserved",
+    "Reinstalled regional UI fixture passed"
   ],
   "nativeReviewed": false,
   "limitations": [

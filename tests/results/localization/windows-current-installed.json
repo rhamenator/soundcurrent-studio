@@ -1,0 +1,24 @@
+{
+  "scope": "Silent per-user app lifecycle on independent clone; no driver installation/removal or visual qualification",
+  "settingsMarkerPreserved": true,
+  "uninstall": "passed",
+  "unknownFilePreserved": true,
+  "installerSha256": "3062B56DBF6CD9C58E8918801C39A1A7A648302DD96FBB4EDA7C55E4505D89AD",
+  "audioDeviceStateUnchanged": true,
+  "nativeReviewed": false,
+  "product": "Studio",
+  "update": "passed",
+  "date": "2026-10-08",
+  "sourceCommit": "c0ae560",
+  "ciRun": 37744841687,
+  "ciStatus": "passed",
+  "installedLocaleFixturesPassed": 33,
+  "backend": "Native Windows Qt platform; SSH-launched automated fixtures",
+  "reinstall": "passed",
+  "regionalFormatting": "Arabic UI / German decimal format passed after reinstall",
+  "limitations": [
+    "No native-speaker review",
+    "Automated native-backend fixtures do not prove interactive installer or signed-in desktop startup",
+    "Silent app lifecycle does not test driver installation/removal"
+  ]
+}

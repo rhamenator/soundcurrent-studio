@@ -613,3 +613,9 @@ Qt 6.4 input cause/workaround (2026-10-08): CI run 37743704588 identifies ar-EG 
 ### Windows font-backed RTL qualification
 
 The numeric presentation-mark fix passed the EQ Linux CI job on Qt 6.4.2 (run 37744428560). Studio engine CI run 37744429998 passed. Windows run 37744430081 reported an unavailable offscreen font directory before failing glyph-position checks. The Windows localization test now uses the native Windows Qt backend and system fonts; its assertions remain intact. Fresh Windows CI confirmation is pending. Missing interface strings remain deferred to the second pass.
+
+### Current package qualification (c0ae560)
+
+Host Linux CTest passed 86/86. Updated Ubuntu 26.04 independent-VM packages passed all 33 installed language fixtures, mixed Arabic/German formatting, update/remove/reinstall and fixture preservation. Package CI run 37745019865 passed Ubuntu 24.04, Fedora 44 and AlmaLinux 10 container lifecycle checks. This does not establish native-speaker review or an actual RHEL desktop test. Windows CI passed; current installed Windows qualification is tracked separately. No release was published.
+
+Current installed Windows Studio passed 33 native-backend locale fixtures, silent update/uninstall/reinstall, settings/user-file fixture preservation, unchanged audio device identity/status, and Arabic/German formatting after reinstall. Interactive installer and signed-in startup remain unqualified.

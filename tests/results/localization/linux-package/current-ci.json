@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-08",
+  "sourceCommit": "c0ae560",
+  "ciRun": 37745019865,
+  "status": "passed",
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "artifacts": [
+    {
+      "artifactDirectory": "package-validation-0",
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "package": "soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "a96d8147426678141ed8fee5c5a7f2fd0800d818040070cf4646ba05743279cf",
+      "evidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/soundcurrent-studio-linux-ci-c0ae560/package-validation-0"
+    },
+    {
+      "artifactDirectory": "package-validation-1",
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "package": "soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "cb3f8b711186811790b6b1472febfa6f3e528c99ccdd3fd5971b4f2976396864",
+      "evidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/soundcurrent-studio-linux-ci-c0ae560/package-validation-1"
+    },
+    {
+      "artifactDirectory": "package-validation-2",
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "package": "soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "4cf54c8cc36113ce5f567ee9c13bc700a9ed4c49cdb504f36a9bb69c5ae49ad2",
+      "evidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/soundcurrent-studio-linux-ci-c0ae560/package-validation-2"
+    }
+  ],
+  "hostCTest": {
+    "passed": 86,
+    "failed": 0
+  },
+  "nativeReviewed": false,
+  "limitations": [
+    "AlmaLinux is a RHEL-compatible environment, not an actual RHEL installation",
+    "Container checks do not prove interactive desktop installation or live audio",
+    "Catalog coverage differs from whole-interface coverage; missing strings deferred to second pass"
+  ]
+}
