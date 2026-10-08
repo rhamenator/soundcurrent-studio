@@ -1,5 +1,5 @@
 {
-  "bundlePath": "/home/rich/Downloads/SoundCurrent-localization-qa/review-bundle-eca144a-9166cfa",
+  "bundlePath": "/home/rich/Downloads/SoundCurrent-localization-qa/review-bundle-utf8-a191c62-d87b0e8",
   "release": false,
   "date": "2026-10-08",
   "productFiles": [
@@ -33,10 +33,10 @@
     },
     {
       "path": "windows/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
-      "sha256": "a678f1bcc4a126ad67fd639123273a98c74888af9991eb73d22ea882bdf27e78",
-      "kind": "tested Windows installer",
+      "sha256": "327e9132e87d385297ba853a1922f5b91a4780c8045a59575095ae060e9d75fa",
+      "kind": "Windows installer: Unicode text, interactive update and silent lifecycle qualified",
       "product": "soundcurrent-studio",
-      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+      "applicationSourceCommit": "d87b0e8f8ba9fbfdb3e543dc4cf7bf469a051ff5"
     },
     {
       "path": "source/soundcurrent-studio-9166cfa.tar.gz",
@@ -68,14 +68,14 @@
     },
     {
       "path": "reports/soundcurrent-studio/requirement-audit.json",
-      "sha256": "eb6aeb1143581feaab562e815b3f6d67e54b1460659e08a41872f477707aa44d",
+      "sha256": "ca578538538022929160a33879ea786708f6f8650f5c3341b4cdf2571c32d50d",
       "kind": "qualification report",
       "product": "soundcurrent-studio",
       "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
     },
     {
       "path": "reports/soundcurrent-studio/windows-interactive-precondition.json",
-      "sha256": "da605106bebcc37d22378084a52022c5a2061feedb0a61cb64630306072f2ae2",
+      "sha256": "b61f345b08f4fa20614f8da518400a7bb9c0a67f44fd4fe2c87313b2aee33662",
       "kind": "qualification report",
       "product": "soundcurrent-studio",
       "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
@@ -86,9 +86,28 @@
       "kind": "bundled Windows Qt corresponding source",
       "product": "shared",
       "applicationSourceCommit": null
+    },
+    {
+      "path": "source/soundcurrent-studio-d87b0e8.tar.gz",
+      "kind": "Exact Windows build source archive",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "d87b0e8f8ba9fbfdb3e543dc4cf7bf469a051ff5",
+      "sha256": "6629c25643994ac46e3f15e9d5ee597ee8db38a7f59af679f58981e6dd7dd888"
+    },
+    {
+      "path": "reports/soundcurrent-studio/windows-utf8-qualified.json",
+      "kind": "Windows desktop, source/hash, startup and lifecycle qualification",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "d87b0e8f8ba9fbfdb3e543dc4cf7bf469a051ff5",
+      "sha256": "0a7dfd784f0e712616ec31f98310b79dc91e276943b860d501562009f7ce1e58"
     }
   ],
   "nativeReviewed": false,
-  "desktopQualification": "pending user console sign-in",
-  "scope": "Tested preview packages and corresponding sources, not a release or whole-interface qualification"
+  "desktopQualification": "Rebuilt Windows installer text/update and actual sign-in/background/reopen/quit passed; GUI startup-checkbox activation not claimed.",
+  "scope": "Tested preview packages and corresponding sources, not a release or whole-interface qualification",
+  "manifestSha256": "68d02e0313a7a12eef8c5ff2ceecbb373cff0be83417dbc8c5a21c34dfc28363",
+  "checksumsSha256": "69c4462043119ea187f25b2b1ed71fa84e8b340823ba2545666f56d7a421b652",
+  "payloadFileCount": 27,
+  "interactiveQualification": "Rebuilt Windows installer text/update and actual sign-in/background/reopen/quit passed; GUI startup-checkbox activation not claimed.",
+  "releasePublished": false
 }
