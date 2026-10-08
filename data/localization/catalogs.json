@@ -222,12 +222,12 @@
   {
     "tag": "he",
     "name": "עברית",
-    "translated": 401,
+    "translated": 466,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "de20d2639b641e32b2edf91b83388c8ea56d0a2937850511ee01f2204b41a73d",
-    "qmSha256": "5607933ccf83313e0945d7e47abe0d5bdac45edbcf970d866e3bcd934142c187"
+    "tsSha256": "1c7b19921bbe659967e902fbac326426fda6291658d2b4188cc70e4a1e5845c0",
+    "qmSha256": "d3aef4024a16ace02b56ec6a9627d27b77b7a2afcc7a161f2389e339769ff23b"
   },
   {
     "tag": "fa",
