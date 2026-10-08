@@ -89,3 +89,5 @@ Swedish/Danish import and speaker-profile batch: 466/527 messages each. Four foc
 Swedish/Danish complete extracted catalogs: 527 messages each. Full Linux CTest passed 66/66 including equipment workflows. Swedish EQ and Danish Studio effects inspected at 1280×720. Contextual review remains unverified, with no native-speaker claim. Windows qualification pending for these catalogs.
 
 Norwegian Bokmål/Finnish initial batch: 106/527 messages each. Four focused Linux checks passed per app. Gain, headroom, clipping, amplifier measurements and audio-setup recovery reviewed contextually. Catalogs remain incomplete and unverified.
+
+Norwegian Bokmål/Finnish recovery and effects batch: 181/527 messages each. Four focused Linux checks passed per app. Processing refusal, restart recovery, update checks and delay controls reviewed contextually. Catalogs remain incomplete and unverified.
