@@ -1,0 +1,25 @@
+{
+  "stage": "Hindi first existing-catalog batch",
+  "catalogs": [
+    {
+      "tag": "hi",
+      "name": "हिन्दी",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "e6efb767a817acd0c9a30d506bbee986b85801c895cb12f57d153d8f2290b360",
+      "qmSha256": "6e42bf97b07d6d727a5d8f7f6e07f6bba1b3fb2b258309c756865be66a5f8621"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "Embedded localization assertions, Hindi MainWindow offscreen smoke test and structural catalog checks",
+    "log": "/tmp/soundcurrent-studio-hi-first-tests.log"
+  },
+  "review": "Contextual AI review of shared source entries 0–79: routing, electrical measurement requirements, calibration, gain/clipping, enhancement behavior and quit versus close. Linguistic accuracy unverified.",
+  "nativeReviewed": false,
+  "windows": "Pending CI; no Windows runtime qualification for this batch",
+  "remaining": "Hindi incomplete. Five target catalogs still incomplete; omitted source messages reserved for second pass."
+}
