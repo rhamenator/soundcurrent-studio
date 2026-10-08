@@ -1,34 +1,34 @@
 {
-  "stage": "Swedish/Danish recovery and effects batch",
+  "stage": "Swedish/Danish filter and editor batch",
   "catalogs": [
     {
       "tag": "sv",
       "name": "Svenska",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "87e4826ab6e9692350999c15d2d75863ead28e38830a2b62a4524eca4a047064",
-      "qmSha256": "67e8d9db83e408b381256c40ec04531b5e5698f0d373b8e31643d74b7bd1b249"
+      "tsSha256": "c20346874be250ea606164833e44fa7b41950e1c3bef0ac69280f3300c44439b",
+      "qmSha256": "a779664f544a71c16a5280aea4c9fa31599b930df4895215cfb1542475e02f7d"
     },
     {
       "tag": "da",
       "name": "Dansk",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "359ed770c4b9a3b33391a9f43e830aa3b7c264698b6a91f4dbf4df1de9151bf5",
-      "qmSha256": "85d2eb574fdd646ab1bda64dfc6758a51b1eda6f454561a8177108e90313374f"
+      "tsSha256": "d501be1eaa84d7793a2fa24749ffb3fc5d060c6f24f8defb81c3ca99bb0017b6",
+      "qmSha256": "5807db837f9f4d8d200fd543538f65db0187964577a3d4063923abfa72045974"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Swedish/Danish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-sv-da-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-sv-da-third-tests.log"
   },
-  "review": "Contextual AI review; unverified. Error messages retain processing refusal and kept settings; sweep, decay duration and effect contribution preserve audio meaning.",
+  "review": "Contextual AI review; unverified. Filter Q is quality, shelving differs from pass filters, compressor compensation differs from post gain, meter levels remain estimates.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Swedish, Danish and 16 other target catalogs incomplete."

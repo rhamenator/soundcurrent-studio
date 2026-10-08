@@ -77,3 +77,5 @@ Greek/Turkish complete extracted catalogs: 527 messages each. Full Linux CTest p
 Swedish/Danish initial batch: sv: 106/527, da: 106/527. Four focused Linux checks passed per app. Gain/headroom, clipping, amplifier measurement requirements and setup errors reviewed contextually. Catalogs remain incomplete and unverified.
 
 Swedish/Danish recovery and effects batch: sv: 181/527, da: 181/527. Four focused Linux checks passed per app. Error recovery, update checks, delay contribution and frequency-sweep prompts reviewed contextually; catalogs remain incomplete and unverified. Studio completed Greek/Turkish catalog commit passed Windows CI.
+
+Swedish/Danish filter and editor batch: sv: 254/527, da: 254/527. Four focused Linux checks passed per app. Q, shelving/pass filters, compressor controls, equipment editing and estimated meters reviewed contextually; catalogs remain incomplete and unverified. EQ completed Greek/Turkish catalog commit now also passed Windows CI.
