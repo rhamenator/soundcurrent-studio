@@ -1,24 +1,24 @@
 {
-  "stage": "Simplified Chinese microphone and measurement batch",
+  "stage": "Simplified Chinese startup, output and rendering batch",
   "catalogs": [
     {
       "tag": "zh-Hans",
       "name": "简体中文",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "f8e7b6a9fb8bca09968b8e1a819c26f037782ac7458fb1a4b2cb77196d08199b",
-      "qmSha256": "8f07c0c94d0b1ba790b9945584e65179f887f092872afb5fece5ca2eff0efe32"
+      "tsSha256": "e6f67123be2695de28ed6c38943f315064ca5b310d7ef1c228143e45f375fc1e",
+      "qmSha256": "dc2ed12fefe04f71b39259a105552bca55cf525c30ebd6ffd29198970b43c091"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Simplified Chinese main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-zh-Hans-fourth-tests.log"
+    "log": "/tmp/soundcurrent-studio-zh-Hans-fifth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Additive model correction versus whole-system measurement, microphone clipping, balance endpoints, signed routing gain and update instructions reviewed.",
+  "review": "Contextual AI review; unverified. Single-app startup registration, close versus quit, reference-preserving edits, calibration links, post gain and neutral render counts reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Simplified Chinese catalog incomplete. 9 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
