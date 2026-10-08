@@ -30,6 +30,7 @@ public:
     void setLiveLevels(std::span<const float>);
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();
+    void selfTestFormatting();
     std::function<void()> onChanged;
 private:
     void rebuild();

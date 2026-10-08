@@ -86,10 +86,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     fxForm->addRow(reverb_); fxForm->addRow(SC_TR("Decay"), decay_); fxForm->addRow(SC_TR("Damping"), damping_); fxForm->addRow(SC_TR("Reverb wet mix"), wetReverb_);
     auto *delayLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetDelay_));
     auto *reverbLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetReverb_));
-    delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(wetDelay_->value()));
-    reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(wetReverb_->value()));
-    connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(v));});
-    connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(v));});
+    delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(QLocale().toString(wetDelay_->value())));
+    reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(QLocale().toString(wetReverb_->value())));
+    connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(QLocale().toString(v)));});
+    connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(QLocale().toString(v)));});
     enhancements_=new soundcurrent::EnhancementControls(true);
     editRoot->addWidget(enhancements_);
     enhancements_->onEdited=[this]{change([this](Session &s){s.engine.enhancements=enhancements_->settings();});if(!rebuilding_)preset_->setCurrentIndex(7);};
@@ -198,15 +198,15 @@ void StudioPanel::rebuild() {
     reverb_->setChecked(r.enabled);decay_->setValue(r.decaySeconds);damping_->setValue(r.damping);wetReverb_->setValue(int(std::lround(r.mix*100)));
     bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);undo_->setEnabled(!locked_&&!history_.empty());
     preset_->setCurrentIndex(!d.enabled && !r.enabled && !session_.engine.enhancements.active() ? 0 : 7);
-    meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(c+1).arg(session_.names[c]));cell(meters_,c,1,"−∞ dBFS");}
+    meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(QLocale().toString(c+1)).arg(session_.names[c]));cell(meters_,c,1,SC_TR("−∞ dBFS"));}
     rebuilding_=false;loadChannel();
 }
 void StudioPanel::loadChannel() {
     rebuilding_=true;const int c=std::max(0,channel_->currentIndex());const auto &s=session_.engine.channels[std::size_t(c)];
-    name_->setText(session_.names[c]);trim_->setValue(int(std::lround(s.gainDb*2)));trim_->setToolTip(QString::number(s.gainDb)+SC_TR(" dB"));mute_->setChecked(s.muted);solo_->setChecked(session_.solo[std::size_t(c)]);
-    filters_->setRowCount(int(s.bands.size()));for(int r=0;r<int(s.bands.size());++r){const auto &b=s.bands[std::size_t(r)];cell(filters_,r,0,filterType_->itemText(int(b.type)));cell(filters_,r,1,QString::number(b.frequency));cell(filters_,r,2,QString::number(b.gainDb));cell(filters_,r,3,QString::number(b.q));}
+    name_->setText(session_.names[c]);trim_->setValue(int(std::lround(s.gainDb*2)));trim_->setToolTip(QLocale().toString(s.gainDb,'f',1)+SC_TR(" dB"));mute_->setChecked(s.muted);solo_->setChecked(session_.solo[std::size_t(c)]);
+    filters_->setRowCount(int(s.bands.size()));for(int r=0;r<int(s.bands.size());++r){const auto &b=s.bands[std::size_t(r)];cell(filters_,r,0,filterType_->itemText(int(b.type)));cell(filters_,r,1,QLocale().toString(b.frequency,'g',6));cell(filters_,r,2,QLocale().toString(b.gainDb,'g',6));cell(filters_,r,3,QLocale().toString(b.q,'g',6));}
     routes_->setRowCount(0);for(int in=0;in<count_->value();++in){const auto weight=session_.routing[std::size_t(c)*std::size_t(count_->value())+std::size_t(in)];if(weight==0)continue;
-        const int row=routes_->rowCount();routes_->insertRow(row);cell(routes_,row,0,QString("%1 · %2").arg(in+1).arg(session_.names[in]));routes_->item(row,0)->setData(Qt::UserRole,in);cell(routes_,row,1,QString::number(weight,'f',3));}
+        const int row=routes_->rowCount();routes_->insertRow(row);cell(routes_,row,0,QString("%1 · %2").arg(QLocale().toString(in+1)).arg(session_.names[in]));routes_->item(row,0)->setData(Qt::UserRole,in);cell(routes_,row,1,QLocale().toString(weight,'f',3));}
     rebuilding_=false;
 }
 void StudioPanel::effectPreset(int i) {
@@ -236,7 +236,7 @@ void StudioPanel::startPreview() {
 void StudioPanel::setLiveLevels(std::span<const float> levels) {
     if(preview_->isChecked()&& !levels.empty())return;
     for(int c=0;c<meters_->rowCount();++c){const float value=std::size_t(c)<levels.size()?levels[std::size_t(c)]:0;
-        auto *item=meters_->item(c,1);item->setText(value>1e-8?QString::number(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));
+        auto *item=meters_->item(c,1);item->setText(value>1e-8?QLocale().toString(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));
         item->setForeground(value>=1?QColor("#ff6868"):value>=.7?QColor("#ffc66d"):QColor("#55d7c3"));}
 }
 void StudioPanel::liveStatus(const QString &message,bool rejected) {
@@ -283,9 +283,42 @@ void StudioPanel::renderFiles(const QString &input,const QString &output) {
                 position+=frames;jobProgress_=int(position*100/std::max<std::uint64_t>(1,format.frames));
             }
             writer.finish();if(cancelJob_)throw std::runtime_error(SC_TR("Render cancelled; no output file published").toStdString());std::filesystem::create_hard_link(temporary,final);
-            return SC_TR("Rendered %1 channels. Clipped samples: %2. %3").arg(n).arg(clips).arg(output);
+            return SC_TR("Rendered %1 channels. Clipped samples: %2. %3").arg(QLocale().toString(qulonglong(n))).arg(QLocale().toString(qulonglong(clips))).arg(output);
         }catch(const std::exception &e){return SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
     });
+}
+void StudioPanel::selfTestFormatting() {
+    const auto original = session_;
+    const auto history = history_;
+    session_ = Session(2);
+    session_.engine.channels[0].gainDb = -1.5;
+    session_.engine.channels[0].bands = {{1234.5,-2.5,.707}};
+    session_.routing[1] = -.125;
+    const auto fixture = session_.json();
+    rebuild();
+    const QLocale locale;
+    if (trim_->toolTip() != locale.toString(-1.5,'f',1)+SC_TR(" dB") ||
+        filters_->item(0,1)->text() != locale.toString(1234.5,'g',6) ||
+        filters_->item(0,2)->text() != locale.toString(-2.5,'g',6) ||
+        filters_->item(0,3)->text() != locale.toString(.707,'g',6) ||
+        routes_->item(1,1)->text() != locale.toString(-.125,'f',3) ||
+        routes_->item(1,0)->data(Qt::UserRole).toInt() != 1)
+        qFatal("Studio regional filter/route/trim display failed");
+    const std::array<float,2> levels{.5f,0};
+    setLiveLevels(levels);
+    if (meters_->item(0,1)->text() != locale.toString(20*std::log10(.5f),'f',1)+SC_TR(" dBFS") ||
+        meters_->item(1,1)->text() != SC_TR("−∞ dBFS"))
+        qFatal("Studio regional live level display failed");
+    if (session_.json() != fixture) qFatal("Studio formatting changed persisted audio settings");
+    auto *delayLabel = qobject_cast<QLabel *>(qobject_cast<QFormLayout *>(wetDelay_->parentWidget()->layout())->labelForField(wetDelay_));
+    auto *reverbLabel = qobject_cast<QLabel *>(qobject_cast<QFormLayout *>(wetReverb_->parentWidget()->layout())->labelForField(wetReverb_));
+    if (!delayLabel || !reverbLabel) qFatal("Studio wet mix label fixture missing");
+    wetDelay_->setValue(37); wetReverb_->setValue(42);
+    if (delayLabel->text() != SC_TR("Delay wet mix · %1%").arg(locale.toString(37)) ||
+        reverbLabel->text() != SC_TR("Reverb wet mix · %1%").arg(locale.toString(42)) ||
+        session_.engine.delay.mix != .37 || session_.engine.reverb.mix != .42)
+        qFatal("Studio regional wet mix label or processing value failed");
+    session_ = original; history_ = history; rebuild();
 }
 void StudioPanel::selfTest() {
     Session lowGain(2);

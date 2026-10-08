@@ -1,0 +1,32 @@
+{
+  "scope": "Studio filter, route, trim, wet mix and meter display formatting",
+  "platform": "Linux Qt offscreen",
+  "targetedTestsPassed": 42,
+  "failed": 0,
+  "additionalNumberLocales": [
+    "de-DE",
+    "ar-EG",
+    "fr-FR",
+    "hi-IN"
+  ],
+  "interfaceLocales": "33 non-English locales and two pseudo-locales; number format independently selected",
+  "runtimeFixtureCoverage": [
+    "Actual filter frequency/gain/Q cells",
+    "Signed route coefficient and unchanged numeric Qt::UserRole index",
+    "Trim tooltip after rebuild",
+    "Finite and silent live-level text",
+    "Wet mix caption after control movement with exact processing values",
+    "Session JSON unchanged by display rebuild and meters"
+  ],
+  "renderSummaryChange": "Channel and clipping counts now use QLocale; shared UI render workflow passed, but not a per-locale render-summary assertion",
+  "nativeSpeakerVerification": "unverified",
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "percentSymbolScope": "Wet mix digits localized; existing translated percent punctuation retained",
+  "evidence": {
+    "log": "tests/results/localization/studio-regional-runtime.log",
+    "logSha256": "c7b3b09f82e3106236df9316ab356513de5264060a19b5f3beac08a456967cfa",
+    "applicationBinarySha256": "deed36de0516a7227a9fc9a58b513cabc44b3ec69e073df756884aa3804a5176"
+  }
+}
