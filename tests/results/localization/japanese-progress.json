@@ -1,24 +1,24 @@
 {
-  "stage": "Japanese third catalog batch",
+  "stage": "Japanese fourth catalog batch",
   "catalogs": [
     {
       "tag": "ja",
       "name": "日本語",
-      "translated": 254,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "1c02f765d48694827ec8a82a199bbfe7f7346ecc1af815f126146df3808078e6",
-      "qmSha256": "d00158c01398333381c700a73b64efcd5cffc1e2ff0d00dafe0d7bdcf4bd7c82"
+      "tsSha256": "cafb331f549c8a6f117aec5c948ee850cbee97efebfbfc2e45bdd0a7849f1a03",
+      "qmSha256": "100d44cfba5fb6dded9448c5f5ea5402381868efec71b57316b7bbde14947417"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Localization assertions, Japanese actual MainWindow offscreen smoke test, structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-ja-third-tests.log"
+    "log": "/tmp/soundcurrent-studio-ja-fourth-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–239: routing and quit behavior, calibration limitations, equipment editing, estimated metering, dynamics and delay controls. Filter limits, file patterns and physical L/R labels preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–319: equipment imports and electrical measurement requirements, live channel constraints, estimated metering, microphone clipping, balance attenuation and model correction versus room measurement. Numerical limits and physical L/R labels preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Japanese catalog incomplete; seven target languages still incomplete. Omitted source strings reserved for the second pass."
