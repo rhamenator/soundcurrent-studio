@@ -163,3 +163,5 @@ Hebrew saving, speaker profiles and device recovery batch: 466/527 messages popu
 Hebrew current catalogs complete: 527/527 messages populated. Full Linux CTest passed 74/74, including Hebrew equipment workflows and RTL assertions. Calibration limits and operational controls reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
 
 Persian initial audio controls and profile guidance: 106/527 messages populated. Three focused Linux checks passed. Gain/headroom, clipping and measured amplifier correction requirements reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
+
+Persian calibration, recovery and delay batch: 181/527 messages populated. Three focused Linux checks passed. Calibration recovery, file limits, cancel versus close and processed delay mix reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
