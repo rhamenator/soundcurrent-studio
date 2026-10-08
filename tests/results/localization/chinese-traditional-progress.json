@@ -1,24 +1,24 @@
 {
-  "stage": "Traditional Chinese microphone and measurement batch",
+  "stage": "Traditional Chinese startup, output and rendering batch",
   "catalogs": [
     {
       "tag": "zh-Hant",
       "name": "繁體中文",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "7b67db985eab730c2884d018af2449e054ecec38e939000d3308c666161766c3",
-      "qmSha256": "1f7aa794f77e42dc677164173343f980cb18891a062a8bba9fafa7e5fef221c0"
+      "tsSha256": "699c2c430ff01a61d2e96c408b03c5cc437311ee202690d0ff3846242c497cc0",
+      "qmSha256": "ee0de9528483639b419f374d09fccc2c1f2803b976ad33646c19563f3801c69c"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Traditional Chinese main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-zh-Hant-fourth-tests.log"
+    "log": "/tmp/soundcurrent-studio-zh-Hant-fifth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Additive model correction versus whole-system measurement, microphone clipping, balance endpoints, signed routing gain and update instructions reviewed.",
+  "review": "Contextual AI review; unverified. Single-app startup registration, close versus quit, reference-preserving edits, calibration links, post gain and neutral render counts reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Traditional Chinese catalog incomplete. 8 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
