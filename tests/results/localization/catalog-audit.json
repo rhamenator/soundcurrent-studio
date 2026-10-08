@@ -20,7 +20,7 @@
     "data/localization/soundcurrent_ja.ts": "b53592167d81d309fb67bb1431ddcf5fe6beab73bcf9be18c2d216e202bfac90",
     "data/localization/soundcurrent_ko.ts": "65ebd2f227671ad7d12ff4bdd6b2210e1506147d77eec2fdff639c122bcb5dda",
     "data/localization/soundcurrent_nb.ts": "c20cdb7ac8c6e2ff8d2890ffb7d5d9fa0fbe642bbb80b89eeb6eab5d7810074c",
-    "data/localization/soundcurrent_nl.ts": "c3a8f41bdb3469fb79e6294aad13b7590cb94df633d63725e89e441f3df602f2",
+    "data/localization/soundcurrent_nl.ts": "5f0c65d8e4566fc5aae0fee7e0f2538a117c2501e8b05cc67728a8ae8a5fd719",
     "data/localization/soundcurrent_pl.ts": "fffe677c1a4a501970a2f8b127dac57004a053c02142dc2a81833da4224ef080",
     "data/localization/soundcurrent_pt-BR.ts": "9f0d68d6ee66e9eaae95b7e4056a665fe2010b73e30431a05599a07825bea3db",
     "data/localization/soundcurrent_pt-PT.ts": "e74b3cb370ffca3f1cf1a77e550aea7112c2da152c5ecd461f9b32074391ee11",
@@ -225,7 +225,7 @@
       "file": "data/localization/soundcurrent_nl.ts",
       "locale": "nl",
       "total": 523,
-      "translated": 30,
+      "translated": 523,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     },
@@ -343,7 +343,7 @@
     }
   ],
   "findingCounts": {
-    "untranslated": 12818
+    "untranslated": 12325
   },
   "reportNote": "Compact structural report: all metrics/input hashes retained, three sample findings. Linguistic review and runtime qualification remain separate."
 }
