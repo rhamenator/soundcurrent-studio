@@ -97,7 +97,7 @@
   "secondPassProgress": "tests/results/localization/second-pass-speaker-text.json",
   "currentCatalogs": {
     "nonEnglishLocales": 33,
-    "sourceMessagesPerLocale": 689,
+    "sourceMessagesPerLocale": 692,
     "unfinished": 0,
     "nativeReviewed": false
   },
@@ -145,5 +145,9 @@
   "setupErrorProgress": {
     "report": "tests/results/localization/second-pass-setup-errors.json",
     "status": "Three errors translated in 33 non-English locales; declared helper lookups and safe quiet fault path tested on host; remaining bodies/NSIS and Windows qualification pending"
+  },
+  "setupPackageErrorProgress": {
+    "report": "tests/results/localization/second-pass-setup-package-errors.json",
+    "status": "Three integrity captions translated in 33 non-English locales; 238 declared lookup checks passed; production Windows paths and remaining messages pending"
   }
 }
