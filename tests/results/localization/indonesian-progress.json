@@ -1,25 +1,25 @@
 {
-  "stage": "Indonesian sixth existing-catalog batch",
+  "stage": "Indonesian current catalogs populated",
   "catalogs": [
     {
       "tag": "id",
       "name": "Bahasa Indonesia",
-      "translated": 466,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "26ac4a62cf88af9606be0a5fe9e1a70decfbb5f2e1617404deb073729bfd402b",
-      "qmSha256": "b8d8e018b7c0d7373ba0e003b479ac3f138cea1ad18169cdf3b48a04d61d1483"
+      "tsSha256": "e36b1baa937bedadd53d130963598c0aae07a962687faf0bf5a5ebc151fd3b8f",
+      "qmSha256": "bff40a53e67a9f93c891ca25847dc7d07625313a80e7d2b1d5bfeb144b9ca355"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Indonesian MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-id-sixth-tests.log"
+    "log": "/tmp/soundcurrent-studio-id-complete-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–469: save/reset actions, room measurement, microphone virtual routing, peak hold and refresh performance. Literal ampersands, file patterns, placeholders and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review across current Indonesian catalogs: DSP controls, calibration limitations, microphone versus speaker paths, save/quit behavior and neutral rendering counts. Linguistic accuracy unverified; no native review.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
-  "remaining": "Indonesian incomplete. Four target catalogs still incomplete; omitted source messages reserved for second pass."
+  "remaining": "Three target catalogs incomplete. Second-pass omitted source strings, visual and Windows lifecycle qualification remain open."
 }
