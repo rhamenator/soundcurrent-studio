@@ -1,0 +1,25 @@
+{
+  "stage": "Simplified Chinese initial audio controls and profile guidance",
+  "catalogs": [
+    {
+      "tag": "zh-Hans",
+      "name": "简体中文",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "352af7e85334f01df44312f911f4fa7b2c1e81be462edd833c0f4daf64147057",
+      "qmSha256": "ba97e147f01adb343e4632c65f60eb654eeedf98b0eadb7a34c41232d8b7f667"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "compiled localization, Simplified Chinese main window and catalog validation",
+    "log": "/tmp/soundcurrent-studio-zh-Hans-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Gain/headroom, clipping, amplifier measurement requirements, quit versus close and listening effects reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "Simplified Chinese catalog incomplete. 9 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
+}

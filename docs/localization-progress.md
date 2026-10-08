@@ -175,3 +175,5 @@ Persian startup, output and rendering batch: 401/527 messages populated. Three f
 Persian saving, speaker profiles and device recovery batch: 466/527 messages populated. Three focused Linux checks passed. Saving, speaker correction bounds, peak hold, device recovery and reverb versus echo reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
 
 Persian current catalogs complete: 527/527 messages populated. Full Linux CTest passed 75/75, including Persian equipment workflows and RTL assertions. Calibration limits and operational controls reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
+
+Simplified Chinese initial audio controls and profile guidance: 106/527 messages populated. Three focused Linux checks passed. Gain/headroom, clipping and measured amplifier correction requirements reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
