@@ -129,5 +129,9 @@
   "channelNameDisplayProgress": {
     "report": "tests/results/localization/second-pass-channel-name-display.json",
     "status": "Generated role display translated in 33 non-English locales and Linux widgets qualified; legacy/custom text intentionally preserved; Windows/package qualification pending"
+  },
+  "setupCatalogLookupProgress": {
+    "report": "tests/results/localization/second-pass-setup-catalog-lookup.json",
+    "status": "Host PowerShell inert lookup tests passed; helper body/installer translation and Windows qualification pending"
   }
 }
