@@ -69,3 +69,5 @@ Greek/Turkish recovery and effects batch: el: 181/527, tr: 181/527. Four focused
 Greek/Turkish filter and editor batch: el: 254/527, tr: 254/527. Four focused Linux checks passed per app. Q, compressor timings/makeup, shelving/pass filters, meter estimates and equipment editing reviewed contextually. Both catalogs remain incomplete and unverified. EQ completed Ukrainian/Russian catalogs now also passed Windows CI.
 
 Greek/Turkish microphone and measurement batch: el: 328/527, tr: 328/527. Four focused Linux checks passed per app. Microphone clipping, whole-system measurement, additive model correction, polarity and non-real-time rendering reviewed contextually. Catalogs remain incomplete and unverified.
+
+Greek/Turkish startup and rendering batch: el: 401/527, tr: 401/527. Four focused Linux checks passed per app. Includes shared sign-in registration, restart guidance, profile reference copies, post gain and count-neutral render summaries. Both catalogs remain incomplete and unverified.

@@ -1,34 +1,34 @@
 {
-  "stage": "Greek/Turkish microphone and measurement batch",
+  "stage": "Greek/Turkish startup and rendering batch",
   "catalogs": [
     {
       "tag": "el",
       "name": "Ελληνικά",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "248e4483043f640705f8f86f750c6f3783378efed2af5ab091bf7d29b1b4ba27",
-      "qmSha256": "9f52a6cade88d11efb2a4a2ace3b539da61eedd4d3829c3cd46a2246892da3e3"
+      "tsSha256": "b04e7ce7a24b7a7aed8d5e702d31873f131e1c0cb266147c1f00b06e233137e3",
+      "qmSha256": "905bf029e5166f7b6fde1433d7261cb827c0590e469d3b873b0f804e0bde7189"
     },
     {
       "tag": "tr",
       "name": "Türkçe",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "15b76307db40846c6f526050e59697e459cf2493f52e24d8984be5c70089f108",
-      "qmSha256": "ca9d34a1e373cbd13087c170f419d6b3adedb36a2fbf65186d6123be9e59d3fc"
+      "tsSha256": "8b4a7351ea4794d87de31da78df73a4999c5fc7ea90e9945b841b521ab6f267e",
+      "qmSha256": "bf56df897545126ff4aec540d3eae16df38ab4d10b838086e1b65756b14debb6"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Greek/Turkish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-el-tr-fourth-tests.log"
+    "log": "/tmp/soundcurrent-studio-el-tr-fifth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Greek offline rendering describes non-real-time processing. Measurement warnings retain microphone contribution and clipping, model correction is added to listening EQ, negative route gain inverts polarity.",
+  "review": "Contextual AI review; unverified. Render counters use labels for arbitrary counts. Startup refers to desktop sign-in and one shared registration. Profile saves retain measured reference and create a custom copy. Restart and calibration limits unchanged.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Greek, Turkish and 18 other target catalogs incomplete."
