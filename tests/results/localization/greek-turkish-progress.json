@@ -1,35 +1,41 @@
 {
-  "stage": "Greek/Turkish startup and rendering batch",
+  "stage": "Greek and Turkish complete extracted catalogs",
   "catalogs": [
     {
       "tag": "el",
       "name": "Ελληνικά",
-      "translated": 401,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "b04e7ce7a24b7a7aed8d5e702d31873f131e1c0cb266147c1f00b06e233137e3",
-      "qmSha256": "905bf029e5166f7b6fde1433d7261cb827c0590e469d3b873b0f804e0bde7189"
+      "tsSha256": "a592664ded33c9ff9d501a3d2e66a0df66e31e3b7c4670d8d8349291f8a6f975",
+      "qmSha256": "345356e6aeac1453572ff86f35604b0f4695a6c66bc06e42a1848887011d639c"
     },
     {
       "tag": "tr",
       "name": "Türkçe",
-      "translated": 401,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "8b4a7351ea4794d87de31da78df73a4999c5fc7ea90e9945b841b521ab6f267e",
-      "qmSha256": "bf56df897545126ff4aec540d3eae16df38ab4d10b838086e1b65756b14debb6"
+      "tsSha256": "043a0272672b483a73fa7515c60fbeda3e18e3f548a8f1fb710c7b4deb560826",
+      "qmSha256": "21b8f2e74a34b8b3204a0585dd3e0406883a80afd1936ec58922f0a0134a0360"
     }
   ],
   "linuxTests": {
-    "passed": 4,
-    "total": 4,
-    "scope": "compiled localization, Greek/Turkish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-el-tr-fifth-tests.log"
+    "passed": 64,
+    "total": 64,
+    "scope": "Full CTest including Greek/Turkish equipment workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-el-tr-complete-tests.log"
   },
-  "review": "Contextual AI review; unverified. Render counters use labels for arbitrary counts. Startup refers to desktop sign-in and one shared registration. Profile saves retain measured reference and create a custom copy. Restart and calibration limits unchanged.",
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Turkish Studio effects",
+    "screenshots": "/tmp/soundcurrent-studio-tr-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Q, gain/headroom, wet mixes, loudness compensation and measured-response limits reviewed. Render counts use neutral labels.",
   "nativeReviewed": false,
-  "windows": "Pending CI",
-  "remaining": "Greek, Turkish and 18 other target catalogs incomplete."
+  "windows": "Pending CI on completed catalogs",
+  "remaining": "18 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
 }
