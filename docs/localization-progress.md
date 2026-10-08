@@ -363,3 +363,7 @@ All 527/527 current Vietnamese catalog entries are populated. Required-complete 
 ### Thai: first existing-catalog batch
 
 Thai now has 106/527 populated current catalog entries. Added main controls, routing, amplifier-measurement limitations and enhancement guidance. Both apps passed three focused Linux checks. Translations remain unverified; Windows and visual qualification are pending. Omitted source strings remain scheduled for the second pass.
+
+### Thai: second existing-catalog batch
+
+Thai now has 181/527 populated current catalog entries. Added profile errors, calibration messages and delay controls. Both apps passed three focused Linux checks. Translations remain unverified; Windows and visual qualification are pending. Omitted source strings remain scheduled for the second pass.
