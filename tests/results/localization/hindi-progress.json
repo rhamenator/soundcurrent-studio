@@ -1,24 +1,24 @@
 {
-  "stage": "Hindi fifth existing-catalog batch",
+  "stage": "Hindi sixth existing-catalog batch",
   "catalogs": [
     {
       "tag": "hi",
       "name": "हिन्दी",
-      "translated": 401,
+      "translated": 466,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "0dca613bab62dd58e00c56970f78a65d123ec52df759ec195756051971769c22",
-      "qmSha256": "0f574a9cadfa970dfa2b7f7cfde3da0676cc4e8baf97ac96fb2f9e289078d852"
+      "tsSha256": "491cb30097d58705275616f3fedc9afd5a3c9ab065d7b944baee1f004db44611",
+      "qmSha256": "f86a04840ea05cf5e09c866aba5b830458fd557a8e28462b39098b003a90bf67"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Hindi MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-hi-fifth-tests.log"
+    "log": "/tmp/soundcurrent-studio-hi-sixth-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–399: output/post gain, exclusive startup, reference response versus editable correction, update/quit behavior, sweep guidance and neutral render counts. Hyperlink destinations, file patterns, placeholders and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–469: save/reset actions, room measurement, microphone virtual routing, peak hold and refresh performance. Literal ampersands, file patterns, placeholders and numerical limits preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Hindi incomplete. Five target catalogs still incomplete; omitted source messages reserved for second pass."
