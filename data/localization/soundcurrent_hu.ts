@@ -1608,99 +1608,99 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Reset to flat</source>
       <extracomment>Restore zero gain in all EQ bands. Does not mute playback.</extracomment>
-      <translation>Sík válasz visszaállítása</translation>
+      <translation>Visszaállítás sík frekvenciamenetre</translation>
     </message>
     <message>
       <source>Response data (*.txt *.csv *.frd *.cal)</source>
-      <translation type="unfinished" />
+      <translation>Frekvenciamenet-adatok (*.txt *.csv *.frd *.cal)</translation>
     </message>
     <message>
       <source>Response exceeds 4096 points.</source>
-      <translation type="unfinished" />
+      <translation>A frekvenciamenet meghaladja a 4096 pontot.</translation>
     </message>
     <message>
       <source>Response frequencies must increase, with finite bounded values.</source>
-      <translation type="unfinished" />
+      <translation>A frekvenciáknak növekvő sorrendben kell lenniük, véges, határokon belüli értékekkel.</translation>
     </message>
     <message>
       <source>Response has no usable audio range.</source>
-      <translation type="unfinished" />
+      <translation>A frekvenciamenetnek nincs használható hangtartománya.</translation>
     </message>
     <message>
       <source>Response import</source>
-      <translation type="unfinished" />
+      <translation>Frekvenciamenet importálása</translation>
     </message>
     <message>
       <source>Response needs 2–4096 measured points.</source>
-      <translation type="unfinished" />
+      <translation>A frekvenciamenethez 2–4096 mért pont szükséges.</translation>
     </message>
     <message>
       <source>Restart Windows before using the equalizer or VB-CABLE settings. Audio driver changes need a system restart.</source>
-      <translation type="unfinished" />
+      <translation>A hangszínszabályzó vagy a VB-CABLE-beállítások használata előtt indítsa újra a Windowst. A hangillesztőprogram változásai rendszer-újraindítást igényelnek.</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished" />
+      <translation>Alapértékek visszaállítása</translation>
     </message>
     <message>
       <source>Restore the previous EQ setting (Ctrl+Z)</source>
-      <translation type="unfinished" />
+      <translation>Előző EQ-beállítás visszaállítása (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Retry</source>
-      <translation type="unfinished" />
+      <translation>Újra</translation>
     </message>
     <message>
       <source>Reverb</source>
-      <translation type="unfinished" />
+      <translation>Zengetés</translation>
     </message>
     <message>
       <source>Reverb wet mix</source>
-      <translation type="unfinished" />
+      <translation>Zengetett effekt aránya</translation>
     </message>
     <message>
       <source>Reverb wet mix percent</source>
-      <translation type="unfinished" />
+      <translation>Zengetett effekt aránya százalékban</translation>
     </message>
     <message>
       <source>Reverb wet mix · %1%</source>
-      <translation type="unfinished" />
+      <translation>Zengetett effekt aránya · %1%</translation>
     </message>
     <message>
       <source>Rhythmic echo</source>
-      <translation type="unfinished" />
+      <translation>Ritmikus visszhang</translation>
     </message>
     <message>
       <source>Right-to-left test language</source>
-      <translation type="unfinished" />
+      <translation>Jobbról balra írt tesztnyelv</translation>
     </message>
     <message>
       <source>Rock</source>
-      <translation type="unfinished" />
+      <translation>Rock</translation>
     </message>
     <message>
       <source>Routes into selected output channel</source>
-      <translation type="unfinished" />
+      <translation>Útvonalak a kiválasztott kimeneti csatornába</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished" />
+      <translation>Mentés</translation>
     </message>
     <message>
       <source>Save All</source>
-      <translation type="unfinished" />
+      <translation>Összes mentése</translation>
     </message>
     <message>
       <source>Save EQ preset</source>
-      <translation type="unfinished" />
+      <translation>EQ-előbeállítás mentése</translation>
     </message>
     <message>
       <source>Save Studio setup</source>
-      <translation type="unfinished" />
+      <translation>Studio-összeállítás mentése</translation>
     </message>
     <message>
       <source>Save modified profile?</source>
-      <translation type="unfinished" />
+      <translation>Menti a módosított profilt?</translation>
     </message>
     <message>
       <source>Save preset</source>
@@ -1708,124 +1708,124 @@ Importálja a könyvtárba?</translation>
     </message>
     <message>
       <source>Save profile</source>
-      <translation type="unfinished" />
+      <translation>Profil mentése</translation>
     </message>
     <message>
       <source>Save system response profile</source>
-      <translation type="unfinished" />
+      <translation>Rendszer-frekvenciamenetprofil mentése</translation>
     </message>
     <message>
       <source>Saved preset “%1”.</source>
-      <translation type="unfinished" />
+      <translation>A(z) „%1” előbeállítás mentve.</translation>
     </message>
     <message>
       <source>Search brand, family, model or measurement conditions</source>
-      <translation type="unfinished" />
+      <translation>Márka, termékcsalád, modell vagy mérési körülmények keresése</translation>
     </message>
     <message>
       <source>Second virtual cable for microphone EQ</source>
-      <translation type="unfinished" />
+      <translation>Második virtuális kábel a mikrofon-EQ-hoz</translation>
     </message>
     <message>
       <source>Select a filter to update, or remove filters before adding more</source>
-      <translation type="unfinished" />
+      <translation>Válasszon frissítendő szűrőt, vagy távolítson el szűrőket újak hozzáadása előtt</translation>
     </message>
     <message>
       <source>Select band %1</source>
-      <translation type="unfinished" />
+      <translation>%1. sáv kiválasztása</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
-      <translation type="unfinished" />
+      <translation>Válassza ki ezt a sávot a frekvencia, erősítés és Q szerkesztéséhez</translation>
     </message>
     <message>
       <source>Selected audio device is unavailable</source>
-      <translation type="unfinished" />
+      <translation>A kiválasztott hangeszköz nem érhető el</translation>
     </message>
     <message>
       <source>Selected band</source>
       <extracomment>Currently selected frequency band in the equalizer.</extracomment>
-      <translation>Kijelölt frekvenciasáv</translation>
+      <translation>Kiválasztott sáv</translation>
     </message>
     <message>
       <source>Selected band filter Q</source>
-      <translation type="unfinished" />
+      <translation>Kiválasztott sáv szűrő-Q-ja</translation>
     </message>
     <message>
       <source>Selected band frequency</source>
-      <translation type="unfinished" />
+      <translation>Kiválasztott sáv frekvenciája</translation>
     </message>
     <message>
       <source>Selected band gain</source>
-      <translation type="unfinished" />
+      <translation>Kiválasztott sáv erősítése</translation>
     </message>
     <message>
       <source>Selected channel</source>
-      <translation type="unfinished" />
+      <translation>Kiválasztott csatorna</translation>
     </message>
     <message>
       <source>Selected channel EQ filters</source>
-      <translation type="unfinished" />
+      <translation>Kiválasztott csatorna EQ-szűrői</translation>
     </message>
     <message>
       <source>Selected output device is no longer available</source>
-      <translation type="unfinished" />
+      <translation>A kiválasztott kimeneti eszköz már nem érhető el</translation>
     </message>
     <message>
       <source>Selected output was unplugged. Switched to automatic output.</source>
-      <translation type="unfinished" />
+      <translation>A kiválasztott kimenetet leválasztották. Átváltás automatikus kimenetre.</translation>
     </message>
     <message>
       <source>Separate quiet tones</source>
-      <translation type="unfinished" />
+      <translation>Különálló halk hangok</translation>
     </message>
     <message>
       <source>Set route</source>
-      <translation type="unfinished" />
+      <translation>Útvonal beállítása</translation>
     </message>
     <message>
       <source>Settings &amp;&amp; calibration</source>
-      <translation>Beállítások &amp;&amp; kalibrálás</translation>
+      <translation>Beállítások &amp;&amp; kalibráció</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
-      <translation type="unfinished" />
+      <translation>Az összeállítás nem olvasható vagy meghaladja a 8 MiB-ot</translation>
     </message>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
-      <translation type="unfinished" />
+      <translation>Rövidebb időközzel a szintek gyakrabban frissülnek és több CPU-t használnak; a hangellátás korlátozhatja a tényleges ütemet</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
-      <translation type="unfinished" />
+      <translation>Csökkenő csúcstartó vonal megjelenítése minden frekvenciaszinten</translation>
     </message>
     <message>
       <source>Show advanced controls</source>
-      <translation type="unfinished" />
+      <translation>Speciális vezérlők megjelenítése</translation>
     </message>
     <message>
       <source>Show peak markers on frequency levels</source>
-      <translation type="unfinished" />
+      <translation>Csúcsjelölők megjelenítése a frekvenciaszinteken</translation>
     </message>
     <message>
       <source>Slapback echo</source>
-      <translation type="unfinished" />
+      <translation>Slapback-visszhang</translation>
     </message>
     <message>
       <source>Small Speakers</source>
-      <translation type="unfinished" />
+      <translation>Kis hangsugárzók</translation>
     </message>
     <message>
       <source>Small room</source>
-      <translation type="unfinished" />
+      <translation>Kis szoba</translation>
     </message>
     <message>
       <source>Soft Treble</source>
-      <translation type="unfinished" />
+      <translation>Lágy magasak</translation>
     </message>
     <message>
       <source>Solo</source>
-      <translation type="unfinished" />
+      <translation>Szóló</translation>
     </message>
     <message>
       <source>Sound enhancements</source>
@@ -1833,59 +1833,59 @@ Importálja a könyvtárba?</translation>
     </message>
     <message>
       <source>SoundCurrent Audio provides its own microphone route when installed. With VB-CABLE, simultaneous microphone and speaker EQ needs a separately installed second cable (A or B). Select that cable in recording apps. Automatic prefers the SoundCurrent route when available.</source>
-      <translation type="unfinished" />
+      <translation>A SoundCurrent Audio telepítve saját mikrofonútvonalat biztosít. VB-CABLE esetén az egyidejű mikrofon- és hangsugárzó-EQ-hoz külön telepített második kábel (A vagy B) szükséges. Válassza ezt a kábelt a felvevőalkalmazásokban. Az Automatikus mód az elérhető SoundCurrent-útvonalat részesíti előnyben.</translation>
     </message>
     <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
-      <translation type="unfinished" />
+      <translation>A SoundCurrent EQ már feldolgozza a lejátszást. Lépjen ki belőle a SoundCurrent Studio bekapcsolása előtt.</translation>
     </message>
     <message>
       <source>Source</source>
-      <translation type="unfinished" />
+      <translation>Forrás</translation>
     </message>
     <message>
       <source>Speaker</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzó</translation>
     </message>
     <message>
       <source>Speaker &amp;&amp; room calibration</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzó- &amp;&amp; szobakalibráció</translation>
     </message>
     <message>
       <source>Speaker + room check</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzó és szoba ellenőrzése</translation>
     </message>
     <message>
       <source>Speaker and room measurement</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzó és szoba mérése</translation>
     </message>
     <message>
       <source>Speaker filter is outside conservative bounds</source>
-      <translation type="unfinished" />
+      <translation>A hangsugárzószűrő az óvatos határokon kívül van</translation>
     </message>
     <message>
       <source>Speaker manufacturer</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzó gyártója</translation>
     </message>
     <message>
       <source>Speaker model correction</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzómodell korrekciója</translation>
     </message>
     <message>
       <source>Speaker model profile</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzómodell profilja</translation>
     </message>
     <message>
       <source>Speaker profile details</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzóprofil részletei</translation>
     </message>
     <message>
       <source>Speaker profile resource is missing</source>
-      <translation type="unfinished" />
+      <translation>A hangsugárzóprofil erőforrása hiányzik</translation>
     </message>
     <message>
       <source>Speaker type</source>
-      <translation type="unfinished" />
+      <translation>Hangsugárzó típusa</translation>
     </message>
     <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
