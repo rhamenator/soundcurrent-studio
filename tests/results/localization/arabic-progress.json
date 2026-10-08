@@ -1,24 +1,24 @@
 {
-  "stage": "Arabic microphone and measurement batch",
+  "stage": "Arabic startup, output and rendering batch",
   "catalogs": [
     {
       "tag": "ar",
       "name": "العربية",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "f0e49f59e78413a12beab996f70138ffa85328396bc8281d4c997da28db25430",
-      "qmSha256": "c705d76f004b5d30b5faf128eec58a64985c4520c45d18de68596e8ca56cb2e4"
+      "tsSha256": "7b8e6f2c963859be4ea30cbec941cfb31efe893a3b304f9dd20254c647c8f344",
+      "qmSha256": "25535d8b5979d007ff4de988b82e315d3856991a3efb6e827a49befdfbe6d411"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Arabic main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-ar-fourth-tests.log"
+    "log": "/tmp/soundcurrent-studio-ar-fifth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Additive model correction versus whole-system measurement, microphone clipping, balance endpoints, signed routing gain and update instructions reviewed.",
+  "review": "Contextual AI review; unverified. Single-app startup registration, close versus quit, reference-preserving edits, calibration links, post gain and render counts reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "12 original target catalogs incomplete. Full RTL, bidi and platform qualification remain open."
