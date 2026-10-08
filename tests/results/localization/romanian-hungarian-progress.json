@@ -1,0 +1,35 @@
+{
+  "stage": "Romanian/Hungarian initial batch",
+  "catalogs": [
+    {
+      "tag": "ro",
+      "name": "Română",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "b99208b7324d916ca6bfae29ea10e7fba990e408f1b74adad1c64268cd98d40d",
+      "qmSha256": "c1c28fe5cffbbd5df7a6adca74fdffafc3be22a71f41f77a24b6f5d7b78fc49f"
+    },
+    {
+      "tag": "hu",
+      "name": "Magyar",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "272288040047fc5d5eabfcf7750d5d1160c7f3c664e2b5207e1d91eab79ac5f3",
+      "qmSha256": "4049e4e35bd32204c42d36ef9365feb54ecdc53e9a0725a5d2799390c307f178"
+    }
+  ],
+  "linuxTests": {
+    "passed": 4,
+    "total": 4,
+    "scope": "compiled localization, Romanian/Hungarian main windows and catalog regressions",
+    "log": "/tmp/soundcurrent-studio-ro-hu-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Gain, level margin, clipping, amplifier measurement requirements, processed effect contribution and setup recovery reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "Romanian, Hungarian and 12 other target catalogs incomplete."
+}

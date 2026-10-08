@@ -101,3 +101,5 @@ Norwegian Bokmål/Finnish startup and rendering batch: 401/527 messages each. Fo
 Norwegian Bokmål/Finnish import and speaker-profile batch: 466/527 messages each. Four focused Linux checks passed per app. Import constraints, saving, disconnected-device recovery and Windows restart guidance reviewed contextually. Catalogs remain incomplete and unverified.
 
 Norwegian Bokmål/Finnish complete extracted catalogs: 527 messages each. Full Linux CTest passed 68/68 including equipment workflows. Norwegian Bokmål EQ and Finnish Studio effects inspected at 1280×720. Contextual review remains unverified, with no native-speaker claim. Windows qualification pending for these catalogs.
+
+Romanian/Hungarian initial batch: 106/527 messages each. Four focused Linux checks passed per app. Gain, headroom, clipping, amplifier measurements and audio-setup recovery reviewed contextually. Catalogs remain incomplete and unverified.
