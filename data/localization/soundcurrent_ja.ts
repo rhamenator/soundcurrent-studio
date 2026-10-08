@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>SoundCurrent 共通のセッションガードを取得できません。</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>PipeWire ストリームを接続できません</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>PipeWire ループを作成できません</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>PipeWire ストリームを作成できません</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>アンププロファイルのフォルダーを作成できません。</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>表示言語</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Studio のルーティングマトリックスが無効です</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Studio の設定が無効です</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>ピアノ</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire のリアルタイムストリームは最大 64 チャンネルに対応しています。それより大きいチャンネル構成にはオフラインレンダリングを使用してください</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>リアルタイム処理のチャンネル構成を変更する前に、再生をオフにしてください</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>リアルタイム処理に新しいチャンネル構成を適用する前に、再生をオフにしてください</translation>
     </message>
     <message>
       <source>Type</source>

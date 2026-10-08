@@ -393,6 +393,18 @@ Import into your library?</translation>
       <translation>Cannot acquire the shared SoundCurrent session guard.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Cannot connect PipeWire streams</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Cannot create PipeWire loop</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Cannot create PipeWire streams</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Cannot create amplifier profile folder.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</translation>
       <translation>Interface language</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Invalid Studio routing matrix</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Invalid Studio settings</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Turn playback off before applying a different live channel layout</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Turn playback off before applying a new live channel layout</translation>
     </message>
     <message>
       <source>Type</source>

@@ -393,6 +393,18 @@ Importați în bibliotecă?</translation>
       <translation>Nu se poate obține blocarea sesiunii comune SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Nu se pot conecta fluxurile PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Nu se poate crea bucla PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Nu se pot crea fluxurile PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Nu se poate crea dosarul profilurilor de amplificator.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importați în bibliotecă?</translation>
       <translation>Limba interfeței</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Matrice de rutare Studio nevalidă</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Setări Studio nevalide</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Piano</source>
       <translation>Pian</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Fluxurile PipeWire în timp real acceptă cel mult 64 de canale; utilizați randarea offline pentru configurații mai mari</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Oprește redarea înainte de a aplica o altă configurație de canale pentru procesarea în timp real</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Dezactivați redarea înainte de a aplica o nouă configurație de canale pentru procesarea în timp real</translation>
     </message>
     <message>
       <source>Type</source>

@@ -37,6 +37,18 @@ inline QString audioErrorText(const QString &diagnostic) {
         return SC_TR("Cable recording endpoint does not support shared 48 kHz stereo float audio");
     if (diagnostic == QStringLiteral("Audio route recovery helper could not start. Repair or reinstall SoundCurrent."))
         return SC_TR("Audio route recovery helper could not start. Repair or reinstall SoundCurrent.");
+    if (diagnostic == QStringLiteral("PipeWire live streams support at most 64 channels; use offline rendering for larger layouts"))
+        return SC_TR("PipeWire live streams support at most 64 channels; use offline rendering for larger layouts");
+    if (diagnostic == QStringLiteral("Invalid Studio routing matrix"))
+        return SC_TR("Invalid Studio routing matrix");
+    if (diagnostic == QStringLiteral("Cannot create PipeWire loop"))
+        return SC_TR("Cannot create PipeWire loop");
+    if (diagnostic == QStringLiteral("Cannot create PipeWire streams"))
+        return SC_TR("Cannot create PipeWire streams");
+    if (diagnostic == QStringLiteral("Cannot connect PipeWire streams"))
+        return SC_TR("Cannot connect PipeWire streams");
+    if (diagnostic == QStringLiteral("Turn playback off before applying a new live channel layout"))
+        return SC_TR("Turn playback off before applying a new live channel layout");
     // Match only this backend's invariant HRESULT message format. Unknown
     // operations are not guessed, and the hexadecimal error code is preserved.
     static const QRegularExpression failure(QStringLiteral("^(.+) failed \\(0x([0-9A-Fa-f]{1,8})\\)$"));

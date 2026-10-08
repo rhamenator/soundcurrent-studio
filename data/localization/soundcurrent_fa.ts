@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>دریافت قفل محافظ نشست مشترک SoundCurrent ممکن نیست.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>اتصال جریان‌های PipeWire ممکن نیست</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>ایجاد حلقهٔ PipeWire ممکن نیست</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>ایجاد جریان‌های PipeWire ممکن نیست</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>ایجاد پوشه پروفایل تقویت‌کننده ممکن نیست.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>زبان رابط</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>ماتریس مسیریابی Studio نامعتبر است</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>تنظیمات Studio نامعتبر است</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>پیانو</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>جریان‌های بلادرنگ PipeWire حداکثر از 64 کانال پشتیبانی می‌کنند؛ برای چینش‌های بزرگ‌تر از رندر غیربلادرنگ استفاده کنید</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>پیش از اعمال چیدمان کانال متفاوت برای پردازش بلادرنگ، پخش را خاموش کنید</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>پیش از اعمال چینش کانال جدید برای پردازش بلادرنگ، پخش را خاموش کنید</translation>
     </message>
     <message>
       <source>Type</source>

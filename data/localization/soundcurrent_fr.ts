@@ -393,6 +393,18 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Impossible d’obtenir le verrou de session partagé de SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Impossible de connecter les flux PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Impossible de créer la boucle PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Impossible de créer les flux PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Impossible de créer le dossier des profils d’amplificateur.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Langue de l’interface</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Matrice de routage Studio non valide</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Réglages Studio non valides</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Les flux PipeWire en direct prennent en charge au maximum 64 canaux ; utilisez le rendu hors ligne pour des configurations plus grandes</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Désactivez la lecture avant d’appliquer une autre disposition de canaux pour le traitement en direct</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Désactivez la lecture avant d’appliquer une nouvelle configuration de canaux en direct</translation>
     </message>
     <message>
       <source>Type</source>

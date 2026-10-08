@@ -393,6 +393,18 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Ortak SoundCurrent oturum kilidi alınamıyor.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>PipeWire akışları bağlanamıyor</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>PipeWire döngüsü oluşturulamıyor</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>PipeWire akışları oluşturulamıyor</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Amplifikatör profili klasörü oluşturulamıyor.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Arayüz dili</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Geçersiz Studio yönlendirme matrisi</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Geçersiz Studio ayarları</translation>
     </message>
@@ -1562,6 +1578,10 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Piano</source>
       <translation>Piyano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire canlı akışları en fazla 64 kanalı destekler; daha büyük düzenler için çevrimdışı işleme kullanın</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Gerçek zamanlı işleme için farklı bir kanal düzeni uygulamadan önce oynatmayı kapatın</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Yeni bir canlı kanal düzeni uygulamadan önce oynatmayı kapatın</translation>
     </message>
     <message>
       <source>Type</source>

@@ -393,6 +393,18 @@ Importera till ditt bibliotek?</translation>
       <translation>Kan inte låsa den gemensamma SoundCurrent-sessionen.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Kan inte ansluta PipeWire-strömmar</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Kan inte skapa PipeWire-loop</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Kan inte skapa PipeWire-strömmar</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Kan inte skapa mapp för förstärkarprofiler.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importera till ditt bibliotek?</translation>
       <translation>Gränssnittsspråk</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Ogiltig Studio-routningsmatris</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Ogiltiga Studio-inställningar</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire-strömmar i realtid stöder högst 64 kanaler; använd offlinerendering för större kanallayouter</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Stäng av uppspelningen innan du tillämpar en annan kanaluppsättning för bearbetning i realtid</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Stäng av uppspelningen innan du tillämpar en ny kanallayout för realtidsbearbetning</translation>
     </message>
     <message>
       <source>Type</source>

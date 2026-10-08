@@ -393,6 +393,18 @@ Importar para a sua biblioteca?</translation>
       <translation>Não é possível adquirir o bloqueio de sessão compartilhado do SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Não foi possível conectar os fluxos PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Não foi possível criar o loop PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Não foi possível criar os fluxos PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Não é possível criar a pasta de perfis de amplificador.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Idioma da interface</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Matriz de roteamento do Studio inválida</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Configurações do Studio inválidas</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Os fluxos PipeWire em tempo real oferecem suporte a no máximo 64 canais; use a renderização offline para configurações maiores</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Desative a reprodução antes de aplicar uma disposição de canais diferente para o processamento ao vivo</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Desative a reprodução antes de aplicar uma nova configuração de canais em tempo real</translation>
     </message>
     <message>
       <source>Type</source>

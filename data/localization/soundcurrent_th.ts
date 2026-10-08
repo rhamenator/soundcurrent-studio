@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>ไม่สามารถล็อกตัวป้องกันเซสชันร่วมของ SoundCurrent ได้</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>ไม่สามารถเชื่อมต่อสตรีม PipeWire ได้</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>ไม่สามารถสร้างลูป PipeWire ได้</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>ไม่สามารถสร้างสตรีม PipeWire ได้</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>ไม่สามารถสร้างโฟลเดอร์โปรไฟล์เครื่องขยายเสียงได้</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>ภาษาของส่วนติดต่อ</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>เมทริกซ์กำหนดเส้นทางของ Studio ไม่ถูกต้อง</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>การตั้งค่า Studio ไม่ถูกต้อง</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>เปียโน</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>สตรีม PipeWire แบบเรียลไทม์รองรับสูงสุด 64 ช่องเสียง สำหรับรูปแบบการจัดช่องเสียงที่ใหญ่กว่านี้ ให้ใช้การเรนเดอร์แบบออฟไลน์</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>ปิดการเล่นเสียงก่อนใช้โครงร่างแชนเนลอื่นสำหรับการประมวลผลแบบเรียลไทม์</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>ปิดการเล่นเสียงก่อนใช้รูปแบบการจัดช่องเสียงใหม่สำหรับการประมวลผลแบบเรียลไทม์</translation>
     </message>
     <message>
       <source>Type</source>

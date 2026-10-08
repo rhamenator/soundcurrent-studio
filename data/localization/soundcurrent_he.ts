@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>לא ניתן להשיג את הגנת ההפעלה המשותפת של SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>לא ניתן לחבר זרמי PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>לא ניתן ליצור לולאת PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>לא ניתן ליצור זרמי PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>לא ניתן ליצור תיקיית פרופילי מגברים.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>שפת הממשק</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>מטריצת ניתוב Studio אינה תקינה</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>הגדרות Studio אינן תקינות</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>פסנתר</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>זרמי PipeWire בזמן אמת תומכים ב־64 ערוצים לכל היותר; לפריסות גדולות יותר יש להשתמש ברינדור שאינו בזמן אמת</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>יש לכבות את ההשמעה לפני החלת פריסת ערוצים אחרת לעיבוד בזמן אמת</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>יש לכבות את הניגון לפני החלת פריסת ערוצים חדשה לעיבוד בזמן אמת</translation>
     </message>
     <message>
       <source>Type</source>

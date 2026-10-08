@@ -393,6 +393,18 @@ Importere til biblioteket ditt?</translation>
       <translation>Kan ikke få tilgang til den delte SoundCurrent-øktlåsen.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Kan ikke koble til PipeWire-strømmer</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Kan ikke opprette PipeWire-løkke</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Kan ikke opprette PipeWire-strømmer</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Kan ikke opprette mappe for forsterkerprofiler.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Grensesnittspråk</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Ugyldig Studio-rutingsmatrise</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Ugyldige Studio-innstillinger</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire-strømmer i sanntid støtter høyst 64 kanaler; bruk frakoblet rendering for større kanaloppsett</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Slå av avspillingen før du bruker et annet kanaloppsett for behandling i sanntid</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Slå av avspillingen før du bruker et nytt kanaloppsett for sanntidsbehandling</translation>
     </message>
     <message>
       <source>Type</source>

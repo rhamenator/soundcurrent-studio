@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>تعذر الحصول على حارس جلسة SoundCurrent المشترك.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>تعذر توصيل تدفقات PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>تعذر إنشاء حلقة PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>تعذر إنشاء تدفقات PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>تعذر إنشاء مجلد ملفات تعريف مضخم الصوت.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>لغة الواجهة</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>مصفوفة توجيه Studio غير صالحة</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>إعدادات Studio غير صالحة</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>بيانو</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>تدعم تدفقات PipeWire في الوقت الفعلي ما يصل إلى 64 قناة؛ استخدم التصيير غير الفوري للتخطيطات الأكبر</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>أوقف التشغيل قبل تطبيق تخطيط قنوات مختلف للمعالجة في الوقت الحقيقي</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>أوقف التشغيل قبل تطبيق تخطيط قنوات جديد للمعالجة في الوقت الفعلي</translation>
     </message>
     <message>
       <source>Type</source>

@@ -393,6 +393,18 @@ Importovať do vašej knižnice?</translation>
       <translation>Nemožno získať zámok zdieľanej relácie SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Nemožno pripojiť streamy PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Nemožno vytvoriť slučku PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Nemožno vytvoriť streamy PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Nemožno vytvoriť priečinok profilov zosilňovača.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Jazyk rozhrania</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Neplatná smerovacia matica Studio</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Neplatné nastavenia Studia</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Piano</source>
       <translation>Klavír</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Živé streamy PipeWire podporujú najviac 64 kanálov; pre väčšie rozloženia použite offline renderovanie</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Pred použitím iného rozloženia kanálov na spracovanie v reálnom čase vypnite prehrávanie</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Pred použitím nového rozloženia kanálov pre živé spracovanie vypnite prehrávanie</translation>
     </message>
     <message>
       <source>Type</source>

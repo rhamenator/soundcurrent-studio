@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>Не удалось получить блокировку общего сеанса SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Не удалось подключить потоки PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Не удалось создать цикл PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Не удалось создать потоки PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Не удалось создать папку профилей усилителя.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>Язык интерфейса</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Некорректная матрица маршрутизации Studio</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Недопустимые настройки Studio</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>Фортепиано</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Потоки PipeWire в реальном времени поддерживают не более 64 каналов; для больших конфигураций используйте автономный рендеринг</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Выключите воспроизведение перед применением другой конфигурации каналов для обработки в реальном времени</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Выключите воспроизведение перед применением новой конфигурации каналов для обработки в реальном времени</translation>
     </message>
     <message>
       <source>Type</source>

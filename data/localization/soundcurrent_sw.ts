@@ -393,6 +393,18 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Haiwezekani kupata kilinzi cha pamoja cha kipindi cha SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Haiwezekani kuunganisha mitiririko ya PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Haiwezekani kuunda kitanzi cha PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Haiwezekani kuunda mitiririko ya PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Haiwezekani kuunda folda ya wasifu wa amplifaya.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Lugha ya kiolesura</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Matriksi ya uelekezaji ya Studio si halali</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Mipangilio ya Studio si sahihi</translation>
     </message>
@@ -1562,6 +1578,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Mitiririko ya PipeWire ya wakati halisi hutumia hadi chaneli 64; tumia uundaji wa sauti nje ya wakati halisi kwa mipangilio mikubwa zaidi</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Zima uchezaji kabla ya kutumia mpangilio tofauti wa chaneli kwa uchakataji wa wakati halisi</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Zima uchezaji kabla ya kutumia mpangilio mpya wa chaneli kwa uchakataji wa wakati halisi</translation>
     </message>
     <message>
       <source>Type</source>

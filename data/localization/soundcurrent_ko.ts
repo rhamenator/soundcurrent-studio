@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>SoundCurrent 공용 세션 가드를 확보할 수 없습니다.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>PipeWire 스트림을 연결할 수 없습니다</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>PipeWire 루프를 만들 수 없습니다</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>PipeWire 스트림을 만들 수 없습니다</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>앰프 프로파일 폴더를 만들 수 없습니다.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>인터페이스 언어</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>잘못된 Studio 라우팅 행렬</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>잘못된 Studio 설정</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>피아노</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire 실시간 스트림은 최대 64개 채널을 지원합니다. 더 큰 채널 배치에는 오프라인 렌더링을 사용하세요</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>실시간 처리에 다른 채널 구성을 적용하기 전에 재생을 끄세요</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>실시간 처리에 새 채널 배치를 적용하기 전에 재생을 끄세요</translation>
     </message>
     <message>
       <source>Type</source>

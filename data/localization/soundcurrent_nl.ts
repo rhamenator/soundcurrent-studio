@@ -393,6 +393,18 @@ Importeren in uw bibliotheek?</translation>
       <translation>Kan de gedeelde SoundCurrent-sessievergrendeling niet verkrijgen.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Kan PipeWire-streams niet verbinden</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Kan de PipeWire-lus niet maken</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Kan PipeWire-streams niet maken</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Kan de map voor versterkerprofielen niet aanmaken.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Interfacetaal</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Ongeldige Studio-routeringsmatrix</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Ongeldige Studio-instellingen</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Live PipeWire-streams ondersteunen maximaal 64 kanalen; gebruik offline rendering voor grotere kanaalindelingen</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Schakel het afspelen uit voordat u een andere kanaalindeling voor live verwerking toepast</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Schakel afspelen uit voordat u een nieuwe live kanaalindeling toepast</translation>
     </message>
     <message>
       <source>Type</source>

@@ -393,6 +393,18 @@ Tuodaanko kirjastoon?</translation>
       <translation>Jaettua SoundCurrent-istuntolukkoa ei voida saada käyttöön.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>PipeWire-virtoja ei voi yhdistää</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>PipeWire-silmukkaa ei voi luoda</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>PipeWire-virtoja ei voi luoda</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Vahvistinprofiilien kansiota ei voida luoda.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Käyttöliittymän kieli</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Virheellinen Studion reititysmatriisi</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Virheelliset Studio-asetukset</translation>
     </message>
@@ -1562,6 +1578,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Reaaliaikaiset PipeWire-virrat tukevat enintään 64 kanavaa; käytä offline-renderöintiä suuremmille kanava-asetteluille</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Poista toisto käytöstä ennen toisen kanava-asettelun käyttöönottoa reaaliaikaista käsittelyä varten</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Poista toisto käytöstä ennen uuden kanava-asettelun käyttöönottoa reaaliaikaisessa käsittelyssä</translation>
     </message>
     <message>
       <source>Type</source>

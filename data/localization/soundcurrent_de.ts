@@ -393,6 +393,18 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Die gemeinsame SoundCurrent-Sessionsperre kann nicht übernommen werden.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>PipeWire-Streams konnten nicht verbunden werden</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Die PipeWire-Schleife konnte nicht erstellt werden</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>PipeWire-Streams konnten nicht erstellt werden</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Der Ordner für Verstärkerprofile kann nicht erstellt werden.</translation>
     </message>
@@ -1089,6 +1101,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Oberflächensprache</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Ungültige Studio-Routingmatrix</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Ungültige Studio-Einstellungen</translation>
     </message>
@@ -1562,6 +1578,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Piano</source>
       <translation>Klavier</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire-Livestreams unterstützen höchstens 64 Kanäle; verwenden Sie Offline-Rendering für größere Kanalbelegungen</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Schalten Sie die Wiedergabe aus, bevor Sie eine andere Kanalbelegung für die Live-Verarbeitung anwenden</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Schalten Sie die Wiedergabe aus, bevor Sie eine neue Live-Kanalbelegung anwenden</translation>
     </message>
     <message>
       <source>Type</source>

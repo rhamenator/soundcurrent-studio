@@ -393,6 +393,18 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Không thể lấy khóa bảo vệ phiên dùng chung của SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Không thể kết nối luồng PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Không thể tạo vòng lặp PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Không thể tạo luồng PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Không thể tạo thư mục cấu hình ampli.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Ngôn ngữ giao diện</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Ma trận định tuyến Studio không hợp lệ</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Thiết lập Studio không hợp lệ</translation>
     </message>
@@ -1562,6 +1578,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Luồng PipeWire thời gian thực hỗ trợ tối đa 64 kênh; hãy dùng kết xuất ngoại tuyến cho bố trí kênh lớn hơn</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Tắt phát âm thanh trước khi áp dụng bố trí kênh khác để xử lý theo thời gian thực</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Tắt phát âm thanh trước khi áp dụng bố trí kênh mới cho xử lý thời gian thực</translation>
     </message>
     <message>
       <source>Type</source>

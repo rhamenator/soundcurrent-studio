@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>No se puede adquirir el bloqueo de sesión compartido de SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>No se pueden conectar los flujos de PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>No se puede crear el bucle de PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>No se pueden crear los flujos de PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>No se puede crear la carpeta de perfiles de amplificador.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>Idioma de la interfaz</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Matriz de enrutamiento de Studio no válida</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Ajustes de Studio no válidos</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Los flujos en directo de PipeWire admiten como máximo 64 canales; use el renderizado sin conexión para configuraciones mayores</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Desactiva la reproducción antes de aplicar otra distribución de canales para el procesamiento en directo</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Desactive la reproducción antes de aplicar una nueva configuración de canales en directo</translation>
     </message>
     <message>
       <source>Type</source>

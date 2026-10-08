@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>Δεν είναι δυνατή η απόκτηση κλειδώματος της κοινής συνεδρίας SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Δεν είναι δυνατή η σύνδεση ροών PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Δεν είναι δυνατή η δημιουργία βρόχου PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Δεν είναι δυνατή η δημιουργία ροών PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Δεν είναι δυνατή η δημιουργία φακέλου προφίλ ενισχυτή.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>Γλώσσα διεπαφής</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Μη έγκυρος πίνακας δρομολόγησης Studio</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Μη έγκυρες ρυθμίσεις Studio</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>Πιάνο</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Οι ροές PipeWire σε πραγματικό χρόνο υποστηρίζουν έως 64 κανάλια· για μεγαλύτερες διατάξεις χρησιμοποιήστε απόδοση εκτός πραγματικού χρόνου</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Απενεργοποιήστε την αναπαραγωγή πριν εφαρμόσετε διαφορετική διάταξη καναλιών για επεξεργασία σε πραγματικό χρόνο</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Απενεργοποιήστε την αναπαραγωγή πριν εφαρμόσετε νέα διάταξη καναλιών για επεξεργασία σε πραγματικό χρόνο</translation>
     </message>
     <message>
       <source>Type</source>

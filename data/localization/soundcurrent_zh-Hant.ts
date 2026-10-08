@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>無法取得 SoundCurrent 共用工作階段保護鎖。</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>無法連接 PipeWire 串流</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>無法建立 PipeWire 迴圈</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>無法建立 PipeWire 串流</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>無法建立擴大機設定檔資料夾。</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>介面語言</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Studio 路由矩陣無效</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Studio 設定無效</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>鋼琴</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire 即時串流最多支援 64 個聲道；更大的聲道配置請使用離線算繪</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>套用不同的即時處理聲道配置前，請先關閉播放</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>套用新的即時聲道配置前，請關閉播放</translation>
     </message>
     <message>
       <source>Type</source>

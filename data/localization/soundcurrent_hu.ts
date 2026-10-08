@@ -393,6 +393,18 @@ Importálja a könyvtárba?</translation>
       <translation>Nem szerezhető meg a közös SoundCurrent-munkamenetzár.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Nem csatlakoztathatók a PipeWire-adatfolyamok</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Nem hozható létre PipeWire-ciklus</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Nem hozhatók létre PipeWire-adatfolyamok</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Nem hozható létre az erősítőprofilok mappája.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Importálja a könyvtárba?</translation>
       <translation>Felület nyelve</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Érvénytelen Studio útválasztási mátrix</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Érvénytelen Studio-beállítások</translation>
     </message>
@@ -1562,6 +1578,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Piano</source>
       <translation>Zongora</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>A valós idejű PipeWire-adatfolyamok legfeljebb 64 csatornát támogatnak; nagyobb csatornakiosztásokhoz használjon offline renderelést</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Kapcsolja ki a lejátszást, mielőtt másik csatornaelrendezést alkalmaz a valós idejű feldolgozáshoz</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Kapcsolja ki a lejátszást, mielőtt új csatornakiosztást alkalmazna a valós idejű feldolgozáshoz</translation>
     </message>
     <message>
       <source>Type</source>

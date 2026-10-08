@@ -393,6 +393,18 @@ Zaimportować do biblioteki?</translation>
       <translation>Nie można uzyskać współdzielonej blokady sesji SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Nie można połączyć strumieni PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Nie można utworzyć pętli PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Nie można utworzyć strumieni PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Nie można utworzyć folderu profili wzmacniacza.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Język interfejsu</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Nieprawidłowa macierz routingu Studio</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Nieprawidłowe ustawienia Studio</translation>
     </message>
@@ -1562,6 +1578,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Piano</source>
       <translation>Fortepian</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Strumienie PipeWire na żywo obsługują najwyżej 64 kanały; dla większych układów użyj renderowania offline</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Wyłącz odtwarzanie przed zastosowaniem innego układu kanałów do przetwarzania na żywo</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Wyłącz odtwarzanie przed zastosowaniem nowego układu kanałów na żywo</translation>
     </message>
     <message>
       <source>Type</source>

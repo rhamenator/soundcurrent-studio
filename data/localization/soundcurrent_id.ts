@@ -393,6 +393,18 @@ Impor ke pustaka Anda?</translation>
       <translation>Tidak dapat memperoleh pengaman sesi bersama SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>Tidak dapat menghubungkan aliran PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>Tidak dapat membuat loop PipeWire</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>Tidak dapat membuat aliran PipeWire</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>Tidak dapat membuat folder profil amplifier.</translation>
     </message>
@@ -1089,6 +1101,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Bahasa antarmuka</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Matriks perutean Studio tidak valid</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>Pengaturan Studio tidak valid</translation>
     </message>
@@ -1562,6 +1578,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Piano</source>
       <translation>Piano</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>Aliran PipeWire waktu nyata mendukung paling banyak 64 kanal; gunakan rendering offline untuk tata letak kanal yang lebih besar</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>Matikan pemutaran sebelum menerapkan tata letak kanal lain untuk pemrosesan waktu nyata</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>Matikan pemutaran sebelum menerapkan tata letak kanal baru untuk pemrosesan waktu nyata</translation>
     </message>
     <message>
       <source>Type</source>

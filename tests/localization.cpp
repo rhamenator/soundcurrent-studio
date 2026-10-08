@@ -263,6 +263,16 @@ int main(int argc,char **argv){
     require(audioErrorText(raw)==expected,"Compiled catalog operation or HRESULT mapping failed");
     require(expected.contains(QStringLiteral("0xAbCd1234")),"HRESULT changed during translation");
    }
+   for(const char *source:{
+       "PipeWire live streams support at most 64 channels; use offline rendering for larger layouts",
+       "Invalid Studio routing matrix",
+       "Cannot create PipeWire loop",
+       "Cannot create PipeWire streams",
+       "Cannot connect PipeWire streams",
+       "Turn playback off before applying a new live channel layout"}) {
+    const auto mapped=audioErrorText(QString::fromUtf8(source));
+    require(mapped==text(source)&&mapped!=QString::fromUtf8(source),"Studio live diagnostic was not localized");
+   }
    require(audioErrorText(QString::fromUtf8("Driver diagnostic 0x80070005 / Ω"))==QString::fromUtf8("Driver diagnostic 0x80070005 / Ω"),"Unknown backend detail changed");
    for(const char *source:{"Selected speakers are disconnected","Audio bridge did not start","Install the Windows audio route using Audio driver setup, then reopen the app."}) {
     const auto translated=text(source);

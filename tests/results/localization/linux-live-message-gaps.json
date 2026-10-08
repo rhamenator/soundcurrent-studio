@@ -1,0 +1,82 @@
+{
+  "scope": "Studio Linux live-audio literal exceptions; engine rejection strings and external PipeWire diagnostics require separate inspection",
+  "nativeReviewed": false,
+  "sourceHash": "428ef69af5f3a829c1234dfd0bdc3f672636e1e24d35fc4a90f9d4294ee056af",
+  "findings": [
+    {
+      "source": "PipeWire live streams support at most 64 channels; use offline rendering for larger layouts",
+      "producer": "src/linux_audio.cpp",
+      "status": "Mapped and translated across all 33 non-English locales; actual embedded-catalog tests passed on Linux",
+      "reachability": "Live bridge start/update propagates exceptions to MainWindow audio handlers; showError uses audioErrorText"
+    },
+    {
+      "source": "Invalid Studio routing matrix",
+      "producer": "src/linux_audio.cpp",
+      "status": "Mapped and translated across all 33 non-English locales; actual embedded-catalog tests passed on Linux",
+      "reachability": "Live bridge start/update propagates exceptions to MainWindow audio handlers; showError uses audioErrorText"
+    },
+    {
+      "source": "Cannot create PipeWire loop",
+      "producer": "src/linux_audio.cpp",
+      "status": "Mapped and translated across all 33 non-English locales; actual embedded-catalog tests passed on Linux",
+      "reachability": "Live bridge start/update propagates exceptions to MainWindow audio handlers; showError uses audioErrorText"
+    },
+    {
+      "source": "Cannot create PipeWire streams",
+      "producer": "src/linux_audio.cpp",
+      "status": "Mapped and translated across all 33 non-English locales; actual embedded-catalog tests passed on Linux",
+      "reachability": "Live bridge start/update propagates exceptions to MainWindow audio handlers; showError uses audioErrorText"
+    },
+    {
+      "source": "Cannot connect PipeWire streams",
+      "producer": "src/linux_audio.cpp",
+      "status": "Mapped and translated across all 33 non-English locales; actual embedded-catalog tests passed on Linux",
+      "reachability": "Live bridge start/update propagates exceptions to MainWindow audio handlers; showError uses audioErrorText"
+    },
+    {
+      "source": "Turn playback off before applying a new live channel layout",
+      "producer": "src/linux_audio.cpp",
+      "status": "Mapped and translated across all 33 non-English locales; actual embedded-catalog tests passed on Linux",
+      "reachability": "Live bridge start/update propagates exceptions to MainWindow audio handlers; showError uses audioErrorText"
+    }
+  ],
+  "nextAction": "Commit/sync batch; continue engine diagnostics and panel status audit, visual and Windows/package qualification",
+  "translatedLocales": [
+    "de",
+    "fr",
+    "es",
+    "it",
+    "pt-PT",
+    "pt-BR",
+    "nl",
+    "pl",
+    "cs",
+    "sk",
+    "uk",
+    "ru",
+    "el",
+    "tr",
+    "sv",
+    "da",
+    "nb",
+    "fi",
+    "ro",
+    "hu",
+    "nn",
+    "ar",
+    "he",
+    "fa",
+    "zh-Hans",
+    "zh-Hant",
+    "ja",
+    "ko",
+    "hi",
+    "id",
+    "vi",
+    "th",
+    "sw"
+  ],
+  "additionalFix": "Two direct StudioPanel error-status paths now pass UTF-8 diagnostics through audioErrorText",
+  "linuxBuild": "Application and tests rebuilt successfully",
+  "linuxCtest": "4/4 focused tests passed, including actual compiled-catalog mapping for all six diagnostics in every non-English locale"
+}

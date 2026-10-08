@@ -525,3 +525,31 @@ Second-pass composed diagnostic qualification: rebuilt localization-test and pas
 Second-pass inventory refresh: current source counts reflected; test-fixture errors and invariant branding distinguished from production text. A production recovery-helper startup failure in windows_managed_route.h is not yet translated. Studio additionally has PipeWire live-engine errors requiring reachability review. Inventory remains partial and is not proof of whole-interface coverage.
 
 Recovery-helper diagnostic fix: desktop mapping added, translated in all 33 non-English locales and tested using actual compiled catalogs. Three focused Linux CTests passed in each app, including catalog completeness and maintenance regressions. Recovery-helper control flow/backend sources unchanged. Translations remain unverified; visual and Windows/package qualification pending.
+
+Second-pass Studio Linux live-audio audit: six fixed diagnostics from linux_audio.cpp propagate through desktop start/update and are outside current catalogs. Channel-limit advice, routing validation, PipeWire loop/stream creation and connection failures, and live-layout advice need desktop mappings/translations. Backend remains Qt-independent; engine.configure rejection messages still require a separate audit.
+
+Studio live diagnostic batch started: six desktop mappings added; German current catalog structurally complete. Two direct StudioPanel error-status paths bypassed the desktop mapper and now use audioErrorText with explicit UTF-8 conversion. Other 32 non-English locales need the new entries; global completeness is temporarily failing. Runtime/UI tests pending; backend processing unchanged.
+
+Studio live diagnostic checkpoint: French and Spanish added for all six known errors. Three current locale catalogs are structurally complete; thirty locales remain. Placeholder/numeric checks passed; global completeness is still failing. Translations unverified; compiled runtime and UI qualification pending.
+
+Studio live diagnostic checkpoint: Italian and European/Brazilian Portuguese added. Six current locale catalogs are structurally complete; twenty-seven remain. Portuguese distinguishes encaminhamento/roteamento, ligar/conectar and ciclo/loop. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Dutch, Polish and Czech added. Nine current locale catalogs are structurally complete; twenty-four remain. Channel limits and advice to stop playback before live layout changes retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Slovak, Ukrainian and Russian added. Twelve current locale catalogs are structurally complete; twenty-one remain. Ukrainian/Russian describe real-time processing explicitly; channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Greek, Turkish and Swedish added. Fifteen current locale catalogs are structurally complete; eighteen remain. Real-time processing versus offline rendering, channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Danish, Norwegian Bokmål and Finnish added. Eighteen current locale catalogs are structurally complete; fifteen remain. Real-time processing versus offline rendering, channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Romanian, Hungarian and Nynorsk added in the requested order. Twenty-one current locale catalogs are structurally complete; twelve remain. Real-time processing versus offline rendering, channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Arabic, Hebrew and Persian added. Twenty-four current locale catalogs are structurally complete; nine remain. Offline rendering is described as non-real-time rendering; channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified. Mixed-direction rendering and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Simplified/Traditional Chinese and Japanese added. Twenty-seven current locale catalogs are structurally complete; six remain. Chinese regional terms distinguish 实时流/即時串流 and 声道布局/聲道配置. Channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic checkpoint: Korean, Hindi and Indonesian added. Thirty current locale catalogs are structurally complete; three remain. Real-time processing versus offline rendering, channel limits and stop-playback advice retained. Global completeness is still failing; translations unverified and compiled runtime/UI qualification pending.
+
+Studio live diagnostic catalog batch complete: Vietnamese, Thai and Swahili added. All 33 current non-English catalogs are structurally complete. Channel limits and stop-playback advice retained. Translations unverified; compiled runtime/UI qualification pending. Engine rejection strings, helper/installer gaps and visual/Windows qualification remain outside this batch.
+
+Studio live diagnostic qualification: app and tests rebuilt; four focused Linux tests passed. Actual embedded catalogs mapped all six live errors in every non-English locale without English fallback. Panel exception paths compiled with the desktop mapper. Visual panel error display, Windows/package and other engine/helper/installer gaps remain pending. Translations remain unverified.

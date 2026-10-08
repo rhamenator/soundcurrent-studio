@@ -393,6 +393,18 @@ Import into your library?</source>
       <translation>साझा SoundCurrent सेशन गार्ड प्राप्त नहीं किया जा सकता।</translation>
     </message>
     <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>PipeWire स्ट्रीम कनेक्ट नहीं की जा सकतीं</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>PipeWire लूप नहीं बनाया जा सकता</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>PipeWire स्ट्रीम नहीं बनाई जा सकतीं</translation>
+    </message>
+    <message>
       <source>Cannot create amplifier profile folder.</source>
       <translation>ऐम्प्लिफ़ायर प्रोफ़ाइल फ़ोल्डर नहीं बनाया जा सकता।</translation>
     </message>
@@ -1089,6 +1101,10 @@ Import into your library?</source>
       <translation>इंटरफ़ेस की भाषा</translation>
     </message>
     <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>अमान्य Studio रूटिंग मैट्रिक्स</translation>
+    </message>
+    <message>
       <source>Invalid Studio settings</source>
       <translation>अमान्य Studio सेटिंग्स</translation>
     </message>
@@ -1562,6 +1578,10 @@ Import into your library?</source>
     <message>
       <source>Piano</source>
       <translation>पियानो</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire की रीयल-टाइम स्ट्रीम अधिकतम 64 चैनल का समर्थन करती हैं; बड़े चैनल विन्यास के लिए ऑफ़लाइन रेंडरिंग का उपयोग करें</translation>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
@@ -2346,6 +2366,10 @@ Import into your library?</source>
     <message>
       <source>Turn playback off before applying a different live channel layout</source>
       <translation>रियल-टाइम प्रोसेसिंग के लिए अलग चैनल लेआउट लागू करने से पहले प्लेबैक बंद करें</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>रीयल-टाइम प्रोसेसिंग के लिए नया चैनल विन्यास लागू करने से पहले प्लेबैक बंद करें</translation>
     </message>
     <message>
       <source>Type</source>
