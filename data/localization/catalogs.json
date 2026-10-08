@@ -192,22 +192,22 @@
   {
     "tag": "ro",
     "name": "Română",
-    "translated": 106,
+    "translated": 181,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "b99208b7324d916ca6bfae29ea10e7fba990e408f1b74adad1c64268cd98d40d",
-    "qmSha256": "c1c28fe5cffbbd5df7a6adca74fdffafc3be22a71f41f77a24b6f5d7b78fc49f"
+    "tsSha256": "2a160d1add38bf8246a249b29d307f2156dafd30f4f9088ac338d168539a7c0d",
+    "qmSha256": "d15d2debc22ea2583752b6cbd73583b5687d7be757c2c8cd1a404a9c14e86966"
   },
   {
     "tag": "hu",
     "name": "Magyar",
-    "translated": 106,
+    "translated": 181,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "272288040047fc5d5eabfcf7750d5d1160c7f3c664e2b5207e1d91eab79ac5f3",
-    "qmSha256": "4049e4e35bd32204c42d36ef9365feb54ecdc53e9a0725a5d2799390c307f178"
+    "tsSha256": "b730a982f7db0a1c20e7296f10a8cb351486d9fcc240fc565c915f177a0f04bd",
+    "qmSha256": "c7d32f10bc9a643b141472e214c12f8322a5a7101cf7466a6389dac8b137bbaa"
   },
   {
     "tag": "ar",
