@@ -20,6 +20,10 @@
       <translation> [personalizado]</translation>
     </message>
     <message>
+      <source> and </source>
+      <translation> e </translation>
+    </message>
+    <message>
       <source> dB</source>
       <translation> dB</translation>
     </message>
@@ -268,6 +272,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Audio error: %1</source>
       <translation>Erro de áudio: %1</translation>
+    </message>
+    <message>
+      <source>Audio recovery helper</source>
+      <translation>Assistente de recuperação do áudio</translation>
     </message>
     <message>
       <source>Audio route recovery helper could not start. Repair or reinstall SoundCurrent.</source>
@@ -1943,6 +1951,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Feche os aplicativos SoundCurrent em execução e aguarde a conclusão da recuperação do áudio antes de alterar o driver de áudio compartilhado.</translation>
     </message>
     <message>
+      <source>Quit the following before changing VB-CABLE: %1.</source>
+      <translation>Antes de alterar o VB-CABLE, feche o seguinte: %1.</translation>
+    </message>
+    <message>
       <source>R</source>
       <translation>D</translation>
     </message>
@@ -2640,6 +2652,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>The audio processor stopped unexpectedly.</source>
       <translation>O processador de áudio parou inesperadamente.</translation>
+    </message>
+    <message>
+      <source>The audio readiness helper is missing. Repair the SoundCurrent installation.</source>
+      <translation>O assistente de verificação de disponibilidade do áudio está ausente. Repare a instalação do SoundCurrent.</translation>
     </message>
     <message>
       <source>The custom library holds up to 256 profiles.</source>

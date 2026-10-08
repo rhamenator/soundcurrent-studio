@@ -20,6 +20,10 @@
       <translation> [कस्टम]</translation>
     </message>
     <message>
+      <source> and </source>
+      <translation> और </translation>
+    </message>
+    <message>
       <source> dB</source>
       <translation> dB</translation>
     </message>
@@ -268,6 +272,10 @@ Import into your library?</source>
     <message>
       <source>Audio error: %1</source>
       <translation>ऑडियो त्रुटि: %1</translation>
+    </message>
+    <message>
+      <source>Audio recovery helper</source>
+      <translation>ऑडियो बहाली सहायक</translation>
     </message>
     <message>
       <source>Audio route recovery helper could not start. Repair or reinstall SoundCurrent.</source>
@@ -1943,6 +1951,10 @@ Import into your library?</source>
       <translation>साझा ऑडियो ड्राइवर बदलने से पहले चल रहे SoundCurrent ऐप बंद करें और ऑडियो बहाली पूरी होने की प्रतीक्षा करें।</translation>
     </message>
     <message>
+      <source>Quit the following before changing VB-CABLE: %1.</source>
+      <translation>VB-CABLE बदलने से पहले इन्हें बंद करें: %1।</translation>
+    </message>
+    <message>
       <source>R</source>
       <translation>R</translation>
     </message>
@@ -2640,6 +2652,10 @@ Import into your library?</source>
     <message>
       <source>The audio processor stopped unexpectedly.</source>
       <translation>ऑडियो प्रोसेसर अप्रत्याशित रूप से रुक गया।</translation>
+    </message>
+    <message>
+      <source>The audio readiness helper is missing. Repair the SoundCurrent installation.</source>
+      <translation>ऑडियो तत्परता जाँच सहायक मौजूद नहीं है। SoundCurrent की स्थापना की मरम्मत करें।</translation>
     </message>
     <message>
       <source>The custom library holds up to 256 profiles.</source>

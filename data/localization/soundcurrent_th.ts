@@ -20,6 +20,10 @@
       <translation> [กำหนดเอง]</translation>
     </message>
     <message>
+      <source> and </source>
+      <translation> และ </translation>
+    </message>
+    <message>
       <source> dB</source>
       <translation> dB</translation>
     </message>
@@ -268,6 +272,10 @@ Import into your library?</source>
     <message>
       <source>Audio error: %1</source>
       <translation>ข้อผิดพลาดเกี่ยวกับเสียง: %1</translation>
+    </message>
+    <message>
+      <source>Audio recovery helper</source>
+      <translation>ตัวช่วยกู้คืนเสียง</translation>
     </message>
     <message>
       <source>Audio route recovery helper could not start. Repair or reinstall SoundCurrent.</source>
@@ -1943,6 +1951,10 @@ Import into your library?</source>
       <translation>ปิดแอป SoundCurrent ที่กำลังทำงาน และรอให้การกู้คืนเสียงเสร็จสิ้นก่อนเปลี่ยนไดรเวอร์เสียงที่ใช้ร่วมกัน</translation>
     </message>
     <message>
+      <source>Quit the following before changing VB-CABLE: %1.</source>
+      <translation>ก่อนเปลี่ยน VB-CABLE ให้ปิดรายการต่อไปนี้: %1</translation>
+    </message>
+    <message>
       <source>R</source>
       <translation>R</translation>
     </message>
@@ -2640,6 +2652,10 @@ Import into your library?</source>
     <message>
       <source>The audio processor stopped unexpectedly.</source>
       <translation>ตัวประมวลผลเสียงหยุดโดยไม่คาดคิด</translation>
+    </message>
+    <message>
+      <source>The audio readiness helper is missing. Repair the SoundCurrent installation.</source>
+      <translation>ไม่พบตัวช่วยตรวจสอบความพร้อมของเสียง โปรดซ่อมแซมการติดตั้ง SoundCurrent</translation>
     </message>
     <message>
       <source>The custom library holds up to 256 profiles.</source>

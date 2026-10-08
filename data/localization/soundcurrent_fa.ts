@@ -20,6 +20,10 @@
       <translation> [سفارشی]</translation>
     </message>
     <message>
+      <source> and </source>
+      <translation> و </translation>
+    </message>
+    <message>
       <source> dB</source>
       <translation> dB</translation>
     </message>
@@ -268,6 +272,10 @@ Import into your library?</source>
     <message>
       <source>Audio error: %1</source>
       <translation>خطای صدا: %1</translation>
+    </message>
+    <message>
+      <source>Audio recovery helper</source>
+      <translation>ابزار کمکی بازیابی صدا</translation>
     </message>
     <message>
       <source>Audio route recovery helper could not start. Repair or reinstall SoundCurrent.</source>
@@ -1943,6 +1951,10 @@ Import into your library?</source>
       <translation>پیش از تغییر درایور مشترک صدا، از برنامه‌های در حال اجرای SoundCurrent خارج شوید و منتظر پایان بازیابی صدا بمانید.</translation>
     </message>
     <message>
+      <source>Quit the following before changing VB-CABLE: %1.</source>
+      <translation>پیش از تغییر VB-CABLE، موارد زیر را ببندید: %1.</translation>
+    </message>
+    <message>
       <source>R</source>
       <translation>R</translation>
     </message>
@@ -2640,6 +2652,10 @@ Import into your library?</source>
     <message>
       <source>The audio processor stopped unexpectedly.</source>
       <translation>پردازشگر صدا به‌طور غیرمنتظره متوقف شد.</translation>
+    </message>
+    <message>
+      <source>The audio readiness helper is missing. Repair the SoundCurrent installation.</source>
+      <translation>ابزار کمکی بررسی آمادگی صدا موجود نیست. نصب SoundCurrent را تعمیر کنید.</translation>
     </message>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
