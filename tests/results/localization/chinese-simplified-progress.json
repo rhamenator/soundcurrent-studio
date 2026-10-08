@@ -1,24 +1,24 @@
 {
-  "stage": "Simplified Chinese calibration, recovery and delay batch",
+  "stage": "Simplified Chinese equipment, filters and metering batch",
   "catalogs": [
     {
       "tag": "zh-Hans",
       "name": "简体中文",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "8adfff6de9133900424d92d32cdd72d59ce80db91c42679b863056c3434e9ef3",
-      "qmSha256": "9ad5deff237fe217119a22575630eb9ad9cdd9b6058dd6707d1425eaba2c507a"
+      "tsSha256": "2ddb82410700203639c0717ad8597a152a94dc01a01e9debaa2fcacc7850c4f8",
+      "qmSha256": "00a80c9aef886fa07bebfbf782146ed13d6e5d1d39086b924243ec9fd1695cb6"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Simplified Chinese main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-zh-Hans-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-zh-Hans-third-tests.log"
   },
-  "review": "Contextual AI review; unverified. Calibration recovery, unchanged 1 MiB limits, app-remains-open messages, cancel versus close, updates and delay wet mix reviewed.",
+  "review": "Contextual AI review; unverified. Estimated versus measured levels, filter Q/high-pass/high-shelf, dynamics makeup gain, equipment kinds and quit behavior reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Simplified Chinese catalog incomplete. 9 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
