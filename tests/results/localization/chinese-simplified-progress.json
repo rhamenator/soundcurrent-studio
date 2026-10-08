@@ -1,24 +1,24 @@
 {
-  "stage": "Simplified Chinese equipment, filters and metering batch",
+  "stage": "Simplified Chinese microphone and measurement batch",
   "catalogs": [
     {
       "tag": "zh-Hans",
       "name": "简体中文",
-      "translated": 254,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "2ddb82410700203639c0717ad8597a152a94dc01a01e9debaa2fcacc7850c4f8",
-      "qmSha256": "00a80c9aef886fa07bebfbf782146ed13d6e5d1d39086b924243ec9fd1695cb6"
+      "tsSha256": "f8e7b6a9fb8bca09968b8e1a819c26f037782ac7458fb1a4b2cb77196d08199b",
+      "qmSha256": "8f07c0c94d0b1ba790b9945584e65179f887f092872afb5fece5ca2eff0efe32"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Simplified Chinese main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-zh-Hans-third-tests.log"
+    "log": "/tmp/soundcurrent-studio-zh-Hans-fourth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Estimated versus measured levels, filter Q/high-pass/high-shelf, dynamics makeup gain, equipment kinds and quit behavior reviewed.",
+  "review": "Contextual AI review; unverified. Additive model correction versus whole-system measurement, microphone clipping, balance endpoints, signed routing gain and update instructions reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Simplified Chinese catalog incomplete. 9 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."

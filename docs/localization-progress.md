@@ -181,3 +181,5 @@ Simplified Chinese initial audio controls and profile guidance: 106/527 messages
 Simplified Chinese calibration, recovery and delay batch: 181/527 messages populated. Three focused Linux checks passed. Calibration recovery, file limits, cancel versus close and delay wet mix reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
 
 Simplified Chinese equipment, filters and metering batch: 254/527 messages populated. Three focused Linux checks passed. Estimated levels, filter Q/high-pass/high-shelf and equipment kinds reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
+
+Simplified Chinese microphone and measurement batch: 328/527 messages populated. Three focused Linux checks passed. Additive correction, microphone clipping, balance endpoints and signed routing gain reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
