@@ -1,24 +1,24 @@
 {
-  "stage": "Nynorsk startup and rendering batch",
+  "stage": "Nynorsk import, saving and speaker-profile batch",
   "catalogs": [
     {
       "tag": "nn",
       "name": "Norsk nynorsk",
-      "translated": 401,
+      "translated": 466,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "748a2fd882af6d07296cee97acd26dc7e6716cf83e46a4da9c0d62257091a2e3",
-      "qmSha256": "62c16044d412d109bb518937304e88161c9caaf434edc3387f3717aeb538cbf4"
+      "tsSha256": "3976a8b903372acced300734ecc84cb651a4da21e6c3d04de8c13a87ea1cf01e",
+      "qmSha256": "43970a86666192cab361540fbbd8edbae14bd78276f654fea7e5bda67d3579c3"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization with distinct nn-NO/nb-NO resolution, Nynorsk main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-nn-fifth-tests.log"
+    "log": "/tmp/soundcurrent-studio-nn-sixth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Shared sign-in registration, reference preservation, bounded measurement suggestions and neutral rendering counts reviewed. Link captions retain original destinations.",
+  "review": "Contextual AI review; unverified. Measured response, increasing frequency constraints, restart guidance, device-disconnection recovery and processed effect contribution reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Nynorsk and 12 original target catalogs incomplete."
