@@ -34,7 +34,7 @@
     "data/localization/soundcurrent_tr.ts": "043a0272672b483a73fa7515c60fbeda3e18e3f548a8f1fb710c7b4deb560826",
     "data/localization/soundcurrent_uk.ts": "e366c916a146cf0877716eeff31fb63ab22da7be28efbd4c902ae67fec3e6754",
     "data/localization/soundcurrent_vi.ts": "c52c33e7d27203a9b512029b81f8f5a6739b49fd7deb998175c67044b54566ea",
-    "data/localization/soundcurrent_zh-Hans.ts": "e6f67123be2695de28ed6c38943f315064ca5b310d7ef1c228143e45f375fc1e",
+    "data/localization/soundcurrent_zh-Hans.ts": "cfbd62feed2b97818258e39ee0fd83fe27d3dacfe4a94d25262c48b97f3d8b4d",
     "data/localization/soundcurrent_zh-Hant.ts": "bf52e0e2cc498f2cd0bc230d17e79ac902054323b6123f0ce261e6227b22496b"
   },
   "config_sha256": "49b8dd3ceb616260cccf7c44579f066105c3b16e82b639624b3d69840dd1331c",
@@ -338,7 +338,7 @@
       "file": "data/localization/soundcurrent_zh-Hans.ts",
       "locale": "zh-Hans",
       "total": 527,
-      "translated": 401,
+      "translated": 466,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     },
@@ -352,7 +352,7 @@
     }
   ],
   "findingCounts": {
-    "untranslated": 4102
+    "untranslated": 4037
   },
   "reportNote": "Compact structural report: input hashes and metrics retained, three sample findings. Linguistic review and runtime qualification remain separate."
 }

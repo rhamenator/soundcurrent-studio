@@ -1,24 +1,24 @@
 {
-  "stage": "Simplified Chinese startup, output and rendering batch",
+  "stage": "Simplified Chinese saving, speaker profiles and device recovery batch",
   "catalogs": [
     {
       "tag": "zh-Hans",
       "name": "简体中文",
-      "translated": 401,
+      "translated": 466,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "e6f67123be2695de28ed6c38943f315064ca5b310d7ef1c228143e45f375fc1e",
-      "qmSha256": "dc2ed12fefe04f71b39259a105552bca55cf525c30ebd6ffd29198970b43c091"
+      "tsSha256": "cfbd62feed2b97818258e39ee0fd83fe27d3dacfe4a94d25262c48b97f3d8b4d",
+      "qmSha256": "9bfc45643c697d9bd3fa66eb2dc67b1bcb0ca64232c1b9c1996ddb6ea8c0faf8"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Simplified Chinese main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-zh-Hans-fifth-tests.log"
+    "log": "/tmp/soundcurrent-studio-zh-Hans-sixth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Single-app startup registration, close versus quit, reference-preserving edits, calibration links, post gain and neutral render counts reviewed.",
+  "review": "Contextual AI review; unverified. Save versus discard, speaker correction bounds, peak hold, device recovery, separate cable routing and reverb versus echo reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Simplified Chinese catalog incomplete. 9 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
