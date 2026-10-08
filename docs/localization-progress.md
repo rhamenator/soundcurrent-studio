@@ -371,3 +371,7 @@ Thai now has 181/527 populated current catalog entries. Added profile errors, ca
 ### Thai: third existing-catalog batch
 
 Thai now has 254/527 populated current catalog entries. Added effects, level indicators and equipment-profile controls. Both apps passed three focused Linux checks. Translations remain unverified; Windows and visual qualification are pending. Omitted source strings remain scheduled for the second pass.
+
+### Thai: fourth existing-catalog batch
+
+Thai now has 328/527 populated current catalog entries. Added import validation, microphone calibration, channel limits and balance guidance. Both apps passed three focused Linux checks. Translations remain unverified; Windows and visual qualification are pending. Omitted source strings remain scheduled for the second pass.
