@@ -1,24 +1,24 @@
 {
-  "stage": "Swahili first existing-catalog batch",
+  "stage": "Swahili second existing-catalog batch",
   "catalogs": [
     {
       "tag": "sw",
       "name": "Kiswahili",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "78e9eccb858f85de28d84ca8b8d28a629b935d2a11106d0d6aec7aa0c156ff9b",
-      "qmSha256": "0e8b24f3105391652dae1bcb71e7cc29a82b493eb3beec9bb3816e3b22f98029"
+      "tsSha256": "cb9d1b162a7abaebb9934aefa54d7c3b9c26e187c3597cc673ac2ec86408974f",
+      "qmSha256": "61f45ea7d31dbd9ff43431a3a587bb9b6b9d7f273f07a9bb024e90fbb5011cbe"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Swahili MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-sw-first-tests.log"
+    "log": "/tmp/soundcurrent-studio-sw-second-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–79: routing, post-EQ gain, calibration limitations, exclusive processing, headroom and effect behavior. Placeholders and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–159: profile read/save errors, calibration failures, half-dB channel gain, update behavior and delay wet mix versus decay/damping. Placeholders, file patterns and numerical limits preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Swahili incomplete. Omitted source messages reserved for second pass."
