@@ -24,13 +24,22 @@
   "nativeReviewed": false,
   "pending": [
     "Actual desktop sign-in test",
-    "Windows install/update/uninstall qualification",
-    "Studio Linux package lifecycle CI"
+    "Windows install/update/uninstall qualification"
   ],
   "catalogIndexSha256": "cb439bc4c071471a3daeba938797c0e259916fd601b922786d56d813b3d609a2",
   "windowsCI": {
     "runId": 37719067831,
     "conclusion": "success",
+    "sourceCommit": "c0cabd5c42b42d39ae978bc7f9df849a13c1f9e6"
+  },
+  "linuxPackageCI": {
+    "runId": 37719186585,
+    "conclusion": "success",
+    "platforms": [
+      "Ubuntu 24.04",
+      "Fedora 44",
+      "AlmaLinux 10"
+    ],
     "sourceCommit": "c0cabd5c42b42d39ae978bc7f9df849a13c1f9e6"
   }
 }

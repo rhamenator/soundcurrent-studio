@@ -1,35 +1,41 @@
 {
-  "stage": "Czech and Slovak through microphone and measurement batch",
+  "stage": "Czech and Slovak complete extracted catalog checkpoint",
   "catalogs": [
     {
       "tag": "cs",
       "name": "Čeština",
-      "translated": 328,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "8a849ed6ab719d42bba4d1d4c9f34b0d2af8b0984d7216801c45db7a6144f77c",
-      "qmSha256": "c4033d109c2d9dce7c25377da639207a8ad0b04b164713baa75edebd9a21dd0b"
+      "tsSha256": "0fa1121c6387f8fd20bb2a197eb696207ab6f25562edfeb4994f9eb320e37915",
+      "qmSha256": "aad7d514da59929a8936bdfcbc3f4dcdb71ad1c7086c8969ca0b0f24d9b8dfb3"
     },
     {
       "tag": "sk",
       "name": "Slovenčina",
-      "translated": 328,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "1087f1ea6bf4dd12854a156419d352a523a3ba9a3de0fdae1655e0bb6aa140d3",
-      "qmSha256": "b8872cf774ff45b36c339ec1f38445f6ac2d6b0532f9dc7b57254eab5ff484dc"
+      "tsSha256": "cdf54bde2b56d42388072cef488794ec60ce0b7efe649821bae8098929caf84d",
+      "qmSha256": "29c8090ee4ac8450b9692313ee2ad3ef59c17d0705fc85382eb21ca8f4afd79f"
     }
   ],
   "linuxTests": {
-    "passed": 58,
-    "total": 58,
-    "scope": "Full CTest, including compiled localization, all configured main-window locales and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-cs-sk-fourth-tests.log"
+    "passed": 60,
+    "total": 60,
+    "scope": "Full CTest including Czech/Slovak equipment import/edit/save workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-cs-sk-complete-tests.log"
   },
-  "review": "Contextual AI review; unverified. Distinguishes compressor timing and makeup gain, dimensionless filter Q, shelving filters, low-volume loudness compensation and estimated clipping. Published correction does not replace system measurement.",
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Slovak Studio channels/effects",
+    "screenshots": "/tmp/sc-studio-sk-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Render counts use label form to avoid fixed plural endings. HTML links unchanged, measured response differs from inverted correction, wet contribution differs from post gain.",
   "nativeReviewed": false,
-  "windows": "Pending CI for these new catalogs",
-  "remaining": "Czech and Slovak and 22 other target catalogs remain incomplete."
+  "windows": "Pending CI on new catalogs",
+  "remaining": "22 target locales incomplete; small-screen Polish layout, own backend/installer text and actual Windows lifecycle/sign-in qualification remain open."
 }
