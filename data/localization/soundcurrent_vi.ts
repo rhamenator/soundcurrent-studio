@@ -962,55 +962,55 @@ Nhập vào thư viện của bạn?</translation>
     </message>
     <message>
       <source>Import create and edit equipment profiles</source>
-      <translation type="unfinished" />
+      <translation>Nhập, tạo và chỉnh sửa cấu hình thiết bị</translation>
     </message>
     <message>
       <source>Import equipment profile</source>
-      <translation type="unfinished" />
+      <translation>Nhập cấu hình thiết bị</translation>
     </message>
     <message>
       <source>Import measured amplifier correction</source>
-      <translation type="unfinished" />
+      <translation>Nhập hiệu chỉnh ampli từ phép đo</translation>
     </message>
     <message>
       <source>Import measured profile</source>
-      <translation type="unfinished" />
+      <translation>Nhập cấu hình từ phép đo</translation>
     </message>
     <message>
       <source>Import profile?</source>
-      <translation type="unfinished" />
+      <translation>Nhập cấu hình?</translation>
     </message>
     <message>
       <source>Import relative measured response</source>
-      <translation type="unfinished" />
+      <translation>Nhập đáp tuyến đo tương đối</translation>
     </message>
     <message>
       <source>Import response text</source>
-      <translation type="unfinished" />
+      <translation>Nhập văn bản đáp tuyến</translation>
     </message>
     <message>
       <source>Include preview releases</source>
-      <translation type="unfinished" />
+      <translation>Bao gồm bản phát hành xem trước</translation>
     </message>
     <message>
       <source>Input WAVE file</source>
-      <translation type="unfinished" />
+      <translation>Tệp WAVE đầu vào</translation>
     </message>
     <message>
       <source>Input channel</source>
-      <translation type="unfinished" />
+      <translation>Kênh đầu vào</translation>
     </message>
     <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
-      <translation type="unfinished" />
+      <translation>Đầu vào có nhiều kênh hơn bố cục Studio; chọn bố cục có số kênh bằng hoặc lớn hơn</translation>
     </message>
     <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
-      <translation type="unfinished" />
+      <translation>Cài gói mới đè lên phiên bản này — không cần gỡ cài đặt. Các thiết lập sẵn và cấu hình được giữ nguyên. Lưu công việc, chọn Thoát (chỉ đóng cửa sổ thì ứng dụng vẫn chạy), cài bản cập nhật rồi mở lại.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
-      <translation type="unfinished" />
+      <translation>Phiên bản đã cài: %1</translation>
     </message>
     <message>
       <source>Interface language</source>
@@ -1018,91 +1018,91 @@ Nhập vào thư viện của bạn?</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
-      <translation type="unfinished" />
+      <translation>Loại phụ hoặc kiểu cấp nguồn của thiết bị không hợp lệ</translation>
     </message>
     <message>
       <source>Invalid filter.</source>
-      <translation type="unfinished" />
+      <translation>Bộ lọc không hợp lệ.</translation>
     </message>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
-      <translation type="unfinished" />
+      <translation>Cấu hình ampli từ phép đo không hợp lệ. Cần có mẫu, nguồn đo HTTPS, điều kiện đo và 1–16 bộ lọc PK/LS/HS trong giới hạn. Xem định dạng cấu hình trong README.</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
-      <translation type="unfinished" />
+      <translation>Đáp tuyến đo không hợp lệ hoặc không theo thứ tự.</translation>
     </message>
     <message>
       <source>Invalid or unordered response data.</source>
-      <translation type="unfinished" />
+      <translation>Dữ liệu đáp tuyến không hợp lệ hoặc không theo thứ tự.</translation>
     </message>
     <message>
       <source>Invalid profile library.</source>
-      <translation type="unfinished" />
+      <translation>Thư viện cấu hình không hợp lệ.</translation>
     </message>
     <message>
       <source>Invalid response from pactl</source>
-      <translation type="unfinished" />
+      <translation>Phản hồi từ pactl không hợp lệ</translation>
     </message>
     <message>
       <source>Invalid response point.</source>
-      <translation type="unfinished" />
+      <translation>Điểm đáp tuyến không hợp lệ.</translation>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
-      <translation type="unfinished" />
+      <translation>Số bộ lọc hiệu chỉnh loa không hợp lệ</translation>
     </message>
     <message>
       <source>Invalid speaker filter type</source>
-      <translation type="unfinished" />
+      <translation>Loại bộ lọc loa không hợp lệ</translation>
     </message>
     <message>
       <source>Invalid speaker identity</source>
-      <translation type="unfinished" />
+      <translation>Thông tin nhận dạng loa không hợp lệ</translation>
     </message>
     <message>
       <source>Jazz</source>
-      <translation type="unfinished" />
+      <translation>Jazz</translation>
     </message>
     <message>
       <source>Keep current EQ</source>
-      <translation type="unfinished" />
+      <translation>Giữ EQ hiện tại</translation>
     </message>
     <message>
       <source>L</source>
-      <translation type="unfinished" />
+      <translation>L</translation>
     </message>
     <message>
       <source>Language and regional settings</source>
-      <translation>Ngôn ngữ và vùng</translation>
+      <translation>Thiết lập ngôn ngữ và vùng</translation>
     </message>
     <message>
       <source>Large hall</source>
-      <translation type="unfinished" />
+      <translation>Sảnh lớn</translation>
     </message>
     <message>
       <source>Layout</source>
-      <translation type="unfinished" />
+      <translation>Bố cục</translation>
     </message>
     <message>
       <source>Left right balance</source>
-      <translation type="unfinished" />
+      <translation>Cân bằng trái phải</translation>
     </message>
     <message>
       <source>Level indicator refresh interval</source>
-      <translation type="unfinished" />
+      <translation>Khoảng thời gian cập nhật chỉ báo mức</translation>
     </message>
     <message>
       <source>Level refresh</source>
-      <translation type="unfinished" />
+      <translation>Cập nhật mức</translation>
     </message>
     <message>
       <source>Library exceeds 16 MiB.</source>
-      <translation type="unfinished" />
+      <translation>Thư viện vượt quá 16 MiB.</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
-      <translation type="unfinished" />
+      <translation>Gain tuyến tính của tuyến (âm = đảo cực tính)</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1111,15 +1111,15 @@ Nhập vào thư viện của bạn?</translation>
     </message>
     <message>
       <source>Live</source>
-      <translation type="unfinished" />
+      <translation>Trực tiếp</translation>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation type="unfinished" />
+      <translation>Bố cục xử lý trực tiếp phải phù hợp với số kênh của thiết bị âm thanh đã chọn. Kết xuất ngoại tuyến và thử đồng hồ bằng tín hiệu không tiếng hỗ trợ đủ 256 kênh.</translation>
     </message>
     <message>
       <source>Lo-Fi</source>
-      <translation type="unfinished" />
+      <translation>Lo-Fi</translation>
     </message>
     <message>
       <source>Lock EQ</source>
@@ -1128,67 +1128,67 @@ Nhập vào thư viện của bạn?</translation>
     </message>
     <message>
       <source>Lock equalizer settings</source>
-      <translation type="unfinished" />
+      <translation>Khóa thiết lập cân bằng âm</translation>
     </message>
     <message>
       <source>Loudness</source>
-      <translation type="unfinished" />
+      <translation>Bù loudness</translation>
     </message>
     <message>
       <source>Low pass</source>
-      <translation type="unfinished" />
+      <translation>Thông thấp</translation>
     </message>
     <message>
       <source>Low shelf</source>
-      <translation type="unfinished" />
+      <translation>Low shelf</translation>
     </message>
     <message>
       <source>Manufacturer</source>
-      <translation type="unfinished" />
+      <translation>Nhà sản xuất</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
-      <translation type="unfinished" />
+      <translation>Đã đạt tối đa 32 cấu hình ampli.</translation>
     </message>
     <message>
       <source>Maximum stereo width</source>
-      <translation type="unfinished" />
+      <translation>Độ rộng stereo tối đa</translation>
     </message>
     <message>
       <source>Measure</source>
-      <translation type="unfinished" />
+      <translation>Đo</translation>
     </message>
     <message>
       <source>Measure speaker room and microphone response</source>
-      <translation type="unfinished" />
+      <translation>Đo đáp tuyến loa, phòng và micrô</translation>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
-      <translation type="unfinished" />
+      <translation>Hiệu chỉnh mẫu từ phép đo được thêm vào EQ nghe của bạn. Bạn vẫn có thể tăng âm trầm hoặc điều chỉnh bất kỳ dải nào. Áp dụng giới hạn gain thận trọng; ảnh hưởng của phòng và ampli cần phép đo toàn hệ thống.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
-      <translation type="unfinished" />
+      <translation>Cần có điều kiện đo.</translation>
     </message>
     <message>
       <source>Measurement data was incomplete.</source>
-      <translation type="unfinished" />
+      <translation>Dữ liệu đo không đầy đủ.</translation>
     </message>
     <message>
       <source>Measurement failed. Try a higher test level or move the mic closer.</source>
-      <translation type="unfinished" />
+      <translation>Đo thất bại. Thử tăng mức âm thử hoặc đưa micrô lại gần.</translation>
     </message>
     <message>
       <source>Measurement stopped.</source>
-      <translation type="unfinished" />
+      <translation>Đã dừng đo.</translation>
     </message>
     <message>
       <source>Metal</source>
-      <translation type="unfinished" />
+      <translation>Metal</translation>
     </message>
     <message>
       <source>Mic gain</source>
-      <translation type="unfinished" />
+      <translation>Gain micrô</translation>
     </message>
     <message>
       <source>Microphone</source>
@@ -1196,71 +1196,71 @@ Nhập vào thư viện của bạn?</translation>
     </message>
     <message>
       <source>Microphone %1 adjustment</source>
-      <translation type="unfinished" />
+      <translation>Điều chỉnh %1 của micrô</translation>
     </message>
     <message>
       <source>Microphone EQ is off.</source>
-      <translation type="unfinished" />
+      <translation>EQ micrô đã tắt.</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
-      <translation type="unfinished" />
+      <translation>Thu micrô đã dừng trong khi phát</translation>
     </message>
     <message>
       <source>Microphone capture stopped during the test</source>
-      <translation type="unfinished" />
+      <translation>Thu micrô đã dừng trong khi thử</translation>
     </message>
     <message>
       <source>Microphone error: %1</source>
-      <translation type="unfinished" />
+      <translation>Lỗi micrô: %1</translation>
     </message>
     <message>
       <source>Microphone filter did not appear</source>
-      <translation type="unfinished" />
+      <translation>Bộ lọc micrô không xuất hiện</translation>
     </message>
     <message>
       <source>Microphone filter disappeared</source>
-      <translation type="unfinished" />
+      <translation>Bộ lọc micrô đã biến mất</translation>
     </message>
     <message>
       <source>Microphone gain adjustment</source>
-      <translation type="unfinished" />
+      <translation>Điều chỉnh gain micrô</translation>
     </message>
     <message>
       <source>Microphone input device</source>
-      <translation type="unfinished" />
+      <translation>Thiết bị đầu vào micrô</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
-      <translation type="unfinished" />
+      <translation>Bản thu micrô bị xén đỉnh. Giảm gain hoặc mức tăng cường micrô rồi đo lại.</translation>
     </message>
     <message>
       <source>Microphone route</source>
-      <translation type="unfinished" />
+      <translation>Tuyến micrô</translation>
     </message>
     <message>
       <source>Model</source>
-      <translation type="unfinished" />
+      <translation>Mẫu</translation>
     </message>
     <message>
       <source>Mono</source>
-      <translation type="unfinished" />
+      <translation>Mono</translation>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
-      <translation type="unfinished" />
+      <translation>Di chuyển về L hoặc R để giảm mức kênh đối diện; ở giữa giữ cả hai kênh ở mức đầy đủ</translation>
     </message>
     <message>
       <source>Movies</source>
-      <translation type="unfinished" />
+      <translation>Phim</translation>
     </message>
     <message>
       <source>Mute</source>
-      <translation type="unfinished" />
+      <translation>Tắt tiếng</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished" />
+      <translation>Tên</translation>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1269,19 +1269,19 @@ Nhập vào thư viện của bạn?</translation>
     </message>
     <message>
       <source>Natural mic EQ on · %1</source>
-      <translation type="unfinished" />
+      <translation>EQ micrô tự nhiên bật · %1</translation>
     </message>
     <message>
       <source>Natural microphone equalizer on or off</source>
-      <translation type="unfinished" />
+      <translation>Bật hoặc tắt cân bằng âm micrô tự nhiên</translation>
     </message>
     <message>
       <source>New rendered WAVE file</source>
-      <translation type="unfinished" />
+      <translation>Tệp WAVE mới đã kết xuất</translation>
     </message>
     <message>
       <source>Night Listening</source>
-      <translation type="unfinished" />
+      <translation>Nghe ban đêm</translation>
     </message>
     <message>
       <source>No</source>

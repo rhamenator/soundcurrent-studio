@@ -302,12 +302,12 @@
   {
     "tag": "vi",
     "name": "Tiếng Việt",
-    "translated": 254,
+    "translated": 328,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "048120f9ad2b51771456e8cf46e6b46b3b9bba9bed6474650279369f8ac87ea9",
-    "qmSha256": "b8e22b38b204ef9dd6e2e11706d04f02d5ec70a4474bc76dc1c65a78bd876ee7"
+    "tsSha256": "f124cadba6b4bb6e845916d4224aa5f7ecc82bc06e413132ab5e8b685ced0fed",
+    "qmSha256": "571abe88e33810d2892bde5a290ce0c19abd48dcf79e1fc408085e28ebf38b78"
   },
   {
     "tag": "th",

@@ -1,24 +1,24 @@
 {
-  "stage": "Vietnamese third existing-catalog batch",
+  "stage": "Vietnamese fourth existing-catalog batch",
   "catalogs": [
     {
       "tag": "vi",
       "name": "Tiếng Việt",
-      "translated": 254,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "048120f9ad2b51771456e8cf46e6b46b3b9bba9bed6474650279369f8ac87ea9",
-      "qmSha256": "b8e22b38b204ef9dd6e2e11706d04f02d5ec70a4474bc76dc1c65a78bd876ee7"
+      "tsSha256": "f124cadba6b4bb6e845916d4224aa5f7ecc82bc06e413132ab5e8b685ced0fed",
+      "qmSha256": "571abe88e33810d2892bde5a290ce0c19abd48dcf79e1fc408085e28ebf38b78"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Vietnamese MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-vi-third-tests.log"
+    "log": "/tmp/soundcurrent-studio-vi-fourth-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–239: effects dynamics, estimated metering, physical L/R, editor import/export, filter constraints and quit versus close. File patterns, placeholders and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–319: electrical amplifier measurements, import validation, model correction versus room measurement, microphone clipping, live channel constraints and balance attenuation. File patterns, placeholders and numerical limits preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Vietnamese incomplete. Three target catalogs still incomplete; omitted source messages reserved for second pass."
