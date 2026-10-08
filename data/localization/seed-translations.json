@@ -84,7 +84,10 @@
     "Rear left",
     "Rear right",
     "Side left",
-    "Side right"
+    "Side right",
+    "Choose one audio setup action.",
+    "Invalid audio setup requester.",
+    "The route-preserving setup helper is missing."
   ],
   "languages": {
     "de": [
@@ -173,7 +176,10 @@
       "Hinten links",
       "Hinten rechts",
       "Seitlich links",
-      "Seitlich rechts"
+      "Seitlich rechts",
+      "Wählen Sie genau eine Aktion für die Audioeinrichtung.",
+      "Ungültiger anfordernder Prozess für die Audioeinrichtung.",
+      "Die Einrichtungshilfe zum Erhalten der Audiowege fehlt."
     ],
     "fr": [
       "Français",
@@ -261,7 +267,10 @@
       "Arrière gauche",
       "Arrière droite",
       "Latéral gauche",
-      "Latéral droit"
+      "Latéral droit",
+      "Choisissez une seule action de configuration audio.",
+      "Processus demandeur de configuration audio non valide.",
+      "L’assistant de configuration qui préserve le routage audio est introuvable."
     ],
     "es": [
       "Español",
@@ -349,7 +358,10 @@
       "Trasero izquierdo",
       "Trasero derecho",
       "Lateral izquierdo",
-      "Lateral derecho"
+      "Lateral derecho",
+      "Elija una sola acción de configuración de audio.",
+      "Proceso solicitante de configuración de audio no válido.",
+      "Falta el asistente de configuración que conserva las rutas de audio."
     ],
     "it": [
       "Italiano",
@@ -437,7 +449,10 @@
       "Posteriore sinistro",
       "Posteriore destro",
       "Laterale sinistro",
-      "Laterale destro"
+      "Laterale destro",
+      "Scegli una sola azione di configurazione audio.",
+      "Processo richiedente della configurazione audio non valido.",
+      "Manca il programma di configurazione che preserva il routing audio."
     ],
     "pt-PT": [
       "Português (Portugal)",
@@ -525,7 +540,10 @@
       "Traseiro esquerdo",
       "Traseiro direito",
       "Lateral esquerdo",
-      "Lateral direito"
+      "Lateral direito",
+      "Escolha uma única ação de configuração de áudio.",
+      "Processo requerente da configuração de áudio inválido.",
+      "Falta o assistente de configuração que preserva o encaminhamento de áudio."
     ],
     "pt-BR": [
       "Português (Brasil)",
@@ -613,7 +631,10 @@
       "Traseiro esquerdo",
       "Traseiro direito",
       "Lateral esquerdo",
-      "Lateral direito"
+      "Lateral direito",
+      "Escolha uma única ação de configuração de áudio.",
+      "Processo solicitante da configuração de áudio inválido.",
+      "O assistente de configuração que preserva o roteamento de áudio está ausente."
     ],
     "nl": [
       "Nederlands",
@@ -701,7 +722,10 @@
       "Achter links",
       "Achter rechts",
       "Zijkant links",
-      "Zijkant rechts"
+      "Zijkant rechts",
+      "Kies precies één actie voor audio-instellingen.",
+      "Ongeldig proces dat audio-instellingen aanvraagt.",
+      "De installatiehulp die audioroutes behoudt ontbreekt."
     ],
     "pl": [
       "Polski",
@@ -789,7 +813,10 @@
       "Tylny lewy",
       "Tylny prawy",
       "Boczny lewy",
-      "Boczny prawy"
+      "Boczny prawy",
+      "Wybierz dokładnie jedną czynność konfiguracji audio.",
+      "Nieprawidłowy proces żądający konfiguracji audio.",
+      "Brak pomocnika konfiguracji zachowującego routing audio."
     ],
     "cs": [
       "Čeština",
@@ -877,7 +904,10 @@
       "Zadní levý",
       "Zadní pravý",
       "Boční levý",
-      "Boční pravý"
+      "Boční pravý",
+      "Vyberte právě jednu akci nastavení zvuku.",
+      "Neplatný proces požadující nastavení zvuku.",
+      "Chybí pomocný program nastavení zachovávající směrování zvuku."
     ],
     "sk": [
       "Slovenčina",
@@ -965,7 +995,10 @@
       "Zadný ľavý",
       "Zadný pravý",
       "Bočný ľavý",
-      "Bočný pravý"
+      "Bočný pravý",
+      "Vyberte práve jednu akciu nastavenia zvuku.",
+      "Neplatný proces požadujúci nastavenie zvuku.",
+      "Chýba pomocný program nastavenia zachovávajúci smerovanie zvuku."
     ],
     "uk": [
       "Українська",
@@ -1053,7 +1086,10 @@
       "Задній лівий",
       "Задній правий",
       "Бічний лівий",
-      "Бічний правий"
+      "Бічний правий",
+      "Виберіть лише одну дію налаштування аудіо.",
+      "Недійсний процес, що запитує налаштування аудіо.",
+      "Відсутній допоміжний засіб налаштування, що зберігає маршрути аудіо."
     ],
     "ru": [
       "Русский",
@@ -1141,7 +1177,10 @@
       "Задний левый",
       "Задний правый",
       "Боковой левый",
-      "Боковой правый"
+      "Боковой правый",
+      "Выберите только одно действие настройки аудио.",
+      "Недопустимый процесс, запрашивающий настройку аудио.",
+      "Отсутствует вспомогательная программа настройки, сохраняющая маршрутизацию аудио."
     ],
     "el": [
       "Ελληνικά",
@@ -1229,7 +1268,10 @@
       "Πίσω αριστερά",
       "Πίσω δεξιά",
       "Πλάγια αριστερά",
-      "Πλάγια δεξιά"
+      "Πλάγια δεξιά",
+      "Επιλέξτε μία μόνο ενέργεια ρύθμισης ήχου.",
+      "Μη έγκυρη διεργασία που ζητά ρύθμιση ήχου.",
+      "Λείπει το βοηθητικό πρόγραμμα ρύθμισης που διατηρεί τη δρομολόγηση ήχου."
     ],
     "tr": [
       "Türkçe",
@@ -1317,7 +1359,10 @@
       "Arka sol",
       "Arka sağ",
       "Yan sol",
-      "Yan sağ"
+      "Yan sağ",
+      "Yalnızca bir ses kurulum işlemi seçin.",
+      "Ses kurulumu isteyen işlem geçersiz.",
+      "Ses yönlendirmesini koruyan kurulum yardımcısı eksik."
     ],
     "sv": [
       "Svenska",
@@ -1405,7 +1450,10 @@
       "Bakre vänster",
       "Bakre höger",
       "Vänster sida",
-      "Höger sida"
+      "Höger sida",
+      "Välj exakt en åtgärd för ljudinställning.",
+      "Ogiltig process som begär ljudinställning.",
+      "Installationshjälpen som bevarar ljudroutningen saknas."
     ],
     "da": [
       "Dansk",
@@ -1493,7 +1541,10 @@
       "Bageste venstre",
       "Bageste højre",
       "Venstre side",
-      "Højre side"
+      "Højre side",
+      "Vælg præcis én handling til lydopsætning.",
+      "Ugyldig proces, der anmoder om lydopsætning.",
+      "Opsætningshjælpen, der bevarer lydroutningen, mangler."
     ],
     "nb": [
       "Norsk bokmål",
@@ -1581,7 +1632,10 @@
       "Bak til venstre",
       "Bak til høyre",
       "Venstre side",
-      "Høyre side"
+      "Høyre side",
+      "Velg nøyaktig én handling for lydoppsett.",
+      "Ugyldig prosess som ber om lydoppsett.",
+      "Oppsettshjelperen som bevarer lydrutingen, mangler."
     ],
     "fi": [
       "Suomi",
@@ -1669,7 +1723,10 @@
       "Takavasen",
       "Takaoikea",
       "Sivuvasen",
-      "Sivuoikea"
+      "Sivuoikea",
+      "Valitse vain yksi ääniasetustoiminto.",
+      "Ääniasetuksia pyytävä prosessi on virheellinen.",
+      "Äänireitityksen säilyttävä asennusapuri puuttuu."
     ],
     "ro": [
       "Română",
@@ -1757,7 +1814,10 @@
       "Spate stânga",
       "Spate dreapta",
       "Lateral stânga",
-      "Lateral dreapta"
+      "Lateral dreapta",
+      "Alegeți o singură acțiune de configurare audio.",
+      "Procesul care solicită configurarea audio nu este valid.",
+      "Lipsește asistentul de configurare care păstrează rutarea audio."
     ],
     "hu": [
       "Magyar",
@@ -1845,7 +1905,10 @@
       "Bal hátsó",
       "Jobb hátsó",
       "Bal oldalsó",
-      "Jobb oldalsó"
+      "Jobb oldalsó",
+      "Válasszon pontosan egy hangbeállítási műveletet.",
+      "Érvénytelen hangbeállítást kérő folyamat.",
+      "Hiányzik a hangútvonalakat megőrző beállítási segédprogram."
     ],
     "ar": [
       "العربية",
@@ -1933,7 +1996,10 @@
       "خلفي يسار",
       "خلفي يمين",
       "جانبي يسار",
-      "جانبي يمين"
+      "جانبي يمين",
+      "اختر إجراء واحدًا فقط لإعداد الصوت.",
+      "عملية طلب إعداد الصوت غير صالحة.",
+      "أداة الإعداد المساعدة التي تحافظ على توجيه الصوت مفقودة."
     ],
     "he": [
       "עברית",
@@ -2021,7 +2087,10 @@
       "אחורי שמאל",
       "אחורי ימין",
       "צד שמאל",
-      "צד ימין"
+      "צד ימין",
+      "יש לבחור פעולה אחת בלבד להגדרת שמע.",
+      "התהליך המבקש הגדרת שמע אינו תקין.",
+      "תוכנית העזר להגדרה ששומרת על ניתוב השמע חסרה."
     ],
     "fa": [
       "فارسی",
@@ -2109,7 +2178,10 @@
       "عقب چپ",
       "عقب راست",
       "کنار چپ",
-      "کنار راست"
+      "کنار راست",
+      "فقط یک اقدام برای راه‌اندازی صدا انتخاب کنید.",
+      "فرایند درخواست‌کنندهٔ راه‌اندازی صدا نامعتبر است.",
+      "ابزار کمکی راه‌اندازی که مسیریابی صدا را حفظ می‌کند موجود نیست."
     ],
     "zh-Hans": [
       "简体中文",
@@ -2197,7 +2269,10 @@
       "后左",
       "后右",
       "侧左",
-      "侧右"
+      "侧右",
+      "请选择一项音频设置操作。",
+      "请求音频设置的进程无效。",
+      "缺少用于保留音频路由的设置辅助程序。"
     ],
     "zh-Hant": [
       "繁體中文",
@@ -2285,7 +2360,10 @@
       "後左",
       "後右",
       "側左",
-      "側右"
+      "側右",
+      "請選擇一項音訊設定操作。",
+      "請求音訊設定的處理程序無效。",
+      "缺少用於保留音訊路由的設定輔助程式。"
     ],
     "ja": [
       "日本語",
@@ -2373,7 +2451,10 @@
       "後方左",
       "後方右",
       "側方左",
-      "側方右"
+      "側方右",
+      "音声セットアップの操作を1つだけ選択してください。",
+      "音声セットアップを要求したプロセスが無効です。",
+      "音声ルーティングを保持するセットアップ補助プログラムが見つかりません。"
     ],
     "ko": [
       "한국어",
@@ -2461,7 +2542,10 @@
       "후방 왼쪽",
       "후방 오른쪽",
       "측면 왼쪽",
-      "측면 오른쪽"
+      "측면 오른쪽",
+      "오디오 설정 작업을 하나만 선택하세요.",
+      "오디오 설정을 요청한 프로세스가 유효하지 않습니다.",
+      "오디오 라우팅을 유지하는 설정 도우미가 없습니다."
     ],
     "hi": [
       "हिन्दी",
@@ -2549,7 +2633,10 @@
       "पीछे बायाँ",
       "पीछे दायाँ",
       "बगल बायाँ",
-      "बगल दायाँ"
+      "बगल दायाँ",
+      "ऑडियो सेटअप के लिए केवल एक कार्रवाई चुनें।",
+      "ऑडियो सेटअप का अनुरोध करने वाली प्रक्रिया अमान्य है।",
+      "ऑडियो रूटिंग सुरक्षित रखने वाला सेटअप सहायक उपलब्ध नहीं है।"
     ],
     "id": [
       "Bahasa Indonesia",
@@ -2637,7 +2724,10 @@
       "Belakang kiri",
       "Belakang kanan",
       "Samping kiri",
-      "Samping kanan"
+      "Samping kanan",
+      "Pilih tepat satu tindakan pengaturan audio.",
+      "Proses yang meminta pengaturan audio tidak valid.",
+      "Program bantu pengaturan yang mempertahankan rute audio tidak ditemukan."
     ],
     "vi": [
       "Tiếng Việt",
@@ -2725,7 +2815,10 @@
       "Sau trái",
       "Sau phải",
       "Bên trái",
-      "Bên phải"
+      "Bên phải",
+      "Chọn đúng một thao tác thiết lập âm thanh.",
+      "Tiến trình yêu cầu thiết lập âm thanh không hợp lệ.",
+      "Thiếu chương trình hỗ trợ thiết lập giữ nguyên định tuyến âm thanh."
     ],
     "th": [
       "ไทย",
@@ -2813,7 +2906,10 @@
       "ด้านหลังซ้าย",
       "ด้านหลังขวา",
       "ด้านข้างซ้าย",
-      "ด้านข้างขวา"
+      "ด้านข้างขวา",
+      "เลือกการดำเนินการตั้งค่าเสียงเพียงหนึ่งรายการ",
+      "โพรเซสที่ร้องขอการตั้งค่าเสียงไม่ถูกต้อง",
+      "ไม่พบโปรแกรมช่วยตั้งค่าที่คงการกำหนดเส้นทางเสียงไว้"
     ],
     "sw": [
       "Kiswahili",
@@ -2901,7 +2997,10 @@
       "Nyuma kushoto",
       "Nyuma kulia",
       "Upande wa kushoto",
-      "Upande wa kulia"
+      "Upande wa kulia",
+      "Chagua kitendo kimoja tu cha kusanidi sauti.",
+      "Mchakato unaoomba usanidi wa sauti si halali.",
+      "Programu saidizi ya usanidi inayohifadhi njia za sauti haipo."
     ],
     "nn": [
       "Norsk nynorsk",
@@ -2989,7 +3088,10 @@
       "Bak til venstre",
       "Bak til høgre",
       "Venstre side",
-      "Høgre side"
+      "Høgre side",
+      "Vel nøyaktig éi handling for lydoppsett.",
+      "Ugyldig prosess som ber om lydoppsett.",
+      "Oppsettshjelparen som tek vare på lydrutinga, manglar."
     ]
   },
   "requiredCompleteLocales": [

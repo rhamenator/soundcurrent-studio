@@ -549,6 +549,11 @@ Import into your library?</source>
       <translation>Виберіть назву, яка не належить вбудованому пресету.</translation>
     </message>
     <message>
+      <source>Choose one audio setup action.</source>
+      <translation>Виберіть лише одну дію налаштування аудіо.</translation>
+      <extracomment>Exactly one helper action switch must be selected; this is action validation, not an audio-device choice.</extracomment>
+    </message>
+    <message>
       <source>Choose update folder…</source>
       <translation>Вибрати папку оновлень…</translation>
     </message>
@@ -1243,6 +1248,11 @@ Import into your library?</source>
     <message>
       <source>Invalid Studio settings</source>
       <translation>Неприпустимі налаштування Studio</translation>
+    </message>
+    <message>
+      <source>Invalid audio setup requester.</source>
+      <translation>Недійсний процес, що запитує налаштування аудіо.</translation>
+      <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>
     </message>
     <message>
       <source>Invalid calibration audio</source>
@@ -2609,6 +2619,11 @@ Import into your library?</source>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
       <translation>Власна бібліотека вміщує до 256 профілів.</translation>
+    </message>
+    <message>
+      <source>The route-preserving setup helper is missing.</source>
+      <translation>Відсутній допоміжний засіб налаштування, що зберігає маршрути аудіо.</translation>
+      <extracomment>The installed executable that preserves prior default audio routing while launching driver setup is missing. Route refers to audio endpoints, not navigation/network routing.</extracomment>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>

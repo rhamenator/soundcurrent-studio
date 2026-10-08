@@ -549,6 +549,11 @@ Import into your library?</source>
       <translation>기본 제공 프리셋과 다른 이름을 선택하세요.</translation>
     </message>
     <message>
+      <source>Choose one audio setup action.</source>
+      <translation>오디오 설정 작업을 하나만 선택하세요.</translation>
+      <extracomment>Exactly one helper action switch must be selected; this is action validation, not an audio-device choice.</extracomment>
+    </message>
+    <message>
       <source>Choose update folder…</source>
       <translation>업데이트 폴더 선택…</translation>
     </message>
@@ -1243,6 +1248,11 @@ Import into your library?</source>
     <message>
       <source>Invalid Studio settings</source>
       <translation>잘못된 Studio 설정</translation>
+    </message>
+    <message>
+      <source>Invalid audio setup requester.</source>
+      <translation>오디오 설정을 요청한 프로세스가 유효하지 않습니다.</translation>
+      <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>
     </message>
     <message>
       <source>Invalid calibration audio</source>
@@ -2609,6 +2619,11 @@ Import into your library?</source>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
       <translation>사용자 지정 라이브러리에는 최대 256개 프로파일을 저장할 수 있습니다.</translation>
+    </message>
+    <message>
+      <source>The route-preserving setup helper is missing.</source>
+      <translation>오디오 라우팅을 유지하는 설정 도우미가 없습니다.</translation>
+      <extracomment>The installed executable that preserves prior default audio routing while launching driver setup is missing. Route refers to audio endpoints, not navigation/network routing.</extracomment>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>

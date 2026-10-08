@@ -549,6 +549,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Pilih nama yang berbeda dari preset bawaan.</translation>
     </message>
     <message>
+      <source>Choose one audio setup action.</source>
+      <translation>Pilih tepat satu tindakan pengaturan audio.</translation>
+      <extracomment>Exactly one helper action switch must be selected; this is action validation, not an audio-device choice.</extracomment>
+    </message>
+    <message>
       <source>Choose update folder…</source>
       <translation>Pilih folder pembaruan…</translation>
     </message>
@@ -1243,6 +1248,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Invalid Studio settings</source>
       <translation>Pengaturan Studio tidak valid</translation>
+    </message>
+    <message>
+      <source>Invalid audio setup requester.</source>
+      <translation>Proses yang meminta pengaturan audio tidak valid.</translation>
+      <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>
     </message>
     <message>
       <source>Invalid calibration audio</source>
@@ -2609,6 +2619,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
       <translation>Pustaka kustom menampung hingga 256 profil.</translation>
+    </message>
+    <message>
+      <source>The route-preserving setup helper is missing.</source>
+      <translation>Program bantu pengaturan yang mempertahankan rute audio tidak ditemukan.</translation>
+      <extracomment>The installed executable that preserves prior default audio routing while launching driver setup is missing. Route refers to audio endpoints, not navigation/network routing.</extracomment>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>

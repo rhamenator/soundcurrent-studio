@@ -549,6 +549,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Valitse nimi, joka ei kuulu sisäänrakennetulle esiasetukselle.</translation>
     </message>
     <message>
+      <source>Choose one audio setup action.</source>
+      <translation>Valitse vain yksi ääniasetustoiminto.</translation>
+      <extracomment>Exactly one helper action switch must be selected; this is action validation, not an audio-device choice.</extracomment>
+    </message>
+    <message>
       <source>Choose update folder…</source>
       <translation>Valitse päivityskansio…</translation>
     </message>
@@ -1243,6 +1248,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Invalid Studio settings</source>
       <translation>Virheelliset Studio-asetukset</translation>
+    </message>
+    <message>
+      <source>Invalid audio setup requester.</source>
+      <translation>Ääniasetuksia pyytävä prosessi on virheellinen.</translation>
+      <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>
     </message>
     <message>
       <source>Invalid calibration audio</source>
@@ -2609,6 +2619,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
       <translation>Oma kirjasto sisältää enintään 256 profiilia.</translation>
+    </message>
+    <message>
+      <source>The route-preserving setup helper is missing.</source>
+      <translation>Äänireitityksen säilyttävä asennusapuri puuttuu.</translation>
+      <extracomment>The installed executable that preserves prior default audio routing while launching driver setup is missing. Route refers to audio endpoints, not navigation/network routing.</extracomment>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>

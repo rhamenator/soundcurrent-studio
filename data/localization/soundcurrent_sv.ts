@@ -549,6 +549,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Välj ett namn som inte tillhör en inbyggd förinställning.</translation>
     </message>
     <message>
+      <source>Choose one audio setup action.</source>
+      <translation>Välj exakt en åtgärd för ljudinställning.</translation>
+      <extracomment>Exactly one helper action switch must be selected; this is action validation, not an audio-device choice.</extracomment>
+    </message>
+    <message>
       <source>Choose update folder…</source>
       <translation>Välj uppdateringsmapp…</translation>
     </message>
@@ -1243,6 +1248,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Invalid Studio settings</source>
       <translation>Ogiltiga Studio-inställningar</translation>
+    </message>
+    <message>
+      <source>Invalid audio setup requester.</source>
+      <translation>Ogiltig process som begär ljudinställning.</translation>
+      <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>
     </message>
     <message>
       <source>Invalid calibration audio</source>
@@ -2609,6 +2619,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
       <translation>Det anpassade biblioteket rymmer upp till 256 profiler.</translation>
+    </message>
+    <message>
+      <source>The route-preserving setup helper is missing.</source>
+      <translation>Installationshjälpen som bevarar ljudroutningen saknas.</translation>
+      <extracomment>The installed executable that preserves prior default audio routing while launching driver setup is missing. Route refers to audio endpoints, not navigation/network routing.</extracomment>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>
