@@ -52,22 +52,22 @@
   {
     "tag": "pt-PT",
     "name": "Português (Portugal)",
-    "translated": 30,
+    "translated": 237,
     "total": 523,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "a6432778069f502d966fb6b27b1e493154399c21d31d276eb27ee4e089d2f541",
-    "qmSha256": "701c7d7c3e31023a41e45bf66096a281068c350aee637df625b9cce7ad3949d9"
+    "tsSha256": "18767189c945bdc11e07362bb831ebd9b003ed02585a0ec4e0cef4ca5c6725d9",
+    "qmSha256": "5855caad9c668d30c21783dae7643954f8c0f4a86da567f6cdc3ce5f020c9e0e"
   },
   {
     "tag": "pt-BR",
     "name": "Português (Brasil)",
-    "translated": 30,
+    "translated": 237,
     "total": 523,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "0259c5b278fadc207bdbac9459e41d700a3662cd3ef11b2680a1822f4fc2fa30",
-    "qmSha256": "3db305be31d91e3921c27a3adf71b9ec509f411de749d69a5ec890ca3a83f7ba"
+    "tsSha256": "26d2a4dbcba3c127735f7af50c6881be29dae838dd8581fb206a8e0fb9ee5f18",
+    "qmSha256": "810797ec7a0d5da57cdebecc28e223cea17a7676b92165dfc42cf35059e7b807"
   },
   {
     "tag": "nl",
