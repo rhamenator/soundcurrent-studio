@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-08",
+  "regression": "Desktop backend translation test unconditionally linked Qt6::Core, breaking SOUNDCURRENT_BUILD_DESKTOP=OFF on Linux and Windows CI",
+  "evidence": "GitHub Studio engine run 37740732877 failed configuration on ubuntu-24.04 and windows-2022",
+  "fix": "Guard Qt desktop translation test with SOUNDCURRENT_BUILD_DESKTOP; standalone engine unchanged",
+  "localVerification": "Fresh Release engine-only configuration and build passed; all six engine-only CTests passed. Desktop translation target rebuilt and backend-error-text passed.",
+  "windowsVerification": "Pending CI rerun from corrected commit",
+  "nativeReviewed": false
+}

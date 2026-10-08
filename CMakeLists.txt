@@ -287,8 +287,10 @@ if(TARGET soundcurrent-studio)
   endif()
 endif()
 
-# Desktop error translation is independent of a running audio backend.
-add_executable(soundcurrent-backend-error-text-test tests/backend_error_text.cpp)
-target_include_directories(soundcurrent-backend-error-text-test PRIVATE src)
-target_link_libraries(soundcurrent-backend-error-text-test PRIVATE Qt6::Core)
-add_test(NAME backend-error-text COMMAND soundcurrent-backend-error-text-test)
+# Desktop error translation needs Qt, but no running audio backend.
+if(SOUNDCURRENT_BUILD_DESKTOP)
+  add_executable(soundcurrent-backend-error-text-test tests/backend_error_text.cpp)
+  target_include_directories(soundcurrent-backend-error-text-test PRIVATE src)
+  target_link_libraries(soundcurrent-backend-error-text-test PRIVATE Qt6::Core)
+  add_test(NAME backend-error-text COMMAND soundcurrent-backend-error-text-test)
+endif()
