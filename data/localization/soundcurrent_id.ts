@@ -2404,6 +2404,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Konfigurasi tidak dapat dibaca atau melebihi 8 MiB</translation>
     </message>
     <message>
+      <source>Setup could not check the driver. You can retry with %1 in the app or Start menu.</source>
+      <translation>Penginstal tidak dapat memeriksa driver. Anda dapat mencoba lagi melalui %1 di aplikasi atau menu Mulai.</translation>
+    </message>
+    <message>
       <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
       <translation>EQ bersama dan EQ kanal melebihi 64 filter; hapus beberapa filter kanal</translation>
       <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
