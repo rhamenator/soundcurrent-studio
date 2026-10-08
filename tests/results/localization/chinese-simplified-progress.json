@@ -1,25 +1,25 @@
 {
-  "stage": "Simplified Chinese saving, speaker profiles and device recovery batch",
+  "stage": "Simplified Chinese current catalogs complete",
   "catalogs": [
     {
       "tag": "zh-Hans",
       "name": "简体中文",
-      "translated": 466,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "cfbd62feed2b97818258e39ee0fd83fe27d3dacfe4a94d25262c48b97f3d8b4d",
-      "qmSha256": "9bfc45643c697d9bd3fa66eb2dc67b1bcb0ca64232c1b9c1996ddb6ea8c0faf8"
+      "tsSha256": "bbdec8e096c199830a1f6f247a9c5e3ab1019049964f7564c28cfe295e7f34a4",
+      "qmSha256": "3b35f7f402bc1f272f9d6978b8b4dc32cf28476dfa7c64bda9a8f3695be7f1f9"
     }
   ],
   "linuxTests": {
-    "passed": 3,
-    "total": 3,
-    "scope": "compiled localization, Simplified Chinese main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-zh-Hans-sixth-tests.log"
+    "passed": 76,
+    "total": 76,
+    "scope": "Full Linux CTest including Simplified Chinese equipment workflows, standard actions and script selection assertions",
+    "log": "/tmp/soundcurrent-studio-zh-Hans-complete-tests.log"
   },
-  "review": "Contextual AI review; unverified. Save versus discard, speaker correction bounds, peak hold, device recovery, separate cable routing and reverb versus echo reviewed.",
+  "review": "Contextual AI review; unverified. Current catalogs populated; contextual AI review remains unverified. Calibration limitations, microphone versus playback effects, save/quit behavior and neutral render counts reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
-  "remaining": "Simplified Chinese catalog incomplete. 9 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
+  "remaining": "8 original target catalogs incomplete. Second-pass backend/helper/installer coverage, visual and platform lifecycle qualification remain open."
 }
