@@ -1,24 +1,24 @@
 {
-  "stage": "Arabic recovery, calibration and delay batch",
+  "stage": "Arabic equipment, filters and metering batch",
   "catalogs": [
     {
       "tag": "ar",
       "name": "العربية",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "ca03a337b80224bb19b36cfd17926ea80585625f3befba272126109abcc240e9",
-      "qmSha256": "4e6773c72fab7246514e8d3b8018d611f3a242ccb9175823e1d3308b52d29a87"
+      "tsSha256": "a4783b432dd973762b8d59e3aa7fec0e3e0ad2be7f44978337f09e856d228c46",
+      "qmSha256": "e6696ff71f92f57650a139c2e77f242dda85c829f8ec5cb6645d9841a9f10519"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Arabic main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-ar-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-ar-third-tests.log"
   },
-  "review": "Contextual AI review; unverified. Processing refusal, calibration safety errors, file size limits, update behavior and processed delay mix reviewed.",
+  "review": "Contextual AI review; unverified. Estimated level captions, actual quit versus close behavior, filter Q/high-pass/high-shelf, equipment kinds and dynamics makeup gain reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "12 original target catalogs incomplete. Full RTL, bidi and platform qualification remain open."
