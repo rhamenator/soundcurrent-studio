@@ -7,6 +7,11 @@
       <translation> (انتخاب فعلی)</translation>
     </message>
     <message>
+      <source> (original; not SS-CS5M2)</source>
+      <translation> (مدل اصلی؛ نه SS-CS5M2)</translation>
+      <extracomment>Display suffix distinguishing the original Sony SS-CS5 from SS-CS5M2. Preserve model identifier literally; it is not a measured response equivalence.</extracomment>
+    </message>
+    <message>
       <source> (restored selection)</source>
       <translation> (انتخاب بازیابی‌شده)</translation>
     </message>
@@ -351,6 +356,11 @@ Import into your library?</source>
       <translation>فرکانس باس</translation>
     </message>
     <message>
+      <source>Bookshelf speaker</source>
+      <translation>بلندگوی قفسه‌ای</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
       <source>Boxiness</source>
       <translation>صدای جعبه‌ای</translation>
     </message>
@@ -485,6 +495,11 @@ Import into your library?</source>
     <message>
       <source>Center</source>
       <translation>مرکز</translation>
+    </message>
+    <message>
+      <source>Center speaker</source>
+      <translation>بلندگوی کانال مرکزی</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
     </message>
     <message>
       <source>Change default audio endpoint</source>
@@ -992,6 +1007,11 @@ Import into your library?</source>
       <translation>تخت</translation>
     </message>
     <message>
+      <source>Floorstanding speaker</source>
+      <translation>بلندگوی ایستاده روی زمین</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>فرکانس</translation>
     </message>
@@ -1088,6 +1108,11 @@ Import into your library?</source>
     <message>
       <source>Import response text</source>
       <translation>وارد کردن متن پاسخ</translation>
+    </message>
+    <message>
+      <source>In-wall speaker</source>
+      <translation>بلندگوی توکار دیواری</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
     </message>
     <message>
       <source>Include preview releases</source>
@@ -2477,6 +2502,11 @@ Import into your library?</source>
     <message>
       <source>Type</source>
       <translation>نوع</translation>
+    </message>
+    <message>
+      <source>Unclassified equipment</source>
+      <translation>تجهیزات دسته‌بندی‌نشده</translation>
+      <extracomment>Equipment taxonomy has no more specific classification; not an error, missing device, or user permission status.</extracomment>
     </message>
     <message>
       <source>Undo</source>
