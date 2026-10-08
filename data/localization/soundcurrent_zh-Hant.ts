@@ -495,6 +495,12 @@ Import into your library?</source>
     <message>
       <source>Center</source>
       <translation>置中</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Center channel</source>
+      <translation>中置</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Center speaker</source>
@@ -508,6 +514,11 @@ Import into your library?</source>
     <message>
       <source>Channel</source>
       <translation>聲道</translation>
+    </message>
+    <message>
+      <source>Channel %1</source>
+      <translation>聲道 %1</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Channel configuration count does not match engine</source>
@@ -1049,6 +1060,16 @@ Import into your library?</source>
       <translation>前置 L/R 增強（支援單聲道）；其他聲道保留各自的 Studio 音效。將增強量設為零可旁通該項增強。</translation>
     </message>
     <message>
+      <source>Front left</source>
+      <translation>前左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Front right</source>
+      <translation>前右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Gain</source>
       <extracomment>Audio signal level adjustment in dB, positive or negative. Not financial profit.</extracomment>
       <translation>增益</translation>
@@ -1341,6 +1362,11 @@ Import into your library?</source>
       <translation>配置</translation>
     </message>
     <message>
+      <source>Left</source>
+      <translation>左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Left right balance</source>
       <translation>左右平衡</translation>
     </message>
@@ -1532,6 +1558,7 @@ Import into your library?</source>
     <message>
       <source>Mono</source>
       <translation>單聲道</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
@@ -2006,6 +2033,16 @@ Import into your library?</source>
       <translation>就緒。音效在啟用前僅輸出乾聲。</translation>
     </message>
     <message>
+      <source>Rear left</source>
+      <translation>後左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Rear right</source>
+      <translation>後右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>重新整理裝置</translation>
     </message>
@@ -2153,6 +2190,11 @@ Import into your library?</source>
     <message>
       <source>Rhythmic echo</source>
       <translation>節奏回音</translation>
+    </message>
+    <message>
+      <source>Right</source>
+      <translation>右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Right-to-left test language</source>
@@ -2311,6 +2353,16 @@ Import into your library?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>在頻率位準上顯示峰值標記</translation>
+    </message>
+    <message>
+      <source>Side left</source>
+      <translation>側左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Side right</source>
+      <translation>側右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

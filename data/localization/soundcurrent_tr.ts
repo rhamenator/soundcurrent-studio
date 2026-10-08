@@ -495,6 +495,12 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Center</source>
       <translation>Orta</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Center channel</source>
+      <translation>Merkez</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Center speaker</source>
@@ -508,6 +514,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Channel</source>
       <translation>Kanal</translation>
+    </message>
+    <message>
+      <source>Channel %1</source>
+      <translation>Kanal %1</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Channel configuration count does not match engine</source>
@@ -1049,6 +1060,16 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Ön L/R kanal efektleri (mono desteklenir); diğer kanallar kendi Studio efektlerini korur. Sıfır değerleri her efekti atlar.</translation>
     </message>
     <message>
+      <source>Front left</source>
+      <translation>Ön sol</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Front right</source>
+      <translation>Ön sağ</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Gain</source>
       <extracomment>Audio signal level adjustment in dB, positive or negative. Not financial profit.</extracomment>
       <translation>Kazanç</translation>
@@ -1341,6 +1362,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Düzen</translation>
     </message>
     <message>
+      <source>Left</source>
+      <translation>Sol</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Left right balance</source>
       <translation>Sol sağ dengesi</translation>
     </message>
@@ -1532,6 +1558,7 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Mono</source>
       <translation>Mono</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
@@ -2006,6 +2033,16 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Hazır. Etkinleştirilene kadar efektler uygulanmaz.</translation>
     </message>
     <message>
+      <source>Rear left</source>
+      <translation>Arka sol</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Rear right</source>
+      <translation>Arka sağ</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Cihazları yenile</translation>
     </message>
@@ -2153,6 +2190,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Rhythmic echo</source>
       <translation>Ritmik yankı</translation>
+    </message>
+    <message>
+      <source>Right</source>
+      <translation>Sağ</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Right-to-left test language</source>
@@ -2311,6 +2353,16 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Frekans seviyelerinde tepe işaretlerini göster</translation>
+    </message>
+    <message>
+      <source>Side left</source>
+      <translation>Yan sol</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Side right</source>
+      <translation>Yan sağ</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

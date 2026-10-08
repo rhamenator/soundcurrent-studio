@@ -29,6 +29,18 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(gaps['unmappedCount'], len(gaps['diagnosticsNeedingMappingAndTranslations']))
         self.assertTrue({mappings[key] for key in reasons & set(mappings)}.issubset(catalog.marked_sources(root / 'src')))
 
+    def test_generated_channel_roles_have_marked_display_mapping(self):
+        root = Path(__file__).resolve().parents[1]
+        model = (root / 'src/studio_model.cpp').read_text()
+        header = (root / 'src/studio_name_text.h').read_text()
+        canonical = dict(re.findall(r'if \(role == "([^"]+)"\) return (?:QString\()?"([^"]+)"', model))
+        marked = dict(re.findall(r'if \(role == "([^"]+)"\) return SC_TR\("([^"]+)"\)', header))
+        self.assertEqual(set(canonical) - {'lfe'}, set(marked))
+        for role, source in marked.items():
+            self.assertEqual("Center channel" if role == "center" else canonical[role], source)
+        self.assertTrue(set(marked.values()).issubset(catalog.marked_sources(root / 'src')))
+        self.assertEqual(canonical['lfe'], 'LFE')
+
     def test_bundled_speaker_taxonomy_has_marked_display_labels(self):
         root = Path(__file__).resolve().parents[1]
         profiles = json.loads((root / 'data/equipment/spinorama.json').read_text())

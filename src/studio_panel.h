@@ -31,6 +31,7 @@ public:
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();
     void selfTestFormatting();
+    void selfTestChannelNames();
     std::function<void()> onChanged;
 private:
     void rebuild();

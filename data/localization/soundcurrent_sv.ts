@@ -495,6 +495,12 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Center</source>
       <translation>Mitten</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Center channel</source>
+      <translation>Center</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Center speaker</source>
@@ -508,6 +514,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Channel</source>
       <translation>Kanal</translation>
+    </message>
+    <message>
+      <source>Channel %1</source>
+      <translation>Kanal %1</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Channel configuration count does not match engine</source>
@@ -1049,6 +1060,16 @@ Importera till ditt bibliotek?</translation>
       <translation>Effekter för främre L/R-kanaler (mono stöds); andra kanaler behåller sina egna Studio-effekter. Nollvärden förbigår varje effekt.</translation>
     </message>
     <message>
+      <source>Front left</source>
+      <translation>Främre vänster</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Front right</source>
+      <translation>Främre höger</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Gain</source>
       <extracomment>Audio signal level adjustment in dB, positive or negative. Not financial profit.</extracomment>
       <translation>Förstärkning</translation>
@@ -1341,6 +1362,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Layout</translation>
     </message>
     <message>
+      <source>Left</source>
+      <translation>Vänster</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Left right balance</source>
       <translation>Vänster/höger-balans</translation>
     </message>
@@ -1532,6 +1558,7 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Mono</source>
       <translation>Mono</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
@@ -2006,6 +2033,16 @@ Importera till ditt bibliotek?</translation>
       <translation>Redo. Effekterna används inte förrän de aktiveras.</translation>
     </message>
     <message>
+      <source>Rear left</source>
+      <translation>Bakre vänster</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Rear right</source>
+      <translation>Bakre höger</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Uppdatera enheter</translation>
     </message>
@@ -2153,6 +2190,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Rhythmic echo</source>
       <translation>Rytmiskt eko</translation>
+    </message>
+    <message>
+      <source>Right</source>
+      <translation>Höger</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Right-to-left test language</source>
@@ -2311,6 +2353,16 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Visa toppmarkörer på frekvensnivåerna</translation>
+    </message>
+    <message>
+      <source>Side left</source>
+      <translation>Vänster sida</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Side right</source>
+      <translation>Höger sida</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

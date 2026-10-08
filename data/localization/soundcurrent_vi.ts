@@ -495,6 +495,12 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Center</source>
       <translation>Giữa</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Center channel</source>
+      <translation>Trung tâm</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Center speaker</source>
@@ -508,6 +514,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Channel</source>
       <translation>Kênh</translation>
+    </message>
+    <message>
+      <source>Channel %1</source>
+      <translation>Kênh %1</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Channel configuration count does not match engine</source>
@@ -1049,6 +1060,16 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Cải thiện âm thanh L/R phía trước (hỗ trợ mono); các kênh khác giữ hiệu ứng Studio riêng. Đặt mức về 0 để bỏ qua từng cải thiện.</translation>
     </message>
     <message>
+      <source>Front left</source>
+      <translation>Trước trái</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Front right</source>
+      <translation>Trước phải</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Gain</source>
       <extracomment>Audio signal level adjustment in dB, positive or negative. Not financial profit.</extracomment>
       <translation>Gain</translation>
@@ -1341,6 +1362,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Bố cục</translation>
     </message>
     <message>
+      <source>Left</source>
+      <translation>Trái</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Left right balance</source>
       <translation>Cân bằng trái phải</translation>
     </message>
@@ -1532,6 +1558,7 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Mono</source>
       <translation>Mono</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
@@ -2006,6 +2033,16 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Sẵn sàng. Chưa áp dụng hiệu ứng cho đến khi bật.</translation>
     </message>
     <message>
+      <source>Rear left</source>
+      <translation>Sau trái</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Rear right</source>
+      <translation>Sau phải</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Làm mới thiết bị</translation>
     </message>
@@ -2153,6 +2190,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Rhythmic echo</source>
       <translation>Tiếng vọng theo nhịp</translation>
+    </message>
+    <message>
+      <source>Right</source>
+      <translation>Phải</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Right-to-left test language</source>
@@ -2311,6 +2353,16 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Hiển thị dấu đỉnh trên các mức tần số</translation>
+    </message>
+    <message>
+      <source>Side left</source>
+      <translation>Bên trái</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Side right</source>
+      <translation>Bên phải</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

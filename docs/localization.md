@@ -62,6 +62,8 @@ name still matches that role's canonical name; stale metadata cannot override
 a custom name. Explicit name editing clears the metadata. Resizing and undo
 preserve it; an unchanged name field preserves it too.
 
-This is the prerequisite for translated generated-name display. Display mapping
-and translated channel-role captions are still pending; do not report channel
-names as localized from metadata support alone.
+Generated names now use translated role captions in the channel dropdown, name
+editor, route labels and meters. Generic channel indices use the selected number
+locale. Center channel has a separate translation key from neutral balance
+Center; LFE stays the standard abbreviation. Display text never replaces the
+canonical persisted name or role ID. Legacy/custom names remain verbatim.

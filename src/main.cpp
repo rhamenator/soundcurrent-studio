@@ -11,6 +11,7 @@
 #include "equipment_profiles.h"
 #include "processing_guard.h"
 #include "studio_panel.h"
+#include "studio_name_text.h"
 #ifndef _WIN32
 #include "linux_audio.h"
 #endif
@@ -4140,7 +4141,7 @@ int main(int argc, char **argv) {
         auto ownedWindow=std::make_unique<MainWindow>(false);
         auto &window=*ownedWindow;
         for (auto *widget : window.findChildren<QWidget *>())
-            if (auto *panel = dynamic_cast<soundcurrent::studio::StudioPanel *>(widget)) panel->selfTestFormatting();
+            if (auto *panel = dynamic_cast<soundcurrent::studio::StudioPanel *>(widget)) {panel->selfTestFormatting(); panel->selfTestChannelNames();}
         for(const auto &reason:QStringList{"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field","Invalid Studio channel count","Invalid Studio profile channel count","Invalid Studio channel name or filters","Too many Studio channel filters","Invalid Studio route","Duplicate Studio route","Invalid route indexes or weight","Invalid route number","Too many Studio routes","Invalid filter type","Shared and channel EQ exceed 64 filters; remove some channel filters","Invalid enhancement parameter count","Invalid enhancement parameter type","Enhancements outside supported ranges"})
             if(soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(reason.toUtf8().constData()))
                 qFatal("Studio validation diagnostic missed the localized display boundary");
@@ -4155,6 +4156,8 @@ int main(int argc, char **argv) {
         auto legacySession=soundcurrent::studio::Session::parse(legacyNames);
         if (!legacySession.defaultNameRole(0).isEmpty() || legacySession.json()!=legacyNames)
             qFatal("Legacy channel names were inferred or rewritten");
+        if(soundcurrent::studio::channelNameText(legacySession,0)!=QStringLiteral("Left"))
+            qFatal("Legacy matching English channel name was translated");
         auto futureNames=profileSnapshot;auto futureChannels=futureNames.value("channels").toArray();
         auto futureRow=futureChannels[0].toObject();
         futureRow["nameProvenance"]=QJsonObject{{"version",2},{"role","future-role"},{"opaque","%1 / 音声"}};
@@ -4162,6 +4165,8 @@ int main(int argc, char **argv) {
         auto futureSession=soundcurrent::studio::Session::parse(futureNames);
         if (!futureSession.defaultNameRole(0).isEmpty() || futureSession.json()!=futureNames)
             qFatal("Unknown channel name metadata was applied or lost");
+        if(soundcurrent::studio::channelNameText(futureSession,0)!=QStringLiteral("Left"))
+            qFatal("Unknown channel name metadata changed displayed text");
         auto defaultSession=soundcurrent::studio::Session::parse(profileSnapshot);
         if(defaultSession.defaultNameRole(0)!="left" || defaultSession.defaultNameRole(1)!="right")
             qFatal("Default channel role did not survive save/reopen");

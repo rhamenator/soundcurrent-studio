@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "accelerating_spinbox.h"
 #include "studio_panel.h"
+#include "studio_name_text.h"
 #include "audio_error_text.h"
 #include "wav.h"
 #include <QCheckBox>
@@ -136,7 +137,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     connect(offline_, &QCheckBox::toggled, this, [this](bool on) { change([&](Session &s){s.offline=on;}); });
     connect(name_, &QLineEdit::editingFinished, this, [this] { if(name_->text().trimmed().isEmpty()) return;
         const int channel = channel_->currentIndex();
-        if (name_->text().trimmed() == session_.names[channel]) return;
+        if (name_->text().trimmed() == channelNameText(session_,channel)) return;
         change([&](Session &s){s.setCustomName(channel,name_->text().trimmed());}); rebuild(); });
     connect(trim_, &QSlider::valueChanged, this, [this](int v){ change([&](Session &s){s.engine.channels[channel_->currentIndex()].gainDb=v/2.0;}); trim_->setToolTip(QLocale().toString(v/2.0,'f',1)+SC_TR(" dB")); });
     connect(mute_, &QCheckBox::toggled, this, [this](bool v){change([&](Session &s){s.engine.channels[channel_->currentIndex()].muted=v;});});
@@ -193,22 +194,22 @@ void StudioPanel::undo() { if(locked_||history_.empty())return;session_=history_
 void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
-    offline_->setChecked(session_.offline);channel_->clear();channel_->addItems(session_.names);channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
+    offline_->setChecked(session_.offline);channel_->clear();for(int c=0;c<int(session_.engine.channels.size());++c)channel_->addItem(channelNameText(session_,c));channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
     enhancements_->setSettings(session_.engine.enhancements);
     const auto &d=session_.engine.delay;const auto &r=session_.engine.reverb;
     delay_->setChecked(d.enabled);delayMs_->setValue(d.milliseconds);feedback_->setValue(d.feedback);wetDelay_->setValue(int(std::lround(d.mix*100)));
     reverb_->setChecked(r.enabled);decay_->setValue(r.decaySeconds);damping_->setValue(r.damping);wetReverb_->setValue(int(std::lround(r.mix*100)));
     bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);undo_->setEnabled(!locked_&&!history_.empty());
     preset_->setCurrentIndex(!d.enabled && !r.enabled && !session_.engine.enhancements.active() ? 0 : 7);
-    meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(QLocale().toString(c+1)).arg(session_.names[c]));cell(meters_,c,1,SC_TR("−∞ dBFS"));}
+    meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(QLocale().toString(c+1)).arg(channelNameText(session_,c)));cell(meters_,c,1,SC_TR("−∞ dBFS"));}
     rebuilding_=false;loadChannel();
 }
 void StudioPanel::loadChannel() {
     rebuilding_=true;const int c=std::max(0,channel_->currentIndex());const auto &s=session_.engine.channels[std::size_t(c)];
-    name_->setText(session_.names[c]);trim_->setValue(int(std::lround(s.gainDb*2)));trim_->setToolTip(QLocale().toString(s.gainDb,'f',1)+SC_TR(" dB"));mute_->setChecked(s.muted);solo_->setChecked(session_.solo[std::size_t(c)]);
+    name_->setText(channelNameText(session_,c));trim_->setValue(int(std::lround(s.gainDb*2)));trim_->setToolTip(QLocale().toString(s.gainDb,'f',1)+SC_TR(" dB"));mute_->setChecked(s.muted);solo_->setChecked(session_.solo[std::size_t(c)]);
     filters_->setRowCount(int(s.bands.size()));for(int r=0;r<int(s.bands.size());++r){const auto &b=s.bands[std::size_t(r)];cell(filters_,r,0,filterType_->itemText(int(b.type)));cell(filters_,r,1,QLocale().toString(b.frequency,'g',6));cell(filters_,r,2,QLocale().toString(b.gainDb,'g',6));cell(filters_,r,3,QLocale().toString(b.q,'g',6));}
     routes_->setRowCount(0);for(int in=0;in<count_->value();++in){const auto weight=session_.routing[std::size_t(c)*std::size_t(count_->value())+std::size_t(in)];if(weight==0)continue;
-        const int row=routes_->rowCount();routes_->insertRow(row);cell(routes_,row,0,QString("%1 · %2").arg(QLocale().toString(in+1)).arg(session_.names[in]));routes_->item(row,0)->setData(Qt::UserRole,in);cell(routes_,row,1,QLocale().toString(weight,'f',3));}
+        const int row=routes_->rowCount();routes_->insertRow(row);cell(routes_,row,0,QString("%1 · %2").arg(QLocale().toString(in+1)).arg(channelNameText(session_,in)));routes_->item(row,0)->setData(Qt::UserRole,in);cell(routes_,row,1,QLocale().toString(weight,'f',3));}
     rebuilding_=false;
 }
 void StudioPanel::effectPreset(int i) {
@@ -288,6 +289,35 @@ void StudioPanel::renderFiles(const QString &input,const QString &output) {
             return SC_TR("Rendered %1 channels. Clipped samples: %2. %3").arg(QLocale().toString(qulonglong(n))).arg(QLocale().toString(qulonglong(clips))).arg(output);
         }catch(const std::exception &e){return SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
     });
+}
+void StudioPanel::selfTestChannelNames() {
+    const auto original = session_;
+    const auto history = history_;
+    for (const auto count : {1,2,6,8,16,256}) {
+        session_ = Session(count); rebuild();
+        const auto snapshot = session_.json();
+        for (const int channel : {0,count-1}) {
+            channel_->setCurrentIndex(channel);
+            const auto caption = channelNameText(session_,channel);
+            if (channel_->itemText(channel) != caption || name_->text() != caption ||
+                !meters_->item(channel,0)->text().endsWith(caption) ||
+                !routes_->item(0,0)->text().endsWith(caption))
+                qFatal("Generated name display missed a Studio control");
+            QMetaObject::invokeMethod(name_,"editingFinished",Qt::DirectConnection);
+            if (session_.json() != snapshot) qFatal("Localized no-op name editing rewrote saved setup");
+        }
+        if (Session::parse(snapshot).json() != snapshot)
+            qFatal("Localized generated channel name changed canonical saved state");
+    }
+    session_ = Session(2); rebuild();channel_->setCurrentIndex(0);
+    name_->setText("User %1 / 音声 / Left");
+    QMetaObject::invokeMethod(name_,"editingFinished",Qt::DirectConnection);
+    if (!session_.defaultNameRole(0).isEmpty() || channel_->itemText(0)!="User %1 / 音声 / Left" ||
+        name_->text()!="User %1 / 音声 / Left") qFatal("Custom channel name was translated or altered");
+    undo();
+    if (session_.defaultNameRole(0)!="left" || name_->text()!=SC_TR("Left"))
+        qFatal("Undo failed to restore localized generated name");
+    session_ = original; history_ = history; rebuild();
 }
 void StudioPanel::selfTestFormatting() {
     const auto original = session_;

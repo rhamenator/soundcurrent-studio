@@ -71,7 +71,6 @@
     }
   ],
   "knownSecondPassExamples": [
-    "Default Studio channel names and other stored/user captions require provenance-aware display handling",
     "Installer/helper diagnostics and other uncaptured interface strings require audit"
   ],
   "limitations": [
@@ -98,7 +97,7 @@
   "secondPassProgress": "tests/results/localization/second-pass-speaker-text.json",
   "currentCatalogs": {
     "nonEnglishLocales": 33,
-    "sourceMessagesPerLocale": 676,
+    "sourceMessagesPerLocale": 686,
     "unfinished": 0,
     "nativeReviewed": false
   },
@@ -126,5 +125,9 @@
   "channelNameProgress": {
     "report": "tests/results/localization/second-pass-channel-name-provenance.json",
     "status": "Provenance and state preservation tested; translated generated-name display still pending"
+  },
+  "channelNameDisplayProgress": {
+    "report": "tests/results/localization/second-pass-channel-name-display.json",
+    "status": "Generated role display translated in 33 non-English locales and Linux widgets qualified; legacy/custom text intentionally preserved; Windows/package qualification pending"
   }
 }
