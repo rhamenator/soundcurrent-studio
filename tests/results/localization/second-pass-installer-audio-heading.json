@@ -1,0 +1,36 @@
+{
+  "scope": "Installer audio connection page heading",
+  "source": "Connect your audio",
+  "sourceMessagesPerLocale": 720,
+  "catalogs": 34,
+  "nonEnglishLocales": 33,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": "Reviewed as audio routing setup heading, not a physical cable action",
+  "nativeSpeakerVerification": "unverified",
+  "validation": {
+    "unitTestsPassed": 27,
+    "unitTestsSkipped": 0,
+    "compiledQtCatalogs": "regenerated and hashes checked",
+    "nsisMinimalHeadingFixtures": "both installer variants compiled from actual definition/header lines",
+    "fullInstallersCompiled": false,
+    "currentInstalledUiQualified": false
+  },
+  "installerLanguagesEnabled": [
+    "English"
+  ],
+  "otherLocaleActivation": "pending installer-wide translation and language selection",
+  "remainingScope": [
+    "One raw PowerShell repair notice",
+    "Remaining installer/uninstaller text",
+    "Installer language selection",
+    "Current package UI and lifecycle qualification"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "newPackagesQualified": false,
+  "evidenceSha256": {
+    "data/localization/catalogs.json": "d8b1e9dea82afc8f80efb40144b4e12de04c80194144632f1b4a943236fd4956",
+    "tests/translation_catalogs.py": "73bba85f605a977915c6bb2e9b6b93c80aad64d42148bb0fe214f4e211ea2ac6",
+    "tests/results/localization/installer-audio-heading-tests.log": "4767d6d47cd498aa25d34bceb6635b370ed9448903e47dfa2c0b07b22abdd499",
+    "tests/results/localization/installer-audio-heading-compiler.log": "780ca7fe47debc9bbc7702940e7fe171aff806879060f91b5541355dfcfdef85"
+  }
+}
