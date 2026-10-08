@@ -1041,6 +1041,11 @@ Import into your library?</source>
       <translation>ไฮเชลฟ์</translation>
     </message>
     <message>
+      <source>High-shelf filter</source>
+      <translation>ตัวกรองเชลฟ์ความถี่สูง</translation>
+      <extracomment>Shelving EQ: raise/lower the high-frequency region. Do not translate as high-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Hip-Hop</source>
       <translation>ฮิปฮอป</translation>
     </message>
@@ -1303,6 +1308,11 @@ Import into your library?</source>
       <translation>โลว์เชลฟ์</translation>
     </message>
     <message>
+      <source>Low-shelf filter</source>
+      <translation>ตัวกรองเชลฟ์ความถี่ต่ำ</translation>
+      <extracomment>Shelving EQ: raise/lower the low-frequency region. Do not translate as low-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>ผู้ผลิต</translation>
     </message>
@@ -1346,6 +1356,11 @@ Import into your library?</source>
     <message>
       <source>Measurement stopped.</source>
       <translation>หยุดการวัดแล้ว</translation>
+    </message>
+    <message>
+      <source>Measurement: %1</source>
+      <translation>การวัด: %1</translation>
+      <extracomment>Label for verbatim published speaker measurement attribution, not a new calibration run.</extracomment>
     </message>
     <message>
       <source>Metal</source>
@@ -1631,6 +1646,11 @@ Import into your library?</source>
     <message>
       <source>Peaking</source>
       <translation>พีกกิง</translation>
+    </message>
+    <message>
+      <source>Peaking filter</source>
+      <translation>ตัวกรองรูปทรงระฆัง</translation>
+      <extracomment>Bell-shaped parametric EQ filter centered at its frequency; this is not a peak/clipping indicator.</extracomment>
     </message>
     <message>
       <source>Piano</source>
@@ -2268,6 +2288,11 @@ Import into your library?</source>
     <message>
       <source>Speaker type</source>
       <translation>ประเภทลำโพง</translation>
+    </message>
+    <message>
+      <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
+      <translation>Spinorama AutoEQ: เกนการแก้ไขจำกัดไว้ที่ %1 และ Q ที่ %2 การเพิ่มเกนต่ำกว่า %3 จะถูกละเว้น พรีเซ็ตการฟังของคุณจะถูกเพิ่มแยกต่างหาก</translation>
+      <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
     </message>
     <message>
       <source>Start cable capture</source>

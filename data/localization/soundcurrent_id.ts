@@ -1041,6 +1041,11 @@ Impor ke pustaka Anda?</translation>
       <translation>High-shelf</translation>
     </message>
     <message>
+      <source>High-shelf filter</source>
+      <translation>Filter shelving frekuensi tinggi</translation>
+      <extracomment>Shelving EQ: raise/lower the high-frequency region. Do not translate as high-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
     </message>
@@ -1303,6 +1308,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Low-shelf</translation>
     </message>
     <message>
+      <source>Low-shelf filter</source>
+      <translation>Filter shelving frekuensi rendah</translation>
+      <extracomment>Shelving EQ: raise/lower the low-frequency region. Do not translate as low-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Produsen</translation>
     </message>
@@ -1346,6 +1356,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Measurement stopped.</source>
       <translation>Pengukuran dihentikan.</translation>
+    </message>
+    <message>
+      <source>Measurement: %1</source>
+      <translation>Pengukuran: %1</translation>
+      <extracomment>Label for verbatim published speaker measurement attribution, not a new calibration run.</extracomment>
     </message>
     <message>
       <source>Metal</source>
@@ -1631,6 +1646,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Peaking</source>
       <translation>Peaking</translation>
+    </message>
+    <message>
+      <source>Peaking filter</source>
+      <translation>Filter berbentuk lonceng</translation>
+      <extracomment>Bell-shaped parametric EQ filter centered at its frequency; this is not a peak/clipping indicator.</extracomment>
     </message>
     <message>
       <source>Piano</source>
@@ -2268,6 +2288,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Jenis speaker</translation>
+    </message>
+    <message>
+      <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
+      <translation>Spinorama AutoEQ: gain koreksi dibatasi hingga %1 dan Q hingga %2. Boost di bawah %3 dihilangkan. Preset mendengarkan Anda ditambahkan secara terpisah.</translation>
+      <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
     </message>
     <message>
       <source>Start cable capture</source>

@@ -1041,6 +1041,11 @@ Import into your library?</source>
       <translation>Поличковий фільтр високих частот</translation>
     </message>
     <message>
+      <source>High-shelf filter</source>
+      <translation>Високочастотний поличковий фільтр</translation>
+      <extracomment>Shelving EQ: raise/lower the high-frequency region. Do not translate as high-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Hip-Hop</source>
       <translation>Хіп-хоп</translation>
     </message>
@@ -1303,6 +1308,11 @@ Import into your library?</source>
       <translation>Поличковий фільтр низьких частот</translation>
     </message>
     <message>
+      <source>Low-shelf filter</source>
+      <translation>Низькочастотний поличковий фільтр</translation>
+      <extracomment>Shelving EQ: raise/lower the low-frequency region. Do not translate as low-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Виробник</translation>
     </message>
@@ -1346,6 +1356,11 @@ Import into your library?</source>
     <message>
       <source>Measurement stopped.</source>
       <translation>Вимірювання зупинено.</translation>
+    </message>
+    <message>
+      <source>Measurement: %1</source>
+      <translation>Вимірювання: %1</translation>
+      <extracomment>Label for verbatim published speaker measurement attribution, not a new calibration run.</extracomment>
     </message>
     <message>
       <source>Metal</source>
@@ -1631,6 +1646,11 @@ Import into your library?</source>
     <message>
       <source>Peaking</source>
       <translation>Дзвоновий фільтр</translation>
+    </message>
+    <message>
+      <source>Peaking filter</source>
+      <translation>Дзвоновий фільтр</translation>
+      <extracomment>Bell-shaped parametric EQ filter centered at its frequency; this is not a peak/clipping indicator.</extracomment>
     </message>
     <message>
       <source>Piano</source>
@@ -2268,6 +2288,11 @@ Import into your library?</source>
     <message>
       <source>Speaker type</source>
       <translation>Тип акустичної системи</translation>
+    </message>
+    <message>
+      <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
+      <translation>Spinorama AutoEQ: підсилення корекції обмежене до %1, а Q — до %2. Підсилення нижче %3 пропускаються. Вашу слухацьку передустановку додано окремо.</translation>
+      <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
     </message>
     <message>
       <source>Start cable capture</source>

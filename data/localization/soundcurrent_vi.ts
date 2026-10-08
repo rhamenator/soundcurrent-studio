@@ -1041,6 +1041,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>High shelf</translation>
     </message>
     <message>
+      <source>High-shelf filter</source>
+      <translation>Bộ lọc shelving tần số cao</translation>
+      <extracomment>Shelving EQ: raise/lower the high-frequency region. Do not translate as high-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
     </message>
@@ -1303,6 +1308,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Low shelf</translation>
     </message>
     <message>
+      <source>Low-shelf filter</source>
+      <translation>Bộ lọc shelving tần số thấp</translation>
+      <extracomment>Shelving EQ: raise/lower the low-frequency region. Do not translate as low-pass; it is not a cutoff filter.</extracomment>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Nhà sản xuất</translation>
     </message>
@@ -1346,6 +1356,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Measurement stopped.</source>
       <translation>Đã dừng đo.</translation>
+    </message>
+    <message>
+      <source>Measurement: %1</source>
+      <translation>Phép đo: %1</translation>
+      <extracomment>Label for verbatim published speaker measurement attribution, not a new calibration run.</extracomment>
     </message>
     <message>
       <source>Metal</source>
@@ -1631,6 +1646,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Peaking</source>
       <translation>Peaking</translation>
+    </message>
+    <message>
+      <source>Peaking filter</source>
+      <translation>Bộ lọc hình chuông</translation>
+      <extracomment>Bell-shaped parametric EQ filter centered at its frequency; this is not a peak/clipping indicator.</extracomment>
     </message>
     <message>
       <source>Piano</source>
@@ -2268,6 +2288,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Loại loa</translation>
+    </message>
+    <message>
+      <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
+      <translation>Spinorama AutoEQ: độ lợi hiệu chỉnh được giới hạn ở %1 và Q ở %2. Các mức tăng dưới %3 được bỏ qua. Thiết lập nghe của bạn được cộng riêng.</translation>
+      <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
     </message>
     <message>
       <source>Start cable capture</source>
