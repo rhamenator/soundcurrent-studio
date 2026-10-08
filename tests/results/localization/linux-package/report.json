@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-08",
+  "sourceCommit": "94aad56",
+  "packagePath": "/home/rich/Downloads/SoundCurrent-localization-qa/linux-f425218-94aad56/soundcurrent-studio_1.1.0_amd64.deb",
+  "sha256": "f06ab91c4b898bb6c790b8a4aab88f3c8c8c47e44e838711fc905cb48d63e08c",
+  "distribution": "Ubuntu 26.04.1 LTS",
+  "vm": "soundcurrent-ubuntu-qa; independent QCOW2 without backing image",
+  "previousVersion": "0.8.5",
+  "candidateVersion": "1.1.0 unreleased localization preview",
+  "checks": [
+    "In-place DEB upgrade from prior installed version",
+    "33 installed offscreen locale/control fixtures loaded expected catalogs",
+    "Arabic UI/German decimal-format live slider check",
+    "Same-version update, apt removal and reinstallation",
+    "Settings/profile fixture hashes unchanged through lifecycle",
+    "Unknown user file preserved through update and removal",
+    "Reinstalled UI/control fixture passed"
+  ],
+  "nativeReviewed": false,
+  "limitations": [
+    "Offscreen installed fixtures do not constitute additional visual/native review",
+    "Preservation checks use owned fixture files, not exhaustive actual user data comparison",
+    "Fedora/RHEL RPM lifecycle and interactive installer remain pending",
+    "No release authorization implied"
+  ],
+  "lifecycleResult": "PASS: soundcurrent-studio update/remove/reinstall, settings/profile fixtures and unknown user file preserved"
+}
