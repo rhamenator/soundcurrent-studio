@@ -407,3 +407,7 @@ Swahili now has 328/527 populated current catalog entries. Added import validati
 ### Swahili: fifth existing-catalog batch
 
 Swahili now has 401/527 populated current catalog entries. Added output controls, startup guidance, profile-source links and rendering messages. Both apps passed three focused Linux checks. Translations remain unverified; Windows and visual qualification are pending. Omitted source strings remain scheduled for the second pass.
+
+### Swahili: sixth existing-catalog batch
+
+Swahili now has 466/527 populated current catalog entries. Added save/reset actions, room measurement and microphone-routing guidance. Both apps passed three focused Linux checks. Translations remain unverified; Windows and visual qualification are pending. Omitted source strings remain scheduled for the second pass.
