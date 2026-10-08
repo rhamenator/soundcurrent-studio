@@ -67,3 +67,18 @@ editor, route labels and meters. Generic channel indices use the selected number
 locale. Center channel has a separate translation key from neutral balance
 Center; LFE stays the standard abbreviation. Display text never replaces the
 canonical persisted name or role ID. Legacy/custom names remain verbatim.
+
+### Windows audio helper language
+
+The app passes the catalog it actually loaded as a separate `-Language`
+argument to cable/native audio setup. This follows a command-line language
+override without changing persisted language preferences. The shared argument
+builder retains the script path, requester ID, quiet mode and existing action.
+Standalone shortcuts may omit the argument and use saved preference/system UI
+culture through the helper lookup. Unsupported helper catalog tags fall back
+to English; the development pseudo-locales are not exported as helper packs.
+
+Helper translation source keys are compared ordinally and case-sensitively.
+Unknown external text, including different capitalization, is kept verbatim.
+The common dialog title is localized; most helper message bodies and NSIS
+pages still need translation and actual Windows package qualification.
