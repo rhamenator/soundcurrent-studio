@@ -1,34 +1,34 @@
 {
-  "stage": "Greek and Turkish initial catalog batch",
+  "stage": "Greek/Turkish recovery and effects batch",
   "catalogs": [
     {
       "tag": "el",
       "name": "Ελληνικά",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "935610b9f6dff115bb285ac0c4142780f1d6ed2c068fc299fd58589e4db38c91",
-      "qmSha256": "5cf28cd088248fe3c3c13b789bce449cb14215fc8231e06b413954d1941b70c1"
+      "tsSha256": "1a490c69dbf5ea010ab312f1802f243255ea609728faefee066c8f87297fe319",
+      "qmSha256": "fedb0889ff172dc45f12205c310002b42b3f15c34e350d368b31de3dc792dde7"
     },
     {
       "tag": "tr",
       "name": "Türkçe",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "5de7d87fbc5919ed6dd6fb9169da9d1616a4a875d7dcc4a7d05b88b7e9720ace",
-      "qmSha256": "6b9e522005de2d1ca310d7c12be58ba35a7e1c6e09cc02337bb4eb0e68898b07"
+      "tsSha256": "86d2122912ce8d26e551e86b884f5b4aea5e996b7333df0c4c463a5395bc5018",
+      "qmSha256": "291163a29a38958080d5fe6f272b93e6d80bc7c80488b44d4100c56d09fd83e9"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Greek/Turkish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-el-tr-first-tests.log"
+    "log": "/tmp/soundcurrent-studio-el-tr-second-tests.log"
   },
-  "review": "Contextual AI review; unverified. Distinguishes gain, headroom and clipping, ambience damping and duration; model prompts retain measured-correction requirements.",
+  "review": "Contextual AI review; unverified. Errors preserve refused processing and saved state. Render cancellation specifically means output-file creation. Wet mix means effect contribution, distinct from overall gain.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Greek, Turkish and 18 other target catalogs incomplete."
