@@ -1,24 +1,24 @@
 {
-  "stage": "Japanese second catalog batch",
+  "stage": "Japanese third catalog batch",
   "catalogs": [
     {
       "tag": "ja",
       "name": "日本語",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "84fce4dc0255c812f17b34707b7a7f8848ec41422b2ea8f16b666e22ddffb436",
-      "qmSha256": "c7d149940b4907b100a7e6d5e3e23e60723fe24fbf34dc29932d6b63c9502d39"
+      "tsSha256": "1c02f765d48694827ec8a82a199bbfe7f7346ecc1af815f126146df3808078e6",
+      "qmSha256": "d00158c01398333381c700a73b64efcd5cffc1e2ff0d00dafe0d7bdcf4bd7c82"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Localization assertions, Japanese actual MainWindow offscreen smoke test, structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-ja-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-ja-third-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–159: calibration evidence, driver setup, update/quit behavior, safe failure messages, preset saving and delay controls. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–239: routing and quit behavior, calibration limitations, equipment editing, estimated metering, dynamics and delay controls. Filter limits, file patterns and physical L/R labels preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Japanese catalog incomplete; seven target languages still incomplete. Omitted source strings reserved for the second pass."
