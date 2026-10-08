@@ -231,6 +231,10 @@ Importovat do vaší knihovny?</translation>
       <translation>Použít doporučené nastavení EQ</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Zvukový most se nespustil</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Instalace zvukového ovladače</translation>
     </message>
@@ -1005,8 +1009,16 @@ Importovat do vaší knihovny?</translation>
       <translation>Vstup má více kanálů než rozložení Studio; zvolte odpovídající nebo větší rozložení</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Nainstalujte SoundCurrent Audio pomocí nastavení zvukového ovladače a poté aplikaci znovu otevřete, aby se aktivovala mikrofonní cesta.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Nové balíčky nainstalujte přes tuto verzi — odinstalace není potřeba. Předvolby a profily se zachovají. Uložte svou práci, použijte Ukončit (zavřením okna aplikace zůstane spuštěná), nainstalujte aktualizaci a znovu ji otevřete.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Nainstalujte zvukovou cestu Windows pomocí nastavení zvukového ovladače a poté aplikaci znovu otevřete.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Interface language</source>
       <translation>Jazyk rozhraní</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Neplatné nastavení Studia</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Neplatné nastavení ekvalizéru</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Neplatný naměřený profil zesilovače. Vyžaduje model, zdroj měření přes HTTPS, podmínky a 1–16 filtrů PK/LS/HS v povolených rozsazích. Formát profilu je uveden v README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Neplatné nastavení mikrofonu</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Mikrofonní EQ je vypnutý.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Zvukový most mikrofonu se nespustil</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Importovat do vaší knihovny?</translation>
       <translation>Vybraný výstup byl odpojen. Přepnuto na automatický výstup.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>Vybrané reproduktory jsou odpojené</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Samostatné tiché tóny</translation>
     </message>
@@ -2034,6 +2066,10 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Zapnout ekvalizér</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Před použitím jiného rozložení kanálů pro zpracování v reálném čase vypněte přehrávání</translation>
     </message>
     <message>
       <source>Type</source>

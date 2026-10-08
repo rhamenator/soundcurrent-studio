@@ -231,6 +231,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Käytä ehdotettua taajuuskorjausta</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Äänisilta ei käynnistynyt</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Ääniajurin asennus</translation>
     </message>
@@ -1005,8 +1009,16 @@ Tuodaanko kirjastoon?</translation>
       <translation>Tulossa on enemmän kanavia kuin Studio-kokoonpanossa; valitse vastaava tai suurempi kokoonpano</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Asenna SoundCurrent Audio ääniohjaimen asennustoiminnolla ja avaa sitten sovellus uudelleen mikrofonin äänireitin ottamiseksi käyttöön.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Asenna uudet paketit tämän version päälle — poistamista ei tarvita. Esiasetukset ja profiilit säilytetään. Tallenna työsi, valitse Lopeta (ikkunan sulkeminen jättää sovelluksen käyntiin), asenna päivitys ja avaa uudelleen.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Asenna Windowsin äänireitti ääniohjaimen asennustoiminnolla ja avaa sitten sovellus uudelleen.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Interface language</source>
       <translation>Käyttöliittymän kieli</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Virheelliset Studio-asetukset</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Virheelliset taajuuskorjaimen asetukset</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Virheellinen mitattu vahvistinprofiili. Vaatii mallin, HTTPS-mittauslähteen, olosuhteet ja 1–16 rajoissa olevaa PK/LS/HS-suodatinta. Katso profiilimuoto README-tiedostosta.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Virheellinen mikrofonin säätö</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Mikrofonin taajuuskorjaus on pois käytöstä.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Mikrofonin äänisilta ei käynnistynyt</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Valittu lähtölaite irrotettiin. Vaihdettiin automaattiseen lähtöön.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>Valitut kaiuttimet on irrotettu</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Erilliset hiljaiset äänet</translation>
     </message>
@@ -2034,6 +2066,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Ota taajuuskorjain käyttöön</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Poista toisto käytöstä ennen toisen kanava-asettelun käyttöönottoa reaaliaikaista käsittelyä varten</translation>
     </message>
     <message>
       <source>Type</source>

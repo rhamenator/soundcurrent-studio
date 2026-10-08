@@ -231,6 +231,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Tumia EQ iliyopendekezwa</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Daraja la sauti halikuanza</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Usanidi wa kiendeshi cha sauti</translation>
     </message>
@@ -1005,8 +1009,16 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Ingizo lina chaneli nyingi kuliko mpangilio wa Studio; chagua mpangilio unaolingana au mkubwa zaidi</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Sakinisha SoundCurrent Audio kupitia usanidi wa kiendeshi cha sauti, kisha ufungue programu tena ili kuwasha njia ya maikrofoni.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Sakinisha vifurushi vipya juu ya toleo hili — hakuna haja ya kuondoa programu. Mipangilio iliyowekwa tayari na wasifu huhifadhiwa. Hifadhi kazi yako, tumia Toka (kufunga dirisha huacha programu ikiendelea kufanya kazi), sakinisha sasisho, kisha ufungue tena.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Sakinisha njia ya sauti ya Windows kupitia usanidi wa kiendeshi cha sauti, kisha ufungue programu tena.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Interface language</source>
       <translation>Lugha ya kiolesura</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Mipangilio ya Studio si sahihi</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Mipangilio ya kisawazishi si sahihi</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Wasifu wa amplifaya uliopimwa si sahihi. Unahitaji modeli, chanzo cha vipimo cha HTTPS, masharti, na vichujio 1–16 vya PK/LS/HS vyenye thamani ndani ya mipaka. Angalia muundo wa wasifu katika README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Marekebisho ya maikrofoni si sahihi</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>EQ ya maikrofoni imezimwa.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Daraja la sauti ya maikrofoni halikuanza</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Tokeo lililochaguliwa limekatishwa. Imehamia kwenye tokeo la kiotomatiki.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>Spika zilizochaguliwa zimekatishwa</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Toni hafifu tofauti</translation>
     </message>
@@ -2034,6 +2066,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Washa kisawazishi</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Zima uchezaji kabla ya kutumia mpangilio tofauti wa chaneli kwa uchakataji wa wakati halisi</translation>
     </message>
     <message>
       <source>Type</source>

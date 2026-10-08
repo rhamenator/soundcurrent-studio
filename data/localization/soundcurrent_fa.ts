@@ -231,6 +231,10 @@ Import into your library?</source>
       <translation>اعمال اکولایزر پیشنهادی</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>پل صوتی شروع به کار نکرد</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>راه‌اندازی درایور صدا</translation>
     </message>
@@ -1005,8 +1009,16 @@ Import into your library?</source>
       <translation>ورودی کانال‌های بیشتری از چیدمان Studio دارد؛ یک چیدمان هم‌اندازه یا بزرگ‌تر انتخاب کنید</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>SoundCurrent Audio را از طریق تنظیم راه‌انداز صوتی نصب کنید، سپس برنامه را دوباره باز کنید تا مسیر میکروفون فعال شود.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>بسته‌های جدید را روی این نسخه نصب کنید — نیازی به حذف نصب نیست. پیش‌تنظیم‌ها و پروفایل‌ها حفظ می‌شوند. کار خود را ذخیره کنید، از خروج استفاده کنید (بستن پنجره برنامه را در حال اجرا نگه می‌دارد)، به‌روزرسانی را نصب کنید و دوباره باز کنید.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>مسیر صوتی Windows را از طریق تنظیم راه‌انداز صوتی نصب کنید، سپس برنامه را دوباره باز کنید.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Import into your library?</source>
     <message>
       <source>Interface language</source>
       <translation>زبان رابط</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>تنظیمات Studio نامعتبر است</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>تنظیمات اکولایزر نامعتبر است</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Import into your library?</source>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>پروفایل اندازه‌گیری‌شده تقویت‌کننده نامعتبر است. مدل، منبع اندازه‌گیری HTTPS، شرایط و 1–16 فیلتر PK/LS/HS در محدوده مجاز لازم است. قالب پروفایل را در README ببینید.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>تنظیم میکروفون نامعتبر است</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Import into your library?</source>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>اکولایزر میکروفون خاموش است.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>پل صوتی میکروفون شروع به کار نکرد</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Import into your library?</source>
       <translation>خروجی انتخاب‌شده جدا شد. به انتخاب خودکار خروجی تغییر یافت.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>بلندگوهای انتخاب‌شده متصل نیستند</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>صداهای کم‌صدای جداگانه</translation>
     </message>
@@ -2034,6 +2066,10 @@ Import into your library?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>روشن کردن اکولایزر</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>پیش از اعمال چیدمان کانال متفاوت برای پردازش بلادرنگ، پخش را خاموش کنید</translation>
     </message>
     <message>
       <source>Type</source>

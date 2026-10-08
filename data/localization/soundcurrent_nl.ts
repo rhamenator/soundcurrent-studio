@@ -231,6 +231,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Voorgestelde EQ toepassen</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>De audiobrug is niet gestart</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Audiodriver instellen</translation>
     </message>
@@ -1005,8 +1009,16 @@ Importeren in uw bibliotheek?</translation>
       <translation>De invoer heeft meer kanalen dan de Studio-indeling; kies een gelijke of grotere indeling</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Installeer SoundCurrent Audio via de installatie van het audiostuurprogramma en open de app opnieuw om de microfoonroute in te schakelen.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Installeer nieuwe pakketten over deze versie; verwijderen is niet nodig. Presets en profielen blijven behouden. Sla uw werk op, gebruik Afsluiten (het sluiten van het venster laat de app actief), installeer de update en open de app opnieuw.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Installeer de Windows-audioroute via de installatie van het audiostuurprogramma en open de app opnieuw.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Interface language</source>
       <translation>Interfacetaal</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Ongeldige Studio-instellingen</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Ongeldige equalizerinstellingen</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Ongeldig gemeten versterkerprofiel. Vereist model, HTTPS-meetbron, omstandigheden en 1–16 PK/LS/HS-filters binnen de grenzen. Zie het profielformaat in de README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Ongeldige microfoonafstelling</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Microfoon-EQ is uitgeschakeld.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>De audiobrug voor de microfoon is niet gestart</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Geselecteerde uitgang is losgekoppeld. Overgeschakeld op automatische uitgang.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>De geselecteerde luidsprekers zijn losgekoppeld</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Afzonderlijke tonen op laag volume</translation>
     </message>
@@ -2034,6 +2066,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Equalizer inschakelen</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Schakel het afspelen uit voordat u een andere kanaalindeling voor live verwerking toepast</translation>
     </message>
     <message>
       <source>Type</source>

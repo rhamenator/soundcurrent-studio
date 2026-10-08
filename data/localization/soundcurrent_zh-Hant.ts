@@ -231,6 +231,10 @@ Import into your library?</source>
       <translation>套用建議的等化設定</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>音訊橋接未能啟動</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>音訊驅動程式安裝</translation>
     </message>
@@ -1005,8 +1009,16 @@ Import into your library?</source>
       <translation>輸入聲道數多於 Studio 配置；請選擇相符或更大的配置</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>請透過音訊驅動程式設定安裝 SoundCurrent Audio，然後重新開啟應用程式以啟用麥克風音訊路徑。</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>在此版本上直接安裝新套件 — 無需解除安裝。預設及設定檔會保留。請儲存工作，使用「結束」（關閉視窗會讓應用程式繼續執行），安裝更新，然後重新開啟。</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>請透過音訊驅動程式設定安裝 Windows 音訊路徑，然後重新開啟應用程式。</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Import into your library?</source>
     <message>
       <source>Interface language</source>
       <translation>介面語言</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Studio 設定無效</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>等化器設定無效</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Import into your library?</source>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>實測擴大機設定檔無效。需要型號、HTTPS 測量來源、測量條件及 1–16 個在範圍內的 PK/LS/HS 濾波器。請參閱 README 中的設定檔格式。</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>麥克風調整設定無效</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Import into your library?</source>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>麥克風等化器已關閉。</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>麥克風音訊橋接未能啟動</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Import into your library?</source>
       <translation>所選輸出已中斷連線。已切換為自動選擇輸出。</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>所選喇叭已中斷連線</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>分開的低音量音調</translation>
     </message>
@@ -2034,6 +2066,10 @@ Import into your library?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>開啟等化器</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>套用不同的即時處理聲道配置前，請先關閉播放</translation>
     </message>
     <message>
       <source>Type</source>

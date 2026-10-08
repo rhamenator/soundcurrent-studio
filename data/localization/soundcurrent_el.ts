@@ -231,6 +231,10 @@ Import into your library?</source>
       <translation>Εφαρμογή προτεινόμενης ισοστάθμισης</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Η γέφυρα ήχου δεν ξεκίνησε</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Εγκατάσταση οδηγού ήχου</translation>
     </message>
@@ -1005,8 +1009,16 @@ Import into your library?</source>
       <translation>Η είσοδος έχει περισσότερα κανάλια από τη διάταξη Studio· επιλέξτε αντίστοιχη ή μεγαλύτερη διάταξη</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Εγκαταστήστε το SoundCurrent Audio μέσω της ρύθμισης προγράμματος οδήγησης ήχου και ανοίξτε ξανά την εφαρμογή για να ενεργοποιήσετε τη διαδρομή μικροφώνου.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Εγκαταστήστε τα νέα πακέτα πάνω από αυτή την έκδοση — δεν χρειάζεται απεγκατάσταση. Οι προρυθμίσεις και τα προφίλ διατηρούνται. Αποθηκεύστε την εργασία σας, τερματίστε την εφαρμογή (το κλείσιμο του παραθύρου την αφήνει σε λειτουργία), εγκαταστήστε την ενημέρωση και ανοίξτε την ξανά.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Εγκαταστήστε τη διαδρομή ήχου των Windows μέσω της ρύθμισης προγράμματος οδήγησης ήχου και ανοίξτε ξανά την εφαρμογή.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Import into your library?</source>
     <message>
       <source>Interface language</source>
       <translation>Γλώσσα διεπαφής</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Μη έγκυρες ρυθμίσεις Studio</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Μη έγκυρες ρυθμίσεις ισοσταθμιστή</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Import into your library?</source>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Μη έγκυρο μετρημένο προφίλ ενισχυτή. Απαιτούνται μοντέλο, πηγή μέτρησης HTTPS, συνθήκες και 1–16 φίλτρα PK/LS/HS εντός ορίων. Δείτε τη μορφή προφίλ στο README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Μη έγκυρη ρύθμιση μικροφώνου</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Import into your library?</source>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Το EQ μικροφώνου είναι ανενεργό.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Η γέφυρα ήχου μικροφώνου δεν ξεκίνησε</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Import into your library?</source>
       <translation>Η επιλεγμένη έξοδος αποσυνδέθηκε. Έγινε μετάβαση στην αυτόματη έξοδο.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>Τα επιλεγμένα ηχεία έχουν αποσυνδεθεί</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Ξεχωριστοί ήσυχοι τόνοι</translation>
     </message>
@@ -2034,6 +2066,10 @@ Import into your library?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>Ενεργοποίηση ισοσταθμιστή</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Απενεργοποιήστε την αναπαραγωγή πριν εφαρμόσετε διαφορετική διάταξη καναλιών για επεξεργασία σε πραγματικό χρόνο</translation>
     </message>
     <message>
       <source>Type</source>

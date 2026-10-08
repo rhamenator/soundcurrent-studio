@@ -231,6 +231,10 @@ Importálja a könyvtárba?</translation>
       <translation>Javasolt EQ alkalmazása</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>A hanghíd nem indult el</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Hangillesztőprogram beállítása</translation>
     </message>
@@ -1005,8 +1009,16 @@ Importálja a könyvtárba?</translation>
       <translation>A bemenet több csatornát tartalmaz, mint a Studio-elrendezés; válasszon megfelelő vagy nagyobb elrendezést</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Telepítse a SoundCurrent Audio összetevőt a hangillesztőprogram beállításával, majd nyissa meg újra az alkalmazást a mikrofon hangútjának engedélyezéséhez.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Telepítse az új csomagokat erre a verzióra — eltávolítás nem szükséges. Az előbeállítások és profilok megmaradnak. Mentse munkáját, válassza a Kilépés lehetőséget (az ablak bezárása futva hagyja), telepítse a frissítést, majd nyissa meg újra.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Telepítse a Windows hangútját a hangillesztőprogram beállításával, majd nyissa meg újra az alkalmazást.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Interface language</source>
       <translation>Felület nyelve</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Érvénytelen Studio-beállítások</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Érvénytelen hangszínszabályzó-beállítások</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Érvénytelen mért erősítőprofil. Modell, HTTPS-mérési forrás, körülmények és 1–16 határokon belüli PK/LS/HS-szűrő szükséges. A profilformátumot lásd a README-ben.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Érvénytelen mikrofonbeállítás</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>A mikrofon-EQ ki van kapcsolva.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>A mikrofon hanghídja nem indult el</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Importálja a könyvtárba?</translation>
       <translation>A kiválasztott kimenetet leválasztották. Átváltás automatikus kimenetre.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>A kiválasztott hangszórók nincsenek csatlakoztatva</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Különálló halk hangok</translation>
     </message>
@@ -2034,6 +2066,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Hangszínszabályzó bekapcsolása</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Kapcsolja ki a lejátszást, mielőtt másik csatornaelrendezést alkalmaz a valós idejű feldolgozáshoz</translation>
     </message>
     <message>
       <source>Type</source>

@@ -231,6 +231,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Vorgeschlagenen EQ anwenden</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Die Audiobrücke wurde nicht gestartet</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Audiotreiber einrichten</translation>
     </message>
@@ -1005,8 +1009,16 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Die Eingabe hat mehr Kanäle als die Studio-Konfiguration; wählen Sie eine passende oder größere Konfiguration</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Installieren Sie SoundCurrent Audio über „Audiotreiber einrichten“ und öffnen Sie die App erneut, um den Mikrofonweg zu aktivieren.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Installieren Sie neue Pakete über diese Version, ohne sie vorher zu deinstallieren. Presets und Profile bleiben erhalten. Speichern Sie Ihre Arbeit, beenden Sie die App (beim Schließen des Fensters läuft sie weiter), installieren Sie das Update und öffnen Sie die App erneut.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Installieren Sie den Windows-Audioweg über „Audiotreiber einrichten“ und öffnen Sie die App erneut.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Interface language</source>
       <translation>Oberflächensprache</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Ungültige Studio-Einstellungen</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Ungültige Equalizer-Einstellungen</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Ungültiges gemessenes Verstärkerprofil. Erforderlich sind Modell, HTTPS-Messquelle, Bedingungen und 1–16 PK/LS/HS-Filter innerhalb der Grenzen. Das Profilformat steht in der README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Ungültige Mikrofonabstimmung</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Der Mikrofon-EQ ist aus.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Die Mikrofon-Audiobrücke wurde nicht gestartet</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Der ausgewählte Ausgang wurde getrennt. Auf automatische Ausgangswahl umgeschaltet.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>Die ausgewählten Lautsprecher sind nicht verbunden</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Einzelne leise Töne</translation>
     </message>
@@ -2034,6 +2066,10 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Equalizer einschalten</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Schalten Sie die Wiedergabe aus, bevor Sie eine andere Kanalbelegung für die Live-Verarbeitung anwenden</translation>
     </message>
     <message>
       <source>Type</source>

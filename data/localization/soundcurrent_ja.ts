@@ -231,6 +231,10 @@ Import into your library?</source>
       <translation>推奨 EQ を適用</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>オーディオブリッジを開始できませんでした</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>オーディオドライバー設定</translation>
     </message>
@@ -1005,8 +1009,16 @@ Import into your library?</source>
       <translation>入力のチャンネル数が Studio のレイアウトを超えています。同じか、より多いチャンネル数のレイアウトを選んでください</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>オーディオドライバーのセットアップから SoundCurrent Audio をインストールし、アプリを開き直してマイクの音声経路を有効にしてください。</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>このバージョンに上書きして新しいパッケージをインストールできます。アンインストールは不要で、プリセットとプロファイルは保持されます。作業を保存し、「終了」を選択して（ウィンドウを閉じるだけでは動作が続きます）、更新をインストールしてから開き直してください。</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>オーディオドライバーのセットアップから Windows の音声経路をインストールし、アプリを開き直してください。</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Import into your library?</source>
     <message>
       <source>Interface language</source>
       <translation>表示言語</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Studio の設定が無効です</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>イコライザーの設定が無効です</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Import into your library?</source>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>測定済みのアンププロファイルが無効です。モデル、HTTPS の測定出典、測定条件、および制限範囲内の PK/LS/HS フィルター 1～16 個が必要です。README のプロファイル形式を参照してください。</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>マイクの調整設定が無効です</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Import into your library?</source>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>マイク EQ はオフです。</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>マイクのオーディオブリッジを開始できませんでした</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Import into your library?</source>
       <translation>選択した出力が取り外されました。自動出力に切り替えました。</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>選択したスピーカーが接続されていません</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>個別の低音量トーン</translation>
     </message>
@@ -2034,6 +2066,10 @@ Import into your library?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>イコライザーをオン</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>リアルタイム処理のチャンネル構成を変更する前に、再生をオフにしてください</translation>
     </message>
     <message>
       <source>Type</source>

@@ -21,7 +21,7 @@ QString standardCable(bool capture) {
         if (name.startsWith(capture ? "CABLE Output (" : "CABLE Input (", Qt::CaseInsensitive))
             return QString::fromStdWString(d.id);
     }
-    throw std::runtime_error("Install the Windows audio route using Audio driver setup, then reopen the app.");
+    throw std::runtime_error(SC_TR("Install the Windows audio route using Audio driver setup, then reopen the app.").toStdString());
 }
 QString defaultSink() {
     const auto id = QString::fromStdWString(soundcurrent::windowsDefaultOutputId());
@@ -72,9 +72,9 @@ public:
     void setStudio(const soundcurrent::studio::Session &s) {
         if(s.offline)return;
         if(active()&&s.engine.channels.size()!=session_.engine.channels.size())
-            throw std::runtime_error("Turn playback off before applying a different live channel layout");
+            throw std::runtime_error(SC_TR("Turn playback off before applying a different live channel layout").toStdString());
         auto filters=nativeBands(bands_);
-        if(!bridge_.setStudio(s.effective(filters,gain_,balance_),s.routing))throw std::runtime_error("Invalid Studio settings");
+        if(!bridge_.setStudio(s.effective(filters,gain_,balance_),s.routing))throw std::runtime_error(SC_TR("Invalid Studio settings").toStdString());
         session_=s;
     }
     std::vector<float> levels() { return bridge_.channelLevels(); }
@@ -82,7 +82,7 @@ public:
         stop();
         const auto available = devices();
         if (std::none_of(available.begin(), available.end(), [&](const Device &d) { return d.name == device.name; }))
-            throw std::runtime_error("Selected speakers are disconnected");
+            throw std::runtime_error(SC_TR("Selected speakers are disconnected").toStdString());
         const auto own = soundCurrentOutput();
         const bool loopback = !own.isEmpty();
         const auto render = loopback ? own : standardCable(false);
@@ -94,7 +94,7 @@ public:
             route_ = std::make_unique<ManagedWindowsRoute>(false, render.toStdWString(),
                                                                        device.name.toStdWString(), true, [this] { bridge_.stop(); });
             if (!bridge_.start(capture.toStdWString(), device.name.toStdWString(), false, loopback))
-                throw std::runtime_error(bridge_.error().empty() ? "Audio bridge did not start" : bridge_.error());
+                throw std::runtime_error(bridge_.error().empty() ? SC_TR("Audio bridge did not start").toStdString() : bridge_.error());
             target_ = device;
             playbackMeterSource = &bridge_;
         } catch (...) { stop(); throw; }
@@ -102,7 +102,7 @@ public:
     void update(const Bands &bands, double gain = 0, int balance = 0) {
         auto filters = nativeBands(bands);
         if (!bridge_.setStudio(session_.effective(filters,gain,balance),session_.routing))
-            throw std::runtime_error("Invalid equalizer settings");
+            throw std::runtime_error(SC_TR("Invalid equalizer settings").toStdString());
         bands_ = bands;
         gain_=gain;balance_=balance;
     }
@@ -166,10 +166,10 @@ public:
         if (requested_.isEmpty() && !cables.isEmpty()) selected = cables.first();
         else for (const auto &cable : cables) if (cable.render == requested_) selected = cable;
         if (selected.render.isEmpty())
-            throw std::runtime_error("Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.");
+            throw std::runtime_error(SC_TR("Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.").toStdString());
         update(adjustments, gain);
         if (!bridge_.start(device.name.toStdWString(), selected.render.toStdWString(), true))
-            throw std::runtime_error(bridge_.error().empty() ? "Microphone audio bridge did not start" : bridge_.error());
+            throw std::runtime_error(bridge_.error().empty() ? SC_TR("Microphone audio bridge did not start").toStdString() : bridge_.error());
         try {
             route_ = std::make_unique<ManagedWindowsRoute>(true, selected.capture.toStdWString(),
                                                                        device.name.toStdWString(), false, [this] { bridge_.stop(); });
@@ -184,7 +184,7 @@ public:
             bands.append({double(kMicFrequencies[i]), (adjustments.correction.isEmpty() ? kNaturalMic[i] : 0.0) + adjustments[i], 0.8, types[i]});
         bands.append(adjustments.correction);
         if (!bridge_.setProfile(nativeBands(bands), gain, 0, true, false))
-            throw std::runtime_error("Invalid microphone tuning");
+            throw std::runtime_error(SC_TR("Invalid microphone tuning").toStdString());
     }
     void stop() { bridge_.stop(); route_.reset(); target_ = {}; }
     ~MicrophoneEngine() { stop(); }

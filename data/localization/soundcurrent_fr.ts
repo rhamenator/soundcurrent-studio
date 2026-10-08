@@ -231,6 +231,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Appliquer l’égalisation proposée</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Le pont audio n’a pas démarré</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Configuration du pilote audio</translation>
     </message>
@@ -1005,8 +1009,16 @@ Importer dans votre bibliothèque ?</translation>
       <translation>L’entrée contient plus de canaux que la configuration Studio ; choisissez une configuration correspondante ou plus grande</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Installez SoundCurrent Audio via la configuration du pilote audio, puis rouvrez l’application pour activer le routage du microphone.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Installez les nouveaux paquets par-dessus cette version, sans désinstallation préalable. Les préréglages et les profils sont conservés. Enregistrez votre travail, quittez l’application (fermer la fenêtre la laisse active), installez la mise à jour, puis relancez-la.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Installez le routage audio Windows via la configuration du pilote audio, puis rouvrez l’application.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Interface language</source>
       <translation>Langue de l’interface</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Réglages Studio non valides</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Réglages de l’égaliseur non valides</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Profil d’amplificateur mesuré invalide. Le modèle, une source de mesure HTTPS, les conditions et 1 à 16 filtres PK/LS/HS dans les limites sont requis. Consultez le format de profil dans le README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Réglage du microphone non valide</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>L’égalisation du microphone est désactivée.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Le pont audio du microphone n’a pas démarré</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>La sortie sélectionnée a été débranchée. Passage à la sélection automatique de sortie.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>Les enceintes sélectionnées sont déconnectées</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Tonalités séparées à faible niveau</translation>
     </message>
@@ -2034,6 +2066,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Activer l’égaliseur</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Désactivez la lecture avant d’appliquer une autre disposition de canaux pour le traitement en direct</translation>
     </message>
     <message>
       <source>Type</source>

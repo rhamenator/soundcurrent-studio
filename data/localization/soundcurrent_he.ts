@@ -231,6 +231,10 @@ Import into your library?</source>
       <translation>החלת האקולייזר המוצע</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>גשר השמע לא הופעל</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>התקנת מנהל התקן שמע</translation>
     </message>
@@ -1005,8 +1009,16 @@ Import into your library?</source>
       <translation>לקלט יש יותר ערוצים מאשר בתצורת Studio; יש לבחור תצורה תואמת או גדולה יותר</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>יש להתקין את SoundCurrent Audio באמצעות הגדרת מנהל התקן השמע, ולאחר מכן לפתוח את היישום מחדש כדי להפעיל את נתיב המיקרופון.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>יש להתקין חבילות חדשות על גרסה זו — אין צורך להסיר את ההתקנה. הקביעות המוגדרות מראש והפרופילים נשמרים. יש לשמור את העבודה, לבחור יציאה (סגירת החלון משאירה את האפליקציה פועלת), להתקין את העדכון ולפתוח מחדש.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>יש להתקין את נתיב השמע של Windows באמצעות הגדרת מנהל התקן השמע, ולאחר מכן לפתוח את היישום מחדש.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Import into your library?</source>
     <message>
       <source>Interface language</source>
       <translation>שפת הממשק</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>הגדרות Studio אינן תקינות</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>הגדרות האקולייזר אינן תקינות</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Import into your library?</source>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>פרופיל מגבר שנמדד אינו תקין. נדרשים דגם, מקור מדידה ב־HTTPS, תנאים ו־1–16 מסנני PK/LS/HS בטווח המותר. יש לעיין בפורמט הפרופיל ב־README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>כוונון המיקרופון אינו תקין</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Import into your library?</source>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>אקולייזר המיקרופון כבוי.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>גשר השמע של המיקרופון לא הופעל</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Import into your library?</source>
       <translation>היציאה הנבחרת נותקה. בוצע מעבר לבחירת יציאה אוטומטית.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>הרמקולים שנבחרו מנותקים</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>צלילים שקטים נפרדים</translation>
     </message>
@@ -2034,6 +2066,10 @@ Import into your library?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>הפעלת האקולייזר</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>יש לכבות את ההשמעה לפני החלת פריסת ערוצים אחרת לעיבוד בזמן אמת</translation>
     </message>
     <message>
       <source>Type</source>

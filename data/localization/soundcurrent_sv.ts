@@ -231,6 +231,10 @@ Importera till ditt bibliotek?</translation>
       <translation>Tillämpa föreslagen EQ</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Ljudbryggan startade inte</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Installation av ljuddrivrutin</translation>
     </message>
@@ -1005,8 +1009,16 @@ Importera till ditt bibliotek?</translation>
       <translation>Indata har fler kanaler än Studio-layouten; välj en motsvarande eller större layout</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Installera SoundCurrent Audio via inställningen av ljuddrivrutinen och öppna sedan appen igen för att aktivera mikrofonens ljudväg.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Installera nya paket över denna version — ingen avinstallation behövs. Förinställningar och profiler behålls. Spara ditt arbete, använd Avsluta (om du stänger fönstret fortsätter appen att köras), installera uppdateringen och öppna igen.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Installera Windows-ljudvägen via inställningen av ljuddrivrutinen och öppna sedan appen igen.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Interface language</source>
       <translation>Gränssnittsspråk</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Ogiltiga Studio-inställningar</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Ogiltiga equalizerinställningar</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Ogiltig uppmätt förstärkarprofil. Modell, HTTPS-mätkälla, förhållanden och 1–16 PK/LS/HS-filter inom gränserna krävs. Se profilformatet i README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Ogiltig mikrofonjustering</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Mikrofonens EQ är av.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Mikrofonens ljudbrygga startade inte</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Importera till ditt bibliotek?</translation>
       <translation>Den valda utgången kopplades ur. Växlade till automatisk utgång.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>De valda högtalarna är frånkopplade</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Separata tysta toner</translation>
     </message>
@@ -2034,6 +2066,10 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Slå på equalizern</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Stäng av uppspelningen innan du tillämpar en annan kanaluppsättning för bearbetning i realtid</translation>
     </message>
     <message>
       <source>Type</source>

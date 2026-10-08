@@ -231,6 +231,10 @@ Importér til dit bibliotek?</translation>
       <translation>Anvend foreslået EQ</translation>
     </message>
     <message>
+      <source>Audio bridge did not start</source>
+      <translation>Lydbroen startede ikke</translation>
+    </message>
+    <message>
       <source>Audio driver setup</source>
       <translation>Installation af lyddriver</translation>
     </message>
@@ -1005,8 +1009,16 @@ Importér til dit bibliotek?</translation>
       <translation>Input har flere kanaler end Studio-layoutet; vælg et tilsvarende eller større layout</translation>
     </message>
     <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>Installer SoundCurrent Audio via opsætningen af lyddriveren, og åbn derefter appen igen for at aktivere mikrofonens lydrute.</translation>
+    </message>
+    <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
       <translation>Installér nye pakker oven på denne version — afinstallation er ikke nødvendig. Forudindstillinger og profiler bevares. Gem dit arbejde, brug Afslut (hvis du lukker vinduet, fortsætter appen med at køre), installér opdateringen, og åbn igen.</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>Installer Windows-lydruten via opsætningen af lyddriveren, og åbn derefter appen igen.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
@@ -1015,6 +1027,14 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Interface language</source>
       <translation>Grænsefladesprog</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Ugyldige Studio-indstillinger</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>Ugyldige equalizerindstillinger</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
@@ -1027,6 +1047,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Ugyldig målt forstærkerprofil. Model, HTTPS-målekilde, forhold og 1–16 PK/LS/HS-filtre inden for grænserne er påkrævet. Se profilformatet i README.</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>Ugyldig mikrofonjustering</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
@@ -1201,6 +1225,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Microphone EQ is off.</source>
       <translation>Mikrofonens EQ er slået fra.</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>Mikrofonens lydbro startede ikke</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
@@ -1776,6 +1804,10 @@ Importér til dit bibliotek?</translation>
       <translation>Den valgte udgang blev frakoblet. Skiftede til automatisk udgang.</translation>
     </message>
     <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>De valgte højttalere er frakoblet</translation>
+    </message>
+    <message>
       <source>Separate quiet tones</source>
       <translation>Separate stille toner</translation>
     </message>
@@ -2034,6 +2066,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Slå equalizeren til</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>Slå afspilningen fra, før du anvender et andet kanallayout til behandling i realtid</translation>
     </message>
     <message>
       <source>Type</source>
