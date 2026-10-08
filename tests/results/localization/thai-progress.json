@@ -1,24 +1,24 @@
 {
-  "stage": "Thai second existing-catalog batch",
+  "stage": "Thai third existing-catalog batch",
   "catalogs": [
     {
       "tag": "th",
       "name": "ไทย",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "9e26d68c02834a0463b6261682c955f678d4fbdb563ac7c1ef33fd3b75c3c3cc",
-      "qmSha256": "a52d862d4168c3f2186419d3b8c239089328c7169ecf7ff992d3df2f2148d64f"
+      "tsSha256": "98754781ee042c0fa39bb766bbdc8465e4cab2ec2aeba767e14bcc83f9ec0fa1",
+      "qmSha256": "fe33504cd129d8911a2a66174d32df2e0ea61073491b43c76a55ff73831fed47"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Thai MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-th-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-th-third-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–159: profile save/read errors, calibration failures, half-dB channel gain, update behavior and wet delay versus decay/damping. Placeholders, file patterns and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–239: compressor timing/ratio/makeup/ceiling, estimated post-EQ levels, effect tails, profile import versus correction and filter Q. Placeholders, file patterns and numerical limits preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Thai incomplete; Swahili also incomplete. Omitted source messages reserved for second pass."
