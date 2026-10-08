@@ -125,3 +125,5 @@ Nynorsk recovery and effects batch: 181/527 messages populated. Three focused Li
 Nynorsk filter and editor batch: 254/527 messages populated. Three focused Linux checks passed per app. Filter Q, compressor parameters, equipment editing and estimated meters reviewed contextually. Catalog remains incomplete and unverified.
 
 Nynorsk microphone and measurement batch: 329/527 messages populated. Three focused Linux checks passed per app. Additive correction, system measurement limits, clipping, polarity and balance reviewed contextually. Both balance endpoint captions match their instructions. Catalog remains incomplete and unverified.
+
+Nynorsk startup and rendering batch: 401/527 messages populated. Three focused Linux checks passed per app. Startup registration, reference-profile preservation, calibration links and render counts reviewed contextually. Catalog remains incomplete and unverified.
