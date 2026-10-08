@@ -1,0 +1,35 @@
+{
+  "stage": "Norwegian Bokmål/Finnish initial batch",
+  "catalogs": [
+    {
+      "tag": "nb",
+      "name": "Norsk bokmål",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "35cbbcc61dc3605663ac22e1c7b220ebff1553c3d4bada16cceb96d16149054e",
+      "qmSha256": "b7abee9df6e384915e8b0a0a9b4f9ef790c60899a62d5403bcd2d1cb775c4c18"
+    },
+    {
+      "tag": "fi",
+      "name": "Suomi",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "56fcfc5c65069e9290f0674bbc02188a1352ce315ecec7540ea4f60b0a454f0d",
+      "qmSha256": "7ae90f8eb281dc1296837346d3c852cb77f9981d0c607a95b77d33e8982366fc"
+    }
+  ],
+  "linuxTests": {
+    "passed": 4,
+    "total": 4,
+    "scope": "compiled localization, Norwegian Bokmål/Finnish main windows and catalog regressions",
+    "log": "/tmp/soundcurrent-studio-nb-fi-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Gain, level margin, clipping, amplifier measurement requirements, processed effect contribution and setup recovery reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "Norwegian Bokmål, Finnish and 14 other target catalogs incomplete."
+}
