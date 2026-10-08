@@ -1,0 +1,25 @@
+{
+  "stage": "Traditional Chinese initial audio controls and profile guidance",
+  "catalogs": [
+    {
+      "tag": "zh-Hant",
+      "name": "繁體中文",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "6b63f64b3b948d1a1962464f3110cbc0a6e13060b079d46a42547f23555e5e5e",
+      "qmSha256": "d6317eee55fbbaf6bb519acdf25e480b1d81d54e56ba0c1e879c199474fc91d4"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "compiled localization, Traditional Chinese main window and catalog validation",
+    "log": "/tmp/soundcurrent-studio-zh-Hant-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Gain/headroom, clipping, amplifier measurement requirements, quit versus close and listening effects reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "Traditional Chinese catalog incomplete. 8 original target catalogs remain incomplete; omitted messages scheduled for second pass. Real UI and platform qualification remain open."
+}
