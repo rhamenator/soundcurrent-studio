@@ -88,7 +88,7 @@ public:
         const auto render = loopback ? own : standardCable(false);
         const auto capture = loopback ? own : standardCable(true);
         for(const auto &d:soundcurrent::windowsAudioEndpoints(false))if(d.id==device.name.toStdWString()&&session_.engine.channels.size()>d.channels)
-            throw std::runtime_error("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.");
+            throw std::runtime_error(SC_TR("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.").toStdString());
         update(bands, gain, balance);
         try {
             route_ = std::make_unique<ManagedWindowsRoute>(false, render.toStdWString(),
