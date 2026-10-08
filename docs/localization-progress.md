@@ -45,3 +45,5 @@ Polish: all 523 extracted messages populated. Full Linux CTest passed 57/57 befo
 Polish final catalog: three focused runtime/main-window/equipment checks passed. After curve-instruction wrapping, three Polish/pseudo-locale checks passed. Small-screen inspection still shows Polish EQ horizontal scrolling and partially offscreen headroom; layout qualification remains incomplete. The user also requested optional startup at sign-in for both apps; implement this alongside localization, preserving mutual exclusion and leaving it disabled by default.
 
 Startup option: implemented in Settings for both apps. One shared per-user registration chooses EQ or Studio. Background launch has a visible-window fallback when no tray is available. Linux full tests passed 58/58. Windows build/installer and actual sign-in qualification remain pending. See startup.md.
+
+Czech and Slovak initial batch: cs: 106/527, sk: 106/527. Four focused Linux checks passed in each repository. Includes calibration/profile prompts, gain/headroom and audio setup errors. Both remain incomplete and unverified.
