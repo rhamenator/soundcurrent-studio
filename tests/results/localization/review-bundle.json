@@ -1,0 +1,94 @@
+{
+  "bundlePath": "/home/rich/Downloads/SoundCurrent-localization-qa/review-bundle-eca144a-9166cfa",
+  "release": false,
+  "date": "2026-10-08",
+  "productFiles": [
+    {
+      "path": "ubuntu24/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "7fc7403e385f9616022c9fe91c3264ebc2443cba7a92419aec58732154d3b74d",
+      "kind": "tested Linux package",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "fedora44/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "8fab8be4bdb1b2f8a6791cc7ecf06c0841fb8512abe199118d9d6ff371edc476",
+      "kind": "tested Linux package",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "almalinux10/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "00ef5db9769fa2d6ed126ebf53d1f31e95248c9dfab2adefc4d90f579c5acdad",
+      "kind": "tested Linux package",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "ubuntu26/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "eb6723721fa35c678ee775defd0ee8607b1778acda424b3ce3e117230d057d2a",
+      "kind": "tested Ubuntu 26 package",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "windows/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+      "sha256": "a678f1bcc4a126ad67fd639123273a98c74888af9991eb73d22ea882bdf27e78",
+      "kind": "tested Windows installer",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "source/soundcurrent-studio-9166cfa.tar.gz",
+      "sha256": "6e103fc8f9b791a21e9c143993419c975b1e98a5f278c99287e1a57b1f7b550d",
+      "kind": "application source archive",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "reports/soundcurrent-studio/linux-package/report.json",
+      "sha256": "d1faab9490a310b5b41cb6a63c3a8d224ec9a4a56039e3e60d4e8577fa3df7c8",
+      "kind": "qualification report",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "reports/soundcurrent-studio/linux-package/current-ci.json",
+      "sha256": "982278791d3a3b04fb2d10add02bec26f08ce9f02740a4bd2c6a1cc00a362dbf",
+      "kind": "qualification report",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "reports/soundcurrent-studio/windows-current-installed.json",
+      "sha256": "aa8e2269588a5df8ec817276ebfb4766254e8a8d738c1874b6c52d5766a85a23",
+      "kind": "qualification report",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "reports/soundcurrent-studio/requirement-audit.json",
+      "sha256": "eb6aeb1143581feaab562e815b3f6d67e54b1460659e08a41872f477707aa44d",
+      "kind": "qualification report",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "reports/soundcurrent-studio/windows-interactive-precondition.json",
+      "sha256": "da605106bebcc37d22378084a52022c5a2061feedb0a61cb64630306072f2ae2",
+      "kind": "qualification report",
+      "product": "soundcurrent-studio",
+      "applicationSourceCommit": "9166cfa11837129906cacd0f4e576c50957d063d"
+    },
+    {
+      "path": "source/qtbase-everywhere-src-6.12.0.tar.xz",
+      "sha256": "a951bd163c7b80fc6b8c88d7668fb56abf91c152373e13c10666763238131307",
+      "kind": "bundled Windows Qt corresponding source",
+      "product": "shared",
+      "applicationSourceCommit": null
+    }
+  ],
+  "nativeReviewed": false,
+  "desktopQualification": "pending user console sign-in",
+  "scope": "Tested preview packages and corresponding sources, not a release or whole-interface qualification"
+}
