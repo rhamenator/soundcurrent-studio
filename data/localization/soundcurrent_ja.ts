@@ -338,119 +338,119 @@ Import into your library?</source>
     </message>
     <message>
       <source>Bright</source>
-      <translation type="unfinished" />
+      <translation>明るい音</translation>
     </message>
     <message>
       <source>Browse all equipment profiles / editor</source>
-      <translation type="unfinished" />
+      <translation>すべての機器プロファイルを参照 / 編集</translation>
     </message>
     <message>
       <source>Bypass Studio processing</source>
-      <translation type="unfinished" />
+      <translation>Studio の処理をバイパス</translation>
     </message>
     <message>
       <source>Calibration test signal</source>
-      <translation type="unfinished" />
+      <translation>キャリブレーションのテスト信号</translation>
     </message>
     <message>
       <source>Calibration tone level</source>
-      <translation type="unfinished" />
+      <translation>キャリブレーションのトーンレベル</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation type="unfinished" />
+      <translation>キャンセル</translation>
     </message>
     <message>
       <source>Cancel render</source>
-      <translation type="unfinished" />
+      <translation>レンダリングをキャンセル</translation>
     </message>
     <message>
       <source>Cannot acquire the shared SoundCurrent session guard.</source>
-      <translation type="unfinished" />
+      <translation>SoundCurrent 共通のセッションガードを取得できません。</translation>
     </message>
     <message>
       <source>Cannot create amplifier profile folder.</source>
-      <translation type="unfinished" />
+      <translation>アンププロファイルのフォルダーを作成できません。</translation>
     </message>
     <message>
       <source>Cannot create output staging directory</source>
-      <translation type="unfinished" />
+      <translation>出力用の一時保存ディレクトリを作成できません</translation>
     </message>
     <message>
       <source>Cannot create profile folder.</source>
-      <translation type="unfinished" />
+      <translation>プロファイルのフォルダーを作成できません。</translation>
     </message>
     <message>
       <source>Cannot create the shared SoundCurrent session guard.</source>
-      <translation type="unfinished" />
+      <translation>SoundCurrent 共通のセッションガードを作成できません。</translation>
     </message>
     <message>
       <source>Cannot finish inspecting running equalizers; SoundCurrent will not enable processing.</source>
-      <translation type="unfinished" />
+      <translation>動作中のイコライザーの確認を完了できません。SoundCurrent は処理を有効にしません。</translation>
     </message>
     <message>
       <source>Cannot finish saving amplifier profile.</source>
-      <translation type="unfinished" />
+      <translation>アンププロファイルの保存を完了できません。</translation>
     </message>
     <message>
       <source>Cannot finish saving profile library.</source>
-      <translation type="unfinished" />
+      <translation>プロファイルライブラリの保存を完了できません。</translation>
     </message>
     <message>
       <source>Cannot finish saving setup.</source>
-      <translation type="unfinished" />
+      <translation>設定の保存を完了できません。</translation>
     </message>
     <message>
       <source>Cannot inspect running equalizers; SoundCurrent will not enable processing.</source>
-      <translation type="unfinished" />
+      <translation>動作中のイコライザーを確認できません。SoundCurrent は処理を有効にしません。</translation>
     </message>
     <message>
       <source>Cannot read profile library.</source>
-      <translation type="unfinished" />
+      <translation>プロファイルライブラリを読み込めません。</translation>
     </message>
     <message>
       <source>Cannot read profile or file exceeds 1 MiB.</source>
-      <translation type="unfinished" />
+      <translation>プロファイルを読み込めないか、ファイルが 1 MiB を超えています。</translation>
     </message>
     <message>
       <source>Cannot read response or file exceeds 1 MiB.</source>
-      <translation type="unfinished" />
+      <translation>周波数特性を読み込めないか、ファイルが 1 MiB を超えています。</translation>
     </message>
     <message>
       <source>Cannot save amplifier profile.</source>
-      <translation type="unfinished" />
+      <translation>アンププロファイルを保存できません。</translation>
     </message>
     <message>
       <source>Cannot save profile library.</source>
-      <translation type="unfinished" />
+      <translation>プロファイルライブラリを保存できません。</translation>
     </message>
     <message>
       <source>Cannot save profile.</source>
-      <translation type="unfinished" />
+      <translation>プロファイルを保存できません。</translation>
     </message>
     <message>
       <source>Cannot save setup</source>
-      <translation type="unfinished" />
+      <translation>設定を保存できません</translation>
     </message>
     <message>
       <source>Cannot start measurement: %1</source>
-      <translation type="unfinished" />
+      <translation>測定を開始できません: %1</translation>
     </message>
     <message>
       <source>Center</source>
-      <translation type="unfinished" />
+      <translation>中央</translation>
     </message>
     <message>
       <source>Channel</source>
-      <translation type="unfinished" />
+      <translation>チャンネル</translation>
     </message>
     <message>
       <source>Channel gain in half dB steps</source>
-      <translation type="unfinished" />
+      <translation>チャンネルゲイン（0.5 dB 刻み）</translation>
     </message>
     <message>
       <source>Channels and routing</source>
-      <translation type="unfinished" />
+      <translation>チャンネルとルーティング</translation>
     </message>
     <message>
       <source>Check for updates</source>
@@ -458,155 +458,155 @@ Import into your library?</source>
     </message>
     <message>
       <source>Checking for published updates…</source>
-      <translation type="unfinished" />
+      <translation>公開された更新を確認中…</translation>
     </message>
     <message>
       <source>Checks published releases and downloaded installers. No update is installed automatically.</source>
-      <translation type="unfinished" />
+      <translation>公開リリースとダウンロード済みのインストーラーを確認します。更新が自動的にインストールされることはありません。</translation>
     </message>
     <message>
       <source>Choose a name that is not a built-in preset.</source>
-      <translation type="unfinished" />
+      <translation>組み込みプリセットとは異なる名前を選んでください。</translation>
     </message>
     <message>
       <source>Choose update folder…</source>
-      <translation type="unfinished" />
+      <translation>更新フォルダーを選択…</translation>
     </message>
     <message>
       <source>Clarity</source>
-      <translation type="unfinished" />
+      <translation>明瞭さ</translation>
     </message>
     <message>
       <source>Clarity frequency</source>
-      <translation type="unfinished" />
+      <translation>明瞭さの周波数</translation>
     </message>
     <message>
       <source>Classical</source>
-      <translation type="unfinished" />
+      <translation>クラシック</translation>
     </message>
     <message>
       <source>Clear Voice</source>
-      <translation type="unfinished" />
+      <translation>クリアな声</translation>
     </message>
     <message>
       <source>Clear imported equipment corrections</source>
-      <translation type="unfinished" />
+      <translation>インポートした機器補正をクリア</translation>
     </message>
     <message>
       <source>Click to turn the equalizer on or off</source>
-      <translation type="unfinished" />
+      <translation>クリックしてイコライザーをオンまたはオフにします</translation>
     </message>
     <message>
       <source>Clipping risk · estimated peak %1 dBFS</source>
-      <translation type="unfinished" />
+      <translation>クリッピングの可能性 · 推定ピーク %1 dBFS</translation>
     </message>
     <message>
       <source>Close</source>
-      <translation type="unfinished" />
+      <translation>閉じる</translation>
     </message>
     <message>
       <source>Conditions</source>
-      <translation type="unfinished" />
+      <translation>測定条件</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
-      <translation type="unfinished" />
+      <translation>測定の前に、出力デバイスとマイクを接続してください。</translation>
     </message>
     <message>
       <source>Correction profile (*.json)</source>
-      <translation type="unfinished" />
+      <translation>補正プロファイル (*.json)</translation>
     </message>
     <message>
       <source>Could not create a private test folder</source>
-      <translation type="unfinished" />
+      <translation>非公開のテストフォルダーを作成できませんでした</translation>
     </message>
     <message>
       <source>Could not create microphone configuration folder</source>
-      <translation type="unfinished" />
+      <translation>マイク設定フォルダーを作成できませんでした</translation>
     </message>
     <message>
       <source>Could not create preset folder.</source>
-      <translation type="unfinished" />
+      <translation>プリセットフォルダーを作成できませんでした。</translation>
     </message>
     <message>
       <source>Could not create quiet frequency sweep</source>
-      <translation type="unfinished" />
+      <translation>低音量の周波数スイープを作成できませんでした</translation>
     </message>
     <message>
       <source>Could not create test tone</source>
-      <translation type="unfinished" />
+      <translation>テストトーンを作成できませんでした</translation>
     </message>
     <message>
       <source>Could not finish saving preset.</source>
-      <translation type="unfinished" />
+      <translation>プリセットの保存を完了できませんでした。</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
-      <translation type="unfinished" />
+      <translation>テスト波形を開けませんでした</translation>
     </message>
     <message>
       <source>Could not play quiet test audio</source>
-      <translation type="unfinished" />
+      <translation>低音量のテスト音声を再生できませんでした</translation>
     </message>
     <message>
       <source>Could not play test audio through the selected output</source>
-      <translation type="unfinished" />
+      <translation>選択した出力でテスト音声を再生できませんでした</translation>
     </message>
     <message>
       <source>Could not read output volume</source>
-      <translation type="unfinished" />
+      <translation>出力音量を読み取れませんでした</translation>
     </message>
     <message>
       <source>Could not run %1</source>
-      <translation type="unfinished" />
+      <translation>%1 を実行できませんでした</translation>
     </message>
     <message>
       <source>Could not save preset.</source>
-      <translation type="unfinished" />
+      <translation>プリセットを保存できませんでした。</translation>
     </message>
     <message>
       <source>Could not start audio setup: %1. The app remains open.</source>
-      <translation type="unfinished" />
+      <translation>オーディオ設定を開始できませんでした: %1。アプリは開いたままです。</translation>
     </message>
     <message>
       <source>Could not start microphone capture</source>
-      <translation type="unfinished" />
+      <translation>マイクの録音を開始できませんでした</translation>
     </message>
     <message>
       <source>Could not start microphone filter</source>
-      <translation type="unfinished" />
+      <translation>マイクフィルターを起動できませんでした</translation>
     </message>
     <message>
       <source>Could not start output volume safety guard</source>
-      <translation type="unfinished" />
+      <translation>出力音量の安全ガードを開始できませんでした</translation>
     </message>
     <message>
       <source>Could not start the measurement.</source>
-      <translation type="unfinished" />
+      <translation>測定を開始できませんでした。</translation>
     </message>
     <message>
       <source>Could not update startup settings.</source>
-      <translation type="unfinished" />
+      <translation>自動起動の設定を更新できませんでした。</translation>
     </message>
     <message>
       <source>Could not write frequency sweep</source>
-      <translation type="unfinished" />
+      <translation>周波数スイープを書き込めませんでした</translation>
     </message>
     <message>
       <source>Could not write microphone configuration</source>
-      <translation type="unfinished" />
+      <translation>マイク設定を書き込めませんでした</translation>
     </message>
     <message>
       <source>Could not write test tone</source>
-      <translation type="unfinished" />
+      <translation>テストトーンを書き込めませんでした</translation>
     </message>
     <message>
       <source>Create profile</source>
-      <translation type="unfinished" />
+      <translation>プロファイルを作成</translation>
     </message>
     <message>
       <source>Current EQ kept.</source>
-      <translation type="unfinished" />
+      <translation>現在の EQ は保持されています。</translation>
     </message>
     <message>
       <source>Custom</source>
@@ -614,35 +614,35 @@ Import into your library?</source>
     </message>
     <message>
       <source>Damping</source>
-      <translation type="unfinished" />
+      <translation>ダンピング</translation>
     </message>
     <message>
       <source>Dance</source>
-      <translation type="unfinished" />
+      <translation>ダンス</translation>
     </message>
     <message>
       <source>Decay</source>
-      <translation type="unfinished" />
+      <translation>減衰時間</translation>
     </message>
     <message>
       <source>Deep Bass</source>
-      <translation type="unfinished" />
+      <translation>深い低音</translation>
     </message>
     <message>
       <source>Delay / echo</source>
-      <translation type="unfinished" />
+      <translation>ディレイ / エコー</translation>
     </message>
     <message>
       <source>Delay time</source>
-      <translation type="unfinished" />
+      <translation>ディレイ時間</translation>
     </message>
     <message>
       <source>Delay wet mix</source>
-      <translation type="unfinished" />
+      <translation>ディレイのウェットミックス</translation>
     </message>
     <message>
       <source>Delay wet mix percent</source>
-      <translation type="unfinished" />
+      <translation>ディレイのウェットミックス率</translation>
     </message>
     <message>
       <source>Delay wet mix · %1%</source>
