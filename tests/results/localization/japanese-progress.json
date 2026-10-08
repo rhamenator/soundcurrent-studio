@@ -1,0 +1,25 @@
+{
+  "stage": "Japanese first catalog batch",
+  "catalogs": [
+    {
+      "tag": "ja",
+      "name": "日本語",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "765a8bd7d1a0c21556d40d7864b04d277cdce9963f73857ddbfb9b83b3ba68f5",
+      "qmSha256": "e454958684d39a22190a7cd941fd7ea49419cb220dea7858abbb7869310efb6e"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "Localization assertions, Japanese actual MainWindow offscreen smoke test, structural catalog checks",
+    "log": "/tmp/soundcurrent-studio-ja-first-tests.log"
+  },
+  "review": "Contextual AI review of first 80 shared source entries: calibration evidence, enhancement behavior, driver setup, bypass and quit versus close. Linguistic accuracy unverified.",
+  "nativeReviewed": false,
+  "windows": "Pending CI; no Windows runtime qualification for this batch",
+  "remaining": "Japanese catalog incomplete; seven target languages still incomplete. Omitted source strings reserved for the second pass."
+}

@@ -262,12 +262,12 @@
   {
     "tag": "ja",
     "name": "日本語",
-    "translated": 30,
+    "translated": 106,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "9a008cadf841eba69795e08249302d92ba1080bf8d3fe3e195d484894e00ea46",
-    "qmSha256": "abf1f86b8c67ed2f5639221e55583e352e46162e554931900b991808402502eb"
+    "tsSha256": "765a8bd7d1a0c21556d40d7864b04d277cdce9963f73857ddbfb9b83b3ba68f5",
+    "qmSha256": "e454958684d39a22190a7cd941fd7ea49419cb220dea7858abbb7869310efb6e"
   },
   {
     "tag": "ko",
