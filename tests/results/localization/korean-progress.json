@@ -1,24 +1,24 @@
 {
-  "stage": "Korean third existing-catalog batch",
+  "stage": "Korean fourth existing-catalog batch",
   "catalogs": [
     {
       "tag": "ko",
       "name": "한국어",
-      "translated": 254,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "7d0884670595864f2bc680e6eb02b89622176ff2dfb4193ac57230c2271ef2b8",
-      "qmSha256": "44069ea02e3092f55d6dd37f0beaedf5f05c08585fd4ff97cfa45b8192271101"
+      "tsSha256": "8bab7b17e565f83f653c07dc305b93f17a10aea8a93c0cf179adcde7b8d751a6",
+      "qmSha256": "2beb29d7e25e7b113c2277824eb724470ece73ea597461469cb653095b0bf9a9"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Korean MainWindow offscreen smoke test and structural catalog validation",
-    "log": "/tmp/soundcurrent-studio-ko-third-tests.log"
+    "log": "/tmp/soundcurrent-studio-ko-fourth-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–239: dynamics controls, estimated metering, physical L/R enhancements, equipment editor and measured-response imports. Preserved file patterns, parameter placeholders and numerical limits. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–319: measured amplifier profile requirements, microphone clipping, balance attenuation, live channel constraints, listening correction and import validation. File patterns, identifiers, placeholders and numerical limits preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Korean incomplete. Six target catalogs still incomplete; omitted source messages reserved for second pass."
