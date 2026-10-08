@@ -26,7 +26,17 @@
     }
   ],
   "earlierFailuresPreserved": "tests/results/localization/second-pass-taxonomy-remaining.json",
-  "qualification": "full 34-locale serial equipment run is live; do not infer completion from this report",
+  "qualification": {
+    "platform": "Linux Qt offscreen",
+    "equipmentUI": {
+      "passed": 34,
+      "failed": 0,
+      "serial": true,
+      "elapsedSeconds": 309.36
+    },
+    "catalogAndMainLocalizedUI": "38 tests passed on current application source in preceding taxonomy run",
+    "WindowsAndPackages": "pending"
+  },
   "nativeSpeakerVerification": "unverified",
   "newPackagesQualified": false,
   "retryHistory": [
@@ -39,5 +49,10 @@
         "equipment-ui-sw"
       ]
     }
-  ]
+  ],
+  "evidence": {
+    "log": "tests/results/localization/equipment-ui-watchdog-run.log",
+    "logSha256": "2e76796968d138fcd60936a6295b930030722d6f44beb705db078f313db5bba2",
+    "applicationBinarySha256": "d91138ae6cfefa8eceb18d7f402a399d8947f0645ace32edd9e36195af112b0d"
+  }
 }

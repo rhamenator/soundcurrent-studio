@@ -35,7 +35,7 @@
       "attempted": 72,
       "passed": 62,
       "failed": 10,
-      "status": "not qualified",
+      "status": "original failed attempt retained; updated equipment fixture passed all 34 locales",
       "failedTests": [
         "equipment-ui-uk",
         "equipment-ui-el",
@@ -62,5 +62,6 @@
     "Resource pressure is a suspected contributor, not a verified explanation"
   ],
   "wholeInterfaceCoverageProven": false,
-  "newPackagesQualified": false
+  "newPackagesQualified": false,
+  "updatedEquipmentQualification": "tests/results/localization/equipment-ui-watchdog.json"
 }
