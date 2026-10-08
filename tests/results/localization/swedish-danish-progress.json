@@ -1,34 +1,34 @@
 {
-  "stage": "Swedish/Danish filter and editor batch",
+  "stage": "Swedish/Danish microphone and measurement batch",
   "catalogs": [
     {
       "tag": "sv",
       "name": "Svenska",
-      "translated": 254,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "c20346874be250ea606164833e44fa7b41950e1c3bef0ac69280f3300c44439b",
-      "qmSha256": "a779664f544a71c16a5280aea4c9fa31599b930df4895215cfb1542475e02f7d"
+      "tsSha256": "a47a9863e9497d19a66a3bc134eb6d0819d75593a42abf5d40775c516f6470aa",
+      "qmSha256": "29898eeb08c2139ec153dec522578818be3dca216c245f250ba8b9864ae1a06f"
     },
     {
       "tag": "da",
       "name": "Dansk",
-      "translated": 254,
+      "translated": 328,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "d501be1eaa84d7793a2fa24749ffb3fc5d060c6f24f8defb81c3ca99bb0017b6",
-      "qmSha256": "5807db837f9f4d8d200fd543538f65db0187964577a3d4063923abfa72045974"
+      "tsSha256": "8cf844e53e274c87665c5a2187db049d2de503f8eb4a09bc73ed495930fa96b2",
+      "qmSha256": "96932fc5bd787091f05b459a06122588d543b1a4bb6e839a4781fe4e92e58970"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Swedish/Danish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-sv-da-third-tests.log"
+    "log": "/tmp/soundcurrent-studio-sv-da-fourth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Filter Q is quality, shelving differs from pass filters, compressor compensation differs from post gain, meter levels remain estimates.",
+  "review": "Contextual AI review; unverified. Measured model correction is additive, room/amplifier effects require system measurement, microphone clipping requires lower gain, negative route gain reverses polarity.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Swedish, Danish and 16 other target catalogs incomplete."
