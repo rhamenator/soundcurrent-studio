@@ -1,0 +1,48 @@
+{
+  "scope": "Cable repair failed to restore usable playback/recording devices",
+  "sourceMessagesPerLocale": 719,
+  "catalogs": 34,
+  "nonEnglishLocales": 33,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Remove Driver in official installer remains before reboot and reinstall",
+      "Separately translated setup caption inserted once as %1",
+      "External device/button names protected source-specifically",
+      "Device enablement remains required in Windows sound settings"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "hostPowerShell": "7.6.6",
+    "requiredHelperLookupsPassed": 1156,
+    "catalogUnitTestsPassed": 23,
+    "catalogUnitTestsSkipped": 0,
+    "realQuietNoActionAndMissingManagerFaults": "passed fr/ar/nn; no driver actions",
+    "newProductionRepairFailureBranchExecuted": false,
+    "newWindowsInstructionQualified": false,
+    "targetedLinuxQtTestsPassed": 43
+  },
+  "remainingHelperProseCandidates": {
+    "untranslatedCable": 1,
+    "invariantProductNames": 2,
+    "scope": "AST literal heuristic"
+  },
+  "wholeInterfaceCoverageProven": false,
+  "newPackagesQualified": false,
+  "VMUsed": false,
+  "invariants": [
+    "Driver action/presence/readiness checks and exit codes unchanged",
+    "Saved state and numerical processing unchanged"
+  ],
+  "evidenceSha256": {
+    "packaging/windows/cable-setup.ps1": "110ec41d4a140407823f78c9cc8f2cdabcc3b885a9b1b1f9595d2c5727e26413",
+    "scripts/localization.py": "a506409fdb9bfd81429299f8bc18e60209dcae17b7ded5bc09c68058fdaf8472",
+    "tests/translation_catalogs.py": "2d1cc2df27dfbf1e4c3a3afb7eef364ca2efc875947e5aefde2538ca65d8f2af",
+    "tests/results/localization/cable-repair-failure-runtime-final.log": "8d168f717ebc895deb592e8f704a19c961c7a044b6b1d950cf994045b4253de8",
+    "tests/results/localization/cable-repair-failure-catalog-final.log": "f31b7a64fa71c9d20cc492f732cbb18eeeb3c60c16bd8423992a2d749a524e02",
+    "tests/results/localization/cable-repair-failure-qt.log": "c8d15026496f23bce1b0472247800472469a43acc5a2275e2b51bfb8f470fd9d",
+    "build/soundcurrent-studio": "b8cf69ffc4cc43225414212f7d157ccc5993b338bfe55b76a952525a8599fc1d"
+  }
+}
