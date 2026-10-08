@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>रूट सेट करें</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>%2 के लिए %1 सेट अप करें।</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>सेटिंग &amp;&amp; कैलिब्रेशन</translation>
     </message>

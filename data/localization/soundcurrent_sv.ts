@@ -2384,6 +2384,10 @@ Importera till ditt bibliotek?</translation>
       <translation>Ställ in routning</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Konfigurera %1 för %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Inställningar &amp;&amp; kalibrering</translation>
     </message>

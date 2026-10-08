@@ -2384,6 +2384,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Nastaviť signálovú cestu</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Nastavte %1 pre %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Nastavenia &amp;&amp; kalibrácia</translation>
     </message>

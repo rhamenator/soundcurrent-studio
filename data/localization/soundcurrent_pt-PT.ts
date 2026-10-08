@@ -2384,6 +2384,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Definir percurso</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Configurar %1 para %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Definições &amp;&amp; calibração</translation>
     </message>

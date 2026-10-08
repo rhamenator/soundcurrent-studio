@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>ตั้งเส้นทาง</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>ตั้งค่า %1 สำหรับ %2</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>การตั้งค่า &amp;&amp; การปรับเทียบ</translation>
     </message>

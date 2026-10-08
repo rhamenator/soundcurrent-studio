@@ -2384,6 +2384,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Set ruting</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Set opp %1 for %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Innstillingar &amp;&amp; kalibrering</translation>
     </message>

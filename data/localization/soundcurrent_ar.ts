@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>تعيين المسار</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>إعداد %1 لاستخدامه مع %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>الإعدادات &amp;&amp; المعايرة</translation>
     </message>

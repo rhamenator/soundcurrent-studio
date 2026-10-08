@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>経路を設定</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>%2 用に %1 を設定します。</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>設定 &amp;&amp; キャリブレーション</translation>
     </message>

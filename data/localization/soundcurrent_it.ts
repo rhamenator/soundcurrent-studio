@@ -2384,6 +2384,10 @@ Importare nella libreria?</translation>
       <translation>Imposta percorso</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Configura %1 per %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Impostazioni &amp;&amp; calibrazione</translation>
     </message>

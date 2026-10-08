@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>設定路由</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>為 %2 設定 %1。</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>設定 &amp;&amp; 校正</translation>
     </message>

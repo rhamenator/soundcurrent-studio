@@ -2384,6 +2384,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Đặt tuyến</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Thiết lập %1 cho %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Cài đặt &amp;&amp; hiệu chuẩn</translation>
     </message>

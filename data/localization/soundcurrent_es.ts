@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>Establecer ruta</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Configurar %1 para %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Ajustes &amp;&amp; calibración</translation>
     </message>

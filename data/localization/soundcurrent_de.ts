@@ -2384,6 +2384,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Audioweg festlegen</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>%1 für %2 einrichten.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Einstellungen &amp;&amp; Kalibrierung</translation>
     </message>

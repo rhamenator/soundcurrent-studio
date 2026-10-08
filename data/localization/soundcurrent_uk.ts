@@ -2384,6 +2384,10 @@ Import into your library?</source>
       <translation>Задати аудіотракт</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Налаштуйте %1 для %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Налаштування &amp;&amp; калібрування</translation>
     </message>

@@ -30,9 +30,9 @@
       "file": "packaging/windows/soundcurrent-studio-native.nsi",
       "line": 76,
       "kind": "page-heading",
-      "literal": "Set up SoundCurrent Audio for SoundCurrent Studio.",
-      "marked": false,
-      "reviewStatus": "untranslated candidate; contextual review pending"
+      "literal": "$(SCSetupAudio)",
+      "marked": true,
+      "reviewStatus": "direct English definition wired; all locale template translations available; installer language activation pending"
     },
     {
       "file": "packaging/windows/soundcurrent-studio-native.nsi",
@@ -166,9 +166,9 @@
       "file": "packaging/windows/soundcurrent-studio.nsi",
       "line": 87,
       "kind": "page-heading",
-      "literal": "Set up VB-CABLE for SoundCurrent Studio.",
-      "marked": false,
-      "reviewStatus": "untranslated candidate; contextual review pending"
+      "literal": "$(SCSetupAudio)",
+      "marked": true,
+      "reviewStatus": "direct English definition wired; all locale template translations available; installer language activation pending"
     },
     {
       "file": "packaging/windows/soundcurrent-studio.nsi",

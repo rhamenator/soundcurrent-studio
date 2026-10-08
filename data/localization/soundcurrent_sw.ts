@@ -2384,6 +2384,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Weka njia</translation>
     </message>
     <message>
+      <source>Set up %1 for %2.</source>
+      <translation>Sanidi %1 kwa ajili ya %2.</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Mipangilio &amp;&amp; urekebishaji</translation>
     </message>
