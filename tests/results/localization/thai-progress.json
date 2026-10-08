@@ -1,25 +1,25 @@
 {
-  "stage": "Thai sixth existing-catalog batch",
+  "stage": "Thai existing catalog complete",
   "catalogs": [
     {
       "tag": "th",
       "name": "ไทย",
-      "translated": 466,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "4f118a75eb25383091d16580a9df8cc644734e1152468237c691d0059175c6db",
-      "qmSha256": "95556c2297632ab90f84c23158d39bc575690c21f04db803f611cabe888fd334"
+      "tsSha256": "beea954bc064061330f78a20dc06602641f5dd6ee7506d68a109a692b0444e79",
+      "qmSha256": "1ce9321748d9ab82ecc8743c2c1effb4fbf1276d347f5380bd1cd50aada964c3"
     }
   ],
   "linuxTests": {
-    "passed": 3,
-    "total": 3,
-    "scope": "Embedded localization assertions, Thai MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-th-sixth-tests.log"
+    "passed": 4,
+    "total": 4,
+    "scope": "Embedded localization assertions, Thai profile import/edit/save/cancel/discard/apply workflow, MainWindow offscreen smoke test and structural catalog checks",
+    "log": "/tmp/soundcurrent-studio-th-final-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–469: save/reset actions, measured response bounds, room measurement, microphone routing and distinct reverb/echo controls. Placeholders, file patterns and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of all current Thai catalog entries: microphone/room measurement limits, channel gain trim, zero-valued effect bypass, save/undo actions and regional fallback. Placeholders, file patterns, hyperlinks and numerical limits preserved. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
-  "remaining": "Thai incomplete; Swahili also incomplete. Omitted source messages reserved for second pass."
+  "remaining": "Swahili existing catalog incomplete; omitted source messages reserved for second pass. Windows and visual qualification pending."
 }
