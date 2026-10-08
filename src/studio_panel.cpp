@@ -128,14 +128,16 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
         if (rebuilding_) return;
         change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb; next.engine.enhancements=s.engine.enhancements;
             next.engine.automaticHeadroom=s.engine.automaticHeadroom; next.engine.bypass=s.engine.bypass; next.offline = true;
-            for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; next.names[c]=s.names[c]; next.solo[c]=s.solo[c]; }
+            for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; next.names[c]=s.names[c]; next.nameProvenance[std::size_t(c)]=s.nameProvenance[std::size_t(c)]; next.solo[c]=s.solo[c]; }
             s=std::move(next); }); rebuild();
     });
     connect(layout_, &QComboBox::activated, this, [this](int i) { constexpr int counts[]{2,1,6,8,16}; if(i<5) count_->setValue(counts[i]); });
     connect(channel_, &QComboBox::currentIndexChanged, this, [this] { if (!rebuilding_) loadChannel(); });
     connect(offline_, &QCheckBox::toggled, this, [this](bool on) { change([&](Session &s){s.offline=on;}); });
     connect(name_, &QLineEdit::editingFinished, this, [this] { if(name_->text().trimmed().isEmpty()) return;
-        change([&](Session &s){s.names[channel_->currentIndex()]=name_->text().trimmed();}); rebuild(); });
+        const int channel = channel_->currentIndex();
+        if (name_->text().trimmed() == session_.names[channel]) return;
+        change([&](Session &s){s.setCustomName(channel,name_->text().trimmed());}); rebuild(); });
     connect(trim_, &QSlider::valueChanged, this, [this](int v){ change([&](Session &s){s.engine.channels[channel_->currentIndex()].gainDb=v/2.0;}); trim_->setToolTip(QLocale().toString(v/2.0,'f',1)+SC_TR(" dB")); });
     connect(mute_, &QCheckBox::toggled, this, [this](bool v){change([&](Session &s){s.engine.channels[channel_->currentIndex()].muted=v;});});
     connect(solo_, &QCheckBox::toggled, this, [this](bool v){change([&](Session &s){s.solo[channel_->currentIndex()]=v;});});
@@ -331,6 +333,23 @@ void StudioPanel::selfTest() {
     quietEngine.process(quietFrame);
     if (std::abs(quietFrame[0] - .5 * std::pow(10., -84. / 20)) > 1e-9)
         qFatal("Studio low post gain amplitude is incorrect");
+    const auto provenanceSession = session_;
+    const auto provenanceHistory = history_;
+    session_ = Session(2); rebuild();
+    const auto noEdit = session_.json();
+    QMetaObject::invokeMethod(name_, "editingFinished", Qt::DirectConnection);
+    if (session_.json() != noEdit || session_.defaultNameRole(0) != "left")
+        qFatal("Unchanged name field discarded default name provenance");
+    name_->setText("Custom %1 / 音声");
+    QMetaObject::invokeMethod(name_, "editingFinished", Qt::DirectConnection);
+    if (!session_.defaultNameRole(0).isEmpty() || session_.names[0] != "Custom %1 / 音声")
+        qFatal("Custom channel name did not clear generated-name provenance");
+    count_->setValue(8);
+    if (session_.names[0] != "Custom %1 / 音声" || session_.defaultNameRole(1) != "right" ||
+        session_.defaultNameRole(7) != "side-right") qFatal("Channel resize lost name provenance");
+    undo(); undo();
+    if (session_.json() != noEdit) qFatal("Channel name/resize undo lost provenance");
+    session_ = provenanceSession; history_ = provenanceHistory; rebuild();
     const auto initial=session_.json();count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline)qFatal("Studio 256-channel UI failed");
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");

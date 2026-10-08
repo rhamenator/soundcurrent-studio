@@ -45,3 +45,23 @@ References: [Qt internationalization](https://doc.qt.io/qt-6/internationalizatio
 See [translation review](translation-review.md) for contextual corrections, known uncertainties and fluent-review requirements. Audio terminology notes in `data/localization/translation-context.json` are embedded in Qt Linguist catalogs. Structural audits do not certify linguistic accuracy.
 
 Locale inference uses [Qt QLocale language, script and territory data](https://doc.qt.io/qt-6/qlocale.html), rather than treating every four-character suffix as a script.
+
+### Studio channel-name provenance
+
+Studio schema 1 retains each channel's existing `name` string. New generated
+names additionally save `nameProvenance: {"version": 1, "role": "left"}`.
+The role IDs are `channel`, `mono`, `left`, `right`, `front-left`, `front-right`,
+`center`, `lfe`, `rear-left`, `rear-right`, `side-left`, and `side-right`.
+They are stable metadata, never translated. The generic channel role uses its
+zero-based channel position only to derive the canonical one-based name.
+
+A profile without provenance keeps its names as user-owned text, even when a
+name matches a built-in English label. Unsupported versions/roles are retained
+verbatim but never interpreted. Known metadata is usable only when the saved
+name still matches that role's canonical name; stale metadata cannot override
+a custom name. Explicit name editing clears the metadata. Resizing and undo
+preserve it; an unchanged name field preserves it too.
+
+This is the prerequisite for translated generated-name display. Display mapping
+and translated channel-role captions are still pending; do not report channel
+names as localized from metadata support alone.

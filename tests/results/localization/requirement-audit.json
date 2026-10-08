@@ -122,5 +122,9 @@
   "studioRegionalProgress": {
     "report": "tests/results/localization/second-pass-studio-regional.json",
     "status": "Linux Qt offscreen actual widget formatting and saved-number preservation passed; Windows/package qualification pending"
+  },
+  "channelNameProgress": {
+    "report": "tests/results/localization/second-pass-channel-name-provenance.json",
+    "status": "Provenance and state preservation tested; translated generated-name display still pending"
   }
 }

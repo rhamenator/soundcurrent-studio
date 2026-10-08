@@ -4146,6 +4146,27 @@ int main(int argc, char **argv) {
                 qFatal("Studio validation diagnostic missed the localized display boundary");
         // Reject malformed persisted fields before localizing their display diagnostics.
         const auto profileSnapshot=soundcurrent::studio::Session(2).json();
+        auto legacyNames = profileSnapshot;
+        auto legacyChannels = legacyNames.value("channels").toArray();
+        for (int c=0;c<legacyChannels.size();++c) {
+            auto row=legacyChannels[c].toObject(); row.remove("nameProvenance"); legacyChannels[c]=row;
+        }
+        legacyNames["channels"]=legacyChannels;
+        auto legacySession=soundcurrent::studio::Session::parse(legacyNames);
+        if (!legacySession.defaultNameRole(0).isEmpty() || legacySession.json()!=legacyNames)
+            qFatal("Legacy channel names were inferred or rewritten");
+        auto futureNames=profileSnapshot;auto futureChannels=futureNames.value("channels").toArray();
+        auto futureRow=futureChannels[0].toObject();
+        futureRow["nameProvenance"]=QJsonObject{{"version",2},{"role","future-role"},{"opaque","%1 / 音声"}};
+        futureChannels[0]=futureRow;futureNames["channels"]=futureChannels;
+        auto futureSession=soundcurrent::studio::Session::parse(futureNames);
+        if (!futureSession.defaultNameRole(0).isEmpty() || futureSession.json()!=futureNames)
+            qFatal("Unknown channel name metadata was applied or lost");
+        auto defaultSession=soundcurrent::studio::Session::parse(profileSnapshot);
+        if(defaultSession.defaultNameRole(0)!="left" || defaultSession.defaultNameRole(1)!="right")
+            qFatal("Default channel role did not survive save/reopen");
+        defaultSession.names[0]="Custom %1 / 音声";
+        if(!defaultSession.defaultNameRole(0).isEmpty())qFatal("Stale metadata overrode custom channel text");
         const QStringList profileKeys={"schema","postGain","offline"};
         const QStringList profileReasons={"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field"};
         for(int index=0;index<profileKeys.size();++index) {
