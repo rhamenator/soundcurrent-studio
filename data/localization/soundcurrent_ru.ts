@@ -353,6 +353,10 @@ Import into your library?</source>
       <translation>Обойти обработку Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Пакет кабеля превышает ёмкость буфера захвата</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Калибровочный тестовый сигнал</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Не удалось завершить сохранение пресета.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Не удалось инициализировать COM для аудио Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</source>
       <translation>Недопустимые настройки Studio</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Недопустимый калибровочный аудиосигнал</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Недопустимые настройки эквалайзера</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Недопустимые идентификационные данные акустической системы</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Недопустимый формат микширования динамиков</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</source>
     <message>
       <source>Microphone input device</source>
       <translation>Входное устройство микрофона</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Обработка записи микрофона зависла</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</source>
       <translation>Разблокируйте элементы управления и завершите измерение перед редактированием профилей.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Неподдерживаемое количество каналов кабеля</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Неподдерживаемая схема профиля оборудования (ожидается 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</source>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Неподдерживаемая конфигурация каналов микрофона</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Неподдерживаемый формат записи</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Неподдерживаемая конфигурация каналов динамиков или частота дискретизации</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Неподдерживаемый формат отсчётов микширования динамиков</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</source>
       <translation>Настройки VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Виртуальный выход требует поддерживаемой конфигурации каналов 48 kHz в формате с плавающей точкой</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Акцент на вокале</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</source>
     <message>
       <source>Warmth</source>
       <translation>Теплота</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM для аудио Windows недоступен</translation>
     </message>
     <message>
       <source>Yes</source>

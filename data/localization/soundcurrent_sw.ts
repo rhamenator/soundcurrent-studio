@@ -353,6 +353,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Pita uchakataji wa Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Paketi ya kebo inazidi uwezo wa buffer ya kunasa sauti</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Ishara ya kujaribu urekebishaji</translation>
     </message>
@@ -543,6 +547,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Uhifadhi wa mpangilio uliowekwa tayari haukukamilika.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Haikuwezekana kuanzisha COM ya sauti ya Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Mipangilio ya Studio si sahihi</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Sauti ya urekebishaji si sahihi</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Mipangilio ya kisawazishi si sahihi</translation>
     </message>
@@ -1083,6 +1095,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Utambulisho wa spika si sahihi</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Muundo wa kuchanganya sauti ya spika si sahihi</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Kifaa cha ingizo cha maikrofoni</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Uchakataji wa rekodi ya maikrofoni umekwama</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Fungua vidhibiti na ukamilishe kipimo kabla ya kuhariri wasifu.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Idadi ya chaneli za kebo haitumiki</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Muundo wa wasifu wa kifaa hautumiki (unatarajiwa 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Mpangilio wa chaneli za maikrofoni hautumiki</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Muundo wa kurekodi hautumiki</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Mpangilio wa chaneli za spika au kiwango cha sampuli hakitumiki</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Muundo wa sampuli za mchanganyiko wa spika hautumiki</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Mipangilio ya VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Tokeo pepe linahitaji mpangilio unaotumika wa chaneli za 48 kHz katika muundo wa namba zenye nukta inayoelea</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Lenga sauti ya mwimbaji</translation>
     </message>
@@ -2164,6 +2204,10 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Warmth</source>
       <translation>Joto la sauti</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM ya sauti ya Windows haipatikani</translation>
     </message>
     <message>
       <source>Yes</source>

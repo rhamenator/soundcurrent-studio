@@ -353,6 +353,10 @@ Import into your library?</source>
       <translation>Παράκαμψη επεξεργασίας Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Το πακέτο του καλωδίου υπερβαίνει τη χωρητικότητα της ενδιάμεσης μνήμης καταγραφής</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Δοκιμαστικό σήμα βαθμονόμησης</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Δεν ήταν δυνατή η ολοκλήρωση αποθήκευσης της προρύθμισης.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Δεν ήταν δυνατή η αρχικοποίηση του COM για τον ήχο των Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</source>
       <translation>Μη έγκυρες ρυθμίσεις Studio</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Μη έγκυρος ήχος βαθμονόμησης</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Μη έγκυρες ρυθμίσεις ισοσταθμιστή</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Μη έγκυρα στοιχεία ταυτότητας ηχείου</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Μη έγκυρη μορφή μίξης ηχείων</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</source>
     <message>
       <source>Microphone input device</source>
       <translation>Συσκευή εισόδου μικροφώνου</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Η επεξεργασία της εγγραφής μικροφώνου έχει κολλήσει</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</source>
       <translation>Ξεκλειδώστε τα χειριστήρια και ολοκληρώστε τη μέτρηση πριν επεξεργαστείτε προφίλ.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Μη υποστηριζόμενος αριθμός καναλιών καλωδίου</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Μη υποστηριζόμενο σχήμα προφίλ εξοπλισμού (αναμένεται 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</source>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Μη υποστηριζόμενη διάταξη καναλιών μικροφώνου</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Μη υποστηριζόμενη μορφή εγγραφής</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Μη υποστηριζόμενη διάταξη καναλιών ηχείων ή συχνότητα δειγματοληψίας</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Μη υποστηριζόμενη μορφή δειγμάτων μίξης ηχείων</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</source>
       <translation>Ρυθμίσεις VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Η εικονική έξοδος απαιτεί υποστηριζόμενη διάταξη καναλιών 48 kHz κινητής υποδιαστολής</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Έμφαση φωνής</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</source>
     <message>
       <source>Warmth</source>
       <translation>Ζεστασιά</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Το COM για τον ήχο των Windows δεν είναι διαθέσιμο</translation>
     </message>
     <message>
       <source>Yes</source>

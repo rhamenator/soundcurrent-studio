@@ -353,6 +353,10 @@ Import into your library?</source>
       <translation>עקיפת העיבוד של Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>חבילת הכבל חורגת מקיבולת מאגר הלכידה</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>אות בדיקת כיול</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>לא ניתן להשלים את שמירת הקביעה המוגדרת מראש.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>לא ניתן לאתחל COM לשמע של Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</source>
       <translation>הגדרות Studio אינן תקינות</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>שמע כיול אינו תקין</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>הגדרות האקולייזר אינן תקינות</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker identity</source>
       <translation>זהות הרמקול אינה תקינה</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>תבנית ערבול הרמקולים אינה תקינה</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</source>
     <message>
       <source>Microphone input device</source>
       <translation>מכשיר קלט המיקרופון</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>עיבוד הקלטת המיקרופון נתקע</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</source>
       <translation>יש לשחרר את נעילת הפקדים ולסיים את המדידה לפני עריכת פרופילים.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>מספר ערוצי הכבל אינו נתמך</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>סכמת פרופיל ציוד אינה נתמכת (נדרשת 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</source>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>תצורת ערוצי המיקרופון אינה נתמכת</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>תבנית ההקלטה אינה נתמכת</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>פריסת ערוצי הרמקולים או קצב הדגימה אינם נתמכים</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>תבנית הדגימות של ערבול הרמקולים אינה נתמכת</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</source>
       <translation>הגדרות VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>הפלט הווירטואלי דורש פריסת ערוצים נתמכת של 48 kHz בתבנית נקודה צפה</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>מיקוד בקול</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</source>
     <message>
       <source>Warmth</source>
       <translation>חמימות</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM לשמע של Windows אינו זמין</translation>
     </message>
     <message>
       <source>Yes</source>

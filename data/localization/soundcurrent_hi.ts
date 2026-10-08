@@ -353,6 +353,10 @@ Import into your library?</source>
       <translation>Studio प्रोसेसिंग बायपास करें</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>केबल पैकेट कैप्चर बफ़र की क्षमता से बड़ा है</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>कैलिब्रेशन परीक्षण सिग्नल</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>प्रीसेट सहेजना पूरा नहीं हो सका।</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Windows ऑडियो COM शुरू नहीं किया जा सका</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</source>
       <translation>अमान्य Studio सेटिंग्स</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>अमान्य कैलिब्रेशन ऑडियो</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>अमान्य इक्वलाइज़र सेटिंग्स</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker identity</source>
       <translation>स्पीकर की पहचान अमान्य है</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>अमान्य स्पीकर मिक्स फ़ॉर्मैट</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</source>
     <message>
       <source>Microphone input device</source>
       <translation>माइक्रोफ़ोन इनपुट उपकरण</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>माइक्रोफ़ोन रिकॉर्डिंग की प्रोसेसिंग अटक गई है</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</source>
       <translation>प्रोफ़ाइल संपादित करने से पहले नियंत्रण अनलॉक करें और माप समाप्त करें।</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>केबल की चैनल संख्या समर्थित नहीं है</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>असमर्थित उपकरण प्रोफ़ाइल स्कीमा (अपेक्षित संस्करण 2)।</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</source>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>असमर्थित माइक्रोफ़ोन चैनल लेआउट</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>रिकॉर्डिंग फ़ॉर्मैट समर्थित नहीं है</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>स्पीकर चैनल लेआउट या सैंपल रेट समर्थित नहीं है</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>स्पीकर मिक्स का सैंपल फ़ॉर्मैट समर्थित नहीं है</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</source>
       <translation>VB-CABLE सेटिंग</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>वर्चुअल आउटपुट के लिए समर्थित 48 kHz फ़्लोटिंग-पॉइंट चैनल लेआउट चाहिए</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>गायन पर ज़ोर</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</source>
     <message>
       <source>Warmth</source>
       <translation>गर्माहट</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Windows ऑडियो COM उपलब्ध नहीं है</translation>
     </message>
     <message>
       <source>Yes</source>

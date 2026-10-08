@@ -353,6 +353,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Ohita Studio-käsittely</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Kaapelipaketti ylittää tallennuspuskurin kapasiteetin</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Kalibroinnin testisignaali</translation>
     </message>
@@ -543,6 +547,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Esiasetuksen tallennusta ei voitu viimeistellä.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Windows-äänen COM-alustusta ei voitu tehdä</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Virheelliset Studio-asetukset</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Virheellinen kalibrointiääni</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Virheelliset taajuuskorjaimen asetukset</translation>
     </message>
@@ -1083,6 +1095,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Virheellinen kaiuttimen tunniste</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Virheellinen kaiuttimien miksausmuoto</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Mikrofonin tulolaite</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Mikrofonitallennuksen käsittely on jumittunut</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Avaa säädinten lukitus ja viimeistele mittaus ennen profiilien muokkaamista.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Kaapelin kanavamäärää ei tueta</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Laiteprofiilin skeemaa ei tueta (odotettu: 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Mikrofonin kanavakokoonpanoa ei tueta</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Tallennusmuotoa ei tueta</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Kaiuttimien kanava-asettelua tai näytteenottotaajuutta ei tueta</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Kaiutinmiksauksen näytemuotoa ei tueta</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>VB-CABLE-asetukset</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Virtuaalilähtö vaatii tuetun 48 kHz:n kanava-asettelun liukulukumuodossa</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Laulupainotus</translation>
     </message>
@@ -2164,6 +2204,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Warmth</source>
       <translation>Lämpö</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Windows-äänen COM ei ole käytettävissä</translation>
     </message>
     <message>
       <source>Yes</source>

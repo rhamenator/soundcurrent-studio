@@ -353,6 +353,10 @@ Import into your library?</source>
       <translation>تجاوز معالجة Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>حزمة الكابل تتجاوز سعة مخزن الالتقاط</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>إشارة اختبار المعايرة</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>تعذر إكمال حفظ الإعداد المسبق.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>تعذرت تهيئة COM لصوت Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</source>
       <translation>إعدادات Studio غير صالحة</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>صوت معايرة غير صالح</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>إعدادات معادل الصوت غير صالحة</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker identity</source>
       <translation>هوية مكبر الصوت غير صالحة</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>تنسيق مزج مكبرات الصوت غير صالح</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</source>
     <message>
       <source>Microphone input device</source>
       <translation>جهاز إدخال الميكروفون</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>توقفت معالجة تسجيل الميكروفون عن التقدم</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</source>
       <translation>افتح قفل عناصر التحكم وأكمل القياس قبل تحرير ملفات التعريف.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>عدد قنوات الكابل غير مدعوم</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>مخطط ملف تعريف المعدات غير مدعوم (المتوقع 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</source>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>تخطيط قنوات الميكروفون غير مدعوم</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>تنسيق التسجيل غير مدعوم</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>تخطيط قنوات مكبرات الصوت أو معدل أخذ العينات غير مدعوم</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>تنسيق عينات مزج مكبرات الصوت غير مدعوم</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</source>
       <translation>إعدادات VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>يتطلب الخرج الافتراضي تخطيط قنوات مدعومًا بتردد 48 kHz وتنسيق الفاصلة العائمة</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>تركيز على الصوت البشري</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</source>
     <message>
       <source>Warmth</source>
       <translation>الدفء</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM لصوت Windows غير متاح</translation>
     </message>
     <message>
       <source>Yes</source>

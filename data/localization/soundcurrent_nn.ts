@@ -353,6 +353,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Omgå Studio-handsaming</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Kabelpakken overskrid kapasiteten til opptaksbufferen</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Testsignal for kalibrering</translation>
     </message>
@@ -543,6 +547,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Kunne ikkje fullføre lagring av førehandsinnstillinga.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Kunne ikkje initialisere COM for Windows-lyd</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Ugyldige Studio-innstillingar</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Ugyldig kalibreringslyd</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Ugyldige equalizerinnstillingar</translation>
     </message>
@@ -1083,6 +1095,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Ugyldig høgtalaridentitet</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Ugyldig miksformat for høgtalarar</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Mikrofoninngangseining</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Behandlinga av mikrofonopptaket har stoppa opp</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Lås opp kontrollane og fullfør målinga før du redigerer profilar.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Talet på kabelkanalar er ikkje støtta</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Skjemaet for utstyrsprofilen er ikkje støtta (venta: 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Kanaloppsettet til mikrofonen er ikkje støtta</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Opptaksformatet er ikkje støtta</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Kanaloppsettet eller samplingsfrekvensen til høgtalarane er ikkje støtta</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Sampleformatet for høgtalarmiksen er ikkje støtta</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Importere til biblioteket ditt?</translation>
       <translation>VB-CABLE-innstillingar</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Den virtuelle utgangen krev eit støtta kanaloppsett ved 48 kHz i flyttalsformat</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Vokalfokus</translation>
     </message>
@@ -2164,6 +2204,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Warmth</source>
       <translation>Varme</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM for Windows-lyd er ikkje tilgjengeleg</translation>
     </message>
     <message>
       <source>Yes</source>

@@ -353,6 +353,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Studio-verwerking omzeilen</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Het kabelpakket overschrijdt de opnamebuffer</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Kalibratietestsignaal</translation>
     </message>
@@ -543,6 +547,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Kon het opslaan van de preset niet voltooien.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Windows-audio-COM kon niet worden geïnitialiseerd</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Ongeldige Studio-instellingen</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Ongeldige kalibratieaudio</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Ongeldige equalizerinstellingen</translation>
     </message>
@@ -1083,6 +1095,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Ongeldige luidsprekeridentiteit</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Ongeldig mengformaat voor luidsprekers</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Microfooningangsapparaat</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>De verwerking van de microfoonopname is vastgelopen</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Ontgrendel regelaars en voltooi de meting voordat u profielen bewerkt.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Niet-ondersteund aantal kabelkanalen</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Niet-ondersteund apparatuurprofielschema (verwacht 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Niet-ondersteunde microfoonkanaalindeling</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Niet-ondersteund opnameformaat</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Niet-ondersteunde luidsprekerkanaalindeling of samplefrequentie</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Niet-ondersteund sampleformaat voor de luidsprekermix</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>VB-CABLE-instellingen</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>De virtuele uitgang vereist een ondersteunde kanaalindeling van 48 kHz in drijvendekommaformaat</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Stemfocus</translation>
     </message>
@@ -2164,6 +2204,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Warmth</source>
       <translation>Warmte</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Windows-audio-COM is niet beschikbaar</translation>
     </message>
     <message>
       <source>Yes</source>

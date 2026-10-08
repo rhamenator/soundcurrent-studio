@@ -353,6 +353,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Lewati pemrosesan Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Paket kabel melebihi kapasitas buffer tangkapan</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Sinyal uji kalibrasi</translation>
     </message>
@@ -543,6 +547,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Tidak dapat menyelesaikan penyimpanan preset.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Tidak dapat menginisialisasi COM audio Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Pengaturan Studio tidak valid</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Audio kalibrasi tidak valid</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Pengaturan equalizer tidak valid</translation>
     </message>
@@ -1083,6 +1095,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Identitas speaker tidak valid</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Format campuran speaker tidak valid</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Perangkat masukan mikrofon</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Pemrosesan rekaman mikrofon macet</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Buka kunci kontrol dan selesaikan pengukuran sebelum mengedit profil.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Jumlah kanal kabel tidak didukung</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Skema profil peralatan tidak didukung (diperlukan 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Tata letak kanal mikrofon tidak didukung</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Format rekaman tidak didukung</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Tata letak kanal speaker atau laju sampel tidak didukung</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Format sampel campuran speaker tidak didukung</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Pengaturan VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Output virtual memerlukan tata letak kanal 48 kHz floating-point yang didukung</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Fokus vokal</translation>
     </message>
@@ -2164,6 +2204,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Warmth</source>
       <translation>Kehangatan</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM audio Windows tidak tersedia</translation>
     </message>
     <message>
       <source>Yes</source>

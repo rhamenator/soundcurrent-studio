@@ -2330,7 +2330,7 @@ public:
                 micLabels_[i]->setText(QString(SC_TR("%1 %2%3 dB")).arg(names[i])
                                            .arg(value > 0 ? "+" : "").arg(QLocale().toString(value / 2.0, 'f', 1)));
                 try { microphone_.update(micAdjustments(), micGain_->value() / 2.0); }
-                catch (const std::exception &error) { micStatus_->setText(error.what()); }
+                catch (const std::exception &error) { micStatus_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what()))); }
             });
         }
         connect(micGain_, &QSlider::valueChanged, this, [this](int value) {
@@ -2338,7 +2338,7 @@ public:
             micGainValue_->setText(QString(SC_TR("%1%2 dB")).arg(value > 0 ? "+" : "")
                                        .arg(QLocale().toString(value / 2.0, 'f', 1)));
             try { microphone_.update(micAdjustments(), value / 2.0); }
-            catch (const std::exception &error) { micStatus_->setText(error.what()); }
+            catch (const std::exception &error) { micStatus_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what()))); }
         });
         connect(micReset, &QPushButton::clicked, this, [this] {
             for (auto *slider : micSliders_) slider->setValue(0);
@@ -2682,7 +2682,7 @@ private:
             input = microphone_.active() ? microphone_.target() : defaultSource();
             for (const auto &device : inputDevices()) if (device.name == input) found = true;
         } catch (const std::exception &error) {
-            calibrationStatus_->setText(SC_TR("Cannot start measurement: %1").arg(QString::fromUtf8(error.what())));
+            calibrationStatus_->setText(SC_TR("Cannot start measurement: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what()))));
             return;
         }
         if (output.isEmpty() || !found) {
@@ -2850,7 +2850,7 @@ private:
             });
             micStatus_->setText(micDisconnectNotice_ + SC_TR("Natural mic EQ on · %1").arg(desired.description) +
                                 (!usbConnected ? usbMicrophoneHint() : ""));
-        } catch (const std::exception &error) { micStatus_->setText(SC_TR("Microphone error: %1").arg(QString::fromUtf8(error.what()))); }
+        } catch (const std::exception &error) { micStatus_->setText(SC_TR("Microphone error: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what())))); }
     }
 
     void showPlaybackStatus(const Device &device) {

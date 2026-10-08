@@ -353,6 +353,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Obísť spracovanie Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Paket kábla prekračuje kapacitu zachytávacieho buffera</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Kalibračný testovací signál</translation>
     </message>
@@ -543,6 +547,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Nepodarilo sa dokončiť uloženie predvoľby.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Nie je možné inicializovať COM pre zvuk Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Neplatné nastavenia Studia</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Neplatný kalibračný zvuk</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Neplatné nastavenia ekvalizéra</translation>
     </message>
@@ -1083,6 +1095,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Neplatné identifikačné údaje reproduktora</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Neplatný zmiešavací formát reproduktorov</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Vstupné zariadenie mikrofónu</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Spracovanie záznamu mikrofónu sa zablokovalo</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Pred úpravou profilov odomknite ovládanie a dokončite meranie.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Nepodporovaný počet kanálov kábla</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Nepodporovaná schéma profilu zariadenia (očakávané 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Nepodporované rozloženie kanálov mikrofónu</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Nepodporovaný formát záznamu</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Nepodporované rozloženie kanálov reproduktorov alebo vzorkovacia frekvencia</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Nepodporovaný formát vzoriek zmiešavania reproduktorov</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Nastavenia VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Virtuálny výstup vyžaduje podporované rozloženie kanálov 48 kHz v pohyblivej rádovej čiarke</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Zameranie na spev</translation>
     </message>
@@ -2164,6 +2204,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Warmth</source>
       <translation>Teplý tón</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM pre zvuk Windows nie je dostupné</translation>
     </message>
     <message>
       <source>Yes</source>

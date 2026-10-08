@@ -353,6 +353,10 @@ Import into your library?</translation>
       <translation>Bypass Studio processing</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Cable packet exceeds its capture buffer</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Calibration test signal</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Could not finish saving preset.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Could not initialize Windows audio COM</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</translation>
       <translation>Invalid Studio settings</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Invalid calibration audio</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Invalid equalizer settings</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Invalid speaker identity</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Invalid speaker mix format</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Microphone input device</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Microphone recording consumer stalled</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</translation>
       <translation>Unlock controls and finish measurement before editing profiles.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Unsupported cable channel count</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Unsupported equipment profile schema (expected 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Unsupported microphone channel layout</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Unsupported recording format</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Unsupported speaker channel layout or sample rate</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Unsupported speaker mix sample format</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</translation>
       <translation>VB-CABLE settings</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Virtual output requires a supported 48 kHz float channel layout</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Vocal Focus</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</translation>
     <message>
       <source>Warmth</source>
       <translation>Warmth</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Windows audio COM unavailable</translation>
     </message>
     <message>
       <source>Yes</source>

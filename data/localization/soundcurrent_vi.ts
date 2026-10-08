@@ -353,6 +353,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Bỏ qua xử lý Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Gói dữ liệu cáp vượt quá dung lượng bộ đệm thu</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Tín hiệu thử hiệu chuẩn</translation>
     </message>
@@ -543,6 +547,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Không thể hoàn tất lưu thiết lập sẵn.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Không thể khởi tạo COM âm thanh Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Thiết lập Studio không hợp lệ</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Âm thanh hiệu chuẩn không hợp lệ</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Thiết lập bộ cân bằng âm không hợp lệ</translation>
     </message>
@@ -1083,6 +1095,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Thông tin nhận dạng loa không hợp lệ</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Định dạng trộn âm loa không hợp lệ</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Thiết bị đầu vào micrô</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Quá trình xử lý bản ghi micrô bị đình trệ</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Mở khóa điều khiển và hoàn tất phép đo trước khi sửa cấu hình.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Không hỗ trợ số kênh cáp này</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Không hỗ trợ phiên bản cấu trúc cấu hình thiết bị (yêu cầu 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Không hỗ trợ bố trí kênh micrô</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Không hỗ trợ định dạng ghi âm</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Không hỗ trợ bố trí kênh loa hoặc tần số lấy mẫu</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Không hỗ trợ định dạng mẫu trộn âm loa</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Cài đặt VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Đầu ra ảo yêu cầu bố trí kênh 48 kHz ở định dạng dấu phẩy động được hỗ trợ</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Nhấn giọng hát</translation>
     </message>
@@ -2164,6 +2204,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Warmth</source>
       <translation>Độ ấm</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM âm thanh Windows không khả dụng</translation>
     </message>
     <message>
       <source>Yes</source>

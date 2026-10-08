@@ -353,6 +353,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Ignorar processamento do Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>O pacote do cabo excede a capacidade do buffer de captura</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Sinal de teste de calibração</translation>
     </message>
@@ -543,6 +547,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Não foi possível concluir a gravação do predefinido.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Não foi possível inicializar o COM para áudio do Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Definições do Studio inválidas</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Áudio de calibração inválido</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Definições do equalizador inválidas</translation>
     </message>
@@ -1083,6 +1095,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Identidade da coluna inválida</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Formato de mistura das colunas inválido</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Dispositivo de entrada do microfone</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>O processamento da gravação do microfone bloqueou</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Desbloqueie os controlos e termine a medição antes de editar perfis.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Número de canais do cabo não suportado</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Esquema de perfil de equipamento não suportado (esperado 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Disposição de canais do microfone não suportada</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Formato de gravação não suportado</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Disposição de canais das colunas ou frequência de amostragem não suportada</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Formato das amostras da mistura das colunas não suportado</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Importar para a sua biblioteca?</translation>
       <translation>Definições do VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>A saída virtual requer uma disposição de canais suportada a 48 kHz em vírgula flutuante</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Vozes em destaque</translation>
     </message>
@@ -2164,6 +2204,10 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Warmth</source>
       <translation>Calor</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM para áudio do Windows indisponível</translation>
     </message>
     <message>
       <source>Yes</source>

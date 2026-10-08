@@ -353,6 +353,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Pomiń przetwarzanie Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Pakiet kabla przekracza pojemność bufora przechwytywania</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Sygnał testowy kalibracji</translation>
     </message>
@@ -543,6 +547,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Nie udało się zakończyć zapisywania ustawienia.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Nie udało się zainicjować COM dla dźwięku systemu Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Nieprawidłowe ustawienia Studio</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Nieprawidłowy dźwięk kalibracji</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Nieprawidłowe ustawienia korektora</translation>
     </message>
@@ -1083,6 +1095,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Nieprawidłowa identyfikacja głośnika</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Nieprawidłowy format miksowania głośników</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Urządzenie wejściowe mikrofonu</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Przetwarzanie nagrania mikrofonu zablokowało się</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Odblokuj ustawienia i zakończ pomiar przed edycją profili.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Nieobsługiwana liczba kanałów kabla</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Nieobsługiwany schemat profilu sprzętu (oczekiwano 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Nieobsługiwany układ kanałów mikrofonu</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Nieobsługiwany format nagrywania</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Nieobsługiwany układ kanałów głośników lub częstotliwość próbkowania</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Nieobsługiwany format próbek miksu głośników</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Ustawienia VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Wirtualne wyjście wymaga obsługiwanego układu kanałów 48 kHz w formacie zmiennoprzecinkowym</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Wyeksponowany wokal</translation>
     </message>
@@ -2164,6 +2204,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Warmth</source>
       <translation>Ciepło</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM dla dźwięku systemu Windows jest niedostępne</translation>
     </message>
     <message>
       <source>Yes</source>

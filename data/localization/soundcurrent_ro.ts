@@ -353,6 +353,10 @@ Importați în bibliotecă?</translation>
       <translation>Ocoliți procesarea Studio</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>Pachetul cablului depășește capacitatea bufferului de captură</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Semnal de test pentru calibrare</translation>
     </message>
@@ -543,6 +547,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Nu s-a putut finaliza salvarea presetării.</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>Nu s-a putut inițializa COM pentru sunetul Windows</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Importați în bibliotecă?</translation>
       <translation>Setări Studio nevalide</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>Semnal audio de calibrare nevalid</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>Setări ale egalizatorului nevalide</translation>
     </message>
@@ -1083,6 +1095,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Invalid speaker identity</source>
       <translation>Identitate nevalidă de boxă</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>Format de mixaj al difuzoarelor nevalid</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Microphone input device</source>
       <translation>Dispozitiv de intrare microfon</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>Procesarea înregistrării microfonului s-a blocat</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Importați în bibliotecă?</translation>
       <translation>Deblocați controalele și finalizați măsurarea înainte de a edita profilurile.</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>Număr de canale al cablului neacceptat</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Schemă de profil de echipament neacceptată (se aștepta 2).</translation>
     </message>
@@ -2107,6 +2131,18 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>Configurație de canale a microfonului neacceptată</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>Format de înregistrare neacceptat</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>Configurație de canale a difuzoarelor sau rată de eșantionare neacceptată</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>Format de eșantioane al mixajului difuzoarelor neacceptat</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Importați în bibliotecă?</translation>
       <translation>Setări VB-CABLE</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>Ieșirea virtuală necesită o configurație de canale acceptată la 48 kHz în virgulă mobilă</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>Accent pe voce</translation>
     </message>
@@ -2164,6 +2204,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Warmth</source>
       <translation>Căldură</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>COM pentru sunetul Windows nu este disponibil</translation>
     </message>
     <message>
       <source>Yes</source>

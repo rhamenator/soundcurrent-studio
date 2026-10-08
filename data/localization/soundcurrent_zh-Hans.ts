@@ -353,6 +353,10 @@ Import into your library?</source>
       <translation>旁路 Studio 处理</translation>
     </message>
     <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>音频线缆数据包超出捕获缓冲区容量</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>校准测试信号</translation>
     </message>
@@ -543,6 +547,10 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>无法完成保存预设。</translation>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>无法初始化 Windows 音频 COM</translation>
     </message>
     <message>
       <source>Could not open test waveform</source>
@@ -1033,6 +1041,10 @@ Import into your library?</source>
       <translation>Studio 设置无效</translation>
     </message>
     <message>
+      <source>Invalid calibration audio</source>
+      <translation>校准音频无效</translation>
+    </message>
+    <message>
       <source>Invalid equalizer settings</source>
       <translation>均衡器设置无效</translation>
     </message>
@@ -1083,6 +1095,10 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker identity</source>
       <translation>扬声器标识无效</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>扬声器混音格式无效</translation>
     </message>
     <message>
       <source>Jazz</source>
@@ -1257,6 +1273,10 @@ Import into your library?</source>
     <message>
       <source>Microphone input device</source>
       <translation>麦克风输入设备</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>麦克风录音处理已停滞</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
@@ -2097,6 +2117,10 @@ Import into your library?</source>
       <translation>编辑配置前请解锁控制并完成测量。</translation>
     </message>
     <message>
+      <source>Unsupported cable channel count</source>
+      <translation>不支持此音频线缆声道数</translation>
+    </message>
+    <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>不支持的设备配置格式版本（应为 2）。</translation>
     </message>
@@ -2107,6 +2131,18 @@ Import into your library?</source>
     <message>
       <source>Unsupported microphone channel layout</source>
       <translation>不支持的麦克风声道布局</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>不支持此录音格式</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>不支持此扬声器声道布局或采样率</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>不支持此扬声器混音采样格式</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
@@ -2142,6 +2178,10 @@ Import into your library?</source>
       <translation>VB-CABLE 设置</translation>
     </message>
     <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>虚拟输出需要受支持的 48 kHz 浮点声道布局</translation>
+    </message>
+    <message>
       <source>Vocal Focus</source>
       <translation>人声突出</translation>
     </message>
@@ -2164,6 +2204,10 @@ Import into your library?</source>
     <message>
       <source>Warmth</source>
       <translation>温暖感</translation>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Windows 音频 COM 不可用</translation>
     </message>
     <message>
       <source>Yes</source>
