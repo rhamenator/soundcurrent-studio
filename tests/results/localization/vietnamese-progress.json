@@ -1,24 +1,24 @@
 {
-  "stage": "Vietnamese first existing-catalog batch",
+  "stage": "Vietnamese second existing-catalog batch",
   "catalogs": [
     {
       "tag": "vi",
       "name": "Tiếng Việt",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "a2ed198581e08167f4fe8e376e6aa9d61dd617c6ade29920180c3914761dd99b",
-      "qmSha256": "e7d425455bbf1e617b502f8fcee0a6fa06b40ef984ec1b62cd81f84ed12e001c"
+      "tsSha256": "c864551fbb64fbc98f9de9d35bf1d2c6e61e6880e0669eae4ae5347dd1c9ca7e",
+      "qmSha256": "933aed7eea4556d76ad8ce511c8d9e029812f8d12f3f66faf502251ee5381bcf"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Vietnamese MainWindow offscreen smoke test and structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-vi-first-tests.log"
+    "log": "/tmp/soundcurrent-studio-vi-second-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–79: routing, electrical measurement requirements, calibration, gain/clipping, enhancement behavior and quit versus close. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–159: safe failure messages, profile saving, microphone capture, update guidance and delay wet mix. File patterns, placeholders and numerical limits preserved; half-dB step localized as 0,5 dB. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Vietnamese incomplete. Three target catalogs still incomplete; omitted source messages reserved for second pass."
