@@ -1,0 +1,25 @@
+{
+  "stage": "Arabic initial audio-controls batch",
+  "catalogs": [
+    {
+      "tag": "ar",
+      "name": "العربية",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "11f7667f9ed071fc55e5176e2b3b20ac2b178921a57ee355aaae32902b2372ca",
+      "qmSha256": "0225540b397b2ead20b6b4a8ca4f54a8d30a9f4d18f8b03ce5d0431ee37a124e"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "compiled localization, Arabic main window and catalog validation",
+    "log": "/tmp/soundcurrent-studio-ar-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Gain/headroom, clipped signal peaks, amplifier measurement requirements and restart recovery reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "12 original target catalogs incomplete. Full RTL, bidi and platform qualification remain open."
+}
