@@ -1,24 +1,24 @@
 {
-  "stage": "Persian calibration, recovery and delay batch",
+  "stage": "Persian equipment, filters and metering batch",
   "catalogs": [
     {
       "tag": "fa",
       "name": "فارسی",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "795abc7d04d2baaa2f154053ebf9288960340486a82c216d33fe1002d6c345e9",
-      "qmSha256": "3fd01b5d32f9321edc5f100c0f099757a9ccca88e4a8cbb44c1bb6c42433a5c5"
+      "tsSha256": "f4aef60c92c4b488478692d90ebdd58a3dd3b36368d4b50dafc74fafae1fc21c",
+      "qmSha256": "840d4024ef37b024e848c20572a5e6ddf0b10cef94ee50de45149a894b58cc34"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Persian main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-fa-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-fa-third-tests.log"
   },
-  "review": "Contextual AI review; unverified. Calibration recovery, unchanged 1 MiB limits, app-remains-open messages, cancel versus close, updates and processed delay mix reviewed.",
+  "review": "Contextual AI review; unverified. Estimated versus measured levels, filter Q/high-pass/high-shelf, dynamics makeup gain, equipment kinds and quit behavior reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Persian catalog incomplete. 10 original target catalogs remain incomplete; omitted messages scheduled for second pass. Full bidi and platform qualification remain open."
