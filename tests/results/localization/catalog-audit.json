@@ -3,7 +3,7 @@
   "tool_version": "0.1.0",
   "inputs": {
     "data/localization/soundcurrent_en.ts": "e8bd97989399f006b1ea7fff8f2fe2ec534c5620cf6e067aab7642467ec37ffe",
-    "data/localization/soundcurrent_ar.ts": "11f7667f9ed071fc55e5176e2b3b20ac2b178921a57ee355aaae32902b2372ca",
+    "data/localization/soundcurrent_ar.ts": "ca03a337b80224bb19b36cfd17926ea80585625f3befba272126109abcc240e9",
     "data/localization/soundcurrent_cs.ts": "0fa1121c6387f8fd20bb2a197eb696207ab6f25562edfeb4994f9eb320e37915",
     "data/localization/soundcurrent_da.ts": "4be78c5eca1c63034fa9ffb578f41c7803e911da1fa3b113ccf50a8b06746933",
     "data/localization/soundcurrent_de.ts": "a189bd688792c6564a726af966dad670037a1605692e4653b7ee8b9fb0ccadf3",
@@ -44,7 +44,7 @@
       "commit": "unknown",
       "file": "data/localization/soundcurrent_ar.ts",
       "locale": "ar",
-      "key": "[\"SoundCurrent\",null,\"Bright\",\"\"]",
+      "key": "[\"SoundCurrent\",null,\"Delay wet mix \\u00b7 %1%\",\"\"]",
       "category": "untranslated",
       "severity": "error",
       "confidence": 1.0,
@@ -52,14 +52,14 @@
       "recommended_action": "Review and correct catalog; rerun audit.",
       "verification_status": "deterministic",
       "kind": "deterministic",
-      "fingerprint": "d286c7aad8e52a586b5c0324be9102685b9b3453ea92de0f0985016eb62da5c4"
+      "fingerprint": "ae99bcfbd550daa62a73532c7fe95904c829ce12e782d28d44f1ab496f3630b2"
     },
     {
       "repository": "soundcurrent-studio",
       "commit": "unknown",
       "file": "data/localization/soundcurrent_ar.ts",
       "locale": "ar",
-      "key": "[\"SoundCurrent\",null,\"Browse all equipment profiles / editor\",\"\"]",
+      "key": "[\"SoundCurrent\",null,\"Discard\",\"\"]",
       "category": "untranslated",
       "severity": "error",
       "confidence": 1.0,
@@ -67,14 +67,14 @@
       "recommended_action": "Review and correct catalog; rerun audit.",
       "verification_status": "deterministic",
       "kind": "deterministic",
-      "fingerprint": "367d73c661f4b4589c600333f1406f230978e50bdebad5c349fc22eb9e79a394"
+      "fingerprint": "40347df677c03f070233d6fb12ff1fef31abe75fef529e53e955ac8829651fc1"
     },
     {
       "repository": "soundcurrent-studio",
       "commit": "unknown",
       "file": "data/localization/soundcurrent_ar.ts",
       "locale": "ar",
-      "key": "[\"SoundCurrent\",null,\"Bypass Studio processing\",\"\"]",
+      "key": "[\"SoundCurrent\",null,\"Drag curve points or tune the selected band below.\",\"\"]",
       "category": "untranslated",
       "severity": "error",
       "confidence": 1.0,
@@ -82,7 +82,7 @@
       "recommended_action": "Review and correct catalog; rerun audit.",
       "verification_status": "deterministic",
       "kind": "deterministic",
-      "fingerprint": "ea323b1cdb27993beb01aa4f71d88fd7fceaf20e499bfaa166e5b9858cd76e5f"
+      "fingerprint": "ab3ed083c056be25dc67d0aac3440522850ab2299fbf2f7d88a7eaeee969ab42"
     }
   ],
   "metrics": [
@@ -90,7 +90,7 @@
       "file": "data/localization/soundcurrent_ar.ts",
       "locale": "ar",
       "total": 527,
-      "translated": 106,
+      "translated": 181,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     },
@@ -352,7 +352,7 @@
     }
   ],
   "findingCounts": {
-    "untranslated": 5888
+    "untranslated": 5813
   },
   "reportNote": "Compact structural report: input hashes and metrics retained, three sample findings. Linguistic review and runtime qualification remain separate."
 }

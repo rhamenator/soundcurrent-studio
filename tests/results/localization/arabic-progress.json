@@ -1,24 +1,24 @@
 {
-  "stage": "Arabic initial audio-controls batch",
+  "stage": "Arabic recovery, calibration and delay batch",
   "catalogs": [
     {
       "tag": "ar",
       "name": "العربية",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "11f7667f9ed071fc55e5176e2b3b20ac2b178921a57ee355aaae32902b2372ca",
-      "qmSha256": "0225540b397b2ead20b6b4a8ca4f54a8d30a9f4d18f8b03ce5d0431ee37a124e"
+      "tsSha256": "ca03a337b80224bb19b36cfd17926ea80585625f3befba272126109abcc240e9",
+      "qmSha256": "4e6773c72fab7246514e8d3b8018d611f3a242ccb9175823e1d3308b52d29a87"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "compiled localization, Arabic main window and catalog validation",
-    "log": "/tmp/soundcurrent-studio-ar-first-tests.log"
+    "log": "/tmp/soundcurrent-studio-ar-second-tests.log"
   },
-  "review": "Contextual AI review; unverified. Gain/headroom, clipped signal peaks, amplifier measurement requirements and restart recovery reviewed.",
+  "review": "Contextual AI review; unverified. Processing refusal, calibration safety errors, file size limits, update behavior and processed delay mix reviewed.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "12 original target catalogs incomplete. Full RTL, bidi and platform qualification remain open."

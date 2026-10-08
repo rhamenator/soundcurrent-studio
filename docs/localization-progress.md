@@ -133,3 +133,5 @@ Nynorsk import and speaker-profile batch: 466/527 messages populated. Three focu
 Nynorsk complete extracted catalogs: 527 messages each. Full Linux CTest passed 72/72 including equipment workflows. Nynorsk EQ and Nynorsk Studio effects inspected at 1280×720. Contextual review remains unverified, with no native-speaker claim. Windows qualification pending for these catalogs.
 
 Arabic initial batch: 106/527 messages populated. Three focused Linux checks passed per app. Arabic EQ sample inspected at 1280×720 with RTL text/tabs and LTR frequency/numerical controls. Catalog remains incomplete and unverified; full bidi qualification remains open.
+
+Arabic recovery, calibration and delay batch: 181/527 messages populated. Three focused Linux checks passed. Processing refusal, 1 MiB limits, update behavior and processed delay mix reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
