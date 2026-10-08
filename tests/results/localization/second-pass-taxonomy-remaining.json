@@ -31,7 +31,28 @@
       "failed": 0
     },
     "build": "passed",
-    "LinuxRuntimeMatrix": "in progress with equipment fixture timeouts; not qualified",
+    "LinuxRuntimeMatrix": {
+      "attempted": 72,
+      "passed": 62,
+      "failed": 10,
+      "status": "not qualified",
+      "failedTests": [
+        "equipment-ui-uk",
+        "equipment-ui-el",
+        "equipment-ui-sv",
+        "equipment-ui-hu",
+        "equipment-ui-ar",
+        "equipment-ui-zh-Hans",
+        "equipment-ui-zh-Hant",
+        "equipment-ui-ko",
+        "equipment-ui-hi",
+        "equipment-ui-sw"
+      ],
+      "localizedSharedNumberCatalogTests": {
+        "passed": 38,
+        "failed": 0
+      }
+    },
     "WindowsAndPackages": "pending"
   },
   "runtimeFailureObservations": [
