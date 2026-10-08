@@ -1,24 +1,24 @@
 {
-  "stage": "Korean second existing-catalog batch",
+  "stage": "Korean third existing-catalog batch",
   "catalogs": [
     {
       "tag": "ko",
       "name": "한국어",
-      "translated": 181,
+      "translated": 254,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "478465ee460c90de128ce34151c69f3f29383d303ca29a1dd5d7990256baf789",
-      "qmSha256": "59465c4b90fb7c85fd53f4e967261508c67b90b2d29ae0bd2cc5ee786fb418ab"
+      "tsSha256": "7d0884670595864f2bc680e6eb02b89622176ff2dfb4193ac57230c2271ef2b8",
+      "qmSha256": "44069ea02e3092f55d6dd37f0beaedf5f05c08585fd4ff97cfa45b8192271101"
     }
   ],
   "linuxTests": {
     "passed": 3,
     "total": 3,
     "scope": "Embedded localization assertions, Korean MainWindow offscreen smoke test and structural catalog validation",
-    "log": "/tmp/soundcurrent-studio-ko-second-tests.log"
+    "log": "/tmp/soundcurrent-studio-ko-third-tests.log"
   },
-  "review": "Contextual AI review of shared source entries 0–159: routing, safe failure messages, calibration and microphone capture, preset saving, gain/clipping and delay wet mix. File patterns and numerical limits preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review of shared source entries 0–239: dynamics controls, estimated metering, physical L/R enhancements, equipment editor and measured-response imports. Preserved file patterns, parameter placeholders and numerical limits. Linguistic accuracy unverified.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
   "remaining": "Korean incomplete. Six target catalogs still incomplete; omitted source messages reserved for second pass."
