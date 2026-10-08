@@ -191,3 +191,5 @@ Simplified Chinese saving, speaker profiles and device recovery batch: 466/527 m
 Simplified Chinese current catalogs complete: 527/527 messages populated. Full Linux CTest passed 76/76, including equipment workflows and script selection assertions. Calibration limits and operational controls reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
 
 Traditional Chinese initial audio controls and profile guidance: 106/527 messages populated. Three focused Linux checks passed. Gain/headroom, clipping and measured amplifier correction requirements reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
+
+Traditional Chinese calibration, recovery and delay batch: 181/527 messages populated. Three focused Linux checks passed. Calibration recovery, file limits, cancel versus close and delay wet mix reviewed contextually. Catalog remains incomplete and unverified; mixed-direction formatting remains open.
