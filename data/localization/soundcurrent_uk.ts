@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>Спорожнити буфер тестового відтворення</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Налаштування драйвера не вдалося (код %1). Жодні параметри безпеки Windows не змінено.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Без ефекту</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>Налаштування VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>Налаштування VB-CABLE скасовано або не завершено (код %1). SoundCurrent залишається встановленим для повторної спроби.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

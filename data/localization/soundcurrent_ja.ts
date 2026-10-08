@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>テスト再生の完了待ち</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>ドライバーのセットアップに失敗しました（コード %1）。Windows のセキュリティ設定は変更されていません。</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>ドライ</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE 設定</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE のセットアップがキャンセルされたか、完了しませんでした（コード %1）。再試行できるよう、SoundCurrent はインストールされたままです。</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

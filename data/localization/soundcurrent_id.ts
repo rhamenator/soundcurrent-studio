@@ -782,6 +782,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Menyelesaikan pemutaran uji</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Penyiapan driver gagal (kode %1). Tidak ada pengaturan keamanan Windows yang diubah.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Dry</translation>
     </message>
@@ -2805,6 +2809,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>Pengaturan VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>Penyiapan VB-CABLE dibatalkan atau tidak selesai (kode %1). SoundCurrent tetap terpasang agar Anda dapat mencoba lagi.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

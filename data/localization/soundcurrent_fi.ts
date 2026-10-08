@@ -782,6 +782,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Testitoiston loppuun saattaminen</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Ohjaimen asennus epäonnistui (koodi %1). Windowsin suojausasetuksia ei muutettu.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Käsittelemätön</translation>
     </message>
@@ -2805,6 +2809,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE-asetukset</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE-asennus peruutettiin tai sitä ei suoritettu loppuun (koodi %1). SoundCurrent jää asennetuksi uutta yritystä varten.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

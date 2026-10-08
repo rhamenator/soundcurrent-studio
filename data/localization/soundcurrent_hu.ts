@@ -782,6 +782,10 @@ Importálja a könyvtárba?</translation>
       <translation>A tesztlejátszás befejezése</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Az illesztőprogram beállítása sikertelen (kód: %1). A Windows biztonsági beállításai nem változtak.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Feldolgozatlan</translation>
     </message>
@@ -2805,6 +2809,10 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE-beállítások</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>A VB-CABLE beállítását megszakították, vagy nem fejeződött be (kód: %1). A SoundCurrent telepítve marad az újrapróbálkozáshoz.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

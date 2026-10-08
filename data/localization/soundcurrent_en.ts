@@ -782,6 +782,10 @@ Import into your library?</translation>
       <translation>Drain test playback</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Driver setup failed (code %1). No Windows security settings were changed.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Dry</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE settings</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

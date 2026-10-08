@@ -782,6 +782,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Fullføring av testavspeling</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Drivaroppsettet mislukkast (kode %1). Ingen tryggleiksinnstillingar i Windows vart endra.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Uhandsama</translation>
     </message>
@@ -2805,6 +2809,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE-innstillingar</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE-oppsettet vart avbrote eller ikkje fullført (kode %1). SoundCurrent blir verande installert slik at du kan prøve på nytt.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

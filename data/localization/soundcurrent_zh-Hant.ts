@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>完成測試音訊播放</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>驅動程式設定失敗（代碼 %1）。未變更任何 Windows 安全性設定。</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>乾聲</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE 設定</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE 設定已取消或未完成（代碼 %1）。SoundCurrent 仍保持安裝，可重試。</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

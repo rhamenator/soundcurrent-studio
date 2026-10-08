@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>تکمیل پخش آزمایشی</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>راه‌اندازی درایور ناموفق بود (کد %1). هیچ‌یک از تنظیمات امنیتی Windows تغییر نکرد.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>بدون پردازش</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>تنظیمات VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>راه‌اندازی VB-CABLE لغو شد یا به پایان نرسید (کد %1). SoundCurrent برای تلاش دوباره نصب‌شده باقی ماند.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

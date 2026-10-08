@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>테스트 재생 완료 대기</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>드라이버 설정에 실패했습니다(코드 %1). Windows 보안 설정은 변경되지 않았습니다.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>드라이</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>VB-CABLE 설정</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE 설정이 취소되었거나 완료되지 않았습니다(코드 %1). 다시 시도할 수 있도록 SoundCurrent는 설치된 상태로 유지됩니다.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

@@ -782,6 +782,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Vyprázdniť buffer testovacieho prehrávania</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Nastavenie ovládača zlyhalo (kód %1). Žiadne nastavenia zabezpečenia systému Windows neboli zmenené.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Bez efektu</translation>
     </message>
@@ -2805,6 +2809,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>Nastavenia VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>Nastavenie VB-CABLE bolo zrušené alebo nebolo dokončené (kód %1). SoundCurrent zostáva nainštalovaný pre ďalší pokus.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

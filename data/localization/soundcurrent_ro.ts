@@ -782,6 +782,10 @@ Importați în bibliotecă?</translation>
       <translation>Finalizarea redării de test</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Configurarea driverului a eșuat (cod %1). Nu au fost modificate setări de securitate Windows.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Neprocesat</translation>
     </message>
@@ -2805,6 +2809,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>VB-CABLE settings</source>
       <translation>Setări VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>Configurarea VB-CABLE a fost anulată sau nu s-a încheiat (cod %1). SoundCurrent rămâne instalat pentru o nouă încercare.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

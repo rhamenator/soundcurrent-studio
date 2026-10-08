@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>Ολοκλήρωση αναπαραγωγής δοκιμαστικού ήχου</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>Η ρύθμιση του προγράμματος οδήγησης απέτυχε (κωδικός %1). Δεν άλλαξαν ρυθμίσεις ασφαλείας των Windows.</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Χωρίς εφέ</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>Ρυθμίσεις VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>Η ρύθμιση του VB-CABLE ακυρώθηκε ή δεν ολοκληρώθηκε (κωδικός %1). Το SoundCurrent παραμένει εγκατεστημένο για νέα προσπάθεια.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

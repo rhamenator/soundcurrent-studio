@@ -782,6 +782,10 @@ Import into your library?</source>
       <translation>รอให้การเล่นเสียงทดสอบเสร็จสิ้น</translation>
     </message>
     <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>การตั้งค่าไดรเวอร์ล้มเหลว (รหัส %1) ไม่มีการเปลี่ยนแปลงการตั้งค่าความปลอดภัยของ Windows</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>เสียงต้นฉบับ</translation>
     </message>
@@ -2805,6 +2809,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE settings</source>
       <translation>การตั้งค่า VB-CABLE</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>การตั้งค่า VB-CABLE ถูกยกเลิกหรือไม่เสร็จสมบูรณ์ (รหัส %1) SoundCurrent ยังคงติดตั้งอยู่เพื่อให้ลองอีกครั้งได้</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
