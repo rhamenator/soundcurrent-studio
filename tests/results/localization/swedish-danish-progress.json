@@ -1,34 +1,34 @@
 {
-  "stage": "Swedish/Danish microphone and measurement batch",
+  "stage": "Swedish/Danish startup, profile-save and rendering batch",
   "catalogs": [
     {
       "tag": "sv",
       "name": "Svenska",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "a47a9863e9497d19a66a3bc134eb6d0819d75593a42abf5d40775c516f6470aa",
-      "qmSha256": "29898eeb08c2139ec153dec522578818be3dca216c245f250ba8b9864ae1a06f"
+      "tsSha256": "c113c3cc101e586c5dc1957450bd8da651fdb09443e216a523ebe8fe03c762e8",
+      "qmSha256": "a7de6a4aadbe25a61bdbcf206b4f453511c9cb4f6e4047b3dfc881b76e1d1678"
     },
     {
       "tag": "da",
       "name": "Dansk",
-      "translated": 328,
+      "translated": 401,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "8cf844e53e274c87665c5a2187db049d2de503f8eb4a09bc73ed495930fa96b2",
-      "qmSha256": "96932fc5bd787091f05b459a06122588d543b1a4bb6e839a4781fe4e92e58970"
+      "tsSha256": "ae4f772fa39d4d6aa4915c2213ba2776d48c89b60b5f253194dd541c6c765196",
+      "qmSha256": "0e9da0178febbdef8d37635bd6a46b322f62dbbd4443b83fc67f2a404448014c"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Swedish/Danish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-sv-da-fourth-tests.log"
+    "log": "/tmp/soundcurrent-studio-sv-da-fifth-tests.log"
   },
-  "review": "Contextual AI review; unverified. Measured model correction is additive, room/amplifier effects require system measurement, microphone clipping requires lower gain, negative route gain reverses polarity.",
+  "review": "Contextual AI review; unverified. Sign-in registration ownership, profile reference preservation and neutral render-count labels reviewed. Translated link captions preserve original href attributes.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Swedish, Danish and 16 other target catalogs incomplete."
