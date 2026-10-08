@@ -1608,139 +1608,139 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Reset to flat</source>
       <extracomment>Restore zero gain in all EQ bands. Does not mute playback.</extracomment>
-      <translation>Återställ plan kurva</translation>
+      <translation>Återställ till rak frekvensgång</translation>
     </message>
     <message>
       <source>Response data (*.txt *.csv *.frd *.cal)</source>
-      <translation type="unfinished" />
+      <translation>Frekvensgångsdata (*.txt *.csv *.frd *.cal)</translation>
     </message>
     <message>
       <source>Response exceeds 4096 points.</source>
-      <translation type="unfinished" />
+      <translation>Frekvensgången innehåller fler än 4096 punkter.</translation>
     </message>
     <message>
       <source>Response frequencies must increase, with finite bounded values.</source>
-      <translation type="unfinished" />
+      <translation>Frekvenserna måste vara stigande, med ändliga värden inom tillåtna gränser.</translation>
     </message>
     <message>
       <source>Response has no usable audio range.</source>
-      <translation type="unfinished" />
+      <translation>Frekvensgången saknar ett användbart ljudfrekvensområde.</translation>
     </message>
     <message>
       <source>Response import</source>
-      <translation type="unfinished" />
+      <translation>Importera frekvensgång</translation>
     </message>
     <message>
       <source>Response needs 2–4096 measured points.</source>
-      <translation type="unfinished" />
+      <translation>Frekvensgången måste innehålla 2–4096 uppmätta punkter.</translation>
     </message>
     <message>
       <source>Restart Windows before using the equalizer or VB-CABLE settings. Audio driver changes need a system restart.</source>
-      <translation type="unfinished" />
+      <translation>Starta om Windows innan du använder equalizern eller VB-CABLE-inställningarna. Ändringar av ljuddrivrutiner kräver en systemomstart.</translation>
     </message>
     <message>
       <source>Restore Defaults</source>
-      <translation type="unfinished" />
+      <translation>Återställ standardinställningar</translation>
     </message>
     <message>
       <source>Restore the previous EQ setting (Ctrl+Z)</source>
-      <translation type="unfinished" />
+      <translation>Återställ föregående EQ-inställning (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Retry</source>
-      <translation type="unfinished" />
+      <translation>Försök igen</translation>
     </message>
     <message>
       <source>Reverb</source>
-      <translation type="unfinished" />
+      <translation>Efterklang</translation>
     </message>
     <message>
       <source>Reverb wet mix</source>
-      <translation type="unfinished" />
+      <translation>Efterklangens effektandel</translation>
     </message>
     <message>
       <source>Reverb wet mix percent</source>
-      <translation type="unfinished" />
+      <translation>Efterklangens effektandel i procent</translation>
     </message>
     <message>
       <source>Reverb wet mix · %1%</source>
-      <translation type="unfinished" />
+      <translation>Efterklangens effektandel · %1%</translation>
     </message>
     <message>
       <source>Rhythmic echo</source>
-      <translation type="unfinished" />
+      <translation>Rytmiskt eko</translation>
     </message>
     <message>
       <source>Right-to-left test language</source>
-      <translation type="unfinished" />
+      <translation>Testspråk med höger-till-vänster-riktning</translation>
     </message>
     <message>
       <source>Rock</source>
-      <translation type="unfinished" />
+      <translation>Rock</translation>
     </message>
     <message>
       <source>Routes into selected output channel</source>
-      <translation type="unfinished" />
+      <translation>Routningar till vald utgångskanal</translation>
     </message>
     <message>
       <source>Save</source>
-      <translation type="unfinished" />
+      <translation>Spara</translation>
     </message>
     <message>
       <source>Save All</source>
-      <translation type="unfinished" />
+      <translation>Spara alla</translation>
     </message>
     <message>
       <source>Save EQ preset</source>
-      <translation type="unfinished" />
+      <translation>Spara EQ-förinställning</translation>
     </message>
     <message>
       <source>Save Studio setup</source>
-      <translation type="unfinished" />
+      <translation>Spara Studio-konfiguration</translation>
     </message>
     <message>
       <source>Save modified profile?</source>
-      <translation type="unfinished" />
+      <translation>Spara ändrad profil?</translation>
     </message>
     <message>
       <source>Save preset</source>
-      <translation>Spara förval</translation>
+      <translation>Spara förinställning</translation>
     </message>
     <message>
       <source>Save profile</source>
-      <translation type="unfinished" />
+      <translation>Spara profil</translation>
     </message>
     <message>
       <source>Save system response profile</source>
-      <translation type="unfinished" />
+      <translation>Spara profil för systemets frekvensgång</translation>
     </message>
     <message>
       <source>Saved preset “%1”.</source>
-      <translation type="unfinished" />
+      <translation>Förinställningen ”%1” sparades.</translation>
     </message>
     <message>
       <source>Search brand, family, model or measurement conditions</source>
-      <translation type="unfinished" />
+      <translation>Sök efter tillverkare, familj, modell eller mätförhållanden</translation>
     </message>
     <message>
       <source>Second virtual cable for microphone EQ</source>
-      <translation type="unfinished" />
+      <translation>Andra virtuella kabeln för mikrofon-EQ</translation>
     </message>
     <message>
       <source>Select a filter to update, or remove filters before adding more</source>
-      <translation type="unfinished" />
+      <translation>Välj ett filter att uppdatera eller ta bort filter innan du lägger till fler</translation>
     </message>
     <message>
       <source>Select band %1</source>
-      <translation type="unfinished" />
+      <translation>Välj band %1</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
-      <translation type="unfinished" />
+      <translation>Välj detta band för att redigera frekvens, förstärkning och Q</translation>
     </message>
     <message>
       <source>Selected audio device is unavailable</source>
-      <translation type="unfinished" />
+      <translation>Den valda ljudenheten är inte tillgänglig</translation>
     </message>
     <message>
       <source>Selected band</source>
@@ -1749,39 +1749,39 @@ Importera till ditt bibliotek?</translation>
     </message>
     <message>
       <source>Selected band filter Q</source>
-      <translation type="unfinished" />
+      <translation>Filter-Q för valt band</translation>
     </message>
     <message>
       <source>Selected band frequency</source>
-      <translation type="unfinished" />
+      <translation>Frekvens för valt band</translation>
     </message>
     <message>
       <source>Selected band gain</source>
-      <translation type="unfinished" />
+      <translation>Förstärkning för valt band</translation>
     </message>
     <message>
       <source>Selected channel</source>
-      <translation type="unfinished" />
+      <translation>Vald kanal</translation>
     </message>
     <message>
       <source>Selected channel EQ filters</source>
-      <translation type="unfinished" />
+      <translation>EQ-filter för vald kanal</translation>
     </message>
     <message>
       <source>Selected output device is no longer available</source>
-      <translation type="unfinished" />
+      <translation>Den valda utgångsenheten är inte längre tillgänglig</translation>
     </message>
     <message>
       <source>Selected output was unplugged. Switched to automatic output.</source>
-      <translation type="unfinished" />
+      <translation>Den valda utgången kopplades ur. Växlade till automatisk utgång.</translation>
     </message>
     <message>
       <source>Separate quiet tones</source>
-      <translation type="unfinished" />
+      <translation>Separata tysta toner</translation>
     </message>
     <message>
       <source>Set route</source>
-      <translation type="unfinished" />
+      <translation>Ställ in routning</translation>
     </message>
     <message>
       <source>Settings &amp;&amp; calibration</source>
@@ -1789,43 +1789,43 @@ Importera till ditt bibliotek?</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
-      <translation type="unfinished" />
+      <translation>Konfigurationen kan inte läsas eller är större än 8 MiB</translation>
     </message>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
-      <translation type="unfinished" />
+      <translation>Kortare intervall uppdaterar nivåerna oftare och använder mer CPU; ljudleveransen kan begränsa den faktiska uppdateringstakten</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
-      <translation type="unfinished" />
+      <translation>Visa en fallande linje som håller kvar toppnivån för varje frekvensnivå</translation>
     </message>
     <message>
       <source>Show advanced controls</source>
-      <translation type="unfinished" />
+      <translation>Visa avancerade reglage</translation>
     </message>
     <message>
       <source>Show peak markers on frequency levels</source>
-      <translation type="unfinished" />
+      <translation>Visa toppmarkörer på frekvensnivåerna</translation>
     </message>
     <message>
       <source>Slapback echo</source>
-      <translation type="unfinished" />
+      <translation>Slapback-eko</translation>
     </message>
     <message>
       <source>Small Speakers</source>
-      <translation type="unfinished" />
+      <translation>Små högtalare</translation>
     </message>
     <message>
       <source>Small room</source>
-      <translation type="unfinished" />
+      <translation>Litet rum</translation>
     </message>
     <message>
       <source>Soft Treble</source>
-      <translation type="unfinished" />
+      <translation>Mjuk diskant</translation>
     </message>
     <message>
       <source>Solo</source>
-      <translation type="unfinished" />
+      <translation>Solo</translation>
     </message>
     <message>
       <source>Sound enhancements</source>
@@ -1833,59 +1833,59 @@ Importera till ditt bibliotek?</translation>
     </message>
     <message>
       <source>SoundCurrent Audio provides its own microphone route when installed. With VB-CABLE, simultaneous microphone and speaker EQ needs a separately installed second cable (A or B). Select that cable in recording apps. Automatic prefers the SoundCurrent route when available.</source>
-      <translation type="unfinished" />
+      <translation>SoundCurrent Audio tillhandahåller en egen mikrofonroutning när det är installerat. Med VB-CABLE kräver samtidig mikrofon- och högtalar-EQ en separat installerad andra kabel (A eller B). Välj den kabeln i inspelningsappar. Automatiskt läge föredrar SoundCurrent-routningen när den är tillgänglig.</translation>
     </message>
     <message>
       <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
-      <translation type="unfinished" />
+      <translation>SoundCurrent EQ bearbetar redan uppspelningen. Avsluta det innan du aktiverar SoundCurrent Studio.</translation>
     </message>
     <message>
       <source>Source</source>
-      <translation type="unfinished" />
+      <translation>Källa</translation>
     </message>
     <message>
       <source>Speaker</source>
-      <translation type="unfinished" />
+      <translation>Högtalare</translation>
     </message>
     <message>
       <source>Speaker &amp;&amp; room calibration</source>
-      <translation type="unfinished" />
+      <translation>Högtalar- &amp;&amp; rumskalibrering</translation>
     </message>
     <message>
       <source>Speaker + room check</source>
-      <translation type="unfinished" />
+      <translation>Kontroll av högtalare + rum</translation>
     </message>
     <message>
       <source>Speaker and room measurement</source>
-      <translation type="unfinished" />
+      <translation>Högtalar- och rumsmätning</translation>
     </message>
     <message>
       <source>Speaker filter is outside conservative bounds</source>
-      <translation type="unfinished" />
+      <translation>Högtalarfiltret ligger utanför de försiktigt satta gränserna</translation>
     </message>
     <message>
       <source>Speaker manufacturer</source>
-      <translation type="unfinished" />
+      <translation>Högtalartillverkare</translation>
     </message>
     <message>
       <source>Speaker model correction</source>
-      <translation type="unfinished" />
+      <translation>Korrigering för högtalarmodell</translation>
     </message>
     <message>
       <source>Speaker model profile</source>
-      <translation type="unfinished" />
+      <translation>Profil för högtalarmodell</translation>
     </message>
     <message>
       <source>Speaker profile details</source>
-      <translation type="unfinished" />
+      <translation>Högtalarprofilens detaljer</translation>
     </message>
     <message>
       <source>Speaker profile resource is missing</source>
-      <translation type="unfinished" />
+      <translation>Högtalarprofilens resurs saknas</translation>
     </message>
     <message>
       <source>Speaker type</source>
-      <translation type="unfinished" />
+      <translation>Högtalartyp</translation>
     </message>
     <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
