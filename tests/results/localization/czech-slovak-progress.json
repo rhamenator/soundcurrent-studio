@@ -1,25 +1,25 @@
 {
-  "stage": "Czech and Slovak initial catalog batch",
+  "stage": "Czech and Slovak second catalog batch",
   "catalogs": [
     {
       "tag": "cs",
       "name": "Čeština",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "075881d7614472a6fddb04887f3a2be43a46d8759816bcbc4b972308cc9f6c21",
-      "qmSha256": "c79839df3199e8a7c9355539ce41179716eccb7c36c4951e40a9317d7503aa19"
+      "tsSha256": "8e9f17357339852f2c3a0e2efbd3ded0a62cb67cc7965f73c4c8109341ff906f",
+      "qmSha256": "b5212d2dd12b1b5f5e2ddfbd144deb3dc592b526851eb951f27a172a179f0edd"
     },
     {
       "tag": "sk",
       "name": "Slovenčina",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "7175079594b6745a883b1da2a0847181a8066ebfd62e1dc912eb4d293fd7b3f4",
-      "qmSha256": "cacdac665899b9f1c885b4c10c56d43ad2f60e63e9b0e4e4a004c6659a1dcee9"
+      "tsSha256": "1e2fbe0efa1f327f059eb5138b514190a341fd4f5d703c06d2d424b7af4d0968",
+      "qmSha256": "20cac5a64a23023ce30a3497b632064a6b8e4d66611cb874fb86aa06f4c75402"
     }
   ],
   "linuxTests": {
@@ -27,7 +27,8 @@
     "total": 4,
     "scope": "compiled localization, Czech and Slovak main windows, catalog regressions"
   },
-  "review": "Contextual AI review, unverified; preserve headroom/gain distinction and estimated meter qualifier",
+  "review": "Contextual AI review; unverified. Wet mix means effect contribution, sweep means a test signal whose frequency changes continuously. Error prompts retain safe failure and app-open behavior.",
   "nativeReviewed": false,
-  "remaining": "Both catalogs incomplete; Windows tests pending on this commit."
+  "windows": "Pending CI",
+  "remaining": "Czech and Slovak and 22 other target catalogs remain incomplete."
 }
