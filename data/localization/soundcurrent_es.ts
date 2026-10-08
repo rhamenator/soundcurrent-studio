@@ -2113,6 +2113,10 @@ Import into your library?</source>
       <translation>Avisarme cuando haya actualizaciones disponibles o sea necesario reiniciar</translation>
     </message>
     <message>
+      <source>Remove VB-CABLE?</source>
+      <translation>¿Eliminar VB-CABLE?</translation>
+    </message>
+    <message>
       <source>Remove selected</source>
       <translation>Eliminar selección</translation>
     </message>
@@ -2143,6 +2147,10 @@ Import into your library?</source>
     <message>
       <source>Rendering…</source>
       <translation>Renderizando…</translation>
+    </message>
+    <message>
+      <source>Repair incomplete VB-CABLE installation</source>
+      <translation>Reparar la instalación incompleta de VB-CABLE</translation>
     </message>
     <message>
       <source>Reset</source>
@@ -2850,6 +2858,10 @@ Import into your library?</source>
       <translation>Usar configuración regional del sistema</translation>
     </message>
     <message>
+      <source>VB-CABLE is not installed. Open "%1", then restart Windows before opening the cable settings.</source>
+      <translation>VB-CABLE no está instalado. Abra "%1" y reinicie Windows antes de abrir los ajustes del cable.</translation>
+    </message>
+    <message>
       <source>VB-CABLE is not present. Restart Windows if requested, then retry audio setup.</source>
       <translation>VB-CABLE no está presente. Reinicie Windows si se le solicitó y vuelva a intentar la configuración de audio.</translation>
     </message>
@@ -2869,6 +2881,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
       <translation>La configuración de VB-CABLE se canceló o no finalizó (código %1). SoundCurrent sigue instalado para poder intentarlo de nuevo.</translation>
+    </message>
+    <message>
+      <source>VB-CABLE was kept because the other SoundCurrent app is installed. Remove it with the last app if no other software needs it.</source>
+      <translation>Se conservó VB-CABLE porque la otra aplicación SoundCurrent está instalada. Elimínelo con la última aplicación si ningún otro programa lo necesita.</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

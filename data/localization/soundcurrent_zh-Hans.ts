@@ -2113,6 +2113,10 @@ Import into your library?</source>
       <translation>有可用更新或需要重启时提醒我</translation>
     </message>
     <message>
+      <source>Remove VB-CABLE?</source>
+      <translation>移除 VB-CABLE？</translation>
+    </message>
+    <message>
       <source>Remove selected</source>
       <translation>移除所选项</translation>
     </message>
@@ -2143,6 +2147,10 @@ Import into your library?</source>
     <message>
       <source>Rendering…</source>
       <translation>正在渲染…</translation>
+    </message>
+    <message>
+      <source>Repair incomplete VB-CABLE installation</source>
+      <translation>修复不完整的 VB-CABLE 安装</translation>
     </message>
     <message>
       <source>Reset</source>
@@ -2850,6 +2858,10 @@ Import into your library?</source>
       <translation>使用系统区域设置</translation>
     </message>
     <message>
+      <source>VB-CABLE is not installed. Open "%1", then restart Windows before opening the cable settings.</source>
+      <translation>VB-CABLE 未安装。请打开 "%1"，然后重启 Windows，再打开音频线缆设置。</translation>
+    </message>
+    <message>
       <source>VB-CABLE is not present. Restart Windows if requested, then retry audio setup.</source>
       <translation>VB-CABLE 不存在。如果提示需要重启，请重启 Windows，然后重试音频设置。</translation>
     </message>
@@ -2869,6 +2881,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
       <translation>VB-CABLE 设置已取消或未完成（代码 %1）。SoundCurrent 仍保持安装，可重试。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE was kept because the other SoundCurrent app is installed. Remove it with the last app if no other software needs it.</source>
+      <translation>由于另一个 SoundCurrent 应用仍已安装，VB-CABLE 已保留。如果其他软件不需要它，请在卸载最后一个应用时移除它。</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>

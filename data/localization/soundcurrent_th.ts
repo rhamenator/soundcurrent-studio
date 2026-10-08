@@ -2113,6 +2113,10 @@ Import into your library?</source>
       <translation>เตือนเมื่อมีอัปเดตหรือต้องเริ่มใหม่</translation>
     </message>
     <message>
+      <source>Remove VB-CABLE?</source>
+      <translation>ลบ VB-CABLE หรือไม่?</translation>
+    </message>
+    <message>
       <source>Remove selected</source>
       <translation>ลบรายการที่เลือก</translation>
     </message>
@@ -2143,6 +2147,10 @@ Import into your library?</source>
     <message>
       <source>Rendering…</source>
       <translation>กำลังเรนเดอร์…</translation>
+    </message>
+    <message>
+      <source>Repair incomplete VB-CABLE installation</source>
+      <translation>ซ่อมแซมการติดตั้ง VB-CABLE ที่ไม่สมบูรณ์</translation>
     </message>
     <message>
       <source>Reset</source>
@@ -2850,6 +2858,10 @@ Import into your library?</source>
       <translation>ใช้การตั้งค่าภูมิภาคของระบบ</translation>
     </message>
     <message>
+      <source>VB-CABLE is not installed. Open "%1", then restart Windows before opening the cable settings.</source>
+      <translation>ยังไม่ได้ติดตั้ง VB-CABLE เปิด "%1" แล้วเริ่ม Windows ใหม่ก่อนเปิดการตั้งค่าสายสัญญาณ</translation>
+    </message>
+    <message>
       <source>VB-CABLE is not present. Restart Windows if requested, then retry audio setup.</source>
       <translation>ไม่พบ VB-CABLE หากมีคำขอให้เริ่ม Windows ใหม่ ให้ดำเนินการแล้วลองตั้งค่าเสียงอีกครั้ง</translation>
     </message>
@@ -2869,6 +2881,10 @@ Import into your library?</source>
     <message>
       <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
       <translation>การตั้งค่า VB-CABLE ถูกยกเลิกหรือไม่เสร็จสมบูรณ์ (รหัส %1) SoundCurrent ยังคงติดตั้งอยู่เพื่อให้ลองอีกครั้งได้</translation>
+    </message>
+    <message>
+      <source>VB-CABLE was kept because the other SoundCurrent app is installed. Remove it with the last app if no other software needs it.</source>
+      <translation>เก็บ VB-CABLE ไว้เนื่องจากยังติดตั้งแอป SoundCurrent อีกแอปอยู่ ให้ลบพร้อมกับแอปสุดท้ายหากไม่มีซอฟต์แวร์อื่นต้องใช้</translation>
     </message>
     <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
