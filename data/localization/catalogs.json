@@ -322,12 +322,12 @@
   {
     "tag": "sw",
     "name": "Kiswahili",
-    "translated": 254,
+    "translated": 328,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "9ab5c22efb0870a48d448c7be7f6a3a0610c94329bb3db9df12ae85f3f1a0696",
-    "qmSha256": "d7533867b5d0f53d75b673d7eaa990a3671f59e31879ab6294b7d1af493a4988"
+    "tsSha256": "f63b2b1b6e20dd9317e044b23be0f05def273bbfcdd66edb07f39cb46575a30b",
+    "qmSha256": "af328ceca11b608eff6ac666395194cccba492d7de0360630a8d3a2dac435dd8"
   },
   {
     "tag": "nn",
