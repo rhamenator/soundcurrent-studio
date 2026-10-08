@@ -619,3 +619,7 @@ The numeric presentation-mark fix passed the EQ Linux CI job on Qt 6.4.2 (run 37
 Host Linux CTest passed 86/86. Updated Ubuntu 26.04 independent-VM packages passed all 33 installed language fixtures, mixed Arabic/German formatting, update/remove/reinstall and fixture preservation. Package CI run 37745019865 passed Ubuntu 24.04, Fedora 44 and AlmaLinux 10 container lifecycle checks. This does not establish native-speaker review or an actual RHEL desktop test. Windows CI passed; current installed Windows qualification is tracked separately. No release was published.
 
 Current installed Windows Studio passed 33 native-backend locale fixtures, silent update/uninstall/reinstall, settings/user-file fixture preservation, unchanged audio device identity/status, and Arabic/German formatting after reinstall. Interactive installer and signed-in startup remain unqualified.
+
+### Nynorsk Windows CI fixture coverage
+
+The installed VM harness already exercised all 33 translated locales, including Nynorsk. The Windows build script omitted nn from its explicit UI fixture list; nn has now been added without changing catalogs or processing. Fresh CI verification is pending.
