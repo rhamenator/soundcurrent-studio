@@ -252,12 +252,12 @@
   {
     "tag": "zh-Hant",
     "name": "繁體中文",
-    "translated": 254,
+    "translated": 328,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "f50f93c1928c93010165610d654f38a972ec342ac18f276b34bf4b5285c1e3ad",
-    "qmSha256": "0b166f66bb757380f6965f0d974694b8551ecc9ca9942bbde40a47ad784b6ed2"
+    "tsSha256": "7b67db985eab730c2884d018af2449e054ecec38e939000d3308c666161766c3",
+    "qmSha256": "1f7aa794f77e42dc677164173343f980cb18891a062a8bba9fafa7e5fef221c0"
   },
   {
     "tag": "ja",
