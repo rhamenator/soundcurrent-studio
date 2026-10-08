@@ -962,55 +962,55 @@ Tuodaanko kirjastoon?</translation>
     </message>
     <message>
       <source>Import create and edit equipment profiles</source>
-      <translation type="unfinished" />
+      <translation>Tuo, luo ja muokkaa laiteprofiileja</translation>
     </message>
     <message>
       <source>Import equipment profile</source>
-      <translation type="unfinished" />
+      <translation>Tuo laiteprofiili</translation>
     </message>
     <message>
       <source>Import measured amplifier correction</source>
-      <translation type="unfinished" />
+      <translation>Tuo mitattu vahvistinkorjaus</translation>
     </message>
     <message>
       <source>Import measured profile</source>
-      <translation type="unfinished" />
+      <translation>Tuo mitattu profiili</translation>
     </message>
     <message>
       <source>Import profile?</source>
-      <translation type="unfinished" />
+      <translation>Tuodaanko profiili?</translation>
     </message>
     <message>
       <source>Import relative measured response</source>
-      <translation type="unfinished" />
+      <translation>Tuo suhteellinen mitattu taajuusvaste</translation>
     </message>
     <message>
       <source>Import response text</source>
-      <translation type="unfinished" />
+      <translation>Tuo taajuusvasteteksti</translation>
     </message>
     <message>
       <source>Include preview releases</source>
-      <translation type="unfinished" />
+      <translation>Sisällytä esiversiot</translation>
     </message>
     <message>
       <source>Input WAVE file</source>
-      <translation type="unfinished" />
+      <translation>WAVE-tulotiedosto</translation>
     </message>
     <message>
       <source>Input channel</source>
-      <translation type="unfinished" />
+      <translation>Tulokanava</translation>
     </message>
     <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
-      <translation type="unfinished" />
+      <translation>Tulossa on enemmän kanavia kuin Studio-kokoonpanossa; valitse vastaava tai suurempi kokoonpano</translation>
     </message>
     <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
-      <translation type="unfinished" />
+      <translation>Asenna uudet paketit tämän version päälle — poistamista ei tarvita. Esiasetukset ja profiilit säilytetään. Tallenna työsi, valitse Lopeta (ikkunan sulkeminen jättää sovelluksen käyntiin), asenna päivitys ja avaa uudelleen.</translation>
     </message>
     <message>
       <source>Installed version: %1</source>
-      <translation type="unfinished" />
+      <translation>Asennettu versio: %1</translation>
     </message>
     <message>
       <source>Interface language</source>
@@ -1018,91 +1018,91 @@ Tuodaanko kirjastoon?</translation>
     </message>
     <message>
       <source>Invalid equipment subtype or power type</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen laitteen alatyyppi tai aktiivinen/passiivinen-tyyppi</translation>
     </message>
     <message>
       <source>Invalid filter.</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen suodatin.</translation>
     </message>
     <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen mitattu vahvistinprofiili. Vaatii mallin, HTTPS-mittauslähteen, olosuhteet ja 1–16 rajoissa olevaa PK/LS/HS-suodatinta. Katso profiilimuoto README-tiedostosta.</translation>
     </message>
     <message>
       <source>Invalid or unordered measured response.</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen tai järjestämätön mitattu taajuusvaste.</translation>
     </message>
     <message>
       <source>Invalid or unordered response data.</source>
-      <translation type="unfinished" />
+      <translation>Virheelliset tai järjestämättömät taajuusvastetiedot.</translation>
     </message>
     <message>
       <source>Invalid profile library.</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen profiilikirjasto.</translation>
     </message>
     <message>
       <source>Invalid response from pactl</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen vastaus pactl-ohjelmalta</translation>
     </message>
     <message>
       <source>Invalid response point.</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen taajuusvastepiste.</translation>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen kaiutinkorjaussuodattimien määrä</translation>
     </message>
     <message>
       <source>Invalid speaker filter type</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen kaiutinsuodatintyyppi</translation>
     </message>
     <message>
       <source>Invalid speaker identity</source>
-      <translation type="unfinished" />
+      <translation>Virheellinen kaiuttimen tunniste</translation>
     </message>
     <message>
       <source>Jazz</source>
-      <translation type="unfinished" />
+      <translation>Jazz</translation>
     </message>
     <message>
       <source>Keep current EQ</source>
-      <translation type="unfinished" />
+      <translation>Säilytä nykyinen taajuuskorjaus</translation>
     </message>
     <message>
       <source>L</source>
-      <translation type="unfinished" />
+      <translation>V</translation>
     </message>
     <message>
       <source>Language and regional settings</source>
-      <translation>Kieli ja alue</translation>
+      <translation>Kieli ja alueasetukset</translation>
     </message>
     <message>
       <source>Large hall</source>
-      <translation type="unfinished" />
+      <translation>Suuri sali</translation>
     </message>
     <message>
       <source>Layout</source>
-      <translation type="unfinished" />
+      <translation>Kokoonpano</translation>
     </message>
     <message>
       <source>Left right balance</source>
-      <translation type="unfinished" />
+      <translation>Vasen/oikea-tasapaino</translation>
     </message>
     <message>
       <source>Level indicator refresh interval</source>
-      <translation type="unfinished" />
+      <translation>Tasoilmaisimien päivitysväli</translation>
     </message>
     <message>
       <source>Level refresh</source>
-      <translation type="unfinished" />
+      <translation>Tasojen päivitys</translation>
     </message>
     <message>
       <source>Library exceeds 16 MiB.</source>
-      <translation type="unfinished" />
+      <translation>Kirjasto on suurempi kuin 16 MiB.</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
-      <translation type="unfinished" />
+      <translation>Reitin lineaarinen vahvistus (negatiivinen = käännä napaisuus)</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1111,84 +1111,84 @@ Tuodaanko kirjastoon?</translation>
     </message>
     <message>
       <source>Live</source>
-      <translation type="unfinished" />
+      <translation>Reaaliaikainen</translation>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation type="unfinished" />
+      <translation>Reaaliaikaisen kokoonpanon on sovittava valittuun äänilaitteeseen. Offline-renderöinti ja äänettömät mittaritestit tukevat kaikkia 256 kanavaa.</translation>
     </message>
     <message>
       <source>Lo-Fi</source>
-      <translation type="unfinished" />
+      <translation>Lo-Fi</translation>
     </message>
     <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
-      <translation>Lukitse EQ</translation>
+      <translation>Lukitse taajuuskorjain</translation>
     </message>
     <message>
       <source>Lock equalizer settings</source>
-      <translation type="unfinished" />
+      <translation>Lukitse taajuuskorjaimen asetukset</translation>
     </message>
     <message>
       <source>Loudness</source>
-      <translation type="unfinished" />
+      <translation>Loudness-korjaus</translation>
     </message>
     <message>
       <source>Low pass</source>
-      <translation type="unfinished" />
+      <translation>Alipäästösuodatin</translation>
     </message>
     <message>
       <source>Low shelf</source>
-      <translation type="unfinished" />
+      <translation>Alahyllysuodatin</translation>
     </message>
     <message>
       <source>Manufacturer</source>
-      <translation type="unfinished" />
+      <translation>Valmistaja</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
-      <translation type="unfinished" />
+      <translation>32 vahvistinprofiilin enimmäismäärä on saavutettu.</translation>
     </message>
     <message>
       <source>Maximum stereo width</source>
-      <translation type="unfinished" />
+      <translation>Stereokuvan enimmäisleveys</translation>
     </message>
     <message>
       <source>Measure</source>
-      <translation type="unfinished" />
+      <translation>Mittaa</translation>
     </message>
     <message>
       <source>Measure speaker room and microphone response</source>
-      <translation type="unfinished" />
+      <translation>Mittaa kaiuttimen, huoneen ja mikrofonin taajuusvaste</translation>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
-      <translation type="unfinished" />
+      <translation>Mitattu mallikorjaus lisätään kuuntelun taajuuskorjaukseen. Voit silti lisätä bassoa tai säätää mitä tahansa kaistaa. Sisältää varovaiset vahvistusrajat; huoneen ja vahvistimen vaikutukset edellyttävät järjestelmämittausta.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
-      <translation type="unfinished" />
+      <translation>Mittausolosuhteet vaaditaan.</translation>
     </message>
     <message>
       <source>Measurement data was incomplete.</source>
-      <translation type="unfinished" />
+      <translation>Mittaustiedot olivat puutteelliset.</translation>
     </message>
     <message>
       <source>Measurement failed. Try a higher test level or move the mic closer.</source>
-      <translation type="unfinished" />
+      <translation>Mittaus epäonnistui. Kokeile korkeampaa testitasoa tai siirrä mikrofoni lähemmäs.</translation>
     </message>
     <message>
       <source>Measurement stopped.</source>
-      <translation type="unfinished" />
+      <translation>Mittaus pysäytettiin.</translation>
     </message>
     <message>
       <source>Metal</source>
-      <translation type="unfinished" />
+      <translation>Metalli</translation>
     </message>
     <message>
       <source>Mic gain</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonivahvistus</translation>
     </message>
     <message>
       <source>Microphone</source>
@@ -1196,92 +1196,92 @@ Tuodaanko kirjastoon?</translation>
     </message>
     <message>
       <source>Microphone %1 adjustment</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonin %1 säätö</translation>
     </message>
     <message>
       <source>Microphone EQ is off.</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonin taajuuskorjaus on pois käytöstä.</translation>
     </message>
     <message>
       <source>Microphone capture stopped during playback</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonitallennus pysähtyi toiston aikana</translation>
     </message>
     <message>
       <source>Microphone capture stopped during the test</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonitallennus pysähtyi testin aikana</translation>
     </message>
     <message>
       <source>Microphone error: %1</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonivirhe: %1</translation>
     </message>
     <message>
       <source>Microphone filter did not appear</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonisuodatin ei ilmestynyt</translation>
     </message>
     <message>
       <source>Microphone filter disappeared</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonisuodatin katosi</translation>
     </message>
     <message>
       <source>Microphone gain adjustment</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonivahvistuksen säätö</translation>
     </message>
     <message>
       <source>Microphone input device</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonin tulolaite</translation>
     </message>
     <message>
       <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonitallennus leikkautuu. Pienennä mikrofonivahvistusta tai korostusta ja toista mittaus.</translation>
     </message>
     <message>
       <source>Microphone route</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonireitti</translation>
     </message>
     <message>
       <source>Model</source>
-      <translation type="unfinished" />
+      <translation>Malli</translation>
     </message>
     <message>
       <source>Mono</source>
-      <translation type="unfinished" />
+      <translation>Mono</translation>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
-      <translation type="unfinished" />
+      <translation>Siirrä kohti V- tai O-puolta vaimentaaksesi vastakkaista kanavaa; keskellä molemmat säilyvät täydellä tasolla</translation>
     </message>
     <message>
       <source>Movies</source>
-      <translation type="unfinished" />
+      <translation>Elokuvat</translation>
     </message>
     <message>
       <source>Mute</source>
-      <translation type="unfinished" />
+      <translation>Mykistä</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished" />
+      <translation>Nimi</translation>
     </message>
     <message>
       <source>Natural mic EQ</source>
       <extracomment>Microphone equalization feature intended to produce natural-sounding audio. Not a claim that the microphone has a measured neutral response.</extracomment>
-      <translation>Luonnollinen mikrofonin EQ</translation>
+      <translation>Luonnollinen mikrofonin taajuuskorjaus</translation>
     </message>
     <message>
       <source>Natural mic EQ on · %1</source>
-      <translation type="unfinished" />
+      <translation>Luonnollinen mikrofonin taajuuskorjaus päällä · %1</translation>
     </message>
     <message>
       <source>Natural microphone equalizer on or off</source>
-      <translation type="unfinished" />
+      <translation>Luonnollinen mikrofonin taajuuskorjain päällä tai pois</translation>
     </message>
     <message>
       <source>New rendered WAVE file</source>
-      <translation type="unfinished" />
+      <translation>Uusi renderöity WAVE-tiedosto</translation>
     </message>
     <message>
       <source>Night Listening</source>
-      <translation type="unfinished" />
+      <translation>Yökuuntelu</translation>
     </message>
     <message>
       <source>No</source>
@@ -1531,7 +1531,7 @@ Tuodaanko kirjastoon?</translation>
     </message>
     <message>
       <source>R</source>
-      <translation type="unfinished" />
+      <translation>O</translation>
     </message>
     <message>
       <source>R&amp;B</source>
