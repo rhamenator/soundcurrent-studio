@@ -365,6 +365,10 @@ Importera till ditt bibliotek?</translation>
       <translation>Kabelpaketet överskrider inspelningsbuffertens kapacitet</translation>
     </message>
     <message>
+      <source>Cable recording endpoint does not support shared 48 kHz stereo float audio</source>
+      <translation>Den virtuella kabelns inspelningsslutpunkt stöder inte 48 kHz stereoljud i flyttalsformat i delat läge</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Testsignal för kalibrering</translation>
     </message>
@@ -1333,6 +1337,10 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Microphone route</source>
       <translation>Mikrofonens signalväg</translation>
+    </message>
+    <message>
+      <source>Microphone start timed out</source>
+      <translation>Tidsgränsen för mikrofonstart överskreds</translation>
     </message>
     <message>
       <source>Model</source>

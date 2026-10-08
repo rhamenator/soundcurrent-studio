@@ -365,6 +365,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Paket kabel melebihi kapasitas buffer tangkapan</translation>
     </message>
     <message>
+      <source>Cable recording endpoint does not support shared 48 kHz stereo float audio</source>
+      <translation>Titik akhir perekaman kabel virtual tidak mendukung audio stereo floating-point 48 kHz dalam mode bersama</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Sinyal uji kalibrasi</translation>
     </message>
@@ -1333,6 +1337,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Microphone route</source>
       <translation>Jalur mikrofon</translation>
+    </message>
+    <message>
+      <source>Microphone start timed out</source>
+      <translation>Waktu tunggu untuk memulai mikrofon habis</translation>
     </message>
     <message>
       <source>Model</source>

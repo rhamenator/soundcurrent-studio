@@ -365,6 +365,10 @@ Tuodaanko kirjastoon?</translation>
       <translation>Kaapelipaketti ylittää tallennuspuskurin kapasiteetin</translation>
     </message>
     <message>
+      <source>Cable recording endpoint does not support shared 48 kHz stereo float audio</source>
+      <translation>Virtuaalikaapelin tallennuspäätepiste ei tue 48 kHz:n stereoa liukulukumuodossa jaetussa tilassa</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>Kalibroinnin testisignaali</translation>
     </message>
@@ -1333,6 +1337,10 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Microphone route</source>
       <translation>Mikrofonireitti</translation>
+    </message>
+    <message>
+      <source>Microphone start timed out</source>
+      <translation>Mikrofonin käynnistys aikakatkaistiin</translation>
     </message>
     <message>
       <source>Model</source>

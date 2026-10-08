@@ -365,6 +365,10 @@ Import into your library?</source>
       <translation>حزمة الكابل تتجاوز سعة مخزن الالتقاط</translation>
     </message>
     <message>
+      <source>Cable recording endpoint does not support shared 48 kHz stereo float audio</source>
+      <translation>نقطة نهاية التسجيل للكابل الافتراضي لا تدعم صوتًا ستيريو بتنسيق الفاصلة العائمة عند 48 kHz في الوضع المشترك</translation>
+    </message>
+    <message>
       <source>Calibration test signal</source>
       <translation>إشارة اختبار المعايرة</translation>
     </message>
@@ -1333,6 +1337,10 @@ Import into your library?</source>
     <message>
       <source>Microphone route</source>
       <translation>مسار الميكروفون</translation>
+    </message>
+    <message>
+      <source>Microphone start timed out</source>
+      <translation>انتهت مهلة بدء الميكروفون</translation>
     </message>
     <message>
       <source>Model</source>
