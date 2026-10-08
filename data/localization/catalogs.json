@@ -232,12 +232,12 @@
   {
     "tag": "fa",
     "name": "فارسی",
-    "translated": 30,
+    "translated": 106,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "ca7f61ace415f4a210733657b40d920fcc826bb558c310f5f753743cac768aef",
-    "qmSha256": "9b2b696b1027ec6a0813216f503afadd1b4905e5276e78f9a47e6043de3c327b"
+    "tsSha256": "917304a7e650e4624110f6dd62f5cce1e1c3da0bbf785269763491e1887dadaf",
+    "qmSha256": "54af18cf02522d2f23687050b785921f7ff10afb79996341084324a40b68951c"
   },
   {
     "tag": "zh-Hans",
