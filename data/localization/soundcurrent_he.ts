@@ -1954,6 +1954,10 @@ Import into your library?</source>
       <translation>יציאה מ־SoundCurrent Studio</translation>
     </message>
     <message>
+      <source>Quit any running SoundCurrent app before changing the shared driver. Removing one app keeps the driver if the other app still uses it.</source>
+      <translation>יש לצאת מכל יישום SoundCurrent שפועל לפני שינוי מנהל ההתקן המשותף. הסרת יישום אחד משאירה את מנהל ההתקן אם היישום האחר עדיין משתמש בו.</translation>
+    </message>
+    <message>
       <source>Quit app</source>
       <extracomment>Exit the process and unload audio processing; closing the window alone keeps the app running.</extracomment>
       <translation>יציאה מהאפליקציה</translation>

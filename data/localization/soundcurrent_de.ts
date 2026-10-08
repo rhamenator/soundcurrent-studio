@@ -1954,6 +1954,10 @@ In Ihre Bibliothek importieren?</translation>
       <translation>SoundCurrent Studio beenden</translation>
     </message>
     <message>
+      <source>Quit any running SoundCurrent app before changing the shared driver. Removing one app keeps the driver if the other app still uses it.</source>
+      <translation>Beenden Sie jede laufende SoundCurrent-App, bevor Sie den gemeinsam genutzten Treiber ändern. Beim Entfernen einer App bleibt der Treiber erhalten, wenn die andere App ihn noch verwendet.</translation>
+    </message>
+    <message>
       <source>Quit app</source>
       <extracomment>Exit the process and unload audio processing; closing the window alone keeps the app running.</extracomment>
       <translation>App beenden</translation>
