@@ -112,22 +112,22 @@
   {
     "tag": "uk",
     "name": "Українська",
-    "translated": 30,
+    "translated": 181,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "cfdc6aafb7b81629b802ce1a6207cc6c719447a0f7c23049173d81e133c2a6b5",
-    "qmSha256": "f5de85454ebc86add2b47807bf015e41f3bb6cfd63075a90ffb453356b97ec74"
+    "tsSha256": "a670f8ceb634a8716d5aa8a3d1e3481759676f795e400cff0dfc927745c8571b",
+    "qmSha256": "9dfffa0504f86343da5c02e737ffc0b769b58da444101ec74e3e8171d3cf2652"
   },
   {
     "tag": "ru",
     "name": "Русский",
-    "translated": 30,
+    "translated": 181,
     "total": 527,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "7a87946995e17a63ccd5f978a254e2abfb5466b9c0e1d36b60af4fe5a12f5c14",
-    "qmSha256": "c32ac4f6ad306f956d59e204d91ed430eb5d8f283b1a91d01711d4adda54f476"
+    "tsSha256": "34859895e6e3d9ce2b2edd4b104df70d9fa89131b20fa759b6476c801460c37f",
+    "qmSha256": "1b55a8d9c4c61274cf8e7f9a8f6f1c0887674f1e7bfa76dfea2e0b5cd38717e4"
   },
   {
     "tag": "el",
