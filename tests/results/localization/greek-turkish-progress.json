@@ -1,0 +1,35 @@
+{
+  "stage": "Greek and Turkish initial catalog batch",
+  "catalogs": [
+    {
+      "tag": "el",
+      "name": "Ελληνικά",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "935610b9f6dff115bb285ac0c4142780f1d6ed2c068fc299fd58589e4db38c91",
+      "qmSha256": "5cf28cd088248fe3c3c13b789bce449cb14215fc8231e06b413954d1941b70c1"
+    },
+    {
+      "tag": "tr",
+      "name": "Türkçe",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "5de7d87fbc5919ed6dd6fb9169da9d1616a4a875d7dcc4a7d05b88b7e9720ace",
+      "qmSha256": "6b9e522005de2d1ca310d7c12be58ba35a7e1c6e09cc02337bb4eb0e68898b07"
+    }
+  ],
+  "linuxTests": {
+    "passed": 4,
+    "total": 4,
+    "scope": "compiled localization, Greek/Turkish main windows and catalog regressions",
+    "log": "/tmp/soundcurrent-studio-el-tr-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Distinguishes gain, headroom and clipping, ambience damping and duration; model prompts retain measured-correction requirements.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "Greek, Turkish and 18 other target catalogs incomplete."
+}
