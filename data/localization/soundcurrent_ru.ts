@@ -83,6 +83,10 @@ Import into your library?</source>
       <translation>%1 отключено. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Ошибка операции: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Import into your library?</source>
       <translation>Автоматический запас уровня EQ</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Автоматическая маршрутизация звука недоступна</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Автоматически корректировать звук подключённого микрофона; нажмите, чтобы обойти микрофонный EQ</translation>
     </message>
@@ -449,6 +457,10 @@ Import into your library?</source>
       <translation>Центр</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Изменение звукового устройства по умолчанию</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Канал</translation>
     </message>
@@ -613,6 +625,10 @@ Import into your library?</source>
       <translation>Не удалось записать тестовый тон</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Подсчёт звуковых устройств</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Создать профиль</translation>
     </message>
@@ -669,6 +685,10 @@ Import into your library?</source>
       <translation>Перетаскивайте точки кривой или настраивайте выбранную полосу ниже.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Завершение воспроизведения тестового сигнала</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Без эффекта</translation>
     </message>
@@ -723,6 +743,14 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>Электронная музыка</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Перечисление аудиоустройств</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Перечисление конечных устройств</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Import into your library?</source>
       <translation>Включать предварительные версии</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Инициализация захвата звука</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Инициализация записи с микрофона</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Инициализация вывода на динамики</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Инициализация воспроизведения тестового сигнала</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Входной файл WAVE</translation>
     </message>
@@ -1143,6 +1187,10 @@ Import into your library?</source>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Линейное усиление аудиотракта (отрицательное = инверсия полярности)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Получение списка звуковых устройств</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Import into your library?</source>
       <translation>Открыть панель управления VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Открытие аудиопотока</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Открытие потока захвата виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Открытие устройства записи виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Открытие конечного устройства</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Открытие интерфейса громкости конечного устройства</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Открытие интерфейса чтения микрофона</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Открыть загрузки версий</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Открытие устройства динамиков</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Открытие потока воспроизведения динамиков</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Открытие интерфейса записи тестового сигнала</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Import into your library?</source>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Чтение звукового устройства</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Чтение идентификатора звукового устройства</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Чтение имени звукового устройства</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Чтение свойств звукового устройства</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Чтение звука виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Получение интерфейса захвата виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Чтение конфигурации каналов виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Чтение размера пакета виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Чтение маски динамиков виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Чтение идентификатора устройства вывода по умолчанию</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Чтение устройства вывода по умолчанию</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Чтение формата микширования микрофона</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Чтение размера пакета микрофона</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Чтение отсчётов микрофона</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Чтение размера следующего пакета виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Чтение следующего пакета микрофона</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Чтение уровня заполнения выходного буфера</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Чтение уровня вывода</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Чтение состояния отключения звука на выходе</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Чтение уровня динамиков</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Чтение формата микширования динамиков</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Чтение состояния отключения звука динамиков</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Получение интерфейса воспроизведения динамиков</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Чтение громкости динамиков</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Чтение числа буферизованных кадров тестового сигнала</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Чтение формата микширования виртуального выхода</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Готово. До включения эффектов сигнал остаётся без обработки эффектами.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Import into your library?</source>
       <translation>Относительные измерения включают характеристики акустических систем, помещения и микрофона. Предложенные изменения ограничены 3 dB для каждой измеренной частоты.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Освобождение аудиопакета виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Освобождение пакета микрофона</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Освобождение буфера динамиков</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Освобождение буфера тестового воспроизведения</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Import into your library?</source>
       <translation>Отдельные тихие тоны</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Установка полного уровня динамиков для эквалайзера</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Установка уровня вывода</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Установка состояния отключения звука на выходе</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Задать аудиотракт</translation>
     </message>
@@ -1858,6 +2074,18 @@ Import into your library?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Показывать метки пиков на частотных уровнях</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Определение размера буфера захвата</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Определение размера выходного буфера</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Определение размера буфера тестового воспроизведения</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Import into your library?</source>
       <translation>Тип акустической системы</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Запуск захвата виртуального кабеля</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Запуск записи с микрофона</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Начинайте тихо. Повышайте уровень только тогда, когда микрофон не слышит тонов.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Запуск вывода на динамики</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Запуск воспроизведения тестового сигнала</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Import into your library?</source>
       <translation>Разблокируйте элементы управления и завершите измерение перед редактированием профилей.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Включение звука динамиков для эквалайзера</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Неподдерживаемое количество каналов кабеля</translation>
     </message>
@@ -2208,6 +2456,14 @@ Import into your library?</source>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM для аудио Windows недоступен</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Запись в буфер динамиков</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Запись тестового сигнала для воспроизведения</translation>
     </message>
     <message>
       <source>Yes</source>

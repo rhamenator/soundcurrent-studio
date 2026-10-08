@@ -83,6 +83,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Odłączono %1. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Operacja nie powiodła się: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Automatyczny zapas poziomu korektora</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Automatyczne kierowanie dźwięku niedostępne</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Automatycznie kształtuj brzmienie podłączonego mikrofonu; kliknij, aby pominąć korekcję mikrofonu</translation>
     </message>
@@ -449,6 +457,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Środek</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Zmienić domyślne urządzenie audio</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanał</translation>
     </message>
@@ -613,6 +625,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Nie udało się zapisać tonu testowego</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Policzyć urządzenia audio</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Utwórz profil</translation>
     </message>
@@ -669,6 +685,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Przeciągnij punkty krzywej lub dostosuj wybrane pasmo poniżej.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Opróżnić bufor odtwarzania testowego</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Bez efektu</translation>
     </message>
@@ -723,6 +743,14 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektroniczna</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Wyliczyć urządzenia audio</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Wyliczyć urządzenia</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Zaimportować do biblioteki?</translation>
       <translation>Uwzględniaj wersje przedpremierowe</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Zainicjować przechwytywanie dźwięku</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Zainicjować nagrywanie mikrofonu</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Zainicjować wyjście głośników</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Zainicjować odtwarzanie testowe</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Wejściowy plik WAVE</translation>
     </message>
@@ -1143,6 +1187,10 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Liniowe wzmocnienie toru (ujemne = odwrócenie)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Wyświetlić listę urządzeń audio</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Zaimportować do biblioteki?</translation>
       <translation>Otwórz panel sterowania VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Otworzyć strumień audio</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Otworzyć strumień przechwytywania kabla</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Otworzyć urządzenie nagrywające kabla</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Otworzyć urządzenie</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Otworzyć regulację głośności urządzenia</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Otworzyć interfejs odczytu mikrofonu</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Otwórz pliki wersji do pobrania</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Otworzyć urządzenie głośników</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Otworzyć strumień wyjściowy głośników</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Otworzyć interfejs zapisu odtwarzania testowego</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Zaimportować do biblioteki?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Odczytać urządzenie audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Odczytać identyfikator urządzenia audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Odczytać nazwę urządzenia audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Odczytać właściwości urządzenia audio</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Odczytać dźwięk kabla</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Odczytać interfejs przechwytywania kabla</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Odczytać układ kanałów kabla</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Odczytać rozmiar pakietu kabla</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Odczytać maskę głośników kabla</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Odczytać identyfikator domyślnego wyjścia</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Odczytać domyślne urządzenie wyjściowe</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Odczytać format miksowania mikrofonu</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Odczytać rozmiar pakietu mikrofonu</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Odczytać próbki mikrofonu</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Odczytać rozmiar następnego pakietu kabla</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Odczytać następny pakiet mikrofonu</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Odczytać poziom zapełnienia bufora wyjściowego</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Odczytać poziom wyjścia</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Odczytać stan wyciszenia wyjścia</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Odczytać poziom głośników</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Odczytać format miksowania głośników</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Odczytać stan wyciszenia głośników</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Odczytać interfejs wyjściowy głośników</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Odczytać głośność głośników</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Odczytać poziom zapełnienia bufora odtwarzania testowego</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Odczytać format miksowania wirtualnego wyjścia</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Gotowe. Efekty nie są stosowane, dopóki nie zostaną włączone.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Zaimportować do biblioteki?</translation>
       <translation>Pomiary względne obejmują odpowiedź głośników, pomieszczenia i mikrofonu. Proponowane zmiany są ograniczone do 3 dB na zmierzoną częstotliwość.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Zwolnić dźwięk kabla</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Zwolnić pakiet mikrofonu</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Zwolnić bufor głośników</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Zwolnić bufor odtwarzania testowego</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Zaimportować do biblioteki?</translation>
       <translation>Oddzielne ciche tony</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Ustawić maksymalny poziom głośników dla EQ</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Ustawić poziom wyjścia</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Ustawić stan wyciszenia wyjścia</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Ustaw tor</translation>
     </message>
@@ -1858,6 +2074,18 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Pokaż znaczniki szczytów na poziomach częstotliwości</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Ustalić rozmiar bufora przechwytywania</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Ustalić rozmiar bufora wyjściowego</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Ustalić rozmiar bufora odtwarzania testowego</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Zaimportować do biblioteki?</translation>
       <translation>Typ głośnika</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Uruchomić przechwytywanie kabla</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Uruchomić nagrywanie mikrofonu</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Zacznij cicho. Zwiększ poziom tylko wtedy, gdy mikrofon nie odbiera tonów.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Uruchomić wyjście głośników</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Uruchomić odtwarzanie testowe</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Zaimportować do biblioteki?</translation>
       <translation>Odblokuj ustawienia i zakończ pomiar przed edycją profili.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Wyłączyć wyciszenie głośników dla EQ</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Nieobsługiwana liczba kanałów kabla</translation>
     </message>
@@ -2208,6 +2456,14 @@ Zaimportować do biblioteki?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM dla dźwięku systemu Windows jest niedostępne</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Zapisać bufor głośników</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Zapisać odtwarzanie testowe</translation>
     </message>
     <message>
       <source>Yes</source>

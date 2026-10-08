@@ -83,6 +83,10 @@ Importere til biblioteket ditt?</translation>
       <translation>%1 fråkopla. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Operasjonen mislukkast: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Automatisk EQ-nivåmargin</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Automatisk lydruting er ikkje tilgjengeleg</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Tilpass automatisk lyden frå ein tilkopla mikrofon; klikk for å omgå mikrofon-EQ</translation>
     </message>
@@ -449,6 +457,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Midten</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Endring av standard lydendepunkt</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanal</translation>
     </message>
@@ -613,6 +625,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Kunne ikkje skrive testtone</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Teljing av lydendepunkt</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Opprett profil</translation>
     </message>
@@ -669,6 +685,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Dra punkta på kurva eller juster det valde bandet nedanfor.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Fullføring av testavspeling</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Uhandsama</translation>
     </message>
@@ -723,6 +743,14 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronisk</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Opplisting av lydeiningar</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Opplisting av endepunkt</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Importere til biblioteket ditt?</translation>
       <translation>Ta med førehandsutgåver</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Initialisering av lydopptak</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Initialisering av mikrofonopptak</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Initialisering av høgtalarutgang</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Initialisering av testavspeling</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>WAVE-inngangsfil</translation>
     </message>
@@ -1143,6 +1187,10 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Lineær ruteforsterking (negativ = snu polariteten)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Henting av liste over lydendepunkt</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Importere til biblioteket ditt?</translation>
       <translation>Opne VB-CABLE-kontrollpanel</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Opning av lydstraum</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Opning av opptaksstraumen til den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Opning av opptaksendepunktet til den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Opning av endepunkt</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Opning av volumgrensesnittet til endepunktet</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Opning av lesegrensesnittet til mikrofonen</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Opne utgåvenedlastingar</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Opning av høgtalarendepunkt</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Opning av avspelingsstraumen til høgtalarane</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Opning av skrivegrensesnittet for testavspeling</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Importere til biblioteket ditt?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Lesing av lydendepunkt</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Lesing av ID-en til lydendepunktet</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Lesing av namnet til lydendepunktet</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Lesing av eigenskapane til lydendepunktet</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Lesing av lyden frå den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Henting av opptaksgrensesnittet til den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Lesing av kanaloppsettet til den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Lesing av pakkestorleiken til den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Lesing av høgtalarmaska til den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Lesing av ID-en til standardutgangen</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Lesing av endepunktet til standardutgangen</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Lesing av mikseformatet til mikrofonen</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Lesing av pakkestorleiken til mikrofonen</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Lesing av lydprøvene frå mikrofonen</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Lesing av storleiken på neste pakke frå den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Lesing av neste mikrofonpakke</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Lesing av fyllingsnivået i utgangsbufferen</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Lesing av utgangsnivå</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Lesing av statusen for avslått lyd på utgangen</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Lesing av høgtalarnivå</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Lesing av mikseformatet til høgtalarane</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Lesing av statusen for avslått lyd på høgtalarane</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Henting av avspelingsgrensesnittet til høgtalarane</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Lesing av høgtalarvolum</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Lesing av talet på bufra lydrammer for testavspeling</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Lesing av mikseformatet til den virtuelle utgangen</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Klar. Effektane er uhandsama til dei vert aktiverte.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Importere til biblioteket ditt?</translation>
       <translation>Relative målingar inkluderer frekvensresponsen til høgtalar, rom og mikrofon. Føreslåtte endringar er avgrensa til 3 dB per målt frekvens.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Frigjering av lydpakken frå den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Frigjering av mikrofonpakke</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Frigjering av høgtalarbuffer</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Frigjering av bufferen for testavspeling</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Importere til biblioteket ditt?</translation>
       <translation>Separate stille tonar</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Innstilling av fullt høgtalarnivå for equalizeren</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Innstilling av utgangsnivå</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Innstilling av statusen for avslått lyd på utgangen</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Set ruting</translation>
     </message>
@@ -1858,6 +2074,18 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Vis toppmarkørar på frekvensnivåa</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Fastsetjing av storleiken på opptaksbufferen</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Fastsetjing av storleiken på utgangsbufferen</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Fastsetjing av storleiken på testavspelingsbufferen</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Importere til biblioteket ditt?</translation>
       <translation>Høgtalartype</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Start av lydopptak frå den virtuelle kabelen</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Start av mikrofonopptak</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Start stille. Auk berre dersom mikrofonen ikkje kan høyre tonane.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Start av høgtalarutgang</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Start av testavspeling</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Importere til biblioteket ditt?</translation>
       <translation>Lås opp kontrollane og fullfør målinga før du redigerer profilar.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Aktivering av høgtalarlyd for equalizeren</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Talet på kabelkanalar er ikkje støtta</translation>
     </message>
@@ -2208,6 +2456,14 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM for Windows-lyd er ikkje tilgjengeleg</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Skriving til høgtalarbufferen</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Skriving av testlyd for avspeling</translation>
     </message>
     <message>
       <source>Yes</source>

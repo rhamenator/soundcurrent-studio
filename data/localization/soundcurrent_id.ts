@@ -83,6 +83,10 @@ Impor ke pustaka Anda?</translation>
       <translation>%1 terputus. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Operasi gagal: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Headroom EQ otomatis</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Perutean audio otomatis tidak tersedia</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Sesuaikan suara mikrofon yang terhubung secara otomatis; klik untuk melewati EQ mikrofon</translation>
     </message>
@@ -449,6 +457,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Tengah</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Mengubah titik akhir audio default</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanal</translation>
     </message>
@@ -613,6 +625,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Tidak dapat menulis nada uji</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Menghitung titik akhir audio</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Buat profil</translation>
     </message>
@@ -669,6 +685,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Seret titik kurva atau sesuaikan pita yang dipilih di bawah.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Menyelesaikan pemutaran uji</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Dry</translation>
     </message>
@@ -723,6 +743,14 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronik</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Mendaftar perangkat audio</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Mendaftar titik akhir</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Impor ke pustaka Anda?</translation>
       <translation>Sertakan rilis pratinjau</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Menginisialisasi penangkapan audio</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Menginisialisasi perekaman mikrofon</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Menginisialisasi keluaran speaker</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Menginisialisasi pemutaran uji</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Berkas WAVE masukan</translation>
     </message>
@@ -1143,6 +1187,10 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Gain jalur linear (negatif = balik polaritas)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Mengambil daftar titik akhir audio</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Impor ke pustaka Anda?</translation>
       <translation>Buka panel kontrol VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Membuka aliran audio</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Membuka aliran penangkapan kabel virtual</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Membuka titik akhir perekaman kabel virtual</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Membuka titik akhir</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Membuka antarmuka volume titik akhir</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Membuka antarmuka pembaca mikrofon</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Buka unduhan rilis</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Membuka titik akhir speaker</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Membuka aliran pemutaran speaker</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Membuka antarmuka penulis pemutaran uji</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Impor ke pustaka Anda?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Membaca titik akhir audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Membaca ID titik akhir audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Membaca nama titik akhir audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Membaca properti titik akhir audio</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Membaca audio kabel virtual</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Mengambil antarmuka penangkapan kabel virtual</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Membaca tata letak kanal kabel virtual</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Membaca ukuran paket kabel virtual</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Membaca mask speaker kabel virtual</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Membaca ID keluaran default</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Membaca titik akhir keluaran default</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Membaca format pencampuran mikrofon</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Membaca ukuran paket mikrofon</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Membaca nilai sampel mikrofon</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Membaca ukuran paket kabel virtual berikutnya</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Membaca paket mikrofon berikutnya</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Membaca tingkat keterisian buffer keluaran</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Membaca level keluaran</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Membaca status pembisuan keluaran</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Membaca level speaker</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Membaca format pencampuran speaker</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Membaca status pembisuan speaker</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Mengambil antarmuka pemutaran speaker</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Membaca volume speaker</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Membaca jumlah frame audio dalam buffer pemutaran uji</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Membaca format pencampuran keluaran virtual</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Siap. Efek tetap dry hingga diaktifkan.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Impor ke pustaka Anda?</translation>
       <translation>Pengukuran relatif mencakup respons speaker, ruangan, dan mikrofon. Perubahan yang diusulkan dibatasi hingga 3 dB per frekuensi yang diukur.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Melepas paket audio kabel virtual</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Melepas paket mikrofon</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Melepas buffer speaker</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Melepas buffer pemutaran uji</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Impor ke pustaka Anda?</translation>
       <translation>Nada terpisah berlevel rendah</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Mengatur level speaker ke maksimum untuk equalizer</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Mengatur level keluaran</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Mengatur status pembisuan keluaran</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Atur jalur</translation>
     </message>
@@ -1858,6 +2074,18 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Tampilkan penanda puncak pada level frekuensi</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Menentukan ukuran buffer penangkapan</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Menentukan ukuran buffer keluaran</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Menentukan ukuran buffer pemutaran uji</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Impor ke pustaka Anda?</translation>
       <translation>Jenis speaker</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Memulai penangkapan audio kabel virtual</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Memulai perekaman mikrofon</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Mulai dengan volume rendah. Naikkan hanya jika mikrofon tidak dapat menangkap nada.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Memulai keluaran speaker</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Memulai pemutaran uji</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Impor ke pustaka Anda?</translation>
       <translation>Buka kunci kontrol dan selesaikan pengukuran sebelum mengedit profil.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Membatalkan pembisuan speaker untuk equalizer</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Jumlah kanal kabel tidak didukung</translation>
     </message>
@@ -2208,6 +2456,14 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM audio Windows tidak tersedia</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Menulis ke buffer speaker</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Menulis audio uji untuk pemutaran</translation>
     </message>
     <message>
       <source>Yes</source>

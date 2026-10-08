@@ -83,6 +83,10 @@ Importovať do vašej knižnice?</translation>
       <translation>%1 odpojené. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Operácia zlyhala: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Automatická rezerva EQ</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Automatické smerovanie zvuku nie je dostupné</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Automaticky upraviť zvuk pripojeného mikrofónu; kliknutím obídete mikrofónový EQ</translation>
     </message>
@@ -449,6 +457,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Stred</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Zmeniť predvolené zvukové zariadenie</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanál</translation>
     </message>
@@ -613,6 +625,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Nepodarilo sa zapísať testovací tón</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Spočítať zvukové zariadenia</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Vytvoriť profil</translation>
     </message>
@@ -669,6 +685,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Presúvajte body krivky alebo dolaďte vybrané pásmo nižšie.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Vyprázdniť buffer testovacieho prehrávania</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Bez efektu</translation>
     </message>
@@ -723,6 +743,14 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronická hudba</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Vymenovať zvukové zariadenia</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Vymenovať zariadenia</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Importovať do vašej knižnice?</translation>
       <translation>Zahrnúť predbežné verzie</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Inicializovať zachytávanie zvuku</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Inicializovať záznam mikrofónu</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Inicializovať výstup reproduktorov</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Inicializovať testovacie prehrávanie</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Vstupný súbor WAVE</translation>
     </message>
@@ -1143,6 +1187,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Lineárne zosilnenie signálovej cesty (záporné = obrátenie polarity)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Vypísať zvukové zariadenia</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Importovať do vašej knižnice?</translation>
       <translation>Otvoriť ovládací panel VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Otvoriť zvukový stream</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Otvoriť zachytávací stream kábla</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Otvoriť záznamové zariadenie kábla</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Otvoriť zariadenie</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Otvoriť ovládanie hlasitosti zariadenia</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Otvoriť čítacie rozhranie mikrofónu</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Otvoriť sťahovanie vydaných verzií</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Otvoriť zariadenie reproduktorov</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Otvoriť výstupný stream reproduktorov</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Otvoriť zapisovacie rozhranie testovacieho prehrávania</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Importovať do vašej knižnice?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Prečítať zvukové zariadenie</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Prečítať ID zvukového zariadenia</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Prečítať názov zvukového zariadenia</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Prečítať vlastnosti zvukového zariadenia</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Prečítať zvuk kábla</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Prečítať zachytávacie rozhranie kábla</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Prečítať rozloženie kanálov kábla</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Prečítať veľkosť paketu kábla</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Prečítať masku reproduktorov kábla</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Prečítať ID predvoleného výstupu</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Prečítať predvolené výstupné zariadenie</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Prečítať zmiešavací formát mikrofónu</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Prečítať veľkosť paketu mikrofónu</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Prečítať vzorky mikrofónu</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Prečítať veľkosť ďalšieho paketu kábla</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Prečítať ďalší paket mikrofónu</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Prečítať zaplnenie výstupného buffera</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Prečítať úroveň výstupu</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Prečítať stav stlmenia výstupu</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Prečítať úroveň reproduktorov</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Prečítať zmiešavací formát reproduktorov</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Prečítať stav stlmenia reproduktorov</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Prečítať výstupné rozhranie reproduktorov</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Prečítať hlasitosť reproduktorov</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Prečítať zaplnenie buffera testovacieho prehrávania</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Prečítať zmiešavací formát virtuálneho výstupu</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Pripravené. Kým efekty nezapnete, signál zostáva bez efektov.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Importovať do vašej knižnice?</translation>
       <translation>Relatívne merania zahŕňajú odozvu reproduktorov, miestnosti a mikrofónu. Navrhnuté zmeny sú obmedzené na 3 dB pre každú meranú frekvenciu.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Uvoľniť zvuk kábla</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Uvoľniť paket mikrofónu</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Uvoľniť buffer reproduktorov</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Uvoľniť buffer testovacieho prehrávania</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Importovať do vašej knižnice?</translation>
       <translation>Samostatné tiché tóny</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Nastaviť plnú úroveň reproduktorov pre EQ</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Nastaviť úroveň výstupu</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Nastaviť stlmenie výstupu</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Nastaviť signálovú cestu</translation>
     </message>
@@ -1858,6 +2074,18 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Zobraziť značky špičiek frekvenčných úrovní</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Zistiť veľkosť zachytávacieho buffera</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Zistiť veľkosť výstupného buffera</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Zistiť veľkosť buffera testovacieho prehrávania</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Importovať do vašej knižnice?</translation>
       <translation>Typ reproduktora</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Spustiť zachytávanie kábla</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Spustiť záznam mikrofónu</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Začnite potichu. Zvyšujte úroveň iba vtedy, keď mikrofón tóny nezachytí.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Spustiť výstup reproduktorov</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Spustiť testovacie prehrávanie</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Pred úpravou profilov odomknite ovládanie a dokončite meranie.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Zrušiť stlmenie reproduktorov pre EQ</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Nepodporovaný počet kanálov kábla</translation>
     </message>
@@ -2208,6 +2456,14 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM pre zvuk Windows nie je dostupné</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Zapísať buffer reproduktorov</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Zapísať testovacie prehrávanie</translation>
     </message>
     <message>
       <source>Yes</source>

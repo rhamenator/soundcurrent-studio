@@ -83,6 +83,10 @@ Import into your library?</source>
       <translation>اتصال %1 قطع شد. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>عملیات ناموفق بود: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Import into your library?</source>
       <translation>حاشیه خودکار اکولایزر تا سقف سیگنال</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>مسیریابی خودکار صدا در دسترس نیست</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>تنظیم خودکار صدای میکروفون متصل؛ برای دور زدن اکولایزر میکروفون کلیک کنید</translation>
     </message>
@@ -449,6 +457,10 @@ Import into your library?</source>
       <translation>مرکز</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>تغییر نقطهٔ پایانی صدای پیش‌فرض</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>کانال</translation>
     </message>
@@ -613,6 +625,10 @@ Import into your library?</source>
       <translation>نوشتن صدای آزمون ممکن نشد</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>شمارش نقاط پایانی صدا</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>ایجاد پروفایل</translation>
     </message>
@@ -669,6 +685,10 @@ Import into your library?</source>
       <translation>نقاط منحنی را بکشید یا باند انتخاب‌شده را در پایین تنظیم کنید.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>تکمیل پخش آزمایشی</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>بدون پردازش</translation>
     </message>
@@ -723,6 +743,14 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>موسیقی الکترونیک</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>فهرست کردن دستگاه‌های صوتی</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>فهرست کردن نقاط پایانی</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Import into your library?</source>
       <translation>شامل نسخه‌های پیش‌نمایش</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>آماده‌سازی دریافت صدا</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>آماده‌سازی ضبط میکروفون</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>آماده‌سازی خروجی بلندگو</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>آماده‌سازی پخش آزمایشی</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>فایل WAVE ورودی</translation>
     </message>
@@ -1143,6 +1187,10 @@ Import into your library?</source>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>بهره خطی مسیر (منفی = وارونگی قطبیت)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>دریافت فهرست نقاط پایانی صدا</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Import into your library?</source>
       <translation>باز کردن پنل کنترل VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>باز کردن جریان صوتی</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>باز کردن جریان دریافت کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>باز کردن نقطهٔ پایانی ضبط کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>باز کردن نقطهٔ پایانی</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>باز کردن رابط بلندی صدای نقطهٔ پایانی</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>باز کردن رابط خواندن میکروفون</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>باز کردن دانلودهای نسخه‌ها</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>باز کردن نقطهٔ پایانی بلندگو</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>باز کردن جریان پخش بلندگو</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>باز کردن رابط نوشتن برای پخش آزمایشی</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Import into your library?</source>
       <translation>ریتم اند بلوز</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>خواندن نقطهٔ پایانی صدا</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>خواندن شناسهٔ نقطهٔ پایانی صدا</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>خواندن نام نقطهٔ پایانی صدا</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>خواندن ویژگی‌های نقطهٔ پایانی صدا</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>خواندن صدای کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>دریافت رابط دریافت صدای کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>خواندن چینش کانال‌های کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>خواندن اندازهٔ بستهٔ کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>خواندن ماسک بلندگوهای کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>خواندن شناسهٔ خروجی پیش‌فرض</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>خواندن نقطهٔ پایانی خروجی پیش‌فرض</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>خواندن قالب میکس میکروفون</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>خواندن اندازهٔ بستهٔ میکروفون</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>خواندن نمونه‌های میکروفون</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>خواندن اندازهٔ بستهٔ بعدی کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>خواندن بستهٔ بعدی میکروفون</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>خواندن میزان پرشدگی بافر خروجی</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>خواندن سطح خروجی</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>خواندن وضعیت بی‌صدایی خروجی</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>خواندن سطح بلندگو</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>خواندن قالب میکس بلندگو</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>خواندن وضعیت بی‌صدایی بلندگو</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>دریافت رابط پخش بلندگو</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>خواندن بلندی صدای بلندگو</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>خواندن تعداد فریم‌های صوتی بافرشده برای پخش آزمایشی</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>خواندن قالب میکس خروجی مجازی</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>آماده. افکت‌ها تا زمان فعال شدن اعمال نمی‌شوند.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Import into your library?</source>
       <translation>اندازه‌گیری‌های نسبی شامل پاسخ بلندگو، اتاق و میکروفون هستند. تغییرات پیشنهادی به 3 dB برای هر فرکانس اندازه‌گیری‌شده محدود می‌شوند.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>آزاد کردن بستهٔ صوتی کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>آزاد کردن بستهٔ میکروفون</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>آزاد کردن بافر بلندگو</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>آزاد کردن بافر پخش آزمایشی</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Import into your library?</source>
       <translation>صداهای کم‌صدای جداگانه</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>تنظیم سطح بلندگو روی حداکثر برای اکولایزر</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>تنظیم سطح خروجی</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>تنظیم وضعیت بی‌صدایی خروجی</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>تنظیم مسیر</translation>
     </message>
@@ -1858,6 +2074,18 @@ Import into your library?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>نمایش نشانگرهای قله در سطح‌های فرکانس</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>تعیین اندازهٔ بافر دریافت صدا</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>تعیین اندازهٔ بافر خروجی</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>تعیین اندازهٔ بافر پخش آزمایشی</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Import into your library?</source>
       <translation>نوع بلندگو</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>شروع دریافت صدای کابل مجازی</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>شروع ضبط میکروفون</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>با صدای کم شروع کنید. فقط اگر میکروفون صداها را نمی‌شنود سطح را افزایش دهید.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>شروع خروجی بلندگو</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>شروع پخش آزمایشی</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Import into your library?</source>
       <translation>پیش از ویرایش پروفایل‌ها، قفل کنترل‌ها را باز کنید و اندازه‌گیری را به پایان برسانید.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>لغو بی‌صدایی بلندگو برای اکولایزر</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>تعداد کانال‌های کابل پشتیبانی نمی‌شود</translation>
     </message>
@@ -2208,6 +2456,14 @@ Import into your library?</source>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM صوتی Windows در دسترس نیست</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>نوشتن در بافر بلندگو</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>نوشتن صدای آزمایشی برای پخش</translation>
     </message>
     <message>
       <source>Yes</source>

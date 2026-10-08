@@ -83,6 +83,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>%1 đã ngắt kết nối. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Thao tác thất bại: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Khoảng dự phòng EQ tự động</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Không thể định tuyến âm thanh tự động</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Tự động hiệu chỉnh âm thanh micrô được kết nối; nhấp để bỏ qua EQ micrô</translation>
     </message>
@@ -449,6 +457,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Giữa</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Thay đổi điểm cuối âm thanh mặc định</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kênh</translation>
     </message>
@@ -613,6 +625,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Không thể ghi âm thử</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Đếm các điểm cuối âm thanh</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Tạo cấu hình</translation>
     </message>
@@ -669,6 +685,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Kéo các điểm trên đường cong hoặc điều chỉnh dải đã chọn bên dưới.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Hoàn tất phát âm thanh thử nghiệm</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Âm gốc</translation>
     </message>
@@ -723,6 +743,14 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Electronic</source>
       <translation>Nhạc điện tử</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Liệt kê thiết bị âm thanh</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Liệt kê điểm cuối</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Bao gồm bản phát hành xem trước</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Khởi tạo thu âm thanh</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Khởi tạo ghi âm micrô</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Khởi tạo đầu ra loa</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Khởi tạo phát âm thanh thử nghiệm</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Tệp WAVE đầu vào</translation>
     </message>
@@ -1143,6 +1187,10 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Gain tuyến tính của tuyến (âm = đảo cực tính)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Lấy danh sách điểm cuối âm thanh</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Mở bảng điều khiển VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Mở luồng âm thanh</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Mở luồng thu âm của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Mở điểm cuối ghi âm của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Mở điểm cuối</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Mở giao diện âm lượng của điểm cuối</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Mở giao diện đọc micrô</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Mở trang tải bản phát hành</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Mở điểm cuối loa</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Mở luồng phát của loa</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Mở giao diện ghi dữ liệu phát thử nghiệm</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Nhập vào thư viện của bạn?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Đọc điểm cuối âm thanh</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Đọc mã định danh điểm cuối âm thanh</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Đọc tên điểm cuối âm thanh</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Đọc thuộc tính điểm cuối âm thanh</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Đọc âm thanh từ cáp ảo</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Lấy giao diện thu âm của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Đọc bố trí kênh của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Đọc kích thước gói của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Đọc mặt nạ loa của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Đọc mã định danh đầu ra mặc định</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Đọc điểm cuối đầu ra mặc định</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Đọc định dạng trộn của micrô</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Đọc kích thước gói micrô</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Đọc giá trị mẫu micrô</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Đọc kích thước gói tiếp theo của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Đọc gói micrô tiếp theo</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Đọc mức lấp đầy bộ đệm đầu ra</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Đọc mức tín hiệu đầu ra</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Đọc trạng thái tắt tiếng đầu ra</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Đọc mức tín hiệu loa</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Đọc định dạng trộn của loa</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Đọc trạng thái tắt tiếng loa</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Lấy giao diện phát của loa</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Đọc âm lượng loa</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Đọc số khung âm thanh trong bộ đệm phát thử nghiệm</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Đọc định dạng trộn của đầu ra ảo</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Sẵn sàng. Chưa áp dụng hiệu ứng cho đến khi bật.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Phép đo tương đối bao gồm đáp tuyến loa, phòng và micrô. Thay đổi đề xuất được giới hạn ở 3 dB cho mỗi tần số đã đo.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Giải phóng gói âm thanh của cáp ảo</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Giải phóng gói micrô</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Giải phóng bộ đệm loa</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Giải phóng bộ đệm phát thử nghiệm</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Các âm thử nhẹ riêng biệt</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Đặt mức loa tối đa cho bộ cân bằng âm thanh</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Đặt mức tín hiệu đầu ra</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Đặt trạng thái tắt tiếng đầu ra</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Đặt tuyến</translation>
     </message>
@@ -1858,6 +2074,18 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Hiển thị dấu đỉnh trên các mức tần số</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Xác định kích thước bộ đệm thu âm</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Xác định kích thước bộ đệm đầu ra</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Xác định kích thước bộ đệm phát thử nghiệm</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Loại loa</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Bắt đầu thu âm thanh từ cáp ảo</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Bắt đầu ghi âm micrô</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Bắt đầu ở mức nhỏ. Chỉ tăng nếu micrô không thu được âm thử.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Bắt đầu đầu ra loa</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Bắt đầu phát âm thanh thử nghiệm</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Mở khóa điều khiển và hoàn tất phép đo trước khi sửa cấu hình.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Bật tiếng loa cho bộ cân bằng âm thanh</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Không hỗ trợ số kênh cáp này</translation>
     </message>
@@ -2208,6 +2456,14 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM âm thanh Windows không khả dụng</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Ghi vào bộ đệm loa</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Ghi âm thanh thử nghiệm để phát</translation>
     </message>
     <message>
       <source>Yes</source>

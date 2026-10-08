@@ -83,6 +83,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>%1 losgekoppeld. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Bewerking mislukt: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Automatische EQ-headroom</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Automatische audioroutering niet beschikbaar</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Pas het geluid van een aangesloten microfoon automatisch aan; klik om de microfoon-EQ te omzeilen</translation>
     </message>
@@ -449,6 +457,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Midden</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Standaardaudioapparaat wijzigen</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanaal</translation>
     </message>
@@ -613,6 +625,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Kon de testtoon niet schrijven</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Audioapparaten tellen</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Profiel aanmaken</translation>
     </message>
@@ -669,6 +685,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Sleep curvepunten of stel de geselecteerde band hieronder af.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Buffer voor testweergave leegspelen</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Zonder effect</translation>
     </message>
@@ -723,6 +743,14 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronisch</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Audioapparaten opsommen</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Apparaten opsommen</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Importeren in uw bibliotheek?</translation>
       <translation>Voorlopige versies meenemen</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Audio-opname initialiseren</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Microfoonopname initialiseren</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Luidsprekeruitgang initialiseren</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Testweergave initialiseren</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>WAVE-invoerbestand</translation>
     </message>
@@ -1143,6 +1187,10 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Lineaire routeversterking (negatief = omkeren)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Audioapparaten weergeven</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Importeren in uw bibliotheek?</translation>
       <translation>VB-CABLE-configuratiescherm openen</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Audiostream openen</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Kabelopnamestream openen</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Kabelopnameapparaat openen</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Apparaat openen</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Volumeregeling van apparaat openen</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Leesinterface voor microfoon openen</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Versiedownloads openen</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Luidsprekerapparaat openen</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Uitgangsstream voor luidsprekers openen</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Schrijfinterface voor testweergave openen</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Importeren in uw bibliotheek?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Audioapparaat lezen</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Identificatie van audioapparaat lezen</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Naam van audioapparaat lezen</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Eigenschappen van audioapparaat lezen</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Kabelaudio lezen</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Kabelopname-interface lezen</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Kanaalindeling van kabel lezen</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Grootte van kabelpakket lezen</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Luidsprekermasker van kabel lezen</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Identificatie van standaarduitgang lezen</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Standaarduitvoerapparaat lezen</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Microfoonmengformaat lezen</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Grootte van microfoonpakket lezen</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Microfoonsamples lezen</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Grootte van volgend kabelpakket lezen</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Volgend microfoonpakket lezen</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Vulniveau van uitvoerbuffer lezen</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Uitvoerniveau lezen</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Dempingsstatus van uitgang lezen</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Luidsprekerniveau lezen</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Luidsprekermengformaat lezen</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Dempingsstatus van luidsprekers lezen</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Uitgangsinterface van luidsprekers lezen</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Luidsprekervolume lezen</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Vulniveau van buffer voor testweergave lezen</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Mengformaat van virtuele uitgang lezen</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Gereed. Effecten worden pas toegepast wanneer ze zijn ingeschakeld.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Importeren in uw bibliotheek?</translation>
       <translation>Relatieve metingen omvatten de respons van luidsprekers, kamer en microfoon. De voorgestelde wijzigingen zijn beperkt tot 3 dB per gemeten frequentie.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Kabelaudio vrijgeven</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Microfoonpakket vrijgeven</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Luidsprekerbuffer vrijgeven</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Buffer voor testweergave vrijgeven</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Importeren in uw bibliotheek?</translation>
       <translation>Afzonderlijke tonen op laag volume</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Luidsprekerniveau op maximaal instellen voor EQ</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Uitvoerniveau instellen</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Dempingsstatus van uitgang instellen</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Route instellen</translation>
     </message>
@@ -1858,6 +2074,18 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Piekmarkeringen op frequentieniveaus tonen</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Grootte van opnamebuffer bepalen</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Grootte van uitvoerbuffer bepalen</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Grootte van buffer voor testweergave bepalen</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Importeren in uw bibliotheek?</translation>
       <translation>Luidsprekertype</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Kabelopname starten</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Microfoonopname starten</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Begin zacht. Verhoog alleen als de microfoon de tonen niet kan horen.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Luidsprekeruitgang starten</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Testweergave starten</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Importeren in uw bibliotheek?</translation>
       <translation>Ontgrendel regelaars en voltooi de meting voordat u profielen bewerkt.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Luidsprekers inschakelen voor EQ</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Niet-ondersteund aantal kabelkanalen</translation>
     </message>
@@ -2208,6 +2456,14 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>Windows-audio-COM is niet beschikbaar</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Luidsprekerbuffer schrijven</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Testweergave schrijven</translation>
     </message>
     <message>
       <source>Yes</source>

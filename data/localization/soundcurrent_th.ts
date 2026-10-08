@@ -83,6 +83,10 @@ Import into your library?</source>
       <translation>%1 ถูกถอดออกแล้ว </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>การดำเนินการล้มเหลว: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Import into your library?</source>
       <translation>เฮดรูม EQ อัตโนมัติ</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>ไม่สามารถใช้การกำหนดเส้นทางเสียงอัตโนมัติได้</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>ปรับเสียงไมโครโฟนที่เชื่อมต่อโดยอัตโนมัติ คลิกเพื่อบายพาส EQ ไมโครโฟน</translation>
     </message>
@@ -449,6 +457,10 @@ Import into your library?</source>
       <translation>กึ่งกลาง</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>เปลี่ยนจุดปลายทางเสียงเริ่มต้น</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>แชนเนล</translation>
     </message>
@@ -613,6 +625,10 @@ Import into your library?</source>
       <translation>ไม่สามารถเขียนเสียงทดสอบได้</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>นับจุดปลายทางเสียง</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>สร้างโปรไฟล์</translation>
     </message>
@@ -669,6 +685,10 @@ Import into your library?</source>
       <translation>ลากจุดบนกราฟหรือปรับย่านที่เลือกด้านล่าง</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>รอให้การเล่นเสียงทดสอบเสร็จสิ้น</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>เสียงต้นฉบับ</translation>
     </message>
@@ -723,6 +743,14 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>อิเล็กทรอนิกส์</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>แจกแจงอุปกรณ์เสียง</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>แจกแจงจุดปลายทาง</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Import into your library?</source>
       <translation>รวมรุ่นพรีวิว</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>เตรียมการจับเสียง</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>เตรียมการบันทึกเสียงไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>เตรียมเอาต์พุตลำโพง</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>เตรียมการเล่นเสียงทดสอบ</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>ไฟล์ WAVE อินพุต</translation>
     </message>
@@ -1143,6 +1187,10 @@ Import into your library?</source>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>เกนเส้นทางแบบเชิงเส้น (ค่าลบ = กลับขั้ว)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>รับรายการจุดปลายทางเสียง</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Import into your library?</source>
       <translation>เปิดแผงควบคุม VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>เปิดสตรีมเสียง</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>เปิดสตรีมจับเสียงของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>เปิดจุดปลายทางการบันทึกของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>เปิดจุดปลายทาง</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>เปิดอินเทอร์เฟซระดับเสียงของจุดปลายทาง</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>เปิดอินเทอร์เฟซอ่านข้อมูลไมโครโฟน</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>เปิดหน้าดาวน์โหลดรุ่นที่เผยแพร่</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>เปิดจุดปลายทางลำโพง</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>เปิดสตรีมเล่นเสียงของลำโพง</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>เปิดอินเทอร์เฟซเขียนข้อมูลสำหรับการเล่นเสียงทดสอบ</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Import into your library?</source>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>อ่านจุดปลายทางเสียง</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>อ่านรหัสจุดปลายทางเสียง</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>อ่านชื่อจุดปลายทางเสียง</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>อ่านคุณสมบัติจุดปลายทางเสียง</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>อ่านเสียงจากสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>รับอินเทอร์เฟซจับเสียงของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>อ่านรูปแบบการจัดช่องเสียงของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>อ่านขนาดแพ็กเก็ตของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>อ่านมาสก์ลำโพงของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>อ่านรหัสเอาต์พุตเริ่มต้น</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>อ่านจุดปลายทางเอาต์พุตเริ่มต้น</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>อ่านรูปแบบมิกซ์เสียงของไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>อ่านขนาดแพ็กเก็ตไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>อ่านค่าตัวอย่างเสียงไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>อ่านขนาดแพ็กเก็ตถัดไปของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>อ่านแพ็กเก็ตไมโครโฟนถัดไป</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>อ่านปริมาณข้อมูลในบัฟเฟอร์เอาต์พุต</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>อ่านระดับสัญญาณเอาต์พุต</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>อ่านสถานะปิดเสียงเอาต์พุต</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>อ่านระดับสัญญาณลำโพง</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>อ่านรูปแบบมิกซ์เสียงของลำโพง</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>อ่านสถานะปิดเสียงลำโพง</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>รับอินเทอร์เฟซเล่นเสียงของลำโพง</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>อ่านระดับความดังของลำโพง</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>อ่านจำนวนเฟรมเสียงในบัฟเฟอร์การเล่นเสียงทดสอบ</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>อ่านรูปแบบมิกซ์เสียงของเอาต์พุตเสมือน</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>พร้อม เอฟเฟกต์ยังไม่เปลี่ยนเสียงต้นฉบับจนกว่าจะเปิดใช้</translation>
     </message>
@@ -1600,6 +1788,22 @@ Import into your library?</source>
       <translation>การวัดสัมพัทธ์รวมการตอบสนองของลำโพง ห้อง และไมโครโฟน การเปลี่ยนที่เสนอจำกัดไว้ที่ 3 dB ต่อความถี่ที่วัด
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>คืนแพ็กเก็ตเสียงของสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>คืนแพ็กเก็ตไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>คืนบัฟเฟอร์ลำโพง</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>คืนบัฟเฟอร์การเล่นเสียงทดสอบ</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Import into your library?</source>
       <translation>เสียงทดสอบระดับเบาแยกกัน</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>ตั้งระดับลำโพงสูงสุดสำหรับอีควอไลเซอร์</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>ตั้งระดับสัญญาณเอาต์พุต</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>ตั้งสถานะปิดเสียงเอาต์พุต</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>ตั้งเส้นทาง</translation>
     </message>
@@ -1858,6 +2074,18 @@ Import into your library?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>แสดงเครื่องหมายพีกบนระดับความถี่</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>หาขนาดบัฟเฟอร์จับเสียง</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>หาขนาดบัฟเฟอร์เอาต์พุต</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>หาขนาดบัฟเฟอร์การเล่นเสียงทดสอบ</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Import into your library?</source>
       <translation>ประเภทลำโพง</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>เริ่มจับเสียงจากสายสัญญาณเสมือน</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>เริ่มบันทึกเสียงไมโครโฟน</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>เริ่มด้วยเสียงเบา เพิ่มเฉพาะเมื่อไมโครโฟนไม่ได้ยินเสียงทดสอบ</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>เริ่มเอาต์พุตลำโพง</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>เริ่มเล่นเสียงทดสอบ</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Import into your library?</source>
       <translation>ปลดล็อกตัวควบคุมและวัดให้เสร็จก่อนแก้ไขโปรไฟล์</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>เปิดเสียงลำโพงสำหรับอีควอไลเซอร์</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>ไม่รองรับจำนวนแชนเนลของสาย</translation>
     </message>
@@ -2208,6 +2456,14 @@ Import into your library?</source>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM เสียง Windows ไม่พร้อมใช้งาน</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>เขียนข้อมูลลงบัฟเฟอร์ลำโพง</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>เขียนเสียงทดสอบสำหรับการเล่น</translation>
     </message>
     <message>
       <source>Yes</source>

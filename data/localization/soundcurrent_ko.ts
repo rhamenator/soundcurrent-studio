@@ -83,6 +83,10 @@ Import into your library?</source>
       <translation>%1 연결이 해제되었습니다. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>작업 실패: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Import into your library?</source>
       <translation>자동 EQ 헤드룸</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>자동 오디오 라우팅을 사용할 수 없음</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>연결된 마이크의 음질을 자동 보정합니다. 클릭하면 마이크 EQ를 바이패스합니다</translation>
     </message>
@@ -449,6 +457,10 @@ Import into your library?</source>
       <translation>중앙</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>기본 오디오 엔드포인트 변경</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>채널</translation>
     </message>
@@ -613,6 +625,10 @@ Import into your library?</source>
       <translation>테스트 톤을 기록하지 못했습니다</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>오디오 엔드포인트 개수 확인</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>프로파일 만들기</translation>
     </message>
@@ -669,6 +685,10 @@ Import into your library?</source>
       <translation>곡선의 점을 드래그하거나 아래에서 선택한 밴드를 조절하세요.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>테스트 재생 완료 대기</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>드라이</translation>
     </message>
@@ -723,6 +743,14 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>일렉트로닉</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>오디오 장치 열거</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>엔드포인트 열거</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Import into your library?</source>
       <translation>프리뷰 릴리스 포함</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>오디오 캡처 초기화</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>마이크 녹음 초기화</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>스피커 출력 초기화</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>테스트 재생 초기화</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>입력 WAVE 파일</translation>
     </message>
@@ -1143,6 +1187,10 @@ Import into your library?</source>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>경로 선형 게인 (음수 = 극성 반전)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>오디오 엔드포인트 목록 가져오기</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Import into your library?</source>
       <translation>VB-CABLE 제어판 열기</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>오디오 스트림 열기</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>가상 케이블 캡처 스트림 열기</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>가상 케이블 녹음 엔드포인트 열기</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>엔드포인트 열기</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>엔드포인트 볼륨 인터페이스 열기</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>마이크 읽기 인터페이스 열기</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>릴리스 다운로드 페이지 열기</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>스피커 엔드포인트 열기</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>스피커 재생 스트림 열기</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>테스트 재생 쓰기 인터페이스 열기</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Import into your library?</source>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>오디오 엔드포인트 읽기</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>오디오 엔드포인트 ID 읽기</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>오디오 엔드포인트 이름 읽기</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>오디오 엔드포인트 속성 읽기</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>가상 케이블 오디오 읽기</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>가상 케이블 캡처 인터페이스 가져오기</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>가상 케이블 채널 배치 읽기</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>가상 케이블 패킷 크기 읽기</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>가상 케이블 스피커 마스크 읽기</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>기본 출력 ID 읽기</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>기본 출력 엔드포인트 읽기</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>마이크 믹스 형식 읽기</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>마이크 패킷 크기 읽기</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>마이크 샘플 값 읽기</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>가상 케이블의 다음 패킷 크기 읽기</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>다음 마이크 패킷 읽기</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>출력 버퍼 사용량 읽기</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>출력 레벨 읽기</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>출력 음소거 상태 읽기</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>스피커 레벨 읽기</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>스피커 믹스 형식 읽기</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>스피커 음소거 상태 읽기</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>스피커 재생 인터페이스 가져오기</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>스피커 볼륨 읽기</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>테스트 재생 버퍼의 오디오 프레임 수 읽기</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>가상 출력 믹스 형식 읽기</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>준비되었습니다. 활성화하기 전까지 이펙트는 드라이 상태입니다.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Import into your library?</source>
       <translation>상대 측정에는 스피커, 실내 및 마이크 응답이 포함됩니다. 권장 변경은 각 측정 주파수에서 3 dB 이내로 제한됩니다.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>가상 케이블 오디오 패킷 해제</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>마이크 패킷 해제</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>스피커 버퍼 해제</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>테스트 재생 버퍼 해제</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Import into your library?</source>
       <translation>개별 저음량 톤</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>이퀄라이저용 스피커 레벨을 최대로 설정</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>출력 레벨 설정</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>출력 음소거 상태 설정</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>경로 설정</translation>
     </message>
@@ -1858,6 +2074,18 @@ Import into your library?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>주파수 레벨에 피크 마커 표시</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>캡처 버퍼 크기 확인</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>출력 버퍼 크기 확인</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>테스트 재생 버퍼 크기 확인</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Import into your library?</source>
       <translation>스피커 유형</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>가상 케이블 오디오 캡처 시작</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>마이크 녹음 시작</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>낮은 음량으로 시작하세요. 마이크가 톤을 감지하지 못할 때만 높이세요.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>스피커 출력 시작</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>테스트 재생 시작</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Import into your library?</source>
       <translation>프로파일을 편집하기 전에 컨트롤 잠금을 해제하고 측정을 종료하세요.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>이퀄라이저용 스피커 음소거 해제</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>지원하지 않는 케이블 채널 수</translation>
     </message>
@@ -2208,6 +2456,14 @@ Import into your library?</source>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>Windows 오디오 COM을 사용할 수 없습니다</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>스피커 버퍼에 쓰기</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>재생할 테스트 오디오 쓰기</translation>
     </message>
     <message>
       <source>Yes</source>

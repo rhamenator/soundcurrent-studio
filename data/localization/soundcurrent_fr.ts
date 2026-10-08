@@ -83,6 +83,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>%1 déconnecté. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Échec de %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Marge d’égalisation automatique</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Routage audio automatique indisponible</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Corrige automatiquement le son d’un microphone connecté ; cliquez pour désactiver son égalisation</translation>
     </message>
@@ -449,6 +457,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Centre</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Changer le périphérique audio par défaut</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Canal</translation>
     </message>
@@ -613,6 +625,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Impossible d’écrire le signal de test</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Compter les périphériques audio</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Créer un profil</translation>
     </message>
@@ -669,6 +685,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Faites glisser les points de la courbe ou réglez la bande sélectionnée ci-dessous.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Vider le tampon de lecture de test</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Sans effet</translation>
     </message>
@@ -723,6 +743,14 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Electronic</source>
       <translation>Électronique</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Énumérer les appareils audio</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Énumérer les périphériques</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Inclure les préversions</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Initialiser la capture audio</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Initialiser l’enregistrement du microphone</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Initialiser la sortie des enceintes</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Initialiser la lecture de test</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Fichier WAVE d’entrée</translation>
     </message>
@@ -1143,6 +1187,10 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Gain linéaire du chemin audio (négatif = inversion)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Lister les périphériques audio</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Ouvrir le panneau de contrôle VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Ouvrir le flux audio</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Ouvrir le flux de capture du câble</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Ouvrir le périphérique d’enregistrement du câble</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Ouvrir le périphérique</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Ouvrir le contrôle du volume du périphérique</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Ouvrir l’interface de lecture du microphone</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Ouvrir les téléchargements de versions</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Ouvrir le périphérique des enceintes</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Ouvrir le flux de sortie des enceintes</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Ouvrir l’interface d’écriture de la lecture de test</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Importer dans votre bibliothèque ?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Lire le périphérique audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Lire l’identifiant du périphérique audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Lire le nom du périphérique audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Lire les propriétés du périphérique audio</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Lire l’audio du câble</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Lire l’interface de capture du câble</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Lire la disposition des canaux du câble</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Lire la taille du paquet du câble</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Lire le masque des enceintes du câble</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Lire l’identifiant de la sortie par défaut</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Lire le périphérique de sortie par défaut</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Lire le format de mixage du microphone</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Lire la taille du paquet du microphone</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Lire les échantillons du microphone</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Lire la taille du paquet suivant du câble</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Lire le paquet suivant du microphone</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Lire le niveau de remplissage du tampon de sortie</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Lire le niveau de sortie</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Lire l’état muet de la sortie</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Lire le niveau des enceintes</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Lire le format de mixage des enceintes</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Lire l’état muet des enceintes</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Lire l’interface de sortie des enceintes</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Lire le volume des enceintes</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Lire le niveau de remplissage du tampon de lecture de test</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Lire le format de mixage de la sortie virtuelle</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Prêt. Les effets sont désactivés tant qu’ils ne sont pas activés.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Les mesures relatives incluent la réponse des enceintes, de la pièce et du microphone. Les modifications proposées sont limitées à 3 dB par fréquence mesurée.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Libérer l’audio du câble</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Libérer le paquet du microphone</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Libérer le tampon des enceintes</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Libérer le tampon de lecture de test</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Tonalités séparées à faible niveau</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Régler les enceintes au niveau maximal pour l’EQ</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Régler le niveau de sortie</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Régler l’état muet de la sortie</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Définir le chemin audio</translation>
     </message>
@@ -1858,6 +2074,18 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Afficher les repères de crête sur les niveaux de fréquence</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Déterminer la taille du tampon de capture</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Déterminer la taille du tampon de sortie</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Déterminer la taille du tampon de lecture de test</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Type d’enceinte</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Démarrer la capture du câble</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Démarrer l’enregistrement du microphone</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Commencez à faible niveau. Augmentez seulement si le microphone ne détecte pas les tonalités.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Démarrer la sortie des enceintes</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Démarrer la lecture de test</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Déverrouillez les réglages et terminez la mesure avant de modifier les profils.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Réactiver le son des enceintes pour l’EQ</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Nombre de canaux du câble non pris en charge</translation>
     </message>
@@ -2208,6 +2456,14 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM pour l’audio Windows n’est pas disponible</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Écrire dans le tampon des enceintes</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Écrire la lecture de test</translation>
     </message>
     <message>
       <source>Yes</source>

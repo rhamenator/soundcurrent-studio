@@ -83,6 +83,10 @@ Import into your library?</source>
       <translation>%1 का कनेक्शन टूट गया। </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>कार्रवाई विफल हुई: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Import into your library?</source>
       <translation>स्वचालित EQ हेडरूम</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>स्वचालित ऑडियो रूटिंग उपलब्ध नहीं है</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>कनेक्ट किए गए माइक्रोफ़ोन की ध्वनि को अपने आप सुधारें; माइक्रोफ़ोन EQ को बायपास करने के लिए क्लिक करें</translation>
     </message>
@@ -449,6 +457,10 @@ Import into your library?</source>
       <translation>मध्य</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>डिफ़ॉल्ट ऑडियो एंडपॉइंट बदलना</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>चैनल</translation>
     </message>
@@ -613,6 +625,10 @@ Import into your library?</source>
       <translation>परीक्षण टोन नहीं लिखा जा सका</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>ऑडियो एंडपॉइंट की संख्या गिनना</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>प्रोफ़ाइल बनाएँ</translation>
     </message>
@@ -669,6 +685,10 @@ Import into your library?</source>
       <translation>वक्र के बिंदु खींचें या नीचे चयनित बैंड समायोजित करें।</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>परीक्षण प्लेबैक पूरा करना</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>ड्राई</translation>
     </message>
@@ -723,6 +743,14 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>इलेक्ट्रॉनिक</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>ऑडियो डिवाइस की सूची बनाना</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>एंडपॉइंट की सूची बनाना</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Import into your library?</source>
       <translation>प्रीव्यू रिलीज़ शामिल करें</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>ऑडियो कैप्चर आरंभ करने की तैयारी</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>माइक्रोफ़ोन रिकॉर्डिंग आरंभ करने की तैयारी</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>स्पीकर आउटपुट आरंभ करने की तैयारी</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>परीक्षण प्लेबैक आरंभ करने की तैयारी</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>इनपुट WAVE फ़ाइल</translation>
     </message>
@@ -1143,6 +1187,10 @@ Import into your library?</source>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>रूट का रैखिक गेन (ऋणात्मक = पोलैरिटी उलटें)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>ऑडियो एंडपॉइंट की सूची प्राप्त करना</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Import into your library?</source>
       <translation>VB-CABLE कंट्रोल पैनल खोलें</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>ऑडियो स्ट्रीम खोलना</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>वर्चुअल केबल की कैप्चर स्ट्रीम खोलना</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>वर्चुअल केबल का रिकॉर्डिंग एंडपॉइंट खोलना</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>एंडपॉइंट खोलना</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>एंडपॉइंट का वॉल्यूम इंटरफ़ेस खोलना</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>माइक्रोफ़ोन का रीड इंटरफ़ेस खोलना</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>रिलीज़ डाउनलोड पृष्ठ खोलें</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>स्पीकर एंडपॉइंट खोलना</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>स्पीकर की प्लेबैक स्ट्रीम खोलना</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>परीक्षण प्लेबैक का राइट इंटरफ़ेस खोलना</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Import into your library?</source>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>ऑडियो एंडपॉइंट पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>ऑडियो एंडपॉइंट का ID पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>ऑडियो एंडपॉइंट का नाम पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>ऑडियो एंडपॉइंट के गुण पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>वर्चुअल केबल का ऑडियो पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>वर्चुअल केबल का कैप्चर इंटरफ़ेस प्राप्त करना</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>वर्चुअल केबल का चैनल विन्यास पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>वर्चुअल केबल के पैकेट का आकार पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>वर्चुअल केबल का स्पीकर मास्क पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>डिफ़ॉल्ट आउटपुट का ID पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>डिफ़ॉल्ट आउटपुट एंडपॉइंट पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>माइक्रोफ़ोन का मिक्स फ़ॉर्मैट पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>माइक्रोफ़ोन पैकेट का आकार पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>माइक्रोफ़ोन के सैंपल मान पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>वर्चुअल केबल के अगले पैकेट का आकार पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>माइक्रोफ़ोन का अगला पैकेट पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>आउटपुट बफ़र के भराव का स्तर पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>आउटपुट स्तर पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>आउटपुट की म्यूट स्थिति पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>स्पीकर का स्तर पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>स्पीकर का मिक्स फ़ॉर्मैट पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>स्पीकर की म्यूट स्थिति पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>स्पीकर का प्लेबैक इंटरफ़ेस प्राप्त करना</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>स्पीकर का वॉल्यूम पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>परीक्षण प्लेबैक बफ़र में ऑडियो फ़्रेम की संख्या पढ़ना</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>वर्चुअल आउटपुट का मिक्स फ़ॉर्मैट पढ़ना</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>तैयार। सक्षम होने तक इफ़ेक्ट ड्राई रहते हैं।</translation>
     </message>
@@ -1600,6 +1788,22 @@ Import into your library?</source>
       <translation>सापेक्ष माप में स्पीकर, कमरे और माइक्रोफ़ोन की प्रतिक्रिया शामिल होती है। प्रस्तावित बदलाव प्रत्येक मापी गई आवृत्ति पर 3 dB तक सीमित हैं।
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>वर्चुअल केबल का ऑडियो पैकेट रिलीज़ करना</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>माइक्रोफ़ोन पैकेट रिलीज़ करना</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>स्पीकर बफ़र रिलीज़ करना</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>परीक्षण प्लेबैक बफ़र रिलीज़ करना</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Import into your library?</source>
       <translation>अलग-अलग धीमी आवाज़ वाले टोन</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>इक्वलाइज़र के लिए स्पीकर का स्तर अधिकतम पर सेट करना</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>आउटपुट स्तर सेट करना</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>आउटपुट की म्यूट स्थिति सेट करना</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>रूट सेट करें</translation>
     </message>
@@ -1858,6 +2074,18 @@ Import into your library?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>आवृत्ति स्तरों पर पीक चिह्न दिखाएँ</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>कैप्चर बफ़र का आकार निर्धारित करना</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>आउटपुट बफ़र का आकार निर्धारित करना</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>परीक्षण प्लेबैक बफ़र का आकार निर्धारित करना</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Import into your library?</source>
       <translation>स्पीकर प्रकार</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>वर्चुअल केबल का ऑडियो कैप्चर शुरू करना</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>माइक्रोफ़ोन रिकॉर्डिंग शुरू करना</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>धीमी आवाज़ से शुरू करें। केवल तभी बढ़ाएँ जब माइक्रोफ़ोन टोन न सुन पाए।</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>स्पीकर आउटपुट शुरू करना</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>परीक्षण प्लेबैक शुरू करना</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Import into your library?</source>
       <translation>प्रोफ़ाइल संपादित करने से पहले नियंत्रण अनलॉक करें और माप समाप्त करें।</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>इक्वलाइज़र के लिए स्पीकर को अनम्यूट करना</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>केबल की चैनल संख्या समर्थित नहीं है</translation>
     </message>
@@ -2208,6 +2456,14 @@ Import into your library?</source>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>Windows ऑडियो COM उपलब्ध नहीं है</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>स्पीकर बफ़र में लिखना</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>प्लेबैक के लिए परीक्षण ऑडियो लिखना</translation>
     </message>
     <message>
       <source>Yes</source>

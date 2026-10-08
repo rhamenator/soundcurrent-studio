@@ -83,6 +83,10 @@ Importați în bibliotecă?</translation>
       <translation>%1 deconectat. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Operația a eșuat: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Importați în bibliotecă?</translation>
       <translation>Rezervă automată de nivel EQ</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Rutarea automată a sunetului nu este disponibilă</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Modelați automat sunetul unui microfon conectat; clic pentru a ocoli EQ-ul microfonului</translation>
     </message>
@@ -449,6 +457,10 @@ Importați în bibliotecă?</translation>
       <translation>Centru</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Schimbarea punctului final audio implicit</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Canal</translation>
     </message>
@@ -613,6 +625,10 @@ Importați în bibliotecă?</translation>
       <translation>Nu s-a putut scrie tonul de test</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Numărarea punctelor finale audio</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Creați profil</translation>
     </message>
@@ -669,6 +685,10 @@ Importați în bibliotecă?</translation>
       <translation>Trageți punctele curbei sau reglați banda selectată mai jos.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Finalizarea redării de test</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Neprocesat</translation>
     </message>
@@ -723,6 +743,14 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Electronic</source>
       <translation>Electronic</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Enumerarea dispozitivelor audio</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Enumerarea punctelor finale</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Importați în bibliotecă?</translation>
       <translation>Includeți versiuni preliminare</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Inițializarea capturii audio</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Inițializarea înregistrării microfonului</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Inițializarea ieșirii către difuzoare</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Inițializarea redării de test</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>Fișier WAVE de intrare</translation>
     </message>
@@ -1143,6 +1187,10 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Câștig liniar al rutei (negativ = inversare de polaritate)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Obținerea listei de puncte finale audio</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Importați în bibliotecă?</translation>
       <translation>Deschideți panoul de control VB-CABLE</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Deschiderea fluxului audio</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Deschiderea fluxului de captură al cablului virtual</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Deschiderea punctului final de înregistrare al cablului virtual</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Deschiderea punctului final</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Deschiderea interfeței de volum a punctului final</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Deschiderea interfeței de citire a microfonului</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Deschideți descărcările versiunilor</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Deschiderea punctului final al difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Deschiderea fluxului de redare al difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Deschiderea interfeței de scriere pentru redarea de test</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Importați în bibliotecă?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Citirea punctului final audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Citirea identificatorului punctului final audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Citirea numelui punctului final audio</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Citirea proprietăților punctului final audio</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Citirea sunetului din cablul virtual</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Obținerea interfeței de captură a cablului virtual</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Citirea configurației canalelor cablului virtual</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Citirea dimensiunii pachetului cablului virtual</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Citirea măștii difuzoarelor cablului virtual</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Citirea identificatorului ieșirii implicite</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Citirea punctului final de ieșire implicit</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Citirea formatului de mixare al microfonului</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Citirea dimensiunii pachetului microfonului</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Citirea eșantioanelor microfonului</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Citirea dimensiunii următorului pachet al cablului virtual</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Citirea următorului pachet al microfonului</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Citirea gradului de umplere a memoriei tampon de ieșire</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Citirea nivelului de ieșire</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Citirea stării de dezactivare a sunetului la ieșire</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Citirea nivelului difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Citirea formatului de mixare al difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Citirea stării de dezactivare a sunetului difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Obținerea interfeței de redare a difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Citirea volumului difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Citirea numărului de cadre audio din memoria tampon pentru redarea de test</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Citirea formatului de mixare al ieșirii virtuale</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Gata. Efectele sunt neprocesate până la activare.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Importați în bibliotecă?</translation>
       <translation>Măsurătorile relative includ răspunsul boxei, camerei și microfonului. Modificările propuse sunt limitate la 3 dB pentru fiecare frecvență măsurată.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Eliberarea pachetului audio al cablului virtual</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Eliberarea pachetului microfonului</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Eliberarea memoriei tampon a difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Eliberarea memoriei tampon pentru redarea de test</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Importați în bibliotecă?</translation>
       <translation>Tonuri silențioase separate</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Setarea nivelului maxim al difuzoarelor pentru egalizator</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Setarea nivelului de ieșire</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Setarea stării de dezactivare a sunetului la ieșire</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Setați ruta</translation>
     </message>
@@ -1858,6 +2074,18 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Afișați marcajele de vârf pe nivelurile de frecvență</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Determinarea dimensiunii memoriei tampon de captură</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Determinarea dimensiunii memoriei tampon de ieșire</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Determinarea dimensiunii memoriei tampon pentru redarea de test</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Importați în bibliotecă?</translation>
       <translation>Tip de boxă</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Pornirea capturii audio din cablul virtual</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Pornirea înregistrării microfonului</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Începeți încet. Creșteți nivelul doar dacă microfonul nu poate auzi tonurile.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Pornirea ieșirii către difuzoare</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Pornirea redării de test</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Importați în bibliotecă?</translation>
       <translation>Deblocați controalele și finalizați măsurarea înainte de a edita profilurile.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Activarea sunetului difuzoarelor pentru egalizator</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Număr de canale al cablului neacceptat</translation>
     </message>
@@ -2208,6 +2456,14 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM pentru sunetul Windows nu este disponibil</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Scrierea în memoria tampon a difuzoarelor</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Scrierea sunetului de test pentru redare</translation>
     </message>
     <message>
       <source>Yes</source>

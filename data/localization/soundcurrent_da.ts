@@ -83,6 +83,10 @@ Importér til dit bibliotek?</translation>
       <translation>%1 frakoblet. </translation>
     </message>
     <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>Handlingen mislykkedes: %1 (0x%2)</translation>
+    </message>
+    <message>
       <source>%1%2 dB</source>
       <translation>%1%2 dB</translation>
     </message>
@@ -283,6 +287,10 @@ Importér til dit bibliotek?</translation>
       <translation>Automatisk EQ-niveaumargin</translation>
     </message>
     <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>Automatisk lydrouting er ikke tilgængelig</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Form automatisk lyden fra en tilsluttet mikrofon; klik for at omgå mikrofonens EQ</translation>
     </message>
@@ -449,6 +457,10 @@ Importér til dit bibliotek?</translation>
       <translation>Midten</translation>
     </message>
     <message>
+      <source>Change default audio endpoint</source>
+      <translation>Ændring af standardlydslutpunkt</translation>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanal</translation>
     </message>
@@ -613,6 +625,10 @@ Importér til dit bibliotek?</translation>
       <translation>Kunne ikke skrive testtonen</translation>
     </message>
     <message>
+      <source>Count audio endpoints</source>
+      <translation>Optælling af lydslutpunkter</translation>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Opret profil</translation>
     </message>
@@ -669,6 +685,10 @@ Importér til dit bibliotek?</translation>
       <translation>Træk kurvens punkter, eller justér det valgte bånd nedenfor.</translation>
     </message>
     <message>
+      <source>Drain test playback</source>
+      <translation>Afslutning af testafspilning</translation>
+    </message>
+    <message>
       <source>Dry</source>
       <translation>Uden effekt</translation>
     </message>
@@ -723,6 +743,14 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronisk musik</translation>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>Oplistning af lydenheder</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>Oplistning af slutpunkter</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -1005,6 +1033,22 @@ Importér til dit bibliotek?</translation>
       <translation>Medtag forhåndsversioner</translation>
     </message>
     <message>
+      <source>Initialize audio capture</source>
+      <translation>Initialisering af lydoptagelse</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>Initialisering af mikrofonoptagelse</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>Initialisering af højttalerudgang</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>Initialisering af testafspilning</translation>
+    </message>
+    <message>
       <source>Input WAVE file</source>
       <translation>WAVE-inputfil</translation>
     </message>
@@ -1143,6 +1187,10 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Lineær forstærkning for signalvej (negativ = invertér polaritet)</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>Hentning af liste over lydslutpunkter</translation>
     </message>
     <message>
       <source>Listening preset</source>
@@ -1416,8 +1464,44 @@ Importér til dit bibliotek?</translation>
       <translation>Åbn VB-CABLE-kontrolpanelet</translation>
     </message>
     <message>
+      <source>Open audio stream</source>
+      <translation>Åbning af lydstrøm</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>Åbning af det virtuelle kabels optagelsesstrøm</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>Åbning af det virtuelle kabels optagelsesslutpunkt</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>Åbning af slutpunkt</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>Åbning af slutpunktets lydstyrkegrænseflade</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>Åbning af mikrofonens læsegrænseflade</translation>
+    </message>
+    <message>
       <source>Open release downloads</source>
       <translation>Åbn versionsdownloads</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>Åbning af højttalerslutpunkt</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>Åbning af højttalernes afspilningsstrøm</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>Åbning af testafspilningens skrivegrænseflade</translation>
     </message>
     <message>
       <source>Open update folder</source>
@@ -1586,6 +1670,110 @@ Importér til dit bibliotek?</translation>
       <translation>R&amp;B</translation>
     </message>
     <message>
+      <source>Read audio endpoint</source>
+      <translation>Læsning af lydslutpunkt</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>Læsning af lydslutpunktets ID</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>Læsning af lydslutpunktets navn</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>Læsning af lydslutpunktets egenskaber</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>Læsning af det virtuelle kabels lyd</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>Hentning af det virtuelle kabels optagelsesgrænseflade</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>Læsning af det virtuelle kabels kanallayout</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>Læsning af det virtuelle kabels pakkestørrelse</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>Læsning af det virtuelle kabels højttalermaske</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>Læsning af standardudgangens ID</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>Læsning af standardudgangens slutpunkt</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>Læsning af mikrofonens mixformat</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>Læsning af mikrofonens pakkestørrelse</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>Læsning af mikrofonens samples</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>Læsning af størrelsen på det virtuelle kabels næste pakke</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>Læsning af næste mikrofonpakke</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>Læsning af udgangsbufferens fyldningsniveau</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>Læsning af udgangsniveau</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>Læsning af udgangens lydløse status</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>Læsning af højttalerniveau</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>Læsning af højttalernes mixformat</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>Læsning af højttalernes lydløse status</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>Hentning af højttalernes afspilningsgrænseflade</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>Læsning af højttalernes lydstyrke</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>Læsning af antallet af bufferlagrede lydframes til testafspilning</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>Læsning af den virtuelle udgangs mixformat</translation>
+    </message>
+    <message>
       <source>Ready. Effects are dry until enabled.</source>
       <translation>Klar. Effekterne bruges ikke, før de aktiveres.</translation>
     </message>
@@ -1600,6 +1788,22 @@ Importér til dit bibliotek?</translation>
       <translation>Relative målinger omfatter højttalernes, rummets og mikrofonens frekvensgang. Foreslåede ændringer begrænses til 3 dB pr. målt frekvens.
 
 %1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>Frigivelse af det virtuelle kabels lydpakke</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>Frigivelse af mikrofonpakke</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>Frigivelse af højttalerbuffer</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>Frigivelse af testafspilningens buffer</translation>
     </message>
     <message>
       <source>Remind me when updates are available or a restart is needed</source>
@@ -1832,6 +2036,18 @@ Importér til dit bibliotek?</translation>
       <translation>Separate stille toner</translation>
     </message>
     <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>Indstilling af fuldt højttalerniveau til equalizeren</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>Indstilling af udgangsniveau</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>Indstilling af udgangens lydløse status</translation>
+    </message>
+    <message>
       <source>Set route</source>
       <translation>Indstil routning</translation>
     </message>
@@ -1858,6 +2074,18 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Vis spidsmarkører på frekvensniveauerne</translation>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>Bestemmelse af optagelsesbufferens størrelse</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>Bestemmelse af udgangsbufferens størrelse</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>Bestemmelse af testafspilningens bufferstørrelse</translation>
     </message>
     <message>
       <source>Slapback echo</source>
@@ -1940,8 +2168,24 @@ Importér til dit bibliotek?</translation>
       <translation>Højttalertype</translation>
     </message>
     <message>
+      <source>Start cable capture</source>
+      <translation>Start af det virtuelle kabels lydoptagelse</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>Start af mikrofonoptagelse</translation>
+    </message>
+    <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
       <translation>Start stille. Skru kun op, hvis mikrofonen ikke kan opfange tonerne.</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>Start af højttalerudgang</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>Start af testafspilning</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
@@ -2117,6 +2361,10 @@ Importér til dit bibliotek?</translation>
       <translation>Lås kontrollerne op, og afslut målingen, før du redigerer profiler.</translation>
     </message>
     <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>Aktivering af højttalerlyd til equalizeren</translation>
+    </message>
+    <message>
       <source>Unsupported cable channel count</source>
       <translation>Antallet af kabelkanaler understøttes ikke</translation>
     </message>
@@ -2208,6 +2456,14 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Windows audio COM unavailable</source>
       <translation>COM til Windows-lyd er ikke tilgængeligt</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>Skrivning til højttalerbufferen</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>Skrivning af testlyd til afspilning</translation>
     </message>
     <message>
       <source>Yes</source>
