@@ -4,6 +4,6 @@
   "evidence": "GitHub Studio engine run 37740732877 failed configuration on ubuntu-24.04 and windows-2022",
   "fix": "Guard Qt desktop translation test with SOUNDCURRENT_BUILD_DESKTOP; standalone engine unchanged",
   "localVerification": "Fresh Release engine-only configuration and build passed; all six engine-only CTests passed. Desktop translation target rebuilt and backend-error-text passed.",
-  "windowsVerification": "Pending CI rerun from corrected commit",
+  "windowsVerification": "GitHub run 37741018987 succeeded on windows-2022 and ubuntu-24.04 at corrected commit 5c73785",
   "nativeReviewed": false
 }
