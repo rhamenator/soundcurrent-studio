@@ -328,5 +328,15 @@
     "nativeReviewed": false,
     "tsSha256": "1a12e99bbf43207e82207331fa19c5abdb53a44aa9115e7e10df1b41f9385314",
     "qmSha256": "8e0c36937098d7d6d068b3e645eff78d8255048230b2b94a8384ab307eabc821"
+  },
+  {
+    "tag": "nn",
+    "name": "Norsk nynorsk",
+    "translated": 106,
+    "total": 527,
+    "status": "unverified",
+    "nativeReviewed": false,
+    "tsSha256": "21aa2133eb3ece0bb68b30b63a10da73c4f57e7cb219c3d0d82ead739a915239",
+    "qmSha256": "bcd61f9f53a43369c6926403aac3f4c69c854389386b4a03ad19e0ef25141206"
   }
 ]

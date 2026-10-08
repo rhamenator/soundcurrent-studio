@@ -1,0 +1,25 @@
+{
+  "stage": "Nynorsk catalog registration and initial batch",
+  "catalogs": [
+    {
+      "tag": "nn",
+      "name": "Norsk nynorsk",
+      "translated": 106,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "21aa2133eb3ece0bb68b30b63a10da73c4f57e7cb219c3d0d82ead739a915239",
+      "qmSha256": "bcd61f9f53a43369c6926403aac3f4c69c854389386b4a03ad19e0ef25141206"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "compiled localization with distinct nn-NO/nb-NO resolution, Nynorsk main window and catalog validation",
+    "log": "/tmp/soundcurrent-studio-nn-first-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Nynorsk wording, gain/headroom, clipping, amplifier measurement requirements and recovery reviewed. No native-speaker verification claimed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "Nynorsk and 12 original target catalogs incomplete."
+}

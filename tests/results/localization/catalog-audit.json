@@ -21,6 +21,7 @@
     "data/localization/soundcurrent_ko.ts": "586da5822db19294513d98f321587047dcce91c306b9ee6c5ebc3395be7054d1",
     "data/localization/soundcurrent_nb.ts": "0d0fdaf31a37debb2fa2b6e0330912343a95342adf7fed6f326dc8574003c92d",
     "data/localization/soundcurrent_nl.ts": "1b5a210e5bd1b27ba7035edb2a34665c64448766d3af39427e54ee6976bb6136",
+    "data/localization/soundcurrent_nn.ts": "21aa2133eb3ece0bb68b30b63a10da73c4f57e7cb219c3d0d82ead739a915239",
     "data/localization/soundcurrent_pl.ts": "f3ea696fd59cc8a76bf9e2c805f8906f82411cbf83b8c9fc27d6b88a6895f851",
     "data/localization/soundcurrent_pt-BR.ts": "ec3b1cac1a67d5092085f970ef7cb65d3acef74b8f204ef91515ace5dd993e98",
     "data/localization/soundcurrent_pt-PT.ts": "c658576536faa27f969455a4d5b501823b4730a203dfeb2198e585415027351a",
@@ -36,7 +37,7 @@
     "data/localization/soundcurrent_zh-Hans.ts": "9883e96e0bd7a8a6c152643c4988fd1cb795396825aaff23d55f5b93108ee7ab",
     "data/localization/soundcurrent_zh-Hant.ts": "bf52e0e2cc498f2cd0bc230d17e79ac902054323b6123f0ce261e6227b22496b"
   },
-  "config_sha256": "6f47caebead58e5b02067b6027f830c95cbab94c9aa9cc725278783454c496c9",
+  "config_sha256": "49b8dd3ceb616260cccf7c44579f066105c3b16e82b639624b3d69840dd1331c",
   "findings": [
     {
       "repository": "soundcurrent-studio",
@@ -230,6 +231,14 @@
       "runtime_ui_qualification": "unknown"
     },
     {
+      "file": "data/localization/soundcurrent_nn.ts",
+      "locale": "nn",
+      "total": 527,
+      "translated": 106,
+      "linguistic_verification": "unknown",
+      "runtime_ui_qualification": "unknown"
+    },
+    {
       "file": "data/localization/soundcurrent_pl.ts",
       "locale": "pl",
       "total": 527,
@@ -343,7 +352,7 @@
     }
   ],
   "findingCounts": {
-    "untranslated": 5964
+    "untranslated": 6385
   },
   "reportNote": "Compact structural report: input hashes and metrics retained, three sample findings. Linguistic review and runtime qualification remain separate."
 }
