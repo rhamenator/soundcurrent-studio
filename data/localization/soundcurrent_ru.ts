@@ -770,6 +770,11 @@ Import into your library?</source>
       <translation>Без эффекта</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>Повторяющееся аудиосоединение Studio</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>Динамическое усиление</translation>
     </message>
@@ -824,6 +829,11 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>Электронная музыка</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>Параметры улучшения звука вне поддерживаемых диапазонов</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Import into your library?</source>
       <translation>Некорректная полоса эквалайзера</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>Некорректное количество каналов Studio</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>Некорректное имя канала Studio или список фильтров</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>Некорректное количество каналов в профиле Studio</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>Некорректное аудиосоединение Studio</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Некорректная матрица маршрутизации Studio</translation>
     </message>
@@ -1202,6 +1232,16 @@ Import into your library?</source>
       <translation>Некорректное усиление канала или слишком много полос эквалайзера</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>Некорректное количество параметров улучшения звука</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>Некорректный тип данных параметра улучшения звука</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>Некорректные настройки улучшения звука</translation>
     </message>
@@ -1212,6 +1252,11 @@ Import into your library?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Недопустимый подтип оборудования или тип питания</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>Некорректный тип фильтра</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Import into your library?</source>
     <message>
       <source>Invalid response point.</source>
       <translation>Недопустимая точка характеристики.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>Некорректные индексы каналов или коэффициент смешивания</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>Некорректное числовое значение аудиосоединения</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Import into your library?</source>
       <translation>Не удалось прочитать настройки или они превышают 8 MiB</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>Общий EQ и EQ канала превышают 64 фильтра; удалите часть фильтров канала</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Более короткие интервалы чаще обновляют уровни и сильнее нагружают CPU; поступление аудио может ограничивать фактическую частоту обновления</translation>
     </message>
@@ -2521,6 +2581,16 @@ Import into your library?</source>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>До микрофона дошло слишком мало тестового звука. Переместите его ближе или немного повысьте тестовый уровень.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>Слишком много фильтров в канале Studio</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>Слишком много аудиосоединений Studio</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>

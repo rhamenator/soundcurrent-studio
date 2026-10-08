@@ -770,6 +770,11 @@ Import into your library?</source>
       <translation>ללא עיבוד</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>חיבור שמע Studio כפול</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>הגברה דינמית</translation>
     </message>
@@ -824,6 +829,11 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>מוזיקה אלקטרונית</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>שיפורי השמע מחוץ לטווחים הנתמכים</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Import into your library?</source>
       <translation>תחום אקולייזר אינו תקין</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>מספר ערוצי Studio לא תקין</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>שם ערוץ Studio או רשימת מסננים לא תקינים</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>מספר הערוצים בפרופיל Studio לא תקין</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>חיבור שמע Studio לא תקין</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>מטריצת ניתוב Studio אינה תקינה</translation>
     </message>
@@ -1202,6 +1232,16 @@ Import into your library?</source>
       <translation>הגבר הערוץ אינו תקין או שיש יותר מדי תחומי אקולייזר</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>מספר פרמטרים לשיפור שמע לא תקין</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>סוג נתונים לא תקין של פרמטר לשיפור שמע</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>הגדרות שיפור השמע אינן תקינות</translation>
     </message>
@@ -1212,6 +1252,11 @@ Import into your library?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>תת־סוג הציוד או סוג ההזנה החשמלית אינו תקין</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>סוג מסנן לא תקין</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Import into your library?</source>
     <message>
       <source>Invalid response point.</source>
       <translation>נקודת תגובה לא תקינה.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>אינדקסי ערוצים או מקדם ערבול לא תקינים</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>ערך מספרי לא תקין בחיבור השמע</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Import into your library?</source>
       <translation>לא ניתן לקרוא את התצורה, או שגודלה עולה על 8 MiB</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>האקולייזר המשותף ואקולייזר הערוץ חורגים מ־64 מסננים; יש להסיר חלק ממסנני הערוץ</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>מרווחים קצרים יותר מרעננים רמות לעיתים קרובות יותר וצורכים יותר מעבד; אספקת השמע עשויה להגביל את הקצב בפועל</translation>
     </message>
@@ -2521,6 +2581,16 @@ Import into your library?</source>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>מעט מדי שמע בדיקה הגיע למיקרופון. יש לקרב אותו או להעלות מעט את עוצמת הבדיקה.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>יותר מדי מסננים בערוץ Studio</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>יותר מדי חיבורי שמע Studio</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>

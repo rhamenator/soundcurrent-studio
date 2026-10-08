@@ -770,6 +770,11 @@ Import into your library?</source>
       <translation>بدون پردازش</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>اتصال صوتی Studio تکراری است</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>تقویت پویا</translation>
     </message>
@@ -824,6 +829,11 @@ Import into your library?</source>
     <message>
       <source>Electronic</source>
       <translation>موسیقی الکترونیک</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>بهبودهای صدا خارج از محدوده‌های پشتیبانی‌شده هستند</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Import into your library?</source>
       <translation>باند اکولایزر نامعتبر است</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>تعداد کانال‌های Studio نامعتبر است</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>نام کانال Studio یا فهرست فیلترها نامعتبر است</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>تعداد کانال‌ها در نمایهٔ Studio نامعتبر است</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>اتصال صوتی Studio نامعتبر است</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>ماتریس مسیریابی Studio نامعتبر است</translation>
     </message>
@@ -1202,6 +1232,16 @@ Import into your library?</source>
       <translation>بهرهٔ کانال نامعتبر است یا تعداد باندهای اکولایزر بیش از حد است</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>تعداد پارامترهای بهبود صدا نامعتبر است</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>نوع دادهٔ پارامتر بهبود صدا نامعتبر است</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>تنظیمات بهبود صدا نامعتبر است</translation>
     </message>
@@ -1212,6 +1252,11 @@ Import into your library?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>زیرنوع تجهیزات یا نوع تغذیه نامعتبر است</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>نوع فیلتر نامعتبر است</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Import into your library?</source>
     <message>
       <source>Invalid response point.</source>
       <translation>نقطه پاسخ نامعتبر است.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>شاخص‌های کانال یا ضریب ترکیب نامعتبر است</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>مقدار عددی اتصال صوتی نامعتبر است</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Import into your library?</source>
       <translation>خواندن پیکربندی ممکن نیست یا اندازه آن بیش از 8 MiB است</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>اکولایزر مشترک و اکولایزر کانال از 64 فیلتر فراتر می‌روند؛ برخی فیلترهای کانال را حذف کنید</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>فاصله‌های کوتاه‌تر سطح‌ها را بیشتر تازه می‌کنند و پردازنده بیشتری مصرف می‌کنند؛ دریافت صدا ممکن است نرخ واقعی را محدود کند</translation>
     </message>
@@ -2521,6 +2581,16 @@ Import into your library?</source>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>صدای آزمون بسیار کمی به میکروفون رسید. آن را نزدیک‌تر کنید یا سطح آزمون را کمی افزایش دهید.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>تعداد فیلترهای کانال Studio بیش از حد است</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>تعداد اتصال‌های صوتی Studio بیش از حد است</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>

@@ -72,8 +72,7 @@
   ],
   "knownSecondPassExamples": [
     "Default Studio channel names and other stored/user captions require provenance-aware display handling",
-    "Installer/helper diagnostics and other uncaptured interface strings require audit",
-    "Studio session validation diagnostics have 14 unmapped desktop-boundary strings; see studio-model-diagnostic-gaps.json"
+    "Installer/helper diagnostics and other uncaptured interface strings require audit"
   ],
   "limitations": [
     "Representative screenshots and all-locale geometry measurements do not constitute all-string linguistic review",
@@ -99,7 +98,7 @@
   "secondPassProgress": "tests/results/localization/second-pass-speaker-text.json",
   "currentCatalogs": {
     "nonEnglishLocales": 33,
-    "sourceMessagesPerLocale": 662,
+    "sourceMessagesPerLocale": 676,
     "unfinished": 0,
     "nativeReviewed": false
   },
@@ -112,5 +111,12 @@
     "report": "tests/results/localization/second-pass-profile-diagnostics.json",
     "resolved": 3,
     "remainingStudioOwnedDiagnostics": 14
-  }
+  },
+  "ownedSessionDiagnosticProgress": {
+    "report": "tests/results/localization/second-pass-owned-diagnostics.json",
+    "resolved": 17,
+    "remainingStudioSessionModelDiagnostics": 0,
+    "scope": "Session-model inventory only; other backend/helper diagnostics still require audit"
+  },
+  "evidenceSha256Scope": "Historical evidence hashes retained from prior audit; current batch hashes are in second-pass-owned-diagnostics.json"
 }

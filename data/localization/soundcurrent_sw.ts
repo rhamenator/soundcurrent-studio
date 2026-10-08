@@ -770,6 +770,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Sauti asili</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>Muunganisho wa sauti wa Studio umerudiwa</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>Ongezeko la sauti kwa mgandamizo</translation>
     </message>
@@ -824,6 +829,11 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Electronic</source>
       <translation>Muziki wa elektroniki</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>Thamani za maboresho ya sauti ziko nje ya mipaka inayokubalika</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Bendi ya EQ si halali</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>Idadi ya chaneli za Studio si sahihi</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>Jina la chaneli ya Studio au orodha ya vichujio si sahihi</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>Idadi ya chaneli katika wasifu wa Studio si sahihi</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>Muunganisho wa sauti wa Studio si sahihi</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Matriksi ya uelekezaji ya Studio si halali</translation>
     </message>
@@ -1202,6 +1232,16 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Ukuzaji wa chaneli si halali au kuna bendi nyingi sana za EQ</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>Idadi ya vigezo vya kuboresha sauti si sahihi</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>Aina ya data ya kigezo cha kuboresha sauti si sahihi</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>Mipangilio ya kuboresha sauti si halali</translation>
     </message>
@@ -1212,6 +1252,11 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Aina ndogo ya kifaa au aina ya nguvu si sahihi</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>Aina ya kichujio si sahihi</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Invalid response point.</source>
       <translation>Nukta ya mwitikio si sahihi.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>Faharasa za chaneli au mgawo wa kuchanganya si sahihi</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>Thamani ya nambari ya muunganisho wa sauti si sahihi</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Usanidi hauwezi kusomwa au unazidi 8 MiB</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>EQ ya pamoja na EQ ya chaneli zinazidi vichujio 64; ondoa baadhi ya vichujio vya chaneli</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Vipindi vifupi husasisha viwango mara nyingi zaidi na kutumia CPU zaidi; utoaji wa sauti unaweza kupunguza kasi halisi</translation>
     </message>
@@ -2521,6 +2581,16 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>Sauti ndogo mno ya majaribio ilifika kwenye maikrofoni. Isogeze karibu au ongeza kiwango cha majaribio kidogo.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>Vichujio vingi mno katika chaneli ya Studio</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>Miunganisho mingi mno ya sauti ya Studio</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>

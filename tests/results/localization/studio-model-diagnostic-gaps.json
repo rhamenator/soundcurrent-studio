@@ -6,30 +6,29 @@
     "src/studio_panel.cpp: load Session::parse catch"
   ],
   "displayMapper": "src/audio_error_text.h",
-  "diagnosticsNeedingMappingAndTranslations": [
-    "Duplicate Studio route",
-    "Enhancements outside supported ranges",
-    "Invalid Studio channel count",
-    "Invalid Studio channel name or filters",
-    "Invalid Studio profile channel count",
-    "Invalid Studio route",
-    "Invalid enhancement parameter count",
-    "Invalid enhancement parameter type",
-    "Invalid filter type",
-    "Invalid route indexes or weight",
-    "Invalid route number",
-    "Shared and channel EQ exceed 64 filters; remove some channel filters",
-    "Too many Studio channel filters",
-    "Too many Studio routes"
-  ],
-  "unmappedCount": 14,
-  "inference": "These owned error strings can reach the visible status via audioErrorText, whose unknown-message fallback preserves English text. They need explicit translated boundary mappings. This is not an exhaustive backend/UI inventory.",
+  "diagnosticsNeedingMappingAndTranslations": [],
+  "unmappedCount": 0,
+  "inference": "All 17 owned session-model validation reasons now have explicit translated desktop-boundary mappings. This closes this source inventory only; it is not an exhaustive backend/UI inventory.",
   "nativeSpeakerVerification": "unverified",
   "wholeInterfaceCoverageProven": false,
   "resolvedDiagnostics": [
     "Unsupported Studio profile schema",
     "Studio profile has an invalid numeric field",
-    "Studio profile has an invalid boolean field"
+    "Studio profile has an invalid boolean field",
+    "Invalid Studio channel count",
+    "Invalid Studio profile channel count",
+    "Invalid Studio channel name or filters",
+    "Too many Studio channel filters",
+    "Invalid Studio route",
+    "Duplicate Studio route",
+    "Invalid route indexes or weight",
+    "Invalid route number",
+    "Too many Studio routes",
+    "Invalid filter type",
+    "Shared and channel EQ exceed 64 filters; remove some channel filters",
+    "Invalid enhancement parameter count",
+    "Invalid enhancement parameter type",
+    "Enhancements outside supported ranges"
   ],
   "resolvedNonEnglishLocales": 33
 }

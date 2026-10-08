@@ -4139,7 +4139,7 @@ int main(int argc, char **argv) {
     if (app.arguments().contains("--localization-ui-test")) {
         auto ownedWindow=std::make_unique<MainWindow>(false);
         auto &window=*ownedWindow;
-        for(const auto &reason:QStringList{"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field"})
+        for(const auto &reason:QStringList{"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field","Invalid Studio channel count","Invalid Studio profile channel count","Invalid Studio channel name or filters","Too many Studio channel filters","Invalid Studio route","Duplicate Studio route","Invalid route indexes or weight","Invalid route number","Too many Studio routes","Invalid filter type","Shared and channel EQ exceed 64 filters; remove some channel filters","Invalid enhancement parameter count","Invalid enhancement parameter type","Enhancements outside supported ranges"})
             if(soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(reason.toUtf8().constData()))
                 qFatal("Studio validation diagnostic missed the localized display boundary");
         // Reject malformed persisted fields before localizing their display diagnostics.
@@ -4160,6 +4160,59 @@ int main(int argc, char **argv) {
             }
             if(!rejected || malformed!=unchanged)qFatal("Locale reinterpreted or rewrote malformed Studio profile data");
         }
+        const auto expectOwnedRejection=[&](const char *expected,const auto &operation) {
+            bool rejected=false;
+            try {operation();}catch(const std::exception &error) {
+                rejected=true;const auto reason=QString::fromUtf8(error.what());
+                if(reason!=QString::fromUtf8(expected) || soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(expected))
+                    qFatal("Owned Studio validation reason or localized display changed");
+            }
+            if(!rejected)qFatal("Malformed Studio setup was accepted");
+        };
+        expectOwnedRejection("Invalid Studio channel count",[]{soundcurrent::studio::Session invalid(0);});
+        expectOwnedRejection("Invalid Studio channel count",[]{soundcurrent::studio::Session invalid(soundcurrent::studio::maxChannels+1);});
+        const auto rejectProfile=[&](QJsonObject malformed,const char *reason) {
+            const auto original=malformed;
+            expectOwnedRejection(reason,[&]{soundcurrent::studio::Session::parse(malformed);});
+            if(malformed!=original)qFatal("Studio validation rewrote malformed saved data");
+        };
+        auto malformedChannels=profileSnapshot;malformedChannels["channels"]=QJsonArray{};
+        rejectProfile(malformedChannels,"Invalid Studio profile channel count");
+        const auto validChannel=profileSnapshot["channels"].toArray().first().toObject();
+        const auto rejectChannel=[&](const QJsonObject &row,const char *reason) {
+            auto malformed=profileSnapshot;auto channels=malformed["channels"].toArray();channels[0]=row;malformed["channels"]=channels;
+            rejectProfile(malformed,reason);
+        };
+        auto row=validChannel;row["name"]=QString();rejectChannel(row,"Invalid Studio channel name or filters");
+        row=validChannel;row["bands"]=QStringLiteral("not an array");rejectChannel(row,"Invalid Studio channel name or filters");
+        const QJsonObject filter{{"frequency",1000},{"gain",0},{"q",1},{"type",0}};
+        QJsonArray tooManyFilters;for(std::size_t i=0;i<=soundcurrent::kMaxProcessingBands;++i)tooManyFilters.append(filter);
+        row=validChannel;row["bands"]=tooManyFilters;rejectChannel(row,"Too many Studio channel filters");
+        auto fractionalFilter=filter;fractionalFilter["type"]=.5;
+        row=validChannel;row["bands"]=QJsonArray{fractionalFilter};rejectChannel(row,"Invalid filter type");
+        const auto rejectRoutes=[&](const QJsonArray &routes,const char *reason) {
+            auto malformed=profileSnapshot;malformed["routing"]=routes;rejectProfile(malformed,reason);
+        };
+        rejectRoutes(QJsonArray{QJsonArray{0,0}},"Invalid Studio route");
+        rejectRoutes(QJsonArray{QJsonArray{0,0,1},QJsonArray{0,0,.5}},"Duplicate Studio route");
+        rejectRoutes(QJsonArray{QJsonArray{2,0,1}},"Invalid route indexes or weight");
+        rejectRoutes(QJsonArray{QJsonArray{0,.5,1}},"Invalid route indexes or weight");
+        rejectRoutes(QJsonArray{QJsonArray{0,0,5}},"Invalid route indexes or weight");
+        rejectRoutes(QJsonArray{QJsonArray{0,0,QStringLiteral("1,5")}},"Invalid route number");
+        QJsonArray tooManyRoutes;for(int i=0;i<5;++i)tooManyRoutes.append(QJsonArray{0,0,1});
+        rejectRoutes(tooManyRoutes,"Too many Studio routes");
+        auto malformedEffects=profileSnapshot;malformedEffects["enhancements"]=QJsonArray{0};
+        rejectProfile(malformedEffects,"Invalid enhancement parameter count");
+        auto values=profileSnapshot["enhancements"].toArray();values[0]=true;malformedEffects["enhancements"]=values;
+        rejectProfile(malformedEffects,"Invalid enhancement parameter type");
+        values=profileSnapshot["enhancements"].toArray();values[0]=2;malformedEffects["enhancements"]=values;
+        rejectProfile(malformedEffects,"Enhancements outside supported ranges");
+        soundcurrent::studio::Session crowded(2);crowded.engine.channels[0].bands.assign(soundcurrent::kMaxProcessingBands,{1000,0,1});
+        const auto beforeCrowded=crowded.json();const std::array<soundcurrent::EqBand,1> sharedFilter{{{1000,0,1}}};
+        expectOwnedRejection("Shared and channel EQ exceed 64 filters; remove some channel filters",[&]{crowded.effective(sharedFilter);});
+        if(crowded.json()!=beforeCrowded)qFatal("Combined EQ rejection changed saved filters");
+        auto weighted=profileSnapshot;weighted["routing"]=QJsonArray{QJsonArray{0,1,-.5}};
+        if(soundcurrent::studio::Session::parse(weighted).json()!=weighted)qFatal("Locale changed a valid signed routing coefficient");
         if(soundcurrent::studio::Session::parse(profileSnapshot).json()!=profileSnapshot)
             qFatal("Localized session validation changed a valid saved profile");
         QComboBox *speakerTaxonomy=nullptr;

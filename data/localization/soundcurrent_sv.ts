@@ -770,6 +770,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Utan effekt</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>Duplicerad Studio-ljudanslutning</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>Dynamisk förstärkning</translation>
     </message>
@@ -824,6 +829,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronisk musik</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>Ljudförbättringar utanför de intervall som stöds</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Importera till ditt bibliotek?</translation>
       <translation>Ogiltigt EQ-band</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>Ogiltigt antal Studio-kanaler</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>Ogiltigt Studio-kanalnamn eller filterlista</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>Ogiltigt antal kanaler i Studio-profilen</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>Ogiltig Studio-ljudanslutning</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Ogiltig Studio-routningsmatris</translation>
     </message>
@@ -1202,6 +1232,16 @@ Importera till ditt bibliotek?</translation>
       <translation>Ogiltig kanalförstärkning eller för många EQ-band</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>Ogiltigt antal parametrar för ljudförbättring</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>Ogiltig datatyp för en ljudförbättringsparameter</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>Ogiltiga inställningar för ljudförbättring</translation>
     </message>
@@ -1212,6 +1252,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Ogiltig utrustningsundertyp eller strömförsörjningstyp</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>Ogiltig filtertyp</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Invalid response point.</source>
       <translation>Ogiltig frekvensgångspunkt.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>Ogiltiga kanalindex eller mixningskoefficient</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>Ogiltigt numeriskt värde för ljudanslutningen</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Konfigurationen kan inte läsas eller är större än 8 MiB</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>Gemensam EQ och kanal-EQ överskrider 64 filter; ta bort några kanalfilter</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Kortare intervall uppdaterar nivåerna oftare och använder mer CPU; ljudleveransen kan begränsa den faktiska uppdateringstakten</translation>
     </message>
@@ -2521,6 +2581,16 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>För lite testljud nådde mikrofonen. Flytta den närmare eller höj testnivån något.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>För många filter på en Studio-kanal</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>För många Studio-ljudanslutningar</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>

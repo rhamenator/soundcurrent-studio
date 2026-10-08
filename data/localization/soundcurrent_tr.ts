@@ -770,6 +770,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Efektsiz</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>Yinelenen Studio ses bağlantısı</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>Dinamik artırma</translation>
     </message>
@@ -824,6 +829,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Electronic</source>
       <translation>Elektronik müzik</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>Ses iyileştirmeleri desteklenen aralıkların dışında</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Geçersiz EQ bandı</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>Geçersiz Studio kanal sayısı</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>Geçersiz Studio kanal adı veya filtre listesi</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>Studio profilinde geçersiz kanal sayısı</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>Geçersiz Studio ses bağlantısı</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Geçersiz Studio yönlendirme matrisi</translation>
     </message>
@@ -1202,6 +1232,16 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Geçersiz kanal kazancı veya çok fazla EQ bandı</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>Geçersiz ses iyileştirme parametresi sayısı</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>Ses iyileştirme parametresinin veri türü geçersiz</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>Geçersiz ses iyileştirme ayarları</translation>
     </message>
@@ -1212,6 +1252,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Geçersiz ekipman alt türü veya güç türü</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>Geçersiz filtre türü</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Invalid response point.</source>
       <translation>Geçersiz yanıt noktası.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>Geçersiz kanal indeksleri veya miks katsayısı</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>Ses bağlantısında geçersiz sayısal değer</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Ayarlar okunamıyor veya 8 MiB sınırını aşıyor</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>Ortak EQ ve kanal EQ’su 64 filtreyi aşıyor; bazı kanal filtrelerini kaldırın</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Daha kısa aralıklar seviyeleri daha sık günceller ve daha fazla CPU kullanır; ses aktarımı gerçek hızı sınırlayabilir</translation>
     </message>
@@ -2521,6 +2581,16 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>Mikrofona çok az test sesi ulaştı. Mikrofonu yaklaştırın veya test seviyesini biraz yükseltin.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>Studio kanalında çok fazla filtre var</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>Çok fazla Studio ses bağlantısı var</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>

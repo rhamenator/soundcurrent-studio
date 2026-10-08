@@ -770,6 +770,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Sem efeito</translation>
     </message>
     <message>
+      <source>Duplicate Studio route</source>
+      <translation>Conexão de áudio do Studio duplicada</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
+    </message>
+    <message>
       <source>Dynamic Boost</source>
       <translation>Reforço dinâmico</translation>
     </message>
@@ -824,6 +829,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Electronic</source>
       <translation>Eletrônica</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>Melhorias de som fora dos intervalos suportados</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
     </message>
     <message>
       <source>Enumerate audio devices</source>
@@ -1186,6 +1196,26 @@ Importar para a sua biblioteca?</translation>
       <translation>Banda de EQ inválida</translation>
     </message>
     <message>
+      <source>Invalid Studio channel count</source>
+      <translation>Número de canais do Studio inválido</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>Nome do canal do Studio ou lista de filtros inválidos</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>Número de canais do perfil do Studio inválido</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>Conexão de áudio do Studio inválida</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
       <source>Invalid Studio routing matrix</source>
       <translation>Matriz de roteamento do Studio inválida</translation>
     </message>
@@ -1202,6 +1232,16 @@ Importar para a sua biblioteca?</translation>
       <translation>Ganho de canal inválido ou bandas de EQ em excesso</translation>
     </message>
     <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>Número de parâmetros de melhoria de som inválido</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>Tipo de dados de um parâmetro de melhoria de som inválido</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
       <source>Invalid enhancement settings</source>
       <translation>Configurações de melhoria do som inválidas</translation>
     </message>
@@ -1212,6 +1252,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Subtipo de equipamento ou tipo de alimentação inválido</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>Tipo de filtro inválido</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
     </message>
     <message>
       <source>Invalid filter.</source>
@@ -1244,6 +1289,16 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Invalid response point.</source>
       <translation>Ponto de resposta inválido.</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>Índices de canais ou coeficiente de mixagem inválidos</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>Valor numérico da conexão de áudio inválido</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2237,6 +2292,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Não é possível ler a configuração ou excede 8 MiB</translation>
     </message>
     <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>O EQ compartilhado e o EQ do canal excedem 64 filtros; remova alguns filtros do canal</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Intervalos mais curtos atualizam os níveis com maior frequência e usam mais CPU; a entrega de áudio pode limitar a frequência real</translation>
     </message>
@@ -2521,6 +2581,16 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
       <translation>Chegou muito pouco áudio de teste ao microfone. Aproxime-o ou aumente ligeiramente o nível de teste.</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>Filtros demais em um canal do Studio</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>Conexões de áudio demais no Studio</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
     </message>
     <message>
       <source>Touring PA speaker</source>
