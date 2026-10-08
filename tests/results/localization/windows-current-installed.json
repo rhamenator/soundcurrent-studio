@@ -3,22 +3,29 @@
   "settingsMarkerPreserved": true,
   "uninstall": "passed",
   "unknownFilePreserved": true,
-  "installerSha256": "3062B56DBF6CD9C58E8918801C39A1A7A648302DD96FBB4EDA7C55E4505D89AD",
+  "installerSha256": "A678F1BCC4A126AD67FD639123273A98C74888AF9991EB73D22EA882BDF27E78",
   "audioDeviceStateUnchanged": true,
   "nativeReviewed": false,
   "product": "Studio",
   "update": "passed",
   "date": "2026-10-08",
-  "sourceCommit": "c0ae560",
-  "ciRun": 37744841687,
-  "ciStatus": "passed",
+  "sourceCommit": "9166cfa",
+  "ciRun": 37747395879,
+  "ciWindowsJobStatus": "passed",
   "installedLocaleFixturesPassed": 33,
-  "backend": "Native Windows Qt platform; SSH-launched automated fixtures",
+  "installedExeSha256": "efbc532ba7b977ce8243a9917f68a1bdec05e0c4ac6243bf3392cf30312f61ef",
+  "installedExeIdentityVerified": true,
   "reinstall": "passed",
-  "regionalFormatting": "Arabic UI / German decimal format passed after reinstall",
+  "regionalFormatting": "Arabic UI / German number format passed after reinstall",
+  "defenderStatus": {
+    "AMServiceEnabled": true,
+    "AntivirusEnabled": true,
+    "RealTimeProtectionEnabled": true,
+    "AntivirusSignatureVersion": "1.459.601.0"
+  },
   "limitations": [
-    "No native-speaker review",
-    "Automated native-backend fixtures do not prove interactive installer or signed-in desktop startup",
-    "Silent app lifecycle does not test driver installation/removal"
+    "Automated native-backend fixtures are not native-speaker review",
+    "Silent app lifecycle does not test driver installation/removal",
+    "Interactive installer and desktop sign-in remain unqualified"
   ]
 }
