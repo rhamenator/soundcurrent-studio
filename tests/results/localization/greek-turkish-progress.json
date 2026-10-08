@@ -36,6 +36,11 @@
   },
   "review": "Contextual AI review, unverified. Q, gain/headroom, wet mixes, loudness compensation and measured-response limits reviewed. Render counts use neutral labels.",
   "nativeReviewed": false,
-  "windows": "Pending CI on completed catalogs",
+  "windows": {
+    "runId": 37721574565,
+    "conclusion": "success",
+    "sourceCommit": "f47658c9172de64367f3a4c9003bba69a9ce3902",
+    "scope": "Windows build, staged runtime tests and installer creation; actual installer lifecycle separate"
+  },
   "remaining": "18 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
 }

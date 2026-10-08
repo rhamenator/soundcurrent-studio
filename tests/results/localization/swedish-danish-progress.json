@@ -1,34 +1,34 @@
 {
-  "stage": "Swedish and Danish initial catalog batch",
+  "stage": "Swedish/Danish recovery and effects batch",
   "catalogs": [
     {
       "tag": "sv",
       "name": "Svenska",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "476081373c35158c707afef7a351442e015ef2733756046897c52ba7995ef9ac",
-      "qmSha256": "c4b49df2fa3db4eaeae57361dd2e37dd8ca45c1cb64f5c2f92e00d25efc80b85"
+      "tsSha256": "87e4826ab6e9692350999c15d2d75863ead28e38830a2b62a4524eca4a047064",
+      "qmSha256": "67e8d9db83e408b381256c40ec04531b5e5698f0d373b8e31643d74b7bd1b249"
     },
     {
       "tag": "da",
       "name": "Dansk",
-      "translated": 106,
+      "translated": 181,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "bead2d4465c026cf4483410e0b868cd4149dcb311d3eb3aa37859c2f549b48a0",
-      "qmSha256": "63d2b463ba180ee9660d9392b6b070d139d74a6dee8f86c89806e50679c049ff"
+      "tsSha256": "359ed770c4b9a3b33391a9f43e830aa3b7c264698b6a91f4dbf4df1de9151bf5",
+      "qmSha256": "85d2eb574fdd646ab1bda64dfc6758a51b1eda6f454561a8177108e90313374f"
     }
   ],
   "linuxTests": {
     "passed": 4,
     "total": 4,
     "scope": "compiled localization, Swedish/Danish main windows and catalog regressions",
-    "log": "/tmp/soundcurrent-studio-sv-da-first-final-tests.log"
+    "log": "/tmp/soundcurrent-studio-sv-da-second-tests.log"
   },
-  "review": "Contextual AI review, unverified. Headroom uses level margin distinct from gain; clipping, measured amplifier data and effect contributions retained. Swedish and Danish terminology reviewed separately.",
+  "review": "Contextual AI review; unverified. Error messages retain processing refusal and kept settings; sweep, decay duration and effect contribution preserve audio meaning.",
   "nativeReviewed": false,
   "windows": "Pending CI",
   "remaining": "Swedish, Danish and 16 other target catalogs incomplete."

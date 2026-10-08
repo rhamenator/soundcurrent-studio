@@ -75,3 +75,5 @@ Greek/Turkish startup and rendering batch: el: 401/527, tr: 401/527. Four focuse
 Greek/Turkish complete extracted catalogs: 527 messages each. Full Linux CTest passed 64/64 including equipment workflows. Greek EQ and Turkish Studio effects inspected at 1280×720. Contextual review remains unverified, with no native-speaker claim. Windows qualification pending for these catalogs.
 
 Swedish/Danish initial batch: sv: 106/527, da: 106/527. Four focused Linux checks passed per app. Gain/headroom, clipping, amplifier measurement requirements and setup errors reviewed contextually. Catalogs remain incomplete and unverified.
+
+Swedish/Danish recovery and effects batch: sv: 181/527, da: 181/527. Four focused Linux checks passed per app. Error recovery, update checks, delay contribution and frequency-sweep prompts reviewed contextually; catalogs remain incomplete and unverified. Studio completed Greek/Turkish catalog commit passed Windows CI.
