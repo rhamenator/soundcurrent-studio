@@ -1,0 +1,54 @@
+{
+  "stage": "Polish complete extracted catalog checkpoint",
+  "catalog": {
+    "tag": "pl",
+    "name": "Polski",
+    "translated": 523,
+    "total": 523,
+    "status": "unverified",
+    "nativeReviewed": false,
+    "tsSha256": "6d1d94ca0977ac2596ad57ae6c9b98af9c29e5247585b6499d5de8aa46f48d97",
+    "qmSha256": "add2564534ff6611864c845095f9324f3d9fed652acd32f1e6ab868f8a5e3797"
+  },
+  "linguisticReview": "Contextual AI review; unverified; no native-speaker review",
+  "linuxTests": {
+    "passed": 57,
+    "total": 57,
+    "scope": "Full CTest including Polish equipment workflow before final plot-caption wording correction",
+    "log": "/tmp/sc-pl-complete-studio-tests.log"
+  },
+  "finalCatalogTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": [
+      "compiled runtime",
+      "Polish main window",
+      "Polish equipment workflow"
+    ],
+    "log": "/tmp/sc-pl-final-studio-tests.log"
+  },
+  "windows": "Pending CI on new commits",
+  "remaining": "24 target locales incomplete; native-speaker verification unverified.",
+  "layoutFollowup": {
+    "change": "Curve instructions now wrap",
+    "tests": {
+      "passed": 3,
+      "total": 3,
+      "scope": [
+        "Polish main window",
+        "expanded pseudo locale",
+        "RTL pseudo locale"
+      ],
+      "log": "/tmp/sc-pl-wrap-studio-tests.log"
+    },
+    "visualReview": {
+      "screen": "1280x720",
+      "platform": "xcb/Xvfb",
+      "tabsCaptured": 3,
+      "reviewedTabs": [
+        1
+      ],
+      "remainingIssue": "Polish EQ still needs page-wide horizontal scrolling; headroom is partly offscreen. Wrapping alone has not resolved all minimum-width constraints."
+    }
+  }
+}

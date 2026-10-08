@@ -82,12 +82,12 @@
   {
     "tag": "pl",
     "name": "Polski",
-    "translated": 30,
+    "translated": 523,
     "total": 523,
     "status": "unverified",
     "nativeReviewed": false,
-    "tsSha256": "fffe677c1a4a501970a2f8b127dac57004a053c02142dc2a81833da4224ef080",
-    "qmSha256": "c8b6d872226c14b08cf2f4a1ca8909f18e3f0884ad147ea2e1779e147ce2f9a7"
+    "tsSha256": "6d1d94ca0977ac2596ad57ae6c9b98af9c29e5247585b6499d5de8aa46f48d97",
+    "qmSha256": "add2564534ff6611864c845095f9324f3d9fed652acd32f1e6ab868f8a5e3797"
   },
   {
     "tag": "cs",
