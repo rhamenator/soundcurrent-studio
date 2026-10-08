@@ -57,3 +57,5 @@ Czech and Slovak completed checkpoint: all 527 current extracted messages popula
 Ukrainian/Russian initial batches: uk: 181/527, ru: 181/527. Four focused Linux checks passed per repository. Profiles, gain, error recovery, updates and delay controls were reviewed contextually. Both catalogs remain incomplete and unverified.
 
 Ukrainian/Russian through measurement batch: uk: 328/527, ru: 328/527. Four focused Linux checks passed per app. Compressor/filter controls, equipment editing, microphone behavior and model-correction limits reviewed contextually; translations remain incomplete and unverified. Completed Czech/Slovak catalog commits passed Windows CI, with exact source commits recorded in their checkpoint report.
+
+Ukrainian/Russian startup and render batch: uk: 401/527, ru: 401/527. Four focused Linux checks passed in each app. Includes background-startup ownership, hardware setup restart guidance, bounded calibration suggestions, profile copy/reference behavior and neutral render-count labels. Both catalogs remain incomplete and unverified.
