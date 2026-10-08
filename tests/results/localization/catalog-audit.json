@@ -2,39 +2,39 @@
   "schema_version": 1,
   "tool_version": "0.1.0",
   "inputs": {
-    "data/localization/soundcurrent_en.ts": "c3297595382b1634e90bf5505db65b427e8f24bdfc5e32a16b0711197e40dc93",
-    "data/localization/soundcurrent_ar.ts": "bf113a828c3db396cf3f78d40ea637488592fdb01a787cf606220fc3b73b16b1",
-    "data/localization/soundcurrent_cs.ts": "dd7f037aba378799d9c3ca6d8f37aa6b6f5277625337030eb199f92bb66f6a1a",
-    "data/localization/soundcurrent_da.ts": "c826853f515d64cfad55cdccb965aee5812b270e69ce3904bfcd2c42b3d0b918",
-    "data/localization/soundcurrent_de.ts": "9a1efde2e028cf7157588b53faffdf309aae3df53bc54cfbbd596b223b8ebd84",
-    "data/localization/soundcurrent_el.ts": "3f0783902d5e659f8066a995b64f1d9948ea00d5ce5c6ec7928c6987f173de8b",
-    "data/localization/soundcurrent_es.ts": "6b9957a0655b8301c7480c142b7baa1810373d8a9316d7081d376e5ab39e6e37",
-    "data/localization/soundcurrent_fa.ts": "4a49c2675b0b0335c851742a33e14f53d6d0524019795042e157405f06aa048b",
-    "data/localization/soundcurrent_fi.ts": "57196b948d26eb661d40052b022abc089fefbceff4cb0f3173f2c4db6219c7e6",
-    "data/localization/soundcurrent_fr.ts": "24451016af4e090521840f50b4e05e532b6dc26a53d284f1eb759a4afc77782e",
-    "data/localization/soundcurrent_he.ts": "260c22dfed57312f0e5bdf37ef2ff54044f908d5393be243c000e50e0f12b329",
-    "data/localization/soundcurrent_hi.ts": "d52f94b63760a894d2a2567595df95e90067968c50623cf4dd18085b561342cb",
-    "data/localization/soundcurrent_hu.ts": "eb28fadd78ee5e48bc604a229bccf39412926ba97450a359e3647070ad76dc82",
-    "data/localization/soundcurrent_id.ts": "7ee741643d611a8d15c4f3245137206f878bf27138f03cb9d925a26fa824340d",
-    "data/localization/soundcurrent_it.ts": "d56d05bb03b3f0405c5770b70a8e41481c5631eed3fe4efc9b9145c677e47926",
-    "data/localization/soundcurrent_ja.ts": "33ac5f0aa4fa8c5ee2921ca7ca351f6a892cdf309f7fea1922e2214aab90b854",
-    "data/localization/soundcurrent_ko.ts": "c8450db619b984b51979491bc8f88b03c74cd12d2d347180e75c9a2929b6cf26",
-    "data/localization/soundcurrent_nb.ts": "be5d00f2be6141fa41536f89c125e0ef8ddbead6e833a73e33b09003f5acbfba",
-    "data/localization/soundcurrent_nl.ts": "9d5679416039e58bf5043a6827cfb82bd2d9da54397ec1d436a01e869b3998ea",
-    "data/localization/soundcurrent_pl.ts": "be97652cd76fc9dd7c2b1346d9c14e8cb6bdd90379076235d33343132e61686f",
-    "data/localization/soundcurrent_pt-BR.ts": "e84552ea5d7ccd5b8b6f069fecfb84d153214df859ab32fbde0db5289a9c2a08",
-    "data/localization/soundcurrent_pt-PT.ts": "18e26216ec835745be57538d71cbcb49d67556fd4637f9bfaa80d1994a8fd159",
-    "data/localization/soundcurrent_ro.ts": "dd56d6a090816981650906cfd0a158534912308000747d366c4c5d9dfcb3d093",
-    "data/localization/soundcurrent_ru.ts": "160b01c59e7a0c40449c8ef8aefe57bbada999bb4230e881d64ed094146abf29",
-    "data/localization/soundcurrent_sk.ts": "108301f7465a28921d369acbfd2ea00483c7ee1b6227261a64eb3fc52e9460ac",
-    "data/localization/soundcurrent_sv.ts": "e5395681fd63325b78fdc799e76e2fdf27ba8ef18da6982651ccf58898ac5d7a",
-    "data/localization/soundcurrent_sw.ts": "5a996c8bcaa22d829c9af4de5bf0815986ffbab99714c7f9ba83800ba8176ed0",
-    "data/localization/soundcurrent_th.ts": "789c195463ae797b9503a75e65c0f128ad9ed1fc617fdfdb3c4416a8ba486dde",
-    "data/localization/soundcurrent_tr.ts": "86254f60a0e587144d0b920b39c4fb28cd5d1997351741e1860302cd08d8ed79",
-    "data/localization/soundcurrent_uk.ts": "618593af04a41371651968578051cc01c776acb56a6f76208115510b81899a68",
-    "data/localization/soundcurrent_vi.ts": "6f9bd08cc1e24e2d8fb0490ede159e1cad1b57c63ae704f74d3dae36e0cdae06",
-    "data/localization/soundcurrent_zh-Hans.ts": "d39048113c0a046028d0663a2474fdbf5f374d5cadd70194d24df7e199d19cea",
-    "data/localization/soundcurrent_zh-Hant.ts": "143c13eb356c7e178c36713f2dc10a2674939580ceabd608422e8b6debbe74b4"
+    "data/localization/soundcurrent_en.ts": "92586f63c6bf04e268ae22820a72429954c947cf511409f882267713bf558106",
+    "data/localization/soundcurrent_ar.ts": "d26a6441976710187fd1cc163b8df4393b00dde7580bd656ac858f751521fd9b",
+    "data/localization/soundcurrent_cs.ts": "4a6fad47d9f671b10a889ae8a5fbb75e6bc49e3d464fbcbbd8157ef76247e2d9",
+    "data/localization/soundcurrent_da.ts": "2c3cd238dddcd25b3f8b9da7cd159e84b5c46be2b2fc596a497e658dcfc9f541",
+    "data/localization/soundcurrent_de.ts": "dc4f6f84d68027861b9d763db670bc15e96990025a5825c244fea127190dd343",
+    "data/localization/soundcurrent_el.ts": "a1cd5fb9f65e39de5a19ab16e7ab27488191f8cd36385a82e35350c51a9501e5",
+    "data/localization/soundcurrent_es.ts": "a21d461b8c2bf85b92520f0019fe5f9c4d18c7da1083e499c6854e137ef78bd6",
+    "data/localization/soundcurrent_fa.ts": "2ccb3c72640ef7bfb6580bb2415cb13e98de08c5a99ef6d070311095a3e7a299",
+    "data/localization/soundcurrent_fi.ts": "395ea0f04c4b76ca6db77e47cfeb55cf7bf82e97a12543f9ffde5232d2ef9bc6",
+    "data/localization/soundcurrent_fr.ts": "47a602d9ba9ea6ff52c6bd18b45e1545d395cf4229eb3a14ef9ac071715d9808",
+    "data/localization/soundcurrent_he.ts": "ee49cbc5b98e453602aa44ba6a285013b45c0193060afee348756468102f20d1",
+    "data/localization/soundcurrent_hi.ts": "7a8ef008234e71c82ab6b401c9b9f84635cc7ba9239637f66a5471e5081d9539",
+    "data/localization/soundcurrent_hu.ts": "0ea98ae44f9967275fa78d71c825da7ae1e3c556b2710e76684ee4a887114a66",
+    "data/localization/soundcurrent_id.ts": "fd5ab1b4435e3fe90301748827672c136bb97dd94fbf2b0f612869340e3c89d1",
+    "data/localization/soundcurrent_it.ts": "ae914022f7ea92db97eeeb2739844987df86b115c0a4576cbd2247938971678e",
+    "data/localization/soundcurrent_ja.ts": "b53592167d81d309fb67bb1431ddcf5fe6beab73bcf9be18c2d216e202bfac90",
+    "data/localization/soundcurrent_ko.ts": "65ebd2f227671ad7d12ff4bdd6b2210e1506147d77eec2fdff639c122bcb5dda",
+    "data/localization/soundcurrent_nb.ts": "c20cdb7ac8c6e2ff8d2890ffb7d5d9fa0fbe642bbb80b89eeb6eab5d7810074c",
+    "data/localization/soundcurrent_nl.ts": "c3a8f41bdb3469fb79e6294aad13b7590cb94df633d63725e89e441f3df602f2",
+    "data/localization/soundcurrent_pl.ts": "fffe677c1a4a501970a2f8b127dac57004a053c02142dc2a81833da4224ef080",
+    "data/localization/soundcurrent_pt-BR.ts": "0259c5b278fadc207bdbac9459e41d700a3662cd3ef11b2680a1822f4fc2fa30",
+    "data/localization/soundcurrent_pt-PT.ts": "a6432778069f502d966fb6b27b1e493154399c21d31d276eb27ee4e089d2f541",
+    "data/localization/soundcurrent_ro.ts": "7740223c1a9116d35d1da4114552deed5550584424e44ad2cf80fc804baddc3d",
+    "data/localization/soundcurrent_ru.ts": "da7f5941a7a2b6e76ddc2403af55ae008036755a7feae4f672b6bb1099e24792",
+    "data/localization/soundcurrent_sk.ts": "f5833614df43e2101a278db6c4748e3fe05620c67f17d9e3a9ad8de3c291462e",
+    "data/localization/soundcurrent_sv.ts": "54e232ea87b9c0c91cf7e2f33af9bdf2a3b89fbc3027007e86500833d94c0a84",
+    "data/localization/soundcurrent_sw.ts": "75a6f158f53d39490ecd9ceae3f4fcbc79d441e7570c30d970e4d52915af061d",
+    "data/localization/soundcurrent_th.ts": "cabb8616fb61679c689dbbdad3fd2a58e1ce4abc3767cd1061aa96888dbdbc8e",
+    "data/localization/soundcurrent_tr.ts": "eda3714a4502ad07164aebc39081412907f0cc92020fe07b41cefa3f554a449d",
+    "data/localization/soundcurrent_uk.ts": "b540ed1129f4fc4d7a8638630554be7399f04e6392b3a51feedc8a602b1c0af2",
+    "data/localization/soundcurrent_vi.ts": "2eee7bf7e89396d450c5b567a08d2148fc42b544b11652cac56253e3450609a1",
+    "data/localization/soundcurrent_zh-Hans.ts": "5e3804c375a1048d294ad6076340837fbf719cd976eeed07b1f17594ac86a830",
+    "data/localization/soundcurrent_zh-Hant.ts": "94873ae960e50980a1dd1d78b647e9cb4c21eba73e1713a2a473b315a1620dca"
   },
   "config_sha256": "6f47caebead58e5b02067b6027f830c95cbab94c9aa9cc725278783454c496c9",
   "findings": [
@@ -88,7 +88,7 @@
     {
       "file": "data/localization/soundcurrent_ar.ts",
       "locale": "ar",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -96,7 +96,7 @@
     {
       "file": "data/localization/soundcurrent_cs.ts",
       "locale": "cs",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -104,7 +104,7 @@
     {
       "file": "data/localization/soundcurrent_da.ts",
       "locale": "da",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -112,15 +112,15 @@
     {
       "file": "data/localization/soundcurrent_de.ts",
       "locale": "de",
-      "total": 516,
-      "translated": 30,
+      "total": 523,
+      "translated": 523,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     },
     {
       "file": "data/localization/soundcurrent_el.ts",
       "locale": "el",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -128,7 +128,7 @@
     {
       "file": "data/localization/soundcurrent_es.ts",
       "locale": "es",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -136,7 +136,7 @@
     {
       "file": "data/localization/soundcurrent_fa.ts",
       "locale": "fa",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -144,7 +144,7 @@
     {
       "file": "data/localization/soundcurrent_fi.ts",
       "locale": "fi",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -152,15 +152,15 @@
     {
       "file": "data/localization/soundcurrent_fr.ts",
       "locale": "fr",
-      "total": 516,
-      "translated": 516,
+      "total": 523,
+      "translated": 523,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     },
     {
       "file": "data/localization/soundcurrent_he.ts",
       "locale": "he",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -168,7 +168,7 @@
     {
       "file": "data/localization/soundcurrent_hi.ts",
       "locale": "hi",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -176,7 +176,7 @@
     {
       "file": "data/localization/soundcurrent_hu.ts",
       "locale": "hu",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -184,7 +184,7 @@
     {
       "file": "data/localization/soundcurrent_id.ts",
       "locale": "id",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -192,7 +192,7 @@
     {
       "file": "data/localization/soundcurrent_it.ts",
       "locale": "it",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -200,7 +200,7 @@
     {
       "file": "data/localization/soundcurrent_ja.ts",
       "locale": "ja",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -208,7 +208,7 @@
     {
       "file": "data/localization/soundcurrent_ko.ts",
       "locale": "ko",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -216,7 +216,7 @@
     {
       "file": "data/localization/soundcurrent_nb.ts",
       "locale": "nb",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -224,7 +224,7 @@
     {
       "file": "data/localization/soundcurrent_nl.ts",
       "locale": "nl",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -232,7 +232,7 @@
     {
       "file": "data/localization/soundcurrent_pl.ts",
       "locale": "pl",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -240,7 +240,7 @@
     {
       "file": "data/localization/soundcurrent_pt-BR.ts",
       "locale": "pt-BR",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -248,7 +248,7 @@
     {
       "file": "data/localization/soundcurrent_pt-PT.ts",
       "locale": "pt-PT",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -256,7 +256,7 @@
     {
       "file": "data/localization/soundcurrent_ro.ts",
       "locale": "ro",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -264,7 +264,7 @@
     {
       "file": "data/localization/soundcurrent_ru.ts",
       "locale": "ru",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -272,7 +272,7 @@
     {
       "file": "data/localization/soundcurrent_sk.ts",
       "locale": "sk",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -280,7 +280,7 @@
     {
       "file": "data/localization/soundcurrent_sv.ts",
       "locale": "sv",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -288,7 +288,7 @@
     {
       "file": "data/localization/soundcurrent_sw.ts",
       "locale": "sw",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -296,7 +296,7 @@
     {
       "file": "data/localization/soundcurrent_th.ts",
       "locale": "th",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -304,7 +304,7 @@
     {
       "file": "data/localization/soundcurrent_tr.ts",
       "locale": "tr",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -312,7 +312,7 @@
     {
       "file": "data/localization/soundcurrent_uk.ts",
       "locale": "uk",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -320,7 +320,7 @@
     {
       "file": "data/localization/soundcurrent_vi.ts",
       "locale": "vi",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -328,7 +328,7 @@
     {
       "file": "data/localization/soundcurrent_zh-Hans.ts",
       "locale": "zh-Hans",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
@@ -336,14 +336,14 @@
     {
       "file": "data/localization/soundcurrent_zh-Hant.ts",
       "locale": "zh-Hant",
-      "total": 516,
+      "total": 523,
       "translated": 30,
       "linguistic_verification": "unknown",
       "runtime_ui_qualification": "unknown"
     }
   ],
   "findingCounts": {
-    "untranslated": 15066
+    "untranslated": 14790
   },
-  "reportNote": "Compact report: all metrics and input hashes retained; findings contain three samples. Counts include every finding. The guard does not assess linguistic accuracy or compiled/runtime behavior."
+  "reportNote": "Compact report: all metrics and input hashes retained; three sample findings. Counts include all findings. Linguistic verification and runtime qualification remain separate from this structural audit."
 }

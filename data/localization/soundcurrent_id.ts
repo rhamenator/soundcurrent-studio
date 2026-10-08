@@ -35,6 +35,18 @@
       <translation type="unfinished" />
     </message>
     <message>
+      <source>%1
+
+Technical details:
+%2</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>%1
+The app remains open; your settings have been kept.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>%1 %2%3 dB</source>
       <translation type="unfinished" />
     </message>
@@ -224,6 +236,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Audio setup could not finish</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Audio setup failed. Restart Windows if VB-CABLE was just installed, then try again.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Audio setup is missing. Repair or reinstall SoundCurrent.</source>
       <translation type="unfinished" />
     </message>
     <message>
@@ -537,6 +557,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Could not start audio setup: %1. The app remains open.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Could not start microphone capture</source>
       <translation type="unfinished" />
     </message>
@@ -836,6 +860,11 @@ Import into your library?</source>
     <message>
       <source>Feedback</source>
       <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Filter Q</source>
+      <translation type="unfinished" />
+      <extracomment>Dimensionless quality factor controlling filter sharpness: higher Q produces a narrower peak. Not a bandwidth in Hz. Stable processing parameter remains q.</extracomment>
     </message>
     <message>
       <source>Filter type</source>
@@ -1588,6 +1617,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Restart Windows before using the equalizer or VB-CABLE settings. Audio driver changes need a system restart.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Restore Defaults</source>
       <translation type="unfinished" />
     </message>
@@ -1845,6 +1878,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Stop the microphone calibration before changing the audio driver.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Stop tones</source>
       <translation type="unfinished" />
     </message>
@@ -2064,10 +2101,6 @@ Import into your library?</source>
     </message>
     <message>
       <source>Warmth</source>
-      <translation type="unfinished" />
-    </message>
-    <message>
-      <source>Width (Q)</source>
       <translation type="unfinished" />
     </message>
     <message>
