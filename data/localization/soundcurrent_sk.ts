@@ -2129,6 +2129,10 @@ Importovať do vašej knižnice?</translation>
       <translation>Odstrániť vybranú signálovú cestu</translation>
     </message>
     <message>
+      <source>Remove the shared VB-CABLE driver too? Other users, recording apps, or voice tools may need it. Confirm to open the official remover, then click Remove Driver. Decline to keep the cable and uninstall only SoundCurrent.</source>
+      <translation>Odstrániť aj zdieľaný ovládač VB-CABLE? Ostatní používatelia, nahrávacie aplikácie alebo hlasové nástroje ho môžu potrebovať. Potvrďte otvorenie oficiálneho odinštalačného programu a kliknite na Remove Driver. Odmietnite, ak chcete kábel zachovať a odinštalovať iba SoundCurrent.</translation>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Renderovať zvukový súbor…</translation>
     </message>
@@ -2872,6 +2876,10 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>VB-CABLE is not present. Restart Windows if requested, then retry audio setup.</source>
       <translation>VB-CABLE nie je prítomný. Ak bol požadovaný reštart, reštartujte systém Windows a skúste nastavenie zvuku znova.</translation>
+    </message>
+    <message>
+      <source>VB-CABLE is still present. If removal requested a restart, restart Windows and retry SoundCurrent uninstall; otherwise finish Remove Driver in the official setup.</source>
+      <translation>VB-CABLE je stále prítomný. Ak odstránenie vyžadovalo reštart, reštartujte systém Windows a skúste znova odinštalovať SoundCurrent; inak dokončite Remove Driver v oficiálnom inštalačnom programe.</translation>
     </message>
     <message>
       <source>VB-CABLE package checksum mismatch. Repair the installation.</source>
