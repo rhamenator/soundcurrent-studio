@@ -577,6 +577,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Could not update startup settings.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation type="unfinished" />
     </message>
@@ -1336,6 +1340,10 @@ Import into your library?</source>
       <translation type="unfinished" />
     </message>
     <message>
+      <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
       <source>Open</source>
       <translation type="unfinished" />
     </message>
@@ -1871,6 +1879,14 @@ Import into your library?</source>
     </message>
     <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Start when I sign in</source>
+      <translation type="unfinished" />
+    </message>
+    <message>
+      <source>Startup</source>
       <translation type="unfinished" />
     </message>
     <message>

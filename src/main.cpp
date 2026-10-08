@@ -5,6 +5,7 @@
 
 #include "dsp.h"
 #include "update_panel.h"
+#include "startup_controls.h"
 #include "equipment_profiles.h"
 #include "processing_guard.h"
 #include "studio_panel.h"
@@ -1860,6 +1861,7 @@ public:
         tabs_->insertTab(1,studioScroll,SC_TR("Studio channels && effects"));
         tabs_->setCurrentIndex(0);
         settingsRoot->addWidget(soundcurrent::i18n::settingsPanel());
+        settingsRoot->addWidget(soundcurrent::startupPanel());
 
         auto *deviceBox = new QGroupBox(SC_TR("Output device"));
         auto *deviceLayout = new QVBoxLayout(deviceBox);
@@ -4251,6 +4253,7 @@ int main(int argc, char **argv) {
             QObject::connect(client, &QLocalSocket::disconnected, client, &QLocalSocket::deleteLater);
         }
     });
-    window.show();
+    if (!app.arguments().contains("--background") || !QSystemTrayIcon::isSystemTrayAvailable())
+        window.show();
     return app.exec();
 }
