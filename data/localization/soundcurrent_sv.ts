@@ -1889,155 +1889,155 @@ Importera till ditt bibliotek?</translation>
     </message>
     <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
-      <translation type="unfinished" />
+      <translation>Börja tyst. Höj bara om mikrofonen inte kan uppfatta tonerna.</translation>
     </message>
     <message>
       <source>Start when I sign in</source>
-      <translation type="unfinished" />
+      <translation>Starta när jag loggar in</translation>
     </message>
     <message>
       <source>Startup</source>
-      <translation type="unfinished" />
+      <translation>Autostart</translation>
     </message>
     <message>
       <source>Stereo</source>
-      <translation type="unfinished" />
+      <translation>Stereo</translation>
     </message>
     <message>
       <source>Stop the microphone calibration before changing the audio driver.</source>
-      <translation type="unfinished" />
+      <translation>Stoppa mikrofonkalibreringen innan du byter ljuddrivrutin.</translation>
     </message>
     <message>
       <source>Stop tones</source>
-      <translation type="unfinished" />
+      <translation>Stoppa toner</translation>
     </message>
     <message>
       <source>Studio channel count</source>
-      <translation type="unfinished" />
+      <translation>Antal Studio-kanaler</translation>
     </message>
     <message>
       <source>Studio channel output levels</source>
-      <translation type="unfinished" />
+      <translation>Utgångsnivåer för Studio-kanaler</translation>
     </message>
     <message>
       <source>Studio channels &amp;&amp; effects</source>
-      <translation type="unfinished" />
+      <translation>Studio-kanaler &amp;&amp; effekter</translation>
     </message>
     <message>
       <source>Studio effect preset</source>
-      <translation type="unfinished" />
+      <translation>Studio-effektförinställning</translation>
     </message>
     <message>
       <source>Studio selected channel</source>
-      <translation type="unfinished" />
+      <translation>Vald Studio-kanal</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>
-      <translation type="unfinished" />
+      <translation>Studio-konfiguration (*.scstudio)</translation>
     </message>
     <message>
       <source>Studio setup loaded for offline review. Uncheck offline editing to use it live.</source>
-      <translation type="unfinished" />
+      <translation>Studio-konfigurationen har lästs in för offlinegranskning. Avmarkera offlineredigering för att använda den i realtid.</translation>
     </message>
     <message>
       <source>Studio setup saved.</source>
-      <translation type="unfinished" />
+      <translation>Studio-konfigurationen sparades.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
-      <translation type="unfinished" />
+      <translation>Föreslagen EQ har tillämpats. Använd Spara förinställning för att behålla den.</translation>
     </message>
     <message>
       <source>Suggested changes to the playback EQ</source>
-      <translation type="unfinished" />
+      <translation>Föreslagna ändringar av uppspelnings-EQ</translation>
     </message>
     <message>
       <source>Surround Sound</source>
-      <translation type="unfinished" />
+      <translation>Surroundljud</translation>
     </message>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
-      <translation type="unfinished" />
+      <translation>Profilredigeraren för systemets frekvensgång har öppnats. Sparade profiler finns i utrustningsbiblioteket.</translation>
     </message>
     <message>
       <source>TV Dialogue</source>
-      <translation type="unfinished" />
+      <translation>TV-dialog</translation>
     </message>
     <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
-      <translation type="unfinished" />
+      <translation>Turkos: korrigerings-EQ. Orange: uppmätt frekvensgång, när den finns. Den vertikala skalan visar relativa dB.</translation>
     </message>
     <message>
       <source>Test channel meters with a silent generated signal</source>
-      <translation type="unfinished" />
+      <translation>Testa kanalmätarna med en tyst genererad signal</translation>
     </message>
     <message>
       <source>Test level</source>
-      <translation type="unfinished" />
+      <translation>Testnivå</translation>
     </message>
     <message>
       <source>Test level is outside the allowed range</source>
-      <translation type="unfinished" />
+      <translation>Testnivån ligger utanför det tillåtna området</translation>
     </message>
     <message>
       <source>The audio processor stopped unexpectedly.</source>
-      <translation type="unfinished" />
+      <translation>Ljudprocessorn stoppades oväntat.</translation>
     </message>
     <message>
       <source>The custom library holds up to 256 profiles.</source>
-      <translation type="unfinished" />
+      <translation>Det anpassade biblioteket rymmer upp till 256 profiler.</translation>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>
-      <translation type="unfinished" />
+      <translation>Uppdateringssvaret var ogiltigt. Inget installationsprogram öppnades.</translation>
     </message>
     <message>
       <source>This Studio layout has more channels than the output device. Use offline editing or select a compatible device.</source>
-      <translation type="unfinished" />
+      <translation>Denna Studio-konfiguration har fler kanaler än utgångsenheten. Använd offlineredigering eller välj en kompatibel enhet.</translation>
     </message>
     <message>
       <source>This imports measured RESPONSE, not already-inverted EQ gains. Confirm equipment type. Absolute SPL needs normalization before import.</source>
-      <translation type="unfinished" />
+      <translation>Detta importerar uppmätt FREKVENSGÅNG, inte redan inverterade EQ-förstärkningar. Bekräfta utrustningstypen. Absolut ljudtrycksnivå behöver normaliseras före import.</translation>
     </message>
     <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
-      <translation type="unfinished" />
+      <translation>Denna profil har ändrats. Spara en anpassad kopia innan du lämnar den?</translation>
     </message>
     <message>
       <source>Timed out waiting for the equalizer sink: %1</source>
-      <translation type="unfinished" />
+      <translation>Tidsgränsen överskreds under väntan på equalizerns sink: %1</translation>
     </message>
     <message>
       <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
-      <translation type="unfinished" />
+      <translation>För lite testljud nådde mikrofonen. Flytta den närmare eller höj testnivån något.</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
-      <translation type="unfinished" />
+      <translation>Översättningstäckning: %1 av %2 meddelanden. Saknade översättningar visas på engelska. Språkpaketen är overifierade och väntar på granskning av modersmålstalare. Använd Avsluta och öppna igen för att tillämpa ändringar.</translation>
     </message>
     <message>
       <source>Treble Detail</source>
-      <translation type="unfinished" />
+      <translation>Diskantdetaljer</translation>
     </message>
     <message>
       <source>Trim</source>
-      <translation type="unfinished" />
+      <translation>Nivåjustering</translation>
     </message>
     <message>
       <source>Trim · %1 dB</source>
-      <translation type="unfinished" />
+      <translation>Nivåjustering · %1 dB</translation>
     </message>
     <message>
       <source>Turn equalizer off</source>
-      <translation type="unfinished" />
+      <translation>Stäng av equalizern</translation>
     </message>
     <message>
       <source>Turn equalizer on</source>
-      <translation type="unfinished" />
+      <translation>Slå på equalizern</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished" />
+      <translation>Typ</translation>
     </message>
     <message>
       <source>Undo</source>
@@ -2046,51 +2046,51 @@ Importera till ditt bibliotek?</translation>
     </message>
     <message>
       <source>Undo Studio change</source>
-      <translation type="unfinished" />
+      <translation>Ångra Studio-ändring</translation>
     </message>
     <message>
       <source>Undo last equalizer change</source>
-      <translation type="unfinished" />
+      <translation>Ångra senaste equalizerändringen</translation>
     </message>
     <message>
       <source>Unlock EQ</source>
-      <translation type="unfinished" />
+      <translation>Lås upp EQ</translation>
     </message>
     <message>
       <source>Unlock controls and finish measurement before editing profiles.</source>
-      <translation type="unfinished" />
+      <translation>Lås upp reglagen och avsluta mätningen innan du redigerar profiler.</translation>
     </message>
     <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
-      <translation type="unfinished" />
+      <translation>Utrustningsprofilens schema stöds inte (förväntat: 2).</translation>
     </message>
     <message>
       <source>Unsupported filter type.</source>
-      <translation type="unfinished" />
+      <translation>Filtertypen stöds inte.</translation>
     </message>
     <message>
       <source>Unsupported microphone channel layout</source>
-      <translation type="unfinished" />
+      <translation>Mikrofonens kanallayout stöds inte</translation>
     </message>
     <message>
       <source>Unsupported speaker profile schema</source>
-      <translation type="unfinished" />
+      <translation>Högtalarprofilens schema stöds inte</translation>
     </message>
     <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
-      <translation type="unfinished" />
+      <translation>Uppdateringen %1 har hämtats: %2. Avsluta, installera över den befintliga appen och öppna sedan igen.</translation>
     </message>
     <message>
       <source>Update download folder</source>
-      <translation type="unfinished" />
+      <translation>Mapp för hämtade uppdateringar</translation>
     </message>
     <message>
       <source>Update selected</source>
-      <translation type="unfinished" />
+      <translation>Uppdatera vald</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
-      <translation type="unfinished" />
+      <translation>Använd ett tyst rum. Mäter högtalare, rum och mikrofon tillsammans; resultaten inkluderar mikrofonens frekvensgång.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -2099,51 +2099,51 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
-      <translation>Använd systemregion</translation>
+      <translation>Använd systemets regionala inställningar</translation>
     </message>
     <message>
       <source>VB-CABLE settings</source>
-      <translation type="unfinished" />
+      <translation>VB-CABLE-inställningar</translation>
     </message>
     <message>
       <source>Vocal Focus</source>
-      <translation type="unfinished" />
+      <translation>Sångfokus</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>
-      <translation type="unfinished" />
+      <translation>WAVE-ljud (*.wav)</translation>
     </message>
     <message>
       <source>Waiting for a microphone.</source>
-      <translation type="unfinished" />
+      <translation>Väntar på en mikrofon.</translation>
     </message>
     <message>
       <source>Warm</source>
-      <translation type="unfinished" />
+      <translation>Varm</translation>
     </message>
     <message>
       <source>Warm hall</source>
-      <translation type="unfinished" />
+      <translation>Varm hall</translation>
     </message>
     <message>
       <source>Warmth</source>
-      <translation type="unfinished" />
+      <translation>Värme</translation>
     </message>
     <message>
       <source>Yes</source>
-      <translation type="unfinished" />
+      <translation>Ja</translation>
     </message>
     <message>
       <source>Yes to All</source>
-      <translation type="unfinished" />
+      <translation>Ja till alla</translation>
     </message>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
-      <translation type="unfinished" />
+      <translation>Noll stänger av varje effekt. Dessa lyssningseffekter påverkar högtalaruppspelning, inte mikrofonkorrigering.</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>
-      <translation type="unfinished" />
+      <translation>−∞ dBFS</translation>
     </message>
   </context>
 </TS>
