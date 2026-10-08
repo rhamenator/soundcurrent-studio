@@ -1,25 +1,26 @@
 {
-  "stage": "Japanese sixth catalog batch",
+  "stage": "Japanese current catalogs populated",
   "catalogs": [
     {
       "tag": "ja",
       "name": "日本語",
-      "translated": 466,
+      "translated": 527,
       "total": 527,
       "status": "unverified",
       "nativeReviewed": false,
-      "tsSha256": "810d6a96177a71ef1f207b8e44fd9b1b1dbf5f234dfd3d005391246d78c932f0",
-      "qmSha256": "40c02969f792d829b3875259acc994a82c21b60be359285cd3602f0ccb1160fc"
+      "tsSha256": "fe986cbd7ddcf59d7ae94b79db43d24d101dd15e64f591b315d0bf695c802137",
+      "qmSha256": "8a9490579be0462d72b70ffd9d9258701fd20490ed08ac82c97066b5f8c37d6b"
     }
   ],
   "linuxTests": {
-    "passed": 3,
-    "total": 3,
-    "scope": "Localization assertions, Japanese actual MainWindow offscreen smoke test, structural catalog checks",
-    "log": "/tmp/soundcurrent-studio-ja-sixth-tests.log"
+    "status": "passed",
+    "scope": "Full Linux CTest",
+    "log": "/tmp/soundcurrent-studio-ja-complete-tests.log",
+    "passed": 77,
+    "total": 77
   },
-  "review": "Contextual AI review of shared source entries 0–469: save versus discard, reset behavior, microphone virtual-route requirements, room measurement, peak hold and refresh performance. File patterns, numerical limits and literal ampersands preserved. Linguistic accuracy unverified.",
+  "review": "Contextual AI review across current Japanese catalogs: device routing, calibration limitations, DSP controls, save/quit behavior and neutral rendering counts. Unverified; no native-speaker review.",
   "nativeReviewed": false,
   "windows": "Pending CI; no Windows runtime qualification for this batch",
-  "remaining": "Japanese catalog incomplete; seven target languages still incomplete. Omitted source strings reserved for the second pass."
+  "remaining": "Six target catalogs incomplete. Second-pass omitted source strings, visual and Windows lifecycle qualification remain open."
 }
