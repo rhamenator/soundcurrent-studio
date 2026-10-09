@@ -708,6 +708,11 @@ Importere til biblioteket ditt?</translation>
       <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
+      <source>Copy</source>
+      <translation>Kopier</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Correction filters:</source>
       <translation>Korreksjonsfiltre:</translation>
       <extracomment>Heading for the actual bounded EQ correction filters in the imported profile; JSON identifiers below remain unchanged.</extracomment>
@@ -845,6 +850,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Egendefinert</translation>
     </message>
     <message>
+      <source>Cut</source>
+      <translation>Klipp ut</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Damping</source>
       <translation>Demping</translation>
     </message>
@@ -883,6 +893,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Delay wet mix · %1%</source>
       <translation>Forsinkelsens effektandel · %1%</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Slett</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Discard</source>
@@ -2036,6 +2051,11 @@ Importere til biblioteket ditt?</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
+      <source>Paste</source>
+      <translation>Lim inn</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
       <translation>Sett behandlingen på pause og åpne lydoppsettet. Appen forblir åpen og viser resultatet. Start Windows på nytt etter at driveren er installert.</translation>
     </message>
@@ -2342,6 +2362,11 @@ Importere til biblioteket ditt?</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Redo</source>
+      <translation>Gjør om</translation>
+      <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Oppdater enheter</translation>
     </message>
@@ -2585,6 +2610,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Select a filter to update, or remove filters before adding more</source>
       <translation>Velg et filter som skal oppdateres, eller fjern filtre før du legger til flere</translation>
+    </message>
+    <message>
+      <source>Select all</source>
+      <translation>Velg alt</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Select band %1</source>
@@ -2873,6 +2903,16 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Startup</source>
       <translation>Oppstart</translation>
+    </message>
+    <message>
+      <source>Step down</source>
+      <translation>Reduser verdien</translation>
+      <extracomment>Decrease the numeric spin-box value by one step; not physical movement.</extracomment>
+    </message>
+    <message>
+      <source>Step up</source>
+      <translation>Øk verdien</translation>
+      <extracomment>Increase the numeric spin-box value by one step; not physical movement.</extracomment>
     </message>
     <message>
       <source>Stereo</source>

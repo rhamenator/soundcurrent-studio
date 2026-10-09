@@ -158,5 +158,13 @@
   "append 0-30 seconds to render effect tails": "Append 0–30 seconds of zero input after source audio so delay/reverb tails can decay into the export. Does not extend input media or change reverb decay itself. Preserve 0-30.",
   "disable automatic EQ headroom": "Disable automatic per-channel EQ gain compensation/headroom. Does not disable final clipping or invalid-sample protection.",
   "bypass EQ, effects, gains and mute": "Bypass engine EQ, delay/reverb/enhancements, channel/global gain and channel mute. Routing matrix still applies; final clipping and invalid-sample protection still apply. No device-routing bypass is implied.",
-  "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.": "Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers."
+  "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.": "Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers.",
+  "Redo": "Reapply the last undone text edit; does not reset the audio profile.",
+  "Cut": "Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.",
+  "Copy": "Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.",
+  "Paste": "Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.",
+  "Delete": "Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.",
+  "Select all": "Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.",
+  "Step up": "Increase the numeric spin-box value by one step; not physical movement.",
+  "Step down": "Decrease the numeric spin-box value by one step; not physical movement."
 }

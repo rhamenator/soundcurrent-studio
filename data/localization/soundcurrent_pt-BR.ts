@@ -708,6 +708,11 @@ Importar para a sua biblioteca?</translation>
       <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
+      <source>Copy</source>
+      <translation>Copiar</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Correction filters:</source>
       <translation>Filtros de correção:</translation>
       <extracomment>Heading for the actual bounded EQ correction filters in the imported profile; JSON identifiers below remain unchanged.</extracomment>
@@ -845,6 +850,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Personalizado</translation>
     </message>
     <message>
+      <source>Cut</source>
+      <translation>Recortar</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Damping</source>
       <translation>Amortecimento</translation>
     </message>
@@ -883,6 +893,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Delay wet mix · %1%</source>
       <translation>Sinal com atraso · %1%</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>Excluir</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Discard</source>
@@ -2036,6 +2051,11 @@ Importar para a sua biblioteca?</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
+      <source>Paste</source>
+      <translation>Colar</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
       <translation>Pausar o processamento e abrir a configuração de áudio. O aplicativo permanece aberto e apresenta o resultado. Reinicie o Windows após instalar o driver.</translation>
     </message>
@@ -2342,6 +2362,11 @@ Importar para a sua biblioteca?</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Redo</source>
+      <translation>Refazer</translation>
+      <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Atualizar dispositivos</translation>
     </message>
@@ -2585,6 +2610,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Select a filter to update, or remove filters before adding more</source>
       <translation>Selecione um filtro para atualizar ou remova filtros antes de adicionar mais</translation>
+    </message>
+    <message>
+      <source>Select all</source>
+      <translation>Selecionar tudo</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Select band %1</source>
@@ -2873,6 +2903,16 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Startup</source>
       <translation>Inicialização</translation>
+    </message>
+    <message>
+      <source>Step down</source>
+      <translation>Diminuir o valor</translation>
+      <extracomment>Decrease the numeric spin-box value by one step; not physical movement.</extracomment>
+    </message>
+    <message>
+      <source>Step up</source>
+      <translation>Aumentar o valor</translation>
+      <extracomment>Increase the numeric spin-box value by one step; not physical movement.</extracomment>
     </message>
     <message>
       <source>Stereo</source>

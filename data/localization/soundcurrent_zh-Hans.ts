@@ -708,6 +708,11 @@ Import into your library?</source>
       <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
     </message>
     <message>
+      <source>Copy</source>
+      <translation>复制</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Correction filters:</source>
       <translation>校正滤波器：</translation>
       <extracomment>Heading for the actual bounded EQ correction filters in the imported profile; JSON identifiers below remain unchanged.</extracomment>
@@ -845,6 +850,11 @@ Import into your library?</source>
       <translation>自定义</translation>
     </message>
     <message>
+      <source>Cut</source>
+      <translation>剪切</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Damping</source>
       <translation>阻尼</translation>
     </message>
@@ -883,6 +893,11 @@ Import into your library?</source>
     <message>
       <source>Delay wet mix · %1%</source>
       <translation>延迟湿声混合量 · %1%</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>删除</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Discard</source>
@@ -2036,6 +2051,11 @@ Import into your library?</source>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
     </message>
     <message>
+      <source>Paste</source>
+      <translation>粘贴</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
       <translation>暂停处理并打开音频设置。应用保持打开并报告结果。安装驱动后请重启 Windows。</translation>
     </message>
@@ -2342,6 +2362,11 @@ Import into your library?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Redo</source>
+      <translation>重做</translation>
+      <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>刷新设备</translation>
     </message>
@@ -2585,6 +2610,11 @@ Import into your library?</source>
     <message>
       <source>Select a filter to update, or remove filters before adding more</source>
       <translation>请选择要更新的滤波器，或在添加更多滤波器前移除现有滤波器</translation>
+    </message>
+    <message>
+      <source>Select all</source>
+      <translation>全选</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Select band %1</source>
@@ -2873,6 +2903,16 @@ Import into your library?</source>
     <message>
       <source>Startup</source>
       <translation>启动</translation>
+    </message>
+    <message>
+      <source>Step down</source>
+      <translation>减小数值</translation>
+      <extracomment>Decrease the numeric spin-box value by one step; not physical movement.</extracomment>
+    </message>
+    <message>
+      <source>Step up</source>
+      <translation>增大数值</translation>
+      <extracomment>Increase the numeric spin-box value by one step; not physical movement.</extracomment>
     </message>
     <message>
       <source>Stereo</source>
