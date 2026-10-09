@@ -4228,15 +4228,23 @@ int main(int argc, char **argv) {
         row=validChannel;row["bands"]=tooManyFilters;rejectChannel(row,"Too many Studio channel filters");
         auto fractionalFilter=filter;fractionalFilter["type"]=.5;
         row=validChannel;row["bands"]=QJsonArray{fractionalFilter};rejectChannel(row,"Invalid filter type");
+        // Wrap a single edge explicitly: brace-initializing QJsonArray from
+        // another QJsonArray can select its copy constructor and flatten it.
+        const auto singleRoute=[](const QJsonArray &edge) {
+            QJsonArray rows;rows.append(QJsonValue(edge));
+            if(rows.size()!=1 || !rows[0].isArray() || rows[0].toArray()!=edge)
+                qFatal("Studio route fixture lost its nested edge");
+            return rows;
+        };
         const auto rejectRoutes=[&](const QJsonArray &routes,const char *reason) {
             auto malformed=profileSnapshot;malformed["routing"]=routes;rejectProfile(malformed,reason);
         };
-        rejectRoutes(QJsonArray{QJsonArray{0,0}},"Invalid Studio route");
+        rejectRoutes(singleRoute(QJsonArray{0,0}),"Invalid Studio route");
         rejectRoutes(QJsonArray{QJsonArray{0,0,1},QJsonArray{0,0,.5}},"Duplicate Studio route");
-        rejectRoutes(QJsonArray{QJsonArray{2,0,1}},"Invalid route indexes or weight");
-        rejectRoutes(QJsonArray{QJsonArray{0,.5,1}},"Invalid route indexes or weight");
-        rejectRoutes(QJsonArray{QJsonArray{0,0,5}},"Invalid route indexes or weight");
-        rejectRoutes(QJsonArray{QJsonArray{0,0,QStringLiteral("1,5")}},"Invalid route number");
+        rejectRoutes(singleRoute(QJsonArray{2,0,1}),"Invalid route indexes or weight");
+        rejectRoutes(singleRoute(QJsonArray{0,.5,1}),"Invalid route indexes or weight");
+        rejectRoutes(singleRoute(QJsonArray{0,0,5}),"Invalid route indexes or weight");
+        rejectRoutes(singleRoute(QJsonArray{0,0,QStringLiteral("1,5")}),"Invalid route number");
         QJsonArray tooManyRoutes;for(int i=0;i<5;++i)tooManyRoutes.append(QJsonArray{0,0,1});
         rejectRoutes(tooManyRoutes,"Too many Studio routes");
         auto malformedEffects=profileSnapshot;malformedEffects["enhancements"]=QJsonArray{0};
@@ -4249,7 +4257,7 @@ int main(int argc, char **argv) {
         const auto beforeCrowded=crowded.json();const std::array<soundcurrent::EqBand,1> sharedFilter{{{1000,0,1}}};
         expectOwnedRejection("Shared and channel EQ exceed 64 filters; remove some channel filters",[&]{crowded.effective(sharedFilter);});
         if(crowded.json()!=beforeCrowded)qFatal("Combined EQ rejection changed saved filters");
-        auto weighted=profileSnapshot;weighted["routing"]=QJsonArray{QJsonArray{0,1,-.5}};
+        auto weighted=profileSnapshot;weighted["routing"]=singleRoute(QJsonArray{0,1,-.5});
         if(soundcurrent::studio::Session::parse(weighted).json()!=weighted)qFatal("Locale changed a valid signed routing coefficient");
         if(soundcurrent::studio::Session::parse(profileSnapshot).json()!=profileSnapshot)
             qFatal("Localized session validation changed a valid saved profile");
