@@ -510,7 +510,7 @@
       "file": "src/localization.h",
       "call": "setText",
       "argument": 0,
-      "expression": "text(\"Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.\").arg(done).arg(total)",
+      "expression": "text(\"Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.\").arg(QLocale().toString(done),QLocale().toString(total))",
       "containsTranslationCall": true
     },
     {
@@ -636,8 +636,8 @@
       "file": "src/main.cpp",
       "call": "setText",
       "argument": 0,
-      "expression": "balance_->value() == 0 ? SC_TR(\"Center\")\n                               : QString(\"%1 %2%\").arg(balance_->value() < 0 ? SC_TR(\"L\") : SC_TR(\"R\"))\n                                     .arg(std::abs(balance_->value()))",
-      "containsTranslationCall": true
+      "expression": "soundcurrent::i18n::balancePositionText(balance_->value())",
+      "containsTranslationCall": false
     },
     {
       "file": "src/main.cpp",
@@ -713,8 +713,8 @@
       "file": "src/main.cpp",
       "call": "setText",
       "argument": 0,
-      "expression": "value == 0 ? SC_TR(\"Center\")\n                                   : QString(\"%1 %2%\").arg(value < 0 ? SC_TR(\"L\") : SC_TR(\"R\")).arg(std::abs(value))",
-      "containsTranslationCall": true
+      "expression": "soundcurrent::i18n::balancePositionText(value)",
+      "containsTranslationCall": false
     },
     {
       "file": "src/main.cpp",
@@ -727,8 +727,8 @@
       "file": "src/main.cpp",
       "call": "setText",
       "argument": 0,
-      "expression": "balance_->value() == 0 ? SC_TR(\"Center\")\n                               : QString(\"%1 %2%\").arg(balance_->value() < 0 ? SC_TR(\"L\") : SC_TR(\"R\"))\n                                     .arg(std::abs(balance_->value()))",
-      "containsTranslationCall": true
+      "expression": "soundcurrent::i18n::balancePositionText(balance_->value())",
+      "containsTranslationCall": false
     },
     {
       "file": "src/main.cpp",
@@ -1343,21 +1343,21 @@
       "file": "src/main.cpp",
       "call": "setAccessibleName",
       "argument": 0,
-      "expression": "QString(SC_TR(\"Band %1 gain\")).arg(i + 1)",
+      "expression": "QString(SC_TR(\"Band %1 gain\")).arg(QLocale().toString(i + 1))",
       "containsTranslationCall": true
     },
     {
       "file": "src/main.cpp",
       "call": "setAccessibleName",
       "argument": 0,
-      "expression": "QString(SC_TR(\"Estimated output level near band %1\")).arg(i + 1)",
+      "expression": "QString(SC_TR(\"Estimated output level near band %1\")).arg(QLocale().toString(i + 1))",
       "containsTranslationCall": true
     },
     {
       "file": "src/main.cpp",
       "call": "setAccessibleName",
       "argument": 0,
-      "expression": "QString(SC_TR(\"Select band %1\")).arg(i + 1)",
+      "expression": "QString(SC_TR(\"Select band %1\")).arg(QLocale().toString(i + 1))",
       "containsTranslationCall": true
     },
     {
@@ -2889,6 +2889,7 @@
   ],
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
+  "reviewStatus": "Whole-interface provenance review incomplete. Complete file-header action captions implemented; external MIME descriptors, broader permission/failure workflows and current native/package checks remain pending.",
   "sourceSha256": {
     "src/accelerating_spinbox.h": "2231066a20cf4ee5dced8d99e9ae78e311dbec0c2eea9579b34d4bda67923223",
     "src/audio_error_text.h": "a219810b01b93a90578eb61a98a0fab501c76792aac54a37cf87376737d53f4d",
@@ -2907,10 +2908,10 @@
     "src/file_display_locale_proxy.h": "73bf365758b447200f7170819f8cf998e40b1ba584122cad51ec5de855593435",
     "src/linux_audio.cpp": "428ef69af5f3a829c1234dfd0bdc3f672636e1e24d35fc4a90f9d4294ee056af",
     "src/linux_audio.h": "c37703695cd48e0a234c8c9fa3efa6678eb639d1ffbbdcdd46d43e945afdf958",
-    "src/localization.h": "1d82243a04150a1252c4564270f00879474427d32f13f178112c9bd2c467789a",
-    "src/localization_text.h": "66844e548183ff28867f3b90958f3e67dd22b9d5daa7114f5da8d81778bf53d5",
+    "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
+    "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
     "src/localized_file_dialog.h": "db8e7403e18efca39f41bcb02238c94297e09cc9b9a1f9870f12276bdc58a7ff",
-    "src/main.cpp": "f5eebfd5179a2f483d00f3f95fe33898af50ba0058676d3dc988a19a2500ef3a",
+    "src/main.cpp": "fa4afdbc6ab6f46d9858163c08de31c83cc479c0739e8ed751fbd5b178da6128",
     "src/main_windows.cpp": "df16bae0597ddb53f7a31bf2d99bd50f5768f6174265309d254da9b10bebd6c0",
     "src/processing_guard.cpp": "7357547a751b724be0c1743d94f8318a9f86b5f6b2180911799dc660bd5e74b2",
     "src/processing_guard.h": "3210a47f6da6b8d019710e052785a90b1b4635182497ca8c64549fb3b31a1913",
@@ -2938,6 +2939,5 @@
     "src/windows_platform.inc": "720d72ee42bf50d6bc371452f517c902f29acca8a85fd08d874df83e20468a34",
     "src/windows_route_guardian.cpp": "4f683ce99ad6bafe227e293d94a82487157da269642e2e2298fa148bc3dfbf2d",
     "src/worker_message_buffer.h": "1866de25517f49efba63b08ef69d6e6d7dfa4e600c1efd6588226b6fe3327e42"
-  },
-  "reviewStatus": "Whole-interface provenance review incomplete. Complete file-header action captions implemented; external MIME descriptors, broader permission/failure workflows and current native/package checks remain pending."
+  }
 }
