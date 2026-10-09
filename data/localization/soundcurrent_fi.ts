@@ -967,6 +967,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Testitoiston loppuun saattaminen</translation>
     </message>
     <message>
+      <source>Drive</source>
+      <translation>Asema</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
       <translation>Ohjaimen asennus epäonnistui (koodi %1). Windowsin suojausasetuksia ei muutettu.</translation>
     </message>
@@ -1220,6 +1225,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Takaisinkytkentä</translation>
     </message>
     <message>
+      <source>File</source>
+      <translation>Tiedosto</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>File name:</source>
       <translation>Tiedostonimi:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1260,6 +1270,11 @@ Tuodaanko kirjastoon?</translation>
       <source>Floorstanding speaker</source>
       <translation>Lattiakaiutin</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Folder</source>
+      <translation>Kansio</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Forward</source>
@@ -2873,6 +2888,11 @@ Tuodaanko kirjastoon?</translation>
       <extracomment>Native uninstall nonzero failure (excluding restart code 3010) aborts before app payload deletion so user can retry. Shared audio driver means EQ/Studio ownership, not network. Quit any running SoundCurrent apps, not necessarily both products; fully exit rather than hide UI. SoundCurrent is invariant. AI contextual review only; native review unverified.</extracomment>
     </message>
     <message>
+      <source>Shortcut</source>
+      <translation>Pikakuvake</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Lyhyemmät välit päivittävät tasoja useammin ja käyttävät enemmän CPU:ta; äänen toimitus voi rajoittaa todellista päivitysnopeutta</translation>
     </message>
@@ -3338,6 +3358,11 @@ Tuodaanko kirjastoon?</translation>
       <source>Uninstall</source>
       <translation>Poista asennus</translation>
       <extracomment>Windows Start-menu shortcut action removing this application. Distinct from Quit or closing the UI. Driver removal remains optional shared-driver policy.</extracomment>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>Tuntematon</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Unknown option: %1</source>

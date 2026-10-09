@@ -967,6 +967,11 @@ Import into your library?</source>
       <translation>完成測試音訊播放</translation>
     </message>
     <message>
+      <source>Drive</source>
+      <translation>磁碟機</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
       <translation>驅動程式設定失敗（代碼 %1）。未變更任何 Windows 安全性設定。</translation>
     </message>
@@ -1220,6 +1225,11 @@ Import into your library?</source>
       <translation>回授</translation>
     </message>
     <message>
+      <source>File</source>
+      <translation>檔案</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>File name:</source>
       <translation>檔名(N)：</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1260,6 +1270,11 @@ Import into your library?</source>
       <source>Floorstanding speaker</source>
       <translation>落地喇叭</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Folder</source>
+      <translation>資料夾</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Forward</source>
@@ -2873,6 +2888,11 @@ Import into your library?</source>
       <extracomment>Native uninstall nonzero failure (excluding restart code 3010) aborts before app payload deletion so user can retry. Shared audio driver means EQ/Studio ownership, not network. Quit any running SoundCurrent apps, not necessarily both products; fully exit rather than hide UI. SoundCurrent is invariant. AI contextual review only; native review unverified.</extracomment>
     </message>
     <message>
+      <source>Shortcut</source>
+      <translation>捷徑</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>較短的間隔會更頻繁地更新位準，並消耗更多 CPU；音訊傳輸可能限制實際更新速率</translation>
     </message>
@@ -3338,6 +3358,11 @@ Import into your library?</source>
       <source>Uninstall</source>
       <translation>解除安裝</translation>
       <extracomment>Windows Start-menu shortcut action removing this application. Distinct from Quit or closing the UI. Driver removal remains optional shared-driver policy.</extracomment>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>未知</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Unknown option: %1</source>

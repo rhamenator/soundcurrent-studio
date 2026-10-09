@@ -967,6 +967,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Test sesi oynatımını tamamlama</translation>
     </message>
     <message>
+      <source>Drive</source>
+      <translation>Sürücü</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
       <translation>Sürücü kurulumu başarısız oldu (kod %1). Windows güvenlik ayarları değiştirilmedi.</translation>
     </message>
@@ -1220,6 +1225,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Geri besleme</translation>
     </message>
     <message>
+      <source>File</source>
+      <translation>Dosya</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>File name:</source>
       <translation>Dosya adı:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1260,6 +1270,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <source>Floorstanding speaker</source>
       <translation>Yer tipi hoparlör</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Folder</source>
+      <translation>Klasör</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Forward</source>
@@ -2873,6 +2888,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <extracomment>Native uninstall nonzero failure (excluding restart code 3010) aborts before app payload deletion so user can retry. Shared audio driver means EQ/Studio ownership, not network. Quit any running SoundCurrent apps, not necessarily both products; fully exit rather than hide UI. SoundCurrent is invariant. AI contextual review only; native review unverified.</extracomment>
     </message>
     <message>
+      <source>Shortcut</source>
+      <translation>Kısayol</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Daha kısa aralıklar seviyeleri daha sık günceller ve daha fazla CPU kullanır; ses aktarımı gerçek hızı sınırlayabilir</translation>
     </message>
@@ -3338,6 +3358,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <source>Uninstall</source>
       <translation>Kaldır</translation>
       <extracomment>Windows Start-menu shortcut action removing this application. Distinct from Quit or closing the UI. Driver removal remains optional shared-driver policy.</extracomment>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>Bilinmiyor</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Unknown option: %1</source>

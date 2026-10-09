@@ -2857,7 +2857,7 @@
     "src/equipment_profiles.h": "34fb124fe9a9177735c3e96b54f947fbdd2881ff175153c29334842c140b9545",
     "src/linux_audio.cpp": "428ef69af5f3a829c1234dfd0bdc3f672636e1e24d35fc4a90f9d4294ee056af",
     "src/linux_audio.h": "c37703695cd48e0a234c8c9fa3efa6678eb639d1ffbbdcdd46d43e945afdf958",
-    "src/localization.h": "6c554110478ceda5fab0f485a4a73ed807f24bf5771957d42c85f9804e00c7d2",
+    "src/localization.h": "a9222646f7a3003622f11b68c6cb2a6f687454bcd922f1afd9924bd9ed4a2b35",
     "src/localization_text.h": "9cbb9b2c5e49287651cba6bcd273c01e148f8fd5dce4b7e39fdd86594e344cd0",
     "src/main.cpp": "ad3a5ee0d8e291c0038e28af25a0ca048398acac3402d45f9061e6e89991dff4",
     "src/main_windows.cpp": "df16bae0597ddb53f7a31bf2d99bd50f5768f6174265309d254da9b10bebd6c0",
@@ -2888,5 +2888,5 @@
     "src/windows_route_guardian.cpp": "4f683ce99ad6bafe227e293d94a82487157da269642e2e2298fa148bc3dfbf2d",
     "src/worker_message_buffer.h": "1866de25517f49efba63b08ef69d6e6d7dfa4e600c1efd6588226b6fe3327e42"
   },
-  "reviewStatus": "Whole-interface provenance review incomplete; Qt chooser basic/actions/header/accessibility mappings implemented. Composed header menu, data formatting and errors pending."
+  "reviewStatus": "Whole-interface review incomplete. Generic Qt file types now mapped; external MIME/type descriptors, selected-locale size/date formatting, composed header actions and errors remain pending."
 }
