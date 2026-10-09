@@ -17,5 +17,7 @@
   "wholeInterfaceCoverageProven": false,
   "runtimeVerification": "Actual missing-file render tested across all 34 languages with exact translated error, nonzero exit and no output; existing synthetic WAVE processing suite passed",
   "newBuildDependency": "Python 3 interpreter generates embedded CLI header; audio engine and WAVE libraries remain Qt independent",
-  "currentPackageQualification": "pending"
+  "currentPackageQualification": "pending",
+  "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
+  "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt"
 }
