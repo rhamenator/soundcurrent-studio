@@ -15,6 +15,25 @@ spec.loader.exec_module(catalog)
 
 
 class CatalogTests(unittest.TestCase):
+    def test_all_owned_wave_diagnostics_have_reviewed_display_mappings(self):
+        root = Path(__file__).resolve().parents[1]
+        code = (root / 'src/wav.cpp').read_text(encoding='utf-8')
+        messages = {catalog.literal(args[1]) for args in catalog.calls(code, 'require')
+                    if len(args) > 1 and catalog.literal(args[1]) is not None}
+        self.assertTrue(messages)
+        declared = catalog.sources()
+        contexts = json.loads((root / 'data/localization/translation-context.json').read_text(encoding='utf-8'))
+        mapping = (root / 'src/audio_error_text.h').read_text(encoding='utf-8')
+        inventory = json.loads((root / 'tests/results/localization/wave-diagnostic-gap.json').read_text(encoding='utf-8'))
+        self.assertEqual(messages, {row['source'] for row in inventory['messages']})
+        for source in messages:
+            with self.subTest(source=source):
+                self.assertIn(source, declared)
+                self.assertTrue(contexts.get(source))
+                self.assertIn('if (diagnostic == QStringLiteral("' + source + '"))\n        return SC_TR("' + source + '");', mapping)
+        # Binary header bytes must not be treated as a human diagnostic.
+        self.assertNotIn('WAVEfmt ', messages)
+
     def test_welcome_paragraphs_keep_update_and_background_meaning(self):
         root = Path(__file__).resolve().parents[1]
         product = 'SoundCurrent Studio' if (root / 'src/studio_model.cpp').exists() else 'SoundCurrent EQ'
