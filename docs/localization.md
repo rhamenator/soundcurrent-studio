@@ -326,3 +326,7 @@ Both summary lines have translations in all 34 catalogs. Actual compiled tests c
 ### Standalone help heading and usage
 
 The renderer heading, usage template and one-based channel/no-overwrite explanation are translated in all 34 catalogs. Actual compiled tests compare these help lines for both `--help` and missing required input/output arguments. Executable name, flags and example filenames remain literal. File-based wording avoids a network-disconnection implication in Bokmål, Nynorsk and Swahili. Native review remains unverified. Option descriptions and the input/output format footer are still English, so help translation is incomplete.
+
+### First four standalone help options
+
+Language selection, output channel count, explicit routing and per-channel peaking EQ descriptions are translated in all 34 catalogs. Exact compiled help-line tests preserve command flags, argument tokens and whitespace. Context review confirms that explicit routing removes default routes rather than restoring them. Thirteen option descriptions and the format footer remain English. Earlier native Windows/Linux engine CI [37883666514](https://github.com/rhamenator/soundcurrent-studio/actions/runs/37883666514) passed all eight CTests at the 796-message commit `7c78ba7`, including the CRLF correction; it excludes this later 800-message batch. Native-speaker review and current package qualification remain unverified.

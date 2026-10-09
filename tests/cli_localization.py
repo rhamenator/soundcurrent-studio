@@ -42,6 +42,13 @@ with tempfile.TemporaryDirectory() as directory:
             assert lines[1] == messages['Usage: %1 [options]'].replace('%1',
                 'soundcurrent-studio-render --input in.wav --output NEW.wav')
             assert lines[-1] == messages['Channel indexes start at 1. Existing output files are never overwritten.']
+            for row, prefix, source in [
+                (2, '  --language TAG         ', 'interface language; unsupported tags use English'),
+                (3, '  --output-channels N    ', '1-256 output channels (default: input count)'),
+                (4, '  --route OUT:IN:DB      ', 'explicit matrix gain; using any route clears defaults'),
+                (5, '  --eq CH:HZ:DB:Q        ', 'peaking EQ for one output channel; repeat as needed')]:
+                assert lines[row] == prefix + messages[source], (tag, row, lines[row])
+
         output = folder / 'sortie-音声-мікрофон-🎵.wav'
         result = subprocess.run([renderer, '--language', tag, '--input', str(folder / 'missing.wav'),
                                  '--output', str(output)], capture_output=True, timeout=10)

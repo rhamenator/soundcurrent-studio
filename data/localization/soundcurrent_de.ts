@@ -110,6 +110,11 @@ In Ihre Bibliothek importieren?</translation>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>1-256 output channels (default: input count)</source>
+      <extracomment>CLI output channel count is inclusive 1–256, default equal to input WAVE channel count. Preserve the literal numeric range 1-256. Not input device selection.</extracomment>
+      <translation>1-256 Ausgabekanäle (Standard: Anzahl der Eingabekanäle)</translation>
+    </message>
+    <message>
       <source>16 channels</source>
       <translation>16 Kanäle</translation>
     </message>
@@ -3344,6 +3349,21 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
       <translation>Null schaltet den jeweiligen Effekt aus. Diese Höreffekte gelten für die Lautsprecherwiedergabe, nicht für die Mikrofonkorrektur.</translation>
+    </message>
+    <message>
+      <source>explicit matrix gain; using any route clears defaults</source>
+      <extracomment>CLI --route OUT:IN:DB: when any explicit route exists the matrix starts at zero; only specified routes remain. Clearing defaults does not restore identity or automatic routing.</extracomment>
+      <translation>explizite Matrixverstärkung; jede Route entfernt die Standardrouten</translation>
+    </message>
+    <message>
+      <source>interface language; unsupported tags use English</source>
+      <extracomment>CLI --language: selects interface catalog, normalizes tag case/separators and uses supported base language where available. Unresolved tags fall back to English. Does not change audio or numeric argument syntax.</extracomment>
+      <translation>Oberflächensprache; nicht unterstützte Sprachcodes verwenden Englisch</translation>
+    </message>
+    <message>
+      <source>peaking EQ for one output channel; repeat as needed</source>
+      <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
+      <translation>Peaking-EQ für einen Ausgabekanal; bei Bedarf wiederholen</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>

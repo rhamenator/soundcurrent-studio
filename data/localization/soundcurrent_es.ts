@@ -110,6 +110,11 @@ Import into your library?</source>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>1-256 output channels (default: input count)</source>
+      <extracomment>CLI output channel count is inclusive 1–256, default equal to input WAVE channel count. Preserve the literal numeric range 1-256. Not input device selection.</extracomment>
+      <translation>1-256 canales de salida (por defecto: número de canales de entrada)</translation>
+    </message>
+    <message>
       <source>16 channels</source>
       <translation>16 canales</translation>
     </message>
@@ -3344,6 +3349,21 @@ Import into your library?</source>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
       <translation>Un valor de cero desactiva cada efecto. Estos efectos de escucha se aplican a la reproducción de los altavoces, no a la corrección del micrófono.</translation>
+    </message>
+    <message>
+      <source>explicit matrix gain; using any route clears defaults</source>
+      <extracomment>CLI --route OUT:IN:DB: when any explicit route exists the matrix starts at zero; only specified routes remain. Clearing defaults does not restore identity or automatic routing.</extracomment>
+      <translation>ganancia explícita de matriz; cualquier ruta elimina las rutas predeterminadas</translation>
+    </message>
+    <message>
+      <source>interface language; unsupported tags use English</source>
+      <extracomment>CLI --language: selects interface catalog, normalizes tag case/separators and uses supported base language where available. Unresolved tags fall back to English. Does not change audio or numeric argument syntax.</extracomment>
+      <translation>idioma de la interfaz; los códigos no admitidos usan inglés</translation>
+    </message>
+    <message>
+      <source>peaking EQ for one output channel; repeat as needed</source>
+      <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
+      <translation>EQ de campana para un canal de salida; repetir según sea necesario</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>

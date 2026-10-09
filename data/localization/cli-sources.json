@@ -60,5 +60,9 @@
   "Peak before clipping: %1; clipped samples: %2; invalid samples: %3",
   "SoundCurrent Studio offline renderer (no audio device required)",
   "Usage: %1 [options]",
-  "Channel indexes start at 1. Existing output files are never overwritten."
+  "Channel indexes start at 1. Existing output files are never overwritten.",
+  "interface language; unsupported tags use English",
+  "1-256 output channels (default: input count)",
+  "explicit matrix gain; using any route clears defaults",
+  "peaking EQ for one output channel; repeat as needed"
 ]

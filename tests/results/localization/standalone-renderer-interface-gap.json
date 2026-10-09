@@ -1,7 +1,7 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Owned CLI exception messages, successful summaries, help heading/usage and channel/file-protection explanation translated across 34 catalogs. Help option descriptions and format footer remain English; current-package qualification remains pending.",
-  "sourceSha256": "3d047ec007addd34a46153b2ce798057bec57fa97140c57dd1204e1b71011746",
+  "status": "Owned CLI diagnostics, summaries, help heading/usage/channel explanation and four option descriptions translated across 34 catalogs. Thirteen option descriptions and format footer remain English; current-package qualification remains pending.",
+  "sourceSha256": "a2e32551fbe24dd67db7225b94989c5690098da010f90b62677e5f7cddb40736",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
     "engineEvidence": "src/engine.cpp postGainDb validation",
@@ -20,7 +20,7 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 796,
+  "catalogMessages": 800,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -96,12 +96,13 @@
     "windowsCurrentCommit": "pending CI"
   },
   "helpVerification": {
-    "translated": "Renderer heading, Usage template and one-based channel/no-overwrite explanation in all 34 compiled catalogs. Contextual AI review; native review unverified.",
+    "translated": "Renderer heading, Usage, channel/no-overwrite explanation and descriptions for language, channel count, routing and peaking EQ in 34 compiled catalogs.",
     "actualRuntime": "Compiled CLI exact first/second/final help lines pass in all catalogs and fallback cases for --help (exit 0) and missing required input/output (exit 1).",
     "commandInvariant": "Usage substitution preserves executable name, --input/--output flags and in.wav/NEW.wav examples. Parser, processing and saved-state code unchanged.",
     "terminology": "Bokmål/Nynorsk/Swahili heading uses file-based wording to avoid implying Internet disconnection.",
-    "remaining": "All option descriptions and PCM/float WAVE format footer require translation.",
-    "result": "cli-localization and cli-error-text CTests passed"
+    "remaining": "Thirteen option descriptions and PCM/float WAVE format footer require translation.",
+    "result": "cli-localization and cli-error-text CTests passed",
+    "optionChecks": "Exact compiled lines including immutable flags, argument syntax and whitespace pass in all catalogs and fallback cases for --help and missing required paths."
   },
   "windowsSummaryTestCorrection": {
     "run": 37883322299,
@@ -109,6 +110,6 @@
     "observed": "Windows summary content and numbers matched the expected English text, but literal LF comparison rejected normal CRLF output. Other seven engine CTests passed.",
     "correction": "Compare exact decoded output lines with splitlines, retaining all text/value checks and cross-locale WAV hashes.",
     "localRegression": "Both compiled CLI tests passed after correction.",
-    "nativeWindowsRetest": "pending new CI; not qualified by the failed run."
+    "nativeWindowsRetest": "Passed at 7c78ba7d901becd1e1f19ac5cbd74a6782cb9730, run 37883666514; all eight CTests on Windows 2022 and Ubuntu 24.04."
   }
 }

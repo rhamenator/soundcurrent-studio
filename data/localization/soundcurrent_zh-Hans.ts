@@ -110,6 +110,11 @@ Import into your library?</source>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>1-256 output channels (default: input count)</source>
+      <extracomment>CLI output channel count is inclusive 1–256, default equal to input WAVE channel count. Preserve the literal numeric range 1-256. Not input device selection.</extracomment>
+      <translation>1-256 个输出通道（默认：输入通道数）</translation>
+    </message>
+    <message>
       <source>16 channels</source>
       <translation>16 声道</translation>
     </message>
@@ -3344,6 +3349,21 @@ Import into your library?</source>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
       <translation>零值会关闭各项音效。这些聆听音效应用于扬声器播放，不用于麦克风校正。</translation>
+    </message>
+    <message>
+      <source>explicit matrix gain; using any route clears defaults</source>
+      <extracomment>CLI --route OUT:IN:DB: when any explicit route exists the matrix starts at zero; only specified routes remain. Clearing defaults does not restore identity or automatic routing.</extracomment>
+      <translation>显式矩阵增益；使用任意路由都会清除默认路由</translation>
+    </message>
+    <message>
+      <source>interface language; unsupported tags use English</source>
+      <extracomment>CLI --language: selects interface catalog, normalizes tag case/separators and uses supported base language where available. Unresolved tags fall back to English. Does not change audio or numeric argument syntax.</extracomment>
+      <translation>界面语言；不支持的语言标签使用英语</translation>
+    </message>
+    <message>
+      <source>peaking EQ for one output channel; repeat as needed</source>
+      <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
+      <translation>为单个输出通道添加钟形 EQ；可按需重复</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>

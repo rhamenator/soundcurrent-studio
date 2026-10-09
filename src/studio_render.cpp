@@ -87,10 +87,10 @@ void help() {
         << soundcurrent::cli::format("Usage: %1 [options]",
             {"soundcurrent-studio-render --input in.wav --output NEW.wav"}) << '\n'
         <<
-        "  --language TAG         interface language; unsupported tags use English\n"
-        "  --output-channels N    1-256 output channels (default: input count)\n"
-        "  --route OUT:IN:DB      explicit matrix gain; using any route clears defaults\n"
-        "  --eq CH:HZ:DB:Q        peaking EQ for one output channel; repeat as needed\n"
+        "  --language TAG         " << soundcurrent::cli::text("interface language; unsupported tags use English") << '\n' <<
+        "  --output-channels N    " << soundcurrent::cli::text("1-256 output channels (default: input count)") << '\n' <<
+        "  --route OUT:IN:DB      " << soundcurrent::cli::text("explicit matrix gain; using any route clears defaults") << '\n' <<
+        "  --eq CH:HZ:DB:Q        " << soundcurrent::cli::text("peaking EQ for one output channel; repeat as needed") << '\n' <<
         "  --lowpass CH:HZ:Q     optional channel low-pass (e.g. LFE)\n"
         "  --highpass CH:HZ:Q    optional channel high-pass\n"
         "  --gain CH:DB           output channel trim, -60 to +24 dB\n"
