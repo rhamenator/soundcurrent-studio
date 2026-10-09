@@ -16,6 +16,8 @@ class Fixture : public QTranslator {
   if(QByteArray(source)=="Chunk extends beyond RIFF bounds")return "RIFF_BOUNDS";
   if(QByteArray(source)=="Could not write WAVE header")return "WAVE_HEADER";
   if(QByteArray(source)=="Could not write WAVE audio")return "WAVE_AUDIO";
+  if(QByteArray(source)=="Incomplete WAVE output")return "WAVE_INCOMPLETE";
+  if(QByteArray(source)=="Truncated chunk header")return "CHUNK_HEADER";
   if(QByteArray(source)=="Could not flush WAVE output")return "WAVE_FLUSH";
   if(QByteArray(source)=="Could not close WAVE output")return "WAVE_CLOSE";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
@@ -33,6 +35,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Incomplete WAVE output")=="WAVE_INCOMPLETE");
+ require(audioErrorText("Truncated chunk header")=="CHUNK_HEADER");
  require(audioErrorText("Could not write WAVE header")=="WAVE_HEADER");
  require(audioErrorText("Could not write WAVE audio")=="WAVE_AUDIO");
  require(audioErrorText("Could not flush WAVE output")=="WAVE_FLUSH");

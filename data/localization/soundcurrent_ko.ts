@@ -1244,6 +1244,11 @@ Import into your library?</source>
       <translation>프리뷰 릴리스 포함</translation>
     </message>
     <message>
+      <source>Incomplete WAVE output</source>
+      <translation>WAVE 출력이 불완전합니다</translation>
+      <extracomment>Owned WaveWriter finalization validation: written frame count differs from the declared output frame count. Not merely a quiet or short musical passage. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Initialize audio capture</source>
       <translation>오디오 캡처 초기화</translation>
     </message>
@@ -2904,6 +2909,11 @@ Import into your library?</source>
       <source>Truncated WAVE file</source>
       <translation>WAVE 파일이 불완전합니다</translation>
       <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated chunk header</source>
+      <translation>데이터 청크 헤더가 불완전합니다</translation>
+      <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

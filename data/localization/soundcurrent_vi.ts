@@ -1244,6 +1244,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Bao gồm bản phát hành xem trước</translation>
     </message>
     <message>
+      <source>Incomplete WAVE output</source>
+      <translation>Đầu ra WAVE chưa hoàn chỉnh</translation>
+      <extracomment>Owned WaveWriter finalization validation: written frame count differs from the declared output frame count. Not merely a quiet or short musical passage. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Initialize audio capture</source>
       <translation>Khởi tạo thu âm thanh</translation>
     </message>
@@ -2904,6 +2909,11 @@ Nhập vào thư viện của bạn?</translation>
       <source>Truncated WAVE file</source>
       <translation>Tệp WAVE bị cắt cụt</translation>
       <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated chunk header</source>
+      <translation>Phần đầu khối dữ liệu bị cắt cụt</translation>
+      <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Incomplete WAVE output"))
+        return SC_TR("Incomplete WAVE output");
+    if (diagnostic == QStringLiteral("Truncated chunk header"))
+        return SC_TR("Truncated chunk header");
     if (diagnostic == QStringLiteral("Could not write WAVE header"))
         return SC_TR("Could not write WAVE header");
     if (diagnostic == QStringLiteral("Could not write WAVE audio"))

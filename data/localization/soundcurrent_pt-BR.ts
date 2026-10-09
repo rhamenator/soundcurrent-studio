@@ -1244,6 +1244,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Incluir versões de pré-lançamento</translation>
     </message>
     <message>
+      <source>Incomplete WAVE output</source>
+      <translation>Saída WAVE incompleta</translation>
+      <extracomment>Owned WaveWriter finalization validation: written frame count differs from the declared output frame count. Not merely a quiet or short musical passage. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Initialize audio capture</source>
       <translation>Inicializar a captura de áudio</translation>
     </message>
@@ -2904,6 +2909,11 @@ Importar para a sua biblioteca?</translation>
       <source>Truncated WAVE file</source>
       <translation>Arquivo WAVE truncado</translation>
       <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated chunk header</source>
+      <translation>Cabeçalho de bloco truncado</translation>
+      <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

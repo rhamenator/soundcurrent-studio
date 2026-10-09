@@ -56,7 +56,9 @@
     },
     {
       "source": "Incomplete WAVE output",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Input is too short for RIFF/WAVE",
@@ -136,7 +138,9 @@
     },
     {
       "source": "Truncated chunk header",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Truncated extensible WAVE format",
@@ -155,14 +159,14 @@
       "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "Twelve owned diagnostics translated and mapped; 20 other owned WAVE diagnostics remain untranslated",
+  "status": "Fourteen owned diagnostics translated and mapped; 18 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 759-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 761-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -192,6 +196,10 @@
   ],
   "writeChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 759 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "incompleteHeaderChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 761 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }
