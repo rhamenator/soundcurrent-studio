@@ -1,6 +1,6 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Declared WAVE diagnostics, Render template and four CLI parser diagnostics translated across 34 catalogs. Help and remaining CLI-specific diagnostics still require translation.",
+  "status": "Declared WAVE diagnostics, four CLI parser diagnostics and all nine literal engine configuration rejections translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
   "sourceSha256": "193bad9a9d49949d0b11c4c3926cd759ce4146e18f9ce1d593080cbd8e0b56d7",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
@@ -28,5 +28,13 @@
     "ubuntu24.04": "passed",
     "windows2022": "passed",
     "scope": "Previous 781-message commit; does not qualify the current 783-message build."
+  },
+  "engineDiagnosticVerification": {
+    "declaredErrors": 9,
+    "actualCompiledCasesPerLanguage": 7,
+    "languagesAndFallbackCases": 40,
+    "scope": "Actual valid PCM16 WAV input followed by rejected post gain, delay duration/feedback, reverb decay/damping, channel gain and EQ frequency. Allocation failure, state budget, invalid enhancement state and channel-vector mismatch are declaration/catalog checks only; not runtime fault injection.",
+    "result": "cli-localization CTest passed",
+    "nativeReviewed": false
   }
 }

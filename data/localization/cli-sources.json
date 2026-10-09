@@ -35,5 +35,14 @@
   "Missing option value",
   "Invalid finite numeric argument",
   "Wrong number of colon-separated fields",
-  "Channel indexes are one-based and must exist"
+  "Channel indexes are one-based and must exist",
+  "Channel configuration count does not match engine",
+  "Could not allocate effect state",
+  "Delay settings are outside the supported range",
+  "Effects exceed the preview's 128 MiB state budget",
+  "Invalid EQ band",
+  "Invalid channel gain or too many EQ bands",
+  "Invalid enhancement settings",
+  "Post gain must be finite and within -84 to +24 dB",
+  "Reverb settings are outside the supported range"
 ]

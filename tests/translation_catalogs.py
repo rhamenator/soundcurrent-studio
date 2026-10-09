@@ -15,6 +15,19 @@ spec.loader.exec_module(catalog)
 
 
 class CatalogTests(unittest.TestCase):
+    def test_engine_rejections_are_declared_for_standalone_cli(self):
+        root = Path(__file__).resolve().parents[1]
+        code = (root / 'src/engine.cpp').read_text(encoding='utf-8')
+        messages = {catalog.literal(args[0]) for args in catalog.calls(code, 'reject')
+                    if args and catalog.literal(args[0]) is not None}
+        self.assertTrue(messages)
+        declared = json.loads((root / 'data/localization/cli-sources.json').read_text(encoding='utf-8'))
+        for source in messages:
+            self.assertIn(source, declared)
+            for row in json.loads((root / 'data/localization/catalogs.json').read_text(encoding='utf-8')):
+                entries = catalog.entries(root / ('data/localization/soundcurrent_' + row['tag'] + '.ts'))
+                self.assertTrue(catalog.finished(entries[source]), (row['tag'], source))
+
     def test_all_owned_wave_diagnostics_have_reviewed_display_mappings(self):
         root = Path(__file__).resolve().parents[1]
         code = (root / 'src/wav.cpp').read_text(encoding='utf-8')

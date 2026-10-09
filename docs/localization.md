@@ -290,3 +290,7 @@ All 32 owned diagnostics inventoried in `src/wav.cpp` are mapped at the desktop 
 ### Standalone CLI field and channel errors
 
 The CLI now localizes incorrect colon-separated field counts and invalid one-based channel indexes in all 34 catalogs. The actual compiled renderer rejects `--eq 1:100` and `--output-channels 0` with exact translated diagnostics in each language. The engine-only CTest passed. Translations have contextual AI review; native review remains unverified. CLI help and other CLI-specific messages remain open, and current-package qualification is pending.
+
+### Shared engine diagnostics in the standalone renderer
+
+The standalone renderer now embeds the existing desktop translations for all nine literal engine configuration rejections. Seven actual invalid-setting workflows per language exercise post gain, delay, reverb, channel gain and EQ frequency after loading a valid PCM16 WAV. The compiled CLI test passes in all 34 catalogs plus normalized/fallback tags. A source guard requires future literal engine rejections to be declared for CLI translation. Allocation failures and unavailable internal states have catalog checks only, not runtime fault injection. CLI help and remaining CLI-specific messages are still incomplete.
