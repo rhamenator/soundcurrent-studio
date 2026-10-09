@@ -1,0 +1,17 @@
+{
+  "run": 37912695248,
+  "qualifiedProductionHead": "2d35e5d8c184f632b53680b757a50042e99a9e0f",
+  "platform": "Fedora 44 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-complete-installer-37912695248/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+  "packageSha256": "ce2c8aa2573e373c903568a3b9532b2bbfb9b13e55ceefc1efeb69d18e784676",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; actual installed locale fixtures and exact launcher bytes. Installer text tests do not execute its privileged install path. Later source guards and terminal fixtures were separately tested locally.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false
+}
