@@ -1,0 +1,16 @@
+{
+  "run": 37906720486,
+  "qualifiedProductionHead": "32ff347fd5d20f46e48a9450d6959c75fa5e7181",
+  "platform": "Ubuntu 24.04 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-startup-37906720486/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+  "packageSha256": "0c735529b115268d5f0fbd5e1c03958776532b614c9db40139a3a902c5673f41",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherSha256": "16b8ce6b6e0251350a0f54d3bfeb7ec5ce88a3e48b89e5d95421677ad683db66",
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentCompiledSourceMatchesQualifiedHead": true,
+  "scope": "Debian package install, same-package update, uninstall/config preservation and reinstall; actual installed language fixtures plus exact installed launcher bytes. Later source guards/reports differ; compiled src/data/CMake do not. RPM qualification is separate and pending.",
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false
+}
