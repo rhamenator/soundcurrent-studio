@@ -19,7 +19,7 @@
         "tests/results/localization/dynamic-provenance-review.json",
         "tests/results/localization/expanded-display-sinks.json"
       ],
-      "remaining": "Expanded sink/provenance review covers declared display expressions; audit remaining interface surfaces and provider/owned boundaries before claiming whole-interface completion"
+      "remaining": "Linux easy installer has 26 owned messages with en/fr/ar/nn populated and 30 locales pending. Whole-interface audit remains open."
     },
     {
       "requirement": "Contextual terminology review",
@@ -77,9 +77,9 @@
   ],
   "evidenceSha256": {
     "data/localization/catalogs.json": "a377c1c35201cfda60b55296ee51c01c24ab413e09d49addd3f5c0794c98d810",
-    "docs/translation-review.md": "5301c4eb65b319390457162aac77576e1bef654d06b0a9f636750e0127f217e4",
+    "docs/translation-review.md": "e1a24bfb16e584dc031e3828b81a8c7de989cc95436e78e2499c16fb70e68dc0",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
-    "tests/translation_catalogs.py": "1247a956b8b569681941780db8a7754fda723d629fcfd2535135a292ba19ac64",
+    "tests/translation_catalogs.py": "3eeb86386623198749876bdb7eef4437fa56557e8b3a672e0da0fc690fa6cc42",
     "scripts/ui_string_audit.py": "681c99092923ff7e1e0587421b7cf163d8901c024617b111732d99b98e683957",
     "tests/results/localization/dynamic-display-inventory.json": "bb21a7e26fb3d0b980d33a4e8b2f0eb810d0dfc2c221d78b668d33c6b707843d",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
@@ -250,7 +250,7 @@
   "qualifiedPrecedingHead": "d47444950981f2cc06e740dc0ac70f88ae551f7f",
   "audioDisplayNumbers": "tests/results/localization/audio-display-numbers.json",
   "qualifiedCurrentProductionHead": "1f9205dc2cdcb8f6892780270626a391c7a10d9a",
-  "currentProductionSourceMatch": "Current source/catalogs include startup diagnostics and launcher descriptions beyond qualified public-update packages. Startup package qualification pending; launcher-only Linux lifecycle succeeded but artifacts not yet inspected.",
+  "currentProductionSourceMatch": "Standalone Linux installer catalog/generator and test registration changed beyond qualified startup packages; compiled src/Qt resource catalogs unchanged. Installer locale work and qualification remain incomplete.",
   "balanceNumberFormats": "tests/results/localization/balance-number-formats.json",
   "profileGraphNumberFormats": "tests/results/localization/profile-graph-number-formats.json",
   "fileTypeProviderBoundary": "tests/results/localization/file-type-provider-boundary.json",
@@ -264,5 +264,6 @@
   "startupDiagnosticReview": "tests/results/localization/startup-diagnostic-gap.json",
   "rendererDirectDiagnosticGuard": "tests/results/localization/renderer-direct-diagnostic-guard.json",
   "ubuntuStartupPackageEvidence": "tests/results/localization/ubuntu-startup-installed/verified-artifact.json",
-  "windowsStartupPackageEvidence": "tests/results/localization/windows-startup-installed/verified-artifact.json"
+  "windowsStartupPackageEvidence": "tests/results/localization/windows-startup-installed/verified-artifact.json",
+  "linuxEasyInstallerReview": "tests/results/localization/linux-easy-installer-gap.json"
 }
