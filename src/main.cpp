@@ -4195,8 +4195,15 @@ int main(int argc, char **argv) {
             bool rejected=false;
             try {operation();}catch(const std::exception &error) {
                 rejected=true;const auto reason=QString::fromUtf8(error.what());
-                if(reason!=QString::fromUtf8(expected) || soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(expected))
-                    qFatal("Owned Studio validation reason or localized display changed");
+                const auto displayed=soundcurrent::i18n::audioErrorText(reason);
+                const auto expectedDisplay=soundcurrent::i18n::text(expected);
+                if(reason!=QString::fromUtf8(expected) || displayed!=expectedDisplay) {
+                    // Hex preserves exact UTF-8 diagnostics in Windows CI logs. These
+                    // strings come only from this bounded, synthetic validation test.
+                    qFatal("Owned Studio validation mismatch: expected=%s actual=%s displayed=%s expectedDisplay=%s",
+                           QByteArray(expected).toHex().constData(), reason.toUtf8().toHex().constData(),
+                           displayed.toUtf8().toHex().constData(), expectedDisplay.toUtf8().toHex().constData());
+                }
             }
             if(!rejected)qFatal("Malformed Studio setup was accepted");
         };

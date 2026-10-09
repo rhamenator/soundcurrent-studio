@@ -1,0 +1,21 @@
+{
+  "scope": "Diagnose Windows-only owned Studio validation UI failure without weakening assertions",
+  "failureEvidence": "studio-staged-output-ui-failure.log",
+  "failingWindowsSource": "54aa95e",
+  "change": "Report expected invariant reason, actual reason, localized display and expected localized display as exact UTF-8 hex from synthetic fixtures",
+  "linuxValidation": {
+    "rebuiltTarget": "soundcurrent-studio",
+    "locales": [
+      "de",
+      "ar",
+      "nn"
+    ],
+    "passed": 3,
+    "evidence": "owned-validation-host.log"
+  },
+  "windowsValidation": "Pending new CI after diagnostic commit",
+  "productionProcessingChanged": false,
+  "nativeSpeakerVerification": "unverified",
+  "currentPackagesQualified": false,
+  "wholeInterfaceCoverageProven": false
+}
