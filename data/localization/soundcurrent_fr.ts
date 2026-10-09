@@ -84,6 +84,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>%1 Hz : mesure %2%3 dB ; proposition %4%5 dB</translation>
     </message>
     <message>
+      <source>%1 Hz: signal %2, background %3</source>
+      <translation>%1 Hz : signal %2, bruit de fond %3</translation>
+      <extracomment>Debug calibration tone amplitude and background noise amplitude. %1 is frequency, %2 signal amplitude, %3 background amplitude. Display only; no change to numerical analysis.</extracomment>
+    </message>
+    <message>
       <source>%1 Hz: too quiet to measure</source>
       <translation>%1 Hz : niveau trop faible pour mesurer</translation>
     </message>
@@ -569,6 +574,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Impossible de démarrer la mesure : %1</translation>
     </message>
     <message>
+      <source>Capture bytes: %1, noise bytes: %2</source>
+      <translation>Octets enregistrés : %1, octets de bruit : %2</translation>
+      <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Centre</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -621,6 +631,11 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Check for updates</source>
       <translation>Rechercher des mises à jour</translation>
+    </message>
+    <message>
+      <source>Checking %1 Hz</source>
+      <translation>Vérification à %1 Hz</translation>
+      <extracomment>Calibration worker progress for a single test frequency. %1 is a locale-formatted frequency; Hz is the physical unit.</extracomment>
     </message>
     <message>
       <source>Checking for published updates…</source>
@@ -1712,6 +1727,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>La mesure a échoué. Essayez un niveau de test plus élevé ou rapprochez le microphone.</translation>
     </message>
     <message>
+      <source>Measurement failed: %1</source>
+      <translation>Échec de la mesure : %1</translation>
+      <extracomment>Calibration failure prefix. %1 is a translated owned diagnostic or preserved external technical detail; do not modify device identifiers or paths.</extracomment>
+    </message>
+    <message>
       <source>Measurement stopped.</source>
       <translation>Mesure arrêtée.</translation>
     </message>
@@ -2096,6 +2116,11 @@ Importer dans votre bibliothèque ?</translation>
     <message>
       <source>Playback</source>
       <translation>Lecture</translation>
+    </message>
+    <message>
+      <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
+      <translation>Lecture d’un balayage logarithmique de 20 Hz à 25 kHz</translation>
+      <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
