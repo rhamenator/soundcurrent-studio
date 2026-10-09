@@ -2982,6 +2982,11 @@ Wilt u het toch verwijderen?</translation>
       <translation>Geavanceerde regelaars tonen</translation>
     </message>
     <message>
+      <source>Show date modified</source>
+      <translation>Wijzigingsdatum tonen</translation>
+      <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
+    </message>
+    <message>
       <source>Show hidden files</source>
       <translation>Verborgen bestanden tonen</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -2989,6 +2994,16 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Piekmarkeringen op frequentieniveaus tonen</translation>
+    </message>
+    <message>
+      <source>Show size</source>
+      <translation>Grootte tonen</translation>
+      <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
+    </message>
+    <message>
+      <source>Show type</source>
+      <translation>Type tonen</translation>
+      <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
     </message>
     <message>
       <source>Side left</source>
