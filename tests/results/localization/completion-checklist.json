@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-09",
+  "overallStatus": "incomplete",
+  "evidence": {
+    "catalogPopulation": [
+      "data/localization/catalogs.json",
+      "tests/results/localization/linux-complete-installer-0/ctest.log",
+      "tests/results/localization/windows-startup-installed/verified-artifact.json"
+    ],
+    "contextualReview": [
+      "docs/translation-review.md",
+      "data/localization/translation-context.json"
+    ],
+    "idsStateAndNumbers": [
+      "tests/localization.cpp",
+      "tests/results/localization/rtl-regional-numbers.json"
+    ],
+    "ownedDisplayBoundaries": [
+      "tests/results/localization/dynamic-provenance-review.json",
+      "tests/results/localization/header-list-display-guard.json",
+      "tests/results/localization/studio-display-helper-guard.json",
+      "tests/results/localization/windows-backend-diagnostic-guard.json"
+    ],
+    "linuxLifecycle": [
+      "tests/results/localization/linux-complete-installer-0/verified-artifact.json",
+      "tests/results/localization/linux-complete-installer-1/verified-artifact.json",
+      "tests/results/localization/linux-complete-installer-2/verified-artifact.json"
+    ],
+    "windowsLifecycle": [
+      "tests/results/localization/windows-startup-installed/verified-artifact.json"
+    ],
+    "previewDelivery": [
+      "tests/results/localization/preview-bundle-verification.json"
+    ]
+  },
+  "evidenceSha256": {
+    "data/localization/catalogs.json": "a377c1c35201cfda60b55296ee51c01c24ab413e09d49addd3f5c0794c98d810",
+    "tests/results/localization/linux-complete-installer-0/ctest.log": "a8272b3dfe3644174f77054cf5ab6242c47a703fd3c19e1f6c714cc535f7f95e",
+    "tests/results/localization/windows-startup-installed/verified-artifact.json": "6ad780b65b503c7cd57ab4d5e3ff4cd35ee7ca179da3cbdc00e288ca69cd8b15",
+    "docs/translation-review.md": "67e335da6024c9a1e1818629f32841d2c3fce8509474ce3230a613a4926a4ea4",
+    "data/localization/translation-context.json": "a974e9cd099dc2a9ee9a3b70c3dba4e1c0a0232660ec5a90ab8df87501d70b69",
+    "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
+    "tests/results/localization/rtl-regional-numbers.json": "17b7144a8b04fe80f91b1947d15ad44fc20fe9ad9b54887847c3b938040943b9",
+    "tests/results/localization/dynamic-provenance-review.json": "26a0e846521bd2b7f44fa9d77a3846e3af967f868abe15b94f511af0e61df855",
+    "tests/results/localization/header-list-display-guard.json": "59de5321940447a4a3156780172610981f35fc7d453b622e205c1217eb86dca1",
+    "tests/results/localization/studio-display-helper-guard.json": "152d5d4425df6434f26516eb48a3fff3467131bc9280159960e4fbb286711a2f",
+    "tests/results/localization/windows-backend-diagnostic-guard.json": "77084a474d8f34db2c948f7772a4b4731e19b20e8b505a29df8237457429cb8b",
+    "tests/results/localization/linux-complete-installer-0/verified-artifact.json": "f401f7f8390a17316357fef65756141ac534605f8465a38f24308fc21557bc1c",
+    "tests/results/localization/linux-complete-installer-1/verified-artifact.json": "ad680f30097f51d17872effae3374de461ab34839818e5333e43c96ab59e3989",
+    "tests/results/localization/linux-complete-installer-2/verified-artifact.json": "1aa0e8555f067ad72cacc4aaffaa5b766840e03c3ea701ab5a12d251849a565b",
+    "tests/results/localization/preview-bundle-verification.json": "a5c7852b2314f58e796a080700638d4f45886f19d5c277a07e522df486dbea45"
+  },
+  "nativeSpeakerVerification": "unverified; no certification claimed",
+  "openChecks": [
+    {
+      "requirement": "Actual easy-installer update workflow",
+      "status": "Hosted disposable-container run active; inspect terminal transcript, localized acceptance, checksum and final package-manager outcome before qualifying",
+      "run": 37914220039
+    },
+    {
+      "requirement": "Whole owned-interface coverage",
+      "status": "Consolidate finite source-surface audit across main window, equipment editor, standard dialogs, update/startup controls, platform helpers, CLI and both installers; listed lexical guards are bounded evidence, not whole coverage."
+    },
+    {
+      "requirement": "Current deliverables",
+      "status": "Refresh preview source archive after audit/test changes; app binaries and installer catalogs unchanged."
+    }
+  ],
+  "separateUnexercisedScopes": [
+    "Native-speaker accuracy",
+    "All-locale visual rendering",
+    "Screen-reader speech",
+    "Protected-path deletion failures",
+    "Older-version migration",
+    "Physical Windows audio/device workflows"
+  ],
+  "preservation": "No changes to virtual driver or separately owned DAW workspace in this pass; diagnostic IDs and processing remain unchanged."
+}
