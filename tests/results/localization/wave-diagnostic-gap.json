@@ -132,11 +132,15 @@
     },
     {
       "source": "Only PCM16/24/32 or float32 WAVE is supported",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Only little-endian RIFF/WAVE is supported",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Output exceeds the RIFF/WAVE 4 GiB limit",
@@ -183,14 +187,14 @@
       "nativeReviewed": false
     }
   ],
-  "status": "Twenty-six owned diagnostics translated and mapped; 6 other owned WAVE diagnostics remain untranslated",
+  "status": "Twenty-eight owned diagnostics translated and mapped; 4 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 773-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 775-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -248,6 +252,10 @@
   ],
   "dataChunkChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 773 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "encodingChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 775 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

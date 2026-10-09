@@ -1833,6 +1833,16 @@ Importeren in uw bibliotheek?</translation>
       <translation>Aan · Afspelen via %1</translation>
     </message>
     <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>Alleen PCM16/24/32 of float32 WAVE wordt ondersteund</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>Alleen RIFF/WAVE met little-endian bytevolgorde wordt ondersteund</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
       <translation>Er start bij het aanmelden maar één SoundCurrent-app. Inschakelen vervangt de opstartinstelling van de andere app. De app start op de achtergrond als een systeemvakpictogram beschikbaar is.</translation>
     </message>

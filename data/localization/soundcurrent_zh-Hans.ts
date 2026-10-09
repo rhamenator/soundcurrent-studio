@@ -1833,6 +1833,16 @@ Import into your library?</source>
       <translation>开启 · 通过 %1 播放</translation>
     </message>
     <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>仅支持 PCM16/24/32 或 float32 WAVE</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>仅支持小端字节序的 RIFF/WAVE</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
       <translation>登录时只启动一个 SoundCurrent 应用。启用此选项会替换另一个应用的启动设置。如果系统托盘图标可用，应用将在后台启动。</translation>
     </message>

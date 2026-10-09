@@ -1833,6 +1833,16 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Activé · Lecture sur %1</translation>
     </message>
     <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>Seul WAVE en PCM16/24/32 ou float32 est pris en charge</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>Seul RIFF/WAVE en ordre petit-boutiste est pris en charge</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
       <translation>Une seule application SoundCurrent démarre à l’ouverture de session. Activer cette option remplace le réglage de démarrage de l’autre application. Elle démarre en arrière-plan si une icône de notification est disponible.</translation>
     </message>

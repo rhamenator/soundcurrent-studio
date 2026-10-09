@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Only little-endian RIFF/WAVE is supported"))
+        return SC_TR("Only little-endian RIFF/WAVE is supported");
+    if (diagnostic == QStringLiteral("Only PCM16/24/32 or float32 WAVE is supported"))
+        return SC_TR("Only PCM16/24/32 or float32 WAVE is supported");
     if (diagnostic == QStringLiteral("Missing or incomplete WAVE audio"))
         return SC_TR("Missing or incomplete WAVE audio");
     if (diagnostic == QStringLiteral("Multiple WAVE data chunks are unsupported"))

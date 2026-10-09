@@ -1833,6 +1833,16 @@ Import into your library?</source>
       <translation>चालू · %1 से चल रहा है</translation>
     </message>
     <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>केवल PCM16/24/32 या float32 WAVE समर्थित है</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>केवल little-endian बाइट क्रम वाला RIFF/WAVE समर्थित है</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
       <translation>साइन इन करने पर केवल एक SoundCurrent ऐप शुरू होता है। इसे सक्षम करने से दूसरे ऐप की स्टार्टअप सेटिंग बदल जाती है। ट्रे आइकन उपलब्ध होने पर यह बैकग्राउंड में शुरू होता है।</translation>
     </message>

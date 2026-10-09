@@ -1833,6 +1833,16 @@ Import into your library?</source>
       <translation>켜짐 · %1에서 재생 중</translation>
     </message>
     <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>PCM16/24/32 또는 float32 WAVE만 지원됩니다</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>리틀 엔디언 바이트 순서의 RIFF/WAVE만 지원됩니다</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
       <translation>로그인할 때 시작되는 SoundCurrent 앱은 하나뿐입니다. 이 옵션을 켜면 다른 앱의 자동 시작 설정을 대체합니다. 트레이 아이콘을 사용할 수 있으면 백그라운드에서 시작합니다.</translation>
     </message>

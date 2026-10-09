@@ -1833,6 +1833,16 @@ Import into your library?</source>
       <translation>روشن · پخش از طریق %1</translation>
     </message>
     <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>فقط WAVE با قالب PCM16/24/32 یا float32 پشتیبانی می‌شود</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>فقط RIFF/WAVE با ترتیب بایت little-endian پشتیبانی می‌شود</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
       <translation>فقط یک برنامه SoundCurrent هنگام ورود به سیستم شروع می‌شود. فعال کردن این گزینه تنظیم شروع برنامه دیگر را جایگزین می‌کند. اگر نماد سینی سیستم در دسترس باشد، برنامه در پس‌زمینه شروع می‌شود.</translation>
     </message>
