@@ -525,6 +525,11 @@ Import into your library?</source>
       <translation>Не удалось сохранить настройки</translation>
     </message>
     <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>Не удалось перейти к позиции аудиоданных WAVE</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot start measurement: %1</source>
       <translation>Не удалось начать измерение: %1</translation>
     </message>

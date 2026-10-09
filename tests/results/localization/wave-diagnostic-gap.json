@@ -16,7 +16,9 @@
     },
     {
       "source": "Cannot seek to WAVE audio",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Chunk extends beyond RIFF bounds",
@@ -137,14 +139,14 @@
       "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "Three owned diagnostics translated and mapped; 29 other owned WAVE diagnostics remain untranslated",
+  "status": "Four owned diagnostics translated and mapped; 28 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 750-message catalog; running CI jobs test their recorded heads",
+  "currentPackageQualification": "pending for 751-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -154,6 +156,10 @@
   ],
   "outputCreateChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 750 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves lookup"
+  ],
+  "seekChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 751 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves lookup"
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "run": 37878220110,
+  "testedHead": "9f33ec69f3f748daa7d7c8a6f3dad65042b0e580",
+  "catalogMessages": 747,
+  "packages": [
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37878220110/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "cd5431ca6cf13ba6bad84e95fca0d837a06928635248ed03c7878882463ed778",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-747-installed/package-validation-0"
+    },
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37878220110/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "3250ff0e11e4fe8d56526ace33f2174cda9bbc9829599d414b80513e18d95915",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-747-installed/package-validation-1"
+    },
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37878220110/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "0f5ddc697720134f723f31ce9a1d1bf56d0529c138b6af98661d8b83f7425c81",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-747-installed/package-validation-2"
+    }
+  ],
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "scope": "Exact packages, build/CTest, 33 installed language fixtures each, same-package update/uninstall/preservation/reinstall. Not actual RHEL desktop, live audio, interactive installer or native-language review. New 750-message catalog not qualified by this run.",
+  "nativeReviewed": false
+}

@@ -525,6 +525,11 @@ Zaimportować do biblioteki?</translation>
       <translation>Nie można zapisać konfiguracji</translation>
     </message>
     <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>Nie można przejść do pozycji danych audio WAVE</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot start measurement: %1</source>
       <translation>Nie można rozpocząć pomiaru: %1</translation>
     </message>

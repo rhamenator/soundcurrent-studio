@@ -525,6 +525,11 @@ Importare nella libreria?</translation>
       <translation>Impossibile salvare la configurazione</translation>
     </message>
     <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>Impossibile posizionarsi sui dati audio WAVE</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot start measurement: %1</source>
       <translation>Impossibile avviare la misurazione: %1</translation>
     </message>

@@ -525,6 +525,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Haiwezekani kuhifadhi usanidi</translation>
     </message>
     <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>Haiwezekani kwenda kwenye nafasi ya data ya sauti ya WAVE</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot start measurement: %1</source>
       <translation>Haiwezekani kuanza kipimo: %1</translation>
     </message>

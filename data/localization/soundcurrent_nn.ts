@@ -525,6 +525,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Kan ikkje lagre oppsettet</translation>
     </message>
     <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>Kan ikkje gå til posisjonen for WAVE-lyddata</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot start measurement: %1</source>
       <translation>Kan ikkje starte måling: %1</translation>
     </message>

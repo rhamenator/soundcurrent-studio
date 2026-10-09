@@ -7,6 +7,8 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Cannot seek to WAVE audio"))
+        return SC_TR("Cannot seek to WAVE audio");
     if (diagnostic == QStringLiteral("Cannot create output WAVE file"))
         return SC_TR("Cannot create output WAVE file");
     if (diagnostic == QStringLiteral("Truncated WAVE file"))

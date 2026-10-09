@@ -525,6 +525,11 @@ Import into your library?</source>
       <translation>설정을 저장할 수 없습니다</translation>
     </message>
     <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>WAVE 오디오 데이터 위치로 이동할 수 없습니다</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot start measurement: %1</source>
       <translation>측정을 시작할 수 없습니다: %1</translation>
     </message>

@@ -13,6 +13,7 @@ class Fixture : public QTranslator {
  QString translate(const char *context,const char *source,const char *,int) const override {
   if(QByteArray(context)!="SoundCurrent")return {};
   if(QByteArray(source).startsWith("Invalid ") || QByteArray(source).startsWith("Too many ") || QByteArray(source)=="Duplicate Studio route" || QByteArray(source)=="Enhancements outside supported ranges" || QByteArray(source).startsWith("Shared and channel EQ"))return "OWNED_DIAGNOSTIC";
+  if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
   if(QByteArray(source)=="Cannot create output WAVE file")return "WAVE_CREATE";
   if(QByteArray(source)=="Truncated WAVE file")return "WAVE_TRUNCATED";
   if(QByteArray(source)=="Cannot open input WAVE file")return "WAVE_OPEN";
@@ -30,6 +31,7 @@ int main(int argc,char **argv) try {
  require(audioErrorText("Cannot open input WAVE file")=="WAVE_OPEN");
  require(audioErrorText("Truncated WAVE file")=="WAVE_TRUNCATED");
  require(audioErrorText("Cannot create output WAVE file")=="WAVE_CREATE");
+ require(audioErrorText("Cannot seek to WAVE audio")=="WAVE_SEEK");
  const auto unicodeOutput=QString::fromUtf8("Réparation / 日本語 / العربية / %1 / 音声");
  const auto outputBytes=unicodeOutput.toUtf8()+"\r\n";
  QByteArray accumulated;
