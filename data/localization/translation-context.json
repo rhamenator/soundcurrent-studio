@@ -133,5 +133,7 @@
   "Route gain must be between -120 and +12 dB": "Standalone --route OUT:IN:DB matrix entry gain, inclusive -120 to +12 dB; machine numeric syntax and dB identifier unchanged. Not post gain or channel trim, whose ranges differ.",
   "Invalid routing matrix": "ChannelRouter rejected the supplied matrix dimensions or finite weight values. Mathematical audio mixing/routing matrix, not a visual grid.",
   "Invalid routing buffer": "ChannelRouter rejected interleaved input/output sample spans with incompatible sizes. Internal memory buffer, not physical routing hardware or network buffering.",
-  "Invalid processing buffer": "AudioEngine reported an invalid interleaved sample buffer size relative to its channel count. Internal memory buffer, not an effect preset or playback device."
+  "Invalid processing buffer": "AudioEngine reported an invalid interleaved sample buffer size relative to its channel count. Internal memory buffer, not an effect preset or playback device.",
+  "Cannot protect output staging directory": "POSIX permissions could not be restricted to owner-only on the renderer staging directory. Local temporary files, not encryption or network security. Windows branch does not emit this diagnostic.",
+  "Cannot publish output: %1; choose a new name on a filesystem supporting hard links": "Local atomic no-overwrite hard-link publication failed. %1 is the filesystem error detail and must be preserved verbatim. Publication means moving the completed render into its requested local filename, not Internet sharing. Hard links are filesystem links, not symbolic links."
 }

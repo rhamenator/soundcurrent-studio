@@ -497,6 +497,16 @@ Import into your library?</source>
       <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Cannot protect output staging directory</source>
+      <extracomment>POSIX permissions could not be restricted to owner-only on the renderer staging directory. Local temporary files, not encryption or network security. Windows branch does not emit this diagnostic.</extracomment>
+      <translation>임시 출력 디렉터리를 보호할 수 없습니다</translation>
+    </message>
+    <message>
+      <source>Cannot publish output: %1; choose a new name on a filesystem supporting hard links</source>
+      <extracomment>Local atomic no-overwrite hard-link publication failed. %1 is the filesystem error detail and must be preserved verbatim. Publication means moving the completed render into its requested local filename, not Internet sharing. Hard links are filesystem links, not symbolic links.</extracomment>
+      <translation>출력을 게시할 수 없습니다: %1. 하드 링크를 지원하는 파일 시스템에서 새 이름을 선택하세요</translation>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>프로파일 라이브러리를 읽을 수 없습니다.</translation>
     </message>

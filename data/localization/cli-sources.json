@@ -53,5 +53,7 @@
   "Invalid routing matrix",
   "Invalid routing buffer",
   "Invalid processing buffer",
-  "Too many Studio channel filters"
+  "Too many Studio channel filters",
+  "Cannot protect output staging directory",
+  "Cannot publish output: %1; choose a new name on a filesystem supporting hard links"
 ]

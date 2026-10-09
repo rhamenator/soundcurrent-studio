@@ -15,6 +15,31 @@ spec.loader.exec_module(catalog)
 
 
 class CatalogTests(unittest.TestCase):
+    def test_owned_cli_exception_messages_are_declared(self):
+        root = Path(__file__).resolve().parents[1]
+        declared = json.loads((root / 'data/localization/cli-sources.json').read_text(encoding='utf-8'))
+        code = (root / 'src/studio_render.cpp').read_text(encoding='utf-8')
+        aliases = {'Output already exists; choose a new filename': 'Output already exists; select a new filename',
+                   'Too many EQ bands for one channel': 'Too many Studio channel filters'}
+        templates = {'Unknown option: ': 'Unknown option: %1',
+                     'Cannot publish output: ': 'Cannot publish output: %1; choose a new name on a filesystem supporting hard links'}
+        seen = set()
+        for args in catalog.calls(code, 'runtime_error'):
+            expression = args[0]
+            source = catalog.literal(expression)
+            if source is not None:
+                self.assertIn(aliases.get(source, source), declared)
+                seen.add(source)
+            elif expression == 'error':
+                continue  # Engine configure errors have their separate source guard.
+            else:
+                first = re.match(catalog.LITERAL, expression)
+                self.assertIsNotNone(first, expression)
+                prefix = catalog.literal(first.group())
+                self.assertIn(prefix, templates)
+                self.assertIn(templates[prefix], declared)
+        self.assertTrue(seen)
+
     def test_engine_rejections_are_declared_for_standalone_cli(self):
         root = Path(__file__).resolve().parents[1]
         code = (root / 'src/engine.cpp').read_text(encoding='utf-8')

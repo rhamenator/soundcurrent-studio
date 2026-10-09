@@ -497,6 +497,16 @@ Importere til biblioteket ditt?</translation>
       <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Cannot protect output staging directory</source>
+      <extracomment>POSIX permissions could not be restricted to owner-only on the renderer staging directory. Local temporary files, not encryption or network security. Windows branch does not emit this diagnostic.</extracomment>
+      <translation>Den midlertidige utdatamappen kan ikke beskyttes</translation>
+    </message>
+    <message>
+      <source>Cannot publish output: %1; choose a new name on a filesystem supporting hard links</source>
+      <extracomment>Local atomic no-overwrite hard-link publication failed. %1 is the filesystem error detail and must be preserved verbatim. Publication means moving the completed render into its requested local filename, not Internet sharing. Hard links are filesystem links, not symbolic links.</extracomment>
+      <translation>Utdata kan ikke publiseres: %1; velg et nytt navn på et filsystem som støtter harde lenker</translation>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Kan ikke lese profilbiblioteket.</translation>
     </message>

@@ -42,6 +42,15 @@ inline std::string renderError(std::string_view diagnostic) {
         if (placeholder != std::string::npos)
             localized.replace(placeholder, 2, diagnostic.substr(unknownPrefix.size()));
     }
+    constexpr std::string_view publishPrefix = "Cannot publish output: ";
+    constexpr std::string_view publishSuffix = "; choose a new name on a filesystem supporting hard links";
+    if (diagnostic.starts_with(publishPrefix) && diagnostic.ends_with(publishSuffix)) {
+        localized = text("Cannot publish output: %1; choose a new name on a filesystem supporting hard links");
+        const auto placeholder = localized.find("%1");
+        if (placeholder != std::string::npos)
+            localized.replace(placeholder, 2, diagnostic.substr(publishPrefix.size(),
+                diagnostic.size() - publishPrefix.size() - publishSuffix.size()));
+    }
     auto result = text("Render: %1");
     const auto position = result.find("%1");
     if (position != std::string::npos) result.replace(position, 2, localized);

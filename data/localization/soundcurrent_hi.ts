@@ -497,6 +497,16 @@ Import into your library?</source>
       <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Cannot protect output staging directory</source>
+      <extracomment>POSIX permissions could not be restricted to owner-only on the renderer staging directory. Local temporary files, not encryption or network security. Windows branch does not emit this diagnostic.</extracomment>
+      <translation>अस्थायी आउटपुट डायरेक्टरी को सुरक्षित नहीं किया जा सकता</translation>
+    </message>
+    <message>
+      <source>Cannot publish output: %1; choose a new name on a filesystem supporting hard links</source>
+      <extracomment>Local atomic no-overwrite hard-link publication failed. %1 is the filesystem error detail and must be preserved verbatim. Publication means moving the completed render into its requested local filename, not Internet sharing. Hard links are filesystem links, not symbolic links.</extracomment>
+      <translation>आउटपुट प्रकाशित नहीं किया जा सकता: %1; हार्ड लिंक का समर्थन करने वाले फ़ाइल सिस्टम पर नया नाम चुनें</translation>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>प्रोफ़ाइल लाइब्रेरी नहीं पढ़ी जा सकती।</translation>
     </message>

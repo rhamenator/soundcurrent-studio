@@ -314,3 +314,7 @@ The standalone renderer uses a Windows `wmain` entry point, strict UTF-16 to UTF
 ### Routing errors and native Unicode CLI qualification
 
 Four routing/processing messages are translated across all 34 catalogs. Actual compiled tests reject route gains below −120 dB and above +12 dB in every catalog and fallback case. Internal matrix and buffer errors have compiled translation coverage but are not fault-injected. Native Windows 2022 and Ubuntu 24.04 engine CI run [37882316346](https://github.com/rhamenator/soundcurrent-studio/actions/runs/37882316346) passed all seven CTests, including Unicode CLI workflows, at the earlier 785-message commit `7c7e94e`. That evidence qualifies Unicode handling at that commit and does not qualify this later routing batch or desktop installers.
+
+### Output-management diagnostic templates
+
+Temporary-directory permission errors and local hard-link publication errors have translations in all 34 catalogs. A compiled display-boundary test preserves Unicode external filesystem detail and literal placeholder text; unknown partial-prefix exceptions retain their original text. This is diagnostic injection, not an actual permission or hard-link failure. Source guards now require all current owned CLI exception literals and both dynamic templates to be declared. Native review and real filesystem failure-path qualification remain unverified. CLI help and the successful-render summary are still untranslated, so whole-interface completion is not claimed.
