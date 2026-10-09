@@ -599,6 +599,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Chọn thư mục cập nhật…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>Khối dữ liệu vượt quá giới hạn RIFF</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>Loa rạp chiếu phim</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Invalid EQ band</source>
       <translation>Dải EQ không hợp lệ</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>Kích thước RIFF không hợp lệ</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

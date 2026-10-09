@@ -599,6 +599,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Güncelleme klasörü seç…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>Veri bloğu RIFF sınırlarını aşıyor</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>Sinema hoparlörü</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Invalid EQ band</source>
       <translation>Geçersiz EQ bandı</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>Geçersiz RIFF boyutu</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

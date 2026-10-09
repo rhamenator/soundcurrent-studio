@@ -599,6 +599,11 @@ Import into your library?</source>
       <translation>انتخاب پوشه به‌روزرسانی…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>بلوک داده از محدودهٔ RIFF فراتر می‌رود</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>بلندگوی سینما</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Import into your library?</source>
     <message>
       <source>Invalid EQ band</source>
       <translation>باند اکولایزر نامعتبر است</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>اندازهٔ RIFF نامعتبر است</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

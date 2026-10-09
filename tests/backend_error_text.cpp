@@ -13,6 +13,7 @@ class Fixture : public QTranslator {
  QString translate(const char *context,const char *source,const char *,int) const override {
   if(QByteArray(context)!="SoundCurrent")return {};
   if(QByteArray(source).startsWith("Invalid ") || QByteArray(source).startsWith("Too many ") || QByteArray(source)=="Duplicate Studio route" || QByteArray(source)=="Enhancements outside supported ranges" || QByteArray(source).startsWith("Shared and channel EQ"))return "OWNED_DIAGNOSTIC";
+  if(QByteArray(source)=="Chunk extends beyond RIFF bounds")return "RIFF_BOUNDS";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
   if(QByteArray(source)=="Cannot create output WAVE file")return "WAVE_CREATE";
   if(QByteArray(source)=="Truncated WAVE file")return "WAVE_TRUNCATED";
@@ -28,6 +29,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Invalid RIFF size")=="OWNED_DIAGNOSTIC");
+ require(audioErrorText("Chunk extends beyond RIFF bounds")=="RIFF_BOUNDS");
  require(audioErrorText("Cannot open input WAVE file")=="WAVE_OPEN");
  require(audioErrorText("Truncated WAVE file")=="WAVE_TRUNCATED");
  require(audioErrorText("Cannot create output WAVE file")=="WAVE_CREATE");

@@ -599,6 +599,11 @@ Importovat do vaší knihovny?</translation>
       <translation>Vybrat složku aktualizací…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>Datový blok přesahuje hranice RIFF</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>Kinový reproduktor</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Invalid EQ band</source>
       <translation>Neplatné pásmo EQ</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>Neplatná velikost RIFF</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

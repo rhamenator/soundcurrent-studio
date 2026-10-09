@@ -599,6 +599,11 @@ Import into your library?</source>
       <translation>Επιλογή φακέλου ενημερώσεων…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>Το τμήμα δεδομένων υπερβαίνει τα όρια RIFF</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>Ηχείο κινηματογράφου</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Import into your library?</source>
     <message>
       <source>Invalid EQ band</source>
       <translation>Μη έγκυρη ζώνη ισοστάθμισης</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>Μη έγκυρο μέγεθος RIFF</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

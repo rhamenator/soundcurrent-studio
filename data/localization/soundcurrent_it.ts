@@ -599,6 +599,11 @@ Importare nella libreria?</translation>
       <translation>Scegli cartella aggiornamenti…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>Il blocco supera i limiti RIFF</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>Diffusore per cinema</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Importare nella libreria?</translation>
     <message>
       <source>Invalid EQ band</source>
       <translation>Banda EQ non valida</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>Dimensione RIFF non valida</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

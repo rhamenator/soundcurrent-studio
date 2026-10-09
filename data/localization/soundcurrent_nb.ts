@@ -599,6 +599,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Velg oppdateringsmappe…</translation>
     </message>
     <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>Datablokken går utenfor RIFF-grensene</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cinema speaker</source>
       <translation>Kinohøyttaler</translation>
       <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
@@ -1282,6 +1287,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Invalid EQ band</source>
       <translation>Ugyldig EQ-bånd</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>Ugyldig RIFF-størrelse</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid Studio channel count</source>

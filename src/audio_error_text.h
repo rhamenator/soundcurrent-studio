@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Invalid RIFF size"))
+        return SC_TR("Invalid RIFF size");
+    if (diagnostic == QStringLiteral("Chunk extends beyond RIFF bounds"))
+        return SC_TR("Chunk extends beyond RIFF bounds");
     if (diagnostic == QStringLiteral("Cannot seek to WAVE audio"))
         return SC_TR("Cannot seek to WAVE audio");
     if (diagnostic == QStringLiteral("Cannot create output WAVE file"))
