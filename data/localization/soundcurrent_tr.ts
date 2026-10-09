@@ -603,6 +603,16 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Varsayılan ses uç noktasını değiştirme</translation>
     </message>
     <message>
+      <source>Change to detail view mode</source>
+      <translation>Ayrıntılı görünüm kipine geç</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Change to list view mode</source>
+      <translation>Liste görünümü kipine geç</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanal</translation>
     </message>
@@ -856,6 +866,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Count audio endpoints</source>
       <translation>Ses uç noktalarını sayma</translation>
+    </message>
+    <message>
+      <source>Create a New Folder</source>
+      <translation>Yeni bir klasör Oluştur</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1205,6 +1220,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Files</source>
+      <translation>Dosyalar</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Files of type:</source>
       <translation>Şu türde dosyalar:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1279,6 +1299,21 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Gaming</source>
       <translation>Oyun</translation>
+    </message>
+    <message>
+      <source>Go back</source>
+      <translation>Geri git</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go forward</source>
+      <translation>İleri git</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go to the parent directory</source>
+      <translation>Üst dizine git</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Headphones</source>
@@ -1681,6 +1716,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>List audio endpoints</source>
       <translation>Ses uç noktalarının listesini alma</translation>
+    </message>
+    <message>
+      <source>List of places and bookmarks</source>
+      <translation>Yerlerin ve yer imlerinin listesi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>List view</source>
@@ -2841,6 +2881,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <source>Side right</source>
       <translation>Yan sağ</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Sidebar</source>
+      <translation>Kenar Çubuğu</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

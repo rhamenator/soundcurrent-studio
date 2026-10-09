@@ -603,6 +603,16 @@ Import into your library?</source>
       <translation>Cambiar el dispositivo de audio predeterminado</translation>
     </message>
     <message>
+      <source>Change to detail view mode</source>
+      <translation>Cambiar a modo de vista detallada</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Change to list view mode</source>
+      <translation>Cambiar el modo de vista de la lista</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Canal</translation>
     </message>
@@ -856,6 +866,11 @@ Import into your library?</source>
     <message>
       <source>Count audio endpoints</source>
       <translation>Contar los dispositivos de audio</translation>
+    </message>
+    <message>
+      <source>Create a New Folder</source>
+      <translation>Crear una nueva carpeta</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1205,6 +1220,11 @@ Import into your library?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Files</source>
+      <translation>Archivos</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Files of type:</source>
       <translation>Ficheros de tipo:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1279,6 +1299,21 @@ Import into your library?</source>
     <message>
       <source>Gaming</source>
       <translation>Juegos</translation>
+    </message>
+    <message>
+      <source>Go back</source>
+      <translation>Ir atrás</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go forward</source>
+      <translation>Ir hacia delante</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go to the parent directory</source>
+      <translation>r al directorio superior</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Headphones</source>
@@ -1681,6 +1716,11 @@ Import into your library?</source>
     <message>
       <source>List audio endpoints</source>
       <translation>Listar los dispositivos de audio</translation>
+    </message>
+    <message>
+      <source>List of places and bookmarks</source>
+      <translation>Lista de lugares y marcadores</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>List view</source>
@@ -2841,6 +2881,11 @@ Import into your library?</source>
       <source>Side right</source>
       <translation>Lateral derecho</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Sidebar</source>
+      <translation>Barra lateral</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

@@ -603,6 +603,16 @@ Import into your library?</source>
       <translation>Αλλαγή προεπιλεγμένου τελικού σημείου ήχου</translation>
     </message>
     <message>
+      <source>Change to detail view mode</source>
+      <translation>Αλλαγή σε λεπτομερή προβολή</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Change to list view mode</source>
+      <translation>Αλλαγή σε προβολή λίστας</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Κανάλι</translation>
     </message>
@@ -856,6 +866,11 @@ Import into your library?</source>
     <message>
       <source>Count audio endpoints</source>
       <translation>Καταμέτρηση τελικών σημείων ήχου</translation>
+    </message>
+    <message>
+      <source>Create a New Folder</source>
+      <translation>Δημιουργία νέου φακέλου</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1205,6 +1220,11 @@ Import into your library?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Files</source>
+      <translation>Αρχεία</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Files of type:</source>
       <translation>Αρχεία τύπου:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1279,6 +1299,21 @@ Import into your library?</source>
     <message>
       <source>Gaming</source>
       <translation>Παιχνίδια</translation>
+    </message>
+    <message>
+      <source>Go back</source>
+      <translation>Μετάβαση πίσω</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go forward</source>
+      <translation>Μετάβαση μπροστά</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go to the parent directory</source>
+      <translation>Μετάβαση στον γονικό κατάλογο</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Headphones</source>
@@ -1681,6 +1716,11 @@ Import into your library?</source>
     <message>
       <source>List audio endpoints</source>
       <translation>Λήψη λίστας τελικών σημείων ήχου</translation>
+    </message>
+    <message>
+      <source>List of places and bookmarks</source>
+      <translation>Λίστα τοποθεσιών και σελιδοδεικτών</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>List view</source>
@@ -2841,6 +2881,11 @@ Import into your library?</source>
       <source>Side right</source>
       <translation>Πλάγια δεξιά</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Sidebar</source>
+      <translation>Πλευρική στήλη</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

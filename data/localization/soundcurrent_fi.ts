@@ -603,6 +603,16 @@ Tuodaanko kirjastoon?</translation>
       <translation>Oletusäänipäätepisteen vaihtaminen</translation>
     </message>
     <message>
+      <source>Change to detail view mode</source>
+      <translation>Vaihda yksityiskohtaiseen näkymään</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Change to list view mode</source>
+      <translation>Vaihda listanäkymään</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanava</translation>
     </message>
@@ -856,6 +866,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Count audio endpoints</source>
       <translation>Äänipäätepisteiden laskeminen</translation>
+    </message>
+    <message>
+      <source>Create a New Folder</source>
+      <translation>Luo uusi kansio</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1205,6 +1220,11 @@ Tuodaanko kirjastoon?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Files</source>
+      <translation>Tiedostot</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Files of type:</source>
       <translation>Tiedostotyyppi:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1279,6 +1299,21 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Gaming</source>
       <translation>Pelaaminen</translation>
+    </message>
+    <message>
+      <source>Go back</source>
+      <translation>Siirry takaisin</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go forward</source>
+      <translation>Siirry eteenpäin</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go to the parent directory</source>
+      <translation>Siirry yläkansioon</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Headphones</source>
@@ -1681,6 +1716,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>List audio endpoints</source>
       <translation>Äänipäätepisteluettelon hakeminen</translation>
+    </message>
+    <message>
+      <source>List of places and bookmarks</source>
+      <translation>Sijaintien ja kirjanmerkkien lista</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>List view</source>
@@ -2841,6 +2881,11 @@ Tuodaanko kirjastoon?</translation>
       <source>Side right</source>
       <translation>Sivuoikea</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Sidebar</source>
+      <translation>Sivupalkki</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Size capture buffer</source>

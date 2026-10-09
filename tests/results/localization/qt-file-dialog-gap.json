@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "status": "basic fields/navigation/Open/Save implemented and actual compiled Linux dialog fixture passed; other chooser paths unresolved",
+  "status": "basic labels/navigation and actual QAccessible fixture passed on compiled Linux builds; remaining chooser workflows incomplete",
   "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
   "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
   "untranslatedObserved": [
@@ -36,11 +36,11 @@
     "Save"
   ],
   "remainingScope": [
-    "Accessibility descriptions",
     "File-model headers",
     "Context menus",
     "Open/save error and confirmation dialogs",
-    "Native Windows qualification"
+    "Native Windows qualification",
+    "Screen-reader listening test"
   ],
   "localRuntimeEvidence": "CTest localization passed across all 33 non-English catalogs: actual DontUseNativeDialog controls, Unicode/literal-percent filenames, filter preservation and plugin-context exclusion. Offscreen constructor/control inspection; no acceptance, file creation or errors exercised.",
   "sources": [
@@ -48,8 +48,17 @@
     "https://github.com/qt/qtbase/blob/6.4/src/widgets/dialogs/qfiledialog.ui"
   ],
   "sourceSha256": {
-    "src/localization.h": "2f0c81cf6017b97f6c68b20c34113058e5f77c2705737a6f36733c0ce282124f",
-    "tests/localization.cpp": "165b569470783845270701e67b6b38b39ebbb9f2ac933952d88e034bf42b1a3b",
-    "data/localization/catalogs.json": "745286422593ed8a504bf6060ee693008b35403b04ab3ae763aca00d8c49c35a"
+    "src/localization.h": "a1504aa8bc591ec1a5090686385b5f007131c5969a97cd664462da627225b3e9",
+    "tests/localization.cpp": "07532b65e36c7f0cf8fef1e80bab47051fae03654ca2f13fb0920a7b1b14c3e1",
+    "data/localization/catalogs.json": "54815d207709ebc627fd4d185ab89b3de1579fa2d2bf32a3bfe28cd6aa25586f"
+  },
+  "accessibilityTestScope": "Actual QAccessible Name/Description queries for six navigation buttons, sidebar and list/tree file views, all 33 non-English catalogs. Does not test screen-reader speech.",
+  "accessibilityLinuxEvidence": {
+    "log": "tests/results/localization/qt-file-dialog-accessibility-linux.log",
+    "sha256": "c2c8da423c65167f6b4fc9492665fa5fede20d2b3b1211944ebe8732b7017675",
+    "result": "passed",
+    "platform": "Qt offscreen",
+    "catalogs": 33,
+    "screenReaderSpeechTested": false
   }
 }
