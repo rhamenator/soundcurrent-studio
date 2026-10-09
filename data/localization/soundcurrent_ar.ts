@@ -585,6 +585,11 @@ Import into your library?</source>
       <translation>تبدأ فهارس القنوات من 1 ويجب أن تشير إلى قنوات موجودة</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>تبدأ فهارس القنوات من 1. لا تتم الكتابة فوق ملفات الإخراج الموجودة مطلقًا.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>القنوات والتوجيه</translation>
     </message>
@@ -2739,6 +2744,11 @@ Import into your library?</source>
       <translation>يعالج SoundCurrent EQ صوت التشغيل بالفعل. أنهِه قبل تفعيل SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>مصيّر SoundCurrent Studio دون اتصال (لا يتطلب جهاز صوت)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>شريط صوت</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Import into your library?</source>
     <message>
       <source>Update selected</source>
       <translation>تحديث المحدد</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>الاستخدام: %1 [الخيارات]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

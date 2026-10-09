@@ -585,6 +585,11 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Kanalindizes beginnen bei 1 und müssen vorhandene Kanäle bezeichnen</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Kanalindizes beginnen bei 1. Vorhandene Ausgabedateien werden niemals überschrieben.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanäle und Routing</translation>
     </message>
@@ -2739,6 +2744,11 @@ In Ihre Bibliothek importieren?</translation>
       <translation>SoundCurrent EQ verarbeitet bereits die Wiedergabe. Beenden Sie es, bevor Sie SoundCurrent Studio aktivieren.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio Offline-Renderer (kein Audiogerät erforderlich)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Soundbar</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Update selected</source>
       <translation>Auswahl aktualisieren</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Aufruf: %1 [Optionen]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

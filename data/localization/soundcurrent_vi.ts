@@ -585,6 +585,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Chỉ số kênh bắt đầu từ 1 và phải trỏ đến kênh hiện có</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Chỉ số kênh bắt đầu từ 1. Tệp đầu ra hiện có sẽ không bao giờ bị ghi đè.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kênh và định tuyến</translation>
     </message>
@@ -2739,6 +2744,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>SoundCurrent EQ đang xử lý âm thanh phát. Hãy thoát ứng dụng đó trước khi bật SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>Bộ kết xuất ngoại tuyến SoundCurrent Studio (không cần thiết bị âm thanh)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Loa thanh</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Update selected</source>
       <translation>Cập nhật mục đã chọn</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Cách dùng: %1 [tùy chọn]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

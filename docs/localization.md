@@ -322,3 +322,7 @@ Temporary-directory permission errors and local hard-link publication errors hav
 ### Successful standalone render summaries
 
 Both summary lines have translations in all 34 catalogs. Actual compiled tests compare exact localized output from silent and deliberately clipped renders. The latter reports linear peak 7.92447, 128 clipped samples and zero invalid samples; WAV bytes have identical hashes across all language and fallback cases on the tested Linux build. Engine, DSP and model code are unchanged. One-pass formatting keeps substituted values literal and distinguishes `%10` from `%1`. Numeric text retains the CLI’s invariant representation. Native review and current Windows/package qualification remain unverified; CLI help is still untranslated.
+
+### Standalone help heading and usage
+
+The renderer heading, usage template and one-based channel/no-overwrite explanation are translated in all 34 catalogs. Actual compiled tests compare these help lines for both `--help` and missing required input/output arguments. Executable name, flags and example filenames remain literal. File-based wording avoids a network-disconnection implication in Bokmål, Nynorsk and Swahili. Native review remains unverified. Option descriptions and the input/output format footer are still English, so help translation is incomplete.

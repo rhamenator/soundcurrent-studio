@@ -585,6 +585,11 @@ Importálja a könyvtárba?</translation>
       <translation>A csatornaindexek 1-től kezdődnek, és létező csatornákra kell mutatniuk</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>A csatornaindexek 1-től kezdődnek. A meglévő kimeneti fájlok soha nem íródnak felül.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Csatornák és útválasztás</translation>
     </message>
@@ -2739,6 +2744,11 @@ Importálja a könyvtárba?</translation>
       <translation>A SoundCurrent EQ már feldolgozza a lejátszást. Lépjen ki belőle a SoundCurrent Studio bekapcsolása előtt.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio offline renderelő (nincs szükség hangeszközre)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Hangprojektor</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Update selected</source>
       <translation>Kiválasztott frissítése</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Használat: %1 [kapcsolók]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

@@ -585,6 +585,11 @@ Importeren in uw bibliotheek?</translation>
       <translation>Kanaalindexen beginnen bij 1 en moeten bestaande kanalen aanduiden</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Kanaalindexen beginnen bij 1. Bestaande uitvoerbestanden worden nooit overschreven.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanalen en routering</translation>
     </message>
@@ -2739,6 +2744,11 @@ Importeren in uw bibliotheek?</translation>
       <translation>SoundCurrent EQ verwerkt de weergave al. Sluit die app af voordat u SoundCurrent Studio inschakelt.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio offline renderer (geen audioapparaat nodig)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Soundbar</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Update selected</source>
       <translation>Selectie bijwerken</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Gebruik: %1 [opties]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

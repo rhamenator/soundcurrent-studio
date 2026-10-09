@@ -585,6 +585,11 @@ Import into your library?</source>
       <translation>聲道索引從 1 開始，且必須指向現有聲道</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>聲道索引從 1 開始。絕不會覆寫現有的輸出檔案。</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>聲道與路由</translation>
     </message>
@@ -2739,6 +2744,11 @@ Import into your library?</source>
       <translation>SoundCurrent EQ 已在處理播放音訊。啟用 SoundCurrent Studio 前請先結束它。</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio 離線算繪器（無需音訊裝置）</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>聲霸</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Import into your library?</source>
     <message>
       <source>Update selected</source>
       <translation>更新所選項目</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>用法：%1 [選項]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

@@ -1,7 +1,7 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Owned CLI exception messages and successful render summaries translated across 34 catalogs. CLI help remains untranslated; current-package qualification and exceptional filesystem failure runtime checks remain pending.",
-  "sourceSha256": "36ac938c5afe93dc7d2561dae4758ea1baf3cf478ffac6507dded91dd490425e",
+  "status": "Owned CLI exception messages, successful summaries, help heading/usage and channel/file-protection explanation translated across 34 catalogs. Help option descriptions and format footer remain English; current-package qualification remains pending.",
+  "sourceSha256": "3d047ec007addd34a46153b2ce798057bec57fa97140c57dd1204e1b71011746",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
     "engineEvidence": "src/engine.cpp postGainDb validation",
@@ -20,7 +20,7 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 793,
+  "catalogMessages": 796,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -94,5 +94,13 @@
     "formatting": "One-pass template substitution preserves inserted placeholder text and distinguishes %10 from %1; compiled cli-error-text test passed. Human summary numbers keep invariant CLI representation rather than adopting decimal commas.",
     "result": "cli-localization and cli-error-text CTests passed",
     "windowsCurrentCommit": "pending CI"
+  },
+  "helpVerification": {
+    "translated": "Renderer heading, Usage template and one-based channel/no-overwrite explanation in all 34 compiled catalogs. Contextual AI review; native review unverified.",
+    "actualRuntime": "Compiled CLI exact first/second/final help lines pass in all catalogs and fallback cases for --help (exit 0) and missing required input/output (exit 1).",
+    "commandInvariant": "Usage substitution preserves executable name, --input/--output flags and in.wav/NEW.wav examples. Parser, processing and saved-state code unchanged.",
+    "terminology": "Bokmål/Nynorsk/Swahili heading uses file-based wording to avoid implying Internet disconnection.",
+    "remaining": "All option descriptions and PCM/float WAVE format footer require translation.",
+    "result": "cli-localization and cli-error-text CTests passed"
   }
 }

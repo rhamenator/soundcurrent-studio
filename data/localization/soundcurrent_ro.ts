@@ -585,6 +585,11 @@ Importați în bibliotecă?</translation>
       <translation>Indicii canalelor încep de la 1 și trebuie să desemneze canale existente</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Indicii canalelor încep de la 1. Fișierele de ieșire existente nu sunt niciodată suprascrise.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Canale și rutare</translation>
     </message>
@@ -2739,6 +2744,11 @@ Importați în bibliotecă?</translation>
       <translation>SoundCurrent EQ procesează deja redarea. Ieșiți din el înainte de a activa SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>Motor de randare offline SoundCurrent Studio (nu necesită dispozitiv audio)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Bară de sunet</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Update selected</source>
       <translation>Actualizați selecția</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Utilizare: %1 [opțiuni]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

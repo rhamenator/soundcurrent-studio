@@ -33,6 +33,15 @@ with tempfile.TemporaryDirectory() as directory:
         ('pt_BR', 'pt-BR'), ('pt-AO', 'en'), ('zh-Unknown', 'en')]:
         messages = {m.findtext('source'): m.findtext('translation') for m in
                     ET.parse(root / f'data/localization/soundcurrent_{expected_tag}.ts').findall('.//message')}
+        for suffix, returncode in [(['--help'], 0), ([], 1)]:
+            help_result = subprocess.run([renderer, '--language', tag] + suffix,
+                                         capture_output=True, timeout=10)
+            lines = help_result.stdout.decode('utf-8').splitlines()
+            assert help_result.returncode == returncode
+            assert lines[0] == messages['SoundCurrent Studio offline renderer (no audio device required)']
+            assert lines[1] == messages['Usage: %1 [options]'].replace('%1',
+                'soundcurrent-studio-render --input in.wav --output NEW.wav')
+            assert lines[-1] == messages['Channel indexes start at 1. Existing output files are never overwritten.']
         output = folder / 'sortie-音声-мікрофон-🎵.wav'
         result = subprocess.run([renderer, '--language', tag, '--input', str(folder / 'missing.wav'),
                                  '--output', str(output)], capture_output=True, timeout=10)

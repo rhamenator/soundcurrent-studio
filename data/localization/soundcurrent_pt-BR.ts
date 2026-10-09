@@ -585,6 +585,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Os índices dos canais começam em 1 e devem corresponder a canais existentes</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Os índices dos canais começam em 1. Os arquivos de saída existentes nunca são sobrescritos.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Canais e rotas</translation>
     </message>
@@ -2739,6 +2744,11 @@ Importar para a sua biblioteca?</translation>
       <translation>O SoundCurrent EQ já está processando a reprodução. Saia antes de ativar o SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>Renderizador offline do SoundCurrent Studio (não requer dispositivo de áudio)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Barra de som</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Update selected</source>
       <translation>Atualizar seleção</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Uso: %1 [opções]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

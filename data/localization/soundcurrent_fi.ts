@@ -585,6 +585,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Kanavaindeksit alkavat numerosta 1 ja niiden on viitattava olemassa oleviin kanaviin</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Kanavaindeksit alkavat numerosta 1. Olemassa olevia tulostiedostoja ei koskaan korvata.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanavat ja reititys</translation>
     </message>
@@ -2739,6 +2744,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>SoundCurrent EQ käsittelee jo toistoa. Lopeta se ennen SoundCurrent Studion käyttöönottoa.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio offline-renderöijä (äänilaitetta ei tarvita)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Äänipalkki</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Update selected</source>
       <translation>Päivitä valittu</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Käyttö: %1 [valitsimet]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

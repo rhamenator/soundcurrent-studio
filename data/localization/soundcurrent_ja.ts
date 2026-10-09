@@ -585,6 +585,11 @@ Import into your library?</source>
       <translation>チャンネル番号は 1 から始まり、存在するチャンネルを指定する必要があります</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>チャンネル番号は 1 から始まります。既存の出力ファイルは上書きされません。</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>チャンネルとルーティング</translation>
     </message>
@@ -2739,6 +2744,11 @@ Import into your library?</source>
       <translation>SoundCurrent EQ がすでに再生音声を処理しています。終了してから SoundCurrent Studio を有効にしてください。</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio オフラインレンダラー（オーディオデバイス不要）</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>サウンドバー</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Import into your library?</source>
     <message>
       <source>Update selected</source>
       <translation>選択項目を更新</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>使用方法: %1 [オプション]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

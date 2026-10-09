@@ -585,6 +585,11 @@ Import into your library?</source>
       <translation>Индексы каналов начинаются с 1 и должны указывать на существующие каналы</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>Индексы каналов начинаются с 1. Существующие выходные файлы никогда не перезаписываются.</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Каналы и маршрутизация</translation>
     </message>
@@ -2739,6 +2744,11 @@ Import into your library?</source>
       <translation>SoundCurrent EQ уже обрабатывает воспроизведение. Завершите его работу перед включением SoundCurrent Studio.</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>Офлайн-рендерер SoundCurrent Studio (аудиоустройство не требуется)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Саундбар</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Import into your library?</source>
     <message>
       <source>Update selected</source>
       <translation>Обновить выбранное</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>Использование: %1 [параметры]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>

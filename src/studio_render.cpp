@@ -83,8 +83,10 @@ private:
     std::filesystem::path final_, directory_, path_;
 };
 void help() {
-    std::cout << "SoundCurrent Studio offline renderer (no audio device required)\n"
-        "Usage: soundcurrent-studio-render --input in.wav --output NEW.wav [options]\n"
+    std::cout << soundcurrent::cli::text("SoundCurrent Studio offline renderer (no audio device required)") << '\n'
+        << soundcurrent::cli::format("Usage: %1 [options]",
+            {"soundcurrent-studio-render --input in.wav --output NEW.wav"}) << '\n'
+        <<
         "  --language TAG         interface language; unsupported tags use English\n"
         "  --output-channels N    1-256 output channels (default: input count)\n"
         "  --route OUT:IN:DB      explicit matrix gain; using any route clears defaults\n"
@@ -103,7 +105,7 @@ void help() {
         "  --no-headroom         disable automatic EQ headroom\n"
         "  --bypass              bypass EQ, effects, gains and mute\n"
         "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.\n"
-        "Channel indexes start at 1. Existing output files are never overwritten.\n";
+        << soundcurrent::cli::text("Channel indexes start at 1. Existing output files are never overwritten.") << '\n';
 }
 }
 

@@ -585,6 +585,11 @@ Import into your library?</source>
       <translation>ดัชนีช่องสัญญาณเริ่มจาก 1 และต้องอ้างถึงช่องสัญญาณที่มีอยู่</translation>
     </message>
     <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>ดัชนีช่องสัญญาณเริ่มจาก 1 ไฟล์เอาต์พุตที่มีอยู่จะไม่ถูกเขียนทับ</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>แชนเนลและการกำหนดเส้นทาง</translation>
     </message>
@@ -2739,6 +2744,11 @@ Import into your library?</source>
       <translation>SoundCurrent EQ กำลังประมวลผลเสียงที่เล่นอยู่ ให้ออกจากแอปนั้นก่อนเปิดใช้ SoundCurrent Studio</translation>
     </message>
     <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>ตัวเรนเดอร์แบบออฟไลน์ SoundCurrent Studio (ไม่ต้องใช้อุปกรณ์เสียง)</translation>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>ซาวด์บาร์</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3168,6 +3178,11 @@ Import into your library?</source>
     <message>
       <source>Update selected</source>
       <translation>อัปเดตรายการที่เลือก</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>วิธีใช้: %1 [ตัวเลือก]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
