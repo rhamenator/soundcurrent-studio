@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-only
 """Exercise compiled standalone catalog selection with no audio devices."""
 import json
+import hashlib
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -19,6 +21,13 @@ with tempfile.TemporaryDirectory() as directory:
         fixture.setsampwidth(2)
         fixture.setframerate(48000)
         fixture.writeframes(bytes(256))
+    clipping_wave = folder / 'crête-音声-🎵.wav'
+    with wave.open(str(clipping_wave), 'wb') as fixture:
+        fixture.setnchannels(1)
+        fixture.setsampwidth(2)
+        fixture.setframerate(48000)
+        fixture.writeframes(b'\x00\x40' * 128)  # PCM16 amplitude 0.5.
+    processing_digest = None
     for tag, expected_tag in [(r['tag'], r['tag']) for r in rows] + [
         ('de_DE', 'de'), ('DE-de', 'de'), ('xx-Unknown', 'en'),
         ('pt_BR', 'pt-BR'), ('pt-AO', 'en'), ('zh-Unknown', 'en')]:
@@ -66,6 +75,20 @@ with tempfile.TemporaryDirectory() as directory:
             assert invalid.returncode == 1
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
             assert not output.exists()
+        clipped = subprocess.run([renderer, '--language', tag, '--input', str(clipping_wave),
+                                  '--output', str(output), '--post-gain', '24', '--no-headroom'],
+                                 capture_output=True, timeout=10)
+        assert clipped.returncode == 0, (tag, clipped.stderr)
+        summary = re.sub(r'%([1-4])', lambda m: ('1', '1', '128', '48000')[int(m[1])-1],
+                         messages['Rendered %1 -> %2 channels, %3 frames at %4 Hz.'])
+        statistics = re.sub(r'%([1-3])', lambda m: ('7.92447', '128', '0')[int(m[1])-1],
+                            messages['Peak before clipping: %1; clipped samples: %2; invalid samples: %3'])
+        assert clipped.stdout.decode('utf-8').strip() == summary + '\n' + statistics, (tag, clipped.stdout)
+        digest = hashlib.sha256(output.read_bytes()).hexdigest()
+        if processing_digest is None:
+            processing_digest = digest
+        assert digest == processing_digest, (tag, 'Locale changed rendered audio')
+        output.unlink()
         # The inclusive boundary remains usable; it is not lowered by the alias.
         for arguments in [(['--eq', '1:100:0:1'] * 64),
                           (['--eq', '1:100:0:1'] * 33 + ['--lowpass', '1:100:1'] * 31)]:
@@ -73,6 +96,12 @@ with tempfile.TemporaryDirectory() as directory:
                                        '--output', str(output)] + arguments,
                                       capture_output=True, timeout=10)
             assert accepted.returncode == 0, (tag, accepted.stderr)
+            summary = re.sub(r'%([1-4])', lambda m: ('1', '1', '128', '48000')[int(m[1])-1],
+                             messages['Rendered %1 -> %2 channels, %3 frames at %4 Hz.'])
+            statistics = re.sub(r'%([1-3])', lambda m: '0',
+                                messages['Peak before clipping: %1; clipped samples: %2; invalid samples: %3'])
+            assert accepted.stdout.decode('utf-8').strip() == summary + '\n' + statistics, (tag, accepted.stdout)
+
             assert output.exists()
             output.unlink()
         # Same 64-filter per-channel limit for EQ alone and mixed filter types.

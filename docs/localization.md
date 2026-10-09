@@ -318,3 +318,7 @@ Four routing/processing messages are translated across all 34 catalogs. Actual c
 ### Output-management diagnostic templates
 
 Temporary-directory permission errors and local hard-link publication errors have translations in all 34 catalogs. A compiled display-boundary test preserves Unicode external filesystem detail and literal placeholder text; unknown partial-prefix exceptions retain their original text. This is diagnostic injection, not an actual permission or hard-link failure. Source guards now require all current owned CLI exception literals and both dynamic templates to be declared. Native review and real filesystem failure-path qualification remain unverified. CLI help and the successful-render summary are still untranslated, so whole-interface completion is not claimed.
+
+### Successful standalone render summaries
+
+Both summary lines have translations in all 34 catalogs. Actual compiled tests compare exact localized output from silent and deliberately clipped renders. The latter reports linear peak 7.92447, 128 clipped samples and zero invalid samples; WAV bytes have identical hashes across all language and fallback cases on the tested Linux build. Engine, DSP and model code are unchanged. One-pass formatting keeps substituted values literal and distinguishes `%10` from `%1`. Numeric text retains the CLI’s invariant representation. Native review and current Windows/package qualification remain unverified; CLI help is still untranslated.

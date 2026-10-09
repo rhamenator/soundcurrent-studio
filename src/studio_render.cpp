@@ -10,6 +10,7 @@
 #include <random>
 #include <stdexcept>
 #include <string_view>
+#include <sstream>
 #ifdef _WIN32
 #ifndef NOMINMAX
 #define NOMINMAX
@@ -201,10 +202,13 @@ int renderMain(int argc, char **argv) {
         }
         writer.finish();
         staging.publish();
-        std::cout << "Rendered " << source.channels << " -> " << outputChannels << " channels, "
-                  << destination.frames << " frames at " << source.sampleRate << " Hz.\n"
-                  << "Peak before clipping: " << total.peakBeforeClip << "; clipped samples: "
-                  << total.clippedSamples << "; invalid samples: " << total.invalidSamples << "\n";
+        std::ostringstream peak;
+        peak << total.peakBeforeClip;
+        std::cout << soundcurrent::cli::format("Rendered %1 -> %2 channels, %3 frames at %4 Hz.",
+                      {std::to_string(source.channels), std::to_string(outputChannels),
+                       std::to_string(destination.frames), std::to_string(source.sampleRate)}) << '\n'
+                  << soundcurrent::cli::format("Peak before clipping: %1; clipped samples: %2; invalid samples: %3",
+                      {peak.str(), std::to_string(total.clippedSamples), std::to_string(total.invalidSamples)}) << '\n';
         return 0;
     } catch (const std::exception &error) {
         std::cerr << soundcurrent::cli::renderError(error.what()) << '\n';

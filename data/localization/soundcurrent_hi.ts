@@ -2009,6 +2009,11 @@ Import into your library?</source>
       <translation>पीक</translation>
     </message>
     <message>
+      <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
+      <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
+      <translation>क्लिपिंग से पहले शिखर: %1; क्लिप किए गए सैंपल: %2; अमान्य सैंपल: %3</translation>
+    </message>
+    <message>
       <source>Peak markers</source>
       <translation>पीक चिह्न</translation>
     </message>
@@ -2364,6 +2369,11 @@ Import into your library?</source>
     <message>
       <source>Render: %1</source>
       <translation>रेंडर: %1</translation>
+    </message>
+    <message>
+      <source>Rendered %1 -&gt; %2 channels, %3 frames at %4 Hz.</source>
+      <extracomment>Successful standalone offline render. %1 input channels, %2 output channels, %3 audio frame count (not per-channel samples), %4 sample rate. Keep Hz and -&gt; identifiers. Count-label wording is allowed to avoid number-dependent noun inflection.</extracomment>
+      <translation>रेंडर पूरा हुआ: चैनल %1 -&gt; %2, फ़्रेम %3, सैंपल दर %4 Hz.</translation>
     </message>
     <message>
       <source>Rendered %1 channels. Clipped samples: %2. %3</source>

@@ -3,6 +3,7 @@
 #include "cli_catalog_generated.h"
 #include <algorithm>
 #include <string>
+#include <initializer_list>
 namespace soundcurrent::cli {
 inline std::string language = "en";
 inline void selectLanguage(std::string tag) {
@@ -26,6 +27,29 @@ inline std::string text(std::string_view source) {
     for (const auto &entry : entries)
         if (entry.language == language && entry.source == source) return std::string(entry.text);
     return std::string(source);
+}
+// Expand placeholders from the translated template in one pass. Argument
+// text is copied literally and never scanned for additional placeholders.
+inline std::string format(std::string_view source, std::initializer_list<std::string> arguments) {
+    const auto pattern = text(source);
+    std::string result;
+    for (std::size_t i = 0; i < pattern.size();) {
+        if (pattern[i] == '%' && i + 1 < pattern.size() && pattern[i + 1] >= '1' && pattern[i + 1] <= '9') {
+            std::size_t index = pattern[i + 1] - '0';
+            std::size_t width = 2;
+            if (i + 2 < pattern.size() && pattern[i + 2] >= '0' && pattern[i + 2] <= '9') {
+                index = index * 10 + pattern[i + 2] - '0';
+                width = 3;
+            }
+            if (index <= arguments.size()) {
+                result += *(arguments.begin() + index - 1);
+                i += width;
+                continue;
+            }
+        }
+        result += pattern[i++];
+    }
+    return result;
 }
 inline std::string renderError(std::string_view diagnostic) {
     // Display alias for the same no-overwrite condition as the desktop.

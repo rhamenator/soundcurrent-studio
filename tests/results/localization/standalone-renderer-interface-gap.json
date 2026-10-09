@@ -1,7 +1,7 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Declared WAVE diagnostics, CLI validation/unknown-option messages, shared engine configuration rejections and selected output protection errors translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
-  "sourceSha256": "ec168599298d48b7ce1ca3dcf0f19c04bafdf0dd3f2c47da3e5a17dc5001249d",
+  "status": "Owned CLI exception messages and successful render summaries translated across 34 catalogs. CLI help remains untranslated; current-package qualification and exceptional filesystem failure runtime checks remain pending.",
+  "sourceSha256": "36ac938c5afe93dc7d2561dae4758ea1baf3cf478ffac6507dded91dd490425e",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
     "engineEvidence": "src/engine.cpp postGainDb validation",
@@ -20,7 +20,7 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 791,
+  "catalogMessages": 793,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -50,7 +50,7 @@
     "stagingDirectoryError": "Existing desktop translation embedded; actual directory-creation collision exhaustion not fault-injected.",
     "result": "cli-localization CTest passed"
   },
-  "displayBoundarySha256": "8595f2006c6ea534b097c85696c0f23a7028ee048063f2b80775c179cde37446",
+  "displayBoundarySha256": "6c2923e3f549bb37fa742770bb42ba82b6efb59a5c8501421d9331d6ef0370b3",
   "unknownOptionVerification": {
     "result": "cli-localization CTest passed",
     "scope": "Three ASCII unknown flags per locale and fallback case, including embedded %1/%2 and a colon; exact translated stderr preserves flag bytes without recursive substitution.",
@@ -86,5 +86,13 @@
     "realFilesystemFailure": "Permission restriction and hard-link failure not fault-injected; runtime failure-path qualification remains unproven.",
     "sourceGuard": "All current owned CLI runtime_error literal messages and both dynamic templates must be declared; engine errors separately guarded. Targeted source guard passed.",
     "regression": "cli-localization CTest also passed; no engine, DSP or model changes."
+  },
+  "summaryVerification": {
+    "translations": "Both render summary templates translated in 34 compiled catalogs; count-label wording avoids number-dependent noun inflection. Hz and processing numbers retained. Contextual AI review; native review unverified.",
+    "actualRuntime": "All catalogs and fallback tags: exact translated stdout for silent 128-frame exports and a PCM16 amplitude-0.5 render at +24 dB with peak 7.92447, clipped samples 128, invalid samples 0.",
+    "processingInvariant": "Clipping fixture exported identical SHA-256 WAV bytes across all languages/fallback cases on this Linux build; engine, DSP and model code unchanged.",
+    "formatting": "One-pass template substitution preserves inserted placeholder text and distinguishes %10 from %1; compiled cli-error-text test passed. Human summary numbers keep invariant CLI representation rather than adopting decimal commas.",
+    "result": "cli-localization and cli-error-text CTests passed",
+    "windowsCurrentCommit": "pending CI"
   }
 }

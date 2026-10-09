@@ -13,6 +13,9 @@ int main() {
         "; choose a new name on a filesystem supporting hard links";
     for (const auto &tag : languages) {
         selectLanguage(tag);
+        if (format("%1|%10|%2", {"literal %2", "second", "3", "4", "5", "6", "7", "8", "9", "ten"})
+            != "literal %2|ten|second") return 1;
+
         const auto translated = std::find_if(std::begin(entries), std::end(entries),
             [&](const Entry &entry) { return entry.language == tag && entry.source == source; });
         const auto wrapper = std::find_if(std::begin(entries), std::end(entries),
