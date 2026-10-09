@@ -3361,6 +3361,26 @@ Importálja a könyvtárba?</translation>
       <translation>a felület nyelve; nem támogatott nyelvkód esetén angol</translation>
     </message>
     <message>
+      <source>optional channel high-pass</source>
+      <extracomment>CLI high-pass output-channel filter attenuates low frequencies, passing high frequencies. Optional means absent unless specified. Not treble boost.</extracomment>
+      <translation>opcionális felüláteresztő csatornaszűrő</translation>
+    </message>
+    <message>
+      <source>optional channel low-pass (e.g. LFE)</source>
+      <extracomment>CLI low-pass output-channel filter attenuates high frequencies, passing low frequencies; LFE is only an example channel use, not an automatic speaker role. Preserve LFE identifier.</extracomment>
+      <translation>opcionális aluláteresztő csatornaszűrő (pl. LFE)</translation>
+    </message>
+    <message>
+      <source>output channel trim, -60 to +24 dB</source>
+      <extracomment>Per-output-channel gain/trim, inclusive -60 to +24 dB. Preserve signs, bounds and dB; this is not the wider global post-gain range.</extracomment>
+      <translation>kimeneti csatorna szintkorrekciója, -60 és +24 dB között</translation>
+    </message>
+    <message>
+      <source>overall post gain, -84 to +24 dB</source>
+      <extracomment>Global post-gain control, inclusive -84 to +24 dB, applied to all channels. Preserve signs, bounds and dB; do not substitute the narrower channel trim range.</extracomment>
+      <translation>teljes utólagos erősítés, -84 és +24 dB között</translation>
+    </message>
+    <message>
       <source>peaking EQ for one output channel; repeat as needed</source>
       <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
       <translation>harangszűrős EQ egy kimeneti csatornához; szükség szerint ismételhető</translation>

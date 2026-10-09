@@ -3361,6 +3361,26 @@ Import into your library?</source>
       <translation>인터페이스 언어; 지원하지 않는 언어 태그는 영어 사용</translation>
     </message>
     <message>
+      <source>optional channel high-pass</source>
+      <extracomment>CLI high-pass output-channel filter attenuates low frequencies, passing high frequencies. Optional means absent unless specified. Not treble boost.</extracomment>
+      <translation>선택적 채널 하이패스 필터</translation>
+    </message>
+    <message>
+      <source>optional channel low-pass (e.g. LFE)</source>
+      <extracomment>CLI low-pass output-channel filter attenuates high frequencies, passing low frequencies; LFE is only an example channel use, not an automatic speaker role. Preserve LFE identifier.</extracomment>
+      <translation>선택적 채널 로우패스 필터 (예: LFE)</translation>
+    </message>
+    <message>
+      <source>output channel trim, -60 to +24 dB</source>
+      <extracomment>Per-output-channel gain/trim, inclusive -60 to +24 dB. Preserve signs, bounds and dB; this is not the wider global post-gain range.</extracomment>
+      <translation>출력 채널 레벨 조정, -60에서 +24 dB</translation>
+    </message>
+    <message>
+      <source>overall post gain, -84 to +24 dB</source>
+      <extracomment>Global post-gain control, inclusive -84 to +24 dB, applied to all channels. Preserve signs, bounds and dB; do not substitute the narrower channel trim range.</extracomment>
+      <translation>전체 포스트 게인, -84에서 +24 dB</translation>
+    </message>
+    <message>
       <source>peaking EQ for one output channel; repeat as needed</source>
       <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
       <translation>출력 채널 하나에 피킹 EQ 적용; 필요에 따라 반복 지정</translation>

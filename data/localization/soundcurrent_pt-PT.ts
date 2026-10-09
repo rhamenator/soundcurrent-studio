@@ -3361,6 +3361,26 @@ Importar para a sua biblioteca?</translation>
       <translation>idioma da interface; os códigos não suportados usam inglês</translation>
     </message>
     <message>
+      <source>optional channel high-pass</source>
+      <extracomment>CLI high-pass output-channel filter attenuates low frequencies, passing high frequencies. Optional means absent unless specified. Not treble boost.</extracomment>
+      <translation>passa-alto opcional do canal</translation>
+    </message>
+    <message>
+      <source>optional channel low-pass (e.g. LFE)</source>
+      <extracomment>CLI low-pass output-channel filter attenuates high frequencies, passing low frequencies; LFE is only an example channel use, not an automatic speaker role. Preserve LFE identifier.</extracomment>
+      <translation>passa-baixo opcional do canal (por ex., LFE)</translation>
+    </message>
+    <message>
+      <source>output channel trim, -60 to +24 dB</source>
+      <extracomment>Per-output-channel gain/trim, inclusive -60 to +24 dB. Preserve signs, bounds and dB; this is not the wider global post-gain range.</extracomment>
+      <translation>ajuste de nível do canal de saída, de -60 a +24 dB</translation>
+    </message>
+    <message>
+      <source>overall post gain, -84 to +24 dB</source>
+      <extracomment>Global post-gain control, inclusive -84 to +24 dB, applied to all channels. Preserve signs, bounds and dB; do not substitute the narrower channel trim range.</extracomment>
+      <translation>ganho global após processamento, de -84 a +24 dB</translation>
+    </message>
+    <message>
       <source>peaking EQ for one output channel; repeat as needed</source>
       <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
       <translation>EQ em campânula para um canal de saída; repetir conforme necessário</translation>

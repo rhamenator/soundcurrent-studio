@@ -64,5 +64,9 @@
   "interface language; unsupported tags use English",
   "1-256 output channels (default: input count)",
   "explicit matrix gain; using any route clears defaults",
-  "peaking EQ for one output channel; repeat as needed"
+  "peaking EQ for one output channel; repeat as needed",
+  "optional channel low-pass (e.g. LFE)",
+  "optional channel high-pass",
+  "output channel trim, -60 to +24 dB",
+  "overall post gain, -84 to +24 dB"
 ]

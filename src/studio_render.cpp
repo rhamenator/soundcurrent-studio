@@ -91,10 +91,10 @@ void help() {
         "  --output-channels N    " << soundcurrent::cli::text("1-256 output channels (default: input count)") << '\n' <<
         "  --route OUT:IN:DB      " << soundcurrent::cli::text("explicit matrix gain; using any route clears defaults") << '\n' <<
         "  --eq CH:HZ:DB:Q        " << soundcurrent::cli::text("peaking EQ for one output channel; repeat as needed") << '\n' <<
-        "  --lowpass CH:HZ:Q     optional channel low-pass (e.g. LFE)\n"
-        "  --highpass CH:HZ:Q    optional channel high-pass\n"
-        "  --gain CH:DB           output channel trim, -60 to +24 dB\n"
-        "  --post-gain DB         overall post gain, -84 to +24 dB\n"
+        "  --lowpass CH:HZ:Q     " << soundcurrent::cli::text("optional channel low-pass (e.g. LFE)") << '\n' <<
+        "  --highpass CH:HZ:Q    " << soundcurrent::cli::text("optional channel high-pass") << '\n' <<
+        "  --gain CH:DB           " << soundcurrent::cli::text("output channel trim, -60 to +24 dB") << '\n' <<
+        "  --post-gain DB         " << soundcurrent::cli::text("overall post gain, -84 to +24 dB") << '\n' <<
         "  --delay-ms MS          1-2000 ms (default 250)\n"
         "  --delay-feedback F    0-0.9 (default .35)\n"
         "  --delay-mix F         wet fraction 0-1 (enables delay)\n"

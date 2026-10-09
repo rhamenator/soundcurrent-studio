@@ -46,7 +46,11 @@ with tempfile.TemporaryDirectory() as directory:
                 (2, '  --language TAG         ', 'interface language; unsupported tags use English'),
                 (3, '  --output-channels N    ', '1-256 output channels (default: input count)'),
                 (4, '  --route OUT:IN:DB      ', 'explicit matrix gain; using any route clears defaults'),
-                (5, '  --eq CH:HZ:DB:Q        ', 'peaking EQ for one output channel; repeat as needed')]:
+                (5, '  --eq CH:HZ:DB:Q        ', 'peaking EQ for one output channel; repeat as needed'),
+                (6, '  --lowpass CH:HZ:Q     ', 'optional channel low-pass (e.g. LFE)'),
+                (7, '  --highpass CH:HZ:Q    ', 'optional channel high-pass'),
+                (8, '  --gain CH:DB           ', 'output channel trim, -60 to +24 dB'),
+                (9, '  --post-gain DB         ', 'overall post gain, -84 to +24 dB')]:
                 assert lines[row] == prefix + messages[source], (tag, row, lines[row])
 
         output = folder / 'sortie-音声-мікрофон-🎵.wav'

@@ -330,3 +330,7 @@ The renderer heading, usage template and one-based channel/no-overwrite explanat
 ### First four standalone help options
 
 Language selection, output channel count, explicit routing and per-channel peaking EQ descriptions are translated in all 34 catalogs. Exact compiled help-line tests preserve command flags, argument tokens and whitespace. Context review confirms that explicit routing removes default routes rather than restoring them. Thirteen option descriptions and the format footer remain English. Earlier native Windows/Linux engine CI [37883666514](https://github.com/rhamenator/soundcurrent-studio/actions/runs/37883666514) passed all eight CTests at the 796-message commit `7c78ba7`, including the CRLF correction; it excludes this later 800-message batch. Native-speaker review and current package qualification remain unverified.
+
+### Filter and gain help
+
+Low-pass, high-pass, channel trim and global post-gain descriptions are translated in all 34 catalogs and checked in actual compiled help. Low-pass passes low frequencies; high-pass passes high frequencies. Channel trim retains −60 to +24 dB while post gain retains −84 to +24 dB. Shared validation in EQ and Studio rejects changed signs, bounds, units and the LFE identifier, with positive/negative mutation checks in both repositories. Native review remains unverified. Nine descriptions and the format footer are still English.

@@ -15,6 +15,17 @@ spec.loader.exec_module(catalog)
 
 
 class CatalogTests(unittest.TestCase):
+    def test_cli_help_preserves_reviewed_limits_and_identifiers(self):
+        for source, tokens in catalog.REVIEWED_CLI_TOKENS.items():
+            translated = 'Texte ' + ' '.join(tokens)
+            catalog.validate_text(source, translated)
+            for token in tokens:
+                with self.subTest(source=source, token=token):
+                    with self.assertRaisesRegex(ValueError, 'CLI invariant changed'):
+                        catalog.validate_text(source, translated.replace(token, '', 1))
+                    with self.assertRaisesRegex(ValueError, 'CLI invariant changed'):
+                        catalog.validate_text(source, translated + ' ' + token)
+
     def test_owned_cli_exception_messages_are_declared(self):
         root = Path(__file__).resolve().parents[1]
         declared = json.loads((root / 'data/localization/cli-sources.json').read_text(encoding='utf-8'))
