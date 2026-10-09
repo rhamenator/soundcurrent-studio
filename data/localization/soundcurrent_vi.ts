@@ -1908,6 +1908,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Thiết bị đầu ra không còn khả dụng</translation>
     </message>
     <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>Đầu ra vượt quá giới hạn RIFF/WAVE 4 GiB</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Đầu ra không có kênh âm lượng</translation>
     </message>
@@ -3141,6 +3146,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>WAVE audio (*.wav)</source>
       <translation>Âm thanh WAVE (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>Đầu ra WAVE vượt quá độ dài đã khai báo</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>

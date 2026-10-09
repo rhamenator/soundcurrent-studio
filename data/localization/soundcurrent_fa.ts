@@ -1908,6 +1908,11 @@ Import into your library?</source>
       <translation>دستگاه خروجی دیگر در دسترس نیست</translation>
     </message>
     <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>خروجی از محدودیت 4 GiB قالب RIFF/WAVE فراتر می‌رود</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>خروجی کانال کنترل بلندی صدا ندارد</translation>
     </message>
@@ -3141,6 +3146,11 @@ Import into your library?</source>
     <message>
       <source>WAVE audio (*.wav)</source>
       <translation>صدای WAVE (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>خروجی WAVE از طول اعلام‌شدهٔ خود فراتر می‌رود</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>

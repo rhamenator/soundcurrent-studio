@@ -1908,6 +1908,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Lähtölaite ei ole enää saatavilla</translation>
     </message>
     <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>Tuloste ylittää RIFF/WAVE-muodon 4 GiB:n rajan</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Lähdössä ei ole äänenvoimakkuuskanavia</translation>
     </message>
@@ -3141,6 +3146,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>WAVE audio (*.wav)</source>
       <translation>WAVE-ääni (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>WAVE-tuloste ylittää ilmoitetun pituutensa</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>

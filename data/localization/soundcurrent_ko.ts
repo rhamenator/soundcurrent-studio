@@ -1908,6 +1908,11 @@ Import into your library?</source>
       <translation>출력 장치를 더 이상 사용할 수 없습니다</translation>
     </message>
     <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>출력이 RIFF/WAVE의 4 GiB 제한을 초과합니다</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>출력에 음량 채널이 없습니다</translation>
     </message>
@@ -3141,6 +3146,11 @@ Import into your library?</source>
     <message>
       <source>WAVE audio (*.wav)</source>
       <translation>WAVE 오디오 (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>WAVE 출력이 선언된 길이를 초과합니다</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>

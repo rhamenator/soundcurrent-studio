@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Output exceeds the RIFF/WAVE 4 GiB limit"))
+        return SC_TR("Output exceeds the RIFF/WAVE 4 GiB limit");
+    if (diagnostic == QStringLiteral("WAVE output exceeds its declared length"))
+        return SC_TR("WAVE output exceeds its declared length");
     if (diagnostic == QStringLiteral("Missing RIFF padding byte"))
         return SC_TR("Missing RIFF padding byte");
     if (diagnostic == QStringLiteral("Excessive number of RIFF chunks"))

@@ -1908,6 +1908,11 @@ Importați în bibliotecă?</translation>
       <translation>Dispozitivul de ieșire nu mai este disponibil</translation>
     </message>
     <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>Ieșirea depășește limita RIFF/WAVE de 4 GiB</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Ieșirea nu are canale de volum</translation>
     </message>
@@ -3141,6 +3146,11 @@ Importați în bibliotecă?</translation>
     <message>
       <source>WAVE audio (*.wav)</source>
       <translation>Audio WAVE (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>Ieșirea WAVE depășește lungimea declarată</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>

@@ -1908,6 +1908,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Utgangseininga er ikkje lenger tilgjengeleg</translation>
     </message>
     <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>Utdata overskrid RIFF/WAVE-grensa på 4 GiB</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Utgangen har ingen volumkanalar</translation>
     </message>
@@ -3141,6 +3146,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>WAVE audio (*.wav)</source>
       <translation>WAVE-lyd (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>WAVE-utdata overskrid den oppgjevne lengda</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>
