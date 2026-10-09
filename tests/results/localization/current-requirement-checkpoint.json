@@ -1,68 +1,86 @@
 {
+  "date": "2026-10-09",
   "supersedesCurrentStatusOf": "tests/results/localization/requirement-audit.json",
-  "auditedHead": "d21a3f7496dc96670dccf83ee37d7a63eb963ddc",
+  "productSourceHead": "b34c4668c7cfb96e59e2247cf5b817d0de6e5d30",
   "overallStatus": "incomplete",
   "catalogs": {
     "count": 34,
     "nonEnglish": 33,
-    "messagesPerCatalog": 747,
-    "check": "scripts/localization.py --check --require-complete passed in this checkpoint",
+    "messagesPerCatalog": 822,
+    "check": "scripts/localization.py --check --require-complete passed locally",
     "nativeReviewed": false
   },
   "requirements": [
     {
       "requirement": "Complete missing interface translations",
-      "status": "declared catalogs complete; whole-interface coverage unproven",
-      "remaining": "Review dynamic expressions and backend/CLI surfaces beyond literal display inventory; resolve any owned untranslated prose"
+      "status": "declared catalogs complete; whole-interface coverage remains unproven",
+      "evidence": [
+        "data/localization/catalogs.json",
+        "tests/results/localization/dynamic-display-inventory.json"
+      ],
+      "remaining": "Review composed display expressions and provenance; investigate any owned untranslated fragments beyond current lexical sink inventory"
     },
     {
       "requirement": "Contextual terminology review",
-      "status": "AI review documented; native-speaker verification unverified",
-      "evidence": "docs/translation-review.md"
-    },
-    {
-      "requirement": "Stable IDs, state, placeholders, plural, formatting, RTL, fallback",
-      "status": "implemented fixture coverage; not exhaustive all workflows",
+      "status": "AI review documented separately; native-speaker verification unverified",
       "evidence": [
-        "tests/localization.cpp",
-        "tests/translation_catalogs.py"
+        "docs/translation-review.md",
+        "data/localization/translation-context.json"
       ]
     },
     {
-      "requirement": "Linux changed-package install/update/uninstall",
-      "status": "passed for exact recorded heads on Ubuntu/Fedora/AlmaLinux containers",
-      "evidence": "tests/results/localization/linux-current/report.json",
-      "remaining": "Studio 747-message catalog was added after the recorded package head; current package qualification required"
+      "requirement": "Stable IDs, saved state, placeholders, numerical processing, plural policy, formatting, RTL and fallback",
+      "status": "compiled fixture scope verified; not exhaustive all workflows",
+      "evidence": [
+        "tests/localization.cpp",
+        "tests/translation_catalogs.py",
+        "tests/results/localization/standard-editing-menus.json"
+      ]
     },
     {
-      "requirement": "Windows changed-package installed UI/lifecycle",
-      "status": "current CI qualification pending; earlier Studio lifecycle has console-only evidence",
-      "run": 37878095228,
-      "evidence": "tests/results/localization/studio-windows-lifecycle-console.json",
-      "remaining": "Inspect current installed-runtime artifact and exact hashes; inspect interactive chooser/shortcut behavior separately"
+      "requirement": "Changed Linux packages and installed language interfaces",
+      "status": "verified exact source/packages across Ubuntu/Fedora/AlmaLinux containers",
+      "run": 37886571464,
+      "evidence": "tests/results/localization/linux-822-installed/verified-artifact.json"
+    },
+    {
+      "requirement": "Changed Windows packages and installed language interfaces",
+      "status": "current job confirmed live; current artifact verification pending",
+      "run": 37886565450,
+      "remaining": "Inspect completion logs and installer/executable hashes when terminal; retain exact scope"
+    },
+    {
+      "requirement": "Shared localization infrastructure",
+      "status": "shared runtime and audit changes applied to both; regression checks for mixed translated/untranslated dynamic fragments passed"
     },
     {
       "requirement": "Reviewable packages and synchronized commits",
-      "status": "recorded Linux packages available; current Windows CI artifacts pending; branch synchronized before checkpoint"
+      "status": "Linux artifacts downloaded and hashes verified; current Windows artifacts pending; audit/evidence records synchronized in checkpoint commit"
     },
     {
-      "requirement": "Preserve native driver and separate DAW work",
-      "status": "native-driver bookmark present; no DAW files modified by this checkpoint",
+      "requirement": "Preserve virtual driver and separately owned DAW",
+      "status": "native driver bookmark remains present; this audit did not modify driver or DAW files",
       "evidence": "docs/windows-native-driver-bookmark.md"
     },
     {
       "requirement": "No unauthorized release",
-      "status": "no release publication performed"
+      "status": "no release published"
     }
   ],
+  "limitations": [
+    "Catalog completeness is not whole-interface extraction proof",
+    "Native-speaker verification is not claimed",
+    "Native OS dialogs may retain operating-system language",
+    "Container/synthetic tests do not prove live audio or a physical RHEL desktop",
+    "Silent same-package updates do not prove older-version migration or interactive chooser behavior"
+  ],
   "evidenceSha256": {
-    "data/localization/catalogs.json": "4ddc8ac820e69f6de8b4e0a5252cf534a820967c86cea918d7825b7800a5d3ec",
+    "data/localization/catalogs.json": "f43e927df04e6616c83c1b7440df440df62fe6cabdc4d5f5b27cae9013fe828b",
     "docs/translation-review.md": "50c094b07831c012aa8eba9f0307e8f3d7043c27b438183dd2de3a82b4439834",
-    "tests/localization.cpp": "b2863ba48f5751dbf4883c32f80fec78dca4e9edf6ae0712c5da7d6e00d23ad3",
-    "tests/translation_catalogs.py": "bb003566fa5233c3021af1cca0ce6bf1e1b3b4e23aeec9c1c6b304a72265c9d0",
-    "scripts/ui_string_audit.py": "bb5200bd3e1ad1b226b50a259a0653b0025b3d77e23d274168d4387cee1f8f2f",
-    "tests/results/localization/linux-current/report.json": "b94dea87d6cf550968d4377089fa9f40147e731c6f6962db42fb56e3a5962420",
-    "tests/results/localization/studio-windows-lifecycle-console.json": "f975807de9a61a63f34f78a40a9f885373171e33394b4c424f2caec1298de08b",
+    "tests/localization.cpp": "7657446d8950ceb6747adda75db86784369bb0af4088a69743901cf67127a8b4",
+    "tests/translation_catalogs.py": "a720274aed96aa29004ad599454d3f004f5777c2d8986caf22256b6ad2353aa9",
+    "scripts/ui_string_audit.py": "a7cd0132f32a3f103eadffe8798aee877b4c397545f3e53ec1ea4134b133629f",
+    "tests/results/localization/dynamic-display-inventory.json": "3098962b9612fb6f2f90f97638eb9a43e859f17f017dbe5a16fa852fcfad4280",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262"
   }
 }
