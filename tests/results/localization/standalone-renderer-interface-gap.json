@@ -1,0 +1,18 @@
+{
+  "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
+  "status": "English-only help and local CLI diagnostics remain an owned interface localization gap",
+  "sourceSha256": "cb006001f64af2a9157f89c3065d201da5b3f7b4c28a1a30124eba179feb5ea2",
+  "fixedMismatch": {
+    "helpPostGainRange": "-84 to +24 dB",
+    "engineEvidence": "src/engine.cpp postGainDb validation",
+    "verification": "Rebuilt standalone renderer and ran --help; corrected range visible"
+  },
+  "requirements": [
+    "Translate CLI help and owned diagnostics across the same locale inventory",
+    "Keep command flags and machine format identifiers invariant",
+    "Retain framework-independent engine-only builds and English fallback",
+    "Test actual localized CLI help/error output without audio devices"
+  ],
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false
+}
