@@ -25,6 +25,9 @@ class CatalogTests(unittest.TestCase):
                         catalog.validate_text(source, translated.replace(token, '', 1))
                     with self.assertRaisesRegex(ValueError, 'CLI invariant changed'):
                         catalog.validate_text(source, translated + ' ' + token)
+                    extended = token + ('0' if any(c.isdigit() for c in token) else 'x')
+                    with self.assertRaisesRegex(ValueError, 'CLI invariant changed'):
+                        catalog.validate_text(source, translated.replace(token, extended, 1))
 
     def test_owned_cli_exception_messages_are_declared(self):
         root = Path(__file__).resolve().parents[1]

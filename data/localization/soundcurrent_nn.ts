@@ -110,6 +110,26 @@ Importere til biblioteket ditt?</translation>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>.1-10 seconds (default 1.5)</source>
+      <extracomment>Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.</extracomment>
+      <translation>.1-10 sekund (standard: 1.5)</translation>
+    </message>
+    <message>
+      <source>0-.95 (default .4)</source>
+      <extracomment>Reverb damping coefficient inclusive 0–.95, default .4; larger value damps high-frequency recirculation more. Not damping in dB or delay feedback.</extracomment>
+      <translation>0-.95 (standard: .4)</translation>
+    </message>
+    <message>
+      <source>0-0.9 (default .35)</source>
+      <extracomment>Delay feedback fraction inclusive 0–0.9, default .35. Numeric examples retain decimal dot accepted by from_chars, independent of regional decimal comma.</extracomment>
+      <translation>0-0.9 (standard: .35)</translation>
+    </message>
+    <message>
+      <source>1-2000 ms (default 250)</source>
+      <extracomment>Delay duration in milliseconds, inclusive 1–2000, default 250. Preserve numeric CLI syntax and ms.</extracomment>
+      <translation>1-2000 ms (standard: 250)</translation>
+    </message>
+    <message>
       <source>1-256 output channels (default: input count)</source>
       <extracomment>CLI output channel count is inclusive 1–256, default equal to input WAVE channel count. Preserve the literal numeric range 1-256. Not input device selection.</extracomment>
       <translation>1-256 utkanalar (standard: tal på innkanalar)</translation>
@@ -3384,6 +3404,16 @@ Importere til biblioteket ditt?</translation>
       <source>peaking EQ for one output channel; repeat as needed</source>
       <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
       <translation>peaking-EQ for éin utkanal; gjenta ved behov</translation>
+    </message>
+    <message>
+      <source>wet fraction 0-1 (enables delay)</source>
+      <extracomment>Delay wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks delay enabled even if zero mix is inaudible. Wet is audio mixing, not humidity.</extracomment>
+      <translation>del handsama signal 0-1 (aktiverer delay)</translation>
+    </message>
+    <message>
+      <source>wet fraction 0-1 (enables reverb)</source>
+      <extracomment>Reverb wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks reverb enabled. Wet is audio mixing, not humidity.</extracomment>
+      <translation>del handsama signal 0-1 (aktiverer romklang)</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>

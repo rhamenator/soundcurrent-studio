@@ -95,12 +95,12 @@ void help() {
         "  --highpass CH:HZ:Q    " << soundcurrent::cli::text("optional channel high-pass") << '\n' <<
         "  --gain CH:DB           " << soundcurrent::cli::text("output channel trim, -60 to +24 dB") << '\n' <<
         "  --post-gain DB         " << soundcurrent::cli::text("overall post gain, -84 to +24 dB") << '\n' <<
-        "  --delay-ms MS          1-2000 ms (default 250)\n"
-        "  --delay-feedback F    0-0.9 (default .35)\n"
-        "  --delay-mix F         wet fraction 0-1 (enables delay)\n"
-        "  --reverb-decay SEC    .1-10 seconds (default 1.5)\n"
-        "  --reverb-damping F    0-.95 (default .4)\n"
-        "  --reverb-mix F        wet fraction 0-1 (enables reverb)\n"
+        "  --delay-ms MS          " << soundcurrent::cli::text("1-2000 ms (default 250)") << '\n' <<
+        "  --delay-feedback F    " << soundcurrent::cli::text("0-0.9 (default .35)") << '\n' <<
+        "  --delay-mix F         " << soundcurrent::cli::text("wet fraction 0-1 (enables delay)") << '\n' <<
+        "  --reverb-decay SEC    " << soundcurrent::cli::text(".1-10 seconds (default 1.5)") << '\n' <<
+        "  --reverb-damping F    " << soundcurrent::cli::text("0-.95 (default .4)") << '\n' <<
+        "  --reverb-mix F        " << soundcurrent::cli::text("wet fraction 0-1 (enables reverb)") << '\n' <<
         "  --tail SEC            append 0-30 seconds to render effect tails\n"
         "  --no-headroom         disable automatic EQ headroom\n"
         "  --bypass              bypass EQ, effects, gains and mute\n"

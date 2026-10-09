@@ -148,5 +148,11 @@
   "optional channel low-pass (e.g. LFE)": "CLI low-pass output-channel filter attenuates high frequencies, passing low frequencies; LFE is only an example channel use, not an automatic speaker role. Preserve LFE identifier.",
   "optional channel high-pass": "CLI high-pass output-channel filter attenuates low frequencies, passing high frequencies. Optional means absent unless specified. Not treble boost.",
   "output channel trim, -60 to +24 dB": "Per-output-channel gain/trim, inclusive -60 to +24 dB. Preserve signs, bounds and dB; this is not the wider global post-gain range.",
-  "overall post gain, -84 to +24 dB": "Global post-gain control, inclusive -84 to +24 dB, applied to all channels. Preserve signs, bounds and dB; do not substitute the narrower channel trim range."
+  "overall post gain, -84 to +24 dB": "Global post-gain control, inclusive -84 to +24 dB, applied to all channels. Preserve signs, bounds and dB; do not substitute the narrower channel trim range.",
+  "1-2000 ms (default 250)": "Delay duration in milliseconds, inclusive 1–2000, default 250. Preserve numeric CLI syntax and ms.",
+  "0-0.9 (default .35)": "Delay feedback fraction inclusive 0–0.9, default .35. Numeric examples retain decimal dot accepted by from_chars, independent of regional decimal comma.",
+  "wet fraction 0-1 (enables delay)": "Delay wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks delay enabled even if zero mix is inaudible. Wet is audio mixing, not humidity.",
+  ".1-10 seconds (default 1.5)": "Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.",
+  "0-.95 (default .4)": "Reverb damping coefficient inclusive 0–.95, default .4; larger value damps high-frequency recirculation more. Not damping in dB or delay feedback.",
+  "wet fraction 0-1 (enables reverb)": "Reverb wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks reverb enabled. Wet is audio mixing, not humidity."
 }

@@ -68,5 +68,11 @@
   "optional channel low-pass (e.g. LFE)",
   "optional channel high-pass",
   "output channel trim, -60 to +24 dB",
-  "overall post gain, -84 to +24 dB"
+  "overall post gain, -84 to +24 dB",
+  "1-2000 ms (default 250)",
+  "0-0.9 (default .35)",
+  "wet fraction 0-1 (enables delay)",
+  ".1-10 seconds (default 1.5)",
+  "0-.95 (default .4)",
+  "wet fraction 0-1 (enables reverb)"
 ]

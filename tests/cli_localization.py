@@ -50,7 +50,13 @@ with tempfile.TemporaryDirectory() as directory:
                 (6, '  --lowpass CH:HZ:Q     ', 'optional channel low-pass (e.g. LFE)'),
                 (7, '  --highpass CH:HZ:Q    ', 'optional channel high-pass'),
                 (8, '  --gain CH:DB           ', 'output channel trim, -60 to +24 dB'),
-                (9, '  --post-gain DB         ', 'overall post gain, -84 to +24 dB')]:
+                (9, '  --post-gain DB         ', 'overall post gain, -84 to +24 dB'),
+                (10, '  --delay-ms MS          ', '1-2000 ms (default 250)'),
+                (11, '  --delay-feedback F    ', '0-0.9 (default .35)'),
+                (12, '  --delay-mix F         ', 'wet fraction 0-1 (enables delay)'),
+                (13, '  --reverb-decay SEC    ', '.1-10 seconds (default 1.5)'),
+                (14, '  --reverb-damping F    ', '0-.95 (default .4)'),
+                (15, '  --reverb-mix F        ', 'wet fraction 0-1 (enables reverb)')]:
                 assert lines[row] == prefix + messages[source], (tag, row, lines[row])
 
         output = folder / 'sortie-音声-мікрофон-🎵.wav'

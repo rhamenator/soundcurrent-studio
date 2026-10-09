@@ -110,6 +110,26 @@ Import into your library?</source>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>.1-10 seconds (default 1.5)</source>
+      <extracomment>Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.</extracomment>
+      <translation>.1-10 सेकंड (डिफ़ॉल्ट: 1.5)</translation>
+    </message>
+    <message>
+      <source>0-.95 (default .4)</source>
+      <extracomment>Reverb damping coefficient inclusive 0–.95, default .4; larger value damps high-frequency recirculation more. Not damping in dB or delay feedback.</extracomment>
+      <translation>0-.95 (डिफ़ॉल्ट: .4)</translation>
+    </message>
+    <message>
+      <source>0-0.9 (default .35)</source>
+      <extracomment>Delay feedback fraction inclusive 0–0.9, default .35. Numeric examples retain decimal dot accepted by from_chars, independent of regional decimal comma.</extracomment>
+      <translation>0-0.9 (डिफ़ॉल्ट: .35)</translation>
+    </message>
+    <message>
+      <source>1-2000 ms (default 250)</source>
+      <extracomment>Delay duration in milliseconds, inclusive 1–2000, default 250. Preserve numeric CLI syntax and ms.</extracomment>
+      <translation>1-2000 ms (डिफ़ॉल्ट: 250)</translation>
+    </message>
+    <message>
       <source>1-256 output channels (default: input count)</source>
       <extracomment>CLI output channel count is inclusive 1–256, default equal to input WAVE channel count. Preserve the literal numeric range 1-256. Not input device selection.</extracomment>
       <translation>1-256 आउटपुट चैनल (डिफ़ॉल्ट: इनपुट चैनलों की संख्या)</translation>
@@ -3384,6 +3404,16 @@ Import into your library?</source>
       <source>peaking EQ for one output channel; repeat as needed</source>
       <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
       <translation>एक आउटपुट चैनल के लिए पीकिंग EQ; ज़रूरत के अनुसार दोहराएँ</translation>
+    </message>
+    <message>
+      <source>wet fraction 0-1 (enables delay)</source>
+      <extracomment>Delay wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks delay enabled even if zero mix is inaudible. Wet is audio mixing, not humidity.</extracomment>
+      <translation>प्रोसेस किए गए सिग्नल का अनुपात 0-1 (डिले सक्रिय करता है)</translation>
+    </message>
+    <message>
+      <source>wet fraction 0-1 (enables reverb)</source>
+      <extracomment>Reverb wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks reverb enabled. Wet is audio mixing, not humidity.</extracomment>
+      <translation>प्रोसेस किए गए सिग्नल का अनुपात 0-1 (रीवरब सक्रिय करता है)</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>

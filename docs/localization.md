@@ -334,3 +334,7 @@ Language selection, output channel count, explicit routing and per-channel peaki
 ### Filter and gain help
 
 Low-pass, high-pass, channel trim and global post-gain descriptions are translated in all 34 catalogs and checked in actual compiled help. Low-pass passes low frequencies; high-pass passes high frequencies. Channel trim retains −60 to +24 dB while post gain retains −84 to +24 dB. Shared validation in EQ and Studio rejects changed signs, bounds, units and the LFE identifier, with positive/negative mutation checks in both repositories. Native review remains unverified. Nine descriptions and the format footer are still English.
+
+### Delay and reverb help
+
+Six effect-option descriptions are translated in all 34 catalogs and checked in actual compiled help. Wet mix denotes processed-signal share; feedback, decay and damping are reviewed against engine behavior. Decimal examples retain the CLI parser’s syntax. Arabic reverb help and its range error now match the existing audio-reverberation terminology. Shared guards in both repositories use token boundaries to reject extended numeric values and avoid counting `ms` inside the Swahili word for default. Native review remains unverified. Three option descriptions and the format footer remain English.
