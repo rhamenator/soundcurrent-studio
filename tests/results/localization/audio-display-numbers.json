@@ -17,7 +17,11 @@
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c"
   },
   "nativeReviewed": false,
-  "currentPackageQualification": "pending",
+  "currentPackageQualification": {
+    "linux": "linux-balance-installed/verified-artifact.json",
+    "windows": "windows-balance-installed/verified-artifact.json",
+    "qualifiedHead": "9e218b3b1d9e4eafb3465276c9b149460c68f30d"
+  },
   "precedingWindowsRun": 37898077086,
   "precedingWindowsResult": "success; predates number-format changes",
   "numericProcessingChange": false
