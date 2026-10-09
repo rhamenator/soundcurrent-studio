@@ -762,6 +762,16 @@ Impor ke pustaka Anda?</translation>
       <translation>Tidak dapat memperbarui pengaturan mulai otomatis.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Tidak dapat menulis data audio WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Tidak dapat menulis header WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Tidak dapat menulis sapuan frekuensi</translation>
     </message>

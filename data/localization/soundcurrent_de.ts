@@ -762,6 +762,16 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Die Autostarteinstellungen konnten nicht aktualisiert werden.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Die WAVE-Audiodaten konnten nicht geschrieben werden</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Der WAVE-Dateikopf konnte nicht geschrieben werden</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Der Frequenzsweep konnte nicht geschrieben werden</translation>
     </message>

@@ -762,6 +762,16 @@ Importálja a könyvtárba?</translation>
       <translation>Nem frissíthetők az indítási beállítások.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Nem sikerült kiírni a WAVE-hangadatokat</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Nem sikerült kiírni a WAVE-fejlécet</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Nem írható ki a frekvenciasöprés</translation>
     </message>

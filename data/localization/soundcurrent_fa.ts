@@ -762,6 +762,16 @@ Import into your library?</source>
       <translation>به‌روزرسانی تنظیمات شروع خودکار ممکن نشد.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>نوشتن داده‌های صوتی WAVE ممکن نشد</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>نوشتن سرآیند WAVE ممکن نشد</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>نوشتن جاروب فرکانسی ممکن نشد</translation>
     </message>

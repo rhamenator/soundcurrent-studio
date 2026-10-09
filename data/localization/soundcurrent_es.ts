@@ -762,6 +762,16 @@ Import into your library?</source>
       <translation>No se han podido actualizar los ajustes de inicio.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>No se pudieron escribir los datos de audio WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>No se pudo escribir la cabecera WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>No se ha podido escribir el barrido de frecuencia</translation>
     </message>

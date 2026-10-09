@@ -762,6 +762,16 @@ Zaimportować do biblioteki?</translation>
       <translation>Nie udało się zaktualizować ustawień uruchamiania.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Nie udało się zapisać danych audio WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Nie udało się zapisać nagłówka WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Nie udało się zapisać przemiatania częstotliwości</translation>
     </message>

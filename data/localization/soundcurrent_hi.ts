@@ -762,6 +762,16 @@ Import into your library?</source>
       <translation>स्वचालित प्रारंभ की सेटिंग अपडेट नहीं की जा सकीं।</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>WAVE ऑडियो डेटा नहीं लिखा जा सका</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>WAVE हेडर नहीं लिखा जा सका</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>आवृत्ति स्वीप नहीं लिखा जा सका</translation>
     </message>

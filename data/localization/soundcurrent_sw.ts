@@ -762,6 +762,16 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Haikuwezekana kusasisha mipangilio ya kuanza programu.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Haikuwezekana kuandika data ya sauti ya WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Haikuwezekana kuandika kichwa cha faili ya WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Haikuwezekana kuandika ishara ya kufagia masafa</translation>
     </message>

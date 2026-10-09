@@ -762,6 +762,16 @@ Import into your library?</source>
       <translation>자동 시작 설정을 업데이트하지 못했습니다.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>WAVE 오디오 데이터를 쓸 수 없습니다</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>WAVE 헤더를 쓸 수 없습니다</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>주파수 스윕을 기록하지 못했습니다</translation>
     </message>

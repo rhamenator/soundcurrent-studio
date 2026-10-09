@@ -762,6 +762,16 @@ Importeren in uw bibliotheek?</translation>
       <translation>Kon de opstartinstellingen niet bijwerken.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Kan de WAVE-audiogegevens niet schrijven</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Kan de WAVE-header niet schrijven</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Kon de frequentiesweep niet schrijven</translation>
     </message>

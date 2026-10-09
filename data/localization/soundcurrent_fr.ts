@@ -762,6 +762,16 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Impossible de mettre à jour les réglages de démarrage.</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>Impossible d’écrire les données audio WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>Impossible d’écrire l’en-tête WAVE</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>Impossible d’écrire le balayage de fréquence</translation>
     </message>

@@ -762,6 +762,16 @@ Import into your library?</source>
       <translation>無法更新啟動設定。</translation>
     </message>
     <message>
+      <source>Could not write WAVE audio</source>
+      <translation>無法寫入 WAVE 音訊資料</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>無法寫入 WAVE 檔案標頭</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not write frequency sweep</source>
       <translation>無法寫入掃頻訊號</translation>
     </message>
