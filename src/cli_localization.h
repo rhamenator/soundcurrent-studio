@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: GPL-3.0-only
+#pragma once
+#include "cli_catalog_generated.h"
+#include <algorithm>
+#include <string>
+namespace soundcurrent::cli {
+inline std::string language = "en";
+inline void selectLanguage(std::string tag) {
+    std::replace(tag.begin(), tag.end(), '_', '-');
+    const auto lower = [](std::string value) {
+        for (auto &c : value) if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
+        return value;
+    };
+    tag = lower(tag);
+    language = "en";
+    for (const auto &entry : entries)
+        if (lower(std::string(entry.language)) == tag) { language = entry.language; return; }
+    const auto dash = tag.find('-');
+    if (dash != std::string::npos)
+        for (const auto &entry : entries)
+            if (lower(std::string(entry.language)) == tag.substr(0, dash)) {
+                language = entry.language; return;
+            }
+}
+inline std::string text(std::string_view source) {
+    for (const auto &entry : entries)
+        if (entry.language == language && entry.source == source) return std::string(entry.text);
+    return std::string(source);
+}
+inline std::string renderError(std::string_view diagnostic) {
+    auto result = text("Render: %1");
+    const auto position = result.find("%1");
+    if (position != std::string::npos) result.replace(position, 2, text(diagnostic));
+    return result;
+}
+}

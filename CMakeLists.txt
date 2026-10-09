@@ -55,7 +55,18 @@ add_library(soundcurrent-wave STATIC src/wav.cpp)
 add_library(SoundCurrent::Wave ALIAS soundcurrent-wave)
 set_target_properties(soundcurrent-wave PROPERTIES EXPORT_NAME Wave POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(soundcurrent-wave PUBLIC soundcurrent-engine)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+file(GLOB CLI_CATALOG_INPUTS CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/data/localization/*.ts")
+set(CLI_CATALOG_HEADER "${CMAKE_CURRENT_BINARY_DIR}/cli_catalog_generated.h")
+add_custom_command(OUTPUT "${CLI_CATALOG_HEADER}"
+  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/scripts/cli_catalog_header.py
+    --data ${CMAKE_CURRENT_SOURCE_DIR}/data/localization --output "${CLI_CATALOG_HEADER}"
+  DEPENDS scripts/cli_catalog_header.py data/localization/cli-sources.json
+    data/localization/catalogs.json ${CLI_CATALOG_INPUTS}
+  VERBATIM)
 add_executable(soundcurrent-studio-render src/studio_render.cpp)
+target_sources(soundcurrent-studio-render PRIVATE "${CLI_CATALOG_HEADER}")
+target_include_directories(soundcurrent-studio-render PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 target_link_libraries(soundcurrent-studio-render PRIVATE soundcurrent-wave)
 add_executable(soundcurrent-engine-test tests/engine_response.cpp)
 target_link_libraries(soundcurrent-engine-test PRIVATE soundcurrent-engine)

@@ -1,6 +1,6 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "English-only help and local CLI diagnostics remain an owned interface localization gap",
+  "status": "Declared WAVE diagnostics and Render template embedded from all 34 Qt catalogs; explicit --language supported without Qt linkage. CLI help and other owned CLI diagnostics remain untranslated.",
   "sourceSha256": "cb006001f64af2a9157f89c3065d201da5b3f7b4c28a1a30124eba179feb5ea2",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
@@ -14,5 +14,8 @@
     "Test actual localized CLI help/error output without audio devices"
   ],
   "nativeReviewed": false,
-  "wholeInterfaceCoverageProven": false
+  "wholeInterfaceCoverageProven": false,
+  "runtimeVerification": "Actual missing-file render tested across all 34 languages with exact translated error, nonzero exit and no output; existing synthetic WAVE processing suite passed",
+  "newBuildDependency": "Python 3 interpreter generates embedded CLI header; audio engine and WAVE libraries remain Qt independent",
+  "currentPackageQualification": "pending"
 }

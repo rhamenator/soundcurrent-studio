@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "engine.h"
+#include "cli_localization.h"
 #include "wav.h"
 #include <algorithm>
 #include <charconv>
@@ -76,6 +77,7 @@ private:
 void help() {
     std::cout << "SoundCurrent Studio offline renderer (no audio device required)\n"
         "Usage: soundcurrent-studio-render --input in.wav --output NEW.wav [options]\n"
+        "  --language TAG         interface language; unsupported tags use English\n"
         "  --output-channels N    1-256 output channels (default: input count)\n"
         "  --route OUT:IN:DB      explicit matrix gain; using any route clears defaults\n"
         "  --eq CH:HZ:DB:Q        peaking EQ for one output channel; repeat as needed\n"
@@ -99,6 +101,8 @@ void help() {
 
 int main(int argc, char **argv) {
     try {
+        for (int i = 1; i + 1 < argc; ++i)
+            if (std::string_view(argv[i]) == "--language") soundcurrent::cli::selectLanguage(argv[++i]);
         std::filesystem::path input, output;
         EngineSettings settings;
         double tail = 0;
@@ -111,6 +115,7 @@ int main(int argc, char **argv) {
             if (option == "--bypass") { settings.bypass = true; continue; }
             if (++i == argc) throw std::runtime_error("Missing option value");
             const std::string_view value = argv[i];
+            if (option == "--language") continue;
             if (option == "--input") input = value;
             else if (option == "--output") output = value;
             else if (option == "--output-channels") outputChannels = channel(number(value), maxChannels)+1;
@@ -195,7 +200,7 @@ int main(int argc, char **argv) {
                   << total.clippedSamples << "; invalid samples: " << total.invalidSamples << "\n";
         return 0;
     } catch (const std::exception &error) {
-        std::cerr << "Render failed: " << error.what() << '\n';
+        std::cerr << soundcurrent::cli::renderError(error.what()) << '\n';
         return 1;
     }
 }
