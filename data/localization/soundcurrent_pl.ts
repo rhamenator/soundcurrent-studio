@@ -2353,6 +2353,11 @@ Czy na pewno chcesz go usunąć?</translation>
       <translation>Strumienie PipeWire na żywo obsługują najwyżej 64 kanały; dla większych układów użyj renderowania offline</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Błąd strumienia PipeWire</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Odtwórz cichy dźwięk testowy i przejrzyj proponowane zmiany korekcji odtwarzania</translation>
     </message>

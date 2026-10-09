@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>Потоки PipeWire у реальному часі підтримують щонайбільше 64 канали; для більших конфігурацій використовуйте автономний рендеринг</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Збій потоку PipeWire</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Відтворити тихий тестовий звук і переглянути запропоновані зміни EQ для відтворення</translation>
     </message>

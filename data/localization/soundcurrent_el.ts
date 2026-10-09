@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>Οι ροές PipeWire σε πραγματικό χρόνο υποστηρίζουν έως 64 κανάλια· για μεγαλύτερες διατάξεις χρησιμοποιήστε απόδοση εκτός πραγματικού χρόνου</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Αποτυχία ροής PipeWire</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Αναπαραγωγή ήσυχου δοκιμαστικού ήχου και προεπισκόπηση προτεινόμενων αλλαγών EQ αναπαραγωγής</translation>
     </message>

@@ -581,3 +581,7 @@ Source tracing found two English process-conflict return paths reaching the dial
 ### Calibration profile creation defaults (2026-10-09)
 
 Four new messages cover the whole listening system, measured listening position, combined equipment/room conditions and measurement provenance. Contextual AI review preserves median reference, microphone EQ bypass and possible playback EQ inclusion. Device names are opaque substitutions. New editable metadata is translated at creation; loaded profiles retain their recorded language and text. All33 non-English locales are populated. Native-speaker verification remains unverified.
+
+### PipeWire stream fallback (2026-10-09)
+
+Studio now maps its owned no-detail stream-failure fallback at the desktop boundary. All33 non-English locales use audio-stream terminology and retain PipeWire identity. Actual provider diagnostic details remain unchanged. Contextual AI review is distinct from native-speaker verification, which remains unverified. Fresh production package qualification is required.

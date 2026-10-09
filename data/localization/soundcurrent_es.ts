@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>Los flujos en directo de PipeWire admiten como máximo 64 canales; use el renderizado sin conexión para configuraciones mayores</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Falló el flujo de PipeWire</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Reproducir audio de prueba de bajo volumen y previsualizar los cambios sugeridos de ecualización de reproducción</translation>
     </message>

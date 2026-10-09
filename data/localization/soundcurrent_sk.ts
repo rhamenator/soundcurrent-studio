@@ -2353,6 +2353,11 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Živé streamy PipeWire podporujú najviac 64 kanálov; pre väčšie rozloženia použite offline renderovanie</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Zlyhal stream PipeWire</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Prehrať tichý testovací zvuk a zobraziť náhľad odporúčaných zmien posluchového EQ</translation>
     </message>

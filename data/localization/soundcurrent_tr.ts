@@ -2353,6 +2353,11 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>PipeWire canlı akışları en fazla 64 kanalı destekler; daha büyük düzenler için çevrimdışı işleme kullanın</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire akışı başarısız oldu</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Düşük seviyeli test sesi çal ve önerilen oynatma EQ değişikliklerini önizle</translation>
     </message>

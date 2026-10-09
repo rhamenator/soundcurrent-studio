@@ -2353,6 +2353,11 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Mitiririko ya PipeWire ya wakati halisi hutumia hadi chaneli 64; tumia uundaji wa sauti nje ya wakati halisi kwa mipangilio mikubwa zaidi</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Mtiririko wa PipeWire umeshindwa</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Cheza sauti hafifu ya majaribio na uhakiki mabadiliko yaliyopendekezwa ya EQ ya uchezaji</translation>
     </message>

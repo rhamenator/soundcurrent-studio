@@ -230,10 +230,26 @@
         "cliLocale": "Explicit supported canonical tags and base-language fallback; unsupported tags use English. No claim that every regional alias resolves to a script-specific language."
       },
       "runtimeLimit": "Prior compiled channel-role, table and renderer fixtures supplement current source review; no physical multichannel hardware or native-speaker certification. Fresh successful packages still require artifact verification."
+    },
+    {
+      "id": "studio-linux-engine-wave-boundary",
+      "sources": [
+        "src/linux_audio.cpp",
+        "src/engine.cpp",
+        "src/wav.cpp",
+        "src/audio_error_text.h"
+      ],
+      "boundary": "Linux direct exceptions and callback fallback, engine reject reasons and WAVE validation diagnostics; desktop mapping and renderer CLI boundaries.",
+      "evidence": [
+        "tests/results/localization/studio-backend-correspondence.json",
+        "tests/results/localization/pipewire-fallback-runtime.log"
+      ],
+      "auditState": "source correspondence reviewed; fallback gap fixed; fresh installed qualification pending",
+      "runtimeLimit": "Compiled mapping fixture preserves provider details; no physical PipeWire failure induced."
     }
   ],
   "sourceSha256": {
-    "src/main.cpp": "190a450f5c58cfaf7abcc21490a39e30f2fab795941547d97ab07bb3e60b66b3",
+    "src/main.cpp": "2679d15e3060223d388d7ca263db00f3b5a2263180d08f073a27406e3c31fcbd",
     "src/enhancement_controls.h": "a5c3e8358fa8235b9625567e152dc3eb73ba54f13fba8b4fba2202a272262b52",
     "src/equipment_display_text.h": "e3086d524e9b436075ecf9d9b8c143a0058a692685c10919b72298fd97ec44c5",
     "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
@@ -247,7 +263,7 @@
     "src/processing_guard.cpp": "fb5b27c2aa0b66d8702075461b0a77815cd8dbd9bbc3624dac97a03a2ba4fab0",
     "src/worker_message_buffer.h": "1866de25517f49efba63b08ef69d6e6d7dfa4e600c1efd6588226b6fe3327e42",
     "src/windows_platform.inc": "720d72ee42bf50d6bc371452f517c902f29acca8a85fd08d874df83e20468a34",
-    "src/audio_error_text.h": "a219810b01b93a90578eb61a98a0fab501c76792aac54a37cf87376737d53f4d",
+    "src/audio_error_text.h": "ad99d6478e7a5d1aa38300c1909e534e23ebe1125af05a3bdf7b8f557361c445",
     "src/windows_audio.cpp": "ae2903e379284ea611310ff55caa7ee5de5a461accce97b74f3cf2d647e4efd7",
     "src/windows_io.cpp": "13362ffd61431d9ea105ebbf5eb55df30b54904adc34a750a4da4bf9bab08ac7",
     "scripts/windows_setup_catalogs.py": "881961b77086c5ad51b80df4ce3edf38f52860655f11bb7c924707b4bcf29d86",
@@ -258,7 +274,10 @@
     "src/studio_model.cpp": "00949b7ee79350e90cf92edca9ef39f696b20c435b04d597a8fcb0da68323d1c",
     "src/studio_render.cpp": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384",
     "src/studio_name_text.h": "5bcdf9347973e22ac30e78448661fd73bd7320dd49e456d8c497fd1a76652314",
-    "src/cli_localization.h": "6c2923e3f549bb37fa742770bb42ba82b6efb59a5c8501421d9331d6ef0370b3"
+    "src/cli_localization.h": "6c2923e3f549bb37fa742770bb42ba82b6efb59a5c8501421d9331d6ef0370b3",
+    "src/linux_audio.cpp": "428ef69af5f3a829c1234dfd0bdc3f672636e1e24d35fc4a90f9d4294ee056af",
+    "src/engine.cpp": "08758edf4e0de38f15a31b03d62ab80220c58da9ead821e5262d8ea628dfde52",
+    "src/wav.cpp": "f113caa45573d2895cd18745840f1bd4ed2abc28fcbac56a6027d1de3c81716b"
   },
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,

@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>PipeWire 即時串流最多支援 64 個聲道；更大的聲道配置請使用離線算繪</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire 音訊串流失敗</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>播放低音量測試音訊並預覽建議的播放等化調整</translation>
     </message>

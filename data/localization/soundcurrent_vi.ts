@@ -2353,6 +2353,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Luồng PipeWire thời gian thực hỗ trợ tối đa 64 kênh; hãy dùng kết xuất ngoại tuyến cho bố trí kênh lớn hơn</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Luồng PipeWire bị lỗi</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Phát âm thử nhỏ và xem trước thay đổi EQ phát âm thanh được đề xuất</translation>
     </message>

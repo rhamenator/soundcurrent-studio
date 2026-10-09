@@ -2353,6 +2353,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Fluxurile PipeWire în timp real acceptă cel mult 64 de canale; utilizați randarea offline pentru configurații mai mari</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Fluxul PipeWire a eșuat</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Redați sunet de test silențios și previzualizați modificările sugerate ale EQ-ului de redare</translation>
     </message>

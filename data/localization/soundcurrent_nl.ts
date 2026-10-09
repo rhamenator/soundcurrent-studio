@@ -2353,6 +2353,11 @@ Wilt u het toch verwijderen?</translation>
       <translation>Live PipeWire-streams ondersteunen maximaal 64 kanalen; gebruik offline rendering voor grotere kanaalindelingen</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire-stream mislukt</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Speel testaudio op laag volume en bekijk voorgestelde wijzigingen aan de weergave-EQ</translation>
     </message>

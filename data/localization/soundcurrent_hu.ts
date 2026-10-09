@@ -2353,6 +2353,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>A valós idejű PipeWire-adatfolyamok legfeljebb 64 csatornát támogatnak; nagyobb csatornakiosztásokhoz használjon offline renderelést</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>A PipeWire-adatfolyam hibája</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Halk teszthang lejátszása és a javasolt lejátszási EQ-módosítások előnézete</translation>
     </message>

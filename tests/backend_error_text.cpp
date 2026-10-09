@@ -13,6 +13,7 @@ class Fixture : public QTranslator {
  QString translate(const char *context,const char *source,const char *,int) const override {
   if(QByteArray(context)!="SoundCurrent")return {};
   if(QByteArray(source).startsWith("Invalid ") || QByteArray(source).startsWith("Too many ") || QByteArray(source)=="Duplicate Studio route" || QByteArray(source)=="Enhancements outside supported ranges" || QByteArray(source).startsWith("Shared and channel EQ"))return "OWNED_DIAGNOSTIC";
+  if(QByteArray(source)=="PipeWire stream failed")return "PIPEWIRE_FALLBACK";
   if(QByteArray(source)=="Chunk extends beyond RIFF bounds")return "RIFF_BOUNDS";
   if(QByteArray(source)=="Could not write WAVE header")return "WAVE_HEADER";
   if(QByteArray(source)=="Could not write WAVE audio")return "WAVE_AUDIO";
@@ -140,6 +141,8 @@ int main(int argc,char **argv) try {
  require(audioErrorText("Invalid enhancement parameter count") == "OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid enhancement parameter type") == "OWNED_DIAGNOSTIC");
  require(audioErrorText("Enhancements outside supported ranges") == "OWNED_DIAGNOSTIC");
+ require(audioErrorText("PipeWire stream failed")=="PIPEWIRE_FALLBACK");
+ require(audioErrorText("PipeWire provider detail %1")=="PipeWire provider detail %1");
  require(audioErrorText("Invalid external route %1")=="Invalid external route %1");
  require(audioErrorText("External profile %1 — unknown")=="External profile %1 — unknown");
  require(audioErrorText("Read speaker level failed (0xAbCd1234)")=="LEVEL | AbCd1234");

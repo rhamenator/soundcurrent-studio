@@ -2353,6 +2353,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Aliran PipeWire waktu nyata mendukung paling banyak 64 kanal; gunakan rendering offline untuk tata letak kanal yang lebih besar</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Aliran PipeWire gagal</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Putar audio uji berlevel rendah dan tinjau perubahan EQ pemutaran yang disarankan</translation>
     </message>

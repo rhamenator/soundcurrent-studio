@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>PipeWire की रीयल-टाइम स्ट्रीम अधिकतम 64 चैनल का समर्थन करती हैं; बड़े चैनल विन्यास के लिए ऑफ़लाइन रेंडरिंग का उपयोग करें</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire स्ट्रीम विफल हुई</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>धीमी आवाज़ वाला परीक्षण ऑडियो चलाएँ और सुझाए गए प्लेबैक EQ बदलाव का प्रीव्यू देखें</translation>
     </message>

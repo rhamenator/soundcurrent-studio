@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>PipeWire 실시간 스트림은 최대 64개 채널을 지원합니다. 더 큰 채널 배치에는 오프라인 렌더링을 사용하세요</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire 스트림 실패</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>낮은 음량의 테스트 오디오를 재생하고 권장 재생 EQ 변경을 미리 확인</translation>
     </message>

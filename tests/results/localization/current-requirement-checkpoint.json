@@ -4,7 +4,7 @@
   "catalogs": {
     "count": 34,
     "nonEnglish": 33,
-    "messagesPerCatalog": 889,
+    "messagesPerCatalog": 890,
     "check": "complete structural/compiled-hash gate passed",
     "nativeReviewed": false
   },
@@ -47,7 +47,7 @@
     },
     {
       "requirement": "Changed Linux packages and installed language interfaces",
-      "status": "Fresh jobs live; earlier packages superseded for current-source qualification.",
+      "status": "Measurement-profile Linux packages qualified for their recorded head, now superseded by PipeWire fallback mapping fix; fresh qualification required.",
       "run": 37918553328,
       "evidence": [
         "tests/results/localization/linux-current-qualified-0/verified-artifact.json",
@@ -57,7 +57,7 @@
     },
     {
       "requirement": "Changed Windows packages and installed language interfaces",
-      "status": "Fresh UTF-8-fixed test run live. Earlier calibration run failed in Python default decoding; earlier qualified packages superseded.",
+      "status": "Earlier Windows run remains historical; fresh qualification required for PipeWire fallback fix.",
       "run": 37918763962,
       "evidence": [
         "tests/results/localization/measurement-test-utf8-fix.json",
@@ -98,14 +98,14 @@
     "Same-package lifecycle does not establish older-version migration"
   ],
   "evidenceSha256": {
-    "data/localization/catalogs.json": "39cf0c0e68187160797dbdbb4d5d8d944f93fca061bccde1303496efafc362d2",
-    "data/localization/translation-context.json": "26109a5c0ae16aebed9de5041f80813253572c4c95b6ac5960ef26d2af44b86a",
-    "docs/translation-review.md": "d7e14379dc7ea0e6010a65c40129ffc4e78c905d4ac164eb8bda387384569da5",
+    "data/localization/catalogs.json": "f836723fc1bf516486fcd6713f7468371c79ead2be4e2d3b9d9c511292793907",
+    "data/localization/translation-context.json": "b1c403cdb38b8fa9c75d9932892b8935599f5a6892df21cb7f4ad6d1a317d171",
+    "docs/translation-review.md": "10661086935e89b84fa37218f757c7d93342007d292ee90009a1f8e21dc93d1b",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
     "scripts/localization.py": "f09f71fc52d970d7795ad60a272f69b6c6f8284b107660addccca7c622cebda9",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
     "tests/results/localization/dynamic-provenance-review.json": "71d0c8028e9e60ba3f96e62f1be714ab3673fc65c76350a2aca874f1e7f6267c",
-    "tests/results/localization/interface-surface-inventory.json": "45a25cc709b1dd2ff6b2517fbf136729a7c31f575d11f3ea9dae734f06b6ba6e",
+    "tests/results/localization/interface-surface-inventory.json": "d085c780b4da0a77214e0202ccc6215e1384f912cf5fa97c1bceabcb40aad582",
     "tests/results/localization/linux-current-qualified-0/verified-artifact.json": "a93db2faad1a46938e6d8e13e813baf48e4dcb39b2aeafdf07ca58418e5e635d",
     "tests/results/localization/linux-current-qualified-1/verified-artifact.json": "46dfc83951e4192bb2875120b9c0737132c83c5d1103b510012e1ff52a0f1db0",
     "tests/results/localization/linux-current-qualified-2/verified-artifact.json": "ecdd84669d6c99b9ddf65044c9bbdbdc4dbf28fcc6c4daf3461597376de2100c",

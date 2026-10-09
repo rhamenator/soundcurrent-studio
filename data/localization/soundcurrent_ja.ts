@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>PipeWire のリアルタイムストリームは最大 64 チャンネルに対応しています。それより大きいチャンネル構成にはオフラインレンダリングを使用してください</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire ストリームが失敗しました</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>低音量のテスト音声を再生し、推奨される再生 EQ の変更をプレビュー</translation>
     </message>

@@ -711,7 +711,7 @@ public:
         }
         const int id = nodeId(kSink);
         if (id < 0) {
-            const auto details = QString::fromStdString(bridge_.error());
+            const auto details = soundcurrent::i18n::audioErrorText(QString::fromStdString(bridge_.error()));
             stop();
             throw std::runtime_error(SC_TR("Timed out waiting for the equalizer sink: %1").arg(details).toStdString());
         }

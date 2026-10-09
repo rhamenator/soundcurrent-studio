@@ -2353,6 +2353,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Reaaliaikaiset PipeWire-virrat tukevat enintään 64 kanavaa; käytä offline-renderöintiä suuremmille kanava-asetteluille</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire-virta epäonnistui</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Toista hiljaista testiääntä ja esikatsele ehdotettuja toiston taajuuskorjausmuutoksia</translation>
     </message>

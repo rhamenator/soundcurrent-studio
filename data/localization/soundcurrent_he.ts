@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>זרמי PipeWire בזמן אמת תומכים ב־64 ערוצים לכל היותר; לפריסות גדולות יותר יש להשתמש ברינדור שאינו בזמן אמת</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>זרם PipeWire נכשל</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>השמעת שמע בדיקה שקט ותצוגה מקדימה של שינויים מוצעים באקולייזר ההשמעה</translation>
     </message>

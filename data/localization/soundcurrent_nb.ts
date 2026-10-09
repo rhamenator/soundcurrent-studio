@@ -2353,6 +2353,11 @@ Vil du slette den likevel?</translation>
       <translation>PipeWire-strømmer i sanntid støtter høyst 64 kanaler; bruk frakoblet rendering for større kanaloppsett</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire-strømmen mislyktes</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Spill av stille testlyd og forhåndsvis foreslåtte endringer i avspillings-EQ</translation>
     </message>

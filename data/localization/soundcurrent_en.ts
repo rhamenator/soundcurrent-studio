@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</translation>
       <translation>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire stream failed</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Play quiet test audio and preview suggested playback EQ changes</translation>
     </message>

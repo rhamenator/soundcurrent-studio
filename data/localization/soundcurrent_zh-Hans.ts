@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>PipeWire 实时流最多支持 64 个声道；更大的声道布局请使用离线渲染</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire 音频流失败</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>播放低音量测试音频并预览建议的播放均衡调整</translation>
     </message>

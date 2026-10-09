@@ -2353,6 +2353,11 @@ Do you want to delete it anyway?</source>
       <translation>สตรีม PipeWire แบบเรียลไทม์รองรับสูงสุด 64 ช่องเสียง สำหรับรูปแบบการจัดช่องเสียงที่ใหญ่กว่านี้ ให้ใช้การเรนเดอร์แบบออฟไลน์</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>สตรีม PipeWire ล้มเหลว</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>เล่นเสียงทดสอบระดับเบาและดูตัวอย่างการเปลี่ยน EQ สำหรับเล่นเสียงที่แนะนำ</translation>
     </message>

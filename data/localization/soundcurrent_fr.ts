@@ -2353,6 +2353,11 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Les flux PipeWire en direct prennent en charge au maximum 64 canaux ; utilisez le rendu hors ligne pour des configurations plus grandes</translation>
     </message>
     <message>
+      <source>PipeWire stream failed</source>
+      <translation>Échec du flux PipeWire</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
+    </message>
+    <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
       <translation>Lire un signal de test à faible niveau et prévisualiser les corrections proposées pour l’égalisation d’écoute</translation>
     </message>
