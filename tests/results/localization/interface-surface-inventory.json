@@ -18,7 +18,7 @@
         "tests/results/localization/balance-number-formats.json",
         "tests/results/localization/main-equipment-display-gap.json"
       ],
-      "auditState": "concrete equipment summary gap fixed; calibration creation-default gap open"
+      "auditState": "equipment summary and calibration creation-default gaps fixed; sampled compiled fixtures passed; final surface consolidation pending"
     },
     {
       "id": "equipment-editor",
@@ -223,7 +223,7 @@
     }
   ],
   "sourceSha256": {
-    "src/main.cpp": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
+    "src/main.cpp": "190a450f5c58cfaf7abcc21490a39e30f2fab795941547d97ab07bb3e60b66b3",
     "src/enhancement_controls.h": "a5c3e8358fa8235b9625567e152dc3eb73ba54f13fba8b4fba2202a272262b52",
     "src/equipment_display_text.h": "e3086d524e9b436075ecf9d9b8c143a0058a692685c10919b72298fd97ec44c5",
     "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
