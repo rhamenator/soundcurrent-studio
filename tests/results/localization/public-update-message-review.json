@@ -255,7 +255,11 @@
     "log": "tests/results/localization/public-update-localization-linux.log",
     "logSha256": "c4b39889efb94d45867d34a04781ab2629ce06ef3fd077c2dbf33a2d8a09f042",
     "scope": "Compiled catalog/UI localization fixture; actual network-failure branch not driven",
-    "currentPackages": "pending"
+    "currentPackages": {
+      "linux": "linux-public-update-installed/verified-artifact.json",
+      "windows": "windows-public-update-installed/verified-artifact.json",
+      "testedHead": "1f9205dc2cdcb8f6892780270626a391c7a10d9a"
+    }
   },
   "sourceSha256": {
     "src/update_panel.h": "c39b2e267dd634bd49ca63122401cf5c5c2e6cc2735d4f8396eb66a1a52264a3",

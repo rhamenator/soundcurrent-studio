@@ -40,15 +40,15 @@
     },
     {
       "requirement": "Changed Linux packages and installed language interfaces",
-      "status": "Qualified preceding graph packages; latest public update-message/caption catalogs require fresh package qualification",
-      "run": 37901215648,
-      "evidence": "tests/results/localization/linux-graph-installed/verified-artifact.json"
+      "status": "Current public-update packages hash-verified; full CTest, 33 installed locales per image and documented lifecycle passed",
+      "run": 37903386269,
+      "evidence": "tests/results/localization/linux-public-update-installed/verified-artifact.json"
     },
     {
       "requirement": "Changed Windows packages and installed language interfaces",
-      "status": "Qualified preceding graph packages; latest public update-message/caption catalogs require fresh package qualification",
-      "run": 37901201673,
-      "evidence": "tests/results/localization/windows-graph-installed/verified-artifact.json"
+      "status": "Current public-update installer/executable hashes matched installed lifecycle; 34 locale completions and fr/nn/ar lifecycle passed",
+      "run": 37903356826,
+      "evidence": "tests/results/localization/windows-public-update-installed/verified-artifact.json"
     },
     {
       "requirement": "Shared localization infrastructure",
@@ -56,7 +56,7 @@
     },
     {
       "requirement": "Reviewable packages and synchronized commits",
-      "status": "Combined graph-patch Linux/Windows artifacts downloaded and hash-verified; source fixes synced; latest artifact evidence being committed"
+      "status": "Current production Linux/Windows packages downloaded and hash-verified; source fixes synced; latest artifact evidence being committed"
     },
     {
       "requirement": "Preserve virtual driver and separately owned DAW",
@@ -76,12 +76,12 @@
     "Silent same-package updates do not prove older-version migration or interactive chooser behavior"
   ],
   "evidenceSha256": {
-    "data/localization/catalogs.json": "55f2993219e10a999a9e26c2f0e68838d7e96bd0cfb21dc3549ee79b7eea3969",
-    "docs/translation-review.md": "2ec4c555fd31c099deabec702233b667e80ae50292a1f3d6e8d0f98e06ed0d9e",
+    "data/localization/catalogs.json": "50acbd0f520a782c387287fcad681574a6cd23bf190f51ab72366ee6bc80e45b",
+    "docs/translation-review.md": "83c9ae195ba7f616feec2068584e9e1b99e78b141e2dedf67a94a51d2d3861c0",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
     "tests/translation_catalogs.py": "04e8cedb6d842dc84d3f6ec98f9eb01544a826b6fedca218cd0f2b148c9a3c26",
     "scripts/ui_string_audit.py": "c3b16a407263d8aa7665095e6d0577ab261acf6793d10d27a65d4e1707495275",
-    "tests/results/localization/dynamic-display-inventory.json": "20d4c9e7bf7939d9f51f9cea04025fa523cfa2a9fb7c18e58d0c7521ecd5760b",
+    "tests/results/localization/dynamic-display-inventory.json": "bb21a7e26fb3d0b980d33a4e8b2f0eb810d0dfc2c221d78b668d33c6b707843d",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
     "src/main.cpp": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
     "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
@@ -249,8 +249,8 @@
   "qt612FixedNativeEvidence": "tests/results/localization/qt-file-dialog-qt612-native-success.json",
   "qualifiedPrecedingHead": "d47444950981f2cc06e740dc0ac70f88ae551f7f",
   "audioDisplayNumbers": "tests/results/localization/audio-display-numbers.json",
-  "qualifiedCurrentProductionHead": "5a7234b047e7f41dcc77281cfba6ef512a8bdf1d",
-  "currentProductionSourceMatch": "Latest update failure message and all compiled language catalogs changed after qualified graph-patch head; new package qualification pending.",
+  "qualifiedCurrentProductionHead": "1f9205dc2cdcb8f6892780270626a391c7a10d9a",
+  "currentProductionSourceMatch": "No src/data/packaging/CMake differences between qualified public-update head and current checkout; subsequent commits change audit reports only.",
   "balanceNumberFormats": "tests/results/localization/balance-number-formats.json",
   "profileGraphNumberFormats": "tests/results/localization/profile-graph-number-formats.json",
   "fileTypeProviderBoundary": "tests/results/localization/file-type-provider-boundary.json",
