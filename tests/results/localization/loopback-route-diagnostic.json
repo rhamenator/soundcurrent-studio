@@ -1,0 +1,11 @@
+{
+  "source": "Invalid audio route: loopback requires a separate render source",
+  "reachability": "WindowsBridge::start assigns invariant backend error; main showError passes it through audioErrorText at desktop boundary",
+  "translationCoverage": "33 non-English plus English; 747 current declared messages; zero unfinished",
+  "contextualAIReview": "Separate playback source prevents capturing processed destination; loopback is render capture, not an echo effect",
+  "nativeReviewed": false,
+  "processingChanged": false,
+  "backendSourceSha256": "ae2903e379284ea611310ff55caa7ee5de5a461accce97b74f3cf2d647e4efd7",
+  "tests": "Backend display translation fixture passed; compiled catalog structural/hash validation passed; all 52 maintenance tests passed",
+  "installedCurrentQualification": "Pending rebuilt GUI and Windows packages for added diagnostic"
+}

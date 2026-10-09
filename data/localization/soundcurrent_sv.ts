@@ -1297,6 +1297,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Ogiltiga Studio-inställningar</translation>
     </message>
     <message>
+      <source>Invalid audio route: loopback requires a separate render source</source>
+      <translation>Ogiltig ljudroutning: loopback kräver en separat uppspelningskälla</translation>
+      <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio setup requester.</source>
       <translation>Ogiltig process som begär ljudinställning.</translation>
       <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>

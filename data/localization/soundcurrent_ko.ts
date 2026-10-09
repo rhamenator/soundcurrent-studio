@@ -1297,6 +1297,11 @@ Import into your library?</source>
       <translation>잘못된 Studio 설정</translation>
     </message>
     <message>
+      <source>Invalid audio route: loopback requires a separate render source</source>
+      <translation>잘못된 오디오 경로: 루프백 캡처에는 별도의 재생 소스가 필요합니다</translation>
+      <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio setup requester.</source>
       <translation>오디오 설정을 요청한 프로세스가 유효하지 않습니다.</translation>
       <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>

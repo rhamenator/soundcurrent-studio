@@ -278,3 +278,7 @@ The literal display inventory now includes tab captions, informative text, statu
 ### Current Linux package lifecycle qualification
 
 Run 37874411830 passed all three container environments for source eb6b7ef7711db1cfd406f6f0cd07c77768b8dbb7. Downloaded package checksums matched, and all 33 installed locale completion logs were verified per package. Build/CTest, install, same-package update, uninstall, settings sentinel preservation and reinstall passed. Package paths and SHA-256 identities are in `tests/results/localization/linux-current/report.json`. These container fixtures do not qualify actual RHEL desktop audio, arbitrary old-version migration, Windows, or native-speaker review. The Windows Arabic shortcut failure remains open.
+
+### Loopback routing diagnostic
+
+The invariant Windows loopback-route error now maps to a translated desktop message in all 33 non-English locales. Studio catalogs contain 747 declared messages with zero unfinished entries. Context distinguishes render capture from an echo effect and preserves the need for a separate playback source. Backend strings, route IDs and processing are unchanged. Contextual AI translations remain native-unverified; installed current-package qualification is pending. See `tests/results/localization/loopback-route-diagnostic.json`.

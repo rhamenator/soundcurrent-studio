@@ -1297,6 +1297,11 @@ Importovat do vaší knihovny?</translation>
       <translation>Neplatné nastavení Studia</translation>
     </message>
     <message>
+      <source>Invalid audio route: loopback requires a separate render source</source>
+      <translation>Neplatné směrování zvuku: zpětné snímání vyžaduje samostatný zdroj přehrávání</translation>
+      <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio setup requester.</source>
       <translation>Neplatný proces požadující nastavení zvuku.</translation>
       <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>

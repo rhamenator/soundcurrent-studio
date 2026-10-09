@@ -68,6 +68,7 @@ int main(int argc,char **argv) try {
  require(audioErrorText("Unsupported Studio profile schema")=="PROFILE_SCHEMA");
  require(audioErrorText("Studio profile has an invalid numeric field")=="PROFILE_NUMBER");
  require(audioErrorText("Studio profile has an invalid boolean field")=="PROFILE_BOOLEAN");
+ require(audioErrorText("Invalid audio route: loopback requires a separate render source") == "OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid Studio channel count") == "OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid Studio profile channel count") == "OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid Studio channel name or filters") == "OWNED_DIAGNOSTIC");

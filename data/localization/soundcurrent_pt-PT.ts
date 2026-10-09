@@ -1297,6 +1297,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Definições do Studio inválidas</translation>
     </message>
     <message>
+      <source>Invalid audio route: loopback requires a separate render source</source>
+      <translation>Encaminhamento de áudio inválido: a captura de retorno requer uma fonte de reprodução separada</translation>
+      <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio setup requester.</source>
       <translation>Processo requerente da configuração de áudio inválido.</translation>
       <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>

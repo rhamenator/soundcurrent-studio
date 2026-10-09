@@ -1297,6 +1297,11 @@ Import into your library?</source>
       <translation>การตั้งค่า Studio ไม่ถูกต้อง</translation>
     </message>
     <message>
+      <source>Invalid audio route: loopback requires a separate render source</source>
+      <translation>เส้นทางเสียงไม่ถูกต้อง: การบันทึกเสียงแบบลูปแบ็กต้องใช้แหล่งเล่นเสียงแยกต่างหาก</translation>
+      <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio setup requester.</source>
       <translation>โพรเซสที่ร้องขอการตั้งค่าเสียงไม่ถูกต้อง</translation>
       <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>

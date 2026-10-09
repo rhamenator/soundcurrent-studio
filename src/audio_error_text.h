@@ -7,6 +7,8 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Invalid audio route: loopback requires a separate render source"))
+        return SC_TR("Invalid audio route: loopback requires a separate render source");
     if (diagnostic == QStringLiteral("Invalid Studio channel count"))
         return SC_TR("Invalid Studio channel count");
     if (diagnostic == QStringLiteral("Invalid Studio profile channel count"))
