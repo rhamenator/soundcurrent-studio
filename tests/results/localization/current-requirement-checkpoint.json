@@ -77,13 +77,13 @@
   ],
   "evidenceSha256": {
     "data/localization/catalogs.json": "55f2993219e10a999a9e26c2f0e68838d7e96bd0cfb21dc3549ee79b7eea3969",
-    "docs/translation-review.md": "5122fb5d9a16e194800e043ae701947a9d2c3a90222e1ffa4452d1ddf896d59d",
+    "docs/translation-review.md": "2ec4c555fd31c099deabec702233b667e80ae50292a1f3d6e8d0f98e06ed0d9e",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
-    "tests/translation_catalogs.py": "07d6c55c0db82153f07a910392b54b3dcbd93181ce79d12a95da31993dd68fb1",
-    "scripts/ui_string_audit.py": "f9ccdb8db086a92037e01ed1f78fa775475dd56571b8ceabd19c6484260c6229",
-    "tests/results/localization/dynamic-display-inventory.json": "90768884e4ca3f681ec5a2b06ecc82672831dd4b255245e0ac45ed5d0d37b1e7",
+    "tests/translation_catalogs.py": "04e8cedb6d842dc84d3f6ec98f9eb01544a826b6fedca218cd0f2b148c9a3c26",
+    "scripts/ui_string_audit.py": "c3b16a407263d8aa7665095e6d0577ab261acf6793d10d27a65d4e1707495275",
+    "tests/results/localization/dynamic-display-inventory.json": "20d4c9e7bf7939d9f51f9cea04025fa523cfa2a9fb7c18e58d0c7521ecd5760b",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
-    "src/main.cpp": "fa4afdbc6ab6f46d9858163c08de31c83cc479c0739e8ed751fbd5b178da6128",
+    "src/main.cpp": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
     "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
     "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
     "scripts/localization.py": "73a97f9fdd51c791a9322265c6ea12e3e0aaa7da965f08ff36398add7a5089e8",
@@ -98,17 +98,17 @@
     "tests/results/localization/windows-873-installed/verified-artifact.json": "29dcfc400abbab4e8a3a56f0670dd4e050cfad5dde8cc9cfd56fa99efd77ad8b"
   },
   "auditedBaseHead": "14f5bdb97efcf57aa5536b18f0fddc5aba36ff6b",
-  "sourceIdentity": "Current inspected source files are identified by SHA-256 below; base commit is historical context, not qualification of pending calibration changes",
+  "sourceIdentity": "Current files identified by SHA-256; auditedBaseHead is historical, qualifiedCurrentProductionHead identifies package production code.",
   "currentCalibrationFraming": {
     "localStatus": "offscreen/X11 compiled fixtures and actual worker tests passed",
-    "nativeWindowsStatus": "fresh current framing qualification pending",
+    "nativeWindowsStatus": "Combined graph-patch Windows build and installed fixtures passed; qualification limited to documented worker/GUI fixtures, no live sweep.",
     "priorWorkerNativeEvidence": "tests/results/localization/calibration-worker-native-ci.json",
     "sourceScope": "presentation buffering only; synthesis/analysis and successful JSON unchanged"
   },
   "currentProfileDefaults": {
     "scope": "Generated equipment profile defaults and authored provenance, not all metadata or whole-interface coverage",
-    "sourceSha256": "6853faa29c08f99df84bd12c9ca938657216c57ca39b5d9a5b15e747eb6c78ed",
-    "catalogMessages": 835,
+    "sourceSha256": "1d4adb32603fc05635a456aaf584ede368ad73fc4ebb27acd696890771686f63",
+    "catalogMessages": 879,
     "nonEnglishCatalogs": 33,
     "nativeReviewed": false,
     "behavior": "Translate human defaults at creation/import and new provenance on explicit save-copy; preserve loaded saved/published metadata verbatim. Stable IDs, filenames, digest values, filter codes and JSON keys remain unchanged.",
@@ -121,13 +121,12 @@
     "limitations": [
       "No native-speaker verification",
       "No claim of visual inspection of every new default field",
-      "Fresh Windows and installed-package qualification pending",
       "Whole-interface dynamic expression review remains incomplete"
     ]
   },
   "currentQtFileDialogGap": {
     "date": "2026-10-09",
-    "status": "whole header captions passed compiled Linux shown-dialog/toggle/custom-model and core-worker tests; current native/packages pending",
+    "status": "Caption/helper compiled tests and installed app fixtures qualified on current production graph packages; provider metadata boundary documented separately.",
     "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
     "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
     "untranslatedObserved": [
@@ -165,7 +164,6 @@
     "remainingScope": [
       "External MIME/file-association descriptors",
       "Context-menu permission gating and protected-path/delete-failure workflows",
-      "Current native Windows/package qualification",
       "Screen-reader listening test"
     ],
     "localRuntimeEvidence": "CTest localization passed across all 33 non-English catalogs: actual DontUseNativeDialog controls, Unicode/literal-percent filenames, filter preservation and plugin-context exclusion. Offscreen constructor/control inspection; no acceptance, file creation or errors exercised.",
@@ -197,7 +195,7 @@
       "fileOperationsPerformed": false
     },
     "sizeDateFormattingGap": {
-      "status": "shared adapter integrated; compiled local formatting and modal acceptance/cancel passed; native/current package qualification pending",
+      "status": "Shared adapter compiled/local formatting and modal acceptance/cancel passed; current production packages hash-qualified.",
       "source": "https://github.com/qt/qtbase/blob/6.4/src/gui/itemmodels/qfilesystemmodel.cpp",
       "behavior": "size(qint64) and time(QModelIndex) use QLocale::system() rather than selected app default locale",
       "evidence": "tests/results/localization/file-display-locale-adapter.json"
@@ -243,7 +241,8 @@
       "observedPrompt": "confirmation",
       "scope": "Fixture enables selected temporary-file action directly, real No-button click preserves contents; permission gating, protected-path and delete-failure workflows not exercised"
     },
-    "headerCaptionEvidence": "tests/results/localization/qt-file-dialog-header-captions.json"
+    "headerCaptionEvidence": "tests/results/localization/qt-file-dialog-header-captions.json",
+    "remainingScopeInterpretation": "Unexercised broader workflow/assistive-technology scopes and external-provider text; not evidence of an identified missing owned caption."
   },
   "qt612CompatibilityEvidence": "tests/results/localization/qt-file-dialog-qt612-compatibility.json",
   "fileDisplayLocaleAdapter": "tests/results/localization/file-display-locale-adapter.json",
@@ -257,5 +256,6 @@
   "fileTypeProviderBoundary": "tests/results/localization/file-type-provider-boundary.json",
   "equalizerGraphNumberFormats": "tests/results/localization/eq-graph-number-formats.json",
   "windowsOwnedDiagnosticReview": "tests/results/localization/windows-owned-diagnostic-source-review.json",
-  "displayLiteralGate": "tests/results/localization/display-literal-review-gate.json"
+  "displayLiteralGate": "tests/results/localization/display-literal-review-gate.json",
+  "displayLiteralWindowsPathFix": "tests/results/localization/display-literal-windows-path-fix.json"
 }
