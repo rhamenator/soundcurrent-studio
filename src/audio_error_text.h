@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Speaker mask does not match channel count"))
+        return SC_TR("Speaker mask does not match channel count");
+    if (diagnostic == QStringLiteral("Invalid output speaker mask"))
+        return SC_TR("Invalid output speaker mask");
     if (diagnostic == QStringLiteral("Invalid valid-bit count"))
         return SC_TR("Invalid valid-bit count");
     if (diagnostic == QStringLiteral("Invalid float WAVE format"))

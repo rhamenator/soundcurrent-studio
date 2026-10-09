@@ -94,7 +94,9 @@
     },
     {
       "source": "Invalid output speaker mask",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Invalid valid-bit count",
@@ -132,7 +134,9 @@
     },
     {
       "source": "Speaker mask does not match channel count",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Truncated WAVE file",
@@ -163,14 +167,14 @@
       "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "Sixteen owned diagnostics translated and mapped; 16 other owned WAVE diagnostics remain untranslated",
+  "status": "Eighteen owned diagnostics translated and mapped; 14 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 763-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 765-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -208,6 +212,10 @@
   ],
   "bitFloatChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 763 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "speakerMaskChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 765 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

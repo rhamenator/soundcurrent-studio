@@ -1427,6 +1427,11 @@ Nhập vào thư viện của bạn?</translation>
       <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid output speaker mask</source>
+      <translation>Mặt nạ kênh loa đầu ra không hợp lệ</translation>
+      <extracomment>Owned WAVE writer validation of output speaker-position bitmask against output channel count. Metadata error, not disconnected speakers or balance. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid profile library.</source>
       <translation>Thư viện cấu hình không hợp lệ.</translation>
     </message>
@@ -2665,6 +2670,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Speaker manufacturer</source>
       <translation>Nhà sản xuất loa</translation>
+    </message>
+    <message>
+      <source>Speaker mask does not match channel count</source>
+      <translation>Mặt nạ kênh loa không khớp với số kênh</translation>
+      <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Speaker model correction</source>

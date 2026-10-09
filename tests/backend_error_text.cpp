@@ -18,6 +18,7 @@ class Fixture : public QTranslator {
   if(QByteArray(source)=="Could not write WAVE audio")return "WAVE_AUDIO";
   if(QByteArray(source)=="Incomplete WAVE output")return "WAVE_INCOMPLETE";
   if(QByteArray(source)=="Truncated chunk header")return "CHUNK_HEADER";
+  if(QByteArray(source)=="Speaker mask does not match channel count")return "SPEAKER_MASK";
   if(QByteArray(source)=="Could not flush WAVE output")return "WAVE_FLUSH";
   if(QByteArray(source)=="Could not close WAVE output")return "WAVE_CLOSE";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
@@ -35,6 +36,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Speaker mask does not match channel count")=="SPEAKER_MASK");
+ require(audioErrorText("Invalid output speaker mask")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid valid-bit count")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid float WAVE format")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Incomplete WAVE output")=="WAVE_INCOMPLETE");

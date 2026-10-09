@@ -1427,6 +1427,11 @@ Importovať do vašej knižnice?</translation>
       <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid output speaker mask</source>
+      <translation>Neplatná výstupná maska kanálov reproduktorov</translation>
+      <extracomment>Owned WAVE writer validation of output speaker-position bitmask against output channel count. Metadata error, not disconnected speakers or balance. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid profile library.</source>
       <translation>Neplatná knižnica profilov.</translation>
     </message>
@@ -2665,6 +2670,11 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Speaker manufacturer</source>
       <translation>Výrobca reproduktora</translation>
+    </message>
+    <message>
+      <source>Speaker mask does not match channel count</source>
+      <translation>Maska kanálov reproduktorov nezodpovedá počtu kanálov</translation>
+      <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Speaker model correction</source>

@@ -1427,6 +1427,11 @@ In Ihre Bibliothek importieren?</translation>
       <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid output speaker mask</source>
+      <translation>Ungültige Lautsprecherkanalmaske der Ausgabe</translation>
+      <extracomment>Owned WAVE writer validation of output speaker-position bitmask against output channel count. Metadata error, not disconnected speakers or balance. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid profile library.</source>
       <translation>Ungültige Profilbibliothek.</translation>
     </message>
@@ -2665,6 +2670,11 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Speaker manufacturer</source>
       <translation>Lautsprecherhersteller</translation>
+    </message>
+    <message>
+      <source>Speaker mask does not match channel count</source>
+      <translation>Die Lautsprecherkanalmaske passt nicht zur Kanalanzahl</translation>
+      <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Speaker model correction</source>
