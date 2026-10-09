@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-09",
+  "command": "python3 tests/translation_catalogs.py",
+  "exitCode": 0,
+  "tests": 62,
+  "seconds": 35.237,
+  "skipped": 0,
+  "skipReason": null,
+  "scope": "Source/catalog mutation and regression suite; does not verify linguistic quality or installed UI lifecycle",
+  "sourceSha256": {
+    "tests/translation_catalogs.py": "07d6c55c0db82153f07a910392b54b3dcbd93181ce79d12a95da31993dd68fb1",
+    "scripts/ui_string_audit.py": "fe6c8dee5cec4e36524ad1d586c7d89ce48c8c6823ce888512c78b367464edd1",
+    "scripts/localization.py": "73a97f9fdd51c791a9322265c6ea12e3e0aaa7da965f08ff36398add7a5089e8"
+  },
+  "nativeReviewed": false
+}
