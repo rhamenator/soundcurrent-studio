@@ -1,0 +1,21 @@
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, and has switched to "C.UTF-8" instead.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+Equipment fixture phase 0 at 336 ms
+This plugin does not support propagateSizeHints()
+Equipment fixture phase 2 at 452 ms
+This plugin does not support propagateSizeHints()
+Equipment fixture phase 3 at 723 ms
+This plugin does not support propagateSizeHints()
+Equipment fixture phase 5 at 823 ms
+This plugin does not support propagateSizeHints()
+Equipment fixture phase 6 at 1121 ms
+This plugin does not support propagateSizeHints()
+Equipment fixture phase 7 at 1124 ms
+PASS: profile editor change, Cancel/Discard prompt, save, malformed/valid JSON import, preservation and Apply
