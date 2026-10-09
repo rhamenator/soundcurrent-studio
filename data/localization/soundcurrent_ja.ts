@@ -908,6 +908,11 @@ Import into your library?</source>
       <translation>ダンス</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>更新日</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>減衰時間</translation>
     </message>
@@ -1957,6 +1962,7 @@ Import into your library?</source>
     <message>
       <source>Name</source>
       <translation>名前</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Import into your library?</source>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>自然なマイクイコライザーのオン / オフ</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>新しいフォルダ</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Import into your library?</source>
       <translation>共有の VB-CABLE ドライバーも削除しますか？他のユーザー、録音アプリ、音声ツールが必要としている場合があります。承認すると公式の削除プログラムが開きます。その後 Remove Driver をクリックしてください。拒否するとケーブルを保持し、SoundCurrent のみをアンインストールします。</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>名前の変更(R)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>音声ファイルをレンダリング…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Import into your library?</source>
       <translation>詳細コントロールを表示</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>隠しファイルの表示(H)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>周波数ごとのレベルにピークマーカーを表示</translation>
     </message>
@@ -2885,6 +2906,11 @@ Import into your library?</source>
     <message>
       <source>Sidebar</source>
       <translation>サイドバー</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>サイズ</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

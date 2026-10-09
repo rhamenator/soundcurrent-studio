@@ -908,6 +908,11 @@ Import into your library?</source>
       <translation>موسيقى رقص</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>تاريخ التّعديل</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>زمن الاضمحلال</translation>
     </message>
@@ -1957,6 +1962,7 @@ Import into your library?</source>
     <message>
       <source>Name</source>
       <translation>الاسم</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Import into your library?</source>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>تشغيل معادل الصوت الطبيعي للميكروفون أو إيقافه</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>مجلّد جديد</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Import into your library?</source>
       <translation>هل تريد إزالة برنامج تشغيل VB-CABLE المشترك أيضًا؟ قد يحتاج إليه مستخدمون آخرون أو تطبيقات تسجيل أو أدوات صوتية. أكّد لفتح برنامج الإزالة الرسمي، ثم انقر على Remove Driver. ارفض للاحتفاظ بالكابل وإلغاء تثبيت SoundCurrent فقط.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>أعد التّسمية</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>تصيير ملف صوتي…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Import into your library?</source>
       <translation>إظهار عناصر التحكم المتقدمة</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>أظهر الملفّات المخفيّة</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>إظهار علامات القمم على مؤشرات مستويات الترددات</translation>
     </message>
@@ -2885,6 +2906,11 @@ Import into your library?</source>
     <message>
       <source>Sidebar</source>
       <translation>الشّريط الجانبيّ</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>الحجم</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

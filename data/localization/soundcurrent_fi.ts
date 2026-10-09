@@ -908,6 +908,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Tanssi</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Muutosaika</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Vaimenemisaika</translation>
     </message>
@@ -1957,6 +1962,7 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Name</source>
       <translation>Nimi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Luonnollinen mikrofonin taajuuskorjain päällä tai pois</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Uusi kansio</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Poistetaanko myös jaettu VB-CABLE-ohjain? Muut käyttäjät, tallennussovellukset tai puhetyökalut saattavat tarvita sitä. Vahvista avataksesi virallisen poisto-ohjelman ja napsauta sitten Remove Driver. Kieltäydy säilyttääksesi kaapelin ja poistaaksesi vain SoundCurrentin.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Muuta nimeä</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Renderöi äänitiedosto…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Näytä lisäsäätimet</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Näytä piilotiedostot</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Näytä huippumerkit taajuustasoilla</translation>
     </message>
@@ -2885,6 +2906,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Sivupalkki</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Koko</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

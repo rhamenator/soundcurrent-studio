@@ -908,6 +908,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Nhạc dance</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Ngày sửa đổi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Thời gian suy giảm</translation>
     </message>
@@ -1957,6 +1962,7 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Name</source>
       <translation>Tên</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Bật hoặc tắt cân bằng âm micrô tự nhiên</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Thư mục mới</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Gỡ cả trình điều khiển VB-CABLE dùng chung? Người dùng khác, ứng dụng ghi âm hoặc công cụ giọng nói có thể cần nó. Xác nhận để mở chương trình gỡ chính thức, rồi nhấp vào Remove Driver. Từ chối để giữ cáp và chỉ gỡ SoundCurrent.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Đổi tên</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Kết xuất tệp âm thanh…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Hiển thị điều khiển nâng cao</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Hiện tệp ẩn</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Hiển thị dấu đỉnh trên các mức tần số</translation>
     </message>
@@ -2885,6 +2906,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Thanh bên</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Kích thước</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

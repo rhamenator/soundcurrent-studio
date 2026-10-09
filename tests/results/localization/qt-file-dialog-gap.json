@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "status": "basic/accessibility mappings passed local compiled tests; native Windows Qt 6.12 mismatch found and patched, fresh native qualification pending",
+  "status": "File action/header and previous chooser fixtures passed compiled Linux tests; remaining workflows and native Windows qualification incomplete",
   "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
   "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
   "untranslatedObserved": [
@@ -36,8 +36,8 @@
     "Save"
   ],
   "remainingScope": [
-    "File-model headers",
-    "Context menus",
+    "Header-visibility menu composition",
+    "File-type and size display values",
     "Open/save error and confirmation dialogs",
     "Native Windows qualification",
     "Screen-reader listening test"
@@ -48,9 +48,9 @@
     "https://github.com/qt/qtbase/blob/6.4/src/widgets/dialogs/qfiledialog.ui"
   ],
   "sourceSha256": {
-    "src/localization.h": "682d7be0bfeebdcdf99d7fec88b9c92e412b54cf792f04e2a6445170907e4ff9",
-    "tests/localization.cpp": "df69c6aff6366be652b3be60b4d96717777a1a4cdef48d22cbe4e0ed76ca67ce",
-    "data/localization/catalogs.json": "54815d207709ebc627fd4d185ab89b3de1579fa2d2bf32a3bfe28cd6aa25586f"
+    "src/localization.h": "6c554110478ceda5fab0f485a4a73ed807f24bf5771957d42c85f9804e00c7d2",
+    "tests/localization.cpp": "b85556e8366a8c9bd7e0291850138aba5340c7419dc0fe0e51188fed08579e6c",
+    "data/localization/catalogs.json": "6ed98ff521c777e2d350c25f46b0928895d12decc60b71c5c1955cfca5facd82"
   },
   "accessibilityTestScope": "Actual QAccessible Name/Description queries for six navigation buttons, sidebar and list/tree file views, all 33 non-English catalogs. Does not test screen-reader speech.",
   "accessibilityLinuxEvidence": {
@@ -61,5 +61,13 @@
     "catalogs": 33,
     "screenReaderSpeechTested": false
   },
-  "nativeWindowsKnownFailure": "tests/results/localization/qt-file-dialog-qt612-compatibility.json"
+  "nativeWindowsKnownFailure": "tests/results/localization/qt-file-dialog-qt612-compatibility.json",
+  "actionHeaderScope": "Inspect actual chooser-owned QAction captions and QFileSystemModel headerData across 33 non-English locales; no file mutation or action activation.",
+  "actionHeaderLinuxEvidence": {
+    "log": "tests/results/localization/qt-file-dialog-menu-header-linux.log",
+    "sha256": "b617ed5a68d1465e6045a460d735053f90d178046dececcfe6e286e86c405113",
+    "result": "passed",
+    "catalogs": 33,
+    "fileOperationsPerformed": false
+  }
 }

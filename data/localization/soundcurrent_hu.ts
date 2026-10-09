@@ -908,6 +908,11 @@ Importálja a könyvtárba?</translation>
       <translation>Dance</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Módosítás dátuma</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Lecsengési idő</translation>
     </message>
@@ -1957,6 +1962,7 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Name</source>
       <translation>Név</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Természetes mikrofon-hangszínszabályzó be- vagy kikapcsolva</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Új mappa</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Importálja a könyvtárba?</translation>
       <translation>Eltávolítja a közösen használt VB-CABLE illesztőprogramot is? Más felhasználóknak, felvevőalkalmazásoknak vagy hangkommunikációs eszközöknek szükségük lehet rá. Erősítse meg a hivatalos eltávolító megnyitását, majd kattintson a Remove Driver gombra. Az elutasítással megtarthatja a kábelt, és csak a SoundCurrentet távolítja el.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Átnevezés</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Hangfájl renderelése…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Importálja a könyvtárba?</translation>
       <translation>Speciális vezérlők megjelenítése</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Rejtett fájlok megjelenítése</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Csúcsjelölők megjelenítése a frekvenciaszinteken</translation>
     </message>
@@ -2885,6 +2906,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Oldalsáv</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Méret</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

@@ -5,7 +5,7 @@
   "catalogs": {
     "count": 34,
     "nonEnglish": 33,
-    "messagesPerCatalog": 853,
+    "messagesPerCatalog": 858,
     "check": "scripts/localization.py --check --require-complete passed locally",
     "nativeReviewed": false
   },
@@ -74,15 +74,15 @@
     "Silent same-package updates do not prove older-version migration or interactive chooser behavior"
   ],
   "evidenceSha256": {
-    "data/localization/catalogs.json": "54815d207709ebc627fd4d185ab89b3de1579fa2d2bf32a3bfe28cd6aa25586f",
-    "docs/translation-review.md": "e0c189d25d4bbe59d0a7e32002ed29ff811f414588563134edccc7db81586783",
-    "tests/localization.cpp": "df69c6aff6366be652b3be60b4d96717777a1a4cdef48d22cbe4e0ed76ca67ce",
+    "data/localization/catalogs.json": "6ed98ff521c777e2d350c25f46b0928895d12decc60b71c5c1955cfca5facd82",
+    "docs/translation-review.md": "f9ed079a9cd05551ce87f01a09e479d70732de724b3182fca42d370ab88c6eed",
+    "tests/localization.cpp": "b85556e8366a8c9bd7e0291850138aba5340c7419dc0fe0e51188fed08579e6c",
     "tests/translation_catalogs.py": "dc75edd67e3ed563f04d34cfccedd95bd18522eb448b6fcfa5203de3813b1a0e",
     "scripts/ui_string_audit.py": "a7cd0132f32a3f103eadffe8798aee877b4c397545f3e53ec1ea4134b133629f",
-    "tests/results/localization/dynamic-display-inventory.json": "59f4270600871cd90129ab51a726296f2a9456378248f0cc7f319450ddb90e8b",
+    "tests/results/localization/dynamic-display-inventory.json": "041cc480b5bfd1ff2ed7603c5f655f66b9541a47302924eecb5519048ad42c25",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
     "src/main.cpp": "ad3a5ee0d8e291c0038e28af25a0ca048398acac3402d45f9061e6e89991dff4",
-    "src/localization.h": "682d7be0bfeebdcdf99d7fec88b9c92e412b54cf792f04e2a6445170907e4ff9",
+    "src/localization.h": "6c554110478ceda5fab0f485a4a73ed807f24bf5771957d42c85f9804e00c7d2",
     "src/localization_text.h": "9cbb9b2c5e49287651cba6bcd273c01e148f8fd5dce4b7e39fdd86594e344cd0",
     "scripts/localization.py": "cda0e2bcb2d54870e92b7eaff97c9cfba0a09c4c389dac6a4df18c15017e4deb",
     "tests/calibration_worker_localization.py": "c6120b78b59ae6d547cd7d0a503d4f39a46f0fa3c03c9c4007b46f8e53db34f8",
@@ -91,7 +91,7 @@
     "tests/results/localization/calibration-worker-native-ci.json": "f66af8ec4a3b1ed8677f1e65d3e72aba54ceba6de54303698f897bc7ded21bec",
     "src/equipment_profiles.cpp": "6853faa29c08f99df84bd12c9ca938657216c57ca39b5d9a5b15e747eb6c78ed",
     "tests/results/localization/profile-authored-defaults.json": "daf384ce0ca70b0fc4d150a7c006beeee8e1b453311610fe1beb1cb78a8f916e",
-    "tests/results/localization/qt-file-dialog-gap.json": "f32625ce3a2597fa1e28995440889d6691fcf532d63407a0c000a7f1c12032f0"
+    "tests/results/localization/qt-file-dialog-gap.json": "83d7ec1e0afa9c42d313e548ded0fc38cd8214128c48c1249521fc9a73c05624"
   },
   "auditedBaseHead": "14f5bdb97efcf57aa5536b18f0fddc5aba36ff6b",
   "sourceIdentity": "Current inspected source files are identified by SHA-256 below; base commit is historical context, not qualification of pending calibration changes",
@@ -123,7 +123,7 @@
   },
   "currentQtFileDialogGap": {
     "date": "2026-10-09",
-    "status": "basic/accessibility mappings passed local compiled tests; native Windows Qt 6.12 mismatch found and patched, fresh native qualification pending",
+    "status": "File action/header and previous chooser fixtures passed compiled Linux tests; remaining workflows and native Windows qualification incomplete",
     "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
     "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
     "untranslatedObserved": [
@@ -159,8 +159,8 @@
       "Save"
     ],
     "remainingScope": [
-      "File-model headers",
-      "Context menus",
+      "Header-visibility menu composition",
+      "File-type and size display values",
       "Open/save error and confirmation dialogs",
       "Native Windows qualification",
       "Screen-reader listening test"
@@ -171,9 +171,9 @@
       "https://github.com/qt/qtbase/blob/6.4/src/widgets/dialogs/qfiledialog.ui"
     ],
     "sourceSha256": {
-      "src/localization.h": "682d7be0bfeebdcdf99d7fec88b9c92e412b54cf792f04e2a6445170907e4ff9",
-      "tests/localization.cpp": "df69c6aff6366be652b3be60b4d96717777a1a4cdef48d22cbe4e0ed76ca67ce",
-      "data/localization/catalogs.json": "54815d207709ebc627fd4d185ab89b3de1579fa2d2bf32a3bfe28cd6aa25586f"
+      "src/localization.h": "6c554110478ceda5fab0f485a4a73ed807f24bf5771957d42c85f9804e00c7d2",
+      "tests/localization.cpp": "b85556e8366a8c9bd7e0291850138aba5340c7419dc0fe0e51188fed08579e6c",
+      "data/localization/catalogs.json": "6ed98ff521c777e2d350c25f46b0928895d12decc60b71c5c1955cfca5facd82"
     },
     "accessibilityTestScope": "Actual QAccessible Name/Description queries for six navigation buttons, sidebar and list/tree file views, all 33 non-English catalogs. Does not test screen-reader speech.",
     "accessibilityLinuxEvidence": {
@@ -184,7 +184,15 @@
       "catalogs": 33,
       "screenReaderSpeechTested": false
     },
-    "nativeWindowsKnownFailure": "tests/results/localization/qt-file-dialog-qt612-compatibility.json"
+    "nativeWindowsKnownFailure": "tests/results/localization/qt-file-dialog-qt612-compatibility.json",
+    "actionHeaderScope": "Inspect actual chooser-owned QAction captions and QFileSystemModel headerData across 33 non-English locales; no file mutation or action activation.",
+    "actionHeaderLinuxEvidence": {
+      "log": "tests/results/localization/qt-file-dialog-menu-header-linux.log",
+      "sha256": "b617ed5a68d1465e6045a460d735053f90d178046dececcfe6e286e86c405113",
+      "result": "passed",
+      "catalogs": 33,
+      "fileOperationsPerformed": false
+    }
   },
   "qt612CompatibilityEvidence": "tests/results/localization/qt-file-dialog-qt612-compatibility.json"
 }

@@ -908,6 +908,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Dans</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Sist endra</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Avklingingstid</translation>
     </message>
@@ -1957,6 +1962,7 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Name</source>
       <translation>Namn</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Naturleg mikrofonequalizer på eller av</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Ny mappe</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Fjerne den delte VB-CABLE-drivaren òg? Andre brukarar, opptaksappar eller taleverktøy kan trenge han. Stadfest for å opne det offisielle fjerningsprogrammet, og klikk deretter på Remove Driver. Avslå for å halde på kabelen og berre avinstallere SoundCurrent.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Endra namn</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Rendr lydfil…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Vis avanserte kontrollar</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Vis gøymde filer</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Vis toppmarkørar på frekvensnivåa</translation>
     </message>
@@ -2885,6 +2906,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Sidestolpe</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Storleik</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

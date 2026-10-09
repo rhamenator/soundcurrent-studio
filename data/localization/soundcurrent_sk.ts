@@ -908,6 +908,11 @@ Importovať do vašej knižnice?</translation>
       <translation>Tanečná hudba</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Dátum úpravy</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Doba doznievania</translation>
     </message>
@@ -1957,6 +1962,7 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Name</source>
       <translation>Názov</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Zapnutie alebo vypnutie mikrofónového ekvalizéra pre prirodzený hlas</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Nový priečinok</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Importovať do vašej knižnice?</translation>
       <translation>Odstrániť aj zdieľaný ovládač VB-CABLE? Ostatní používatelia, nahrávacie aplikácie alebo hlasové nástroje ho môžu potrebovať. Potvrďte otvorenie oficiálneho odinštalačného programu a kliknite na Remove Driver. Odmietnite, ak chcete kábel zachovať a odinštalovať iba SoundCurrent.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Premenovať</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Renderovať zvukový súbor…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Importovať do vašej knižnice?</translation>
       <translation>Zobraziť pokročilé ovládanie</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Zobraziť skryté súbory</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Zobraziť značky špičiek frekvenčných úrovní</translation>
     </message>
@@ -2885,6 +2906,11 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Bočný panel</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Veľkosť</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

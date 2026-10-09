@@ -908,6 +908,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Dans müziği</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Değiştirilme Tarihi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Sönüm süresi</translation>
     </message>
@@ -1957,6 +1962,7 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Name</source>
       <translation>Ad</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Doğal ses mikrofon ekolayzırını aç veya kapat</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Yeni Klasör</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Paylaşılan VB-CABLE sürücüsü de kaldırılsın mı? Diğer kullanıcılar, kayıt uygulamaları veya sesli iletişim araçları buna ihtiyaç duyabilir. Resmî kaldırıcıyı açmak için onaylayın, ardından Remove Driver düğmesine tıklayın. Kabloyu koruyup yalnızca SoundCurrent’ı kaldırmak için reddedin.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Yeniden Adlandır</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Ses dosyası oluştur…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Gelişmiş kontrolleri göster</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Gizli dosyaları göster</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Frekans seviyelerinde tepe işaretlerini göster</translation>
     </message>
@@ -2885,6 +2906,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Kenar Çubuğu</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Boyut</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

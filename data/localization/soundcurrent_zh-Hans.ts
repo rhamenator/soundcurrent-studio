@@ -908,6 +908,11 @@ Import into your library?</source>
       <translation>舞曲</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>修改日期</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>衰减时间</translation>
     </message>
@@ -1957,6 +1962,7 @@ Import into your library?</source>
     <message>
       <source>Name</source>
       <translation>名称</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Import into your library?</source>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>开启或关闭自然麦克风均衡器</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>新建文件夹</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Import into your library?</source>
       <translation>是否也移除共享的 VB-CABLE 驱动程序？其他用户、录音应用或语音工具可能需要它。确认以打开官方卸载程序，然后点击 Remove Driver。拒绝以保留音频线缆并仅卸载 SoundCurrent。</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>重命名(R)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>渲染音频文件…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Import into your library?</source>
       <translation>显示高级控制</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>显示隐藏文件(H)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>在频率电平上显示峰值标记</translation>
     </message>
@@ -2885,6 +2906,11 @@ Import into your library?</source>
     <message>
       <source>Sidebar</source>
       <translation>侧边栏</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>体积</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

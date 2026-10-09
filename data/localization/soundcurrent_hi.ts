@@ -908,6 +908,11 @@ Import into your library?</source>
       <translation>डांस</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>संशोधन की तारीख</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>क्षय समय</translation>
     </message>
@@ -1957,6 +1962,7 @@ Import into your library?</source>
     <message>
       <source>Name</source>
       <translation>नाम</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Import into your library?</source>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>स्वाभाविक माइक्रोफ़ोन इक्वलाइज़र चालू या बंद</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>नया फ़ोल्डर</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Import into your library?</source>
       <translation>क्या साझा VB-CABLE ड्राइवर भी हटाना है? अन्य उपयोगकर्ताओं, रिकॉर्डिंग ऐप या वॉइस उपकरणों को इसकी आवश्यकता हो सकती है। आधिकारिक हटाने का प्रोग्राम खोलने के लिए पुष्टि करें, फिर Remove Driver पर क्लिक करें। केबल को रखने और केवल SoundCurrent हटाने के लिए अस्वीकार करें।</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>नाम बदलें</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>ऑडियो फ़ाइल रेंडर करें…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Import into your library?</source>
       <translation>उन्नत नियंत्रण दिखाएँ</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>छिपी हुई फ़ाइलें दिखाएँ</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>आवृत्ति स्तरों पर पीक चिह्न दिखाएँ</translation>
     </message>
@@ -2885,6 +2906,11 @@ Import into your library?</source>
     <message>
       <source>Sidebar</source>
       <translation>पार्श्व पट्टी</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>आकार</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

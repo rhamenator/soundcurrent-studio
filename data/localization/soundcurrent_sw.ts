@@ -908,6 +908,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Muziki wa dansi</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Tarehe ya kubadilishwa</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Muda wa kufifia</translation>
     </message>
@@ -1957,6 +1962,7 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Name</source>
       <translation>Jina</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Washa au zima kisawazishi cha asili cha maikrofoni</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Folda mpya</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Ondoa pia kiendeshi cha VB-CABLE kinachotumiwa kwa pamoja? Watumiaji wengine, programu za kurekodi au zana za sauti wanaweza kukihitaji. Thibitisha ili kufungua kiondoaji rasmi, kisha ubofye Remove Driver. Kataa ili kuhifadhi kebo na kuondoa SoundCurrent pekee.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Badili jina</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Unda faili ya sauti…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Onyesha vidhibiti vya juu</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Onyesha faili zilizofichwa</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Onyesha alama za kilele kwenye viwango vya masafa</translation>
     </message>
@@ -2885,6 +2906,11 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Upau wa pembeni</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Ukubwa</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>

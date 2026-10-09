@@ -908,6 +908,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Dance</translation>
     </message>
     <message>
+      <source>Date modified</source>
+      <translation>Tanggal diubah</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Decay</source>
       <translation>Waktu peluruhan</translation>
     </message>
@@ -1957,6 +1962,7 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Name</source>
       <translation>Nama</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -1970,6 +1976,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Aktifkan atau nonaktifkan equalizer mikrofon alami</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>Folder baru</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>New profile</source>
@@ -2554,6 +2565,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Hapus juga driver VB-CABLE bersama? Pengguna lain, aplikasi perekaman atau alat suara mungkin membutuhkannya. Konfirmasikan untuk membuka penghapus resmi, lalu klik Remove Driver. Tolak untuk mempertahankan kabel dan hanya menghapus SoundCurrent.</translation>
     </message>
     <message>
+      <source>Rename</source>
+      <translation>Ubah nama</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Render audio file…</source>
       <translation>Render berkas audio…</translation>
     </message>
@@ -2869,6 +2885,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Tampilkan kontrol lanjutan</translation>
     </message>
     <message>
+      <source>Show hidden files</source>
+      <translation>Tampilkan berkas tersembunyi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Tampilkan penanda puncak pada level frekuensi</translation>
     </message>
@@ -2885,6 +2906,11 @@ Impor ke pustaka Anda?</translation>
     <message>
       <source>Sidebar</source>
       <translation>Bilah sisi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>Ukuran</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
