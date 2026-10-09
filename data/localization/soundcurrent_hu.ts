@@ -793,6 +793,11 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
     </message>
     <message>
+      <source>Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2</source>
+      <translation>A hangszórók/erősítő/mikrofon/szoba együttes frekvenciamenete; nem egyetlen eszköz külön mérése. %1 / %2</translation>
+      <extracomment>New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Körülmények</translation>
     </message>
@@ -1911,6 +1916,11 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Hangsugárzó, szoba és mikrofon frekvenciamenetének mérése</translation>
+    </message>
+    <message>
+      <source>Measured listening position</source>
+      <translation>Mért hallgatási pozíció</translation>
+      <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
@@ -3118,6 +3128,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>SoundCurrent Studio offline renderelő (nincs szükség hangeszközre)</translation>
     </message>
     <message>
+      <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
+      <translation>SoundCurrent-mérés frekvenciasöpréssel vagy hangokkal; a mediánhoz viszonyítva; a mikrofon EQ-ja megkerülve. A lejátszási EQ hatása szerepelhet benne.</translation>
+      <extracomment>New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.</extracomment>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Hangprojektor</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3696,6 +3711,11 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Warmth</source>
       <translation>Melegség</translation>
+    </message>
+    <message>
+      <source>Whole listening system</source>
+      <translation>Teljes hallgatási rendszer</translation>
+      <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>

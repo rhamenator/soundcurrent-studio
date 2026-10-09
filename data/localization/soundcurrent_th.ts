@@ -793,6 +793,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
     </message>
     <message>
+      <source>Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2</source>
+      <translation>การตอบสนองรวมของลำโพง/เครื่องขยายเสียง/ไมโครโฟน/ห้อง ไม่ใช่การวัดอุปกรณ์ชิ้นเดียวแยกต่างหาก %1 / %2</translation>
+      <extracomment>New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>เงื่อนไข</translation>
     </message>
@@ -1911,6 +1916,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Measure speaker room and microphone response</source>
       <translation>วัดการตอบสนองของลำโพง ห้อง และไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Measured listening position</source>
+      <translation>ตำแหน่งฟังที่วัดแล้ว</translation>
+      <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
@@ -3118,6 +3128,11 @@ Do you want to delete it anyway?</source>
       <translation>ตัวเรนเดอร์แบบออฟไลน์ SoundCurrent Studio (ไม่ต้องใช้อุปกรณ์เสียง)</translation>
     </message>
     <message>
+      <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
+      <translation>การวัด SoundCurrent ด้วยการกวาดความถี่หรือโทนเสียง โดยเทียบกับมัธยฐานและข้าม EQ ไมโครโฟน อาจรวมผลของ EQ การเล่นเสียงด้วย</translation>
+      <extracomment>New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.</extracomment>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>ซาวด์บาร์</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3696,6 +3711,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Warmth</source>
       <translation>ความอุ่น</translation>
+    </message>
+    <message>
+      <source>Whole listening system</source>
+      <translation>ระบบการฟังทั้งหมด</translation>
+      <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>

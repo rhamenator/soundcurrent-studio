@@ -793,6 +793,11 @@ Vil du slette den alligevel?</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
     </message>
     <message>
+      <source>Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2</source>
+      <translation>Samlet respons fra højttalere/forstærker/mikrofon/rum; ikke en isoleret måling af en enhed. %1 / %2</translation>
+      <extracomment>New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Forhold</translation>
     </message>
@@ -1911,6 +1916,11 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Mål højttalernes, rummets og mikrofonens frekvensgang</translation>
+    </message>
+    <message>
+      <source>Measured listening position</source>
+      <translation>Målt lytteposition</translation>
+      <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
@@ -3118,6 +3128,11 @@ Vil du slette den alligevel?</translation>
       <translation>SoundCurrent Studio offline-renderer (kræver ingen lydenhed)</translation>
     </message>
     <message>
+      <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
+      <translation>SoundCurrent-måling med sweep eller toner; relativt til medianen; mikrofon-EQ omgået. Afspilnings-EQ kan indgå.</translation>
+      <extracomment>New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.</extracomment>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Lydbar</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3696,6 +3711,11 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Warmth</source>
       <translation>Varme</translation>
+    </message>
+    <message>
+      <source>Whole listening system</source>
+      <translation>Hele lyttesystemet</translation>
+      <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>

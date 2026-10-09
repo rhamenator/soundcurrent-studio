@@ -793,6 +793,11 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
     </message>
     <message>
+      <source>Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2</source>
+      <translation>Spoločná odozva reproduktorov/zosilňovača/mikrofónu/miestnosti; nejde o samostatné meranie zariadenia. %1 / %2</translation>
+      <extracomment>New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Conditions</source>
       <translation>Podmienky</translation>
     </message>
@@ -1911,6 +1916,11 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Zmerať odozvu reproduktorov, miestnosti a mikrofónu</translation>
+    </message>
+    <message>
+      <source>Measured listening position</source>
+      <translation>Zmeraná posluchová pozícia</translation>
+      <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
@@ -3118,6 +3128,11 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Offline renderer SoundCurrent Studio (zvukové zariadenie nie je potrebné)</translation>
     </message>
     <message>
+      <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
+      <translation>Meranie SoundCurrent frekvenčným prebehom alebo tónmi; vzhľadom na medián; mikrofónový EQ vynechaný. Môže zahŕňať EQ prehrávania.</translation>
+      <extracomment>New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.</extracomment>
+    </message>
+    <message>
       <source>Soundbar</source>
       <translation>Soundbar</translation>
       <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
@@ -3696,6 +3711,11 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Warmth</source>
       <translation>Teplý tón</translation>
+    </message>
+    <message>
+      <source>Whole listening system</source>
+      <translation>Celá posluchová sústava</translation>
+      <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>
