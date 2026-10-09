@@ -76,7 +76,9 @@
     },
     {
       "source": "Invalid WAVE frame alignment or byte rate",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Invalid WAVE read buffer",
@@ -174,7 +176,9 @@
     },
     {
       "source": "Unsupported WAVE rate or channel count",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Unsupported extensible WAVE subtype",
@@ -187,14 +191,14 @@
       "nativeReviewed": false
     }
   ],
-  "status": "Twenty-eight owned diagnostics translated and mapped; 4 other owned WAVE diagnostics remain untranslated",
+  "status": "Thirty owned diagnostics translated and mapped; 2 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 775-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 777-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -256,6 +260,10 @@
   ],
   "encodingChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 775 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "frameRateChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 777 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

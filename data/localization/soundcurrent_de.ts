@@ -1357,6 +1357,11 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Ungültige Studio-Einstellungen</translation>
     </message>
     <message>
+      <source>Invalid WAVE frame alignment or byte rate</source>
+      <translation>Ungültige WAVE-Frame-Ausrichtung oder Byte-Rate</translation>
+      <extracomment>Owned WAVE file metadata check: block alignment must equal channel count times bytes per sample, and byte rate must equal sample rate times block alignment. Not latency, visual frame alignment or clock sync. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid WAVE read buffer</source>
       <translation>Ungültiger WAVE-Lesepuffer</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
@@ -3039,6 +3044,11 @@ In Ihre Bibliothek importieren?</translation>
       <source>Unsupported Studio profile schema</source>
       <translation>Nicht unterstütztes Studio-Profilformat</translation>
       <extracomment>Saved Studio setup schema/version or required top-level structure is unsupported. This is a file format, not a visual theme or room calibration profile.</extracomment>
+    </message>
+    <message>
+      <source>Unsupported WAVE rate or channel count</source>
+      <translation>Nicht unterstützte WAVE-Abtastrate oder Kanalanzahl</translation>
+      <extracomment>Owned WaveReader file-format support limit: channel count must be 1..maxChannels and sample rate 8000..384000 Hz. Rate means sample rate, not bitrate or playback speed. Not live device capability. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Unsupported cable channel count</source>
