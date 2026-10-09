@@ -6,11 +6,18 @@
   "testCommand": "python3 tests/translation_catalogs.py -k unmarked_owned_display_caption",
   "localResult": "passed",
   "seconds": 3.676,
-  "testScope": "Current source accepted, Windows-separator review rows accepted, newly injected unmarked QLabel rejected. Native rerun pending.",
+  "testScope": "Current source accepted, Windows-separator review rows accepted, newly injected unmarked QLabel rejected. Native Windows rerun passed.",
   "sourceSha256": {
     "scripts/ui_string_audit.py": "c3b16a407263d8aa7665095e6d0577ab261acf6793d10d27a65d4e1707495275",
     "tests/translation_catalogs.py": "04e8cedb6d842dc84d3f6ec98f9eb01544a826b6fedca218cd0f2b148c9a3c26"
   },
   "productionAppChange": false,
-  "nativeReviewed": false
+  "nativeReviewed": false,
+  "nativeQualification": {
+    "run": 37902620241,
+    "head": "963915c7ca7bf9d111b4140f44602ff32ec15272",
+    "status": "completed",
+    "conclusion": "success",
+    "scope": "Native Windows build/test workflow including source translation-maintenance regression gate; predates public-update wording change. No native-speaker verification."
+  }
 }
