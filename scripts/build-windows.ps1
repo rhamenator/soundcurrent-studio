@@ -216,7 +216,7 @@ try {
     [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") } else { @("/DCABLE_ZIP=$CablePackage") }
     $installerScript = if ($AudioRoute -eq 'Native') { 'packaging\windows\soundcurrent-studio-native.nsi' } else { 'packaging\windows\soundcurrent-studio.nsi' }
     $generatedInstallerScript = Join-Path $root 'build-windows-native\localized-installer.nsi'
-    & python scripts/windows_installer_catalogs.py --product "SoundCurrent Studio" --output "$root\build-windows-native\installer-translations.json" --installer-source $installerScript --installer-output $generatedInstallerScript
+    & python scripts/windows_installer_catalogs.py --product "SoundCurrent Studio" --output "$root\build-windows-native\installer-translations.json" --installer-source $installerScript --installer-output $generatedInstallerScript --activate-languages
     if ($LASTEXITCODE -ne 0) { throw 'Installer caption generation failed' }
     & $Nsis /INPUTCHARSET UTF8 "/DAPP_EXE=$stage\soundcurrent-studio.exe" "/DDLL_DIR=$stage" "/DAPP_VERSION=$version" "/DOUTPUT=$installer" @audioOptions "/DSOURCE_ROOT=$root" "/DUNINSTALL_PAYLOAD=$root\build-windows-native\uninstall-payload.nsh" $generatedInstallerScript
     if ($LASTEXITCODE -ne 0) { throw 'Windows installer build failed' }
