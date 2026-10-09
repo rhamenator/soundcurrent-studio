@@ -4144,7 +4144,7 @@ int main(int argc, char **argv) {
         if(QCoreApplication::instance()->property("soundcurrentInterfaceLanguage").toString()!=localization.loaded())
             qFatal("Audio helper language does not follow the loaded interface catalog");
         for (auto *widget : window.findChildren<QWidget *>())
-            if (auto *panel = dynamic_cast<soundcurrent::studio::StudioPanel *>(widget)) {panel->selfTestFormatting(); panel->selfTestChannelNames();}
+            if (auto *panel = dynamic_cast<soundcurrent::studio::StudioPanel *>(widget)) {panel->selfTestFormatting(); panel->selfTestChannelNames(); panel->selfTestRenderErrors();}
         for(const auto &reason:QStringList{"Unsupported Studio profile schema","Studio profile has an invalid numeric field","Studio profile has an invalid boolean field","Invalid Studio channel count","Invalid Studio profile channel count","Invalid Studio channel name or filters","Too many Studio channel filters","Invalid Studio route","Duplicate Studio route","Invalid route indexes or weight","Invalid route number","Too many Studio routes","Invalid filter type","Shared and channel EQ exceed 64 filters; remove some channel filters","Invalid enhancement parameter count","Invalid enhancement parameter type","Enhancements outside supported ranges"})
             if(soundcurrent::i18n::audioErrorText(reason)!=soundcurrent::i18n::text(reason.toUtf8().constData()))
                 qFatal("Studio validation diagnostic missed the localized display boundary");

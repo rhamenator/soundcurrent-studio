@@ -290,6 +290,35 @@ void StudioPanel::renderFiles(const QString &input,const QString &output) {
         }catch(const std::exception &e){return SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
     });
 }
+void StudioPanel::selfTestRenderErrors() {
+    QTemporaryDir files;
+    if (!files.isValid() || renderJob_.valid()) qFatal("Render diagnostic fixture unavailable");
+    const auto check = [this, &files](const QString &input, const char *source) {
+        const auto output = files.filePath("unpublished.wav");
+        renderFiles(input, output);
+        const auto result = renderJob_.get();
+        const auto expected = SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(source)));
+        if (result != expected || QFile::exists(output))
+            qFatal("Localized render failure or output preservation failed: %s", source);
+    };
+    check(files.filePath("missing.wav"), "Cannot open input WAVE file");
+    const auto malformed = files.filePath("malformed.wav");
+    {
+        QFile file(malformed);
+        if (!file.open(QIODevice::WriteOnly) || file.write(QByteArray::fromHex("524946460000000057415645")) != 12)
+            qFatal("Cannot create RIFF extent fixture");
+    }
+    check(malformed, "Invalid RIFF size");
+    {
+        QFile file(malformed);
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate) ||
+            file.write(QByteArray::fromHex("524946460c000000574156454a554e4b64000000")) != 20)
+            qFatal("Cannot create RIFF chunk fixture");
+    }
+    check(malformed, "Chunk extends beyond RIFF bounds");
+    render_->setEnabled(true); cancel_->setEnabled(false);
+    status_->setText(SC_TR("Ready. Effects are dry until enabled."));
+}
 void StudioPanel::selfTestChannelNames() {
     const auto original = session_;
     const auto history = history_;
