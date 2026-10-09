@@ -3054,6 +3054,11 @@ Importera till ditt bibliotek?</translation>
       <extracomment>Windows Start-menu shortcut action removing this application. Distinct from Quit or closing the UI. Driver removal remains optional shared-driver policy.</extracomment>
     </message>
     <message>
+      <source>Unknown option: %1</source>
+      <extracomment>Standalone CLI diagnostic for an unrecognized command-line flag. %1 is the exact option spelling supplied by the caller; preserve it verbatim and do not translate/reparse it. Not a missing option value or unknown equipment model.</extracomment>
+      <translation>Okänt alternativ: %1</translation>
+    </message>
+    <message>
       <source>Unlock EQ</source>
       <translation>Lås upp EQ</translation>
     </message>

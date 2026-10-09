@@ -39,6 +39,13 @@ with tempfile.TemporaryDirectory() as directory:
             expected_error = messages['Render: %1'].replace('%1', messages[source])
             assert invalid.returncode == 1
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
+        for option in ('--unknown-option', '--unknown-%1-%2', '--unknown:option'):
+            invalid = subprocess.run([renderer, '--language', tag, option, 'unused'],
+                                     capture_output=True, timeout=10)
+            inner = messages['Unknown option: %1'].replace('%1', option)
+            expected_error = messages['Render: %1'].replace('%1', inner)
+            assert invalid.returncode == 1
+            assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
         # Real engine configuration rejects these values after reading valid audio.
         for arguments, source in [
             (['--tail', '-1'], 'Tail must be between 0 and 30 seconds'),

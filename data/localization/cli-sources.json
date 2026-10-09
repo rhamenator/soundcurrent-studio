@@ -47,5 +47,6 @@
   "Reverb settings are outside the supported range",
   "Tail must be between 0 and 30 seconds",
   "Output already exists; select a new filename",
-  "Cannot create output staging directory"
+  "Cannot create output staging directory",
+  "Unknown option: %1"
 ]

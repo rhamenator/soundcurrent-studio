@@ -302,3 +302,7 @@ The CLI tail-limit message now has contextually reviewed translations in all 34 
 ### Existing-output protection in the standalone renderer
 
 The CLI reuses the desktop translation for an already-existing output file through a display-boundary alias. Its underlying exception and no-overwrite behavior stay unchanged. Actual compiled tests across all 34 catalogs and fallback tags verify translated errors, unchanged existing file bytes and no leftover staging directory. The staging-directory creation error also embeds its existing desktop translation; collision exhaustion is not runtime qualified. CLI help and other diagnostics remain open.
+
+### Unknown command-line options
+
+The unknown-option template has translations in all 34 catalogs. The display boundary substitutes the supplied option exactly once before wrapping the diagnostic. Actual compiled tests check ordinary ASCII flags, colon-containing flags and literal `%1`/`%2` text in every language and fallback case. Windows Unicode argument decoding is not qualified by these ASCII cases and still needs an entry-point audit. Native review remains unverified; standalone help and other diagnostics remain incomplete.

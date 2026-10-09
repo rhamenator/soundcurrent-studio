@@ -1,6 +1,6 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Declared WAVE diagnostics, five CLI validation diagnostics and all nine literal engine configuration rejections translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
+  "status": "Declared WAVE diagnostics, CLI validation/unknown-option messages, shared engine configuration rejections and selected output protection errors translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
   "sourceSha256": "193bad9a9d49949d0b11c4c3926cd759ce4146e18f9ce1d593080cbd8e0b56d7",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
@@ -20,7 +20,7 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 784,
+  "catalogMessages": 785,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -49,5 +49,12 @@
     "actualRuntime": "All 34 languages plus fallback tags reject an existing output with exact localized stderr, exit 1, unchanged sentinel bytes and no staging directory left behind.",
     "stagingDirectoryError": "Existing desktop translation embedded; actual directory-creation collision exhaustion not fault-injected.",
     "result": "cli-localization CTest passed"
+  },
+  "displayBoundarySha256": "42088ef1c3673b4c29a5d92fd4439be3a2d8b8ef6d8798e2344eed8c21f685fb",
+  "unknownOptionVerification": {
+    "result": "cli-localization CTest passed",
+    "scope": "Three ASCII unknown flags per locale and fallback case, including embedded %1/%2 and a colon; exact translated stderr preserves flag bytes without recursive substitution.",
+    "nativeReviewed": false,
+    "windowsUnicodeArguments": "Not qualified; narrow argv decoding needs a separate Windows Unicode-entry audit."
   }
 }

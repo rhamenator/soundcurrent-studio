@@ -32,9 +32,17 @@ inline std::string renderError(std::string_view diagnostic) {
     // The underlying exception and filesystem behavior remain invariant.
     if (diagnostic == "Output already exists; choose a new filename")
         diagnostic = "Output already exists; select a new filename";
+    auto localized = text(diagnostic);
+    constexpr std::string_view unknownPrefix = "Unknown option: ";
+    if (diagnostic.starts_with(unknownPrefix)) {
+        localized = text("Unknown option: %1");
+        const auto placeholder = localized.find("%1");
+        if (placeholder != std::string::npos)
+            localized.replace(placeholder, 2, diagnostic.substr(unknownPrefix.size()));
+    }
     auto result = text("Render: %1");
     const auto position = result.find("%1");
-    if (position != std::string::npos) result.replace(position, 2, text(diagnostic));
+    if (position != std::string::npos) result.replace(position, 2, localized);
     return result;
 }
 }
