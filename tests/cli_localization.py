@@ -66,6 +66,25 @@ with tempfile.TemporaryDirectory() as directory:
             assert invalid.returncode == 1
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
             assert not output.exists()
+        # The inclusive boundary remains usable; it is not lowered by the alias.
+        for arguments in [(['--eq', '1:100:0:1'] * 64),
+                          (['--eq', '1:100:0:1'] * 33 + ['--lowpass', '1:100:1'] * 31)]:
+            accepted = subprocess.run([renderer, '--language', tag, '--input', str(input_wave),
+                                       '--output', str(output)] + arguments,
+                                      capture_output=True, timeout=10)
+            assert accepted.returncode == 0, (tag, accepted.stderr)
+            assert output.exists()
+            output.unlink()
+        # Same 64-filter per-channel limit for EQ alone and mixed filter types.
+        for arguments in [(['--eq', '1:100:0:1'] * 65),
+                          (['--eq', '1:100:0:1'] * 33 + ['--lowpass', '1:100:1'] * 32)]:
+            invalid = subprocess.run([renderer, '--language', tag, '--input', str(input_wave),
+                                      '--output', str(output)] + arguments,
+                                     capture_output=True, timeout=10)
+            expected_error = messages['Render: %1'].replace('%1', messages['Too many Studio channel filters'])
+            assert invalid.returncode == 1
+            assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
+            assert not output.exists()
         assert not output.exists()
         sentinel = b'Existing user output must remain unchanged.'
         output.write_bytes(sentinel)

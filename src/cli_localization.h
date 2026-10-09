@@ -32,6 +32,8 @@ inline std::string renderError(std::string_view diagnostic) {
     // The underlying exception and filesystem behavior remain invariant.
     if (diagnostic == "Output already exists; choose a new filename")
         diagnostic = "Output already exists; select a new filename";
+    if (diagnostic == "Too many EQ bands for one channel")
+        diagnostic = "Too many Studio channel filters";
     auto localized = text(diagnostic);
     constexpr std::string_view unknownPrefix = "Unknown option: ";
     if (diagnostic.starts_with(unknownPrefix)) {

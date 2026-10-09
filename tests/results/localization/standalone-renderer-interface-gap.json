@@ -50,7 +50,7 @@
     "stagingDirectoryError": "Existing desktop translation embedded; actual directory-creation collision exhaustion not fault-injected.",
     "result": "cli-localization CTest passed"
   },
-  "displayBoundarySha256": "42088ef1c3673b4c29a5d92fd4439be3a2d8b8ef6d8798e2344eed8c21f685fb",
+  "displayBoundarySha256": "8e3f1528090c598ebf0230170372e4b182fa6d327fe1cb3eca28a9585b24dcce",
   "unknownOptionVerification": {
     "result": "cli-localization CTest passed",
     "scope": "Three ASCII unknown flags per locale and fallback case, including embedded %1/%2 and a colon; exact translated stderr preserves flag bytes without recursive substitution.",
@@ -72,5 +72,12 @@
     "actualRuntime": "Compiled CLI test rejects route gains -121 and +13 dB across all catalogs and fallback tags with exact localized errors and no output.",
     "bufferFailureRuntime": "Not fault-injected; declaration and compiled-catalog coverage only.",
     "result": "cli-localization CTest passed"
+  },
+  "filterLimitVerification": {
+    "translation": "Invariant CLI Too many EQ bands for one channel maps at display boundary to existing Too many Studio channel filters. Both enforce the same kMaxProcessingBands = 64 limit.",
+    "actualRuntime": "All 34 catalogs and fallback tags: 64 EQ bands and 33 EQ plus 31 low-pass filters render successfully; 65 EQ bands and 33 EQ plus 32 low-pass filters reject with exact localized stderr, exit 1 and no output.",
+    "result": "cli-localization CTest passed",
+    "processingAndState": "No engine, DSP, Studio model, parameter ID or saved-state code changed.",
+    "nativeReviewed": false
   }
 }

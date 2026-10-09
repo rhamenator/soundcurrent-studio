@@ -52,5 +52,6 @@
   "Route gain must be between -120 and +12 dB",
   "Invalid routing matrix",
   "Invalid routing buffer",
-  "Invalid processing buffer"
+  "Invalid processing buffer",
+  "Too many Studio channel filters"
 ]
