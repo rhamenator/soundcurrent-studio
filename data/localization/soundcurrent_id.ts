@@ -2851,6 +2851,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Trim · %1 dB</translation>
     </message>
     <message>
+      <source>Truncated WAVE file</source>
+      <translation>Berkas WAVE terpotong</translation>
+      <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Nonaktifkan equalizer</translation>
     </message>

@@ -2851,6 +2851,11 @@ Import into your library?</source>
       <translation>ट्रिम · %1 dB</translation>
     </message>
     <message>
+      <source>Truncated WAVE file</source>
+      <translation>अधूरी WAVE फ़ाइल</translation>
+      <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>इक्वलाइज़र बंद करें</translation>
     </message>

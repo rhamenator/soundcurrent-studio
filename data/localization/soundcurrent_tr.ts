@@ -2851,6 +2851,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Seviye ayarı · %1 dB</translation>
     </message>
     <message>
+      <source>Truncated WAVE file</source>
+      <translation>Eksik WAVE dosyası</translation>
+      <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Ekolayzırı kapat</translation>
     </message>

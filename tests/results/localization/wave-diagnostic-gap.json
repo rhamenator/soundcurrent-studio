@@ -110,7 +110,9 @@
     },
     {
       "source": "Truncated WAVE file",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Truncated chunk header",
@@ -131,18 +133,21 @@
     {
       "source": "WAVE output exceeds its declared length",
       "mappedAtDesktopBoundary": false
-    },
-    {
-      "source": "WAVEfmt ",
-      "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "Input-file open diagnostic translated and mapped; 32 other owned WAVE diagnostics remain untranslated",
+  "status": "Two owned diagnostics translated and mapped; 30 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 748-message catalog; earlier running Linux/Windows jobs test their recorded heads"
+  "currentPackageQualification": "pending for 749-message catalog; running CI jobs test their recorded heads",
+  "excludedBinaryLiterals": [
+    "WAVEfmt "
+  ],
+  "truncatedFileChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 749 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves lookup"
+  ]
 }

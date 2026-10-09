@@ -7,6 +7,8 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Truncated WAVE file"))
+        return SC_TR("Truncated WAVE file");
     if (diagnostic == QStringLiteral("Cannot open input WAVE file"))
         return SC_TR("Cannot open input WAVE file");
     if (diagnostic == QStringLiteral("Invalid audio route: loopback requires a separate render source"))
