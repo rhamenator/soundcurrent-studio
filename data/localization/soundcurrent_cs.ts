@@ -126,6 +126,11 @@ Chcete jej nahradit?</translation>
       <translation>Operace selhala: %1 (0x%2)</translation>
     </message>
     <message>
+      <source>%1 is already running or its instance lock is unavailable</source>
+      <translation>%1 již běží nebo není dostupný zámek instance</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
       <source>%1 setup did not finish. %2 itself is installed. Use %3 in the Start menu to retry; see setup details for the reason.</source>
       <translation>Instalace %1 nebyla dokončena. Samotná aplikace %2 je nainstalována. Pro další pokus použijte %3 v nabídce Start; důvod najdete v podrobnostech instalace.</translation>
       <extracomment>Setup failure dialog after app files/shortcuts copied. %1 = stable driver name; %2 = stable app name; %3 = actual currently English Start-menu shortcut name Audio driver setup (not localized Qt button). Setup failure does not prove existing driver absent. Preserve app installed, Start-menu retry and details for reason. Shortcut display-name localization and upgrade cleanup remain open. AI review only; native review unverified.</extracomment>
@@ -174,6 +179,11 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>16 channels</source>
       <translation>16 kanálů</translation>
+    </message>
+    <message>
+      <source>A private user runtime directory is required</source>
+      <translation>Je vyžadován soukromý běhový adresář uživatele</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Abort</source>
@@ -554,6 +564,11 @@ Přesto chcete soubor smazat?</translation>
       <translation>Nelze vytvořit zámek sdílené relace SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot create user settings directory</source>
+      <translation>Nelze vytvořit adresář uživatelského nastavení</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
       <source>Cannot finish inspecting running equalizers; SoundCurrent will not enable processing.</source>
       <translation>Nelze dokončit kontrolu spuštěných ekvalizérů; SoundCurrent zpracování nezapne.</translation>
     </message>
@@ -831,6 +846,11 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Could not create test tone</source>
       <translation>Nepodařilo se vytvořit testovací tón</translation>
+    </message>
+    <message>
+      <source>Could not create the local activation socket for %1: %2</source>
+      <translation>Nelze vytvořit místní aktivační socket pro %1: %2</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Could not delete directory.</source>

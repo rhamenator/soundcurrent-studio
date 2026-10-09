@@ -126,6 +126,11 @@ Do you want to replace it?</source>
       <translation>Αποτυχία λειτουργίας: %1 (0x%2)</translation>
     </message>
     <message>
+      <source>%1 is already running or its instance lock is unavailable</source>
+      <translation>Το %1 εκτελείται ήδη ή το κλείδωμα της διεργασίας δεν είναι διαθέσιμο</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
       <source>%1 setup did not finish. %2 itself is installed. Use %3 in the Start menu to retry; see setup details for the reason.</source>
       <translation>Η εγκατάσταση του %1 δεν ολοκληρώθηκε. Το ίδιο το %2 έχει εγκατασταθεί. Χρησιμοποιήστε το %3 στο μενού Έναρξη για να δοκιμάσετε ξανά· δείτε τις λεπτομέρειες εγκατάστασης για την αιτία.</translation>
       <extracomment>Setup failure dialog after app files/shortcuts copied. %1 = stable driver name; %2 = stable app name; %3 = actual currently English Start-menu shortcut name Audio driver setup (not localized Qt button). Setup failure does not prove existing driver absent. Preserve app installed, Start-menu retry and details for reason. Shortcut display-name localization and upgrade cleanup remain open. AI review only; native review unverified.</extracomment>
@@ -174,6 +179,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>16 channels</source>
       <translation>16 κανάλια</translation>
+    </message>
+    <message>
+      <source>A private user runtime directory is required</source>
+      <translation>Απαιτείται ιδιωτικός κατάλογος εκτέλεσης χρήστη</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Abort</source>
@@ -554,6 +564,11 @@ Do you want to delete it anyway?</source>
       <translation>Δεν είναι δυνατή η δημιουργία κλειδώματος της κοινής συνεδρίας SoundCurrent.</translation>
     </message>
     <message>
+      <source>Cannot create user settings directory</source>
+      <translation>Δεν είναι δυνατή η δημιουργία καταλόγου ρυθμίσεων χρήστη</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
       <source>Cannot finish inspecting running equalizers; SoundCurrent will not enable processing.</source>
       <translation>Δεν είναι δυνατή η ολοκλήρωση του ελέγχου ενεργών ισοσταθμιστών· το SoundCurrent δεν θα ενεργοποιήσει την επεξεργασία.</translation>
     </message>
@@ -831,6 +846,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Could not create test tone</source>
       <translation>Δεν ήταν δυνατή η δημιουργία δοκιμαστικού τόνου</translation>
+    </message>
+    <message>
+      <source>Could not create the local activation socket for %1: %2</source>
+      <translation>Δεν ήταν δυνατή η δημιουργία της τοπικής υποδοχής ενεργοποίησης για το %1: %2</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Could not delete directory.</source>

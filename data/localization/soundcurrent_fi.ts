@@ -126,6 +126,11 @@ Korvataanko se?</translation>
       <translation>Toiminto epäonnistui: %1 (0x%2)</translation>
     </message>
     <message>
+      <source>%1 is already running or its instance lock is unavailable</source>
+      <translation>%1 on jo käynnissä tai sen instanssilukko ei ole käytettävissä</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
       <source>%1 setup did not finish. %2 itself is installed. Use %3 in the Start menu to retry; see setup details for the reason.</source>
       <translation>%1-asennus ei valmistunut. Itse %2 on asennettu. Yritä uudelleen valitsemalla %3 Käynnistä-valikosta; syy löytyy asennuksen tiedoista.</translation>
       <extracomment>Setup failure dialog after app files/shortcuts copied. %1 = stable driver name; %2 = stable app name; %3 = actual currently English Start-menu shortcut name Audio driver setup (not localized Qt button). Setup failure does not prove existing driver absent. Preserve app installed, Start-menu retry and details for reason. Shortcut display-name localization and upgrade cleanup remain open. AI review only; native review unverified.</extracomment>
@@ -174,6 +179,11 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>16 channels</source>
       <translation>16 kanavaa</translation>
+    </message>
+    <message>
+      <source>A private user runtime directory is required</source>
+      <translation>Tarvitaan käyttäjän yksityinen ajonaikainen hakemisto</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Abort</source>
@@ -554,6 +564,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Jaettua SoundCurrent-istuntolukkoa ei voida luoda.</translation>
     </message>
     <message>
+      <source>Cannot create user settings directory</source>
+      <translation>Käyttäjän asetushakemistoa ei voi luoda</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
       <source>Cannot finish inspecting running equalizers; SoundCurrent will not enable processing.</source>
       <translation>Käynnissä olevien taajuuskorjainten tarkistusta ei voida viimeistellä; SoundCurrent ei ota käsittelyä käyttöön.</translation>
     </message>
@@ -831,6 +846,11 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Could not create test tone</source>
       <translation>Testiääntä ei voitu luoda</translation>
+    </message>
+    <message>
+      <source>Could not create the local activation socket for %1: %2</source>
+      <translation>Paikallista aktivointisokettia ei voitu luoda sovellukselle %1: %2</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Could not delete directory.</source>

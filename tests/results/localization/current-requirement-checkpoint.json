@@ -5,7 +5,7 @@
   "catalogs": {
     "count": 34,
     "nonEnglish": 33,
-    "messagesPerCatalog": 880,
+    "messagesPerCatalog": 884,
     "check": "scripts/localization.py --check --require-complete passed locally",
     "nativeReviewed": false
   },
@@ -76,17 +76,17 @@
     "Silent same-package updates do not prove older-version migration or interactive chooser behavior"
   ],
   "evidenceSha256": {
-    "data/localization/catalogs.json": "927a7c81bd80e9f951c3b642b4222a6e4fe07b996bc0c077d1613f9673ce0e00",
-    "docs/translation-review.md": "0d768803de72946a629297dc29bf5650e2b7f44395776455bea0f598596e1ebb",
+    "data/localization/catalogs.json": "a377c1c35201cfda60b55296ee51c01c24ab413e09d49addd3f5c0794c98d810",
+    "docs/translation-review.md": "5301c4eb65b319390457162aac77576e1bef654d06b0a9f636750e0127f217e4",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
-    "tests/translation_catalogs.py": "3aba39056c9987be6af4a526e721596f8512f4d42ae82357780860078536aff5",
+    "tests/translation_catalogs.py": "a6be5089c0655e8158605a5b9e0589e2fc72d317afbe6b8d00f21fc40494959f",
     "scripts/ui_string_audit.py": "681c99092923ff7e1e0587421b7cf163d8901c024617b111732d99b98e683957",
     "tests/results/localization/dynamic-display-inventory.json": "bb21a7e26fb3d0b980d33a4e8b2f0eb810d0dfc2c221d78b668d33c6b707843d",
     "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
-    "src/main.cpp": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
+    "src/main.cpp": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
     "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
     "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
-    "scripts/localization.py": "344bacced6375b9d6af0aeed3cc483e6c482f7ed6918f63a7c69ce707f9c0172",
+    "scripts/localization.py": "96d7d3ca4078a537f5c194cdb2bcc4cc6ec53665c15ce7188eebd0a3203bd2b4",
     "tests/calibration_worker_localization.py": "c6120b78b59ae6d547cd7d0a503d4f39a46f0fa3c03c9c4007b46f8e53db34f8",
     "tests/results/localization/calibration-worker-gap.json": "504b4b47854838503502ebe6aa717220f21d87ebcab7c0898d270709435efd08",
     "src/worker_message_buffer.h": "1866de25517f49efba63b08ef69d6e6d7dfa4e600c1efd6588226b6fe3327e42",
@@ -250,7 +250,7 @@
   "qualifiedPrecedingHead": "d47444950981f2cc06e740dc0ac70f88ae551f7f",
   "audioDisplayNumbers": "tests/results/localization/audio-display-numbers.json",
   "qualifiedCurrentProductionHead": "1f9205dc2cdcb8f6892780270626a391c7a10d9a",
-  "currentProductionSourceMatch": "Current data/catalogs and Linux launcher differ from qualified public-update packages. New package qualification is pending; prior package results remain historical evidence.",
+  "currentProductionSourceMatch": "Current source/catalogs include startup diagnostics and launcher descriptions beyond qualified public-update packages. Startup package qualification pending; launcher-only Linux lifecycle succeeded but artifacts not yet inspected.",
   "balanceNumberFormats": "tests/results/localization/balance-number-formats.json",
   "profileGraphNumberFormats": "tests/results/localization/profile-graph-number-formats.json",
   "fileTypeProviderBoundary": "tests/results/localization/file-type-provider-boundary.json",
@@ -260,5 +260,6 @@
   "displayLiteralWindowsPathFix": "tests/results/localization/display-literal-windows-path-fix.json",
   "publicUpdateMessageReview": "tests/results/localization/public-update-message-review.json",
   "choiceListDisplayGuard": "tests/results/localization/choice-list-display-guard.json",
-  "launcherDescriptionReview": "tests/results/localization/launcher-description-localization.json"
+  "launcherDescriptionReview": "tests/results/localization/launcher-description-localization.json",
+  "startupDiagnosticReview": "tests/results/localization/startup-diagnostic-gap.json"
 }
