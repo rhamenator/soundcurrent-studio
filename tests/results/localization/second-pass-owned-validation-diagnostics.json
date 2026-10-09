@@ -1,0 +1,50 @@
+{
+  "scope": "Diagnose Windows-only owned Studio validation UI failure without weakening assertions",
+  "failureEvidence": "studio-staged-output-ui-failure.log",
+  "failingWindowsSource": "54aa95e",
+  "change": "Report expected invariant reason, actual reason, localized display and expected localized display as exact UTF-8 hex from synthetic fixtures",
+  "linuxValidation": {
+    "rebuiltTarget": "soundcurrent-studio",
+    "locales": [
+      "de",
+      "ar",
+      "nn"
+    ],
+    "passed": 3,
+    "evidence": "owned-validation-host.log"
+  },
+  "windowsValidation": "Pending new CI after diagnostic commit",
+  "productionProcessingChanged": false,
+  "nativeSpeakerVerification": "unverified",
+  "currentPackagesQualified": false,
+  "wholeInterfaceCoverageProven": false,
+  "additionalLinuxValidation": {
+    "sourceCommit": "c95cae01efd7f47d7fae6879d2cd28e204c8527d",
+    "selection": "^localized-ui-",
+    "passed": 35,
+    "scope": "33 non-English locales and two pseudo locales; offscreen Qt UI assertions, not installed desktop/package lifecycle",
+    "evidence": "owned-validation-all-locales-host.log"
+  },
+  "pendingWindowsRun": 37863140873,
+  "windowsFailure": {
+    "run": 37863140873,
+    "sourceCommit": "c95cae01efd7f47d7fae6879d2cd28e204c8527d",
+    "locale": "de",
+    "expectedReason": "Invalid route indexes or weight",
+    "actualReason": "Invalid Studio route",
+    "evidence": "owned-validation-windows-failure.log",
+    "sha256": "ee0d212ce36b13f3252ef9c61641b2d23186a79c0cfb8ce809e3eff1fea012bc"
+  },
+  "fixtureCorrection": {
+    "cause": "Single nested QJsonArray brace construction can select the copy constructor rather than wrap an edge; rejection therefore tests a scalar route instead of its indexes",
+    "change": "Explicit QJsonValue append constructs one nested edge, verifies shape, and covers malformed arity/index/weight/number and valid signed coefficient fixtures",
+    "scope": "Synthetic UI test only; parser, invariant diagnostics, translations, saved-state and DSP unchanged",
+    "windowsReverification": "pending",
+    "linuxReverification": {
+      "rebuiltTarget": "soundcurrent-studio",
+      "passed": 35,
+      "selection": "^localized-ui-",
+      "evidence": "route-fixture-all-locales-host.log"
+    }
+  }
+}

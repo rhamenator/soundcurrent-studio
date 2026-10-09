@@ -1,0 +1,13 @@
+{
+  "run": 37895455235,
+  "testedHead": "d47444950981f2cc06e740dc0ac70f88ae551f7f",
+  "catalogMessages": 873,
+  "conclusion": "success",
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-windows-873-37895455235/windows-build/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "fd273ef310ad019f3bb1606991437a80310aef56c3d7118548a91f58d0b369bf",
+  "executableSha256": "7f9ee598b67d0dca1abcd64af47319149d7009169433a600af22a81c8d3c8c2a",
+  "installedLocaleLogCount": 34,
+  "scope": "GitHub-hosted Windows 2022 compiled tests/native Windows backend and installed locale fixtures; French/Arabic/Nynorsk silent lifecycle, same-installer update, shortcuts, settings/user-file preservation, uninstall. No interactive chooser, older-version migration, live audio or native-speaker review. Predates newer deletion captions.",
+  "nativeReviewed": false,
+  "evidence": "tests/results/localization/windows-873-installed"
+}

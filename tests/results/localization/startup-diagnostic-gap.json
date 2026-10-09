@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-09",
+  "scope": "Production startup qCritical diagnostics in main.cpp; self-test-only diagnostics excluded.",
+  "gaps": [
+    {
+      "line": 4431,
+      "source": "if (!QDir().mkpath(runtime)) { qCritical(\"Cannot create user settings directory\"); return 1; }",
+      "classification": "Owned startup diagnostic outside fixture; English-only"
+    },
+    {
+      "line": 4436,
+      "source": "qCritical(\"A private user runtime directory is required\");",
+      "classification": "Owned startup diagnostic outside fixture; English-only"
+    },
+    {
+      "line": 4462,
+      "source": "qCritical(\"SoundCurrent Studio is already running or its instance lock is unavailable\");",
+      "classification": "Owned startup diagnostic outside fixture; English-only"
+    },
+    {
+      "line": 4470,
+      "source": "qCritical(\"Could not create SoundCurrent Studio's local activation socket: %s\", qPrintable(instanceServer.errorString()));",
+      "classification": "Owned startup diagnostic outside fixture; English-only"
+    }
+  ],
+  "nextTask": "Qualify current compiled startup diagnostics and rebuilt Linux/Windows packages; continue finite interface coverage audit.",
+  "wholeInterfaceCoverageProven": false,
+  "nativeReviewed": false,
+  "runningPackageQualification": {
+    "linuxRun": 37905861393,
+    "windowsRun": 37905849572,
+    "note": "These launcher-only Linux runs passed; Windows runs pending at latest observation. None contain the newer startup fix."
+  },
+  "originalSourceSha256": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
+  "currentSourceSha256": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
+  "status": "Four owned diagnostic templates translated; current package qualification pending",
+  "implemented": "SC_TR templates logged with qUtf8Printable; product names and external errorString substituted unchanged. No checks, paths, lock timing, activation messages or exit codes changed.",
+  "contextualAiReview": "Runtime directory is private per user, not a project directory. Instance lock prevents another process instance; activation socket shows/quits the existing process. Disjunctive already-running OR unavailable-lock meaning retained. Translations remain native-unverified.",
+  "localQualification": {
+    "fullCatalogTests": {
+      "tests": 66,
+      "skipped": 0,
+      "passed": true
+    },
+    "rebuiltApplication": true,
+    "compiledCatalogCTest": "passed",
+    "actualStartupLockCTest": {
+      "passed": true,
+      "locales": [
+        "fr",
+        "ar",
+        "nn"
+      ],
+      "exitCode": 1,
+      "settingsWritten": false,
+      "audioStarted": false
+    },
+    "unexercisedBranches": [
+      "Windows settings-directory creation failure",
+      "Private runtime-directory failure",
+      "Activation socket creation failure"
+    ],
+    "sourceGuardMutation": "New raw qCritical messages in production startup block rejected"
+  },
+  "evidenceSha256": {
+    "src/main.cpp": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
+    "scripts/localization.py": "96d7d3ca4078a537f5c194cdb2bcc4cc6ec53665c15ce7188eebd0a3203bd2b4",
+    "tests/startup_diagnostics_localization.py": "0a907eb0492e583b63f4856cd95a99ee210ddef76c688216d8b8491b7885f4d0",
+    "tests/translation_catalogs.py": "a6be5089c0655e8158605a5b9e0589e2fc72d317afbe6b8d00f21fc40494959f",
+    "CMakeLists.txt": "fda407b1c0f8283e4f8368df2009358ddca5ce785c7ebbbf413c931dc6986129"
+  },
+  "rpmCaptureCorrection": {
+    "observedFailure": "Fedora and AlmaLinux EQ package CTest: exit 1, empty captured stderr in the startup lock test. Ubuntu passed.",
+    "qtSource": "https://github.com/qt/qtbase/blob/6.10/src/corelib/global/qlogging.cpp",
+    "mechanism": "Qt chooses journald/syslog system sinks when configured. QT_FORCE_STDERR_LOGGING=1 makes shouldLogToStderr true.",
+    "fix": "Set QT_FORCE_STDERR_LOGGING=1 and UTF-8 process locale only in the fixture subprocess; retain production default logging.",
+    "qualification": "Corrected real fixture passed locally in fr/ar/nn for both rebuilt apps. Corrected RPM qualification pending."
+  }
+}

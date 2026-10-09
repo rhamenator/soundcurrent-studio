@@ -1,0 +1,12 @@
+{
+  "run": 37899558794,
+  "testedHead": "9e218b3b1d9e4eafb3465276c9b149460c68f30d",
+  "catalogMessages": 879,
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-windows-balance-37899558794/windows-build/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "ccbb1f2b13fd6f0a6510bc66abbc81118698103f0f6c692574a2bc469c5e8680",
+  "executableSha256": "158e5c59007604b2d505ea26dfed260fa194835957cba90053e13cd2a8fb3e9b",
+  "installedLocaleLogCount": 34,
+  "scope": "GitHub-hosted Windows 2022 build and installed UI fixtures; fr/nn/ar silent installer lifecycle, same-installer update, preservation, shortcuts and uninstall. No interactive chooser/installer, older-version migration, live audio, native driver lifecycle or native-speaker review.",
+  "nativeReviewed": false,
+  "evidence": "tests/results/localization/windows-balance-installed"
+}

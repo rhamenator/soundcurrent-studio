@@ -1,0 +1,47 @@
+{
+  "stage": "Portuguese complete extracted catalogs checkpoint",
+  "catalogs": [
+    {
+      "tag": "pt-PT",
+      "name": "Português (Portugal)",
+      "translated": 523,
+      "total": 523,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "e74b3cb370ffca3f1cf1a77e550aea7112c2da152c5ecd461f9b32074391ee11",
+      "qmSha256": "f79128d6d1ada4abfc93220cc1fdc252552967949104f7bd7a75cce1e4765f09"
+    },
+    {
+      "tag": "pt-BR",
+      "name": "Português (Brasil)",
+      "translated": 523,
+      "total": 523,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "9f0d68d6ee66e9eaae95b7e4056a665fe2010b73e30431a05599a07825bea3db",
+      "qmSha256": "b325b4e7c67cf71edf748623018fa3d760cf261742280969165863cccac9b8b1"
+    }
+  ],
+  "linguisticReview": "Contextual regional AI review; unverified; no native-speaker review",
+  "linuxTests": {
+    "passed": 55,
+    "total": 55,
+    "scope": "Full CTest including both Portuguese equipment workflows and real main windows",
+    "log": "/tmp/sc-pt-complete-studio-tests.log"
+  },
+  "linuxVisualReview": {
+    "locales": [
+      "pt-PT",
+      "pt-BR"
+    ],
+    "platform": "xcb/Xvfb",
+    "screen": "1280x720",
+    "tabsCapturedPerLocale": 3,
+    "reviewedTabs": [
+      1
+    ],
+    "scope": "Visible settings/effects captions; remaining controls require scrolling."
+  },
+  "windows": "Pending CI on new commits",
+  "remaining": "26 target locales incomplete; native-speaker review unverified."
+}

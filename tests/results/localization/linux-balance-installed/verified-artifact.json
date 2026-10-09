@@ -1,0 +1,35 @@
+{
+  "run": 37899572695,
+  "testedHead": "9e218b3b1d9e4eafb3465276c9b149460c68f30d",
+  "catalogMessages": 879,
+  "packages": [
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-balance-37899572695/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "2f46bb747cdb1b7d23d6b19a88fd3a4f7efcfb831b67c210f5fa74de4f2eff66",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-balance-installed/package-validation-0"
+    },
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-balance-37899572695/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "d0ba28b9ae1875672b34e7dd151fcddae18a02a5ee3c3cf129d53a6f3df2ee25",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-balance-installed/package-validation-1"
+    },
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-balance-37899572695/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "c44d61c351c4fbc2e5082c2bd7d6f9bc3438f045448d9f965a98a1c3f1bf3be2",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-balance-installed/package-validation-2"
+    }
+  ],
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "scope": "Full CTest and package install/menu/installed GUI/same-package in-place reinstall/uninstall/config preservation/reinstall. 33 installed non-English UI fixtures per image. No older-version migration, physical RHEL desktop, live audio or native-speaker review.",
+  "nativeReviewed": false
+}

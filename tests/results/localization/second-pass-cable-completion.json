@@ -1,0 +1,60 @@
+{
+  "scope": "Already-installed, incomplete-installation removed and cable completion notices",
+  "sourceMessagesPerLocale": 715,
+  "nonEnglishLocales": 33,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Conditional reboot advice for existing installation preserved",
+      "Reinstall workflow retains two separate Windows restarts",
+      "Availability qualification on restoring prior default audio devices preserved",
+      "Install Driver is a literal external installer button, protected only for reviewed instruction",
+      "Setup action caption inserted from existing translated key",
+      "Thai equalizer term aligned with app heading before final checks"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Linux Qt offscreen and host PowerShell 7.6.6",
+    "targetedQtTestsPassed": 43,
+    "catalogUnitTestsPassed": 19,
+    "catalogUnitTestsSkipped": 0,
+    "requiredHelperLookupsPassed": 1020,
+    "externalLabelGuard": "accepted original label; rejected translated, wrong-case, duplicated and absent label; owned caption translation permitted",
+    "existingHelperRegressionFixtures": "passed",
+    "actualQuietNoActionAndMissingManagerFaults": "passed fr/ar/nn",
+    "newProductionInstallRepairCompletionFlowsExecuted": false,
+    "realWindowsDialogsExecuted": false
+  },
+  "remainingHelperProseCandidates": {
+    "untranslatedCable": 5,
+    "invariantProductNames": 2,
+    "nativeCandidates": 0,
+    "scope": "AST literal heuristic"
+  },
+  "invariants": [
+    "Install/repair predicates and boot markers unchanged",
+    "Default routing restoration logic unchanged",
+    "Driver operations, exit codes and ownership unchanged",
+    "Numerical processing and saved state unchanged"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "VMUsed": false,
+  "remainingScope": [
+    "Cable removal confirmation, endpoint readiness/repair bodies and removal failure",
+    "NSIS installer/uninstaller text",
+    "Windows current runtime and changed-package lifecycle qualification"
+  ],
+  "evidenceSha256": {
+    "packaging/windows/cable-setup.ps1": "b0e01778166d3992da636fb0360cf46c314cbde40700197e98afc512df451d62",
+    "scripts/localization.py": "7e2550c1a97335b588b837222cfc489035eb50dbf46ad696e22f3caab18d1d1c",
+    "tests/translation_catalogs.py": "5342354c4fdc6647653fa30bbf74e25cdd68bbf0e03de7bd4f35bcb5cf4e45fe",
+    "data/localization/setup-prose-backlog.json": "b1d242a74e37ef953f170002745ccc8ab7ab4f087372b39e03183263bb39573e",
+    "tests/results/localization/cable-completion-runtime.log": "7f5568471b5509cdbc5a1261c90ef64cdca8adc098afa06458cd86b5024fb978",
+    "tests/results/localization/cable-completion-qt.log": "2f0c8090def953db8ce147af9b450cdc0af1fa2b578da5a524e5b2f612b707e6",
+    "build/soundcurrent-studio": "30765f34aa91902bc6126729298800185ec7f5864a2ca94cc6089b32086c8669"
+  }
+}

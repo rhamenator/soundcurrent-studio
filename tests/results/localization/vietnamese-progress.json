@@ -1,0 +1,25 @@
+{
+  "stage": "Vietnamese existing catalog complete",
+  "catalogs": [
+    {
+      "tag": "vi",
+      "name": "Tiếng Việt",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "89d4434f3c43ce4a93eed0ec272091397169b6ec8fd7f8bfaf6e69a148a3fbd6",
+      "qmSha256": "1d9342193c11dd2607feb2aa15de7fdaa437267d7bce3ca4e4360ed98e10f848"
+    }
+  ],
+  "linuxTests": {
+    "passed": 4,
+    "total": 4,
+    "scope": "Embedded localization assertions, Vietnamese profile import/edit/save/cancel/discard/apply workflow, MainWindow offscreen smoke test and structural catalog checks",
+    "log": "/tmp/soundcurrent-studio-vi-final-tests.log"
+  },
+  "review": "Contextual AI review of all current Vietnamese catalog entries, including microphone/room measurement limitations, channel gain trim, zero-valued effect bypass, save/undo actions and regional fallback. Placeholders, file patterns, links and numerical limits preserved. Linguistic accuracy unverified.",
+  "nativeReviewed": false,
+  "windows": "Pending CI; no Windows runtime qualification for this batch",
+  "remaining": "Thai and Swahili existing catalogs incomplete; omitted source messages reserved for second pass. Windows and visual qualification pending."
+}

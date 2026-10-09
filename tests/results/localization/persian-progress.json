@@ -1,0 +1,25 @@
+{
+  "stage": "Persian current catalogs complete",
+  "catalogs": [
+    {
+      "tag": "fa",
+      "name": "فارسی",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "dc93a6b05671f286727ae86a3a02b872e1f50897fe80589e6f29e8b96220016e",
+      "qmSha256": "dd8466341c798e96eeafa9ab0d2d428cd31b90cc134b7c458b8713d9bc1aff1d"
+    }
+  ],
+  "linuxTests": {
+    "passed": 75,
+    "total": 75,
+    "scope": "Full Linux CTest including Persian equipment workflows and RTL catalog assertions",
+    "log": "/tmp/soundcurrent-studio-fa-complete-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Current catalogs populated; contextual AI review remains unverified. Calibration limitations, microphone versus playback effects, save/quit behavior and neutral render counts reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "9 original target catalogs incomplete. Second-pass backend/helper/installer coverage, full bidi and platform lifecycle qualification remain open."
+}

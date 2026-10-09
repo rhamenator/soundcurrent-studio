@@ -1,0 +1,41 @@
+{
+  "stage": "Norwegian Bokmål and Finnish complete extracted catalogs",
+  "catalogs": [
+    {
+      "tag": "nb",
+      "name": "Norsk bokmål",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "0d0fdaf31a37debb2fa2b6e0330912343a95342adf7fed6f326dc8574003c92d",
+      "qmSha256": "6d48bcf2b91969ed4c7138676c73c927744a7c7b7d0d9ba48fc7aa805f7af0ce"
+    },
+    {
+      "tag": "fi",
+      "name": "Suomi",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "98684e01004e90d1ca01d1fc3507d978b41b26f060b72d9f4131acb6c0ed06a6",
+      "qmSha256": "798e88fbded2ec0b4098f7ae72de213c2f26d0d8a808ef864e75de8dc1c582c8"
+    }
+  ],
+  "linuxTests": {
+    "passed": 68,
+    "total": 68,
+    "scope": "Full CTest including Norwegian Bokmål/Finnish equipment workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-nb-fi-complete-tests.log"
+  },
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Finnish Studio effects",
+    "screenshots": "/tmp/soundcurrent-studio-fi-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Q, gain/headroom, wet mixes, loudness compensation and measured-response limits reviewed. Render counts use neutral labels.",
+  "nativeReviewed": false,
+  "windows": "Pending CI on completed catalogs",
+  "remaining": "14 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
+}

@@ -7,6 +7,7 @@ License:        GPL-3.0-only
 URL:            https://github.com/rhamenator/soundcurrent-studio
 Source0:        %{name}-%{version}.tar.gz
 
+BuildRequires:  python3
 BuildRequires:  cmake >= 3.20
 BuildRequires:  gcc-c++
 BuildRequires:  pipewire-devel

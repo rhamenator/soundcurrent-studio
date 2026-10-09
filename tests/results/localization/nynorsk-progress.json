@@ -1,0 +1,31 @@
+{
+  "stage": "Nynorsk complete extracted catalogs",
+  "catalogs": [
+    {
+      "tag": "nn",
+      "name": "Norsk nynorsk",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "36e3c9d1243cb5ecf4b3613d774c14e325ae82374a26add983c00cb6157b69cf",
+      "qmSha256": "6647667f95f3748ffe2bd5f8f34b013c84dd0c9877d97fab92c74ee276907538"
+    }
+  ],
+  "linuxTests": {
+    "passed": 72,
+    "total": 72,
+    "scope": "Full CTest including Nynorsk equipment workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-nn-complete-tests.log"
+  },
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Nynorsk Studio effects",
+    "screenshots": "/tmp/soundcurrent-studio-nn-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Q, gain/headroom, wet mixes, loudness compensation and measured-response limits reviewed. Render counts use neutral labels.",
+  "nativeReviewed": false,
+  "windows": "Pending CI on completed catalogs",
+  "remaining": "12 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
+}

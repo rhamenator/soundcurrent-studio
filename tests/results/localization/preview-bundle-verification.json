@@ -1,0 +1,18 @@
+{
+  "previewDirectory": "/home/rich/dev/soundcurrent-localization-previews/soundcurrent-studio",
+  "linuxInstaller": "/home/rich/dev/soundcurrent-localization-previews/soundcurrent-studio/SoundCurrent-Studio-Linux-Installer.run",
+  "linuxInstallerSha256": "e302d25d07fbd21b270b04d270d146d343d9d02bb97ee1caec1ff3daf4412b11",
+  "manifestValidated": true,
+  "embeddedCatalogMatchesCurrentSource": true,
+  "localeDryRuns": 34,
+  "packageHashes": {
+    "soundcurrent-studio_1.1.0_amd64.deb": "244eb84d6386cc52678e35d221ae5e3951c332337f7a133be8215edfc700704b",
+    "soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm": "0aa74150158220bb2fd6a93a327d85fc49d61eedf45c59f80e6af5de1bfc283b",
+    "soundcurrent-studio-1.1.0-1.el10.x86_64.rpm": "09cd3657c3d602f1ccd1b4080a82c54f958cf26d9338c0ce9388115a33696e07"
+  },
+  "windowsQualifiedProductionHead": "ad730e73ad3863786fb24c1c6ed902d968e62b37",
+  "windowsCurrentAppAndInstallerSourcesMatch": true,
+  "scope": "Local unpublished preview assembly; easy-installer dry runs select current Ubuntu package without download/install. Current Linux container and Windows hosted lifecycle qualifications retained separately, including actual French easy-installer main on a verified local current package. No native-speaker verification or physical Windows audio qualification.",
+  "nativeReviewed": false,
+  "releasePublished": false
+}

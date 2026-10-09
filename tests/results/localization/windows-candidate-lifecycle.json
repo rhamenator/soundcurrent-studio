@@ -1,0 +1,19 @@
+{
+  "scope": "Silent per-user app lifecycle on independent clone; no driver installation/removal or visual qualification",
+  "settingsMarkerPreserved": true,
+  "uninstall": "passed",
+  "unknownFilePreserved": true,
+  "installerSha256": "C6DF05265B4F564E18480C3F3E629AD2A1A4772855A63564BEE370AF83B2FBB5",
+  "audioDeviceStateUnchanged": true,
+  "nativeReviewed": false,
+  "product": "Studio",
+  "update": "passed",
+  "date": "2026-10-08",
+  "vm": "soundcurrent-win11-dev, full independent disk with no backing image",
+  "ciRun": 37741018825,
+  "limitations": [
+    "Offscreen synthetic UI fixtures do not establish visual usability or native linguistic accuracy",
+    "Silent app-only lifecycle: interactive installer and driver lifecycle not qualified",
+    "Preservation checks use owned sentinel settings and an unknown-file fixture, not exhaustive comparisons of all user data"
+  ]
+}

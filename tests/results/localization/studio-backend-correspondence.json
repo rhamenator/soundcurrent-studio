@@ -1,0 +1,14 @@
+{
+  "scope": "Studio Linux/backend display-boundary correspondence",
+  "reviewedDesktopMappedSites": {
+    "linuxDirectExceptions": 7,
+    "engineRejectMessages": 9,
+    "waveRequireMessages": 32
+  },
+  "rendererCliDeclared": "All9 engine rejects and32 WAVE validation messages declared in CLI catalog",
+  "fixedGap": "PipeWire stream failed callback fallback lacked desktop mapping; added exact mapping and33 locale translations. Provider supplied error details preserved. Timeout detail uses mapping before owned wrapper.",
+  "internalContracts": "Engine/router constructor invalid-argument bounds guarded by WAVE/channel validation on supported GUI/CLI paths; not user caption producers.",
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false,
+  "qualification": "Fresh production package qualification required for mapping change."
+}

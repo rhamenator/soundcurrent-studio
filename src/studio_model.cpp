@@ -7,6 +7,21 @@
 
 namespace soundcurrent::studio {
 namespace {
+QString canonicalName(const QString &role, int channel) {
+    if (role == "channel") return QString("Channel %1").arg(channel + 1);
+    if (role == "mono") return "Mono";
+    if (role == "left") return "Left";
+    if (role == "right") return "Right";
+    if (role == "front-left") return "Front left";
+    if (role == "front-right") return "Front right";
+    if (role == "center") return "Center";
+    if (role == "lfe") return "LFE";
+    if (role == "rear-left") return "Rear left";
+    if (role == "rear-right") return "Rear right";
+    if (role == "side-left") return "Side left";
+    if (role == "side-right") return "Side right";
+    return {};
+}
 void require(bool value, const char *message) { if (!value) throw std::runtime_error(message); }
 double numeric(const QJsonObject &o, const char *key, double low, double high) {
     const auto v = o.value(key);
@@ -22,15 +37,34 @@ bool boolean(const QJsonObject &o, const char *key) {
 Session::Session(std::size_t count) {
     require(count > 0 && count <= maxChannels, "Invalid Studio channel count");
     engine.channels.resize(count); routing.resize(count * count); solo.resize(count);
+    nameProvenance.resize(count);
+    QStringList roles;
     for (std::size_t c = 0; c < count; ++c) {
         routing[c * count + c] = 1;
-        names << QString("Channel %1").arg(c + 1);
+        roles << "channel";
     }
-    if (count == 1) names = {"Mono"};
-    if (count == 2) names = {"Left", "Right"};
-    if (count == 6) names = {"Front left", "Front right", "Center", "LFE", "Rear left", "Rear right"};
-    if (count == 8) names = {"Front left", "Front right", "Center", "LFE", "Rear left", "Rear right", "Side left", "Side right"};
+    if (count == 1) roles = {"mono"};
+    if (count == 2) roles = {"left", "right"};
+    if (count == 6) roles = {"front-left", "front-right", "center", "lfe", "rear-left", "rear-right"};
+    if (count == 8) roles = {"front-left", "front-right", "center", "lfe", "rear-left", "rear-right", "side-left", "side-right"};
+    for (int c = 0; c < roles.size(); ++c) {
+        names << canonicalName(roles[c], c);
+        nameProvenance[std::size_t(c)] = QJsonObject{{"version", 1}, {"role", roles[c]}};
+    }
 }
+QString Session::defaultNameRole(int channel) const {
+    if (channel < 0 || channel >= names.size() || std::size_t(channel) >= nameProvenance.size()) return {};
+    const auto metadata = nameProvenance[std::size_t(channel)].toObject();
+    if (!metadata.value("version").isDouble() || metadata.value("version").toDouble() != 1) return {};
+    const auto role = metadata.value("role").toString();
+    const auto canonical = canonicalName(role, channel);
+    return !canonical.isEmpty() && names[channel] == canonical ? role : QString();
+}
+void Session::setCustomName(int channel, const QString &name) {
+    names[channel] = name;
+    nameProvenance[std::size_t(channel)] = QJsonValue(QJsonValue::Undefined);
+}
+
 EngineSettings Session::effective(std::span<const EqBand> sharedBands, double gainDb, int balance) const {
     auto result = engine;
     const bool anySolo = std::find(solo.begin(), solo.end(), true) != solo.end();
@@ -56,8 +90,11 @@ QJsonObject Session::json() const {
         QJsonArray bands;
         for (const auto &b : engine.channels[c].bands)
             bands.append(QJsonObject{{"frequency", b.frequency}, {"gain", b.gainDb}, {"q", b.q}, {"type", int(b.type)}});
-        channels.append(QJsonObject{{"name", names[int(c)]}, {"gain", engine.channels[c].gainDb},
-                                    {"mute", engine.channels[c].muted}, {"solo", solo[c]}, {"bands", bands}});
+        QJsonObject row{{"name", names[int(c)]}, {"gain", engine.channels[c].gainDb},
+                        {"mute", engine.channels[c].muted}, {"solo", solo[c]}, {"bands", bands}};
+        if (c < nameProvenance.size() && !nameProvenance[c].isUndefined())
+            row.insert("nameProvenance", nameProvenance[c]);
+        channels.append(row);
         for (std::size_t in = 0; in < engine.channels.size(); ++in)
             if (routing[c * engine.channels.size() + in] != 0)
                 routes.append(QJsonArray{int(c), int(in), routing[c * engine.channels.size() + in]});
@@ -81,6 +118,7 @@ Session Session::parse(const QJsonObject &o) {
         const auto row = channels[c].toObject();
         require(row.value("name").isString() && row.value("name").toString().size() <= 80 &&
                 !row.value("name").toString().trimmed().isEmpty() && row.value("bands").isArray(), "Invalid Studio channel name or filters");
+        s.nameProvenance[std::size_t(c)] = row.value("nameProvenance");
         s.names[c] = row.value("name").toString(); auto &channel = s.engine.channels[c];
         channel.gainDb = numeric(row, "gain", -60, 24); channel.muted = boolean(row, "mute"); s.solo[c] = boolean(row, "solo");
         const auto bands = row.value("bands").toArray();

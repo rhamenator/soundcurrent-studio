@@ -1,0 +1,10 @@
+{
+  "run": 37892602244,
+  "qualifiedHead": "77a4510e03d681babbd16dcf0dabd07683560977",
+  "conclusion": "success",
+  "platform": "GitHub-hosted Windows 2022 / Qt 6.12.0",
+  "logSha256": "6abfdcb76fed20ee3a671e452d99151531f1a0226f0b6a33afd489026ffbdbc1",
+  "logLocation": "/tmp/soundcurrent-studio-qt612-fixed.log",
+  "scope": "Workflow including compiled localization fixture and installed locale/lifecycle qualification succeeded after exact mnemonic alias fix. Applies only to recorded head; later action/type/format changes need fresh qualification.",
+  "nativeReviewed": false
+}

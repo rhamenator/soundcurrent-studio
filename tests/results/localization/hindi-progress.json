@@ -1,0 +1,31 @@
+{
+  "stage": "Hindi current catalogs populated",
+  "catalogs": [
+    {
+      "tag": "hi",
+      "name": "हिन्दी",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "e2009267a7872a5009601888dc10de1087d9e1e6814b14c6238bbcab4211233e",
+      "qmSha256": "06c191a30340e071a9b635ac097ea5d23ddb547be2b9f4a6467035afd9adf8f1"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "Embedded localization assertions, Hindi MainWindow offscreen smoke test and structural catalog checks",
+    "log": "/tmp/soundcurrent-studio-hi-complete-tests.log"
+  },
+  "review": "Contextual AI review across current Hindi catalogs: DSP controls, calibration limitations, microphone versus speaker paths, save/quit behavior and neutral rendering counts. Linguistic accuracy unverified; no native review.",
+  "nativeReviewed": false,
+  "windows": "Pending CI; no Windows runtime qualification for this batch",
+  "remaining": "Four target catalogs incomplete. Second-pass omitted source strings, visual and Windows lifecycle qualification remain open.",
+  "focusedWorkflowTests": {
+    "passed": 4,
+    "total": 4,
+    "scope": "Hindi profile editor workflow, embedded catalog completeness, standard Save, regional resolution, LTR, MainWindow offscreen and structural checks",
+    "log": "/tmp/soundcurrent-studio-hi-workflows-tests.log"
+  }
+}

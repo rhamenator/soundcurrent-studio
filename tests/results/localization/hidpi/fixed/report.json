@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-08",
+  "locale": "ar",
+  "environment": "Host Linux Xvfb 1920x1080, xcb, QT_SCALE_FACTOR=2; effective 960x540",
+  "layoutChanges": [
+    "Selected-band labels above their controls in three columns",
+    "Preset selector above four action buttons"
+  ],
+  "firstPageViewportLogicalWidth": 898,
+  "outerHorizontalScrollMaximum": 0,
+  "screenshotInspected": true,
+  "sha256": "c8cd22227d780fac14b9959271c940b0c0445088187a595c19db591636f6bce1",
+  "focusedTestsPassed": 4,
+  "nativeReviewed": false,
+  "limitations": [
+    "Only Arabic first-page viewport inspected at this scale",
+    "Lower scrolled content and other scales remain unqualified",
+    "Updated Windows and packages pending"
+  ]
+}

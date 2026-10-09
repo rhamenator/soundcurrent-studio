@@ -1,0 +1,65 @@
+{
+  "scope": "Missing shared driver manager, incomplete/unverifiable package and unsigned manager errors",
+  "sourceMessagesPerLocale": 698,
+  "nonEnglishLocales": 33,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Bundled driver-management helper is distinct from Windows Device Manager; Hebrew wording adjusted",
+      "Digital signature means executable/package trust, not audio characteristics",
+      "Package failure retains alternative causes without guessing one",
+      "App repair and signed-release instructions preserved"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Linux Qt offscreen and host PowerShell 7.6.6",
+    "targetedQtTestsPassed": 43,
+    "catalogUnitTestsPassed": 18,
+    "catalogUnitTestsSkipped": 0,
+    "requiredHelperLookupsPassed": 442,
+    "actualNativeMissingManagerFault": {
+      "locales": [
+        "fr",
+        "ar",
+        "nn"
+      ],
+      "exitCode": 30,
+      "identityLookupOrElevationPerformed": false,
+      "driverOrEndpointActionsPerformed": false,
+      "output": "exact translated UTF-8 detail and heading"
+    },
+    "signatureOrPackageFailurePathsExecuted": false,
+    "existingNoActionHelperFaults": "both helpers fr/ar/nn passed",
+    "rawProseMutationGate": "passed"
+  },
+  "remainingRawHelperCandidates": {
+    "untranslated": 23,
+    "invariantProductNames": 2
+  },
+  "invariants": [
+    "Manager presence predicate unchanged",
+    "Driver package verification and Authenticode Valid checks unchanged",
+    "Driver ownership and actions unchanged",
+    "Exit statuses unchanged",
+    "Numerical processing and saved state unchanged"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "VMUsed": false,
+  "remainingScope": [
+    "Remaining helper captions and notices",
+    "NSIS installer/uninstaller localization",
+    "Windows current runtime and package install/update/uninstall qualification"
+  ],
+  "evidenceSha256": {
+    "packaging/windows/native-audio-setup.ps1": "d9fed223c3e218b833c3bbbd7de0fb7474d75cb7730f0c2d350206fd12b7c627",
+    "scripts/test_windows_setup_localization.py": "b684770d2a4705ad2bbebaa4d8856b386d7026cf95d9f729c209259c5332d2cf",
+    "data/localization/setup-prose-backlog.json": "0654d266200da7acc62e758d708de1dec50928bfc80a13928bcd47e9ce4153aa",
+    "tests/results/localization/native-package-errors-runtime.log": "7c859b6d9f1b169cb5b9406d49b185829fd86cee2b5769a032bca7d767b071f9",
+    "tests/results/localization/native-package-errors-qt.log": "69f8389b0fa3808736938faac9c166ef4e7ea3298de28c0ed8165bdac381f772",
+    "build/soundcurrent-studio": "b52e9f06acfaf120d0c102cdd0df8d5f4b6b06b090effa36b8ae52b3aff27033"
+  }
+}

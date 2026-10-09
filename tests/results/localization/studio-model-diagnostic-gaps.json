@@ -1,0 +1,34 @@
+{
+  "scope": "Studio-owned session validation errors at the desktop diagnostic boundary",
+  "source": "src/studio_model.cpp",
+  "desktopCallSites": [
+    "src/studio_panel.cpp: change catch",
+    "src/studio_panel.cpp: load Session::parse catch"
+  ],
+  "displayMapper": "src/audio_error_text.h",
+  "diagnosticsNeedingMappingAndTranslations": [],
+  "unmappedCount": 0,
+  "inference": "All 17 owned session-model validation reasons now have explicit translated desktop-boundary mappings. This closes this source inventory only; it is not an exhaustive backend/UI inventory.",
+  "nativeSpeakerVerification": "unverified",
+  "wholeInterfaceCoverageProven": false,
+  "resolvedDiagnostics": [
+    "Unsupported Studio profile schema",
+    "Studio profile has an invalid numeric field",
+    "Studio profile has an invalid boolean field",
+    "Invalid Studio channel count",
+    "Invalid Studio profile channel count",
+    "Invalid Studio channel name or filters",
+    "Too many Studio channel filters",
+    "Invalid Studio route",
+    "Duplicate Studio route",
+    "Invalid route indexes or weight",
+    "Invalid route number",
+    "Too many Studio routes",
+    "Invalid filter type",
+    "Shared and channel EQ exceed 64 filters; remove some channel filters",
+    "Invalid enhancement parameter count",
+    "Invalid enhancement parameter type",
+    "Enhancements outside supported ranges"
+  ],
+  "resolvedNonEnglishLocales": 33
+}

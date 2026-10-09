@@ -1,0 +1,32 @@
+{
+  "stage": "Spanish complete extracted catalog checkpoint",
+  "catalog": {
+    "tag": "es",
+    "name": "Español",
+    "translated": 523,
+    "total": 523,
+    "status": "unverified",
+    "nativeReviewed": false,
+    "tsSha256": "d9a681661ca3b09e19e819f1268382834296462ee2af2425e67c1306a510dd42",
+    "qmSha256": "663c139e6b1cedf9512657020fcc6679ba77ef16bf16155ab3d1a675035c4b37"
+  },
+  "linguisticReview": "Contextual AI translation; unverified; no native-speaker review",
+  "linuxTests": {
+    "passed": 52,
+    "total": 52,
+    "scope": "Full CTest suite including Spanish equipment workflow and main window",
+    "log": "/tmp/sc-es-complete-studio-tests.log"
+  },
+  "linuxVisualReview": {
+    "locale": "es",
+    "platform": "xcb/Xvfb",
+    "screen": "1280x720",
+    "tabsCaptured": 3,
+    "reviewedTabs": [
+      1
+    ],
+    "notes": "Inspected captions and controls; scrolling remains necessary. EQ shows a horizontal scrollbar; broader layout qualification remains outstanding."
+  },
+  "windows": "Pending CI for this checkpoint",
+  "remaining": "29 other target locales have incomplete catalogs; native-speaker review remains unverified."
+}

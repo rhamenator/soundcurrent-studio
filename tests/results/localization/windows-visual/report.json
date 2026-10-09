@@ -1,0 +1,57 @@
+{
+  "scope": "Native Qt Windows widget rendering through SSH-launched test process; synthetic controls, no live audio",
+  "qtPlatform": "windows",
+  "visualInspected": true,
+  "nativeReviewed": false,
+  "product": "Studio",
+  "interactiveDesktopQualification": "pending",
+  "results": [
+    {
+      "screenshots": 4,
+      "locale": "de",
+      "passed": true
+    },
+    {
+      "screenshots": 4,
+      "locale": "pl",
+      "passed": true
+    },
+    {
+      "screenshots": 4,
+      "locale": "ar",
+      "passed": true
+    }
+  ],
+  "date": "2026-10-08",
+  "visualInspectionScope": [
+    "pl tab 0",
+    "ar tab 1",
+    "de tab 2"
+  ],
+  "sourceCommit": "5c73785dff3355e39289864277e5cd7bea071a4a",
+  "reinstallAfterUninstall": "passed before native rendering checks",
+  "findings": [
+    "Inspected Polish Equalizer page fits captured Windows window; headroom fully visible",
+    "German settings labels wrap; Arabic effects page labels and controls render"
+  ],
+  "remaining": [
+    "Arabic headroom value/unit mixed-direction order needs correction",
+    "SSH-launched native Qt renderer is not a signed-in interactive desktop workflow",
+    "Lower scrolled sections, remaining locales, HiDPI, Unicode paths and error dialogs not visually qualified",
+    "Native-speaker verification remains unverified"
+  ],
+  "images": [
+    {
+      "file": "pl-tab-0.png",
+      "sha256": "2815ddd58f46da2dbd0073ae2d2eb17310db06f5f5abd6e72b87850ed4ab1a2d"
+    },
+    {
+      "file": "ar-tab-1.png",
+      "sha256": "fec4c2b08db453f44e66dc681d55e8c0cef855ca57a7e25e46ca2c85b5c539c8"
+    },
+    {
+      "file": "de-tab-2.png",
+      "sha256": "e395b8afdd9f867e692452a359ae66fb2b9c48675057e05566ed5e55b1a190c7"
+    }
+  ]
+}

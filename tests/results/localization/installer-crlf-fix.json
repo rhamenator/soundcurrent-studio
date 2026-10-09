@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "failedWindowsRun": 37868387713,
+  "failedWindowsHead": "ea5902e39a829f101eca531485dd209f6c39e792",
+  "failedStage": "Installer generation after compiled tests",
+  "cause": "Activation used LF-only initialization anchor against a CRLF Windows checkout",
+  "fix": "Canonicalize activated build-copy line endings; preserve source files and default byte-preserving mode",
+  "activationTestsPassed": 3,
+  "defaultModeBytePreservationTestPassed": true,
+  "endingsChecked": [
+    "LF",
+    "CRLF",
+    "mixed"
+  ],
+  "realTemplateRoutesCompiled": [
+    "cable",
+    "native"
+  ],
+  "windowsFixQualificationPending": true,
+  "nativeSpeakerVerified": false,
+  "vmUsed": false
+}

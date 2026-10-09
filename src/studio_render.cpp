@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "engine.h"
+#include "cli_localization.h"
 #include "wav.h"
 #include <algorithm>
 #include <charconv>
@@ -9,6 +10,14 @@
 #include <random>
 #include <stdexcept>
 #include <string_view>
+#include <sstream>
+#ifdef _WIN32
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#include <windows.h>
+#include <system_error>
+#endif
 
 using namespace soundcurrent::studio;
 namespace {
@@ -74,31 +83,36 @@ private:
     std::filesystem::path final_, directory_, path_;
 };
 void help() {
-    std::cout << "SoundCurrent Studio offline renderer (no audio device required)\n"
-        "Usage: soundcurrent-studio-render --input in.wav --output NEW.wav [options]\n"
-        "  --output-channels N    1-256 output channels (default: input count)\n"
-        "  --route OUT:IN:DB      explicit matrix gain; using any route clears defaults\n"
-        "  --eq CH:HZ:DB:Q        peaking EQ for one output channel; repeat as needed\n"
-        "  --lowpass CH:HZ:Q     optional channel low-pass (e.g. LFE)\n"
-        "  --highpass CH:HZ:Q    optional channel high-pass\n"
-        "  --gain CH:DB           output channel trim, -60 to +24 dB\n"
-        "  --post-gain DB         overall post gain, -24 to +24 dB\n"
-        "  --delay-ms MS          1-2000 ms (default 250)\n"
-        "  --delay-feedback F    0-0.9 (default .35)\n"
-        "  --delay-mix F         wet fraction 0-1 (enables delay)\n"
-        "  --reverb-decay SEC    .1-10 seconds (default 1.5)\n"
-        "  --reverb-damping F    0-.95 (default .4)\n"
-        "  --reverb-mix F        wet fraction 0-1 (enables reverb)\n"
-        "  --tail SEC            append 0-30 seconds to render effect tails\n"
-        "  --no-headroom         disable automatic EQ headroom\n"
-        "  --bypass              bypass EQ, effects, gains and mute\n"
-        "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.\n"
-        "Channel indexes start at 1. Existing output files are never overwritten.\n";
+    std::cout << soundcurrent::cli::text("SoundCurrent Studio offline renderer (no audio device required)") << '\n'
+        << soundcurrent::cli::format("Usage: %1 [options]",
+            {"soundcurrent-studio-render --input in.wav --output NEW.wav"}) << '\n'
+        <<
+        "  --language TAG         " << soundcurrent::cli::text("interface language; unsupported tags use English") << '\n' <<
+        "  --output-channels N    " << soundcurrent::cli::text("1-256 output channels (default: input count)") << '\n' <<
+        "  --route OUT:IN:DB      " << soundcurrent::cli::text("explicit matrix gain; using any route clears defaults") << '\n' <<
+        "  --eq CH:HZ:DB:Q        " << soundcurrent::cli::text("peaking EQ for one output channel; repeat as needed") << '\n' <<
+        "  --lowpass CH:HZ:Q     " << soundcurrent::cli::text("optional channel low-pass (e.g. LFE)") << '\n' <<
+        "  --highpass CH:HZ:Q    " << soundcurrent::cli::text("optional channel high-pass") << '\n' <<
+        "  --gain CH:DB           " << soundcurrent::cli::text("output channel trim, -60 to +24 dB") << '\n' <<
+        "  --post-gain DB         " << soundcurrent::cli::text("overall post gain, -84 to +24 dB") << '\n' <<
+        "  --delay-ms MS          " << soundcurrent::cli::text("1-2000 ms (default 250)") << '\n' <<
+        "  --delay-feedback F    " << soundcurrent::cli::text("0-0.9 (default .35)") << '\n' <<
+        "  --delay-mix F         " << soundcurrent::cli::text("wet fraction 0-1 (enables delay)") << '\n' <<
+        "  --reverb-decay SEC    " << soundcurrent::cli::text(".1-10 seconds (default 1.5)") << '\n' <<
+        "  --reverb-damping F    " << soundcurrent::cli::text("0-.95 (default .4)") << '\n' <<
+        "  --reverb-mix F        " << soundcurrent::cli::text("wet fraction 0-1 (enables reverb)") << '\n' <<
+        "  --tail SEC            " << soundcurrent::cli::text("append 0-30 seconds to render effect tails") << '\n' <<
+        "  --no-headroom         " << soundcurrent::cli::text("disable automatic EQ headroom") << '\n' <<
+        "  --bypass              " << soundcurrent::cli::text("bypass EQ, effects, gains and mute") << '\n' <<
+        soundcurrent::cli::text("Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.") << '\n'
+        << soundcurrent::cli::text("Channel indexes start at 1. Existing output files are never overwritten.") << '\n';
 }
 }
 
-int main(int argc, char **argv) {
+int renderMain(int argc, char **argv) {
     try {
+        for (int i = 1; i + 1 < argc; ++i)
+            if (std::string_view(argv[i]) == "--language") soundcurrent::cli::selectLanguage(argv[++i]);
         std::filesystem::path input, output;
         EngineSettings settings;
         double tail = 0;
@@ -111,8 +125,9 @@ int main(int argc, char **argv) {
             if (option == "--bypass") { settings.bypass = true; continue; }
             if (++i == argc) throw std::runtime_error("Missing option value");
             const std::string_view value = argv[i];
-            if (option == "--input") input = value;
-            else if (option == "--output") output = value;
+            if (option == "--language") continue;
+            if (option == "--input") input = std::filesystem::path(std::u8string(value.begin(), value.end()));
+            else if (option == "--output") output = std::filesystem::path(std::u8string(value.begin(), value.end()));
             else if (option == "--output-channels") outputChannels = channel(number(value), maxChannels)+1;
             else if (option == "--eq") eq.push_back(fields(value, 4));
             else if (option == "--lowpass") lowpass.push_back(fields(value, 3));
@@ -189,13 +204,47 @@ int main(int argc, char **argv) {
         }
         writer.finish();
         staging.publish();
-        std::cout << "Rendered " << source.channels << " -> " << outputChannels << " channels, "
-                  << destination.frames << " frames at " << source.sampleRate << " Hz.\n"
-                  << "Peak before clipping: " << total.peakBeforeClip << "; clipped samples: "
-                  << total.clippedSamples << "; invalid samples: " << total.invalidSamples << "\n";
+        std::ostringstream peak;
+        peak << total.peakBeforeClip;
+        std::cout << soundcurrent::cli::format("Rendered %1 -> %2 channels, %3 frames at %4 Hz.",
+                      {std::to_string(source.channels), std::to_string(outputChannels),
+                       std::to_string(destination.frames), std::to_string(source.sampleRate)}) << '\n'
+                  << soundcurrent::cli::format("Peak before clipping: %1; clipped samples: %2; invalid samples: %3",
+                      {peak.str(), std::to_string(total.clippedSamples), std::to_string(total.invalidSamples)}) << '\n';
         return 0;
     } catch (const std::exception &error) {
-        std::cerr << "Render failed: " << error.what() << '\n';
+        std::cerr << soundcurrent::cli::renderError(error.what()) << '\n';
         return 1;
     }
 }
+
+#ifdef _WIN32
+// Windows passes UTF-16 arguments. Convert once to the renderer's UTF-8
+// boundary, without an ANSI-code-page round trip or replacement characters.
+int wmain(int argc, wchar_t **wideArguments) {
+    try {
+        std::vector<std::string> arguments;
+        arguments.reserve(argc);
+        for (int i = 0; i < argc; ++i) {
+            const auto length = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS,
+                wideArguments[i], -1, nullptr, 0, nullptr, nullptr);
+            if (!length) throw std::system_error(GetLastError(), std::system_category());
+            std::string argument(length, '\0');
+            if (!WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, wideArguments[i], -1,
+                                     argument.data(), length, nullptr, nullptr))
+                throw std::system_error(GetLastError(), std::system_category());
+            argument.pop_back(); // The sizing call included the terminating NUL.
+            arguments.push_back(std::move(argument));
+        }
+        std::vector<char *> pointers;
+        pointers.reserve(argc);
+        for (auto &argument : arguments) pointers.push_back(argument.data());
+        return renderMain(argc, pointers.data());
+    } catch (const std::exception &error) {
+        std::cerr << soundcurrent::cli::renderError(error.what()) << '\n';
+        return 1;
+    }
+}
+#else
+int main(int argc, char **argv) { return renderMain(argc, argv); }
+#endif

@@ -1,0 +1,46 @@
+{
+  "stage": "Greek and Turkish complete extracted catalogs",
+  "catalogs": [
+    {
+      "tag": "el",
+      "name": "Ελληνικά",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "a592664ded33c9ff9d501a3d2e66a0df66e31e3b7c4670d8d8349291f8a6f975",
+      "qmSha256": "345356e6aeac1453572ff86f35604b0f4695a6c66bc06e42a1848887011d639c"
+    },
+    {
+      "tag": "tr",
+      "name": "Türkçe",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "043a0272672b483a73fa7515c60fbeda3e18e3f548a8f1fb710c7b4deb560826",
+      "qmSha256": "21b8f2e74a34b8b3204a0585dd3e0406883a80afd1936ec58922f0a0134a0360"
+    }
+  ],
+  "linuxTests": {
+    "passed": 64,
+    "total": 64,
+    "scope": "Full CTest including Greek/Turkish equipment workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-el-tr-complete-tests.log"
+  },
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Turkish Studio effects",
+    "screenshots": "/tmp/soundcurrent-studio-tr-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Q, gain/headroom, wet mixes, loudness compensation and measured-response limits reviewed. Render counts use neutral labels.",
+  "nativeReviewed": false,
+  "windows": {
+    "runId": 37721574565,
+    "conclusion": "success",
+    "sourceCommit": "f47658c9172de64367f3a4c9003bba69a9ce3902",
+    "scope": "Windows build, staged runtime tests and installer creation; actual installer lifecycle separate"
+  },
+  "remaining": "18 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
+}

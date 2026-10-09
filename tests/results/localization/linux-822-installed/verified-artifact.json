@@ -1,0 +1,35 @@
+{
+  "run": 37886571464,
+  "testedHead": "b34c4668c7cfb96e59e2247cf5b817d0de6e5d30",
+  "catalogMessages": 822,
+  "packages": [
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37886571464/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "4f3abc8c945490d62039e55cd19f24ec17045ff6fbf692d0dbda3887cb2d3ace",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-822-installed/package-validation-0"
+    },
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37886571464/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "0c95f418728e296dea6397718942334f5af3fe77e9e3d9eadccec5213f9e3409",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-822-installed/package-validation-1"
+    },
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37886571464/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "72d21af805d672cb826da0c8ea81605990f9a0f6cdef26d07b634093f92acfca",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-822-installed/package-validation-2"
+    }
+  ],
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "scope": "Exact packages, successful CTest, 33 installed language fixtures per distribution, same-package update/uninstall/config-preservation/reinstall. Not an actual RHEL desktop, live audio, native-speaker review, interactive installer or older-version migration.",
+  "nativeReviewed": false
+}

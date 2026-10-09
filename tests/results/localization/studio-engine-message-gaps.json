@@ -1,0 +1,123 @@
+{
+  "scope": "Engine configure rejection literals and three live panel status branches; not all session/wave/helper errors",
+  "nativeReviewed": false,
+  "engineFindings": [
+    {
+      "source": "Channel configuration count does not match engine",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Post gain must be finite and within -84 to +24 dB",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Invalid enhancement settings",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Delay settings are outside the supported range",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Reverb settings are outside the supported range",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Invalid channel gain or too many EQ bands",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Invalid EQ band",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Effects exceed the preview's 128 MiB state budget",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Could not allocate effect state",
+      "inCatalog": false,
+      "reachability": "engine.configure returns error to live bridge, preview setup and offline rendering; panel paths display exception detail",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    }
+  ],
+  "panelStatusFindings": [
+    {
+      "source": "Offline editing. Current playback keeps its last live Studio setup.",
+      "inCatalog": false,
+      "reachability": "MainWindow onChanged passes unmarked literal to StudioPanel.liveStatus",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Studio settings applied to live playback.",
+      "inCatalog": false,
+      "reachability": "MainWindow onChanged passes unmarked literal to StudioPanel.liveStatus",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    },
+    {
+      "source": "Studio settings ready. Enable playback on the Equalizer tab.",
+      "inCatalog": false,
+      "reachability": "MainWindow onChanged passes unmarked literal to StudioPanel.liveStatus",
+      "status": "Translated across all 33 non-English locales; compiled catalog mapping/status tests passed on Linux"
+    }
+  ],
+  "sourceHashes": {
+    "src/engine.cpp": "08758edf4e0de38f15a31b03d62ab80220c58da9ead821e5262d8ea628dfde52",
+    "src/studio_panel.cpp": "625004f4d3fbfc40f0c1064c8a15d66cc2be498ece28c410bc8376f89a696af0",
+    "src/main.cpp": "2d112fd33aa1ba3baaa2bfc5e761476d294318c17d7b8baa30e0befe18e6be50"
+  },
+  "nextAction": "Continue session/WAVE/helper/installer audit and visual/Windows/package qualification",
+  "translatedLocales": [
+    "de",
+    "fr",
+    "es",
+    "it",
+    "pt-PT",
+    "pt-BR",
+    "nl",
+    "pl",
+    "cs",
+    "sk",
+    "uk",
+    "ru",
+    "el",
+    "tr",
+    "sv",
+    "da",
+    "nb",
+    "fi",
+    "ro",
+    "hu",
+    "nn",
+    "ar",
+    "he",
+    "fa",
+    "zh-Hans",
+    "zh-Hant",
+    "ja",
+    "ko",
+    "hi",
+    "id",
+    "vi",
+    "th",
+    "sw"
+  ],
+  "linuxBuild": "Studio app, panel and tests rebuilt",
+  "linuxCtest": "6/6 focused tests passed: localization, localized-ui-de, localized-ui-ar, translation-maintenance, translation-catalogs, backend-error-text. UI fixtures are automated, not visual/native-speaker qualification."
+}

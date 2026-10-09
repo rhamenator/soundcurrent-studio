@@ -1,0 +1,17 @@
+{
+  "run": 37912695248,
+  "qualifiedProductionHead": "2d35e5d8c184f632b53680b757a50042e99a9e0f",
+  "platform": "Ubuntu 24.04 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-complete-installer-37912695248/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+  "packageSha256": "0f7585b8ec7f94b615a5d4b6d7303cbd3b53d0defa3f6bf2ee7cc8d7de3131f9",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; actual installed locale fixtures and exact launcher bytes. Installer text tests do not execute its privileged install path. Later source guards and terminal fixtures were separately tested locally.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false
+}

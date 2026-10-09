@@ -1,0 +1,25 @@
+{
+  "stage": "Arabic current catalogs complete",
+  "catalogs": [
+    {
+      "tag": "ar",
+      "name": "العربية",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "8550f3a81bc7ef7f952cf5ddfccc0ccbd47505705a50aa056b042ac051fb9b0d",
+      "qmSha256": "64fe9b01fde3d0cd55243f1f0f6a2f6bfabef499812a16ed2eb86325078f26b0"
+    }
+  ],
+  "linuxTests": {
+    "passed": 73,
+    "total": 73,
+    "scope": "Full Linux CTest including Arabic equipment workflows and RTL catalog assertions",
+    "log": "/tmp/soundcurrent-studio-ar-complete-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Current catalogs populated; contextual AI review remains unverified. Calibration limitations, microphone versus playback effects, save/quit behavior and neutral render counts reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "11 original target catalogs incomplete. Second-pass backend/helper/installer coverage, full bidi and platform lifecycle qualification remain open."
+}

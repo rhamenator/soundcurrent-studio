@@ -1,0 +1,25 @@
+{
+  "stage": "Traditional Chinese current catalogs complete",
+  "catalogs": [
+    {
+      "tag": "zh-Hant",
+      "name": "繁體中文",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "7fac937889304a9f49472f5b38eae8a13c2fd650455c3e51496832780795ea2b",
+      "qmSha256": "9c3774cec5007890da6d9c6b4a70878f5ffd020626e62920cd76490c88851292"
+    }
+  ],
+  "linuxTests": {
+    "passed": 77,
+    "total": 77,
+    "scope": "Full Linux CTest including Traditional Chinese equipment workflows, standard actions and script selection assertions",
+    "log": "/tmp/soundcurrent-studio-zh-Hant-complete-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Current catalogs populated; contextual AI review remains unverified. Calibration limitations, microphone versus playback effects, save/quit behavior and neutral render counts reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "7 original target catalogs incomplete. Second-pass backend/helper/installer coverage, visual and platform lifecycle qualification remain open."
+}

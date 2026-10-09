@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-09",
+  "scope": "Direct literal std::runtime_error arguments in the Studio offline renderer. This source guard does not infer composed or backend diagnostics; those retain separate mapping/runtime evidence. EQ shares the helper and regression test but has no offline renderer.",
+  "directLiteralThrowSites": 14,
+  "rows": [
+    {
+      "diagnostic": "Invalid finite numeric argument",
+      "catalogSource": "Invalid finite numeric argument",
+      "declared": true
+    },
+    {
+      "diagnostic": "Wrong number of colon-separated fields",
+      "catalogSource": "Wrong number of colon-separated fields",
+      "declared": true
+    },
+    {
+      "diagnostic": "Channel indexes are one-based and must exist",
+      "catalogSource": "Channel indexes are one-based and must exist",
+      "declared": true
+    },
+    {
+      "diagnostic": "Output already exists; choose a new filename",
+      "catalogSource": "Output already exists; select a new filename",
+      "declared": true
+    },
+    {
+      "diagnostic": "Cannot protect output staging directory",
+      "catalogSource": "Cannot protect output staging directory",
+      "declared": true
+    },
+    {
+      "diagnostic": "Cannot create output staging directory",
+      "catalogSource": "Cannot create output staging directory",
+      "declared": true
+    },
+    {
+      "diagnostic": "Missing option value",
+      "catalogSource": "Missing option value",
+      "declared": true
+    },
+    {
+      "diagnostic": "Tail must be between 0 and 30 seconds",
+      "catalogSource": "Tail must be between 0 and 30 seconds",
+      "declared": true
+    },
+    {
+      "diagnostic": "Too many EQ bands for one channel",
+      "catalogSource": "Too many Studio channel filters",
+      "declared": true
+    },
+    {
+      "diagnostic": "Too many EQ bands for one channel",
+      "catalogSource": "Too many Studio channel filters",
+      "declared": true
+    },
+    {
+      "diagnostic": "Route gain must be between -120 and +12 dB",
+      "catalogSource": "Route gain must be between -120 and +12 dB",
+      "declared": true
+    },
+    {
+      "diagnostic": "Invalid routing matrix",
+      "catalogSource": "Invalid routing matrix",
+      "declared": true
+    },
+    {
+      "diagnostic": "Invalid routing buffer",
+      "catalogSource": "Invalid routing buffer",
+      "declared": true
+    },
+    {
+      "diagnostic": "Invalid processing buffer",
+      "catalogSource": "Invalid processing buffer",
+      "declared": true
+    }
+  ],
+  "regression": "New undeclared direct renderer exception rejected; known display aliases accepted",
+  "currentCatalogCheck": "passed, complete 34 catalogs",
+  "appOrAudioBehaviorChanged": false,
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false,
+  "sourceSha256": {
+    "scripts/localization.py": "423178ccac62cb4c0f89445c24e691d6e28528afaa5d1b27f690e0b6c6cdf4de",
+    "tests/translation_catalogs.py": "1247a956b8b569681941780db8a7754fda723d629fcfd2535135a292ba19ac64",
+    "src/studio_render.cpp": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384",
+    "src/cli_localization.h": "6c2923e3f549bb37fa742770bb42ba82b6efb59a5c8501421d9331d6ef0370b3"
+  }
+}

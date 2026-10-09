@@ -30,6 +30,9 @@ public:
     void setLiveLevels(std::span<const float>);
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();
+    void selfTestFormatting();
+    void selfTestRenderErrors();
+    void selfTestChannelNames();
     std::function<void()> onChanged;
 private:
     void rebuild();

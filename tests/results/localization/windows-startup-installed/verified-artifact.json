@@ -1,0 +1,26 @@
+{
+  "run": 37906716014,
+  "qualifiedProductionHead": "32ff347fd5d20f46e48a9450d6959c75fa5e7181",
+  "installer": "/home/rich/dev/soundcurrent-localization-artifacts/studio-windows-startup-37906716014/windows-build/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "da0518fab6ece4b4e1aa0c7ee864e1ca6c75a3683003c4b9dab8ea91ad8a9513",
+  "installedExecutableSha256": "851e8ace7956017f23241705bb292e0f6579fd5a866dae3b05e88bbee1d39751",
+  "installerManifestAndInstalledLifecycleHashMatch": true,
+  "stagedAndInstalledExecutableHashMatch": true,
+  "installedLocaleCompletions": 34,
+  "lifecycleLocales": [
+    "fr",
+    "nn",
+    "ar"
+  ],
+  "uninstallPassed": true,
+  "currentCompiledSourceMatchesQualifiedHead": true,
+  "scope": "Silent cable app lifecycle on a disposable Windows VM; installed UI catalog fixtures optional, chooser rendering and native-driver lifecycle excluded",
+  "limitations": [
+    "No native-speaker verification",
+    "No physical hardware or native-driver lifecycle",
+    "No actual Windows startup error branch exercise",
+    "Same-package update, not older-version migration"
+  ],
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false
+}

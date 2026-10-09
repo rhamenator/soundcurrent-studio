@@ -1,0 +1,111 @@
+{
+  "scope": "Exact source-site exemptions for owned-display literal regression gate; dynamic/composed expressions require separate provenance review.",
+  "nativeReviewed": false,
+  "exceptions": [
+    {
+      "file": "src/localization.h",
+      "call": "addItem",
+      "argument": 0,
+      "literal": "English (en)",
+      "reason": "Language autonym plus stable language tag"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " ms",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " dBFS",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " Hz",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " dB",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setText",
+      "argument": 0,
+      "literal": "User %1 / 音声 / Left",
+      "reason": "Synthetic user-name preservation fixture; not a production default"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setText",
+      "argument": 0,
+      "literal": "Custom %1 / 音声",
+      "reason": "Synthetic user-name preservation fixture; not a production default"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " ms",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " s",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " s",
+      "reason": "Invariant physical unit symbol"
+    },
+    {
+      "file": "src/equipment_profiles.cpp",
+      "call": "addItems",
+      "argument": 0,
+      "literal": "PK",
+      "reason": "Stable filter type code; editor saves this code unchanged"
+    },
+    {
+      "file": "src/equipment_profiles.cpp",
+      "call": "addItems",
+      "argument": 0,
+      "literal": "LS",
+      "reason": "Stable filter type code; editor saves this code unchanged"
+    },
+    {
+      "file": "src/equipment_profiles.cpp",
+      "call": "addItems",
+      "argument": 0,
+      "literal": "HS",
+      "reason": "Stable filter type code; editor saves this code unchanged"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "addItems",
+      "argument": 0,
+      "literal": "5.1",
+      "reason": "Standard channel layout designation"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "addItems",
+      "argument": 0,
+      "literal": "7.1",
+      "reason": "Standard channel layout designation"
+    }
+  ]
+}

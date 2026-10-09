@@ -1,0 +1,46 @@
+{
+  "stage": "Ukrainian and Russian complete extracted catalogs",
+  "catalogs": [
+    {
+      "tag": "uk",
+      "name": "Українська",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "e366c916a146cf0877716eeff31fb63ab22da7be28efbd4c902ae67fec3e6754",
+      "qmSha256": "3ffbb8c20e0eb16520fe73f59035ca502d70505f94638fb6c190ad5c78c4096b"
+    },
+    {
+      "tag": "ru",
+      "name": "Русский",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "85b7d0b2cffcdff932262615dc7d48a80bf386674e9cbe5c4291b38167c75724",
+      "qmSha256": "154872cf1155fef3df073094b0704fd14af67ff9fe76bd9879782f768efa0cc1"
+    }
+  ],
+  "linuxTests": {
+    "passed": 62,
+    "total": 62,
+    "scope": "Full CTest including Ukrainian/Russian equipment workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-uk-ru-complete-tests.log"
+  },
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Russian Studio effects",
+    "screenshots": "/tmp/soundcurrent-studio-ru-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Q, signed gain, compressor timings, wet mixes, tone compensation and system-measurement limits reviewed. Render counts use labels.",
+  "nativeReviewed": false,
+  "windows": {
+    "runId": 37720624075,
+    "conclusion": "success",
+    "sourceCommit": "ff570a3722fabea52181bd6849ba27e699c3d5cb",
+    "scope": "Windows build, staged runtime tests and installer creation; actual Windows lifecycle qualification separate"
+  },
+  "remaining": "20 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
+}
