@@ -1060,6 +1060,11 @@ Import into your library?</source>
       <translation>قمة المخرج المقدرة بعد المعادلة، بما يشمل الكسب اللاحق والتوازن</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>عدد كتل RIFF مفرط</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>إنهاء SoundCurrent Studio واستعادة الصوت المعتاد</translation>
     </message>
@@ -1687,6 +1692,11 @@ Import into your library?</source>
     <message>
       <source>Microphone start timed out</source>
       <translation>انتهت مهلة بدء الميكروفون</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>بايت الحشو RIFF مفقود</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

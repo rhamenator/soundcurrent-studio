@@ -1060,6 +1060,11 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Geschätzter Ausgangsspitzenpegel nach dem EQ, einschließlich Ausgangsverstärkung und Balance</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Zu viele RIFF-Datenblöcke</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>SoundCurrent Studio beenden und normale Audiowiedergabe wiederherstellen</translation>
     </message>
@@ -1687,6 +1692,11 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Microphone start timed out</source>
       <translation>Zeitüberschreitung beim Starten des Mikrofons</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>RIFF-Füllbyte fehlt</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

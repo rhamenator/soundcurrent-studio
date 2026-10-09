@@ -1060,6 +1060,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Kilele cha tokeo kinachokadiriwa baada ya EQ, pamoja na gain ya baada na usawa</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Idadi ya vizuizi vya RIFF ni kubwa mno</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>Toka kwenye SoundCurrent Studio na urejeshe sauti ya kawaida</translation>
     </message>
@@ -1687,6 +1692,11 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Microphone start timed out</source>
       <translation>Muda wa kusubiri kuanza maikrofoni umeisha</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>Baiti ya kujaza ya RIFF haipo</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

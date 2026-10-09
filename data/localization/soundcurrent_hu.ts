@@ -1060,6 +1060,11 @@ Importálja a könyvtárba?</translation>
       <translation>Becsült EQ utáni kimeneti csúcs, az utóerősítéssel és balansszal együtt</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Túl sok RIFF-adatblokk</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>Kilépés a SoundCurrent Studióból és a szokásos hang visszaállítása</translation>
     </message>
@@ -1687,6 +1692,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Microphone start timed out</source>
       <translation>A mikrofon indítása túllépte az időkorlátot</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>Hiányzó RIFF-kitöltőbájt</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

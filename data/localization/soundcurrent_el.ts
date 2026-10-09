@@ -1060,6 +1060,11 @@ Import into your library?</source>
       <translation>Εκτιμώμενη κορυφή εξόδου μετά το EQ, με την τελική ενίσχυση και την ισορροπία</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Υπερβολικός αριθμός τμημάτων δεδομένων RIFF</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>Έξοδος από το SoundCurrent Studio και επαναφορά κανονικού ήχου</translation>
     </message>
@@ -1687,6 +1692,11 @@ Import into your library?</source>
     <message>
       <source>Microphone start timed out</source>
       <translation>Έληξε το χρονικό όριο εκκίνησης του μικροφώνου</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>Λείπει byte συμπλήρωσης RIFF</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

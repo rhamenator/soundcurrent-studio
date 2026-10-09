@@ -1060,6 +1060,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Đỉnh đầu ra ước tính sau EQ, bao gồm gain sau EQ và cân bằng</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Có quá nhiều khối RIFF</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>Thoát SoundCurrent Studio và khôi phục âm thanh thông thường</translation>
     </message>
@@ -1687,6 +1692,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Microphone start timed out</source>
       <translation>Đã hết thời gian chờ khởi động micrô</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>Thiếu byte đệm RIFF</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

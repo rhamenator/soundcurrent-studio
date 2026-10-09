@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Missing RIFF padding byte"))
+        return SC_TR("Missing RIFF padding byte");
+    if (diagnostic == QStringLiteral("Excessive number of RIFF chunks"))
+        return SC_TR("Excessive number of RIFF chunks");
     if (diagnostic == QStringLiteral("Speaker mask does not match channel count"))
         return SC_TR("Speaker mask does not match channel count");
     if (diagnostic == QStringLiteral("Invalid output speaker mask"))

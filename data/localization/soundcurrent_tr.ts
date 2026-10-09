@@ -1060,6 +1060,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Çıkış kazancı ve denge dâhil tahmini EQ sonrası çıkış tepesi</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Aşırı sayıda RIFF veri bloğu</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>SoundCurrent Studio'dan çık ve normal sesi geri yükle</translation>
     </message>
@@ -1687,6 +1692,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Microphone start timed out</source>
       <translation>Mikrofon başlatma zaman aşımına uğradı</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>RIFF dolgu baytı eksik</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

@@ -1060,6 +1060,11 @@ Import into your library?</source>
       <translation>ポストゲインとバランスを含む、EQ 適用後の推定出力ピーク</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>RIFFチャンクが多すぎます</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>SoundCurrent Studio を終了し、通常の音声出力に戻す</translation>
     </message>
@@ -1687,6 +1692,11 @@ Import into your library?</source>
     <message>
       <source>Microphone start timed out</source>
       <translation>マイクの開始がタイムアウトしました</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>RIFFパディングバイトがありません</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>

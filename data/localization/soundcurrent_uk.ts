@@ -1060,6 +1060,11 @@ Import into your library?</source>
       <translation>Оцінений вихідний пік після EQ, з урахуванням вихідного підсилення та балансу</translation>
     </message>
     <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>Забагато блоків RIFF</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
       <translation>Завершити роботу SoundCurrent Studio і відновити звичайне аудіо</translation>
     </message>
@@ -1687,6 +1692,11 @@ Import into your library?</source>
     <message>
       <source>Microphone start timed out</source>
       <translation>Перевищено час очікування запуску мікрофона</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>Відсутній байт заповнення RIFF</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>
