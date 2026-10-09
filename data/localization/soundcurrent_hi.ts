@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>ऐम्प्लिफ़ायर प्रोफ़ाइल फ़ोल्डर नहीं बनाया जा सकता।</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>आउटपुट WAVE फ़ाइल नहीं बनाई जा सकती</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>आउटपुट की अस्थायी संग्रह निर्देशिका नहीं बनाई जा सकती</translation>
     </message>

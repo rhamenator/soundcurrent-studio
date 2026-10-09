@@ -455,6 +455,11 @@ Zaimportować do biblioteki?</translation>
       <translation>Nie można utworzyć folderu profili wzmacniacza.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Nie można utworzyć wyjściowego pliku WAVE</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Nie można utworzyć tymczasowego katalogu wyjściowego</translation>
     </message>

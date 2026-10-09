@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>Не удалось создать папку профилей усилителя.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Не удалось создать выходной файл WAVE</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Не удалось создать временный выходной каталог</translation>
     </message>

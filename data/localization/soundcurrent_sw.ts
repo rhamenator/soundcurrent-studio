@@ -455,6 +455,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Haiwezekani kuunda folda ya wasifu wa amplifaya.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Haiwezekani kuunda faili ya towe ya WAVE</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Haiwezekani kuunda saraka ya maandalizi ya tokeo</translation>
     </message>

@@ -455,6 +455,11 @@ Importați în bibliotecă?</translation>
       <translation>Nu se poate crea dosarul profilurilor de amplificator.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Nu se poate crea fișierul WAVE de ieșire</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Nu se poate crea dosarul temporar de ieșire</translation>
     </message>

@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>Δεν είναι δυνατή η δημιουργία φακέλου προφίλ ενισχυτή.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Δεν είναι δυνατή η δημιουργία του αρχείου εξόδου WAVE</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Δεν είναι δυνατή η δημιουργία προσωρινού καταλόγου εξόδου</translation>
     </message>

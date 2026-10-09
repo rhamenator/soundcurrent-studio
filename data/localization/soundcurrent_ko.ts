@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>앰프 프로파일 폴더를 만들 수 없습니다.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>출력 WAVE 파일을 만들 수 없습니다</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>출력 임시 저장 디렉터리를 만들 수 없습니다</translation>
     </message>

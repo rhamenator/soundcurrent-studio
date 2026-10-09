@@ -455,6 +455,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Amplifikatör profili klasörü oluşturulamıyor.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Çıkış WAVE dosyası oluşturulamıyor</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Geçici çıkış dizini oluşturulamıyor</translation>
     </message>

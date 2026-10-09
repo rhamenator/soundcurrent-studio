@@ -455,6 +455,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Não é possível criar a pasta de perfis de amplificador.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Não é possível criar o ficheiro WAVE de saída</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Não é possível criar a pasta temporária de saída</translation>
     </message>

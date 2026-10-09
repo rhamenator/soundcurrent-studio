@@ -455,6 +455,11 @@ Importér til dit bibliotek?</translation>
       <translation>Kan ikke oprette mappe til forstærkerprofiler.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Kan ikke oprette WAVE-outputfilen</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Kan ikke oprette midlertidig outputmappe</translation>
     </message>

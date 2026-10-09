@@ -455,6 +455,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Impossible de créer le dossier des profils d’amplificateur.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Impossible de créer le fichier WAVE de sortie</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Impossible de créer le dossier temporaire de sortie</translation>
     </message>

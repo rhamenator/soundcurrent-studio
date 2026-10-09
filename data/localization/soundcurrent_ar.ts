@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>تعذر إنشاء مجلد ملفات تعريف مضخم الصوت.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>تعذّر إنشاء ملف الإخراج WAVE</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>تعذر إنشاء مجلد تجهيز المخرجات</translation>
     </message>

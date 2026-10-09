@@ -455,6 +455,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Tidak dapat membuat folder profil amplifier.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>Tidak dapat membuat berkas keluaran WAVE</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>Tidak dapat membuat direktori penampungan keluaran sementara</translation>
     </message>

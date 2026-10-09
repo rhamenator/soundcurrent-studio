@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>無法建立擴大機設定檔資料夾。</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>無法建立輸出 WAVE 檔案</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>無法建立輸出暫存目錄</translation>
     </message>

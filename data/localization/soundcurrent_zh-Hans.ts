@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>无法创建功放配置文件夹。</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>无法创建输出 WAVE 文件</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>无法创建输出暂存目录</translation>
     </message>

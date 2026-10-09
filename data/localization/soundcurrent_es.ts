@@ -455,6 +455,11 @@ Import into your library?</source>
       <translation>No se puede crear la carpeta de perfiles de amplificador.</translation>
     </message>
     <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>No se puede crear el archivo WAVE de salida</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot create output staging directory</source>
       <translation>No se puede crear el directorio temporal de salida</translation>
     </message>
