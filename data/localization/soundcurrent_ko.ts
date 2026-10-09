@@ -1416,6 +1416,11 @@ Import into your library?</source>
       <translation>잘못된 필터입니다.</translation>
     </message>
     <message>
+      <source>Invalid finite numeric argument</source>
+      <translation>유한 숫자 인수가 유효하지 않습니다</translation>
+      <extracomment>Owned CLI from_chars numeric parser rejects invalid syntax, partial parses, NaN and infinity. Finite means mathematically finite, not final. Numeric option remains locale-independent machine syntax. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid float WAVE format</source>
       <translation>부동 소수점 WAVE 형식이 유효하지 않습니다</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
@@ -1707,6 +1712,11 @@ Import into your library?</source>
       <source>Missing RIFF padding byte</source>
       <translation>RIFF 패딩 바이트가 없습니다</translation>
       <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Missing option value</source>
+      <translation>옵션 값이 없습니다</translation>
+      <extracomment>Owned CLI parser error: an option requiring a following argument has no value. Not an unavailable UI choice or lost saved setting. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Missing or incomplete WAVE audio</source>

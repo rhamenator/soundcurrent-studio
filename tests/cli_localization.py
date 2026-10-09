@@ -23,6 +23,13 @@ with tempfile.TemporaryDirectory() as directory:
         expected = messages['Render: %1'].replace('%1', messages['Cannot open input WAVE file'])
         assert result.returncode == 1, (tag, result.returncode)
         assert result.stderr.decode('utf-8').strip() == expected, (tag, result.stderr, expected)
+        for arguments, source in [(['--post-gain'], 'Missing option value'),
+                                  (['--post-gain', 'nan'], 'Invalid finite numeric argument')]:
+            invalid = subprocess.run([renderer, '--language', tag] + arguments,
+                                     capture_output=True, timeout=10)
+            expected_error = messages['Render: %1'].replace('%1', messages[source])
+            assert invalid.returncode == 1
+            assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
         assert not output.exists()
         assert not list(folder.glob('.soundcurrent-render-*'))
 print('PASS: 34 standalone CLI catalogs, normalized tags, region fallback, UTF-8 diagnostics and no output on failure')

@@ -31,5 +31,7 @@
   "Unsupported WAVE rate or channel count",
   "Unsupported extensible WAVE subtype",
   "WAVE output exceeds its declared length",
-  "Render: %1"
+  "Render: %1",
+  "Missing option value",
+  "Invalid finite numeric argument"
 ]

@@ -1416,6 +1416,11 @@ Importálja a könyvtárba?</translation>
       <translation>Érvénytelen szűrő.</translation>
     </message>
     <message>
+      <source>Invalid finite numeric argument</source>
+      <translation>Érvénytelen véges számargumentum</translation>
+      <extracomment>Owned CLI from_chars numeric parser rejects invalid syntax, partial parses, NaN and infinity. Finite means mathematically finite, not final. Numeric option remains locale-independent machine syntax. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid float WAVE format</source>
       <translation>Érvénytelen lebegőpontos WAVE-formátum</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
@@ -1707,6 +1712,11 @@ Importálja a könyvtárba?</translation>
       <source>Missing RIFF padding byte</source>
       <translation>Hiányzó RIFF-kitöltőbájt</translation>
       <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Missing option value</source>
+      <translation>Hiányzó opcióérték</translation>
+      <extracomment>Owned CLI parser error: an option requiring a following argument has no value. Not an unavailable UI choice or lost saved setting. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Missing or incomplete WAVE audio</source>

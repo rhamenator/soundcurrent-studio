@@ -1,6 +1,6 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Declared WAVE diagnostics and Render template embedded from all 34 Qt catalogs; explicit --language supported without Qt linkage. CLI help and other owned CLI diagnostics remain untranslated.",
+  "status": "Declared WAVE diagnostics, Render template, missing-option-value and invalid-finite-number CLI errors translated across 34 catalogs. Help and remaining CLI-specific diagnostics still require translation.",
   "sourceSha256": "cb006001f64af2a9157f89c3065d201da5b3f7b4c28a1a30124eba179feb5ea2",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
@@ -19,5 +19,7 @@
   "newBuildDependency": "Python 3 interpreter generates embedded CLI header; audio engine and WAVE libraries remain Qt independent",
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
-  "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt"
+  "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
+  "catalogMessages": 781,
+  "parserErrorVerification": "Rebuilt Qt-independent renderer; permanent test passed localized missing-value and nan input errors across all 34 catalogs plus fallback tags"
 }

@@ -144,6 +144,12 @@ def sources():
                     out.add(value)
     out.update(json.loads((DATA / 'seed-translations.json').read_text(encoding='utf-8'))['sources'])
     out.update(setup_sources())
+    cli_path = DATA / 'cli-sources.json'
+    if cli_path.exists():
+        cli = json.loads(cli_path.read_text(encoding='utf-8'))
+        if not isinstance(cli, list) or any(not isinstance(x, str) or not x for x in cli) or len(cli) != len(set(cli)):
+            raise ValueError('Invalid CLI source inventory')
+        out.update(cli)
     out.update(['Warmth', 'Boxiness', 'Clarity', 'Air'])
     code = (ROOT / 'src/enhancement.h').read_text(encoding='utf-8')
     out.update(re.findall(r'\{\s*"([^"]+)"\s*,', code))
