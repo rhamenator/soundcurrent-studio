@@ -2882,6 +2882,11 @@ Import into your library?</source>
       <translation>电视对白</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>效果尾音时长必须介于 0 到 30 秒之间</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>青绿色：校正均衡曲线。橙色：实测响应（如有）。纵轴为相对 dB。</translation>
     </message>

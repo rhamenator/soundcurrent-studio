@@ -2882,6 +2882,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Dialog TV</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Durasi ekor efek harus antara 0 dan 30 detik</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Hijau kebiruan: EQ koreksi. Oranye: respons hasil pengukuran jika tersedia. Skala vertikal adalah dB relatif.</translation>
     </message>

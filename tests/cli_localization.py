@@ -41,6 +41,8 @@ with tempfile.TemporaryDirectory() as directory:
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
         # Real engine configuration rejects these values after reading valid audio.
         for arguments, source in [
+            (['--tail', '-1'], 'Tail must be between 0 and 30 seconds'),
+            (['--tail', '31'], 'Tail must be between 0 and 30 seconds'),
             (['--post-gain', '-85'], 'Post gain must be finite and within -84 to +24 dB'),
             (['--delay-ms', '0'], 'Delay settings are outside the supported range'),
             (['--delay-feedback', '1'], 'Delay settings are outside the supported range'),
@@ -57,4 +59,13 @@ with tempfile.TemporaryDirectory() as directory:
             assert not output.exists()
         assert not output.exists()
         assert not list(folder.glob('.soundcurrent-render-*'))
+    # Inclusive endpoints stay valid; the appended duration changes only frame data.
+    sizes = []
+    for seconds in (0, 30):
+        destination = folder / f'tail-{seconds}.wav'
+        result = subprocess.run([renderer, '--input', str(input_wave), '--output', str(destination),
+                                 '--tail', str(seconds)], capture_output=True, timeout=10)
+        assert result.returncode == 0, result.stderr
+        sizes.append(destination.stat().st_size)
+    assert sizes[1] - sizes[0] == 30 * 48000 * 4
 print('PASS: 34 standalone CLI catalogs, normalized tags, region fallback, UTF-8 diagnostics and no output on failure')

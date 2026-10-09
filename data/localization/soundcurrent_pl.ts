@@ -2882,6 +2882,11 @@ Zaimportować do biblioteki?</translation>
       <translation>Dialogi telewizyjne</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Czas wybrzmiewania efektów musi wynosić od 0 do 30 sekund</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Turkusowy: korekcja. Pomarańczowy: zmierzona odpowiedź, jeśli dostarczono. Skala pionowa pokazuje względne wartości w dB.</translation>
     </message>

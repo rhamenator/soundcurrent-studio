@@ -2882,6 +2882,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Lời thoại TV</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Thời lượng phần âm đuôi của hiệu ứng phải từ 0 đến 30 giây</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Xanh ngọc: EQ hiệu chỉnh. Cam: đáp tuyến đo được, nếu có. Thang dọc là dB tương đối.</translation>
     </message>

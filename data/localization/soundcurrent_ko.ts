@@ -2882,6 +2882,11 @@ Import into your library?</source>
       <translation>TV 대사</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>효과의 잔향 길이는 0초에서 30초 사이여야 합니다</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>청록색: 보정 EQ. 주황색: 제공된 측정 응답. 세로축은 상대 dB입니다.</translation>
     </message>

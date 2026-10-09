@@ -2882,6 +2882,11 @@ Importera till ditt bibliotek?</translation>
       <translation>TV-dialog</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Effekternas utklingningstid måste vara mellan 0 och 30 sekunder</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Turkos: korrigerings-EQ. Orange: uppmätt frekvensgång, när den finns. Den vertikala skalan visar relativa dB.</translation>
     </message>

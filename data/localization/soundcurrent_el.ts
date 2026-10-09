@@ -2882,6 +2882,11 @@ Import into your library?</source>
       <translation>Τηλεοπτικοί διάλογοι</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Η διάρκεια της ουράς των εφέ πρέπει να είναι μεταξύ 0 και 30 δευτερολέπτων</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Τιρκουάζ: EQ διόρθωσης. Πορτοκαλί: μετρημένη απόκριση, όταν παρέχεται. Η κατακόρυφη κλίμακα είναι σε σχετικά dB.</translation>
     </message>

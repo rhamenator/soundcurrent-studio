@@ -44,5 +44,6 @@
   "Invalid channel gain or too many EQ bands",
   "Invalid enhancement settings",
   "Post gain must be finite and within -84 to +24 dB",
-  "Reverb settings are outside the supported range"
+  "Reverb settings are outside the supported range",
+  "Tail must be between 0 and 30 seconds"
 ]

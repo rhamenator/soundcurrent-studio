@@ -294,3 +294,7 @@ The CLI now localizes incorrect colon-separated field counts and invalid one-bas
 ### Shared engine diagnostics in the standalone renderer
 
 The standalone renderer now embeds the existing desktop translations for all nine literal engine configuration rejections. Seven actual invalid-setting workflows per language exercise post gain, delay, reverb, channel gain and EQ frequency after loading a valid PCM16 WAV. The compiled CLI test passes in all 34 catalogs plus normalized/fallback tags. A source guard requires future literal engine rejections to be declared for CLI translation. Allocation failures and unavailable internal states have catalog checks only, not runtime fault injection. CLI help and remaining CLI-specific messages are still incomplete.
+
+### Render-tail range diagnostic
+
+The CLI tail-limit message now has contextually reviewed translations in all 34 catalogs. Tail means extra render time after the source ends, allowing effects to decay. Actual tests reject −1 and 31 seconds with localized errors; 0 and 30 seconds export successfully and differ by exactly 30 seconds of mono float32 frame data. Native review remains unverified. The standalone help and other untranslated diagnostics remain open.

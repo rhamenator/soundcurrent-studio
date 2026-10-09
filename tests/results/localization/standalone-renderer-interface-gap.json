@@ -1,6 +1,6 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Declared WAVE diagnostics, four CLI parser diagnostics and all nine literal engine configuration rejections translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
+  "status": "Declared WAVE diagnostics, five CLI validation diagnostics and all nine literal engine configuration rejections translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
   "sourceSha256": "193bad9a9d49949d0b11c4c3926cd759ce4146e18f9ce1d593080cbd8e0b56d7",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
@@ -20,7 +20,7 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 783,
+  "catalogMessages": 784,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -36,5 +36,12 @@
     "scope": "Actual valid PCM16 WAV input followed by rejected post gain, delay duration/feedback, reverb decay/damping, channel gain and EQ frequency. Allocation failure, state budget, invalid enhancement state and channel-vector mismatch are declaration/catalog checks only; not runtime fault injection.",
     "result": "cli-localization CTest passed",
     "nativeReviewed": false
+  },
+  "tailVerification": {
+    "context": "Seconds appended after source audio to capture effect decay; inclusive range 0–30.",
+    "translations": "34 compiled catalogs; contextual AI review, native unverified",
+    "rejected": "-1 and 31 seconds tested in all 34 catalogs and fallback cases with exact localized stderr and no output",
+    "accepted": "0 and 30 seconds exported successfully; file size difference exactly 30 × 48000 × 4 bytes for mono float32 output",
+    "result": "cli-localization CTest passed"
   }
 }

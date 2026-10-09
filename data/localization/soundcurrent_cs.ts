@@ -2882,6 +2882,11 @@ Importovat do vaší knihovny?</translation>
       <translation>Televizní dialogy</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Doba doznívání efektů musí být mezi 0 a 30 sekundami</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Tyrkysová: korekční EQ. Oranžová: naměřená odezva, pokud je dodána. Svislá stupnice zobrazuje relativní hodnoty v dB.</translation>
     </message>

@@ -2882,6 +2882,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>TV diyalogları</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>Efektlerin sönüm süresi 0 ile 30 saniye arasında olmalıdır</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Turkuaz: düzeltme EQ'su. Turuncu: sağlanmışsa ölçülmüş yanıt. Dikey ölçek göreli dB'dir.</translation>
     </message>

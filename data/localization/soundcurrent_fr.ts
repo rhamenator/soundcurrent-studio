@@ -2882,6 +2882,11 @@ Importer dans votre bibliothèque ?</translation>
       <translation>Dialogues TV</translation>
     </message>
     <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>La durée de la fin des effets doit être comprise entre 0 et 30 secondes</translation>
+    </message>
+    <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
       <translation>Turquoise : correction d’égalisation. Orange : réponse mesurée, si fournie. L’échelle verticale est relative, en dB.</translation>
     </message>
