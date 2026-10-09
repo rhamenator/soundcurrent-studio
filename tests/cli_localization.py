@@ -58,6 +58,15 @@ with tempfile.TemporaryDirectory() as directory:
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
             assert not output.exists()
         assert not output.exists()
+        sentinel = b'Existing user output must remain unchanged.'
+        output.write_bytes(sentinel)
+        existing = subprocess.run([renderer, '--language', tag, '--input', str(input_wave),
+                                   '--output', str(output)], capture_output=True, timeout=10)
+        expected_error = messages['Render: %1'].replace('%1', messages['Output already exists; select a new filename'])
+        assert existing.returncode == 1
+        assert existing.stderr.decode('utf-8').strip() == expected_error, (tag, existing.stderr)
+        assert output.read_bytes() == sentinel
+        output.unlink()
         assert not list(folder.glob('.soundcurrent-render-*'))
     # Inclusive endpoints stay valid; the appended duration changes only frame data.
     sizes = []

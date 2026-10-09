@@ -28,6 +28,10 @@ inline std::string text(std::string_view source) {
     return std::string(source);
 }
 inline std::string renderError(std::string_view diagnostic) {
+    // Display alias for the same no-overwrite condition as the desktop.
+    // The underlying exception and filesystem behavior remain invariant.
+    if (diagnostic == "Output already exists; choose a new filename")
+        diagnostic = "Output already exists; select a new filename";
     auto result = text("Render: %1");
     const auto position = result.find("%1");
     if (position != std::string::npos) result.replace(position, 2, text(diagnostic));

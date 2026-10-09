@@ -43,5 +43,11 @@
     "rejected": "-1 and 31 seconds tested in all 34 catalogs and fallback cases with exact localized stderr and no output",
     "accepted": "0 and 30 seconds exported successfully; file size difference exactly 30 × 48000 × 4 bytes for mono float32 output",
     "result": "cli-localization CTest passed"
+  },
+  "outputProtectionVerification": {
+    "mapping": "Invariant CLI exception Output already exists; choose a new filename uses existing desktop translation Output already exists; select a new filename at the display boundary.",
+    "actualRuntime": "All 34 languages plus fallback tags reject an existing output with exact localized stderr, exit 1, unchanged sentinel bytes and no staging directory left behind.",
+    "stagingDirectoryError": "Existing desktop translation embedded; actual directory-creation collision exhaustion not fault-injected.",
+    "result": "cli-localization CTest passed"
   }
 }

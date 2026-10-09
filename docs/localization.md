@@ -298,3 +298,7 @@ The standalone renderer now embeds the existing desktop translations for all nin
 ### Render-tail range diagnostic
 
 The CLI tail-limit message now has contextually reviewed translations in all 34 catalogs. Tail means extra render time after the source ends, allowing effects to decay. Actual tests reject −1 and 31 seconds with localized errors; 0 and 30 seconds export successfully and differ by exactly 30 seconds of mono float32 frame data. Native review remains unverified. The standalone help and other untranslated diagnostics remain open.
+
+### Existing-output protection in the standalone renderer
+
+The CLI reuses the desktop translation for an already-existing output file through a display-boundary alias. Its underlying exception and no-overwrite behavior stay unchanged. Actual compiled tests across all 34 catalogs and fallback tags verify translated errors, unchanged existing file bytes and no leftover staging directory. The staging-directory creation error also embeds its existing desktop translation; collision exhaustion is not runtime qualified. CLI help and other diagnostics remain open.
