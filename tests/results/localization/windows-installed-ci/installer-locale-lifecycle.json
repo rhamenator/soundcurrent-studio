@@ -1,0 +1,67 @@
+{
+  "nativeSpeakerVerified": false,
+  "installerSha256": "84AB3828FF6856C7726E3E8C83FD9FAC1A0C8DF13B567460B8F7A5098CA81FB6",
+  "steps": [
+    {
+      "preservation": "passed",
+      "locale": "fr",
+      "languageId": 1036,
+      "installerSha256": "84AB3828FF6856C7726E3E8C83FD9FAC1A0C8DF13B567460B8F7A5098CA81FB6",
+      "shortcuts": "passed"
+    },
+    {
+      "preservation": "passed",
+      "locale": "nn",
+      "languageId": 2068,
+      "installerSha256": "84AB3828FF6856C7726E3E8C83FD9FAC1A0C8DF13B567460B8F7A5098CA81FB6",
+      "shortcuts": "passed"
+    },
+    {
+      "preservation": "passed",
+      "locale": "ar",
+      "languageId": 1025,
+      "installerSha256": "84AB3828FF6856C7726E3E8C83FD9FAC1A0C8DF13B567460B8F7A5098CA81FB6",
+      "shortcuts": "passed"
+    }
+  ],
+  "installedExecutableSha256": "6B37B75B33F43946C239C66FAED4818D25203822DBA36B855019AD00DDAF6A1A",
+  "uninstall": "passed",
+  "scope": "Silent cable app lifecycle on a disposable Windows VM; installed UI catalog fixtures optional, chooser rendering and native-driver lifecycle excluded",
+  "installedUiLocales": [
+    "en",
+    "de",
+    "fr",
+    "es",
+    "it",
+    "pt-PT",
+    "pt-BR",
+    "nl",
+    "pl",
+    "cs",
+    "sk",
+    "uk",
+    "ru",
+    "el",
+    "tr",
+    "sv",
+    "da",
+    "nb",
+    "fi",
+    "ro",
+    "hu",
+    "ar",
+    "he",
+    "fa",
+    "zh-Hans",
+    "zh-Hant",
+    "ja",
+    "ko",
+    "hi",
+    "id",
+    "vi",
+    "th",
+    "sw",
+    "nn"
+  ],
+  "product": "Studio"
+}
