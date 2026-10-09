@@ -370,6 +370,11 @@ Import into your library?</source>
       <translation>تنظیم خودکار صدای میکروفون متصل؛ برای دور زدن اکولایزر میکروفون کلیک کنید</translation>
     </message>
     <message>
+      <source>Back</source>
+      <translation>عقب</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Balance</source>
       <extracomment>Left/right audio channel balance. Not bank balance or physical equilibrium.</extracomment>
       <translation>توازن</translation>
@@ -853,6 +858,11 @@ Import into your library?</source>
       <translation>شمارش نقاط پایانی صدا</translation>
     </message>
     <message>
+      <source>Create new folder</source>
+      <translation>ایجاد پوشهٔ جدید</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>ایجاد پروفایل</translation>
     </message>
@@ -918,6 +928,11 @@ Import into your library?</source>
       <source>Delete</source>
       <translation>حذف</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
+      <source>Detail view</source>
+      <translation>نمایش با جزئیات</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Discard</source>
@@ -1185,6 +1200,16 @@ Import into your library?</source>
       <translation>بازخورد</translation>
     </message>
     <message>
+      <source>File name:</source>
+      <translation>نام پرونده:</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Files of type:</source>
+      <translation>پرونده‌هایی از نوع:</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Filter Q</source>
       <translation>ضریب کیفیت فیلتر Q</translation>
       <extracomment>Dimensionless quality factor controlling filter sharpness: higher Q produces a narrower peak. Not a bandwidth in Hz. Stable processing parameter remains q.</extracomment>
@@ -1210,6 +1235,11 @@ Import into your library?</source>
       <source>Floorstanding speaker</source>
       <translation>بلندگوی ایستاده روی زمین</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Forward</source>
+      <translation>جلوتر</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Frequency</source>
@@ -1653,6 +1683,11 @@ Import into your library?</source>
       <translation>دریافت فهرست نقاط پایانی صدا</translation>
     </message>
     <message>
+      <source>List view</source>
+      <translation>نمایش لیستی</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Listening preset</source>
       <extracomment>Saved equalizer settings for playback. Not a listening device.</extracomment>
       <translation>پیش‌تنظیم شنیدن</translation>
@@ -1677,6 +1712,11 @@ Import into your library?</source>
     <message>
       <source>Lock equalizer settings</source>
       <translation>قفل تنظیمات اکولایزر</translation>
+    </message>
+    <message>
+      <source>Look in:</source>
+      <translation>جستجو در:</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Loudness</source>
@@ -2094,6 +2134,11 @@ Import into your library?</source>
       <source>Panel speaker</source>
       <translation>بلندگوی پنلی</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
+    </message>
+    <message>
+      <source>Parent directory</source>
+      <translation>پوشهٔ بالاتر</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Paste</source>

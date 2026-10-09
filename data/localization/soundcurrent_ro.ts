@@ -370,6 +370,11 @@ Importați în bibliotecă?</translation>
       <translation>Modelați automat sunetul unui microfon conectat; clic pentru a ocoli EQ-ul microfonului</translation>
     </message>
     <message>
+      <source>Back</source>
+      <translation>Înapoi</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Balance</source>
       <extracomment>Left/right audio channel balance. Not bank balance or physical equilibrium.</extracomment>
       <translation>Balans</translation>
@@ -853,6 +858,11 @@ Importați în bibliotecă?</translation>
       <translation>Numărarea punctelor finale audio</translation>
     </message>
     <message>
+      <source>Create new folder</source>
+      <translation>Creează un dosar nou</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Create profile</source>
       <translation>Creați profil</translation>
     </message>
@@ -918,6 +928,11 @@ Importați în bibliotecă?</translation>
       <source>Delete</source>
       <translation>Șterge</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
+      <source>Detail view</source>
+      <translation>Vizualizare detaliată</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Discard</source>
@@ -1185,6 +1200,16 @@ Importați în bibliotecă?</translation>
       <translation>Reacție</translation>
     </message>
     <message>
+      <source>File name:</source>
+      <translation>Nume fișier:</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Files of type:</source>
+      <translation>Tip de fișiere:</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Filter Q</source>
       <translation>Factor de calitate Q al filtrului</translation>
       <extracomment>Dimensionless quality factor controlling filter sharpness: higher Q produces a narrower peak. Not a bandwidth in Hz. Stable processing parameter remains q.</extracomment>
@@ -1210,6 +1235,11 @@ Importați în bibliotecă?</translation>
       <source>Floorstanding speaker</source>
       <translation>Boxă de podea</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Forward</source>
+      <translation>Înainte</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Frequency</source>
@@ -1653,6 +1683,11 @@ Importați în bibliotecă?</translation>
       <translation>Obținerea listei de puncte finale audio</translation>
     </message>
     <message>
+      <source>List view</source>
+      <translation>Vizualizare listă</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Listening preset</source>
       <extracomment>Saved equalizer settings for playback. Not a listening device.</extracomment>
       <translation>Presetare de ascultare</translation>
@@ -1677,6 +1712,11 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Blocați setările egalizatorului</translation>
+    </message>
+    <message>
+      <source>Look in:</source>
+      <translation>Caută în:</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Loudness</source>
@@ -2094,6 +2134,11 @@ Importați în bibliotecă?</translation>
       <source>Panel speaker</source>
       <translation>Boxă tip panou</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
+    </message>
+    <message>
+      <source>Parent directory</source>
+      <translation>Director părinte</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Paste</source>
