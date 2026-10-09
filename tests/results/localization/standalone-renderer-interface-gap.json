@@ -102,5 +102,13 @@
     "terminology": "Bokmål/Nynorsk/Swahili heading uses file-based wording to avoid implying Internet disconnection.",
     "remaining": "All option descriptions and PCM/float WAVE format footer require translation.",
     "result": "cli-localization and cli-error-text CTests passed"
+  },
+  "windowsSummaryTestCorrection": {
+    "run": 37883322299,
+    "head": "827005301bb5ee303156aac57f58e34189ef6048",
+    "observed": "Windows summary content and numbers matched the expected English text, but literal LF comparison rejected normal CRLF output. Other seven engine CTests passed.",
+    "correction": "Compare exact decoded output lines with splitlines, retaining all text/value checks and cross-locale WAV hashes.",
+    "localRegression": "Both compiled CLI tests passed after correction.",
+    "nativeWindowsRetest": "pending new CI; not qualified by the failed run."
   }
 }

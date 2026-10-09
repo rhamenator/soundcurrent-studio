@@ -92,7 +92,7 @@ with tempfile.TemporaryDirectory() as directory:
                          messages['Rendered %1 -> %2 channels, %3 frames at %4 Hz.'])
         statistics = re.sub(r'%([1-3])', lambda m: ('7.92447', '128', '0')[int(m[1])-1],
                             messages['Peak before clipping: %1; clipped samples: %2; invalid samples: %3'])
-        assert clipped.stdout.decode('utf-8').strip() == summary + '\n' + statistics, (tag, clipped.stdout)
+        assert clipped.stdout.decode('utf-8').splitlines() == [summary, statistics], (tag, clipped.stdout)
         digest = hashlib.sha256(output.read_bytes()).hexdigest()
         if processing_digest is None:
             processing_digest = digest
@@ -109,7 +109,7 @@ with tempfile.TemporaryDirectory() as directory:
                              messages['Rendered %1 -> %2 channels, %3 frames at %4 Hz.'])
             statistics = re.sub(r'%([1-3])', lambda m: '0',
                                 messages['Peak before clipping: %1; clipped samples: %2; invalid samples: %3'])
-            assert accepted.stdout.decode('utf-8').strip() == summary + '\n' + statistics, (tag, accepted.stdout)
+            assert accepted.stdout.decode('utf-8').splitlines() == [summary, statistics], (tag, accepted.stdout)
 
             assert output.exists()
             output.unlink()
