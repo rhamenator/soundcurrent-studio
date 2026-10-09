@@ -1950,6 +1950,16 @@ Importovať do vašej knižnice?</translation>
       <translation>Tichý logaritmický priebeh frekvencie</translation>
     </message>
     <message>
+      <source>Quit %1 before uninstalling it.</source>
+      <translation>Pred odinštalovaním ukončite %1.</translation>
+      <extracomment>Running application blocks uninstall. %1 is stable product name. Quit means fully exit process, not close/hide window. AI contextual review; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Quit %1 before updating. Closing the window keeps it running. No uninstall is needed.</source>
+      <translation>Pred aktualizáciou ukončite %1. Zatvorenie okna ponechá aplikáciu spustenú. Odinštalovanie nie je potrebné.</translation>
+      <extracomment>Running application blocks update. %1 is stable SoundCurrent product name. Quit fully exits process; closing UI leaves it running. In-place updates do not require prior uninstall. AI contextual review; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Quit SoundCurrent Studio</source>
       <translation>Ukončiť SoundCurrent Studio</translation>
     </message>

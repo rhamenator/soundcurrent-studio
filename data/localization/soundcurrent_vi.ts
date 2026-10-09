@@ -1950,6 +1950,16 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Quét logarit âm lượng nhỏ</translation>
     </message>
     <message>
+      <source>Quit %1 before uninstalling it.</source>
+      <translation>Thoát %1 trước khi gỡ cài đặt.</translation>
+      <extracomment>Running application blocks uninstall. %1 is stable product name. Quit means fully exit process, not close/hide window. AI contextual review; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Quit %1 before updating. Closing the window keeps it running. No uninstall is needed.</source>
+      <translation>Thoát %1 trước khi cập nhật. Đóng cửa sổ vẫn để ứng dụng chạy. Không cần gỡ cài đặt.</translation>
+      <extracomment>Running application blocks update. %1 is stable SoundCurrent product name. Quit fully exits process; closing UI leaves it running. In-place updates do not require prior uninstall. AI contextual review; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Quit SoundCurrent Studio</source>
       <translation>Thoát SoundCurrent Studio</translation>
     </message>
