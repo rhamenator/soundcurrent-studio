@@ -116,7 +116,9 @@
     },
     {
       "source": "Missing or incomplete WAVE audio",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Missing, duplicate or oversized WAVE format",
@@ -124,7 +126,9 @@
     },
     {
       "source": "Multiple WAVE data chunks are unsupported",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Only PCM16/24/32 or float32 WAVE is supported",
@@ -179,14 +183,14 @@
       "nativeReviewed": false
     }
   ],
-  "status": "Twenty-four owned diagnostics translated and mapped; 8 other owned WAVE diagnostics remain untranslated",
+  "status": "Twenty-six owned diagnostics translated and mapped; 6 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 771-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 773-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -240,6 +244,10 @@
   ],
   "shortExtensibleChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 771 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "dataChunkChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 773 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

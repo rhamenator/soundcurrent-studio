@@ -25,6 +25,8 @@ class Fixture : public QTranslator {
   if(QByteArray(source)=="WAVE output exceeds its declared length")return "WAVE_LENGTH";
   if(QByteArray(source)=="Input is too short for RIFF/WAVE")return "WAVE_SHORT";
   if(QByteArray(source)=="Truncated extensible WAVE format")return "WAVE_EXTENSIBLE";
+  if(QByteArray(source)=="Missing or incomplete WAVE audio")return "WAVE_DATA";
+  if(QByteArray(source)=="Multiple WAVE data chunks are unsupported")return "WAVE_MULTI_DATA";
   if(QByteArray(source)=="Could not flush WAVE output")return "WAVE_FLUSH";
   if(QByteArray(source)=="Could not close WAVE output")return "WAVE_CLOSE";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
@@ -42,6 +44,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Missing or incomplete WAVE audio")=="WAVE_DATA");
+ require(audioErrorText("Multiple WAVE data chunks are unsupported")=="WAVE_MULTI_DATA");
  require(audioErrorText("Input is too short for RIFF/WAVE")=="WAVE_SHORT");
  require(audioErrorText("Truncated extensible WAVE format")=="WAVE_EXTENSIBLE");
  require(audioErrorText("Output exceeds the RIFF/WAVE 4 GiB limit")=="RIFF_LIMIT");

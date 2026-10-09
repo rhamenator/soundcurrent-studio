@@ -1704,6 +1704,11 @@ Importar para a sua biblioteca?</translation>
       <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Missing or incomplete WAVE audio</source>
+      <translation>Dados de áudio WAVE em falta ou incompletos</translation>
+      <extracomment>Owned WaveReader validation: format/data chunk is missing or data length is not a whole number of frames. Not missing microphone, silent samples or absent speaker sound. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Model</source>
       <translation>Modelo</translation>
     </message>
@@ -1719,6 +1724,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Movies</source>
       <translation>Filmes</translation>
+    </message>
+    <message>
+      <source>Multiple WAVE data chunks are unsupported</source>
+      <translation>Não são suportados vários blocos de dados WAVE</translation>
+      <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mute</source>
