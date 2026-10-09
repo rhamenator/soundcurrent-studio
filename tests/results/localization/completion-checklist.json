@@ -26,12 +26,12 @@
       "tests/results/localization/measurement-test-utf8-fix.json"
     ],
     "linuxLifecycle": [
-      "tests/results/localization/linux-complete-installer-0/verified-artifact.json",
-      "tests/results/localization/linux-complete-installer-1/verified-artifact.json",
-      "tests/results/localization/linux-complete-installer-2/verified-artifact.json"
+      "tests/results/localization/linux-fallback-qualified-0/verified-artifact.json",
+      "tests/results/localization/linux-fallback-qualified-1/verified-artifact.json",
+      "tests/results/localization/linux-fallback-qualified-2/verified-artifact.json"
     ],
     "windowsLifecycle": [
-      "tests/results/localization/windows-startup-installed/verified-artifact.json"
+      "tests/results/localization/windows-measured-qualified/verified-artifact.json"
     ],
     "previewDelivery": [
       "tests/results/localization/preview-bundle-verification.json"
@@ -46,31 +46,24 @@
     "tests/results/localization/header-list-display-guard.json": "59de5321940447a4a3156780172610981f35fc7d453b622e205c1217eb86dca1",
     "tests/results/localization/interface-surface-inventory.json": "d085c780b4da0a77214e0202ccc6215e1384f912cf5fa97c1bceabcb40aad582",
     "tests/results/localization/linux-complete-installer-0/ctest.log": "a8272b3dfe3644174f77054cf5ab6242c47a703fd3c19e1f6c714cc535f7f95e",
-    "tests/results/localization/linux-complete-installer-0/verified-artifact.json": "f401f7f8390a17316357fef65756141ac534605f8465a38f24308fc21557bc1c",
-    "tests/results/localization/linux-complete-installer-1/verified-artifact.json": "ad680f30097f51d17872effae3374de461ab34839818e5333e43c96ab59e3989",
-    "tests/results/localization/linux-complete-installer-2/verified-artifact.json": "1aa0e8555f067ad72cacc4aaffaa5b766840e03c3ea701ab5a12d251849a565b",
+    "tests/results/localization/linux-fallback-qualified-0/verified-artifact.json": "280e21324940e2613383a2c9b72a4a0eccf49af118be6dfc7afed815b2d8edb4",
+    "tests/results/localization/linux-fallback-qualified-1/verified-artifact.json": "9e602b0b71ec5ebf4589bb4b795bb33670961898fd3e630fd29d6e7f5840425c",
+    "tests/results/localization/linux-fallback-qualified-2/verified-artifact.json": "d4c433bac16b5f4a683d4623549162557fd63573672c036794c58d1da7d38d8e",
     "tests/results/localization/main-equipment-display-gap.json": "b1ae9af41995f519e51388363c148d07ed4b764b8dec631f83618e892ff48d6d",
     "tests/results/localization/measured-profile-runtime.log": "be044186af4b6761935aaa954a25a3c88d28921edd76810b52529ec88a7f651e",
     "tests/results/localization/measurement-test-utf8-fix.json": "4a75f1fd8462dec7c87fbaa599ec8557650c4490969e8c36a21f785004ae852e",
-    "tests/results/localization/preview-bundle-verification.json": "285908348d9cccf373f662f1b86dda7ddcb541b6b809dd770f91863f387b8a8d",
+    "tests/results/localization/preview-bundle-verification.json": "546824fc8efae25b427cd72863624a9bebc1cec0ba045d5fe53a62967f9df0ee",
     "tests/results/localization/rtl-regional-numbers.json": "17b7144a8b04fe80f91b1947d15ad44fc20fe9ad9b54887847c3b938040943b9",
     "tests/results/localization/studio-display-helper-guard.json": "152d5d4425df6434f26516eb48a3fff3467131bc9280159960e4fbb286711a2f",
     "tests/results/localization/windows-backend-diagnostic-guard.json": "77084a474d8f34db2c948f7772a4b4731e19b20e8b505a29df8237457429cb8b",
+    "tests/results/localization/windows-measured-qualified/verified-artifact.json": "70f61ad108323edf06458b9dc27919e89ef43ec76a7ae3ee55cc026e11616a47",
     "tests/results/localization/windows-startup-installed/verified-artifact.json": "6ad780b65b503c7cd57ab4d5e3ff4cd35ee7ca179da3cbdc00e288ca69cd8b15"
   },
   "nativeSpeakerVerification": "unverified; no certification claimed",
   "openChecks": [
     {
-      "requirement": "Current installed package qualification",
-      "status": "Await Linux and Windows artifact results for calibration-profile changes; verify hashes, installed locales and lifecycle scopes."
-    },
-    {
-      "requirement": "Current deliverables",
-      "status": "Replace superseded preview binaries/source archive after current qualification; validate manifests and installer dry runs."
-    },
-    {
       "requirement": "Final requirement reconciliation",
-      "status": "Inspect final current evidence and PR synchronization before claiming completion."
+      "status": "Current packages and preview verified; reconcile scoped evidence and refresh final source archive before completion."
     }
   ],
   "separateUnexercisedScopes": [
@@ -88,6 +81,6 @@
     "tests/results/localization/easy-installer-rpm-2/verified-path.json"
   ],
   "interfaceSurfaceInventory": "tests/results/localization/interface-surface-inventory.json",
-  "priorLifecycleEvidenceStatus": "Retained Linux/Windows lifecycle reports describe earlier qualified heads; current production changed and awaits fresh qualification.",
+  "priorLifecycleEvidenceStatus": "Current fallback-qualified Linux and measurement-qualified Windows reports supersede earlier package results for Studio production code.",
   "sourceCorrespondence": "Finite surface source review complete; source hashes match present files. Runtime and linguistic evidence separate."
 }

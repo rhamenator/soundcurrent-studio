@@ -47,21 +47,20 @@
     },
     {
       "requirement": "Changed Linux packages and installed language interfaces",
-      "status": "Measurement-profile Linux packages qualified for their recorded head, now superseded by PipeWire fallback mapping fix; fresh qualification required.",
-      "run": 37918553328,
+      "status": "Current Linux packages verified on all3 distributions; hashes, CTest,33 installed locales, launcher files and lifecycle passed.",
+      "run": 37919445332,
       "evidence": [
-        "tests/results/localization/linux-current-qualified-0/verified-artifact.json",
-        "tests/results/localization/linux-current-qualified-1/verified-artifact.json",
-        "tests/results/localization/linux-current-qualified-2/verified-artifact.json"
+        "tests/results/localization/linux-fallback-qualified-0/verified-artifact.json",
+        "tests/results/localization/linux-fallback-qualified-1/verified-artifact.json",
+        "tests/results/localization/linux-fallback-qualified-2/verified-artifact.json"
       ]
     },
     {
       "requirement": "Changed Windows packages and installed language interfaces",
-      "status": "Earlier Windows run remains historical; fresh qualification required for PipeWire fallback fix.",
-      "run": 37918763962,
+      "status": "Current Windows installer verified; staged/installed hashes,34 locale completions and fr/nn/ar lifecycle passed.",
+      "run": 37919447515,
       "evidence": [
-        "tests/results/localization/measurement-test-utf8-fix.json",
-        "tests/results/localization/windows-current-qualified/verified-artifact.json"
+        "tests/results/localization/windows-measured-qualified/verified-artifact.json"
       ]
     },
     {
@@ -73,7 +72,7 @@
     },
     {
       "requirement": "Reviewable packages and synchronized commits",
-      "status": "Local previews explicitly superseded; refresh after fresh qualified artifacts.",
+      "status": "Current unpublished Studio preview refreshed; manifest and34 installer dry runs passed. Final requirement reconciliation pending.",
       "evidence": [
         "tests/results/localization/preview-bundle-verification.json"
       ]
@@ -106,16 +105,15 @@
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
     "tests/results/localization/dynamic-provenance-review.json": "71d0c8028e9e60ba3f96e62f1be714ab3673fc65c76350a2aca874f1e7f6267c",
     "tests/results/localization/interface-surface-inventory.json": "d085c780b4da0a77214e0202ccc6215e1384f912cf5fa97c1bceabcb40aad582",
-    "tests/results/localization/linux-current-qualified-0/verified-artifact.json": "a93db2faad1a46938e6d8e13e813baf48e4dcb39b2aeafdf07ca58418e5e635d",
-    "tests/results/localization/linux-current-qualified-1/verified-artifact.json": "46dfc83951e4192bb2875120b9c0737132c83c5d1103b510012e1ff52a0f1db0",
-    "tests/results/localization/linux-current-qualified-2/verified-artifact.json": "ecdd84669d6c99b9ddf65044c9bbdbdc4dbf28fcc6c4daf3461597376de2100c",
+    "tests/results/localization/linux-fallback-qualified-0/verified-artifact.json": "280e21324940e2613383a2c9b72a4a0eccf49af118be6dfc7afed815b2d8edb4",
+    "tests/results/localization/linux-fallback-qualified-1/verified-artifact.json": "9e602b0b71ec5ebf4589bb4b795bb33670961898fd3e630fd29d6e7f5840425c",
+    "tests/results/localization/linux-fallback-qualified-2/verified-artifact.json": "d4c433bac16b5f4a683d4623549162557fd63573672c036794c58d1da7d38d8e",
     "tests/results/localization/main-equipment-display-gap.json": "b1ae9af41995f519e51388363c148d07ed4b764b8dec631f83618e892ff48d6d",
     "tests/results/localization/measured-profile-runtime.log": "be044186af4b6761935aaa954a25a3c88d28921edd76810b52529ec88a7f651e",
-    "tests/results/localization/measurement-test-utf8-fix.json": "4a75f1fd8462dec7c87fbaa599ec8557650c4490969e8c36a21f785004ae852e",
-    "tests/results/localization/preview-bundle-verification.json": "285908348d9cccf373f662f1b86dda7ddcb541b6b809dd770f91863f387b8a8d",
+    "tests/results/localization/preview-bundle-verification.json": "546824fc8efae25b427cd72863624a9bebc1cec0ba045d5fe53a62967f9df0ee",
     "tests/results/localization/rtl-regional-numbers.json": "17b7144a8b04fe80f91b1947d15ad44fc20fe9ad9b54887847c3b938040943b9",
     "tests/results/localization/standard-editing-menus.json": "c6220464c9a2bdb77b4b54562483afa4d4c6b3c660c6ecac2c358f1ec2171757",
-    "tests/results/localization/windows-current-qualified/verified-artifact.json": "39c2e073913d3059fa055c04745b8c67a4cca47fac6b633904f0614d492fb8ee",
+    "tests/results/localization/windows-measured-qualified/verified-artifact.json": "70f61ad108323edf06458b9dc27919e89ef43ec76a7ae3ee55cc026e11616a47",
     "tests/translation_catalogs.py": "a1a3f27d90d806cb98d1fd92b411aad2f9a79da9f94f5eba0e55294e1fbaa983"
   },
   "historicalCheckpoint": "Prior detailed checkpoint revisions remain in Git history; current statuses above supersede earlier current-source claims."
