@@ -38,13 +38,13 @@
     ]
   },
   "evidenceSha256": {
-    "data/localization/catalogs.json": "39cf0c0e68187160797dbdbb4d5d8d944f93fca061bccde1303496efafc362d2",
-    "data/localization/translation-context.json": "26109a5c0ae16aebed9de5041f80813253572c4c95b6ac5960ef26d2af44b86a",
-    "docs/translation-review.md": "d7e14379dc7ea0e6010a65c40129ffc4e78c905d4ac164eb8bda387384569da5",
+    "data/localization/catalogs.json": "f836723fc1bf516486fcd6713f7468371c79ead2be4e2d3b9d9c511292793907",
+    "data/localization/translation-context.json": "b1c403cdb38b8fa9c75d9932892b8935599f5a6892df21cb7f4ad6d1a317d171",
+    "docs/translation-review.md": "440ab9063ac9e26ecaebcf23ab5cf5e72e7692e408358297a31b03623b448885",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
     "tests/results/localization/dynamic-provenance-review.json": "71d0c8028e9e60ba3f96e62f1be714ab3673fc65c76350a2aca874f1e7f6267c",
     "tests/results/localization/header-list-display-guard.json": "59de5321940447a4a3156780172610981f35fc7d453b622e205c1217eb86dca1",
-    "tests/results/localization/interface-surface-inventory.json": "45a25cc709b1dd2ff6b2517fbf136729a7c31f575d11f3ea9dae734f06b6ba6e",
+    "tests/results/localization/interface-surface-inventory.json": "d085c780b4da0a77214e0202ccc6215e1384f912cf5fa97c1bceabcb40aad582",
     "tests/results/localization/linux-complete-installer-0/ctest.log": "a8272b3dfe3644174f77054cf5ab6242c47a703fd3c19e1f6c714cc535f7f95e",
     "tests/results/localization/linux-complete-installer-0/verified-artifact.json": "f401f7f8390a17316357fef65756141ac534605f8465a38f24308fc21557bc1c",
     "tests/results/localization/linux-complete-installer-1/verified-artifact.json": "ad680f30097f51d17872effae3374de461ab34839818e5333e43c96ab59e3989",

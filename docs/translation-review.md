@@ -2,7 +2,7 @@
 
 ## Current catalog status — 2026-10-09
 
-All 889 declared source messages have populated translations in all 33 non-English catalogs, including Nynorsk. There are 34 catalogs including English. Catalog coverage, finite source correspondence, contextual AI review, native-speaker verification and runtime qualification remain separate evidence categories. Native-speaker verification remains unverified for every non-English locale.
+All 890 declared source messages have populated translations in all 33 non-English catalogs, including Nynorsk. There are 34 catalogs including English. Catalog coverage, finite source correspondence, contextual AI review, native-speaker verification and runtime qualification remain separate evidence categories. Native-speaker verification remains unverified for every non-English locale.
 
 The finite owned-interface surface review is recorded in `tests/results/localization/interface-surface-inventory.json`. It includes dynamic captions, Qt fallback dialogs, menus, accessibility names, platform diagnostics and selected-locale formatting. Its main-window review found and fixed untranslated equipment-summary kind captions and newly created calibration-profile metadata. Compiled French, Arabic and Nynorsk fixtures passed creation, opaque device-name and serialization/reopening checks. Loaded equipment metadata remains unchanged.
 
