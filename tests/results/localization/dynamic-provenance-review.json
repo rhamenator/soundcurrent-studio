@@ -54,7 +54,7 @@
     "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
     "src/localized_file_dialog.h": "db8e7403e18efca39f41bcb02238c94297e09cc9b9a1f9870f12276bdc58a7ff",
     "src/update_panel.h": "c39b2e267dd634bd49ca63122401cf5c5c2e6cc2735d4f8396eb66a1a52264a3",
-    "src/main.cpp": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
+    "src/main.cpp": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
     "src/processing_guard.cpp": "7357547a751b724be0c1743d94f8318a9f86b5f6b2180911799dc660bd5e74b2",
     "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
     "src/studio_panel.cpp": "d0c619840a9d81fef66fea0e0a93d990f19b1e91b2cc0265d47a324a7fb08858",
@@ -78,7 +78,7 @@
       "Installed version is stable version metadata in translated template"
     ],
     "sourceSha256": {
-      "src/main.cpp": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
+      "src/main.cpp": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
       "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
       "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
       "src/update_panel.h": "c39b2e267dd634bd49ca63122401cf5c5c2e6cc2735d4f8396eb66a1a52264a3"
@@ -140,5 +140,23 @@
     },
     "nativeReviewed": false,
     "wholeInterfaceCoverageProven": false
+  },
+  "sourceReconciliation": {
+    "base": "1f9205d",
+    "priorMainSha256": "3871323d3b5dff84fc45fa7174c7bd044da2216d4392cd3caf975cf974cd5e53",
+    "currentMainSha256": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
+    "inspectedDiff": "Four production qCritical startup diagnostics converted to SC_TR UTF-8 display boundaries; no other main.cpp changes.",
+    "evidence": "tests/results/localization/startup-diagnostic-gap.json"
+  },
+  "startupPanelReview": {
+    "files": [
+      "src/startup_controls.h",
+      "src/startup_registration.h"
+    ],
+    "result": "Group title, toggle, behavior guidance and failure dialog all use SC_TR; registration content is product identity, command switches, filesystem/registry keys. No additional owned untranslated caption found.",
+    "sourceSha256": {
+      "src/startup_controls.h": "94cccaea96412bd21f1949463cee81e06980c6e5f207b55f2b8f7dd058acb5af",
+      "src/startup_registration.h": "f9ee3d7f131e0f958b2f95ff1711e9956d4e17b42fbc1de224c87f3fe63c3e36"
+    }
   }
 }
