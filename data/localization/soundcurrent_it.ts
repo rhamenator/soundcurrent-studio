@@ -140,6 +140,13 @@ Vuoi sostituirlo?</translation>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>'%1' is write protected.
+Do you want to delete it anyway?</source>
+      <translation>'%1' è protetto da scrittura.
+Vuoi eliminarlo comunque?</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>.1-10 seconds (default 1.5)</source>
       <extracomment>Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.</extracomment>
       <translation>.1-10 secondi (predefinito: 1.5)</translation>
@@ -322,6 +329,11 @@ Vuoi sostituirlo?</translation>
     <message>
       <source>Apply suggested EQ</source>
       <translation>Applica equalizzazione suggerita</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete '%1'?</source>
+      <translation>Sei sicuro di voler eliminare '%1'?</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Audio bridge did not start</source>
@@ -814,6 +826,11 @@ Vuoi sostituirlo?</translation>
     <message>
       <source>Could not create test tone</source>
       <translation>Impossibile creare il tono di prova</translation>
+    </message>
+    <message>
+      <source>Could not delete directory.</source>
+      <translation>Impossibile rimuovere la cartella.</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Could not finish saving preset.</source>

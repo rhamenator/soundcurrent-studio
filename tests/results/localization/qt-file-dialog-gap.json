@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "status": "directory/default captions and preceding chooser fixtures passed compiled Linux checks; remaining workflows and native/package checks incomplete",
+  "status": "deletion captions and actual declined confirmation fixtures passed compiled Linux tests; broader workflows/native/packages incomplete",
   "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
   "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
   "untranslatedObserved": [
@@ -38,7 +38,7 @@
   "remainingScope": [
     "Header-visibility menu composition",
     "External MIME/file-association descriptors",
-    "Deletion/permission errors and other unmapped chooser strings",
+    "Context-menu permission gating and protected-path/delete-failure workflows",
     "Current native Windows/package qualification",
     "Screen-reader listening test"
   ],
@@ -48,9 +48,9 @@
     "https://github.com/qt/qtbase/blob/6.4/src/widgets/dialogs/qfiledialog.ui"
   ],
   "sourceSha256": {
-    "src/localization.h": "c02d6e0f8957f5989a1ccd5667cd14f7cccb9df7b7cb1bb9c3c91edb417bb109",
-    "tests/localization.cpp": "fd062d78c55b5950be5fed29c987d82ae2660ab9e8522e2e1cf8955f4fcadf17",
-    "data/localization/catalogs.json": "be32871886110fecd4f134a74d7355b34ae3afcb13fdd0e20f9981296a6a2552"
+    "src/localization.h": "966605fca47c7640c038347712c439f0ca1e33ca0db086daa54f8aa533c4a318",
+    "tests/localization.cpp": "e3c747e93efdeb7e7b3149f91ea30032480107a61adade472877bc752ba7d09e",
+    "data/localization/catalogs.json": "81f608acc2f23ef47efd953d5e9588842a8557958cad257990314fc1fe90bfab"
   },
   "accessibilityTestScope": "Actual QAccessible Name/Description queries for six navigation buttons, sidebar and list/tree file views, all 33 non-English catalogs. Does not test screen-reader speech.",
   "accessibilityLinuxEvidence": {
@@ -103,5 +103,18 @@
     "catalogs": 33,
     "scope": "Initial all-files filter, directory label/Choose, direct default caption aliases; general filter mutation guard passed",
     "nativeReviewed": false
+  },
+  "deleteLinuxEvidence": {
+    "log": "tests/results/localization/qt-file-dialog-delete-linux.log",
+    "sha256": "491d01b3c0fe933e71d0c197c0c04532ff0db886b0ce412bf8523a8335033250",
+    "result": "passed",
+    "captionCatalogs": 33,
+    "actualModalLocales": [
+      "fr",
+      "ar",
+      "nn"
+    ],
+    "observedPrompt": "confirmation",
+    "scope": "Fixture enables selected temporary-file action directly, real No-button click preserves contents; permission gating, protected-path and delete-failure workflows not exercised"
   }
 }

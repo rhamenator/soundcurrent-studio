@@ -140,6 +140,13 @@ Vill du ersätta den?</translation>
       <translation>%1%2 dB</translation>
     </message>
     <message>
+      <source>'%1' is write protected.
+Do you want to delete it anyway?</source>
+      <translation>\"%1\" är skrivskyddad.
+Vill du ta bort den ändå?</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>.1-10 seconds (default 1.5)</source>
       <extracomment>Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.</extracomment>
       <translation>.1-10 sekunder (standard: 1.5)</translation>
@@ -322,6 +329,11 @@ Vill du ersätta den?</translation>
     <message>
       <source>Apply suggested EQ</source>
       <translation>Tillämpa föreslagen EQ</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete '%1'?</source>
+      <translation>Är du säker på att du vill ta bort \"%1\"?</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Audio bridge did not start</source>
@@ -814,6 +826,11 @@ Vill du ersätta den?</translation>
     <message>
       <source>Could not create test tone</source>
       <translation>Kunde inte skapa testton</translation>
+    </message>
+    <message>
+      <source>Could not delete directory.</source>
+      <translation>Kunde inte ta bort katalogen.</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Could not finish saving preset.</source>
