@@ -107,8 +107,8 @@
       "source": "message \"Installed $product $version. Open it from the applications menu. Use Quit and reopen after an update. No uninstall or reboot is needed for the app update.\""
     }
   ],
-  "status": "All 34 catalogs complete; real terminal prompts and sampled GTK dialogs exercised; package qualification pending",
-  "nextTask": "Qualify actual terminal/dialog installer interactions and final release companion packages; finish whole-interface coverage audit.",
+  "status": "All 34 catalogs complete; terminal/GTK sample and package/preview qualification recorded",
+  "nextTask": "Finish finite whole-interface coverage audit; privileged easy-installer install path remains a separately documented unexercised workflow.",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "originalSourceSha256": "fdc110d03f39643aa09e30bbbe09c1d8ebfa7ed99f2ae11e8c100f3bf834df5e",
@@ -255,5 +255,6 @@
     "testLogSha256": "328c534b02f00e5436a330f1ea616c7c056cc6869d534ea4256f3e878d52aed8",
     "result": "All-locale focused tests and separate removed-locale negative gate passed; exact run counts retained in log"
   },
-  "runtimeEvidence": "tests/results/localization/linux-installer-runtime.json"
+  "runtimeEvidence": "tests/results/localization/linux-installer-runtime.json",
+  "previewEvidence": "tests/results/localization/preview-bundle-verification.json"
 }
