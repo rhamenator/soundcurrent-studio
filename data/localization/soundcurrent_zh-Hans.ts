@@ -1322,6 +1322,11 @@ Import into your library?</source>
       <translation>Studio 设置无效</translation>
     </message>
     <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>WAVE 读取缓冲区无效</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>音频路由无效：回环捕获需要独立的播放源</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1385,6 +1390,11 @@ Import into your library?</source>
     <message>
       <source>Invalid or unordered response data.</source>
       <translation>响应数据无效或未按顺序排列。</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>输出 WAVE 格式无效</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid profile library.</source>

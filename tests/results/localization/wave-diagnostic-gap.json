@@ -66,7 +66,9 @@
     },
     {
       "source": "Invalid WAVE read buffer",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Invalid float WAVE format",
@@ -74,7 +76,9 @@
     },
     {
       "source": "Invalid output WAVE format",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Invalid output speaker mask",
@@ -143,14 +147,14 @@
       "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "Six owned diagnostics translated and mapped; 26 other owned WAVE diagnostics remain untranslated",
+  "status": "Eight owned diagnostics translated and mapped; 24 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 753-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 755-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -168,6 +172,10 @@
   ],
   "riffBoundsChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 753 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "bufferFormatChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 755 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

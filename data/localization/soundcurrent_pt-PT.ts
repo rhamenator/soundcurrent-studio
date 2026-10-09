@@ -1322,6 +1322,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Definições do Studio inválidas</translation>
     </message>
     <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>Memória intermédia de leitura WAVE inválida</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Encaminhamento de áudio inválido: a captura de retorno requer uma fonte de reprodução separada</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1385,6 +1390,11 @@ Importar para a sua biblioteca?</translation>
     <message>
       <source>Invalid or unordered response data.</source>
       <translation>Dados de resposta inválidos ou desordenados.</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>Formato WAVE de saída inválido</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid profile library.</source>

@@ -1322,6 +1322,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Ogiltiga Studio-inställningar</translation>
     </message>
     <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>Ogiltig WAVE-läsbuffert</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Ogiltig ljudroutning: loopback kräver en separat uppspelningskälla</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1385,6 +1390,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Invalid or unordered response data.</source>
       <translation>Ogiltiga eller osorterade frekvensgångsdata.</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>Ogiltigt WAVE-utdataformat</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid profile library.</source>

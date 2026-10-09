@@ -1322,6 +1322,11 @@ Importovat do vaší knihovny?</translation>
       <translation>Neplatné nastavení Studia</translation>
     </message>
     <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>Neplatná vyrovnávací paměť pro čtení WAVE</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Neplatné směrování zvuku: zpětné snímání vyžaduje samostatný zdroj přehrávání</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1385,6 +1390,11 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Invalid or unordered response data.</source>
       <translation>Neplatná nebo neseřazená data odezvy.</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>Neplatný výstupní formát WAVE</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid profile library.</source>

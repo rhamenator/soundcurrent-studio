@@ -1322,6 +1322,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Thiết lập Studio không hợp lệ</translation>
     </message>
     <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>Bộ đệm đọc WAVE không hợp lệ</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Định tuyến âm thanh không hợp lệ: thu âm loopback cần nguồn phát riêng</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1385,6 +1390,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Invalid or unordered response data.</source>
       <translation>Dữ liệu đáp tuyến không hợp lệ hoặc không theo thứ tự.</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>Định dạng WAVE đầu ra không hợp lệ</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid profile library.</source>

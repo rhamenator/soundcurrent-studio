@@ -1322,6 +1322,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Ugyldige Studio-innstillinger</translation>
     </message>
     <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>Ugyldig WAVE-lesebuffer</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Ugyldig lydruting: loopback krever en separat avspillingskilde</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1385,6 +1390,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Invalid or unordered response data.</source>
       <translation>Ugyldige eller usorterte frekvensresponsdata.</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>Ugyldig WAVE-utdataformat</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Invalid profile library.</source>

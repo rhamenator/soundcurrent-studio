@@ -29,6 +29,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Invalid WAVE read buffer")=="OWNED_DIAGNOSTIC");
+ require(audioErrorText("Invalid output WAVE format")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid RIFF size")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Chunk extends beyond RIFF bounds")=="RIFF_BOUNDS");
  require(audioErrorText("Cannot open input WAVE file")=="WAVE_OPEN");
