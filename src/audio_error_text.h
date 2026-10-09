@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Missing, duplicate or oversized WAVE format"))
+        return SC_TR("Missing, duplicate or oversized WAVE format");
+    if (diagnostic == QStringLiteral("Unsupported extensible WAVE subtype"))
+        return SC_TR("Unsupported extensible WAVE subtype");
     if (diagnostic == QStringLiteral("Invalid WAVE frame alignment or byte rate"))
         return SC_TR("Invalid WAVE frame alignment or byte rate");
     if (diagnostic == QStringLiteral("Unsupported WAVE rate or channel count"))

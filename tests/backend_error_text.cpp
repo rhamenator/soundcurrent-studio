@@ -30,6 +30,8 @@ class Fixture : public QTranslator {
   if(QByteArray(source)=="Only little-endian RIFF/WAVE is supported")return "WAVE_ENDIAN";
   if(QByteArray(source)=="Only PCM16/24/32 or float32 WAVE is supported")return "WAVE_SAMPLES";
   if(QByteArray(source)=="Unsupported WAVE rate or channel count")return "WAVE_RATE";
+  if(QByteArray(source)=="Missing, duplicate or oversized WAVE format")return "WAVE_FORMAT_METADATA";
+  if(QByteArray(source)=="Unsupported extensible WAVE subtype")return "WAVE_SUBTYPE";
   if(QByteArray(source)=="Could not flush WAVE output")return "WAVE_FLUSH";
   if(QByteArray(source)=="Could not close WAVE output")return "WAVE_CLOSE";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
@@ -47,6 +49,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Missing, duplicate or oversized WAVE format")=="WAVE_FORMAT_METADATA");
+ require(audioErrorText("Unsupported extensible WAVE subtype")=="WAVE_SUBTYPE");
  require(audioErrorText("Invalid WAVE frame alignment or byte rate")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Unsupported WAVE rate or channel count")=="WAVE_RATE");
  require(audioErrorText("Only little-endian RIFF/WAVE is supported")=="WAVE_ENDIAN");

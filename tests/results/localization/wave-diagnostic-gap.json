@@ -124,7 +124,9 @@
     },
     {
       "source": "Missing, duplicate or oversized WAVE format",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Multiple WAVE data chunks are unsupported",
@@ -182,7 +184,9 @@
     },
     {
       "source": "Unsupported extensible WAVE subtype",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "WAVE output exceeds its declared length",
@@ -191,14 +195,14 @@
       "nativeReviewed": false
     }
   ],
-  "status": "Thirty owned diagnostics translated and mapped; 2 other owned WAVE diagnostics remain untranslated",
+  "status": "All 32 inventoried owned WAVE diagnostics translated and mapped; scope excludes CLI help and external filesystem errors",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 777-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 779-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -264,6 +268,10 @@
   ],
   "frameRateChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 777 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "metadataSubtypeChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 779 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

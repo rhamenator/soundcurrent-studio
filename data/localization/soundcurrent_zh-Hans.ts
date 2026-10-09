@@ -1714,6 +1714,11 @@ Import into your library?</source>
       <extracomment>Owned WaveReader validation: format/data chunk is missing or data length is not a whole number of frames. Not missing microphone, silent samples or absent speaker sound. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Missing, duplicate or oversized WAVE format</source>
+      <translation>WAVE 格式元数据缺失、重复或过大</translation>
+      <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Model</source>
       <translation>型号</translation>
     </message>
@@ -3057,6 +3062,11 @@ Import into your library?</source>
     <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>不支持的设备配置格式版本（应为 2）。</translation>
+    </message>
+    <message>
+      <source>Unsupported extensible WAVE subtype</source>
+      <translation>不支持的可扩展 WAVE 子类型</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Unsupported filter type.</source>

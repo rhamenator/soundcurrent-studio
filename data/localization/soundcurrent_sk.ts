@@ -1714,6 +1714,11 @@ Importovať do vašej knižnice?</translation>
       <extracomment>Owned WaveReader validation: format/data chunk is missing or data length is not a whole number of frames. Not missing microphone, silent samples or absent speaker sound. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Missing, duplicate or oversized WAVE format</source>
+      <translation>Chýbajúce, duplicitné alebo príliš veľké metadáta formátu WAVE</translation>
+      <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Model</source>
       <translation>Model</translation>
     </message>
@@ -3057,6 +3062,11 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Unsupported equipment profile schema (expected 2).</source>
       <translation>Nepodporovaná schéma profilu zariadenia (očakávané 2).</translation>
+    </message>
+    <message>
+      <source>Unsupported extensible WAVE subtype</source>
+      <translation>Nepodporovaný podtyp rozšíriteľného formátu WAVE</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Unsupported filter type.</source>
