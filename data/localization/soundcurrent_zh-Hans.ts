@@ -213,6 +213,11 @@ Do you want to replace it?</source>
       <translation>所有系列</translation>
     </message>
     <message>
+      <source>All files (*)</source>
+      <translation>所有文件 (*)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>All manufacturers</source>
       <translation>所有制造商</translation>
     </message>
@@ -686,6 +691,11 @@ Do you want to replace it?</source>
       <translation>检查已发布的版本和已下载的安装程序。不会自动安装任何更新。</translation>
     </message>
     <message>
+      <source>Choose</source>
+      <translation>选择(C)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Choose a name that is not a built-in preset.</source>
       <translation>请选择一个与内置预设名称不同的名称。</translation>
     </message>
@@ -977,6 +987,16 @@ Do you want to replace it?</source>
     <message>
       <source>Detail view</source>
       <translation>详情视图</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directories</source>
+      <translation>目录</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directory:</source>
+      <translation>目录：</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
@@ -1285,6 +1305,11 @@ Do you want to replace it?</source>
     <message>
       <source>Filters exceed frequency, gain or Q limits.</source>
       <translation>滤波器超出频率、增益或 Q 限制。</translation>
+    </message>
+    <message>
+      <source>Find directory</source>
+      <translation>查找目录</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Flat</source>
@@ -2548,6 +2573,11 @@ Do you want to replace it?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Recent places</source>
+      <translation>最近位置</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Redo</source>
       <translation>重做</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
@@ -2764,6 +2794,11 @@ Do you want to replace it?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>保存 Studio 设置</translation>
+    </message>
+    <message>
+      <source>Save as</source>
+      <translation>另存为</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Save modified profile?</source>

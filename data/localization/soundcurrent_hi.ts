@@ -213,6 +213,11 @@ Do you want to replace it?</source>
       <translation>सभी उत्पाद परिवार</translation>
     </message>
     <message>
+      <source>All files (*)</source>
+      <translation>सभी फ़ाइलें (*)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>All manufacturers</source>
       <translation>सभी निर्माता</translation>
     </message>
@@ -686,6 +691,11 @@ Do you want to replace it?</source>
       <translation>प्रकाशित रिलीज़ और डाउनलोड किए गए इंस्टॉलर की जाँच करता है। कोई अपडेट अपने आप इंस्टॉल नहीं किया जाता।</translation>
     </message>
     <message>
+      <source>Choose</source>
+      <translation>चुनें</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Choose a name that is not a built-in preset.</source>
       <translation>ऐसा नाम चुनें जो पहले से उपलब्ध प्रीसेट का न हो।</translation>
     </message>
@@ -977,6 +987,16 @@ Do you want to replace it?</source>
     <message>
       <source>Detail view</source>
       <translation>विस्तृत दृश्य</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directories</source>
+      <translation>निर्देशिकाएँ</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directory:</source>
+      <translation>निर्देशिका:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
@@ -1285,6 +1305,11 @@ Do you want to replace it?</source>
     <message>
       <source>Filters exceed frequency, gain or Q limits.</source>
       <translation>फ़िल्टर आवृत्ति, गेन या Q की सीमा से बाहर हैं।</translation>
+    </message>
+    <message>
+      <source>Find directory</source>
+      <translation>निर्देशिका खोजें</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Flat</source>
@@ -2548,6 +2573,11 @@ Do you want to replace it?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Recent places</source>
+      <translation>हाल के स्थान</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Redo</source>
       <translation>फिर करें</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
@@ -2764,6 +2794,11 @@ Do you want to replace it?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio सेटअप सहेजें</translation>
+    </message>
+    <message>
+      <source>Save as</source>
+      <translation>इस रूप में सहेजें</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Save modified profile?</source>

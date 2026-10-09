@@ -213,6 +213,11 @@ Do you want to replace it?</source>
       <translation>모든 제품군</translation>
     </message>
     <message>
+      <source>All files (*)</source>
+      <translation>모든 파일 (*)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>All manufacturers</source>
       <translation>모든 제조사</translation>
     </message>
@@ -686,6 +691,11 @@ Do you want to replace it?</source>
       <translation>공개 릴리스와 다운로드한 설치 프로그램을 확인합니다. 업데이트는 자동으로 설치되지 않습니다.</translation>
     </message>
     <message>
+      <source>Choose</source>
+      <translation>선택(C)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Choose a name that is not a built-in preset.</source>
       <translation>기본 제공 프리셋과 다른 이름을 선택하세요.</translation>
     </message>
@@ -977,6 +987,16 @@ Do you want to replace it?</source>
     <message>
       <source>Detail view</source>
       <translation>자세히 보기</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directories</source>
+      <translation>디렉터리</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directory:</source>
+      <translation>디렉터리:</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
@@ -1285,6 +1305,11 @@ Do you want to replace it?</source>
     <message>
       <source>Filters exceed frequency, gain or Q limits.</source>
       <translation>필터가 주파수, 게인 또는 Q 제한을 초과합니다.</translation>
+    </message>
+    <message>
+      <source>Find directory</source>
+      <translation>디렉터리 찾기</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Flat</source>
@@ -2548,6 +2573,11 @@ Do you want to replace it?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Recent places</source>
+      <translation>최근 장소</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Redo</source>
       <translation>다시 실행</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
@@ -2764,6 +2794,11 @@ Do you want to replace it?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio 설정 저장</translation>
+    </message>
+    <message>
+      <source>Save as</source>
+      <translation>다른 이름으로 저장</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Save modified profile?</source>
