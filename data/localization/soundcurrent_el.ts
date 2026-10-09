@@ -676,6 +676,11 @@ Import into your library?</source>
       <translation>Δεν ήταν δυνατή η δέσμευση μνήμης για την κατάσταση των εφέ</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>Δεν ήταν δυνατό το κλείσιμο του αρχείου εξόδου WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Δεν ήταν δυνατή η δημιουργία ιδιωτικού δοκιμαστικού φακέλου</translation>
     </message>
@@ -698,6 +703,11 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Δεν ήταν δυνατή η ολοκλήρωση αποθήκευσης της προρύθμισης.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>Δεν ήταν δυνατή η εκκένωση της προσωρινής μνήμης εξόδου WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

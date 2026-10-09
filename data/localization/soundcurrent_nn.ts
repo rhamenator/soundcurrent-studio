@@ -676,6 +676,11 @@ Importere til biblioteket ditt?</translation>
       <translation>Kunne ikkje tildele minne til effekttilstanden</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>Kunne ikkje lukke WAVE-utdatafila</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Kunne ikkje opprette ei privat testmappe</translation>
     </message>
@@ -698,6 +703,11 @@ Importere til biblioteket ditt?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Kunne ikkje fullføre lagring av førehandsinnstillinga.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>Kunne ikkje tømme WAVE-utdatabufferen</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

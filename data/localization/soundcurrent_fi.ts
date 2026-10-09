@@ -676,6 +676,11 @@ Tuodaanko kirjastoon?</translation>
       <translation>Tehostetilan muistia ei voitu varata</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>WAVE-tulostiedostoa ei voitu sulkea</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Yksityistä testikansiota ei voitu luoda</translation>
     </message>
@@ -698,6 +703,11 @@ Tuodaanko kirjastoon?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Esiasetuksen tallennusta ei voitu viimeistellä.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>WAVE-tulostuspuskuria ei voitu tyhjentää</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

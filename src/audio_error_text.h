@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Could not flush WAVE output"))
+        return SC_TR("Could not flush WAVE output");
+    if (diagnostic == QStringLiteral("Could not close WAVE output"))
+        return SC_TR("Could not close WAVE output");
     if (diagnostic == QStringLiteral("Invalid WAVE read buffer"))
         return SC_TR("Invalid WAVE read buffer");
     if (diagnostic == QStringLiteral("Invalid output WAVE format"))

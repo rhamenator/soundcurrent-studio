@@ -676,6 +676,11 @@ Import into your library?</source>
       <translation>تعذر تخصيص ذاكرة لحالة التأثيرات</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>تعذّر إغلاق ملف الإخراج WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>تعذر إنشاء مجلد اختبار خاص</translation>
     </message>
@@ -698,6 +703,11 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>تعذر إكمال حفظ الإعداد المسبق.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>تعذّرت كتابة البيانات المتبقية في مخزن إخراج WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

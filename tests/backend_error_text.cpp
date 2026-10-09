@@ -14,6 +14,8 @@ class Fixture : public QTranslator {
   if(QByteArray(context)!="SoundCurrent")return {};
   if(QByteArray(source).startsWith("Invalid ") || QByteArray(source).startsWith("Too many ") || QByteArray(source)=="Duplicate Studio route" || QByteArray(source)=="Enhancements outside supported ranges" || QByteArray(source).startsWith("Shared and channel EQ"))return "OWNED_DIAGNOSTIC";
   if(QByteArray(source)=="Chunk extends beyond RIFF bounds")return "RIFF_BOUNDS";
+  if(QByteArray(source)=="Could not flush WAVE output")return "WAVE_FLUSH";
+  if(QByteArray(source)=="Could not close WAVE output")return "WAVE_CLOSE";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
   if(QByteArray(source)=="Cannot create output WAVE file")return "WAVE_CREATE";
   if(QByteArray(source)=="Truncated WAVE file")return "WAVE_TRUNCATED";
@@ -29,6 +31,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Could not flush WAVE output")=="WAVE_FLUSH");
+ require(audioErrorText("Could not close WAVE output")=="WAVE_CLOSE");
  require(audioErrorText("Invalid WAVE read buffer")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid output WAVE format")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Invalid RIFF size")=="OWNED_DIAGNOSTIC");

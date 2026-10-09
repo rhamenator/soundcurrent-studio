@@ -676,6 +676,11 @@ Importovať do vašej knižnice?</translation>
       <translation>Nemožno prideliť pamäť pre stav efektov</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>Nepodarilo sa zavrieť výstupný súbor WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Nepodarilo sa vytvoriť súkromný testovací priečinok</translation>
     </message>
@@ -698,6 +703,11 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Nepodarilo sa dokončiť uloženie predvoľby.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>Nepodarilo sa vyprázdniť výstupnú vyrovnávaciu pamäť WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

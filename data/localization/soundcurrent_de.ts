@@ -676,6 +676,11 @@ In Ihre Bibliothek importieren?</translation>
       <translation>Speicher für den Effektzustand konnte nicht zugewiesen werden</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>Die WAVE-Ausgabedatei konnte nicht geschlossen werden</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Ein privater Testordner konnte nicht erstellt werden</translation>
     </message>
@@ -698,6 +703,11 @@ In Ihre Bibliothek importieren?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Das Speichern des Presets konnte nicht abgeschlossen werden.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>Der WAVE-Ausgabepuffer konnte nicht vollständig geschrieben werden</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

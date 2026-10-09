@@ -676,6 +676,11 @@ Importați în bibliotecă?</translation>
       <translation>Nu s-a putut aloca memoria pentru starea efectelor</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>Nu s-a putut închide fișierul WAVE de ieșire</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Nu s-a putut crea un dosar privat de test</translation>
     </message>
@@ -698,6 +703,11 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Nu s-a putut finaliza salvarea presetării.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>Nu s-a putut goli bufferul de ieșire WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

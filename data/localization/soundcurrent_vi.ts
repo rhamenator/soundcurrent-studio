@@ -676,6 +676,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Không thể cấp phát bộ nhớ trạng thái hiệu ứng</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>Không thể đóng tệp WAVE đầu ra</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>Không thể tạo thư mục thử riêng tư</translation>
     </message>
@@ -698,6 +703,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>Không thể hoàn tất lưu thiết lập sẵn.</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>Không thể ghi hết bộ đệm đầu ra WAVE</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

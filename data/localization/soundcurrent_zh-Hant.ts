@@ -676,6 +676,11 @@ Import into your library?</source>
       <translation>無法配置效果狀態記憶體</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>無法關閉 WAVE 輸出檔案</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>無法建立私人測試資料夾</translation>
     </message>
@@ -698,6 +703,11 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>無法完成儲存預設。</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>無法排清 WAVE 輸出緩衝區</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>

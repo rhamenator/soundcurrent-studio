@@ -99,5 +99,7 @@
   "Invalid RIFF size": "Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.",
   "Chunk extends beyond RIFF bounds": "Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.",
   "Invalid WAVE read buffer": "Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.",
-  "Invalid output WAVE format": "Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified."
+  "Invalid output WAVE format": "Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.",
+  "Could not flush WAVE output": "Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.",
+  "Could not close WAVE output": "Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified."
 }

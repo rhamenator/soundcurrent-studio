@@ -676,6 +676,11 @@ Import into your library?</source>
       <translation>エフェクト状態のメモリを確保できませんでした</translation>
     </message>
     <message>
+      <source>Could not close WAVE output</source>
+      <translation>出力WAVEファイルを閉じられませんでした</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Could not create a private test folder</source>
       <translation>非公開のテストフォルダーを作成できませんでした</translation>
     </message>
@@ -698,6 +703,11 @@ Import into your library?</source>
     <message>
       <source>Could not finish saving preset.</source>
       <translation>プリセットの保存を完了できませんでした。</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>WAVE出力バッファをフラッシュできませんでした</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Could not initialize Windows audio COM</source>
