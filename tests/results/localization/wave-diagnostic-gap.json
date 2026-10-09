@@ -1,0 +1,141 @@
+{
+  "scope": "Literal owned WAVE diagnostics in src/wav.cpp surfaced by StudioPanel::renderFiles through audioErrorText; excludes CLI help and external filesystem messages",
+  "sourceSha256": "f113caa45573d2895cd18745840f1bd4ed2abc28fcbac56a6027d1de3c81716b",
+  "messages": [
+    {
+      "source": "Cannot create output WAVE file",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Cannot open input WAVE file",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Cannot seek to WAVE audio",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Chunk extends beyond RIFF bounds",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Could not close WAVE output",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Could not flush WAVE output",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Could not write WAVE audio",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Could not write WAVE header",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Excessive number of RIFF chunks",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Incomplete WAVE output",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Input is too short for RIFF/WAVE",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid RIFF size",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid WAVE frame alignment or byte rate",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid WAVE read buffer",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid float WAVE format",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid output WAVE format",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid output speaker mask",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Invalid valid-bit count",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Missing RIFF padding byte",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Missing or incomplete WAVE audio",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Missing, duplicate or oversized WAVE format",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Multiple WAVE data chunks are unsupported",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Only PCM16/24/32 or float32 WAVE is supported",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Only little-endian RIFF/WAVE is supported",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Output exceeds the RIFF/WAVE 4 GiB limit",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Speaker mask does not match channel count",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Truncated WAVE file",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Truncated chunk header",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Truncated extensible WAVE format",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Unsupported WAVE rate or channel count",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "Unsupported extensible WAVE subtype",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "WAVE output exceeds its declared length",
+      "mappedAtDesktopBoundary": false
+    },
+    {
+      "source": "WAVEfmt ",
+      "mappedAtDesktopBoundary": false
+    }
+  ],
+  "status": "untranslated owned diagnostics require catalog entries, contextual translations and display-boundary mappings",
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false
+}
