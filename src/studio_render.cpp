@@ -10,6 +10,13 @@
 #include <random>
 #include <stdexcept>
 #include <string_view>
+#ifdef _WIN32
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+#include <windows.h>
+#include <system_error>
+#endif
 
 using namespace soundcurrent::studio;
 namespace {
@@ -99,7 +106,7 @@ void help() {
 }
 }
 
-int main(int argc, char **argv) {
+int renderMain(int argc, char **argv) {
     try {
         for (int i = 1; i + 1 < argc; ++i)
             if (std::string_view(argv[i]) == "--language") soundcurrent::cli::selectLanguage(argv[++i]);
@@ -116,8 +123,8 @@ int main(int argc, char **argv) {
             if (++i == argc) throw std::runtime_error("Missing option value");
             const std::string_view value = argv[i];
             if (option == "--language") continue;
-            if (option == "--input") input = value;
-            else if (option == "--output") output = value;
+            if (option == "--input") input = std::filesystem::path(std::u8string(value.begin(), value.end()));
+            else if (option == "--output") output = std::filesystem::path(std::u8string(value.begin(), value.end()));
             else if (option == "--output-channels") outputChannels = channel(number(value), maxChannels)+1;
             else if (option == "--eq") eq.push_back(fields(value, 4));
             else if (option == "--lowpass") lowpass.push_back(fields(value, 3));
@@ -204,3 +211,34 @@ int main(int argc, char **argv) {
         return 1;
     }
 }
+
+#ifdef _WIN32
+// Windows passes UTF-16 arguments. Convert once to the renderer's UTF-8
+// boundary, without an ANSI-code-page round trip or replacement characters.
+int wmain(int argc, wchar_t **wideArguments) {
+    try {
+        std::vector<std::string> arguments;
+        arguments.reserve(argc);
+        for (int i = 0; i < argc; ++i) {
+            const auto length = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS,
+                wideArguments[i], -1, nullptr, 0, nullptr, nullptr);
+            if (!length) throw std::system_error(GetLastError(), std::system_category());
+            std::string argument(length, '\0');
+            if (!WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, wideArguments[i], -1,
+                                     argument.data(), length, nullptr, nullptr))
+                throw std::system_error(GetLastError(), std::system_category());
+            argument.pop_back(); // The sizing call included the terminating NUL.
+            arguments.push_back(std::move(argument));
+        }
+        std::vector<char *> pointers;
+        pointers.reserve(argc);
+        for (auto &argument : arguments) pointers.push_back(argument.data());
+        return renderMain(argc, pointers.data());
+    } catch (const std::exception &error) {
+        std::cerr << soundcurrent::cli::renderError(error.what()) << '\n';
+        return 1;
+    }
+}
+#else
+int main(int argc, char **argv) { return renderMain(argc, argv); }
+#endif

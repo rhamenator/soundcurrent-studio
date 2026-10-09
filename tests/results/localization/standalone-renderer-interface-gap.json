@@ -1,7 +1,7 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
   "status": "Declared WAVE diagnostics, CLI validation/unknown-option messages, shared engine configuration rejections and selected output protection errors translated across 34 catalogs. Help and other CLI-specific diagnostics still require translation.",
-  "sourceSha256": "193bad9a9d49949d0b11c4c3926cd759ce4146e18f9ce1d593080cbd8e0b56d7",
+  "sourceSha256": "ec168599298d48b7ce1ca3dcf0f19c04bafdf0dd3f2c47da3e5a17dc5001249d",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
     "engineEvidence": "src/engine.cpp postGainDb validation",
@@ -55,6 +55,16 @@
     "result": "cli-localization CTest passed",
     "scope": "Three ASCII unknown flags per locale and fallback case, including embedded %1/%2 and a colon; exact translated stderr preserves flag bytes without recursive substitution.",
     "nativeReviewed": false,
-    "windowsUnicodeArguments": "Not qualified; narrow argv decoding needs a separate Windows Unicode-entry audit."
+    "windowsUnicodeArguments": "UTF-16 entry point implemented and Unicode cases added; native runtime qualification pending CI."
+  },
+  "unicodeArgumentVerification": {
+    "implementation": "Windows wmain reads UTF-16; two-pass WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS) rejects invalid sequences. Path construction uses C++20 u8string to avoid ANSI decoding. MinGW Unicode entry-point link flag configured. Engine and WAVE library code unchanged.",
+    "linuxRuntime": "Rebuilt CLI; cli-localization CTest passed across 34 catalogs and fallback tags with accented, Cyrillic, CJK and supplementary-plane emoji filenames and unknown-option text. Includes valid exports and preserving existing Unicode-named files.",
+    "windowsCompilation": "MinGW C++20 syntax-only check passed with -Wall -Wextra -Wpedantic. Native MSVC build and actual Windows runtime qualification pending CI.",
+    "windowsRuntime": "pending",
+    "references": [
+      "https://learn.microsoft.com/en-us/cpp/c-language/using-wmain?view=msvc-170",
+      "https://learn.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte"
+    ]
   }
 }

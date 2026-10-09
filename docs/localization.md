@@ -306,3 +306,7 @@ The CLI reuses the desktop translation for an already-existing output file throu
 ### Unknown command-line options
 
 The unknown-option template has translations in all 34 catalogs. The display boundary substitutes the supplied option exactly once before wrapping the diagnostic. Actual compiled tests check ordinary ASCII flags, colon-containing flags and literal `%1`/`%2` text in every language and fallback case. Windows Unicode argument decoding is not qualified by these ASCII cases and still needs an entry-point audit. Native review remains unverified; standalone help and other diagnostics remain incomplete.
+
+### Windows Unicode renderer arguments
+
+The standalone renderer uses a Windows `wmain` entry point, strict UTF-16 to UTF-8 conversion and explicit C++20 UTF-8 filesystem path construction. This follows [Microsoft’s wide entry-point documentation](https://learn.microsoft.com/en-us/cpp/c-language/using-wmain?view=msvc-170) and [UTF-8 conversion API rules](https://learn.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte). Engine/library processing remains unchanged. Actual Linux CLI tests pass with accented, Cyrillic, CJK and emoji filenames and diagnostic option text. Windows-target MinGW syntax checking passes; native Windows runtime evidence remains pending CI. This supersedes the preceding ASCII-only test scope but does not claim Windows runtime qualification yet.

@@ -13,7 +13,7 @@ renderer = str(Path(sys.argv[1]).resolve())
 rows = json.loads((root / 'data/localization/catalogs.json').read_text(encoding='utf-8'))
 with tempfile.TemporaryDirectory() as directory:
     folder = Path(directory)
-    input_wave = folder / 'valid.wav'
+    input_wave = folder / 'entrée-音声-мікрофон-🎵.wav'
     with wave.open(str(input_wave), 'wb') as fixture:
         fixture.setnchannels(1)
         fixture.setsampwidth(2)
@@ -24,7 +24,7 @@ with tempfile.TemporaryDirectory() as directory:
         ('pt_BR', 'pt-BR'), ('pt-AO', 'en'), ('zh-Unknown', 'en')]:
         messages = {m.findtext('source'): m.findtext('translation') for m in
                     ET.parse(root / f'data/localization/soundcurrent_{expected_tag}.ts').findall('.//message')}
-        output = folder / 'output.wav'
+        output = folder / 'sortie-音声-мікрофон-🎵.wav'
         result = subprocess.run([renderer, '--language', tag, '--input', str(folder / 'missing.wav'),
                                  '--output', str(output)], capture_output=True, timeout=10)
         expected = messages['Render: %1'].replace('%1', messages['Cannot open input WAVE file'])
@@ -39,7 +39,7 @@ with tempfile.TemporaryDirectory() as directory:
             expected_error = messages['Render: %1'].replace('%1', messages[source])
             assert invalid.returncode == 1
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
-        for option in ('--unknown-option', '--unknown-%1-%2', '--unknown:option'):
+        for option in ('--unknown-option', '--unknown-%1-%2', '--unknown:option', '--équipement-音声-🎵'):
             invalid = subprocess.run([renderer, '--language', tag, option, 'unused'],
                                      capture_output=True, timeout=10)
             inner = messages['Unknown option: %1'].replace('%1', option)
@@ -78,7 +78,7 @@ with tempfile.TemporaryDirectory() as directory:
     # Inclusive endpoints stay valid; the appended duration changes only frame data.
     sizes = []
     for seconds in (0, 30):
-        destination = folder / f'tail-{seconds}.wav'
+        destination = folder / f'余韻-мікрофон-🎵-{seconds}.wav'
         result = subprocess.run([renderer, '--input', str(input_wave), '--output', str(destination),
                                  '--tail', str(seconds)], capture_output=True, timeout=10)
         assert result.returncode == 0, result.stderr
