@@ -570,6 +570,11 @@ Importér til dit bibliotek?</translation>
       <translation>Kanalforstærkning i trin på en halv dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>Kanalindekser starter ved 1 og skal angive eksisterende kanaler</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanaler og routing</translation>
     </message>
@@ -3257,6 +3262,11 @@ Importér til dit bibliotek?</translation>
     <message>
       <source>Write test playback</source>
       <translation>Skrivning af testlyd til afspilning</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Forkert antal felter adskilt med kolon</translation>
     </message>
     <message>
       <source>Yes</source>

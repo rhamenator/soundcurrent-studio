@@ -570,6 +570,11 @@ Import into your library?</source>
       <translation>채널 게인 (0.5 dB 단위)</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>채널 인덱스는 1부터 시작하며 존재하는 채널을 가리켜야 합니다</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>채널 및 라우팅</translation>
     </message>
@@ -3257,6 +3262,11 @@ Import into your library?</source>
     <message>
       <source>Write test playback</source>
       <translation>재생할 테스트 오디오 쓰기</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>콜론으로 구분된 필드 수가 잘못되었습니다</translation>
     </message>
     <message>
       <source>Yes</source>

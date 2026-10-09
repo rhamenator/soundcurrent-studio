@@ -570,6 +570,11 @@ Import into your library?</source>
       <translation>بهره کانال با گام‌های نیم dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>شماره‌گذاری کانال‌ها از 1 شروع می‌شود و باید به کانال‌های موجود اشاره کند</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>کانال‌ها و مسیریابی</translation>
     </message>
@@ -3257,6 +3262,11 @@ Import into your library?</source>
     <message>
       <source>Write test playback</source>
       <translation>نوشتن صدای آزمایشی برای پخش</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>تعداد فیلدهای جداشده با دونقطه نادرست است</translation>
     </message>
     <message>
       <source>Yes</source>

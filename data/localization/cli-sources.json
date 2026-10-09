@@ -33,5 +33,7 @@
   "WAVE output exceeds its declared length",
   "Render: %1",
   "Missing option value",
-  "Invalid finite numeric argument"
+  "Invalid finite numeric argument",
+  "Wrong number of colon-separated fields",
+  "Channel indexes are one-based and must exist"
 ]

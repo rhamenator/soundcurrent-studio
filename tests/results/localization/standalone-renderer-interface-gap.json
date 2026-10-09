@@ -1,7 +1,7 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "Declared WAVE diagnostics, Render template, missing-option-value and invalid-finite-number CLI errors translated across 34 catalogs. Help and remaining CLI-specific diagnostics still require translation.",
-  "sourceSha256": "cb006001f64af2a9157f89c3065d201da5b3f7b4c28a1a30124eba179feb5ea2",
+  "status": "Declared WAVE diagnostics, Render template and four CLI parser diagnostics translated across 34 catalogs. Help and remaining CLI-specific diagnostics still require translation.",
+  "sourceSha256": "193bad9a9d49949d0b11c4c3926cd759ce4146e18f9ce1d593080cbd8e0b56d7",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
     "engineEvidence": "src/engine.cpp postGainDb validation",
@@ -20,6 +20,13 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 781,
-  "parserErrorVerification": "Rebuilt Qt-independent renderer; permanent test passed localized missing-value and nan input errors across all 34 catalogs plus fallback tags"
+  "catalogMessages": 783,
+  "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
+  "priorEngineCi": {
+    "run": 37881276701,
+    "head": "29b6a901c3f03d58b3f0d39b19c46c5ff0a1053f",
+    "ubuntu24.04": "passed",
+    "windows2022": "passed",
+    "scope": "Previous 781-message commit; does not qualify the current 783-message build."
+  }
 }

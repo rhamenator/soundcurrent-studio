@@ -570,6 +570,11 @@ Import into your library?</source>
       <translation>Ενίσχυση καναλιού σε βήματα μισού dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>Οι δείκτες καναλιών ξεκινούν από το 1 και πρέπει να αντιστοιχούν σε υπάρχοντα κανάλια</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Κανάλια και δρομολόγηση</translation>
     </message>
@@ -3257,6 +3262,11 @@ Import into your library?</source>
     <message>
       <source>Write test playback</source>
       <translation>Εγγραφή δοκιμαστικού ήχου για αναπαραγωγή</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Λανθασμένος αριθμός πεδίων που χωρίζονται με άνω και κάτω τελεία</translation>
     </message>
     <message>
       <source>Yes</source>

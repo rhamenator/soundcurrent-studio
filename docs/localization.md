@@ -286,3 +286,7 @@ The invariant Windows loopback-route error now maps to a translated desktop mess
 ### WAVE render diagnostics
 
 All 32 owned diagnostics inventoried in `src/wav.cpp` are mapped at the desktop display boundary and populated in all 34 catalogs (779 messages). Backend strings and parser behavior remain invariant. Context notes distinguish binary file metadata from live audio devices, clipping and tracks. Catalog and compiled injected-translator checks passed. Earlier Linux/Windows installed-package reports qualify their exact recorded heads; current 779-message package qualification remains pending. Native-language verification and whole-interface coverage remain unverified. See `tests/results/localization/wave-diagnostic-gap.json`.
+
+### Standalone CLI field and channel errors
+
+The CLI now localizes incorrect colon-separated field counts and invalid one-based channel indexes in all 34 catalogs. The actual compiled renderer rejects `--eq 1:100` and `--output-channels 0` with exact translated diagnostics in each language. The engine-only CTest passed. Translations have contextual AI review; native review remains unverified. CLI help and other CLI-specific messages remain open, and current-package qualification is pending.

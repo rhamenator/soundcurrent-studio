@@ -570,6 +570,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Gain kênh theo bước 0,5 dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>Chỉ số kênh bắt đầu từ 1 và phải trỏ đến kênh hiện có</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kênh và định tuyến</translation>
     </message>
@@ -3257,6 +3262,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Write test playback</source>
       <translation>Ghi âm thanh thử nghiệm để phát</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Số trường được phân tách bằng dấu hai chấm không đúng</translation>
     </message>
     <message>
       <source>Yes</source>

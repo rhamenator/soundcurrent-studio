@@ -570,6 +570,11 @@ Importare nella libreria?</translation>
       <translation>Guadagno del canale in passi di mezzo dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>Gli indici dei canali iniziano da 1 e devono indicare canali esistenti</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Canali e percorsi</translation>
     </message>
@@ -3257,6 +3262,11 @@ Importare nella libreria?</translation>
     <message>
       <source>Write test playback</source>
       <translation>Scrivere la riproduzione di prova</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Numero errato di campi separati da due punti</translation>
     </message>
     <message>
       <source>Yes</source>

@@ -570,6 +570,11 @@ Import into your library?</source>
       <translation>चैनल गेन (0.5 dB के चरणों में)</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>चैनल सूचकांक 1 से शुरू होते हैं और उन्हें मौजूद चैनलों को दर्शाना चाहिए</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>चैनल और रूटिंग</translation>
     </message>
@@ -3257,6 +3262,11 @@ Import into your library?</source>
     <message>
       <source>Write test playback</source>
       <translation>प्लेबैक के लिए परीक्षण ऑडियो लिखना</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>कोलन से अलग किए गए फ़ील्ड की संख्या गलत है</translation>
     </message>
     <message>
       <source>Yes</source>

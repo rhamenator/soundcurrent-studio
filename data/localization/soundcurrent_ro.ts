@@ -570,6 +570,11 @@ Importați în bibliotecă?</translation>
       <translation>Câștig de canal în pași de jumătate de dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>Indicii canalelor încep de la 1 și trebuie să desemneze canale existente</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Canale și rutare</translation>
     </message>
@@ -3257,6 +3262,11 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Write test playback</source>
       <translation>Scrierea sunetului de test pentru redare</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Număr incorect de câmpuri separate prin două puncte</translation>
     </message>
     <message>
       <source>Yes</source>

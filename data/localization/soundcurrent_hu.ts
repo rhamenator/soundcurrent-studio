@@ -570,6 +570,11 @@ Importálja a könyvtárba?</translation>
       <translation>Csatornaerősítés fél dB-es lépésekben</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>A csatornaindexek 1-től kezdődnek, és létező csatornákra kell mutatniuk</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Csatornák és útválasztás</translation>
     </message>
@@ -3257,6 +3262,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Write test playback</source>
       <translation>A teszthang írása lejátszáshoz</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Helytelen számú, kettősponttal elválasztott mező</translation>
     </message>
     <message>
       <source>Yes</source>

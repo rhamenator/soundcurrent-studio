@@ -570,6 +570,11 @@ Importovat do vaší knihovny?</translation>
       <translation>Zesílení kanálu v krocích po půl dB</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>Indexy kanálů začínají od 1 a musí označovat existující kanály</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanály a směrování</translation>
     </message>
@@ -3257,6 +3262,11 @@ Importovat do vaší knihovny?</translation>
     <message>
       <source>Write test playback</source>
       <translation>Zapsat testovací přehrávání</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>Nesprávný počet polí oddělených dvojtečkami</translation>
     </message>
     <message>
       <source>Yes</source>

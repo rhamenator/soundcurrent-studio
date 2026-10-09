@@ -570,6 +570,11 @@ Import into your library?</source>
       <translation>以半 dB 為步長調整聲道增益</translation>
     </message>
     <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>聲道索引從 1 開始，且必須指向現有聲道</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>聲道與路由</translation>
     </message>
@@ -3257,6 +3262,11 @@ Import into your library?</source>
     <message>
       <source>Write test playback</source>
       <translation>寫入用於播放的測試音訊</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>以冒號分隔的欄位數量錯誤</translation>
     </message>
     <message>
       <source>Yes</source>

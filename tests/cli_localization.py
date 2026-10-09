@@ -24,7 +24,9 @@ with tempfile.TemporaryDirectory() as directory:
         assert result.returncode == 1, (tag, result.returncode)
         assert result.stderr.decode('utf-8').strip() == expected, (tag, result.stderr, expected)
         for arguments, source in [(['--post-gain'], 'Missing option value'),
-                                  (['--post-gain', 'nan'], 'Invalid finite numeric argument')]:
+                                  (['--post-gain', 'nan'], 'Invalid finite numeric argument'),
+                                  (['--eq', '1:100'], 'Wrong number of colon-separated fields'),
+                                  (['--output-channels', '0'], 'Channel indexes are one-based and must exist')]:
             invalid = subprocess.run([renderer, '--language', tag] + arguments,
                                      capture_output=True, timeout=10)
             expected_error = messages['Render: %1'].replace('%1', messages[source])
