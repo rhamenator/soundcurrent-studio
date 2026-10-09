@@ -191,14 +191,28 @@
       "sources": [
         "src/studio_panel.cpp",
         "src/studio_model.cpp",
-        "src/studio_render.cpp"
+        "src/studio_render.cpp",
+        "src/studio_name_text.h",
+        "src/cli_localization.h"
       ],
       "boundary": "Studio channel tables/routing/effects/presets, user roles and session diagnostics, live/offline status and renderer CLI.",
       "evidence": [
         "tests/results/localization/studio-display-helper-guard.json",
-        "tests/results/localization/renderer-direct-diagnostic-guard.json"
+        "tests/results/localization/renderer-direct-diagnostic-guard.json",
+        "tests/results/localization/second-pass-channel-name-provenance.json",
+        "tests/results/localization/channel-name-display-runtime.log",
+        "tests/results/localization/standalone-renderer-interface-gap.json",
+        "tests/results/localization/cli-unicode-ci.json"
       ],
-      "auditState": "indexed; final source/evidence correspondence check pending"
+      "auditState": "current source correspondence reviewed; no missing owned string identified in Studio controls and renderer boundaries",
+      "review": {
+        "tables": "Translated owned headers and filter choices; channel and route numbers use QLocale. Hz/dB/Q and surround layout notation retain identity.",
+        "names": "Generated channel role captions translate through channelNameText; user/imported/legacy names preserved using provenance.",
+        "diagnostics": "17 literal model validation sites map at audioErrorText; panel catches use this boundary. Dynamic engine diagnostics retain separate mapping evidence.",
+        "renderer": "GUI status/error templates translated with locale-formatted counts. CLI help, success summaries, direct errors and composed errors use CLI catalog boundary; numerical arguments and machine values remain ASCII. UTF-8 Windows argv conversion retained.",
+        "cliLocale": "Explicit supported canonical tags and base-language fallback; unsupported tags use English. No claim that every regional alias resolves to a script-specific language."
+      },
+      "runtimeLimit": "Prior compiled channel-role, table and renderer fixtures supplement current source review; no physical multichannel hardware or native-speaker certification. Fresh successful packages still require artifact verification."
     }
   ],
   "sourceSha256": {
@@ -225,7 +239,9 @@
     "scripts/linux_installer_catalogs.py": "d3e03fe8521f3d14cda6cef691f4bb3b73f9c3b25b7a400b9344d3ce09673915",
     "src/studio_panel.cpp": "d0c619840a9d81fef66fea0e0a93d990f19b1e91b2cc0265d47a324a7fb08858",
     "src/studio_model.cpp": "00949b7ee79350e90cf92edca9ef39f696b20c435b04d597a8fcb0da68323d1c",
-    "src/studio_render.cpp": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384"
+    "src/studio_render.cpp": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384",
+    "src/studio_name_text.h": "5bcdf9347973e22ac30e78448661fd73bd7320dd49e456d8c497fd1a76652314",
+    "src/cli_localization.h": "6c2923e3f549bb37fa742770bb42ba82b6efb59a5c8501421d9331d6ef0370b3"
   },
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
