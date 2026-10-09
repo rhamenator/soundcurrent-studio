@@ -1,3 +1,4 @@
+#include "localized_file_dialog.h"
 #include "localization.h"
 // SPDX-License-Identifier: GPL-3.0-only
 #include "accelerating_spinbox.h"
@@ -219,12 +220,12 @@ void StudioPanel::effectPreset(int i) {
         if(i==5)s.engine.reverb={true,4,.35,.25};if(i==6){s.engine.delay={true,250,.3,.15};s.engine.reverb={true,1.5,.4,.15};}});rebuild();preset_->setCurrentIndex(i);
 }
 void StudioPanel::saveProfile() {
-    const auto filename=QFileDialog::getSaveFileName(this,SC_TR("Save Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
+    const auto filename=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("Save Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
     QSaveFile file(filename);if(!file.open(QIODevice::WriteOnly)){status_->setText(SC_TR("Cannot save setup"));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);
     file.write(QJsonDocument(session_.json()).toJson());status_->setText(file.commit()?SC_TR("Studio setup saved."):SC_TR("Cannot finish saving setup."));
 }
 void StudioPanel::openProfile() {
-    if(locked_)return;const auto filename=QFileDialog::getOpenFileName(this,SC_TR("Open Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
+    if(locked_)return;const auto filename=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Open Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
     try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
         auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));
     }catch(const std::exception &e){status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
@@ -259,8 +260,8 @@ void StudioPanel::tick() {
     if(renderJob_.valid()) {progress_->setValue(jobProgress_);if(renderJob_.wait_for(std::chrono::seconds(0))==std::future_status::ready){status_->setText(renderJob_.get());render_->setEnabled(true);cancel_->setEnabled(false);}}
 }
 void StudioPanel::render() {
-    if(renderJob_.valid())return;const auto input=QFileDialog::getOpenFileName(this,SC_TR("Input WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(input.isEmpty())return;
-    const auto output=QFileDialog::getSaveFileName(this,SC_TR("New rendered WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(output.isEmpty())return;
+    if(renderJob_.valid())return;const auto input=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Input WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(input.isEmpty())return;
+    const auto output=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("New rendered WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(output.isEmpty())return;
     renderFiles(input,output);
 }
 void StudioPanel::renderFiles(const QString &input,const QString &output) {
