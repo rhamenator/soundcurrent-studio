@@ -1332,6 +1332,11 @@ Importare nella libreria?</translation>
       <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.</source>
+      <extracomment>Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers.</extracomment>
+      <translation>Ingresso: PCM16/24/32 o float32 RIFF/WAVE. Uscita: float32 in WAVE estensibile.</translation>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Installa SoundCurrent Audio tramite la configurazione del driver audio, quindi riapri l’app per attivare il percorso del microfono.</translation>
     </message>
@@ -3369,6 +3374,21 @@ Importare nella libreria?</translation>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
       <translation>Il valore zero disattiva ogni effetto. Questi effetti di ascolto si applicano alla riproduzione dei diffusori, non alla correzione del microfono.</translation>
+    </message>
+    <message>
+      <source>append 0-30 seconds to render effect tails</source>
+      <extracomment>Append 0–30 seconds of zero input after source audio so delay/reverb tails can decay into the export. Does not extend input media or change reverb decay itself. Preserve 0-30.</extracomment>
+      <translation>aggiungere 0-30 secondi per renderizzare le code degli effetti</translation>
+    </message>
+    <message>
+      <source>bypass EQ, effects, gains and mute</source>
+      <extracomment>Bypass engine EQ, delay/reverb/enhancements, channel/global gain and channel mute. Routing matrix still applies; final clipping and invalid-sample protection still apply. No device-routing bypass is implied.</extracomment>
+      <translation>bypassare EQ, effetti, guadagni e mute</translation>
+    </message>
+    <message>
+      <source>disable automatic EQ headroom</source>
+      <extracomment>Disable automatic per-channel EQ gain compensation/headroom. Does not disable final clipping or invalid-sample protection.</extracomment>
+      <translation>disattivare il margine di livello automatico dell’EQ</translation>
     </message>
     <message>
       <source>explicit matrix gain; using any route clears defaults</source>

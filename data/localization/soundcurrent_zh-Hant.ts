@@ -1332,6 +1332,11 @@ Import into your library?</source>
       <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.</source>
+      <extracomment>Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers.</extracomment>
+      <translation>輸入：PCM16/24/32 或 float32 RIFF/WAVE。輸出：可擴充 WAVE 格式的 float32。</translation>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>請透過音訊驅動程式設定安裝 SoundCurrent Audio，然後重新開啟應用程式以啟用麥克風音訊路徑。</translation>
     </message>
@@ -3369,6 +3374,21 @@ Import into your library?</source>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
       <translation>零值會關閉各項音效。這些聆聽音效套用於喇叭播放，不用於麥克風校正。</translation>
+    </message>
+    <message>
+      <source>append 0-30 seconds to render effect tails</source>
+      <extracomment>Append 0–30 seconds of zero input after source audio so delay/reverb tails can decay into the export. Does not extend input media or change reverb decay itself. Preserve 0-30.</extracomment>
+      <translation>附加 0-30 秒以算繪效果尾音</translation>
+    </message>
+    <message>
+      <source>bypass EQ, effects, gains and mute</source>
+      <extracomment>Bypass engine EQ, delay/reverb/enhancements, channel/global gain and channel mute. Routing matrix still applies; final clipping and invalid-sample protection still apply. No device-routing bypass is implied.</extracomment>
+      <translation>旁通 EQ、效果、增益和靜音</translation>
+    </message>
+    <message>
+      <source>disable automatic EQ headroom</source>
+      <extracomment>Disable automatic per-channel EQ gain compensation/headroom. Does not disable final clipping or invalid-sample protection.</extracomment>
+      <translation>停用自動 EQ 電平餘裕</translation>
     </message>
     <message>
       <source>explicit matrix gain; using any route clears defaults</source>

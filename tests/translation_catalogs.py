@@ -29,6 +29,21 @@ class CatalogTests(unittest.TestCase):
                     with self.assertRaisesRegex(ValueError, 'CLI invariant changed'):
                         catalog.validate_text(source, translated.replace(token, extended, 1))
 
+    def test_cli_help_has_no_undeclared_human_literals(self):
+        root = Path(__file__).resolve().parents[1]
+        code = (root / 'src/studio_render.cpp').read_text(encoding='utf-8')
+        body = code.split('void help() {', 1)[1].split('\n}\n}', 1)[0]
+        declared = json.loads((root / 'data/localization/cli-sources.json').read_text(encoding='utf-8'))
+        for name in ('text', 'format'):
+            for args in catalog.calls(body, name):
+                self.assertIn(catalog.literal(args[0]), declared)
+        usage = 'soundcurrent-studio-render --input in.wav --output NEW.wav'
+        for raw in re.findall(catalog.LITERAL, body):
+            source = catalog.literal(raw)
+            if source in declared or source == usage:
+                continue
+            self.assertRegex(source.strip(), r'^--[a-z-]+(?: [A-Z]+(?::[A-Z]+)*)?$')
+
     def test_owned_cli_exception_messages_are_declared(self):
         root = Path(__file__).resolve().parents[1]
         declared = json.loads((root / 'data/localization/cli-sources.json').read_text(encoding='utf-8'))
@@ -854,7 +869,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_reviewed_wave_diagnostics_preserve_file_format_identity(self):
         for source, identifiers in catalog.REVIEWED_FILE_IDENTIFIERS.items():
-            translated = 'Erreur du fichier ' + ' / '.join(identifiers)
+            translated = 'Erreur du fichier : ' + source  # Retain repeated/overlapping identifiers.
             catalog.validate_text(source, translated)
             for identifier in identifiers:
                 for damaged in (translated.replace(identifier, ''),

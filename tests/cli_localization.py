@@ -42,6 +42,8 @@ with tempfile.TemporaryDirectory() as directory:
             assert lines[1] == messages['Usage: %1 [options]'].replace('%1',
                 'soundcurrent-studio-render --input in.wav --output NEW.wav')
             assert lines[-1] == messages['Channel indexes start at 1. Existing output files are never overwritten.']
+            assert len(lines) == 21
+            assert lines[19] == messages['Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.']
             for row, prefix, source in [
                 (2, '  --language TAG         ', 'interface language; unsupported tags use English'),
                 (3, '  --output-channels N    ', '1-256 output channels (default: input count)'),
@@ -56,7 +58,10 @@ with tempfile.TemporaryDirectory() as directory:
                 (12, '  --delay-mix F         ', 'wet fraction 0-1 (enables delay)'),
                 (13, '  --reverb-decay SEC    ', '.1-10 seconds (default 1.5)'),
                 (14, '  --reverb-damping F    ', '0-.95 (default .4)'),
-                (15, '  --reverb-mix F        ', 'wet fraction 0-1 (enables reverb)')]:
+                (15, '  --reverb-mix F        ', 'wet fraction 0-1 (enables reverb)'),
+                (16, '  --tail SEC            ', 'append 0-30 seconds to render effect tails'),
+                (17, '  --no-headroom         ', 'disable automatic EQ headroom'),
+                (18, '  --bypass              ', 'bypass EQ, effects, gains and mute')]:
                 assert lines[row] == prefix + messages[source], (tag, row, lines[row])
 
         output = folder / 'sortie-音声-мікрофон-🎵.wav'

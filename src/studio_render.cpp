@@ -101,10 +101,10 @@ void help() {
         "  --reverb-decay SEC    " << soundcurrent::cli::text(".1-10 seconds (default 1.5)") << '\n' <<
         "  --reverb-damping F    " << soundcurrent::cli::text("0-.95 (default .4)") << '\n' <<
         "  --reverb-mix F        " << soundcurrent::cli::text("wet fraction 0-1 (enables reverb)") << '\n' <<
-        "  --tail SEC            append 0-30 seconds to render effect tails\n"
-        "  --no-headroom         disable automatic EQ headroom\n"
-        "  --bypass              bypass EQ, effects, gains and mute\n"
-        "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.\n"
+        "  --tail SEC            " << soundcurrent::cli::text("append 0-30 seconds to render effect tails") << '\n' <<
+        "  --no-headroom         " << soundcurrent::cli::text("disable automatic EQ headroom") << '\n' <<
+        "  --bypass              " << soundcurrent::cli::text("bypass EQ, effects, gains and mute") << '\n' <<
+        soundcurrent::cli::text("Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.") << '\n'
         << soundcurrent::cli::text("Channel indexes start at 1. Existing output files are never overwritten.") << '\n';
 }
 }

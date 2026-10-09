@@ -1332,6 +1332,11 @@ Import into your library?</source>
       <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.</source>
+      <extracomment>Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers.</extracomment>
+      <translation>קלט: PCM16/24/32 או float32 RIFF/WAVE. פלט: float32 בפורמט WAVE הניתן להרחבה.</translation>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>יש להתקין את SoundCurrent Audio באמצעות הגדרת מנהל התקן השמע, ולאחר מכן לפתוח את היישום מחדש כדי להפעיל את נתיב המיקרופון.</translation>
     </message>
@@ -3369,6 +3374,21 @@ Import into your library?</source>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
       <translation>אפס מכבה כל אפקט. אפקטי האזנה אלה חלים על השמעה ברמקולים, ולא על תיקון המיקרופון.</translation>
+    </message>
+    <message>
+      <source>append 0-30 seconds to render effect tails</source>
+      <extracomment>Append 0–30 seconds of zero input after source audio so delay/reverb tails can decay into the export. Does not extend input media or change reverb decay itself. Preserve 0-30.</extracomment>
+      <translation>הוספת 0-30 שניות לרינדור דעיכת האפקטים</translation>
+    </message>
+    <message>
+      <source>bypass EQ, effects, gains and mute</source>
+      <extracomment>Bypass engine EQ, delay/reverb/enhancements, channel/global gain and channel mute. Routing matrix still applies; final clipping and invalid-sample protection still apply. No device-routing bypass is implied.</extracomment>
+      <translation>עקיפת EQ, אפקטים, הגברים והשתקה</translation>
+    </message>
+    <message>
+      <source>disable automatic EQ headroom</source>
+      <extracomment>Disable automatic per-channel EQ gain compensation/headroom. Does not disable final clipping or invalid-sample protection.</extracomment>
+      <translation>ביטול מרווח הרמה האוטומטי של EQ</translation>
     </message>
     <message>
       <source>explicit matrix gain; using any route clears defaults</source>

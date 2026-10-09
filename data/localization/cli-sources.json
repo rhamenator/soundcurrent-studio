@@ -74,5 +74,9 @@
   "wet fraction 0-1 (enables delay)",
   ".1-10 seconds (default 1.5)",
   "0-.95 (default .4)",
-  "wet fraction 0-1 (enables reverb)"
+  "wet fraction 0-1 (enables reverb)",
+  "append 0-30 seconds to render effect tails",
+  "disable automatic EQ headroom",
+  "bypass EQ, effects, gains and mute",
+  "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE."
 ]

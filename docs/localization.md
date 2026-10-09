@@ -338,3 +338,7 @@ Low-pass, high-pass, channel trim and global post-gain descriptions are translat
 ### Delay and reverb help
 
 Six effect-option descriptions are translated in all 34 catalogs and checked in actual compiled help. Wet mix denotes processed-signal share; feedback, decay and damping are reviewed against engine behavior. Decimal examples retain the CLI parser’s syntax. Arabic reverb help and its range error now match the existing audio-reverberation terminology. Shared guards in both repositories use token boundaries to reject extended numeric values and avoid counting `ms` inside the Swahili word for default. Native review remains unverified. Three option descriptions and the format footer remain English.
+
+### Complete current standalone help
+
+The three remaining descriptions and WAVE format footer are translated in all 34 catalogs. Actual compiled tests compare every one of the 21 help lines, including immutable flag/argument syntax, for normal help and missing required paths. A source guard rejects undeclared help prose. Shared guards preserve WAVE format identifiers and repeated float32 tokens. Bypass retains routing and final sample protection; disabling headroom disables EQ gain compensation only. Python is explicitly a build dependency in RPM metadata and package-validation containers; no new Python runtime dependency is introduced. Native review, current Windows/package qualification and the whole-application interface audit remain separate and unverified.

@@ -1,7 +1,7 @@
 {
   "scope": "Standalone soundcurrent-studio-render CLI; separately built without Qt. Desktop catalog completeness does not qualify its help/diagnostics.",
-  "status": "CLI diagnostics, summaries, heading/usage/channel guidance and fourteen option descriptions translated across 34 catalogs. Three option descriptions and format footer remain English; current-package qualification pending.",
-  "sourceSha256": "ca21865852cbfc22eab920da05e67b47e7d67a0b4f6fb0ceffa7403a7ceeea8c",
+  "status": "Current owned CLI diagnostics, successful summaries and all 21 help lines translated across 34 catalogs. Current package and native Windows qualification still pending; whole application interface coverage remains separately unproven.",
+  "sourceSha256": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384",
   "fixedMismatch": {
     "helpPostGainRange": "-84 to +24 dB",
     "engineEvidence": "src/engine.cpp postGainDb validation",
@@ -16,11 +16,11 @@
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "runtimeVerification": "Actual missing-file render tested across all 34 languages with exact translated error, nonzero exit and no output; existing synthetic WAVE processing suite passed",
-  "newBuildDependency": "Python 3 interpreter generates embedded CLI header; audio engine and WAVE libraries remain Qt independent",
+  "newBuildDependency": "Python 3 build interpreter generates embedded CLI header; RPM BuildRequires and package-validation containers explicitly declare/install python3. Compiled engine and CLI require no Python runtime.",
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 810,
+  "catalogMessages": 814,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -96,16 +96,19 @@
     "windowsCurrentCommit": "pending CI"
   },
   "helpVerification": {
-    "translated": "Renderer heading, Usage, channel/no-overwrite explanation and fourteen descriptions including delay duration/feedback/mix and reverb decay/damping/mix.",
-    "actualRuntime": "Compiled CLI exact first/second/final help lines pass in all catalogs and fallback cases for --help (exit 0) and missing required input/output (exit 1).",
+    "translated": "Complete current help: heading, usage, all seventeen option descriptions, WAVE format footer and one-based channel/no-overwrite explanation.",
+    "actualRuntime": "All 21 compiled help lines match catalogs and invariant flags/arguments in all 34 languages plus fallback cases for --help (exit 0) and missing required paths (exit 1). cli-localization and cli-error-text CTests passed.",
     "commandInvariant": "Usage substitution preserves executable name, --input/--output flags and in.wav/NEW.wav examples. Parser, processing and saved-state code unchanged.",
     "terminology": "Bokmål/Nynorsk/Swahili heading uses file-based wording to avoid implying Internet disconnection.",
-    "remaining": "Tail, no-headroom, bypass descriptions and PCM/float WAVE format footer require translation.",
+    "remaining": "No untranslated human literals in current help per source guard; whole application interface audit and package qualification remain separate.",
     "result": "cli-localization and cli-error-text CTests passed",
     "optionChecks": "Exact compiled lines including immutable flags, argument syntax and whitespace pass in all catalogs and fallback cases for --help and missing required paths.",
     "invariantGuard": "Both repositories validate numeric examples and units at token boundaries, reject removed/duplicated/extended values (such as -60 becoming -600), and avoid treating ms within Swahili chaguo-msingi as a unit. Positive/negative tests and catalog checks passed (EQ 628 / Studio 810).",
     "processingEvidence": "src/engine.cpp confirms channel trim -60 to +24 dB and global post gain -84 to +24 dB; processing code unchanged.",
-    "effectsReview": "Wet means processed signal share; delay feedback, reverb decay and damping checked against engine implementation. Arabic reverb help and range diagnostic aligned with existing audio-reverberation controls."
+    "effectsReview": "Wet means processed signal share; delay feedback, reverb decay and damping checked against engine implementation. Arabic reverb help and range diagnostic aligned with existing audio-reverberation controls.",
+    "sourceGuard": "Every help text/format source must be declared; nontranslated literals allowed only for machine flag/argument columns and exact executable/usage example.",
+    "bypassReview": "Engine bypass skips EQ/effects/gain/mute while routing, final clipping and nonfinite-sample protection continue; headroom flag disables EQ gain compensation only.",
+    "formatContracts": "Shared EQ/Studio guards preserve PCM16/24/32, repeated float32, RIFF/WAVE and WAVE identifiers; positive/negative tests passed."
   },
   "windowsSummaryTestCorrection": {
     "run": 37883322299,

@@ -154,5 +154,9 @@
   "wet fraction 0-1 (enables delay)": "Delay wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks delay enabled even if zero mix is inaudible. Wet is audio mixing, not humidity.",
   ".1-10 seconds (default 1.5)": "Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.",
   "0-.95 (default .4)": "Reverb damping coefficient inclusive 0–.95, default .4; larger value damps high-frequency recirculation more. Not damping in dB or delay feedback.",
-  "wet fraction 0-1 (enables reverb)": "Reverb wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks reverb enabled. Wet is audio mixing, not humidity."
+  "wet fraction 0-1 (enables reverb)": "Reverb wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks reverb enabled. Wet is audio mixing, not humidity.",
+  "append 0-30 seconds to render effect tails": "Append 0–30 seconds of zero input after source audio so delay/reverb tails can decay into the export. Does not extend input media or change reverb decay itself. Preserve 0-30.",
+  "disable automatic EQ headroom": "Disable automatic per-channel EQ gain compensation/headroom. Does not disable final clipping or invalid-sample protection.",
+  "bypass EQ, effects, gains and mute": "Bypass engine EQ, delay/reverb/enhancements, channel/global gain and channel mute. Routing matrix still applies; final clipping and invalid-sample protection still apply. No device-routing bypass is implied.",
+  "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.": "Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers."
 }
