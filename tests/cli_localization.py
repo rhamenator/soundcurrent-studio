@@ -48,6 +48,8 @@ with tempfile.TemporaryDirectory() as directory:
             assert invalid.stderr.decode('utf-8').strip() == expected_error, (tag, invalid.stderr)
         # Real engine configuration rejects these values after reading valid audio.
         for arguments, source in [
+            (['--route', '1:1:-121'], 'Route gain must be between -120 and +12 dB'),
+            (['--route', '1:1:13'], 'Route gain must be between -120 and +12 dB'),
             (['--tail', '-1'], 'Tail must be between 0 and 30 seconds'),
             (['--tail', '31'], 'Tail must be between 0 and 30 seconds'),
             (['--post-gain', '-85'], 'Post gain must be finite and within -84 to +24 dB'),

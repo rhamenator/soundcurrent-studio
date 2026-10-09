@@ -1457,6 +1457,11 @@ Importálja a könyvtárba?</translation>
       <extracomment>Owned WAVE writer validation of output speaker-position bitmask against output channel count. Metadata error, not disconnected speakers or balance. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid processing buffer</source>
+      <extracomment>AudioEngine reported an invalid interleaved sample buffer size relative to its channel count. Internal memory buffer, not an effect preset or playback device.</extracomment>
+      <translation>Érvénytelen feldolgozási puffer</translation>
+    </message>
+    <message>
       <source>Invalid profile library.</source>
       <translation>Érvénytelen profilkönyvtár.</translation>
     </message>
@@ -1477,6 +1482,16 @@ Importálja a könyvtárba?</translation>
       <source>Invalid route number</source>
       <translation>Érvénytelen számérték az audiokapcsolatban</translation>
       <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
+    </message>
+    <message>
+      <source>Invalid routing buffer</source>
+      <extracomment>ChannelRouter rejected interleaved input/output sample spans with incompatible sizes. Internal memory buffer, not physical routing hardware or network buffering.</extracomment>
+      <translation>Érvénytelen útválasztási puffer</translation>
+    </message>
+    <message>
+      <source>Invalid routing matrix</source>
+      <extracomment>ChannelRouter rejected the supplied matrix dimensions or finite weight values. Mathematical audio mixing/routing matrix, not a visual grid.</extracomment>
+      <translation>Érvénytelen útválasztási mátrix</translation>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2453,6 +2468,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Rock</source>
       <translation>Rock</translation>
+    </message>
+    <message>
+      <source>Route gain must be between -120 and +12 dB</source>
+      <extracomment>Standalone --route OUT:IN:DB matrix entry gain, inclusive -120 to +12 dB; machine numeric syntax and dB identifier unchanged. Not post gain or channel trim, whose ranges differ.</extracomment>
+      <translation>Az útvonal erősítésének -120 és +12 dB között kell lennie</translation>
     </message>
     <message>
       <source>Routes into selected output channel</source>

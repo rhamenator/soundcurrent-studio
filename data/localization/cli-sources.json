@@ -48,5 +48,9 @@
   "Tail must be between 0 and 30 seconds",
   "Output already exists; select a new filename",
   "Cannot create output staging directory",
-  "Unknown option: %1"
+  "Unknown option: %1",
+  "Route gain must be between -120 and +12 dB",
+  "Invalid routing matrix",
+  "Invalid routing buffer",
+  "Invalid processing buffer"
 ]

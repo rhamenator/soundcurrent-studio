@@ -20,7 +20,7 @@
   "currentPackageQualification": "pending",
   "permanentRegression": "tests/cli_localization.py registered as cli-localization CTest; 34 locale missing-file cases plus de_DE, DE-de, pt_BR, unsupported and unsupported-region fallbacks",
   "engineOnlyVerification": "Fresh Release configuration with SOUNDCURRENT_BUILD_DESKTOP=OFF; standalone renderer built; cli-localization CTest passed; ldd shows only C/C++ runtime libraries, no Qt",
-  "catalogMessages": 785,
+  "catalogMessages": 789,
   "parserErrorVerification": "Rebuilt Qt-independent renderer; cli-localization CTest passed missing values, non-finite numbers, wrong colon-separated field counts and zero channel indexes across all 34 catalogs plus fallback tags. Each rejected input exits 1 with exact localized stderr and no output.",
   "priorEngineCi": {
     "run": 37881276701,
@@ -55,16 +55,22 @@
     "result": "cli-localization CTest passed",
     "scope": "Three ASCII unknown flags per locale and fallback case, including embedded %1/%2 and a colon; exact translated stderr preserves flag bytes without recursive substitution.",
     "nativeReviewed": false,
-    "windowsUnicodeArguments": "UTF-16 entry point implemented and Unicode cases added; native runtime qualification pending CI."
+    "windowsUnicodeArguments": "Native Windows 2022 cli-localization CTest passed at 7c7e94e, run 37882316346."
   },
   "unicodeArgumentVerification": {
     "implementation": "Windows wmain reads UTF-16; two-pass WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS) rejects invalid sequences. Path construction uses C++20 u8string to avoid ANSI decoding. MinGW Unicode entry-point link flag configured. Engine and WAVE library code unchanged.",
     "linuxRuntime": "Rebuilt CLI; cli-localization CTest passed across 34 catalogs and fallback tags with accented, Cyrillic, CJK and supplementary-plane emoji filenames and unknown-option text. Includes valid exports and preserving existing Unicode-named files.",
-    "windowsCompilation": "MinGW C++20 syntax-only check passed with -Wall -Wextra -Wpedantic. Native MSVC build and actual Windows runtime qualification pending CI.",
-    "windowsRuntime": "pending",
+    "windowsCompilation": "MinGW syntax-only check passed; native MSVC build and CLI runtime subsequently passed at the stated 785-message commit.",
+    "windowsRuntime": "Passed native Windows 2022 CTest cli-localization at 7c7e94e7c029a08757f06cb39f71c07bac1cd0cb (785-message commit), run 37882316346; does not qualify subsequent routing translations.",
     "references": [
       "https://learn.microsoft.com/en-us/cpp/c-language/using-wmain?view=msvc-170",
       "https://learn.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte"
     ]
+  },
+  "routingVerification": {
+    "translations": "Route gain range, invalid routing matrix, invalid routing buffer and invalid processing buffer translated in all 34 catalogs; contextual AI review; native review unverified.",
+    "actualRuntime": "Compiled CLI test rejects route gains -121 and +13 dB across all catalogs and fallback tags with exact localized errors and no output.",
+    "bufferFailureRuntime": "Not fault-injected; declaration and compiled-catalog coverage only.",
+    "result": "cli-localization CTest passed"
   }
 }

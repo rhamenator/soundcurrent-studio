@@ -1457,6 +1457,11 @@ Import into your library?</source>
       <extracomment>Owned WAVE writer validation of output speaker-position bitmask against output channel count. Metadata error, not disconnected speakers or balance. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid processing buffer</source>
+      <extracomment>AudioEngine reported an invalid interleaved sample buffer size relative to its channel count. Internal memory buffer, not an effect preset or playback device.</extracomment>
+      <translation>अमान्य प्रोसेसिंग बफ़र</translation>
+    </message>
+    <message>
       <source>Invalid profile library.</source>
       <translation>अमान्य प्रोफ़ाइल लाइब्रेरी।</translation>
     </message>
@@ -1477,6 +1482,16 @@ Import into your library?</source>
       <source>Invalid route number</source>
       <translation>ऑडियो कनेक्शन में संख्यात्मक मान अमान्य है</translation>
       <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
+    </message>
+    <message>
+      <source>Invalid routing buffer</source>
+      <extracomment>ChannelRouter rejected interleaved input/output sample spans with incompatible sizes. Internal memory buffer, not physical routing hardware or network buffering.</extracomment>
+      <translation>अमान्य रूटिंग बफ़र</translation>
+    </message>
+    <message>
+      <source>Invalid routing matrix</source>
+      <extracomment>ChannelRouter rejected the supplied matrix dimensions or finite weight values. Mathematical audio mixing/routing matrix, not a visual grid.</extracomment>
+      <translation>अमान्य रूटिंग मैट्रिक्स</translation>
     </message>
     <message>
       <source>Invalid speaker correction filter count</source>
@@ -2453,6 +2468,11 @@ Import into your library?</source>
     <message>
       <source>Rock</source>
       <translation>रॉक</translation>
+    </message>
+    <message>
+      <source>Route gain must be between -120 and +12 dB</source>
+      <extracomment>Standalone --route OUT:IN:DB matrix entry gain, inclusive -120 to +12 dB; machine numeric syntax and dB identifier unchanged. Not post gain or channel trim, whose ranges differ.</extracomment>
+      <translation>रूट का गेन -120 से +12 dB के बीच होना चाहिए</translation>
     </message>
     <message>
       <source>Routes into selected output channel</source>
