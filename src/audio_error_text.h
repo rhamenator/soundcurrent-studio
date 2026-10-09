@@ -7,6 +7,10 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if (diagnostic == QStringLiteral("Input is too short for RIFF/WAVE"))
+        return SC_TR("Input is too short for RIFF/WAVE");
+    if (diagnostic == QStringLiteral("Truncated extensible WAVE format"))
+        return SC_TR("Truncated extensible WAVE format");
     if (diagnostic == QStringLiteral("Output exceeds the RIFF/WAVE 4 GiB limit"))
         return SC_TR("Output exceeds the RIFF/WAVE 4 GiB limit");
     if (diagnostic == QStringLiteral("WAVE output exceeds its declared length"))

@@ -64,7 +64,9 @@
     },
     {
       "source": "Input is too short for RIFF/WAVE",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Invalid RIFF size",
@@ -158,7 +160,9 @@
     },
     {
       "source": "Truncated extensible WAVE format",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Unsupported WAVE rate or channel count",
@@ -175,14 +179,14 @@
       "nativeReviewed": false
     }
   ],
-  "status": "Twenty-two owned diagnostics translated and mapped; 10 other owned WAVE diagnostics remain untranslated",
+  "status": "Twenty-four owned diagnostics translated and mapped; 8 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 769-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 771-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -232,6 +236,10 @@
   ],
   "outputLimitChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 769 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "shortExtensibleChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 771 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

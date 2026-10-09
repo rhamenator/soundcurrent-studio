@@ -1282,6 +1282,11 @@ Importálja a könyvtárba?</translation>
       <translation>A bemenet több csatornát tartalmaz, mint a Studio-elrendezés; válasszon megfelelő vagy nagyobb elrendezést</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>A bemeneti fájl túl rövid a RIFF/WAVE formátumhoz</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Telepítse a SoundCurrent Audio összetevőt a hangillesztőprogram beállításával, majd nyissa meg újra az alkalmazást a mikrofon hangútjának engedélyezéséhez.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Importálja a könyvtárba?</translation>
       <source>Truncated chunk header</source>
       <translation>Csonka adatblokkfejléc</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>Csonka bővíthető WAVE-formátumstruktúra</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

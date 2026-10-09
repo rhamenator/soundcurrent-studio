@@ -23,6 +23,8 @@ class Fixture : public QTranslator {
   if(QByteArray(source)=="Excessive number of RIFF chunks")return "RIFF_CHUNKS";
   if(QByteArray(source)=="Output exceeds the RIFF/WAVE 4 GiB limit")return "RIFF_LIMIT";
   if(QByteArray(source)=="WAVE output exceeds its declared length")return "WAVE_LENGTH";
+  if(QByteArray(source)=="Input is too short for RIFF/WAVE")return "WAVE_SHORT";
+  if(QByteArray(source)=="Truncated extensible WAVE format")return "WAVE_EXTENSIBLE";
   if(QByteArray(source)=="Could not flush WAVE output")return "WAVE_FLUSH";
   if(QByteArray(source)=="Could not close WAVE output")return "WAVE_CLOSE";
   if(QByteArray(source)=="Cannot seek to WAVE audio")return "WAVE_SEEK";
@@ -40,6 +42,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Input is too short for RIFF/WAVE")=="WAVE_SHORT");
+ require(audioErrorText("Truncated extensible WAVE format")=="WAVE_EXTENSIBLE");
  require(audioErrorText("Output exceeds the RIFF/WAVE 4 GiB limit")=="RIFF_LIMIT");
  require(audioErrorText("WAVE output exceeds its declared length")=="WAVE_LENGTH");
  require(audioErrorText("Missing RIFF padding byte")=="RIFF_PADDING");

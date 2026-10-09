@@ -1282,6 +1282,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Đầu vào có nhiều kênh hơn bố cục Studio; chọn bố cục có số kênh bằng hoặc lớn hơn</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>Tệp đầu vào quá ngắn cho RIFF/WAVE</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Cài đặt SoundCurrent Audio bằng chức năng thiết lập trình điều khiển âm thanh, rồi mở lại ứng dụng để bật tuyến micrô.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Nhập vào thư viện của bạn?</translation>
       <source>Truncated chunk header</source>
       <translation>Phần đầu khối dữ liệu bị cắt cụt</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>Cấu trúc định dạng WAVE mở rộng bị cắt cụt</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

@@ -1282,6 +1282,11 @@ Importați în bibliotecă?</translation>
       <translation>Intrarea are mai multe canale decât configurația Studio; alegeți o configurație corespunzătoare sau mai mare</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>Fișierul de intrare este prea scurt pentru RIFF/WAVE</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Instalează SoundCurrent Audio prin configurarea driverului audio, apoi redeschide aplicația pentru a activa ruta microfonului.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Importați în bibliotecă?</translation>
       <source>Truncated chunk header</source>
       <translation>Antet de bloc trunchiat</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>Structură de format WAVE extensibil trunchiată</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

@@ -1282,6 +1282,11 @@ Import into your library?</source>
       <translation>入力のチャンネル数が Studio のレイアウトを超えています。同じか、より多いチャンネル数のレイアウトを選んでください</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>入力ファイルがRIFF/WAVEとして短すぎます</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>オーディオドライバーのセットアップから SoundCurrent Audio をインストールし、アプリを開き直してマイクの音声経路を有効にしてください。</translation>
     </message>
@@ -2949,6 +2954,11 @@ Import into your library?</source>
       <source>Truncated chunk header</source>
       <translation>データチャンクのヘッダーが途中で切れています</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>拡張可能WAVE形式の構造が途中で切れています</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

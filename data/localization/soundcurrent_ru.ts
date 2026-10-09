@@ -1282,6 +1282,11 @@ Import into your library?</source>
       <translation>Вход имеет больше каналов, чем конфигурация Studio; выберите соответствующую или большую конфигурацию</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>Входной файл слишком короткий для RIFF/WAVE</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Установите SoundCurrent Audio через настройку аудиодрайвера, затем снова откройте приложение, чтобы включить маршрут микрофона.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Import into your library?</source>
       <source>Truncated chunk header</source>
       <translation>Усечённый заголовок блока</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>Усечённая структура расширяемого формата WAVE</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

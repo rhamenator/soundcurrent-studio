@@ -1282,6 +1282,11 @@ Impor ke pustaka Anda?</translation>
       <translation>Masukan memiliki lebih banyak kanal daripada tata letak Studio; pilih tata letak dengan jumlah kanal yang sama atau lebih besar</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>Berkas masukan terlalu pendek untuk RIFF/WAVE</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Instal SoundCurrent Audio melalui pengaturan driver audio, lalu buka kembali aplikasi untuk mengaktifkan rute mikrofon.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Impor ke pustaka Anda?</translation>
       <source>Truncated chunk header</source>
       <translation>Header blok data terpotong</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>Struktur format WAVE yang dapat diperluas terpotong</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

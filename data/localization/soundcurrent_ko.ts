@@ -1282,6 +1282,11 @@ Import into your library?</source>
       <translation>입력 채널 수가 Studio 레이아웃보다 많습니다. 같거나 더 많은 채널의 레이아웃을 선택하세요</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>입력 파일이 RIFF/WAVE 형식에 비해 너무 짧습니다</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>오디오 드라이버 설정을 통해 SoundCurrent Audio를 설치한 다음 앱을 다시 열어 마이크 오디오 경로를 활성화하세요.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Import into your library?</source>
       <source>Truncated chunk header</source>
       <translation>데이터 청크 헤더가 불완전합니다</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>확장 가능한 WAVE 형식 구조가 불완전합니다</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>

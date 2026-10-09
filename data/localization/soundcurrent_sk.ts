@@ -1282,6 +1282,11 @@ Importovať do vašej knižnice?</translation>
       <translation>Vstup má viac kanálov než rozloženie Studio; zvoľte zodpovedajúce alebo väčšie rozloženie</translation>
     </message>
     <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>Vstupný súbor je pre RIFF/WAVE príliš krátky</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
       <translation>Nainštalujte SoundCurrent Audio pomocou nastavenia zvukového ovládača a potom aplikáciu znovu otvorte, aby sa aktivovala mikrofónová cesta.</translation>
     </message>
@@ -2949,6 +2954,11 @@ Importovať do vašej knižnice?</translation>
       <source>Truncated chunk header</source>
       <translation>Neúplná hlavička dátového bloku</translation>
       <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>Neúplná štruktúra rozšíriteľného formátu WAVE</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>
