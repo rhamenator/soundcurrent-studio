@@ -487,6 +487,11 @@ Importálja a könyvtárba?</translation>
       <translation>Nem ellenőrizhetők a futó hangszínszabályzók; a SoundCurrent nem kapcsolja be a feldolgozást.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>A bemeneti WAVE-fájl nem nyitható meg</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Nem olvasható a profilkönyvtár.</translation>
     </message>

@@ -487,6 +487,11 @@ Import into your library?</source>
       <translation>לא ניתן לבדוק אקולייזרים פועלים; SoundCurrent לא יפעיל עיבוד.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>לא ניתן לפתוח את קובץ הקלט WAVE</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>לא ניתן לקרוא את ספריית הפרופילים.</translation>
     </message>

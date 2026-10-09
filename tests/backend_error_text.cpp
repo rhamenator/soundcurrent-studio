@@ -13,6 +13,7 @@ class Fixture : public QTranslator {
  QString translate(const char *context,const char *source,const char *,int) const override {
   if(QByteArray(context)!="SoundCurrent")return {};
   if(QByteArray(source).startsWith("Invalid ") || QByteArray(source).startsWith("Too many ") || QByteArray(source)=="Duplicate Studio route" || QByteArray(source)=="Enhancements outside supported ranges" || QByteArray(source).startsWith("Shared and channel EQ"))return "OWNED_DIAGNOSTIC";
+  if(QByteArray(source)=="Cannot open input WAVE file")return "WAVE_OPEN";
   if(QByteArray(source)=="Read speaker level")return "LEVEL";
   if(QByteArray(source)=="Unsupported Studio profile schema")return "PROFILE_SCHEMA";
   if(QByteArray(source)=="Studio profile has an invalid numeric field")return "PROFILE_NUMBER";
@@ -24,6 +25,7 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Cannot open input WAVE file")=="WAVE_OPEN");
  const auto unicodeOutput=QString::fromUtf8("Réparation / 日本語 / العربية / %1 / 音声");
  const auto outputBytes=unicodeOutput.toUtf8()+"\r\n";
  QByteArray accumulated;

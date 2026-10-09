@@ -487,6 +487,11 @@ Import into your library?</source>
       <translation>ไม่สามารถตรวจสอบอีควอไลเซอร์ที่กำลังทำงานได้ SoundCurrent จะไม่เปิดการประมวลผล</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>ไม่สามารถเปิดไฟล์ WAVE ขาเข้าได้</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>ไม่สามารถอ่านคลังโปรไฟล์ได้</translation>
     </message>

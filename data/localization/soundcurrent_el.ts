@@ -487,6 +487,11 @@ Import into your library?</source>
       <translation>Δεν είναι δυνατός ο έλεγχος ενεργών ισοσταθμιστών· το SoundCurrent δεν θα ενεργοποιήσει την επεξεργασία.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>Δεν είναι δυνατό το άνοιγμα του αρχείου εισόδου WAVE</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Δεν είναι δυνατή η ανάγνωση της βιβλιοθήκης προφίλ.</translation>
     </message>

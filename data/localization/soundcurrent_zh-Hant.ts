@@ -487,6 +487,11 @@ Import into your library?</source>
       <translation>無法檢查正在執行的等化器；SoundCurrent 將不會啟用處理。</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>無法開啟輸入 WAVE 檔案</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>無法讀取設定檔資料庫。</translation>
     </message>

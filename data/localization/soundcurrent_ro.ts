@@ -487,6 +487,11 @@ Importați în bibliotecă?</translation>
       <translation>Nu se pot verifica egalizatoarele active; SoundCurrent nu va activa procesarea.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>Nu se poate deschide fișierul WAVE de intrare</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Nu se poate citi biblioteca de profiluri.</translation>
     </message>

@@ -487,6 +487,11 @@ Import into your library?</source>
       <translation>실행 중인 이퀄라이저를 확인할 수 없습니다. SoundCurrent는 처리를 활성화하지 않습니다.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>입력 WAVE 파일을 열 수 없습니다</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>프로파일 라이브러리를 읽을 수 없습니다.</translation>
     </message>

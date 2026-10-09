@@ -487,6 +487,11 @@ Importar para a sua biblioteca?</translation>
       <translation>Não é possível verificar os equalizadores em execução; o SoundCurrent não ativará o processamento.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>Não é possível abrir o ficheiro WAVE de entrada</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Não é possível ler a biblioteca de perfis.</translation>
     </message>

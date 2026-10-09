@@ -487,6 +487,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Không thể kiểm tra các bộ cân bằng âm đang chạy; SoundCurrent sẽ không bật xử lý.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>Không thể mở tệp WAVE đầu vào</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Không thể đọc thư viện cấu hình.</translation>
     </message>

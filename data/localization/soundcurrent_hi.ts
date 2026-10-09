@@ -487,6 +487,11 @@ Import into your library?</source>
       <translation>चल रहे इक्वलाइज़र की जाँच नहीं की जा सकती; SoundCurrent प्रोसेसिंग चालू नहीं करेगा।</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>इनपुट WAVE फ़ाइल नहीं खोली जा सकती</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>प्रोफ़ाइल लाइब्रेरी नहीं पढ़ी जा सकती।</translation>
     </message>

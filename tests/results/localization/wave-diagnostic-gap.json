@@ -8,7 +8,9 @@
     },
     {
       "source": "Cannot open input WAVE file",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Cannot seek to WAVE audio",
@@ -135,7 +137,12 @@
       "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "untranslated owned diagnostics require catalog entries, contextual translations and display-boundary mappings",
+  "status": "Input-file open diagnostic translated and mapped; 32 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
-  "wholeInterfaceCoverageProven": false
+  "wholeInterfaceCoverageProven": false,
+  "inputOpenChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
+  ],
+  "currentPackageQualification": "pending for 748-message catalog; earlier running Linux/Windows jobs test their recorded heads"
 }

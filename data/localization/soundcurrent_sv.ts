@@ -487,6 +487,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Kan inte kontrollera aktiva equalizers; SoundCurrent aktiverar inte bearbetningen.</translation>
     </message>
     <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>Kan inte öppna WAVE-indatafilen</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Cannot read profile library.</source>
       <translation>Kan inte läsa profilbiblioteket.</translation>
     </message>
