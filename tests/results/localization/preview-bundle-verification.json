@@ -11,8 +11,10 @@
     "soundcurrent-studio-1.1.0-1.el10.x86_64.rpm": "f1ba953583119509c6bf3d74c0e197256c8bf5a23eac30365ce063621fa7b0f1"
   },
   "windowsQualifiedProductionHead": "8fa1559e8f118fa0e8c1dcd79601120070fda34f",
-  "windowsCurrentAppAndInstallerSourcesMatch": true,
+  "windowsCurrentAppAndInstallerSourcesMatch": false,
   "scope": "Local unpublished preview assembly; easy-installer dry runs select current Ubuntu package without download/install. Current Linux container and Windows hosted lifecycle qualifications retained separately, including actual French easy-installer main on a verified local current package. No native-speaker verification or physical Windows audio qualification.",
   "nativeReviewed": false,
-  "releasePublished": false
+  "releasePublished": false,
+  "currentSourceQualification": "superseded by equipment summary and calibration-profile creation changes; fresh packages required",
+  "verificationAppliesToHistoricalBundle": true
 }
