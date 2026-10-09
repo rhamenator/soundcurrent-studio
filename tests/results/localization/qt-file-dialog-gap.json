@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "status": "basic labels/navigation and actual QAccessible fixture passed on compiled Linux builds; remaining chooser workflows incomplete",
+  "status": "basic/accessibility mappings passed local compiled tests; native Windows Qt 6.12 mismatch found and patched, fresh native qualification pending",
   "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
   "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
   "untranslatedObserved": [
@@ -48,8 +48,8 @@
     "https://github.com/qt/qtbase/blob/6.4/src/widgets/dialogs/qfiledialog.ui"
   ],
   "sourceSha256": {
-    "src/localization.h": "a1504aa8bc591ec1a5090686385b5f007131c5969a97cd664462da627225b3e9",
-    "tests/localization.cpp": "07532b65e36c7f0cf8fef1e80bab47051fae03654ca2f13fb0920a7b1b14c3e1",
+    "src/localization.h": "682d7be0bfeebdcdf99d7fec88b9c92e412b54cf792f04e2a6445170907e4ff9",
+    "tests/localization.cpp": "df69c6aff6366be652b3be60b4d96717777a1a4cdef48d22cbe4e0ed76ca67ce",
     "data/localization/catalogs.json": "54815d207709ebc627fd4d185ab89b3de1579fa2d2bf32a3bfe28cd6aa25586f"
   },
   "accessibilityTestScope": "Actual QAccessible Name/Description queries for six navigation buttons, sidebar and list/tree file views, all 33 non-English catalogs. Does not test screen-reader speech.",
@@ -60,5 +60,6 @@
     "platform": "Qt offscreen",
     "catalogs": 33,
     "screenReaderSpeechTested": false
-  }
+  },
+  "nativeWindowsKnownFailure": "tests/results/localization/qt-file-dialog-qt612-compatibility.json"
 }
