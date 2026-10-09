@@ -40,7 +40,7 @@
   "evidenceSha256": {
     "data/localization/catalogs.json": "39cf0c0e68187160797dbdbb4d5d8d944f93fca061bccde1303496efafc362d2",
     "data/localization/translation-context.json": "26109a5c0ae16aebed9de5041f80813253572c4c95b6ac5960ef26d2af44b86a",
-    "docs/translation-review.md": "4a27f24c1a34bc3cfec3853dafb579cb0142562cd54e47159762ef1e55316cca",
+    "docs/translation-review.md": "d7e14379dc7ea0e6010a65c40129ffc4e78c905d4ac164eb8bda387384569da5",
     "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c",
     "tests/results/localization/dynamic-provenance-review.json": "71d0c8028e9e60ba3f96e62f1be714ab3673fc65c76350a2aca874f1e7f6267c",
     "tests/results/localization/header-list-display-guard.json": "59de5321940447a4a3156780172610981f35fc7d453b622e205c1217eb86dca1",
