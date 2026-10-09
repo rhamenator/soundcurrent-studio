@@ -17,5 +17,13 @@
   "productionProcessingChanged": false,
   "nativeSpeakerVerification": "unverified",
   "currentPackagesQualified": false,
-  "wholeInterfaceCoverageProven": false
+  "wholeInterfaceCoverageProven": false,
+  "additionalLinuxValidation": {
+    "sourceCommit": "c95cae01efd7f47d7fae6879d2cd28e204c8527d",
+    "selection": "^localized-ui-",
+    "passed": 35,
+    "scope": "33 non-English locales and two pseudo locales; offscreen Qt UI assertions, not installed desktop/package lifecycle",
+    "evidence": "owned-validation-all-locales-host.log"
+  },
+  "pendingWindowsRun": 37863140873
 }
