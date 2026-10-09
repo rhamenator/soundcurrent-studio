@@ -1401,6 +1401,11 @@ Import into your library?</source>
       <translation>잘못된 필터입니다.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>부동 소수점 WAVE 형식이 유효하지 않습니다</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>측정된 앰프 프로파일이 잘못되었습니다. 모델, HTTPS 측정 출처, 측정 조건 및 제한 범위 내의 PK/LS/HS 필터 1~16개가 필요합니다. README의 프로파일 형식을 참조하세요.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>잘못된 스피커 믹스 형식</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>유효 비트 수가 올바르지 않습니다</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

@@ -1401,6 +1401,11 @@ Importați în bibliotecă?</translation>
       <translation>Filtru nevalid.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Format WAVE în virgulă mobilă nevalid</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Profil măsurat de amplificator nevalid. Necesită model, sursă de măsurare HTTPS, condiții și 1–16 filtre PK/LS/HS în limite. Consultați formatul profilului în README.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Importați în bibliotecă?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Format de mixaj al difuzoarelor nevalid</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Număr nevalid de biți valizi</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

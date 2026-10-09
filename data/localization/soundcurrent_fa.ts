@@ -1401,6 +1401,11 @@ Import into your library?</source>
       <translation>فیلتر نامعتبر است.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>قالب ممیز شناور WAVE نامعتبر است</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>پروفایل اندازه‌گیری‌شده تقویت‌کننده نامعتبر است. مدل، منبع اندازه‌گیری HTTPS، شرایط و 1–16 فیلتر PK/LS/HS در محدوده مجاز لازم است. قالب پروفایل را در README ببینید.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>قالب میکس بلندگو نامعتبر است</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>تعداد بیت‌های معتبر نامعتبر است</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

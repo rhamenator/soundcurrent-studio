@@ -1401,6 +1401,11 @@ Importera till ditt bibliotek?</translation>
       <translation>Ogiltigt filter.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Ogiltigt WAVE-flyttalsformat</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Ogiltig uppmätt förstärkarprofil. Modell, HTTPS-mätkälla, förhållanden och 1–16 PK/LS/HS-filter inom gränserna krävs. Se profilformatet i README.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Importera till ditt bibliotek?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Ogiltigt mixformat för högtalare</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Ogiltigt antal giltiga bitar</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

@@ -1401,6 +1401,11 @@ Nhập vào thư viện của bạn?</translation>
       <translation>Bộ lọc không hợp lệ.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Định dạng WAVE dấu phẩy động không hợp lệ</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Cấu hình ampli từ phép đo không hợp lệ. Cần có mẫu, nguồn đo HTTPS, điều kiện đo và 1–16 bộ lọc PK/LS/HS trong giới hạn. Xem định dạng cấu hình trong README.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Nhập vào thư viện của bạn?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Định dạng trộn âm loa không hợp lệ</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Số bit hợp lệ không đúng</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

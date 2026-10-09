@@ -1401,6 +1401,11 @@ Import into your library?</source>
       <translation>フィルターが無効です。</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>浮動小数点WAVE形式が無効です</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>測定済みのアンププロファイルが無効です。モデル、HTTPS の測定出典、測定条件、および制限範囲内の PK/LS/HS フィルター 1～16 個が必要です。README のプロファイル形式を参照してください。</translation>
     </message>
@@ -1458,6 +1463,11 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>スピーカーのミックス形式が無効です</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>有効ビット数が不正です</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

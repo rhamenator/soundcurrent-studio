@@ -35,6 +35,8 @@ class Fixture : public QTranslator {
 int main(int argc,char **argv) try {
  QCoreApplication app(argc,argv);Fixture fixture;app.installTranslator(&fixture);
  using soundcurrent::i18n::audioErrorText;
+ require(audioErrorText("Invalid valid-bit count")=="OWNED_DIAGNOSTIC");
+ require(audioErrorText("Invalid float WAVE format")=="OWNED_DIAGNOSTIC");
  require(audioErrorText("Incomplete WAVE output")=="WAVE_INCOMPLETE");
  require(audioErrorText("Truncated chunk header")=="CHUNK_HEADER");
  require(audioErrorText("Could not write WAVE header")=="WAVE_HEADER");

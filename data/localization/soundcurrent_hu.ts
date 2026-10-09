@@ -1401,6 +1401,11 @@ Importálja a könyvtárba?</translation>
       <translation>Érvénytelen szűrő.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Érvénytelen lebegőpontos WAVE-formátum</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Érvénytelen mért erősítőprofil. Modell, HTTPS-mérési forrás, körülmények és 1–16 határokon belüli PK/LS/HS-szűrő szükséges. A profilformátumot lásd a README-ben.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Érvénytelen hangszórókeverési formátum</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Érvénytelen számú érvényes bit</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

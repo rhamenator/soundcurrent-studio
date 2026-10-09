@@ -1401,6 +1401,11 @@ Import into your library?</source>
       <translation>濾波器無效。</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>浮點 WAVE 格式無效</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>實測擴大機設定檔無效。需要型號、HTTPS 測量來源、測量條件及 1–16 個在範圍內的 PK/LS/HS 濾波器。請參閱 README 中的設定檔格式。</translation>
     </message>
@@ -1458,6 +1463,11 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>喇叭混音格式無效</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>有效位元數不正確</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

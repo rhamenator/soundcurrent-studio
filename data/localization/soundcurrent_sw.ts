@@ -1401,6 +1401,11 @@ Uingize kwenye maktaba yako?</translation>
       <translation>Kichujio si sahihi.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Umbizo la WAVE la namba za nukta inayoelea si halali</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Wasifu wa amplifaya uliopimwa si sahihi. Unahitaji modeli, chanzo cha vipimo cha HTTPS, masharti, na vichujio 1–16 vya PK/LS/HS vyenye thamani ndani ya mipaka. Angalia muundo wa wasifu katika README.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Uingize kwenye maktaba yako?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Muundo wa kuchanganya sauti ya spika si sahihi</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Idadi ya biti halali si sahihi</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

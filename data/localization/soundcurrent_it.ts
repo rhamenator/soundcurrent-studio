@@ -1401,6 +1401,11 @@ Importare nella libreria?</translation>
       <translation>Filtro non valido.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Formato WAVE a virgola mobile non valido</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Profilo misurato dell’amplificatore non valido. Richiede modello, fonte di misurazione HTTPS, condizioni e 1–16 filtri PK/LS/HS entro i limiti. Vedi il formato del profilo nel README.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Importare nella libreria?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Formato di mixaggio degli altoparlanti non valido</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Numero di bit validi non corretto</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

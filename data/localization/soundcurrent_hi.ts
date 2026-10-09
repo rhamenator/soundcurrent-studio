@@ -1401,6 +1401,11 @@ Import into your library?</source>
       <translation>अमान्य फ़िल्टर।</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>अमान्य फ़्लोटिंग-पॉइंट WAVE प्रारूप</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>मापी गई ऐम्प्लिफ़ायर प्रोफ़ाइल अमान्य है। मॉडल, HTTPS माप स्रोत, माप की स्थितियाँ और सीमा के भीतर 1–16 PK/LS/HS फ़िल्टर आवश्यक हैं। README में प्रोफ़ाइल प्रारूप देखें।</translation>
     </message>
@@ -1458,6 +1463,11 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>अमान्य स्पीकर मिक्स फ़ॉर्मैट</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>मान्य बिटों की संख्या अमान्य है</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

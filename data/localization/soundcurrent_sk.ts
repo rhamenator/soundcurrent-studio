@@ -1401,6 +1401,11 @@ Importovať do vašej knižnice?</translation>
       <translation>Neplatný filter.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Neplatný formát WAVE s pohyblivou rádovou čiarkou</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Neplatný nameraný profil zosilňovača. Vyžaduje model, zdroj merania cez HTTPS, podmienky a 1–16 filtrov PK/LS/HS v povolených rozsahoch. Formát profilu je uvedený v README.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Importovať do vašej knižnice?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Neplatný zmiešavací formát reproduktorov</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Neplatný počet platných bitov</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

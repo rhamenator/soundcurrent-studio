@@ -82,7 +82,9 @@
     },
     {
       "source": "Invalid float WAVE format",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Invalid output WAVE format",
@@ -96,7 +98,9 @@
     },
     {
       "source": "Invalid valid-bit count",
-      "mappedAtDesktopBoundary": false
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
     },
     {
       "source": "Missing RIFF padding byte",
@@ -159,14 +163,14 @@
       "mappedAtDesktopBoundary": false
     }
   ],
-  "status": "Fourteen owned diagnostics translated and mapped; 18 other owned WAVE diagnostics remain untranslated",
+  "status": "Sixteen owned diagnostics translated and mapped; 16 other owned WAVE diagnostics remain untranslated",
   "nativeReviewed": false,
   "wholeInterfaceCoverageProven": false,
   "inputOpenChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
   ],
-  "currentPackageQualification": "pending for 761-message catalog; retained package evidence tests recorded earlier heads",
+  "currentPackageQualification": "pending for 763-message catalog; retained package evidence tests recorded earlier heads",
   "excludedBinaryLiterals": [
     "WAVEfmt "
   ],
@@ -200,6 +204,10 @@
   ],
   "incompleteHeaderChecks": [
     "scripts/localization.py --update --require-complete passed: 34 catalogs, 761 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "bitFloatChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 763 messages, zero unfinished",
     "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
   ]
 }

@@ -1401,6 +1401,11 @@ Import into your library?</source>
       <translation>ฟิลเตอร์ไม่ถูกต้อง</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>รูปแบบ WAVE แบบทศนิยมลอยตัวไม่ถูกต้อง</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>โปรไฟล์เครื่องขยายเสียงที่วัดได้ไม่ถูกต้อง ต้องมีรุ่น แหล่งข้อมูลการวัด HTTPS เงื่อนไข และฟิลเตอร์ PK/LS/HS จำนวน 1–16 ตัวที่มีค่าอยู่ในขอบเขต ดูรูปแบบโปรไฟล์ใน README</translation>
     </message>
@@ -1458,6 +1463,11 @@ Import into your library?</source>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>รูปแบบมิกซ์ลำโพงไม่ถูกต้อง</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>จำนวนบิตที่ใช้ได้ไม่ถูกต้อง</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>

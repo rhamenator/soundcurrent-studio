@@ -1401,6 +1401,11 @@ Kitaplığınıza aktarılsın mı?</translation>
       <translation>Geçersiz filtre.</translation>
     </message>
     <message>
+      <source>Invalid float WAVE format</source>
+      <translation>Geçersiz kayan noktalı WAVE biçimi</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Geçersiz ölçülmüş amplifikatör profili. Model, HTTPS ölçüm kaynağı, koşullar ve sınırlar içinde 1–16 PK/LS/HS filtresi gerekir. README'deki profil biçimine bakın.</translation>
     </message>
@@ -1458,6 +1463,11 @@ Kitaplığınıza aktarılsın mı?</translation>
     <message>
       <source>Invalid speaker mix format</source>
       <translation>Geçersiz hoparlör miks biçimi</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>Geçersiz geçerli bit sayısı</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>
