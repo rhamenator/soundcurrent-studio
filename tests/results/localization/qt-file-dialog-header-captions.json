@@ -9,14 +9,13 @@
   "scope": "Standard QFileDialog four-column headers and exactly three visibility actions; custom proxy guard and actual column toggle/restore tests",
   "sourceSha256": {
     "src/localization.h": "1d82243a04150a1252c4564270f00879474427d32f13f178112c9bd2c467789a",
-    "tests/localization.cpp": "6b5b48604f0ec1d4167d0d2a821f6674ebe633f7b5b4e7dad81964cad8f8dcf1",
+    "tests/localization.cpp": "8af0b1139a0bb9ff7e68b94cb957fb9508fba97f9609a4b4ba832701e4242721",
     "data/localization/catalogs.json": "55f2993219e10a999a9e26c2f0e68838d7e96bd0cfb21dc3549ee79b7eea3969"
   },
   "remaining": [
     "Native Windows and changed packages",
     "Visual/screen-reader qualification",
-    "Broader permissions/failures and MIME display coverage",
-    "LanguageChange deferred-branch behavioral fixture"
+    "Broader permissions/failures and MIME display coverage"
   ],
   "nativeReviewed": false,
   "localEvidence": {
@@ -24,5 +23,14 @@
     "log": "tests/results/localization/qt-file-dialog-header-linux.log",
     "sha256": "afc1a73c85be36d586c727cc19e47523fb4b1798712c33d96e8877a0c549b53b",
     "note": "EQ log includes localization plus worker; Studio final log is worker-only, preceding GUI fixture result recorded in progress report."
+  },
+  "deferredEventFixture": {
+    "scope": "Same-catalog explicit Qt LanguageChange event, actual Qt retranslation then queued whole captions, path/filter identity; queued callback canceled when dialog destroyed",
+    "catalogs": 33,
+    "retirementLocale": "fr",
+    "liveLanguageSettingSwitchTested": false,
+    "status": "passed in current compiled Linux fixture",
+    "log": "tests/results/localization/qt-file-dialog-retranslation-linux.log",
+    "sha256": "bfade5f184605ceb551b0b0570c82e7e2e5426d17f6815d25339c05f17fcf2ca"
   }
 }
