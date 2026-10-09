@@ -865,6 +865,11 @@ Importeren in uw bibliotheek?</translation>
       <translation>Aangepast</translation>
     </message>
     <message>
+      <source>Custom copy of %1</source>
+      <translation>Aangepaste kopie van %1</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Cut</source>
       <translation>Knippen</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
@@ -1315,6 +1320,11 @@ Importeren in uw bibliotheek?</translation>
       <translation>Responstekst importeren</translation>
     </message>
     <message>
+      <source>Imported %1; SHA256 %2</source>
+      <translation>%1 geïmporteerd; SHA256 %2</translation>
+      <extracomment>%1 is an exact imported filename, %2 is its raw hexadecimal SHA256 digest. Preserve SHA256 and both placeholders; no identity or file-content changes.</extracomment>
+    </message>
+    <message>
       <source>In-wall speaker</source>
       <translation>Wandinbouwluidspreker</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
@@ -1710,6 +1720,11 @@ Importeren in uw bibliotheek?</translation>
       <translation>Gemeten modelcorrectie wordt toegevoegd aan uw luister-EQ. U kunt nog steeds bas toevoegen of elke band aanpassen. Bevat conservatieve versterkingsgrenzen; effecten van kamer en versterker vereisen een systeemmeting.</translation>
     </message>
     <message>
+      <source>Measured response</source>
+      <translation>Gemeten respons</translation>
+      <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
       <source>Measurement conditions are required.</source>
       <translation>Meetomstandigheden zijn verplicht.</translation>
     </message>
@@ -1855,6 +1870,11 @@ Importeren in uw bibliotheek?</translation>
       <translation>Dempen</translation>
     </message>
     <message>
+      <source>My equipment</source>
+      <translation>Mijn apparatuur</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Name</source>
       <translation>Naam</translation>
     </message>
@@ -1870,6 +1890,11 @@ Importeren in uw bibliotheek?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Natuurlijke microfoonequalizer aan of uit</translation>
+    </message>
+    <message>
+      <source>New profile</source>
+      <translation>Nieuw profiel</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>New rendered WAVE file</source>
@@ -3291,6 +3316,21 @@ Importeren in uw bibliotheek?</translation>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
       <translation>Regionale systeeminstellingen gebruiken</translation>
+    </message>
+    <message>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>Door gebruiker geïmporteerde relatieve frequentierespons; geef vóór gebruik de microfoonoriëntatie / het serienummer of de meetomstandigheden van de luidspreker op.</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created correction; enter equipment and measurement conditions.</source>
+      <translation>Door gebruiker gemaakte correctie; voer apparatuur en meetomstandigheden in.</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created profile</source>
+      <translation>Door gebruiker gemaakt profiel</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>VB-CABLE has a driver record but no usable audio endpoints. Setup offers repair: remove the driver, restart, reinstall, and restart again.</source>

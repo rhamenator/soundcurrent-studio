@@ -865,6 +865,11 @@ Import into your library?</source>
       <translation>कस्टम</translation>
     </message>
     <message>
+      <source>Custom copy of %1</source>
+      <translation>%1 की अनुकूलित प्रतिलिपि</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Cut</source>
       <translation>काटें</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
@@ -1315,6 +1320,11 @@ Import into your library?</source>
       <translation>प्रतिक्रिया टेक्स्ट आयात करें</translation>
     </message>
     <message>
+      <source>Imported %1; SHA256 %2</source>
+      <translation>%1 आयात किया गया; SHA256 %2</translation>
+      <extracomment>%1 is an exact imported filename, %2 is its raw hexadecimal SHA256 digest. Preserve SHA256 and both placeholders; no identity or file-content changes.</extracomment>
+    </message>
+    <message>
       <source>In-wall speaker</source>
       <translation>दीवार में लगे स्पीकर</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
@@ -1710,6 +1720,11 @@ Import into your library?</source>
       <translation>मापा गया मॉडल सुधार आपके सुनने के EQ में जोड़ा जाता है। उसके बाद भी आप बास बढ़ा सकते हैं या कोई बैंड समायोजित कर सकते हैं। गेन की सावधानीपूर्ण सीमाएँ लागू होती हैं; कमरे और ऐम्प्लिफ़ायर के प्रभाव के लिए पूरे सिस्टम का माप आवश्यक है।</translation>
     </message>
     <message>
+      <source>Measured response</source>
+      <translation>मापी गई प्रतिक्रिया</translation>
+      <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
       <source>Measurement conditions are required.</source>
       <translation>माप की स्थितियाँ आवश्यक हैं।</translation>
     </message>
@@ -1855,6 +1870,11 @@ Import into your library?</source>
       <translation>म्यूट</translation>
     </message>
     <message>
+      <source>My equipment</source>
+      <translation>मेरे उपकरण</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Name</source>
       <translation>नाम</translation>
     </message>
@@ -1870,6 +1890,11 @@ Import into your library?</source>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>स्वाभाविक माइक्रोफ़ोन इक्वलाइज़र चालू या बंद</translation>
+    </message>
+    <message>
+      <source>New profile</source>
+      <translation>नई प्रोफ़ाइल</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>New rendered WAVE file</source>
@@ -3291,6 +3316,21 @@ Import into your library?</source>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
       <translation>सिस्टम की क्षेत्रीय सेटिंग इस्तेमाल करें</translation>
+    </message>
+    <message>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>उपयोगकर्ता द्वारा आयात की गई सापेक्ष आवृत्ति प्रतिक्रिया; उपयोग से पहले माइक्रोफ़ोन की दिशा / क्रमांक या स्पीकर मापन की स्थितियाँ दर्ज करें।</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created correction; enter equipment and measurement conditions.</source>
+      <translation>उपयोगकर्ता द्वारा बनाया गया सुधार; उपकरण और मापन की स्थितियाँ दर्ज करें।</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created profile</source>
+      <translation>उपयोगकर्ता द्वारा बनाई गई प्रोफ़ाइल</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>VB-CABLE has a driver record but no usable audio endpoints. Setup offers repair: remove the driver, restart, reinstall, and restart again.</source>

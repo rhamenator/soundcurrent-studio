@@ -865,6 +865,11 @@ Importálja a könyvtárba?</translation>
       <translation>Egyéni</translation>
     </message>
     <message>
+      <source>Custom copy of %1</source>
+      <translation>%1 egyéni másolata</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Cut</source>
       <translation>Kivágás</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
@@ -1315,6 +1320,11 @@ Importálja a könyvtárba?</translation>
       <translation>Frekvenciamenet szövegének importálása</translation>
     </message>
     <message>
+      <source>Imported %1; SHA256 %2</source>
+      <translation>%1 importálva; SHA256 %2</translation>
+      <extracomment>%1 is an exact imported filename, %2 is its raw hexadecimal SHA256 digest. Preserve SHA256 and both placeholders; no identity or file-content changes.</extracomment>
+    </message>
+    <message>
       <source>In-wall speaker</source>
       <translation>Falba építhető hangsugárzó</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
@@ -1710,6 +1720,11 @@ Importálja a könyvtárba?</translation>
       <translation>A mért modellkorrekció hozzáadódik a hallgatási EQ-hoz. Továbbra is hozzáadhat basszust vagy módosíthat bármely sávot. Óvatos erősítési korlátokat tartalmaz; a szoba és az erősítő hatásaihoz rendszermérés szükséges.</translation>
     </message>
     <message>
+      <source>Measured response</source>
+      <translation>Mért átvitel</translation>
+      <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
       <source>Measurement conditions are required.</source>
       <translation>A mérési körülmények megadása kötelező.</translation>
     </message>
@@ -1855,6 +1870,11 @@ Importálja a könyvtárba?</translation>
       <translation>Némítás</translation>
     </message>
     <message>
+      <source>My equipment</source>
+      <translation>Saját eszközeim</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Name</source>
       <translation>Név</translation>
     </message>
@@ -1870,6 +1890,11 @@ Importálja a könyvtárba?</translation>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>Természetes mikrofon-hangszínszabályzó be- vagy kikapcsolva</translation>
+    </message>
+    <message>
+      <source>New profile</source>
+      <translation>Új profil</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>New rendered WAVE file</source>
@@ -3291,6 +3316,21 @@ Importálja a könyvtárba?</translation>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
       <translation>Rendszer területi beállításainak használata</translation>
+    </message>
+    <message>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>Felhasználó által importált relatív frekvenciaátvitel; használat előtt adja meg a mikrofon irányát / sorozatszámát vagy a hangsugárzó mérési körülményeit.</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created correction; enter equipment and measurement conditions.</source>
+      <translation>Felhasználó által létrehozott korrekció; adja meg az eszközt és a mérési körülményeket.</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created profile</source>
+      <translation>Felhasználó által létrehozott profil</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>VB-CABLE has a driver record but no usable audio endpoints. Setup offers repair: remove the driver, restart, reinstall, and restart again.</source>

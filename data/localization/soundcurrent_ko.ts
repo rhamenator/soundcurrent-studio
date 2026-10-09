@@ -865,6 +865,11 @@ Import into your library?</source>
       <translation>사용자 지정</translation>
     </message>
     <message>
+      <source>Custom copy of %1</source>
+      <translation>%1의 사용자 정의 사본</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Cut</source>
       <translation>잘라내기</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
@@ -1315,6 +1320,11 @@ Import into your library?</source>
       <translation>주파수 응답 텍스트 가져오기</translation>
     </message>
     <message>
+      <source>Imported %1; SHA256 %2</source>
+      <translation>%1 가져옴; SHA256 %2</translation>
+      <extracomment>%1 is an exact imported filename, %2 is its raw hexadecimal SHA256 digest. Preserve SHA256 and both placeholders; no identity or file-content changes.</extracomment>
+    </message>
+    <message>
       <source>In-wall speaker</source>
       <translation>벽 매립형 스피커</translation>
       <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
@@ -1710,6 +1720,11 @@ Import into your library?</source>
       <translation>측정된 모델 보정은 감상 EQ에 추가됩니다. 이후에도 저음을 더하거나 각 밴드를 조절할 수 있습니다. 보수적인 게인 제한이 적용되며, 실내 및 앰프의 영향은 시스템 측정이 필요합니다.</translation>
     </message>
     <message>
+      <source>Measured response</source>
+      <translation>측정된 응답</translation>
+      <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
       <source>Measurement conditions are required.</source>
       <translation>측정 조건은 필수입니다.</translation>
     </message>
@@ -1855,6 +1870,11 @@ Import into your library?</source>
       <translation>음소거</translation>
     </message>
     <message>
+      <source>My equipment</source>
+      <translation>내 장비</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
       <source>Name</source>
       <translation>이름</translation>
     </message>
@@ -1870,6 +1890,11 @@ Import into your library?</source>
     <message>
       <source>Natural microphone equalizer on or off</source>
       <translation>자연스러운 마이크 이퀄라이저 켜기 또는 끄기</translation>
+    </message>
+    <message>
+      <source>New profile</source>
+      <translation>새 프로필</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>New rendered WAVE file</source>
@@ -3291,6 +3316,21 @@ Import into your library?</source>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
       <translation>시스템 지역 설정 사용</translation>
+    </message>
+    <message>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>사용자가 가져온 상대 주파수 응답입니다. 사용하기 전에 마이크 방향 / 일련번호 또는 스피커 측정 조건을 지정하세요.</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created correction; enter equipment and measurement conditions.</source>
+      <translation>사용자가 만든 보정입니다. 장비와 측정 조건을 입력하세요.</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created profile</source>
+      <translation>사용자가 만든 프로필</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>VB-CABLE has a driver record but no usable audio endpoints. Setup offers repair: remove the driver, restart, reinstall, and restart again.</source>
