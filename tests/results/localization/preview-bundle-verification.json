@@ -1,18 +1,18 @@
 {
   "previewDirectory": "/home/rich/dev/soundcurrent-localization-previews/soundcurrent-studio",
   "linuxInstaller": "/home/rich/dev/soundcurrent-localization-previews/soundcurrent-studio/SoundCurrent-Studio-Linux-Installer.run",
-  "linuxInstallerSha256": "72f7c9dc8cb32ae82437e326cfb5c770a1f064a47009f6fe8416a4b52b5a37b6",
+  "linuxInstallerSha256": "cc4c27694dd7d58e659e59b778a318663ec607e99ac8607bf577c53e37dc1fa1",
   "manifestValidated": true,
   "embeddedCatalogMatchesCurrentSource": true,
   "localeDryRuns": 34,
   "packageHashes": {
-    "soundcurrent-studio_1.1.0_amd64.deb": "0f7585b8ec7f94b615a5d4b6d7303cbd3b53d0defa3f6bf2ee7cc8d7de3131f9",
-    "soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm": "ce2c8aa2573e373c903568a3b9532b2bbfb9b13e55ceefc1efeb69d18e784676",
-    "soundcurrent-studio-1.1.0-1.el10.x86_64.rpm": "b68576831a4a7739b6474f3f2e02c7478b58bcc4dd16e7c83f1fdb9b7de63fad"
+    "soundcurrent-studio_1.1.0_amd64.deb": "94c075329acbda6e681f83a41d1f6a37ac6b7a5c32a804489176aa9bd42798f7",
+    "soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm": "b07a7ab868eb52fb273cf27022a0527c08461bb2b4290a332363e257643917b8",
+    "soundcurrent-studio-1.1.0-1.el10.x86_64.rpm": "f1ba953583119509c6bf3d74c0e197256c8bf5a23eac30365ce063621fa7b0f1"
   },
-  "windowsQualifiedProductionHead": "32ff347fd5d20f46e48a9450d6959c75fa5e7181",
+  "windowsQualifiedProductionHead": "8fa1559e8f118fa0e8c1dcd79601120070fda34f",
   "windowsCurrentAppAndInstallerSourcesMatch": true,
-  "scope": "Local unpublished preview assembly; easy-installer dry runs select current Ubuntu package without download/install. Earlier Linux container and Windows hosted lifecycle qualifications retained separately. No privileged easy-installer execution or native-speaker verification.",
+  "scope": "Local unpublished preview assembly; easy-installer dry runs select current Ubuntu package without download/install. Current Linux container and Windows hosted lifecycle qualifications retained separately, including actual French easy-installer main on a verified local current package. No native-speaker verification or physical Windows audio qualification.",
   "nativeReviewed": false,
   "releasePublished": false
 }
