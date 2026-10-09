@@ -65,8 +65,15 @@
   "evidenceSha256": {
     "src/main.cpp": "64230dad7a8ec5abd048bffc5a1dd489d716cd7bde8a8c78a87a09480e472cec",
     "scripts/localization.py": "96d7d3ca4078a537f5c194cdb2bcc4cc6ec53665c15ce7188eebd0a3203bd2b4",
-    "tests/startup_diagnostics_localization.py": "6eed32edc3822d2dc94a0be463c0fcc7f51b67986b2945ea4e5bc977d09bb84c",
+    "tests/startup_diagnostics_localization.py": "0a907eb0492e583b63f4856cd95a99ee210ddef76c688216d8b8491b7885f4d0",
     "tests/translation_catalogs.py": "a6be5089c0655e8158605a5b9e0589e2fc72d317afbe6b8d00f21fc40494959f",
     "CMakeLists.txt": "fda407b1c0f8283e4f8368df2009358ddca5ce785c7ebbbf413c931dc6986129"
+  },
+  "rpmCaptureCorrection": {
+    "observedFailure": "Fedora and AlmaLinux EQ package CTest: exit 1, empty captured stderr in the startup lock test. Ubuntu passed.",
+    "qtSource": "https://github.com/qt/qtbase/blob/6.10/src/corelib/global/qlogging.cpp",
+    "mechanism": "Qt chooses journald/syslog system sinks when configured. QT_FORCE_STDERR_LOGGING=1 makes shouldLogToStderr true.",
+    "fix": "Set QT_FORCE_STDERR_LOGGING=1 and UTF-8 process locale only in the fixture subprocess; retain production default logging.",
+    "qualification": "Corrected real fixture passed locally in fr/ar/nn for both rebuilt apps. Corrected RPM qualification pending."
   }
 }
