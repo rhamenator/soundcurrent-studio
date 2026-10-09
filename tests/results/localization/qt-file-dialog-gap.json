@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "status": "Generic Qt file-type and prior chooser fixtures passed compiled Linux tests; remaining workflows and native Windows qualification incomplete",
+  "status": "three missing-path/overwrite messages and existing chooser fixtures passed compiled Linux checks; remaining workflows and fresh native/package qualification incomplete",
   "probeSourceSha256": "b3be9f969d44f0352b65c07ce5b0e22ff63d66e26b95b68c3a1c7874ebdfd08f",
   "probeScope": "Standalone Qt6Widgets QFileDialog using the actual EQ compiled French catalog and shared StandardActionTranslator. Offscreen, DontUseNativeDialog. No file selection, settings writes, audio or VM. Shared implementation matches Studio; Studio full app dialog not separately exercised.",
   "untranslatedObserved": [
@@ -38,9 +38,8 @@
   "remainingScope": [
     "Header-visibility menu composition",
     "External MIME/file-association descriptors",
-    "Selected-locale file size/date formatting",
-    "Open/save error and confirmation dialogs",
-    "Native Windows qualification",
+    "Deletion/permission errors and other unmapped chooser strings",
+    "Current native Windows/package qualification",
     "Screen-reader listening test"
   ],
   "localRuntimeEvidence": "CTest localization passed across all 33 non-English catalogs: actual DontUseNativeDialog controls, Unicode/literal-percent filenames, filter preservation and plugin-context exclusion. Offscreen constructor/control inspection; no acceptance, file creation or errors exercised.",
@@ -49,9 +48,9 @@
     "https://github.com/qt/qtbase/blob/6.4/src/widgets/dialogs/qfiledialog.ui"
   ],
   "sourceSha256": {
-    "src/localization.h": "a9222646f7a3003622f11b68c6cb2a6f687454bcd922f1afd9924bd9ed4a2b35",
-    "tests/localization.cpp": "ade8909117100c074fd032ec0f2c23c9083ac54aba07c22a9353d3ab73b643d6",
-    "data/localization/catalogs.json": "596a17c6b56e77c6aeda792996e4f422f3be0e26471971f8f3010d1dc1ad982d"
+    "src/localization.h": "3827c8e93ef8d090994717aaba9ad42a8c9a2d9a8666f6d3a1c9c40d1199c01a",
+    "tests/localization.cpp": "91b58bec6751f0244b474cafead5a0e2424906d0e1e65bd580d5444c487c2045",
+    "data/localization/catalogs.json": "c3878bfd9c6a02e729519c1f86c46bf2b8013bae00fb3a14b8c71816cd0f032a"
   },
   "accessibilityTestScope": "Actual QAccessible Name/Description queries for six navigation buttons, sidebar and list/tree file views, all 33 non-English catalogs. Does not test screen-reader speech.",
   "accessibilityLinuxEvidence": {
@@ -83,5 +82,18 @@
     "result": "passed",
     "catalogs": 33,
     "scope": "actual generic-provider directory/drive/unknown; direct File/Shortcut and Windows folder alias; no MIME/provider override or file operations"
+  },
+  "upstreamInventory": "tests/results/localization/qt-file-dialog-source-inventory.json",
+  "errorLinuxEvidence": {
+    "log": "tests/results/localization/qt-file-dialog-errors-linux.log",
+    "sha256": "555c466c3de55d4291f6fb8d3f1bb1d2c6076a1b7fb4ff3bc0bd20a9e318339a",
+    "result": "passed",
+    "catalogChecks": 33,
+    "actualModalLocales": [
+      "fr",
+      "ar",
+      "nn"
+    ],
+    "scope": "Missing file/directory and declined overwrite; raw QMessageBox text and unchanged input contents; no deletion/permission or visual/speech checks"
   }
 }
