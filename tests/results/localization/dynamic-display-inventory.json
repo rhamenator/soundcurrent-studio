@@ -2904,7 +2904,7 @@
       "file": "src/update_panel.h",
       "call": "setText",
       "argument": 0,
-      "expression": "SC_TR(\"Published releases could not be checked. Private Studio releases require GitHub access. Use Open release downloads; downloaded installers are still detected locally.\")",
+      "expression": "SC_TR(\"Published releases could not be checked. Use Open release downloads; downloaded installers are still detected locally.\")",
       "containsTranslationCall": true
     },
     {
@@ -3034,7 +3034,7 @@
     "src/studio_panel.cpp": "d0c619840a9d81fef66fea0e0a93d990f19b1e91b2cc0265d47a324a7fb08858",
     "src/studio_panel.h": "59f96477cf78cfc3c175ea6f5f17b80fee107995af4f6f6b021f61543f957a9c",
     "src/studio_render.cpp": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384",
-    "src/update_panel.h": "7637f0a9cd4c6b28a2eb3b185f09f21b36c7f98143e3023338fe2de039f7a68d",
+    "src/update_panel.h": "c39b2e267dd634bd49ca63122401cf5c5c2e6cc2735d4f8396eb66a1a52264a3",
     "src/wav.cpp": "f113caa45573d2895cd18745840f1bd4ed2abc28fcbac56a6027d1de3c81716b",
     "src/wav.h": "59d60b3edf2c4f11dcf40addc2ee2d043b228ba9a73e1d64bd09a259a030aba6",
     "src/windows_audio.cpp": "ae2903e379284ea611310ff55caa7ee5de5a461accce97b74f3cf2d647e4efd7",
@@ -3051,5 +3051,5 @@
     "src/windows_route_guardian.cpp": "4f683ce99ad6bafe227e293d94a82487157da269642e2e2298fa148bc3dfbf2d",
     "src/worker_message_buffer.h": "1866de25517f49efba63b08ef69d6e6d7dfa4e600c1efd6588226b6fe3327e42"
   },
-  "reviewStatus": "Drawing/input-dialog captions traced; both graph axes corrected; fresh combined graph-patch package qualification pending."
+  "reviewStatus": "Current display inventory refreshed; public update-check advice corrected with contextual translation review. Fresh packages pending."
 }
