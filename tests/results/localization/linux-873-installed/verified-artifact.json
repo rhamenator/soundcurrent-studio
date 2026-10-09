@@ -1,0 +1,35 @@
+{
+  "run": 37895448553,
+  "testedHead": "d47444950981f2cc06e740dc0ac70f88ae551f7f",
+  "catalogMessages": 873,
+  "packages": [
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-873-37895448553/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "737ab87bbe03ebb4efeb120cb26d16a34f68bd0bfd06bf0bb06fccdc4176ce9b",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-873-installed/package-validation-0"
+    },
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-873-37895448553/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "d600a76139b5ccdcada54b12c7d1d4c53f6ec0183e994675c6e99202b28d1316",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-873-installed/package-validation-1"
+    },
+    {
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-873-37895448553/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "2cfd6e9a27764d456fe2f13a580ed17704146709a7158eac4f632140acd63762",
+      "installedLocales": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-873-installed/package-validation-2"
+    }
+  ],
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "scope": "Exact downloaded packages and passing full CTest/install/update/uninstall/config-preservation/reinstall, 33 installed locale completions per image. Same-package reinstall, not older-version migration; no physical RHEL/live audio/native-speaker review. Predates newer deletion captions.",
+  "nativeReviewed": false
+}
