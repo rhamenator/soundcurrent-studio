@@ -1,0 +1,39 @@
+{
+  "run": 37874411830,
+  "testedHead": "eb6b7ef7711db1cfd406f6f0cd07c77768b8dbb7",
+  "conclusion": "success",
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "packages": [
+    {
+      "artifact": "package-validation-0",
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37874411830/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "945199c040eaf7e55b16cb1927f79b1fa1eeffed48b32ca4cadfa0d812cbe475",
+      "installedLocaleFixtures": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-current/package-validation-0"
+    },
+    {
+      "artifact": "package-validation-1",
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37874411830/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "c9bfeded7909b5366c1ad8324fb42c128115dacdb59e30a7cb30234f36b09fda",
+      "installedLocaleFixtures": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-current/package-validation-1"
+    },
+    {
+      "artifact": "package-validation-2",
+      "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-37874411830/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "214329a886b2b8616b10cae3201aedeb9d4013404892d544e7ed9af3d7ed8144",
+      "installedLocaleFixtures": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-current/package-validation-2"
+    }
+  ],
+  "scope": "Build, CTest, installed GUI fixture, 33 installed locale fixtures, same-package in-place reinstall, uninstall, config sentinel preservation, reinstall. Not desktop audio, arbitrary older-version migration, actual RHEL desktop, all-string linguistic review or Windows qualification.",
+  "nativeReviewed": false,
+  "PowerShellFixture": "Skipped in Linux containers without PowerShell; actual host/Windows fixture reported separately"
+}

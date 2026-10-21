@@ -1,0 +1,53 @@
+{
+  "scope": "Three owned cable-setup errors and declared lookup coverage",
+  "resolvedSources": [
+    "Choose one audio setup action.",
+    "Invalid audio setup requester.",
+    "The route-preserving setup helper is missing."
+  ],
+  "nonEnglishLocales": 33,
+  "sourceMessagesPerLocale": 689,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Action means exactly one command action switch, not an output-device choice",
+      "Requester denotes the Windows process checked for expected name and session",
+      "Route-preserving helper preserves audio endpoint defaults while vendor setup runs; not navigation/network routing"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Linux Qt offscreen and PowerShell 7.6.6",
+    "targetedQtTestsPassed": 43,
+    "failed": 0,
+    "catalogUnitTestsPassed": 18,
+    "catalogUnitTestsSkipped": 0,
+    "requiredHelperTextLookupsPassed": 136,
+    "actualQuietActionErrorLocales": [
+      "fr",
+      "ar",
+      "nn"
+    ],
+    "productionHelperFaultPath": "No action switches and Quiet: rejection occurs before any driver/PnP check; exact UTF-8 output and exit 30 verified",
+    "otherTwoProductionErrorPathsExecuted": false
+  },
+  "coverageGuards": [
+    "Exporter requires all declared setup sources to be finished in every catalog",
+    "PowerShell AST literal lookup inventory matches declared source manifest",
+    "Unfinished required text rejects export before a payload file is written"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "remainingScope": [
+    "Most cable/native setup bodies and other dialog captions",
+    "NSIS installer/uninstaller text",
+    "Windows dialog/process/registry and installed package qualification"
+  ],
+  "evidence": {
+    "log": "tests/results/localization/setup-errors-runtime.log",
+    "logSha256": "aa4be4ae171116f678ad8f3b6b4e20c4199211bd596d7a21c5d6c831ea53214d",
+    "applicationBinarySha256": "f7b069e04843e72a32cc83cc83d0193b8962c7dc74a3934728a01c01a42b86c4"
+  }
+}

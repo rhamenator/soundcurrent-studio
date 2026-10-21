@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-08",
+  "locale": "pl",
+  "environment": "Host Linux xcb/Xvfb 1920x1080 at 200%; effective 960x540",
+  "fixtureExitCode": 0,
+  "screenshotsInspected": [
+    "localized-tab-1-scroll-2.png",
+    "localized-tab-2-scroll-2.png"
+  ],
+  "findings": [
+    "Settings page shows horizontal overflow near calibration/update controls; layout fix pending",
+    "English Left/Right default channel names visible; defer string handling to second pass and preserve user-provided names"
+  ],
+  "nativeReviewed": false,
+  "scope": "Two inspected lower-page viewports; not whole-interface or native review"
+}

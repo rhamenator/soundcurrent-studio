@@ -1,0 +1,11 @@
+Test project /home/rich/dev/soundcurrent-studio/build
+    Start 55: localized-ui-fr
+1/3 Test #55: localized-ui-fr ..................   Passed    0.53 sec
+    Start 74: localized-ui-nn
+2/3 Test #74: localized-ui-nn ..................   Passed    0.54 sec
+    Start 75: localized-ui-ar
+3/3 Test #75: localized-ui-ar ..................   Passed    0.56 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Total Test time (real) =   1.64 sec

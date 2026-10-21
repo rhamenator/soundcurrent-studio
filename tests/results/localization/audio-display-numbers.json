@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "scope": "Selected-locale band tooltip and calibration preview formatting; compiled shared helper assertions in de-DE, fr-FR, en-US, ar-EG; application UI fixture fr/de-DE. UI fixture does not drive live meter samples or perform a sweep.",
+  "logs": {
+    "audio-display-number-linux.log": {
+      "sha256": "4a4f5d4d1d375198a2ff588ac2baf5871089fb54f0caf491657e063e9f38dcb6",
+      "result": "passed"
+    },
+    "audio-display-number-ui-linux.log": {
+      "sha256": "3a0cdf54ba45069449f6e51a59e2464ad23286781d04062074bab7db946cc989",
+      "result": "passed"
+    }
+  },
+  "sourceSha256": {
+    "src/main.cpp": "f5eebfd5179a2f483d00f3f95fe33898af50ba0058676d3dc988a19a2500ef3a",
+    "src/localization_text.h": "66844e548183ff28867f3b90958f3e67dd22b9d5daa7114f5da8d81778bf53d5",
+    "tests/localization.cpp": "76952e1a2f921e766bb75660001a8d873a570dd8739e83ddc1935233936fe33c"
+  },
+  "nativeReviewed": false,
+  "currentPackageQualification": {
+    "linux": "linux-balance-installed/verified-artifact.json",
+    "windows": "windows-balance-installed/verified-artifact.json",
+    "qualifiedHead": "9e218b3b1d9e4eafb3465276c9b149460c68f30d"
+  },
+  "precedingWindowsRun": 37898077086,
+  "precedingWindowsResult": "success; predates number-format changes",
+  "numericProcessingChange": false
+}

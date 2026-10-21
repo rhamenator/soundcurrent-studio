@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "sourceCommit": "7e6acd0fb9bf704ca3401a27ccbbd7807be72f58",
+  "build": "cmake --build build --parallel 2 completed successfully before capture",
+  "environment": "Xvfb 1280x720, QT_QPA_PLATFORM=xcb; application default window size",
+  "workflow": "--localization-ui-test; synthetic controls, no live audio",
+  "screenshotsInspected": true,
+  "nativeReviewed": false,
+  "observations": [
+    {
+      "locale": "pl",
+      "screenshot": "tests/results/localization/visual-first-pass/pl-equalizer-1280x720.png",
+      "sha256": "f6ea4719bf3dbea3f0d9ed2f1d60aa58a76cd0fa1838015d3a681a8d76711f87",
+      "finding": "Headroom label clipped at right edge; outer page horizontal scrolling",
+      "qualified": false
+    },
+    {
+      "locale": "ar",
+      "screenshot": "tests/results/localization/visual-first-pass/ar-equalizer-1280x720.png",
+      "sha256": "e5793009ca51492c086bc5d5b75228e632997cc5b42b58f7c0a4c98d3223b655",
+      "finding": "Localized RTL text visible; numeric fields and physical frequency plot remain LTR. Headroom mixed-direction order and band scrolling need further qualification.",
+      "qualified": false
+    }
+  ],
+  "pending": [
+    "Correct Polish layout and re-inspect",
+    "Verify mixed-direction signs/units and all pages",
+    "HiDPI and actual Windows interface/package qualification",
+    "Second-pass missing interface string coverage"
+  ]
+}

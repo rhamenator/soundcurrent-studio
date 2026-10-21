@@ -1,0 +1,19 @@
+{
+  "run": 37918553328,
+  "qualifiedProductionHead": "82ff6d1a63b082919a016a9ff6d35a35e2135923",
+  "platform": "Ubuntu 24.04 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-measured-linux-37918553328/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+  "packageSha256": "66ca77f14b6ae2fba20832794de9ee29481517359bf68f5677ebdb5df9843af7",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "actualFrenchEasyInstallerMainPassed": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; installed locale fixtures and exact launcher bytes. Actual French easy-installer main uses verified local package through apt/dnf on an already installed current package. No older-version migration, downloaded package path or first-install easy-installer execution proven.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false,
+  "currentQualificationSuperseded": "Subsequent PipeWire fallback display mapping requires fresh package qualification; this artifact retains qualification for its recorded head."
+}

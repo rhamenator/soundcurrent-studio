@@ -1,0 +1,30 @@
+{
+  "run": 37903386269,
+  "testedHead": "1f9205dc2cdcb8f6892780270626a391c7a10d9a",
+  "result": "passed and downloaded hashes verified",
+  "packages": [
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-public-update-37903386269/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "2b588fcbe3315f5a7324c4184815829631f36a2b6835be5a119ba900c3242ec4",
+      "localeCompletions": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-public-update-installed/package-validation-0"
+    },
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-public-update-37903386269/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "0a21a41ea10e0d3ddacec030b86466f1d3dbe2a48f8f2f8ef30853799cac386b",
+      "localeCompletions": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-public-update-installed/package-validation-1"
+    },
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-public-update-37903386269/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "f96de09dde8c8592635c17b1ea61c522e7fccac8a6443184b551abbf2d9163fa",
+      "localeCompletions": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-public-update-installed/package-validation-2"
+    }
+  ],
+  "scope": "Ubuntu24.04/Fedora44/AlmaLinux10 container full CTest, installed locale fixtures, same-package update/reinstall, uninstall/config preservation and reinstall; 33 non-English locales per image. No native-speaker verification, live audio, physical RHEL desktop or older-version migration.",
+  "nativeReviewed": false
+}

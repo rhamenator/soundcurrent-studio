@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "change": "Equipment response graph frequency/gain axis labels use selected QLocale numeric display; plot coordinates, left-to-right direction and response data unchanged.",
+  "sourceSha256": "1d4adb32603fc05635a456aaf584ede368ad73fc4ebb27acd696890771686f63",
+  "testCommand": "env QT_QPA_PLATFORM=offscreen LC_ALL=ar_EG.UTF-8 build/soundcurrent-equipment-ui-test --language ar",
+  "result": "passed",
+  "logSha256": "994b4aaa4001c8a2909933389ca2066fdd1704ec0e225c22022d2701fa11e13a",
+  "testScope": "Actual profile editor interaction/change/discard/save/import/preservation/apply fixture; not independent raster/OCR proof of each axis glyph or native-speaker review.",
+  "currentPackageQualification": {
+    "linux": "linux-graph-installed/verified-artifact.json",
+    "windows": "windows-graph-installed/verified-artifact.json"
+  },
+  "nativeReviewed": false
+}

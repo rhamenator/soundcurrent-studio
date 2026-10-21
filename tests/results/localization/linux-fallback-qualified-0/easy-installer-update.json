@@ -1,0 +1,8 @@
+{
+  "result": "passed",
+  "locale": "fr",
+  "packageSha256": "244eb84d6386cc52678e35d221ae5e3951c332337f7a133be8215edfc700704b",
+  "confirmationAccepted": true,
+  "exitCode": 0,
+  "scope": "Actual installer main, local package checksum verification and package-manager install/update inside disposable container; no download."
+}

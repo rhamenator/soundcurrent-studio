@@ -1,0 +1,20 @@
+{
+  "run": 37882316346,
+  "url": "https://github.com/rhamenator/soundcurrent-studio/actions/runs/37882316346",
+  "head": "7c7e94e7c029a08757f06cb39f71c07bac1cd0cb",
+  "catalogMessages": 785,
+  "platforms": [
+    "windows-2022",
+    "ubuntu-24.04"
+  ],
+  "logSha256": "d78fa28faaade73c4febbd7d8f5c576c4c670b4d46dbb7faeda98475246e4ada",
+  "verifiedLogLines": [
+    "engine (windows-2022)\tTest synthetic audio and WAVE files\t2026-10-09T04:07:07.6846374Z     Start 6: cli-localization",
+    "engine (windows-2022)\tTest synthetic audio and WAVE files\t2026-10-09T04:07:11.9684182Z 6/7 Test #6: cli-localization .................   Passed    4.28 sec",
+    "engine (windows-2022)\tTest synthetic audio and WAVE files\t2026-10-09T04:07:12.0478741Z 100% tests passed, 0 tests failed out of 7",
+    "engine (ubuntu-24.04)\tTest synthetic audio and WAVE files\t2026-10-09T04:06:34.2217754Z     Start 6: cli-localization",
+    "engine (ubuntu-24.04)\tTest synthetic audio and WAVE files\t2026-10-09T04:06:35.4861980Z 6/7 Test #6: cli-localization .................   Passed    1.26 sec",
+    "engine (ubuntu-24.04)\tTest synthetic audio and WAVE files\t2026-10-09T04:06:35.5352177Z 100% tests passed, 0 tests failed out of 7"
+  ],
+  "scope": "Native engine-only builds, all seven CTests, SDK install and independent consumers. CLI includes 34 catalogs plus fallback tags, Unicode filenames/options, rejected settings, no-overwrite and tail endpoints. No desktop/package lifecycle qualification; subsequent 789-message routing batch excluded."
+}

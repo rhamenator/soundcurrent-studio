@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "9166cfa",
+  "locale": "pl",
+  "inspectedScreenshot": "localized-tab-2.png",
+  "finding": "Inspected viewport readable; first-page outer overflow not visible; band-strip scrolling remains intentional",
+  "scope": "Native Qt Windows widgets in SSH-launched fixtures; single inspected viewport per app",
+  "nativeReviewed": false
+}

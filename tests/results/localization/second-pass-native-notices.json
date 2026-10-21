@@ -1,0 +1,67 @@
+{
+  "scope": "Native helper quit/wait, restart-required and driver-ready notices",
+  "sourceMessagesPerLocale": 701,
+  "nonEnglishLocales": 33,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Quit running apps rather than assume both products are running",
+      "Audio recovery includes the route guardian already in the process predicate",
+      "Restart Windows is a system reboot, not reopen the app",
+      "SoundCurrent Audio driver name stays invariant"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Linux Qt offscreen and host PowerShell 7.6.6",
+    "targetedQtTestsPassed": 43,
+    "catalogUnitTestsPassed": 18,
+    "catalogUnitTestsSkipped": 0,
+    "requiredHelperLookupsPassed": 544,
+    "isolatedRealNativeSuccessConditional": {
+      "casesPassed": 136,
+      "catalogs": 34,
+      "casesPerCatalog": [
+        "install/3010: restart required",
+        "remove/3010: restart required",
+        "install/0: driver ready",
+        "remove/0: no ready notice"
+      ],
+      "driverOrEndpointActionsPerformed": false,
+      "WindowsFormsExecuted": false
+    },
+    "actualQuietNoActionAndMissingManagerFaults": "passed fr/ar/nn",
+    "processWaitTimeoutExecuted": false,
+    "mutationGate": "passed"
+  },
+  "remainingHelperProseCandidates": {
+    "untranslatedCable": 20,
+    "invariantProductNames": 2,
+    "nativeCandidates": 0,
+    "scope": "English-like literals in the two shipped helpers; not whole-interface coverage"
+  },
+  "invariants": [
+    "Process wait predicate and 15-second duration unchanged",
+    "Signature checks and ownership unchanged",
+    "Driver operations and return statuses unchanged",
+    "Numerical processing and saved state unchanged"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "VMUsed": false,
+  "remainingScope": [
+    "Cable helper prose",
+    "NSIS installer/uninstaller",
+    "Windows current runtime, timeout/dialogs and package lifecycle qualification"
+  ],
+  "evidenceSha256": {
+    "packaging/windows/native-audio-setup.ps1": "b6a76d250043e374472a12df2c36bb2fc59f62b18f2ce8add8488da39ed50e6c",
+    "tests/windows_setup_localization.ps1": "fcb583f4e8061c11f10b6aea05b3042a8856a9205824e2c92bb6b27d44938d5b",
+    "data/localization/setup-prose-backlog.json": "a4d236feaff27098d38e618eb7ab153c5ecfd551bfb77b69146d8e2387e23f27",
+    "tests/results/localization/native-notices-runtime.log": "27453da38ca50b7e0eae1138a0fd31d3afd4d7a04b6093bd24b5ceb8ef63e5fa",
+    "tests/results/localization/native-notices-qt.log": "3bd6320e3570c088f6ffe4c2590b841ebd27cb5f22b4717c05e1d283bd2f9546",
+    "build/soundcurrent-studio": "b9d75d3965dad8538d2981dd08100c15f8538fb3fb3c959322bab4913d7064fe"
+  }
+}

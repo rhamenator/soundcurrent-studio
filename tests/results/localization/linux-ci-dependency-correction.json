@@ -1,0 +1,10 @@
+{
+  "run": 37886565464,
+  "testedHead": "b34c4668c7cfb96e59e2247cf5b817d0de6e5d30",
+  "job": "desktop-localization",
+  "failure": "CMake desktop configuration could not find libpipewire-0.3",
+  "cause": "New CI job omitted libpipewire-0.3-dev from apt dependencies",
+  "correction": "Added libpipewire-0.3-dev and pkg-config to the job dependency list",
+  "validation": "Workflow YAML parsed and dependency assertion passed; corrected hosted job qualification pending",
+  "nativeReviewed": false
+}

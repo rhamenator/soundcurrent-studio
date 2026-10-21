@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-09",
+  "scope": "Studio local table(headers)/cell(table,row,column,value) display boundaries, plus actual current callers. Guard shared across both repositories.",
+  "headerProducers": [
+    "EQ filter Type is translated; Hz/dB/Q are unit symbols",
+    "Route Input channel and Gain / polarity are translated",
+    "Meter Channel and Peak are translated"
+  ],
+  "cellProducers": [
+    "Channel labels use channelNameText, preserving explicit custom names and translating generated roles",
+    "Visible channel ordinal and filter frequency/gain/Q use QLocale",
+    "Route weights use QLocale; input indexes in UserRole retain numerical identity",
+    "Filter type reads translated combo item caption",
+    "Meter silence uses translated \u2212\u221e dBFS, live levels use QLocale plus translated unit suffix"
+  ],
+  "negativeFixture": "Raw helper header and QStringLiteral cell caption rejected; locale-formatted forwarded value remains in provenance inventory.",
+  "methodInventoryReview": "Current source method-name inventory includes no setFormat/appendPlainText/setHtml/setPlainText production display calls. setObjectName, application/organization names, device descriptions, filesystem names and raw HTTP headers retain identifiers/external metadata rather than user prose. This source inventory is finite lexical evidence, not an exhaustive C++ semantic analysis.",
+  "sourceSha256": {
+    "scripts/ui_string_audit.py": "9082c5c1c43564b4e8b39ea76436355586b77fc589158ae03bbe26f3c54ac085",
+    "tests/translation_catalogs.py": "a154e58a2f7eeb843826409ac1cfe9156942ce8dac029c415471720905505fb2",
+    "src/studio_panel.cpp": "d0c619840a9d81fef66fea0e0a93d990f19b1e91b2cc0265d47a324a7fb08858"
+  },
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false,
+  "testLog": "tests/results/localization/studio-display-helper-guard-tests.log",
+  "regressionSuite": {
+    "result": "passed",
+    "runSummary": "Ran 69 tests in 37.753s",
+    "logSha256": "ff2569299656a772f6085653c6863aaffa06e7b86344a5c083edb1b6e644b25f"
+  }
+}

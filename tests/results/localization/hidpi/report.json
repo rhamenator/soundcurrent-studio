@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-08",
+  "sourceCommit": "2067b8e834363d83e671ba8b347b76c17c04fc21",
+  "locale": "pl",
+  "environment": "Host Linux Xvfb 1920x1080, xcb Qt backend, QT_SCALE_FACTOR=2; effective 960x540",
+  "fixtureExitCode": 0,
+  "inspectedScreenshot": "localized-tab-2.png",
+  "sha256": "08b443ee9696d418ee48c4df94b83b6fa26d7a03b4abc4997338f43de5865593",
+  "finding": "Inspected upper settings viewport: captions and wrapped help readable; lower scrolled content not inspected",
+  "nativeReviewed": false,
+  "scope": "Single inspected viewport, not all-language or whole-interface visual qualification",
+  "nextAction": "Fix narrow EQ layout and inspect scrolled controls at high scaling"
+}

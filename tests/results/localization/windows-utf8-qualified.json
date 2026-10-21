@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-08",
+  "product": "Studio",
+  "applicationSourceCommit": "d87b0e8f8ba9fbfdb3e543dc4cf7bf469a051ff5",
+  "windowsCiRun": 37809341128,
+  "windowsCiConclusion": "success",
+  "vm": "soundcurrent-win11-dev, full independent disk",
+  "installerSha256": "327e9132e87d385297ba853a1922f5b91a4780c8045a59575095ae060e9d75fa",
+  "installedExecutableSha256": "057e45d32218437c41cb99e8eb0a3b45c9b7a4baabf06e2c4bfa119991ac00fb",
+  "interactiveInstaller": {
+    "desktopSession": 1,
+    "pages": [
+      "welcome",
+      "GPL license",
+      "directory",
+      "audio setup",
+      "finish"
+    ],
+    "exitCode": 0,
+    "driverInstallUnchecked": true,
+    "finishRunUnchecked": true,
+    "unicodePunctuationVerified": true,
+    "audioPageScreenshotInspected": true
+  },
+  "startup": {
+    "observedCommand": "\"C:\\Users\\claude\\AppData\\Local\\Programs\\SoundCurrent Studio\\soundcurrent-studio.exe\" --background",
+    "exclusiveApp": true,
+    "appSession": 4,
+    "backgroundWindowHidden": true,
+    "exeSha256": "057E45D32218437C41CB99E8EB0A3B45C9B7A4BAABF06E2C4BFA119991AC00FB",
+    "actualSignIn": true,
+    "interactiveObserverSession": 4,
+    "registrationScope": "Actual HKCU Run invocation; registration command mirrors compiled StartupRegistration. GUI checkbox activation is not tested by this script.",
+    "nativeReviewed": false,
+    "product": "Studio",
+    "reopenedSameProcess": true,
+    "quitExited": true
+  },
+  "silentLifecycle": {
+    "scope": "Silent per-user app lifecycle on independent clone; no driver installation/removal or visual qualification",
+    "settingsMarkerPreserved": true,
+    "uninstall": "passed",
+    "unknownFilePreserved": true,
+    "installerSha256": "327E9132E87D385297BA853A1922F5B91A4780C8045A59575095AE060E9D75FA",
+    "audioDeviceStateUnchanged": true,
+    "nativeReviewed": false,
+    "product": "Studio",
+    "update": "passed"
+  },
+  "reinstalled": {
+    "reinstalled": true,
+    "exeSha256": "057E45D32218437C41CB99E8EB0A3B45C9B7A4BAABF06E2C4BFA119991AC00FB",
+    "product": "Studio"
+  },
+  "defender": {
+    "AMServiceEnabled": true,
+    "AntivirusEnabled": true,
+    "RealTimeProtectionEnabled": true,
+    "AntivirusSignatureVersion": "1.459.601.0",
+    "priorDetectionDisposition": "Older EQ candidate detection remains unadjudicated; this test does not establish a false positive"
+  },
+  "cleanup": {
+    "priorRunEntryRestored": true,
+    "ownedScheduledTasksRemoved": true
+  },
+  "nativeSpeakerReviewed": false,
+  "limits": [
+    "Installer remains English-only; translation extraction gaps are deferred to second pass.",
+    "GUI startup-checkbox interaction is not claimed by this sign-in observer; per-user registration is separately unit-tested.",
+    "Silent lifecycle preservation checks owned fixtures, not every user file.",
+    "The initial SSH window-handle check was insufficient and is superseded by desktop-session observer evidence."
+  ],
+  "localEvidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/windows-utf8-final"
+}

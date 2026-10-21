@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "repository": "soundcurrent-studio",
+  "windowsCiRun": 37869448427,
+  "sourceHead": "0dfa1246cac45d6b4d932b3e145d0289d7d467d7",
+  "runConclusion": "success",
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-37869448427/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "8fe5ba9851ca7d2077d0571911ba8c6557dec4df882be46347a7132772c1982c",
+  "declaredChecksumMatched": true,
+  "scope": "Downloaded successful preview package; current head differs and installed lifecycle not qualified",
+  "nativeSpeakerVerified": false
+}

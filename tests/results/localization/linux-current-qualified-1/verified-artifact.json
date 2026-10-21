@@ -1,0 +1,18 @@
+{
+  "run": 37916166334,
+  "qualifiedProductionHead": "8fa1559e8f118fa0e8c1dcd79601120070fda34f",
+  "platform": "Fedora 44 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-current-linux-37916166334/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+  "packageSha256": "b07a7ab868eb52fb273cf27022a0527c08461bb2b4290a332363e257643917b8",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "actualFrenchEasyInstallerMainPassed": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; installed locale fixtures and exact launcher bytes. Actual French easy-installer main uses verified local package through apt/dnf on an already installed current package. No older-version migration, downloaded package path or first-install easy-installer execution proven.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false
+}

@@ -1,0 +1,23 @@
+windows	Build, test and package the shared application	2026-10-09T01:13:43.0369824Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:43.0370982Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:43.0372096Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:43.0373223Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:43.0374314Z PASS: 2 catalogs, 2 source messages; 1 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:43.0375694Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:45.0061002Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:47.3888637Z Traceback (most recent call last):
+windows	Build, test and package the shared application	2026-10-09T01:13:47.3889776Z   File "D:\a\soundcurrent-studio\soundcurrent-studio\scripts\windows_installer_catalogs.py", line 246, in <module>
+windows	Build, test and package the shared application	2026-10-09T01:13:47.3891446Z PASS: 34 catalogs, 745 source messages; 0 unfinished entries; structural checks and compiled hashes (linguistic accuracy unverified)
+windows	Build, test and package the shared application	2026-10-09T01:13:47.3892745Z     generate_installer(arguments.installer_source, arguments.installer_output, arguments.product, captions, activate=arguments.activate_languages)
+windows	Build, test and package the shared application	2026-10-09T01:13:47.4005001Z   File "D:\a\soundcurrent-studio\soundcurrent-studio\scripts\windows_installer_catalogs.py", line 228, in generate_installer
+windows	Build, test and package the shared application	2026-10-09T01:13:47.4007253Z     text = activate_languages(text, product, captions, route)
+windows	Build, test and package the shared application	2026-10-09T01:13:47.4007933Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+windows	Build, test and package the shared application	2026-10-09T01:13:47.4011954Z   File "D:\a\soundcurrent-studio\soundcurrent-studio\scripts\windows_installer_catalogs.py", line 180, in activate_languages
+windows	Build, test and package the shared application	2026-10-09T01:13:47.4013330Z     raise ValueError('Installer lifecycle language activation requires one owned init')
+windows	Build, test and package the shared application	2026-10-09T01:13:47.4014321Z ValueError: Installer lifecycle language activation requires one owned init
+windows	Build, test and package the shared application	2026-10-09T01:13:47.5069686Z [31;1mException: [0mD:\a\soundcurrent-studio\soundcurrent-studio\scripts\build-windows.ps1:220[0m
+windows	Build, test and package the shared application	2026-10-09T01:13:47.5070879Z [31;1m[0m[36;1mLine |[0m
+windows	Build, test and package the shared application	2026-10-09T01:13:47.5071902Z [31;1m[0m[36;1m[36;1m 220 | [0m … ($LASTEXITCODE -ne 0) { [36;1mthrow 'Installer caption generation failed'[0m }[0m
+windows	Build, test and package the shared application	2026-10-09T01:13:47.5072706Z [31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+windows	Build, test and package the shared application	2026-10-09T01:13:47.5073431Z [31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mInstaller caption generation failed[0m
+windows	Build, test and package the shared application	2026-10-09T01:13:47.5280846Z ##[error]Process completed with exit code 1.

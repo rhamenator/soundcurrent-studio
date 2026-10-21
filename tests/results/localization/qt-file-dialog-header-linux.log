@@ -1,0 +1,19 @@
+Start testing: Oct 09 03:10 EDT
+----------------------------------------------------------
+89/97 Testing: calibration-worker-localization
+89/97 Test: calibration-worker-localization
+Command: "/home/rich/.pyenv/shims/python3" "/home/rich/dev/soundcurrent-studio/tests/calibration_worker_localization.py" "/home/rich/dev/soundcurrent-studio/build/soundcurrent-studio"
+Directory: /home/rich/dev/soundcurrent-studio/build
+"calibration-worker-localization" start time: Oct 09 03:10 EDT
+Output:
+----------------------------------------------------------
+PASS: actual core-only calibration worker, 34 catalogs plus regional/fallback cases, exact UTF-8 failure text, no device lookup or playback
+<end of output>
+Test time =   2.07 sec
+----------------------------------------------------------
+Test Passed.
+"calibration-worker-localization" end time: Oct 09 03:10 EDT
+"calibration-worker-localization" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Oct 09 03:10 EDT

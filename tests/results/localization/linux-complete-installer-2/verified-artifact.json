@@ -1,0 +1,17 @@
+{
+  "run": 37912695248,
+  "qualifiedProductionHead": "2d35e5d8c184f632b53680b757a50042e99a9e0f",
+  "platform": "AlmaLinux 10 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-complete-installer-37912695248/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+  "packageSha256": "b68576831a4a7739b6474f3f2e02c7478b58bcc4dd16e7c83f1fdb9b7de63fad",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; actual installed locale fixtures and exact launcher bytes. Installer text tests do not execute its privileged install path. Later source guards and terminal fixtures were separately tested locally.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false
+}

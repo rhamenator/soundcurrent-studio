@@ -1,0 +1,52 @@
+{
+  "scope": "Native installer playback-routing and physical-output explanation",
+  "sourceMessagesPerLocale": 729,
+  "catalogs": 34,
+  "nonEnglishLocales": 33,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Playback routed through app; physical speakers/headphones selected inside app",
+      "Hardware driver preservation statement retained",
+      "Turkish explicitly refers to playback; Chinese routing wording refined",
+      "Native route only; exact SoundCurrent Audio name retained"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "validation": {
+    "unitTestsPassed": 37,
+    "unitTestsSkipped": 0,
+    "nameMutation": "changed, lowercased and duplicate driver name rejected",
+    "compiledQtCatalogs": "regenerated; hashes checked",
+    "generatedEnglishInstallers": "all four variants unit-tested; CLI native copies byte-identical",
+    "allCaptionSyntaxFixture": "442 captions per product compiled with English language IDs only",
+    "currentFullInstallersBuilt": false,
+    "currentInstalledUiQualified": false,
+    "realAudioRoutingExecuted": false
+  },
+  "installerLanguagesEnabled": [
+    "English"
+  ],
+  "remainingScope": [
+    "Installer language activation and selection",
+    "Remaining installer/uninstaller text",
+    "One raw PowerShell repair notice",
+    "Current package/UI/lifecycle qualification"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "newPackagesQualified": false,
+  "invariants": [
+    "Audio routing and hardware driver actions unchanged",
+    "Saved state and numerical processing unchanged"
+  ],
+  "evidenceSha256": {
+    "data/localization/catalogs.json": "9f503bb2b59466f8bb6966fbbd737c968bacf31b4113caa1c9b999f9a67e8f97",
+    "scripts/windows_installer_catalogs.py": "c0559e4a6d4b4decbee5139b171b7ebfc6e1d9f50ac290cf7995f46d7fd7d0a5",
+    "scripts/localization.py": "0a03aa59c2164380b5c618354a85a21e6f60d8754555c3f5c3b76c77a4b9e999",
+    "tests/translation_catalogs.py": "41402de43951d09ea52c2934fff786c28cc2d4c8b32d26e37c6902ee3116f121",
+    "tests/results/localization/installer-native-routing-captions.json": "8820e88be19b3081f88abeb61502d3b575d024a4e4a405cbeb502d1d567a0431",
+    "tests/results/localization/installer-native-routing-tests.log": "863149f0505935a35c580a1d661180f91b5762aaf7b4f4fe4d0422345cc00d7d",
+    "tests/results/localization/installer-native-routing-compiler.log": "2a183cb0ece7b516b8f704f960c983f60a34d7b884f7bb0d8c96881ae6c53950"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "scope": "Unmarked direct and exact Qt-wrapped literal display candidates; dynamic strings, stored/user data, backend and installer strings are not covered",
+  "candidateCount": 10,
+  "candidates": [
+    {
+      "file": "src/localization.h",
+      "call": "addItem",
+      "argument": 0,
+      "literal": "English (en)",
+      "classification": "language autonym"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " ms",
+      "classification": "invariant physical unit symbol"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " dBFS",
+      "classification": "invariant physical unit symbol"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " Hz",
+      "classification": "invariant physical unit symbol"
+    },
+    {
+      "file": "src/main.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " dB",
+      "classification": "invariant physical unit symbol"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setText",
+      "argument": 0,
+      "literal": "User %1 / 音声 / Left",
+      "classification": "synthetic fixture data"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setText",
+      "argument": 0,
+      "literal": "Custom %1 / 音声",
+      "classification": "synthetic fixture data"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " ms",
+      "classification": "invariant physical unit symbol"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " s",
+      "classification": "invariant physical unit symbol"
+    },
+    {
+      "file": "src/studio_panel.cpp",
+      "call": "setSuffix",
+      "argument": 0,
+      "literal": " s",
+      "classification": "invariant physical unit symbol"
+    }
+  ],
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false,
+  "unresolvedOwnedLiteralCandidates": 0,
+  "sourceSha256": {
+    "src/accelerating_spinbox.h": "2231066a20cf4ee5dced8d99e9ae78e311dbec0c2eea9579b34d4bda67923223",
+    "src/audio_error_text.h": "a219810b01b93a90578eb61a98a0fab501c76792aac54a37cf87376737d53f4d",
+    "src/audio_setup_arguments.h": "dbe9b08e198a66d85883f49e6eac0cde0fcea995106224e63b2a949d3b109336",
+    "src/cli_localization.h": "6c2923e3f549bb37fa742770bb42ba82b6efb59a5c8501421d9331d6ef0370b3",
+    "src/dsp.cpp": "83d1ee61f49c7083645bcaae55943254acfd6d03275268f5041baf13c268afb8",
+    "src/dsp.h": "8f3158b2d4f7fe5abe5350bbd2ae43373b38ab0b7bb67bc63c0c583b7e3cbb43",
+    "src/engine.cpp": "08758edf4e0de38f15a31b03d62ab80220c58da9ead821e5262d8ea628dfde52",
+    "src/engine.h": "152f227ea0979b52bfa4968b6c647c1dd1b33e806e3f40eeeee1ed5a18d4c357",
+    "src/enhancement.cpp": "080406017e4b6a88885a72f218279a61443be602811fae5de682c90bd0f0318f",
+    "src/enhancement.h": "25c25e302fe2e05952446ff6cece1fcebac62197165b523e057c9233fd156589",
+    "src/enhancement_controls.h": "a5c3e8358fa8235b9625567e152dc3eb73ba54f13fba8b4fba2202a272262b52",
+    "src/equipment_display_text.h": "e3086d524e9b436075ecf9d9b8c143a0058a692685c10919b72298fd97ec44c5",
+    "src/equipment_profiles.cpp": "b41db4ef53c46a0c9e7b6745d0ea106fd0185ba9eb30e90f66d7afda8877779d",
+    "src/equipment_profiles.h": "34fb124fe9a9177735c3e96b54f947fbdd2881ff175153c29334842c140b9545",
+    "src/file_display_locale_proxy.h": "73bf365758b447200f7170819f8cf998e40b1ba584122cad51ec5de855593435",
+    "src/linux_audio.cpp": "428ef69af5f3a829c1234dfd0bdc3f672636e1e24d35fc4a90f9d4294ee056af",
+    "src/linux_audio.h": "c37703695cd48e0a234c8c9fa3efa6678eb639d1ffbbdcdd46d43e945afdf958",
+    "src/localization.h": "f430613fdec6915b10791010bdf9f1e36838240571accd041b818ba00e3561b9",
+    "src/localization_text.h": "d9d06c97d3108e857250a419243138cd0939a72a0d19b535666beb1eedcf776c",
+    "src/localized_file_dialog.h": "db8e7403e18efca39f41bcb02238c94297e09cc9b9a1f9870f12276bdc58a7ff",
+    "src/main.cpp": "fa4afdbc6ab6f46d9858163c08de31c83cc479c0739e8ed751fbd5b178da6128",
+    "src/main_windows.cpp": "df16bae0597ddb53f7a31bf2d99bd50f5768f6174265309d254da9b10bebd6c0",
+    "src/processing_guard.cpp": "7357547a751b724be0c1743d94f8318a9f86b5f6b2180911799dc660bd5e74b2",
+    "src/processing_guard.h": "3210a47f6da6b8d019710e052785a90b1b4635182497ca8c64549fb3b31a1913",
+    "src/startup_controls.h": "94cccaea96412bd21f1949463cee81e06980c6e5f207b55f2b8f7dd058acb5af",
+    "src/startup_registration.h": "f9ee3d7f131e0f958b2f95ff1711e9956d4e17b42fbc1de224c87f3fe63c3e36",
+    "src/studio_model.cpp": "00949b7ee79350e90cf92edca9ef39f696b20c435b04d597a8fcb0da68323d1c",
+    "src/studio_model.h": "b21ef3d41455f95b585c42337b5a2a120e8e30b9d457a17596e06e71850153a0",
+    "src/studio_name_text.h": "5bcdf9347973e22ac30e78448661fd73bd7320dd49e456d8c497fd1a76652314",
+    "src/studio_panel.cpp": "d0c619840a9d81fef66fea0e0a93d990f19b1e91b2cc0265d47a324a7fb08858",
+    "src/studio_panel.h": "59f96477cf78cfc3c175ea6f5f17b80fee107995af4f6f6b021f61543f957a9c",
+    "src/studio_render.cpp": "3d10777006621f0e7a9be4cac97460be56eff46c8db3ae447103c114a0ffa384",
+    "src/update_panel.h": "7637f0a9cd4c6b28a2eb3b185f09f21b36c7f98143e3023338fe2de039f7a68d",
+    "src/wav.cpp": "f113caa45573d2895cd18745840f1bd4ed2abc28fcbac56a6027d1de3c81716b",
+    "src/wav.h": "59d60b3edf2c4f11dcf40addc2ee2d043b228ba9a73e1d64bd09a259a030aba6",
+    "src/windows_audio.cpp": "ae2903e379284ea611310ff55caa7ee5de5a461accce97b74f3cf2d647e4efd7",
+    "src/windows_audio.h": "c1add9570033a1d5dc0c4a09364ecaffcfc95e901e55e46901108ddcae06d14b",
+    "src/windows_audio_session_gate.h": "a83c76a39704438b04926177ed7717387ccba3d5ab98598c2d8f14b0998ce203",
+    "src/windows_audio_setup_test.inc": "30f21bb49445764cdaec31495635f1171b1b33604e5d678ad48028afd2846d26",
+    "src/windows_cable_setup_guard.cpp": "9f49a3a8590368d49f5258459202fde98991e27fd9bbc97e93488fd677fd9fa5",
+    "src/windows_endpoint_identity.h": "fd49a664ea42994fbae4adff183ce244f19375e21190c5b54ef4e39d5615d982",
+    "src/windows_io.cpp": "13362ffd61431d9ea105ebbf5eb55df30b54904adc34a750a4da4bf9bab08ac7",
+    "src/windows_live_conflict_test.inc": "0889ea7d4f4b7c8b701c9765636ca247d1576d44b9aa53a15a6c35564a756c94",
+    "src/windows_live_ui_test.inc": "9f3df878b1943f118355a2b003d2510e880a00c68518e689b8bc801825265b18",
+    "src/windows_managed_route.h": "14518879f006783b89c69024abbb83751ac1f38b3dd5a4e7fe7dff9760f016f1",
+    "src/windows_platform.inc": "720d72ee42bf50d6bc371452f517c902f29acca8a85fd08d874df83e20468a34",
+    "src/windows_route_guardian.cpp": "4f683ce99ad6bafe227e293d94a82487157da269642e2e2298fa148bc3dfbf2d",
+    "src/worker_message_buffer.h": "1866de25517f49efba63b08ef69d6e6d7dfa4e600c1efd6588226b6fe3327e42"
+  }
+}

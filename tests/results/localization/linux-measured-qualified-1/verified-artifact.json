@@ -1,0 +1,19 @@
+{
+  "run": 37918553328,
+  "qualifiedProductionHead": "82ff6d1a63b082919a016a9ff6d35a35e2135923",
+  "platform": "Fedora 44 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-measured-linux-37918553328/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+  "packageSha256": "73a53881d6fc4cfbcfb367677d681297251f7c58a79ae2ce682567bafbd9d145",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "actualFrenchEasyInstallerMainPassed": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; installed locale fixtures and exact launcher bytes. Actual French easy-installer main uses verified local package through apt/dnf on an already installed current package. No older-version migration, downloaded package path or first-install easy-installer execution proven.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false,
+  "currentQualificationSuperseded": "Subsequent PipeWire fallback display mapping requires fresh package qualification; this artifact retains qualification for its recorded head."
+}

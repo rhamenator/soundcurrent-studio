@@ -1,0 +1,151 @@
+{
+  "results": [
+    {
+      "locale": "de",
+      "passed": true
+    },
+    {
+      "locale": "fr",
+      "passed": true
+    },
+    {
+      "locale": "es",
+      "passed": true
+    },
+    {
+      "locale": "it",
+      "passed": true
+    },
+    {
+      "locale": "pt-PT",
+      "passed": true
+    },
+    {
+      "locale": "pt-BR",
+      "passed": true
+    },
+    {
+      "locale": "nl",
+      "passed": true
+    },
+    {
+      "locale": "pl",
+      "passed": true
+    },
+    {
+      "locale": "cs",
+      "passed": true
+    },
+    {
+      "locale": "sk",
+      "passed": true
+    },
+    {
+      "locale": "uk",
+      "passed": true
+    },
+    {
+      "locale": "ru",
+      "passed": true
+    },
+    {
+      "locale": "el",
+      "passed": true
+    },
+    {
+      "locale": "tr",
+      "passed": true
+    },
+    {
+      "locale": "sv",
+      "passed": true
+    },
+    {
+      "locale": "da",
+      "passed": true
+    },
+    {
+      "locale": "nb",
+      "passed": true
+    },
+    {
+      "locale": "fi",
+      "passed": true
+    },
+    {
+      "locale": "ro",
+      "passed": true
+    },
+    {
+      "locale": "hu",
+      "passed": true
+    },
+    {
+      "locale": "nn",
+      "passed": true
+    },
+    {
+      "locale": "ar",
+      "passed": true
+    },
+    {
+      "locale": "he",
+      "passed": true
+    },
+    {
+      "locale": "fa",
+      "passed": true
+    },
+    {
+      "locale": "zh-Hans",
+      "passed": true
+    },
+    {
+      "locale": "zh-Hant",
+      "passed": true
+    },
+    {
+      "locale": "ja",
+      "passed": true
+    },
+    {
+      "locale": "ko",
+      "passed": true
+    },
+    {
+      "locale": "hi",
+      "passed": true
+    },
+    {
+      "locale": "id",
+      "passed": true
+    },
+    {
+      "locale": "vi",
+      "passed": true
+    },
+    {
+      "locale": "th",
+      "passed": true
+    },
+    {
+      "locale": "sw",
+      "passed": true
+    }
+  ],
+  "previousVersion": "1.0.0",
+  "uninstall": "pending after upgrade testing",
+  "installation": "silent per-user baseline install/update passed",
+  "sourceCommit": "d285849bc41577d905950e549cf3b484f4a9acd9",
+  "scope": "Installed baseline Windows binary, offscreen synthetic UI; not visual or native verification",
+  "nativeReviewed": false,
+  "installerSha256": "4B04D98A8F71F8420D1DE8760FC10CA59DC85196F4D2501385AAC61CBBA30841",
+  "upgrade": "pending current candidate",
+  "vm": "soundcurrent-win11-dev (full independent disk, no backing image)",
+  "date": "2026-10-08",
+  "limitations": [
+    "Earlier baseline commit, not current layout candidate",
+    "Offscreen synthetic fixtures; no visual or native-speaker qualification",
+    "Current-candidate upgrade and uninstall remain pending"
+  ]
+}

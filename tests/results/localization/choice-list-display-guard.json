@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-09",
+  "scope": "Explicit brace-initialized QComboBox addItems lists; forwarded metadata lists remain in the dynamic inventory for provenance review.",
+  "change": "Inspect entries independently, including mixed translated and untranslated entries.",
+  "currentSourceReview": {
+    "equipment": "PK/LS/HS are saved filter codes; brand/family lists contain equipment metadata.",
+    "studio": "Effect presets and filter type captions use SC_TR; 5.1/7.1 are standard layout designations."
+  },
+  "localTests": {
+    "mixedChoiceRegression": "passed",
+    "exactSiteLiteralGate": "passed",
+    "fullCatalogSuite": {
+      "command": "python3 -m unittest discover -s soundcurrent-studio/tests -p translation_catalogs.py",
+      "tests": 64,
+      "skipped": 0,
+      "skipReason": null,
+      "result": "passed"
+    }
+  },
+  "productionUiChanged": false,
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false,
+  "sourceSha256": {
+    "scripts/ui_string_audit.py": "681c99092923ff7e1e0587421b7cf163d8901c024617b111732d99b98e683957",
+    "tests/translation_catalogs.py": "bf4774701e8f571a0d25dbbaf5993b4e1de170bedfd5e3e4e0d78d2726c6d277",
+    "data/localization/ui-literal-exceptions.json": "1ba3fba431807d46249865892beb9d4c3cf0355f566424023f71bbfee6ca3ddd"
+  }
+}

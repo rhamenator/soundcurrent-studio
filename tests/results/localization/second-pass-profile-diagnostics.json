@@ -1,0 +1,53 @@
+{
+  "scope": "Three saved Studio setup validation diagnostic display mappings",
+  "resolvedDiagnostics": [
+    "Unsupported Studio profile schema",
+    "Studio profile has an invalid numeric field",
+    "Studio profile has an invalid boolean field"
+  ],
+  "nonEnglishLocales": 33,
+  "sourceMessagesPerLocale": 662,
+  "unfinishedExtractedEntries": 0,
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Schema refers to saved setup format/version and required top-level structure",
+      "Numeric field requires a finite JSON number within its supported range",
+      "Boolean field requires JSON true/false, not textual true/false or localized yes/no"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Linux Qt offscreen",
+    "targetedTestsPassed": 39,
+    "failed": 0,
+    "coverage": [
+      "Shared UI",
+      "33 non-English compiled UI catalogs",
+      "Two pseudo-locales",
+      "Regional number formatting",
+      "Diagnostic boundary translator and unknown/external fallback",
+      "Catalog validation"
+    ],
+    "StudioSessionFaultFixtures": true,
+    "sessionFixtureScope": "Reject unsupported schema, numeric string 1,5, and textual true; preserve input objects and valid profile roundtrip. Calls parser and desktop display mapper; does not click a malformed-file import dialog."
+  },
+  "catalogUnitTests": {
+    "passed": 12,
+    "skipped": 0
+  },
+  "invariants": [
+    "Invariant backend diagnostic keys preserved",
+    "Saved schema and numerical processing unchanged",
+    "Unknown external messages including Unicode and placeholders retained verbatim"
+  ],
+  "remainingStudioDiagnostics": 14,
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "evidence": {
+    "log": "tests/results/localization/profile-diagnostics-runtime.log",
+    "logSha256": "218a80762204044e61e73b1234fd05f21be87811c0b4172e0136642ab93297e9",
+    "applicationBinarySha256": "3c813d279d7e0a58ac147be4a19186fa673409d4a16b48cec492d7a2952abdf7"
+  }
+}

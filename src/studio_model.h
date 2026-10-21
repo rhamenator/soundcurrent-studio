@@ -9,6 +9,11 @@ struct Session {
     EngineSettings engine;
     std::vector<double> routing;
     QStringList names;
+    // Optional display provenance; opaque future metadata is retained verbatim.
+    // No provenance in an old profile means the saved name is user-owned.
+    std::vector<QJsonValue> nameProvenance;
+    QString defaultNameRole(int channel) const;
+    void setCustomName(int channel, const QString &name);
     std::vector<bool> solo;
     bool offline = false;
     explicit Session(std::size_t channels = 2);

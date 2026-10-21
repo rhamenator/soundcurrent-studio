@@ -1,0 +1,11 @@
+{
+  "run": 37901201673,
+  "testedHead": "5a7234b047e7f41dcc77281cfba6ef512a8bdf1d",
+  "result": "passed and downloaded installer/executable hashes matched installed lifecycle",
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-windows-graph-37901201673/windows-build/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "b51b310aa274c1a6c080d88a910b740f63d3cf6a093d5edbd64073f264ba4d84",
+  "executableSha256": "078526f36be2f8dc502a024525c7ac2b4cff8806bba1a899b6591651a11184e8",
+  "installedLocaleLogCount": 34,
+  "scope": "GitHub hosted Windows 2022 compiled tests and installed GUI fixtures, fr/nn/ar silent install/same-installer update/preservation/shortcuts/uninstall. No older-version migration, interactive installer/chooser, native-driver lifecycle, live audio or native-speaker review.",
+  "nativeReviewed": false
+}

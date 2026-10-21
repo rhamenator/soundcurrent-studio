@@ -1,0 +1,18 @@
+{
+  "run": 37916166334,
+  "qualifiedProductionHead": "8fa1559e8f118fa0e8c1dcd79601120070fda34f",
+  "platform": "AlmaLinux 10 disposable container",
+  "package": "/home/rich/dev/soundcurrent-localization-artifacts/studio-current-linux-37916166334/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+  "packageSha256": "f1ba953583119509c6bf3d74c0e197256c8bf5a23eac30365ce063621fa7b0f1",
+  "sha256ManifestMatches": true,
+  "allCTestPassed": true,
+  "standaloneInstallerCatalogCTestPassed": true,
+  "installedLocaleCompletions": 33,
+  "launcherInstallUpdateReinstallMatchesCurrentSource": true,
+  "currentProductionSourcesMatchQualifiedHead": true,
+  "actualFrenchEasyInstallerMainPassed": true,
+  "scope": "Package install, same-package update, uninstall/config preservation and reinstall; installed locale fixtures and exact launcher bytes. Actual French easy-installer main uses verified local package through apt/dnf on an already installed current package. No older-version migration, downloaded package path or first-install easy-installer execution proven.",
+  "nativeReviewed": false,
+  "allLocaleVisualRenderingProven": false,
+  "wholeInterfaceCoverageProven": false
+}

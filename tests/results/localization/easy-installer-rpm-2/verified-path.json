@@ -1,0 +1,9 @@
+{
+  "run": 37914220039,
+  "platform": "AlmaLinux10 disposable container",
+  "packageSha256": "6e64e17c7f19eb2e2d1de84238d71887e0587ddf0c0beec82e8f6d1fe58d99df",
+  "result": "verified",
+  "scope": "Actual French terminal confirmation and local-package hash verification through installer main and dnf install. Already-current package retained. Surrounding direct lifecycle independently tests reinstall, uninstall and config preservation.",
+  "nativeReviewed": false,
+  "logSha256": "7991f6bb1ed4a1db4369a651245750641a36f5b2f065cfb3321b96a5c4235b4b"
+}

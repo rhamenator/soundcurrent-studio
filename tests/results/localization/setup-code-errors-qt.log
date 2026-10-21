@@ -1,0 +1,91 @@
+Test project /home/rich/dev/soundcurrent-studio/build
+      Start  7: shared-ui
+ 1/43 Test  #7: shared-ui ........................   Passed    1.38 sec
+      Start 48: localized-number-format-de
+ 2/43 Test #48: localized-number-format-de .......   Passed    0.53 sec
+      Start 49: localized-number-format-ar-EG
+ 3/43 Test #49: localized-number-format-ar-EG ....   Passed    0.53 sec
+      Start 50: localized-number-format-fr-FR
+ 4/43 Test #50: localized-number-format-fr-FR ....   Passed    0.52 sec
+      Start 51: localized-number-format-hi-IN
+ 5/43 Test #51: localized-number-format-hi-IN ....   Passed    0.53 sec
+      Start 52: localized-ui-de
+ 6/43 Test #52: localized-ui-de ..................   Passed    0.51 sec
+      Start 53: localized-ui-fr
+ 7/43 Test #53: localized-ui-fr ..................   Passed    0.52 sec
+      Start 54: localized-ui-es
+ 8/43 Test #54: localized-ui-es ..................   Passed    0.50 sec
+      Start 55: localized-ui-it
+ 9/43 Test #55: localized-ui-it ..................   Passed    0.50 sec
+      Start 56: localized-ui-pt-PT
+10/43 Test #56: localized-ui-pt-PT ...............   Passed    0.53 sec
+      Start 57: localized-ui-pt-BR
+11/43 Test #57: localized-ui-pt-BR ...............   Passed    0.50 sec
+      Start 58: localized-ui-nl
+12/43 Test #58: localized-ui-nl ..................   Passed    0.51 sec
+      Start 59: localized-ui-pl
+13/43 Test #59: localized-ui-pl ..................   Passed    0.51 sec
+      Start 60: localized-ui-cs
+14/43 Test #60: localized-ui-cs ..................   Passed    0.51 sec
+      Start 61: localized-ui-sk
+15/43 Test #61: localized-ui-sk ..................   Passed    0.51 sec
+      Start 62: localized-ui-uk
+16/43 Test #62: localized-ui-uk ..................   Passed    0.51 sec
+      Start 63: localized-ui-ru
+17/43 Test #63: localized-ui-ru ..................   Passed    0.53 sec
+      Start 64: localized-ui-el
+18/43 Test #64: localized-ui-el ..................   Passed    0.52 sec
+      Start 65: localized-ui-tr
+19/43 Test #65: localized-ui-tr ..................   Passed    0.51 sec
+      Start 66: localized-ui-sv
+20/43 Test #66: localized-ui-sv ..................   Passed    0.52 sec
+      Start 67: localized-ui-da
+21/43 Test #67: localized-ui-da ..................   Passed    0.51 sec
+      Start 68: localized-ui-nb
+22/43 Test #68: localized-ui-nb ..................   Passed    0.52 sec
+      Start 69: localized-ui-fi
+23/43 Test #69: localized-ui-fi ..................   Passed    0.53 sec
+      Start 70: localized-ui-ro
+24/43 Test #70: localized-ui-ro ..................   Passed    0.52 sec
+      Start 71: localized-ui-hu
+25/43 Test #71: localized-ui-hu ..................   Passed    0.51 sec
+      Start 72: localized-ui-nn
+26/43 Test #72: localized-ui-nn ..................   Passed    0.52 sec
+      Start 73: localized-ui-ar
+27/43 Test #73: localized-ui-ar ..................   Passed    0.53 sec
+      Start 74: localized-ui-he
+28/43 Test #74: localized-ui-he ..................   Passed    0.51 sec
+      Start 75: localized-ui-fa
+29/43 Test #75: localized-ui-fa ..................   Passed    0.54 sec
+      Start 76: localized-ui-zh-Hans
+30/43 Test #76: localized-ui-zh-Hans .............   Passed    0.63 sec
+      Start 77: localized-ui-zh-Hant
+31/43 Test #77: localized-ui-zh-Hant .............   Passed    0.62 sec
+      Start 78: localized-ui-ja
+32/43 Test #78: localized-ui-ja ..................   Passed    0.67 sec
+      Start 79: localized-ui-ko
+33/43 Test #79: localized-ui-ko ..................   Passed    0.53 sec
+      Start 80: localized-ui-hi
+34/43 Test #80: localized-ui-hi ..................   Passed    0.53 sec
+      Start 81: localized-ui-id
+35/43 Test #81: localized-ui-id ..................   Passed    0.52 sec
+      Start 82: localized-ui-vi
+36/43 Test #82: localized-ui-vi ..................   Passed    0.51 sec
+      Start 83: localized-ui-th
+37/43 Test #83: localized-ui-th ..................   Passed    0.54 sec
+      Start 84: localized-ui-sw
+38/43 Test #84: localized-ui-sw ..................   Passed    0.51 sec
+      Start 85: localized-ui-qps-ploc
+39/43 Test #85: localized-ui-qps-ploc ............   Passed    0.59 sec
+      Start 86: localized-ui-qps-rtl
+40/43 Test #86: localized-ui-qps-rtl .............   Passed    0.60 sec
+      Start 88: translation-catalogs
+41/43 Test #88: translation-catalogs .............   Passed    1.88 sec
+      Start 89: backend-error-text
+42/43 Test #89: backend-error-text ...............   Passed    0.01 sec
+      Start 90: helper-utf8-output
+43/43 Test #90: helper-utf8-output ...............   Passed    0.63 sec
+
+100% tests passed, 0 tests failed out of 43
+
+Total Test time (real) =  24.68 sec

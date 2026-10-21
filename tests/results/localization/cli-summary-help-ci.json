@@ -1,0 +1,20 @@
+{
+  "run": 37883666514,
+  "url": "https://github.com/rhamenator/soundcurrent-studio/actions/runs/37883666514",
+  "head": "7c78ba7d901becd1e1f19ac5cbd74a6782cb9730",
+  "catalogMessages": 796,
+  "platforms": [
+    "windows-2022",
+    "ubuntu-24.04"
+  ],
+  "logSha256": "5e493c4921d9fe4b3ec4d8f2a1352e029b8bf99b28985e71f56f161fb3673c2c",
+  "verifiedLogLines": [
+    "engine (ubuntu-24.04)\tTest synthetic audio and WAVE files\t2026-10-09T04:23:54.6204205Z     Start 7: cli-localization",
+    "engine (ubuntu-24.04)\tTest synthetic audio and WAVE files\t2026-10-09T04:23:56.6541118Z 7/8 Test #7: cli-localization .................   Passed    2.03 sec",
+    "engine (ubuntu-24.04)\tTest synthetic audio and WAVE files\t2026-10-09T04:23:56.7035158Z 100% tests passed, 0 tests failed out of 8",
+    "engine (windows-2022)\tTest synthetic audio and WAVE files\t2026-10-09T04:24:26.7611115Z     Start 7: cli-localization",
+    "engine (windows-2022)\tTest synthetic audio and WAVE files\t2026-10-09T04:24:33.4730337Z 7/8 Test #7: cli-localization .................   Passed    6.71 sec",
+    "engine (windows-2022)\tTest synthetic audio and WAVE files\t2026-10-09T04:24:33.5497904Z 100% tests passed, 0 tests failed out of 8"
+  ],
+  "scope": "All eight engine CTests passed, including actual Unicode CLI error/help/summary workflows, locale-invariant clipping WAV bytes and native CRLF summary comparisons. Excludes subsequent four help-option descriptions and desktop/package lifecycle."
+}

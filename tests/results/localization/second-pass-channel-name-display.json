@@ -1,0 +1,58 @@
+{
+  "scope": "Provenance-aware Studio generated channel-name display",
+  "nonEnglishLocales": 33,
+  "sourceMessagesPerLocale": 686,
+  "unfinishedExtractedEntries": 0,
+  "captionSources": [
+    "Channel %1",
+    "Mono",
+    "Left",
+    "Right",
+    "Front left",
+    "Front right",
+    "Center channel",
+    "Rear left",
+    "Rear right",
+    "Side left",
+    "Side right"
+  ],
+  "intentionalInvariantCaption": "LFE standard abbreviation",
+  "contextualAIReview": {
+    "status": "reviewed",
+    "notes": [
+      "Channel directions denote speaker/channel position from listener perspective",
+      "Center channel is distinct from neutral balance Center; dedicated source avoids UI-centering translations",
+      "Mono uses existing single-channel audio caption",
+      "Generic channel number formats regionally; stable role and saved canonical name never translated"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Linux Qt offscreen",
+    "targetedTestsPassed": 42,
+    "failed": 0,
+    "catalogUnitTestsPassed": 16,
+    "actualWidgetScope": [
+      "Generated role captions in channel dropdown, name editor, routing labels and meters",
+      "Mono, stereo, six/eight-channel, sixteen-channel and 256-channel setups",
+      "No-op editing and save/reopen preserve session JSON",
+      "Custom Unicode/placeholder name remains raw and undo restores generated role",
+      "Legacy names and unknown future role metadata remain raw"
+    ],
+    "numberLocales": [
+      "de-DE",
+      "ar-EG",
+      "fr-FR",
+      "hi-IN"
+    ]
+  },
+  "wholeInterfaceCoverageProven": false,
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "legacyNamePolicy": "Never infer a generated role from saved name text; old names remain user data",
+  "evidence": {
+    "log": "tests/results/localization/channel-name-display-runtime.log",
+    "logSha256": "a8f86db7de955ff405ea2dcd0952fc71c96ed406f4b7c75b9e819286191dd1de",
+    "applicationBinarySha256": "e6db4edd91ad9d0d586159cb3441f899d31064be7c66d514191c9a5a094979fc"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-08",
+  "sourceCommit": "9166cfa",
+  "ciRun": 37747402679,
+  "status": "passed",
+  "environments": [
+    "Ubuntu 24.04 container",
+    "Fedora 44 container",
+    "AlmaLinux 10 container"
+  ],
+  "artifacts": [
+    {
+      "artifactDirectory": "package-validation-0",
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "package": "soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "7fc7403e385f9616022c9fe91c3264ebc2443cba7a92419aec58732154d3b74d",
+      "fullSuitePassed": 86,
+      "evidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/soundcurrent-studio-linux-ci-9166cfa/package-validation-0"
+    },
+    {
+      "artifactDirectory": "package-validation-1",
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "package": "soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "8fab8be4bdb1b2f8a6791cc7ecf06c0841fb8512abe199118d9d6ff371edc476",
+      "fullSuitePassed": 86,
+      "evidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/soundcurrent-studio-linux-ci-9166cfa/package-validation-1"
+    },
+    {
+      "artifactDirectory": "package-validation-2",
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "package": "soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "00ef5db9769fa2d6ed126ebf53d1f31e95248c9dfab2adefc4d90f579c5acdad",
+      "fullSuitePassed": 86,
+      "evidenceDirectory": "/home/rich/Downloads/SoundCurrent-localization-qa/soundcurrent-studio-linux-ci-9166cfa/package-validation-2"
+    }
+  ],
+  "nativeReviewed": false,
+  "limitations": [
+    "AlmaLinux evidence is not an actual RHEL desktop installation",
+    "Containers test lifecycle and fixtures, not live audio or interactive desktop sign-in",
+    "Source revision is explicit; later test-harness/report commits are not new application code"
+  ]
+}

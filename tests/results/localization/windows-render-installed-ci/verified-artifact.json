@@ -1,0 +1,18 @@
+{
+  "run": 37879056242,
+  "testedHead": "495eda041f9476e7ac72d8aad23f6c5870701591",
+  "catalogMessages": 753,
+  "conclusion": "success",
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-render-windows-37879056242/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "f9f890930a62943c564c093a6a6fa6f08779248b01f536707ea4b45495b86eb2",
+  "executableSha256": "5c8498c009c957c4831a2930a0a31ba4bc650bd55e826b88ffe21dfc62d3031b",
+  "installedLocaleLogsVerified": 34,
+  "renderFailuresExercised": [
+    "Cannot open input WAVE file",
+    "Invalid RIFF size",
+    "Chunk extends beyond RIFF bounds"
+  ],
+  "scope": "Installed UI fixtures invoke actual asynchronous renderer using isolated missing/malformed files; expected localized return string and no published output required for every catalog. Same-installer French/Nynorsk/Arabic update, shortcut argument/byte checks, preservation sentinels and silent uninstall passed. Not visual/native language review or all diagnostic failures.",
+  "newer761MessageCatalogQualified": false,
+  "nativeReviewed": false
+}

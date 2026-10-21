@@ -1,0 +1,37 @@
+{
+  "scope": "Production Windows script generates catalog-backed installer build copy before NSIS",
+  "validation": {
+    "unitTestsPassed": 31,
+    "unitTestsSkipped": 0,
+    "sourcePreservation": "all four source/generated installer pairs byte-identical with current English text; sources not modified by generator",
+    "invalidInputsRejected": [
+      "Overwriting original source",
+      "Product/schema mismatch",
+      "Missing/duplicate definition",
+      "Unplanned extra installer language"
+    ],
+    "cliEndToEnd": "cable build-copy generation passed for both products",
+    "powershellParsing": "both production build scripts parsed on host PowerShell"
+  },
+  "installerLanguagesEnabled": [
+    "English"
+  ],
+  "buildIntegration": "implemented in Windows packaging scripts; full Windows execution pending",
+  "fullWindowsBuildQualified": false,
+  "installedUiQualified": false,
+  "packageLifecycleQualified": false,
+  "nativeSpeakerVerification": "unverified",
+  "wholeInterfaceCoverageProven": false,
+  "remainingScope": [
+    "Installer locale activation and language selection",
+    "Remaining raw installer/helper text",
+    "Current Linux/Windows package and UI qualification"
+  ],
+  "evidenceSha256": {
+    "scripts/windows_installer_catalogs.py": "1687623baf13ccf817281a8d6b43a10e5f1c4923a7de1af8c4da73e574e40046",
+    "scripts/build-windows.ps1": "fa03e0eef51a77cd7217e6de02c526f2b54ebc08df3fe8b28036cce53b09c82c",
+    "tests/translation_catalogs.py": "d69a3caeb3300aeeb11e1897d55f0893d592b0e53381ee906a3e0d8b947e84db",
+    "tests/results/localization/installer-build-integration-tests.log": "d1771635a8e930a78f15e2d7aa0e02b5701d71bd1291789724b0efef2c94416a",
+    "tests/results/localization/installer-build-integration-powershell.log": "06b3956314598e400a6fcb9195c391799f2a97490d695d09cdd73ebd80adcb5d"
+  }
+}

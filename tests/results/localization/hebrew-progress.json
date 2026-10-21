@@ -1,0 +1,25 @@
+{
+  "stage": "Hebrew current catalogs complete",
+  "catalogs": [
+    {
+      "tag": "he",
+      "name": "עברית",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "aded1df2640b7106b5e31cc984938d6effc0ebcbb2b6543d5dfb86e381687d3f",
+      "qmSha256": "b0198f59472d6ee1339c12f62bb1abe08416403f949be2bb56242e81922acff5"
+    }
+  ],
+  "linuxTests": {
+    "passed": 74,
+    "total": 74,
+    "scope": "Full Linux CTest including Hebrew equipment workflows and RTL catalog assertions",
+    "log": "/tmp/soundcurrent-studio-he-complete-tests.log"
+  },
+  "review": "Contextual AI review; unverified. Current catalogs populated; contextual AI review remains unverified. Calibration limitations, microphone versus playback effects, save/quit behavior and neutral render counts reviewed.",
+  "nativeReviewed": false,
+  "windows": "Pending CI",
+  "remaining": "10 original target catalogs incomplete. Second-pass backend/helper/installer coverage, full bidi and platform lifecycle qualification remain open."
+}

@@ -1,0 +1,277 @@
+{
+  "scope": "Literal owned WAVE diagnostics in src/wav.cpp surfaced by StudioPanel::renderFiles through audioErrorText; excludes CLI help and external filesystem messages",
+  "sourceSha256": "f113caa45573d2895cd18745840f1bd4ed2abc28fcbac56a6027d1de3c81716b",
+  "messages": [
+    {
+      "source": "Cannot create output WAVE file",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Cannot open input WAVE file",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Cannot seek to WAVE audio",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Chunk extends beyond RIFF bounds",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Could not close WAVE output",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Could not flush WAVE output",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Could not write WAVE audio",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Could not write WAVE header",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Excessive number of RIFF chunks",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Incomplete WAVE output",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Input is too short for RIFF/WAVE",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid RIFF size",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid WAVE frame alignment or byte rate",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid WAVE read buffer",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid float WAVE format",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid output WAVE format",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid output speaker mask",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Invalid valid-bit count",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Missing RIFF padding byte",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Missing or incomplete WAVE audio",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Missing, duplicate or oversized WAVE format",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Multiple WAVE data chunks are unsupported",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Only PCM16/24/32 or float32 WAVE is supported",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Only little-endian RIFF/WAVE is supported",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Output exceeds the RIFF/WAVE 4 GiB limit",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Speaker mask does not match channel count",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Truncated WAVE file",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Truncated chunk header",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Truncated extensible WAVE format",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Unsupported WAVE rate or channel count",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "Unsupported extensible WAVE subtype",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    },
+    {
+      "source": "WAVE output exceeds its declared length",
+      "mappedAtDesktopBoundary": true,
+      "catalogsPopulated": 34,
+      "nativeReviewed": false
+    }
+  ],
+  "status": "All 32 inventoried owned WAVE diagnostics translated and mapped; scope excludes CLI help and external filesystem errors",
+  "nativeReviewed": false,
+  "wholeInterfaceCoverageProven": false,
+  "inputOpenChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 748 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves desktop boundary lookup"
+  ],
+  "currentPackageQualification": "pending for 779-message catalog; retained package evidence tests recorded earlier heads",
+  "excludedBinaryLiterals": [
+    "WAVEfmt "
+  ],
+  "truncatedFileChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 749 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves lookup"
+  ],
+  "outputCreateChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 750 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves lookup"
+  ],
+  "seekChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 751 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves lookup"
+  ],
+  "riffBoundsChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 753 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "bufferFormatChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 755 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "finalizationChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 757 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "writeChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 759 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "incompleteHeaderChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 761 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "bitFloatChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 763 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "speakerMaskChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 765 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "paddingChunkChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 767 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "outputLimitChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 769 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "shortExtensibleChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 771 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "dataChunkChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 773 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "encodingChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 775 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "frameRateChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 777 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ],
+  "metadataSubtypeChecks": [
+    "scripts/localization.py --update --require-complete passed: 34 catalogs, 779 messages, zero unfinished",
+    "soundcurrent-backend-error-text-test rebuilt and passed; injected translator proves both lookups"
+  ]
+}

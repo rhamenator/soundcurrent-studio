@@ -1,0 +1,46 @@
+{
+  "stage": "Swedish and Danish complete extracted catalogs",
+  "catalogs": [
+    {
+      "tag": "sv",
+      "name": "Svenska",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "09d9fcb00825db819c138316b6102b38cdf3b715a50dd8093460a36e0adae713",
+      "qmSha256": "d094e0b1b6935698f60ca5f2ca221059e79cbb333fa5228a3bdd756d682959bc"
+    },
+    {
+      "tag": "da",
+      "name": "Dansk",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "4be78c5eca1c63034fa9ffb578f41c7803e911da1fa3b113ccf50a8b06746933",
+      "qmSha256": "5f9511a1c3f9aee70840b2645125aa3a8a16ea84b0b41f3dd5649bc70795ac04"
+    }
+  ],
+  "linuxTests": {
+    "passed": 66,
+    "total": 66,
+    "scope": "Full CTest including Swedish/Danish equipment workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-sv-da-complete-tests.log"
+  },
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Danish Studio effects",
+    "screenshots": "/tmp/soundcurrent-studio-da-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Q, gain/headroom, wet mixes, loudness compensation and measured-response limits reviewed. Render counts use neutral labels.",
+  "nativeReviewed": false,
+  "windows": {
+    "status": "passed",
+    "runId": 37722817796,
+    "headSha": "574f0672822bb8c335ccf2cebfe4a3fe3f70c91b",
+    "scope": "Windows build, staged runtime tests and installer creation; actual install/update/uninstall and sign-in qualification remain separate."
+  },
+  "remaining": "16 target catalogs incomplete; backend/installer extraction, small-screen Polish layout and platform lifecycle/sign-in qualification remain open."
+}

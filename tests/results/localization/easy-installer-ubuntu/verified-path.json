@@ -1,0 +1,16 @@
+{
+  "run": 37914220039,
+  "platform": "Ubuntu24.04 disposable container",
+  "result": "verified",
+  "packageSha256": "08343fa757c4fc4484b56657adf037c9cce347deebe2ddf3cc721d5f3095dc81",
+  "confirmation": "Actual French terminal prompt accepted",
+  "behavior": "main ran local-package hash verification and apt-get install successfully. Already-current package retained (apt reports newest version); no reinstall performed by this easy-installer invocation. Surrounding direct package lifecycle independently tests reinstall/update, uninstall and preserved configuration.",
+  "scopeLimitations": [
+    "French actual installer path only",
+    "No network download",
+    "No older-to-newer migration",
+    "Fedora/AlmaLinux jobs still running at this checkpoint"
+  ],
+  "nativeReviewed": false,
+  "logSha256": "d55fa925299555368cbd4bf334cb06596f6d283393e410c2026f7bc1cd82543c"
+}

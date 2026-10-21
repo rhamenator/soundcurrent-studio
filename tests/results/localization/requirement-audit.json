@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-08",
+  "auditedHead": "b88c344795f4540170d42e32a9978b0883095704",
+  "overallStatus": "incomplete; do not mark full localization goal achieved",
+  "firstPassCatalogs": {
+    "nonEnglishLocales": 33,
+    "sourceMessagesPerLocale": 632,
+    "structuralCheck": "passed fresh scripts/localization.py --check",
+    "nativeSpeakerVerification": "unverified",
+    "contextualAIReview": "documented separately; not native or independent certification"
+  },
+  "requirements": [
+    {
+      "requirement": "Current catalog completeness, placeholders, compiled hashes",
+      "status": "verified",
+      "evidence": [
+        "data/localization/catalogs.json",
+        "tests/results/localization/catalog-audit.json"
+      ]
+    },
+    {
+      "requirement": "Contextual audio terminology review",
+      "status": "documented AI review; linguistic verification unverified",
+      "evidence": [
+        "docs/translation-review.md"
+      ]
+    },
+    {
+      "requirement": "Stable identifiers, regional input, plural policy, RTL and fallback",
+      "status": "tested within implemented fixture scope",
+      "evidence": [
+        "tests/localization.cpp",
+        "tests/translation_catalogs.py",
+        "tests/results/localization/linux-package/current-ci.json"
+      ]
+    },
+    {
+      "requirement": "Changed Linux/Windows packages and installed language fixtures",
+      "status": "verified for explicit source/package hashes; silent fixture lifecycle scope",
+      "evidence": [
+        "tests/results/localization/linux-package/report.json",
+        "tests/results/localization/linux-package/current-ci.json",
+        "tests/results/localization/windows-current-installed.json",
+        "tests/results/localization/windows-utf8-qualified.json"
+      ]
+    },
+    {
+      "requirement": "Whole-interface extraction and missing dynamic captions",
+      "status": "deferred to second pass by user; not complete"
+    },
+    {
+      "requirement": "Interactive installer and actual sign-in startup",
+      "status": "verified rebuilt installer text and update; actual sign-in/background/reopen/quit qualified in desktop session; direct GUI checkbox interaction not claimed",
+      "evidence": [
+        "tests/results/localization/windows-utf8-qualified.json",
+        "tests/windows_interactive_localization.ps1",
+        "tests/windows_startup_desktop_observer.ps1",
+        "tests/startup_registration.cpp"
+      ]
+    },
+    {
+      "requirement": "Preserve virtual-driver work",
+      "status": "bookmark and native packaging remain present",
+      "evidence": [
+        "docs/windows-native-driver-bookmark.md"
+      ]
+    },
+    {
+      "requirement": "Release publication",
+      "status": "not authorized; no release made in this work"
+    }
+  ],
+  "knownSecondPassExamples": [
+    "Installer/helper diagnostics and other uncaptured interface strings require audit"
+  ],
+  "limitations": [
+    "Representative screenshots and all-locale geometry measurements do not constitute all-string linguistic review",
+    "AlmaLinux container qualification does not prove an actual RHEL desktop",
+    "Owned preservation fixtures do not establish exhaustive comparison of every user file"
+  ],
+  "evidenceSha256": {
+    "data/localization/catalogs.json": "34413378c4d229be781da9f91637ad561686ec63850990cc71372935e4b527aa",
+    "docs/translation-review.md": "ecb62755ad6c75e682f1f7af68bf09b7a1f3afa3fb09af94582044d9511a11ff",
+    "tests/results/localization/catalog-audit.json": "b7e5307b21ac46ec7db6aa7a1d04e1f41664642ca0417f06bf8cae096feef593",
+    "tests/results/localization/linux-package/report.json": "d1faab9490a310b5b41cb6a63c3a8d224ec9a4a56039e3e60d4e8577fa3df7c8",
+    "tests/results/localization/linux-package/current-ci.json": "982278791d3a3b04fb2d10add02bec26f08ce9f02740a4bd2c6a1cc00a362dbf",
+    "tests/results/localization/windows-current-installed.json": "aa8e2269588a5df8ec817276ebfb4766254e8a8d738c1874b6c52d5766a85a23",
+    "tests/results/localization/hidpi/settings-fixed/report.json": "82c1d95ba4e4cb07464cc0195a976c6d6e2c6eeb0a08bd2cf38d9dde33484832",
+    "tests/localization.cpp": "a80e887d2e618b9b4ba7999a74723303be7c17180be44b3ded13dde18c96112d",
+    "tests/translation_catalogs.py": "b56234843f46f9aa7064fa865c8729289349cfda282586eda6fad12957369355",
+    "tests/startup_registration.cpp": "ea1a51cdfc141bd53e3ee631ed061bcf8f9eeb654c9173f38eb0dad099c91578",
+    "docs/windows-native-driver-bookmark.md": "ce524495f0f5684e5b6fcafe080360492430806469d3299d0361f998027b3262",
+    "tests/results/localization/windows-utf8-qualified.json": "0a7dfd784f0e712616ec31f98310b79dc91e276943b860d501562009f7ce1e58",
+    "tests/windows_interactive_localization.ps1": "e5d29e2692db4899c98167f7bee2be1724b1d0495351a9c1dc9a5b976e6f2edd",
+    "tests/windows_startup_desktop_observer.ps1": "f59c6dc395b0a16429ad0fb3bc52cf8f4eb44cb41b2d5598dfe4cf7fac41fc79"
+  },
+  "secondPassProgress": "tests/results/localization/second-pass-speaker-text.json",
+  "currentCatalogs": {
+    "nonEnglishLocales": 33,
+    "sourceMessagesPerLocale": 692,
+    "unfinished": 0,
+    "nativeReviewed": false
+  },
+  "taxonomyCaptionProgress": {
+    "report": "tests/results/localization/second-pass-taxonomy-remaining.json",
+    "status": "all 15 published taxonomy types and Sony qualifier translated; current main/catalog and equipment Qt offscreen locale checks passed; Windows/package qualification pending",
+    "equipmentRuntimeReport": "tests/results/localization/equipment-ui-watchdog.json"
+  },
+  "profileDiagnosticProgress": {
+    "report": "tests/results/localization/second-pass-profile-diagnostics.json",
+    "resolved": 3,
+    "remainingStudioOwnedDiagnostics": 14
+  },
+  "ownedSessionDiagnosticProgress": {
+    "report": "tests/results/localization/second-pass-owned-diagnostics.json",
+    "resolved": 17,
+    "remainingStudioSessionModelDiagnostics": 0,
+    "scope": "Session-model inventory only; other backend/helper diagnostics still require audit"
+  },
+  "evidenceSha256Scope": "Historical evidence hashes retained from prior audit; current batch hashes are in second-pass-owned-diagnostics.json",
+  "studioRegionalProgress": {
+    "report": "tests/results/localization/second-pass-studio-regional.json",
+    "status": "Linux Qt offscreen actual widget formatting and saved-number preservation passed; Windows/package qualification pending"
+  },
+  "channelNameProgress": {
+    "report": "tests/results/localization/second-pass-channel-name-provenance.json",
+    "status": "Provenance and state preservation tested; translated generated-name display still pending"
+  },
+  "channelNameDisplayProgress": {
+    "report": "tests/results/localization/second-pass-channel-name-display.json",
+    "status": "Generated role display translated in 33 non-English locales and Linux widgets qualified; legacy/custom text intentionally preserved; Windows/package qualification pending"
+  },
+  "setupCatalogLookupProgress": {
+    "report": "tests/results/localization/second-pass-setup-catalog-lookup.json",
+    "status": "Host PowerShell inert lookup tests passed; helper body/installer translation and Windows qualification pending"
+  },
+  "helperLanguageProgress": {
+    "report": "tests/results/localization/second-pass-helper-language.json",
+    "status": "Loaded-language/argv and exact source fallback tested on host; Windows launch, UTF-8 output, helper bodies and installer qualification pending"
+  },
+  "helperUtf8Progress": {
+    "report": "tests/results/localization/second-pass-helper-utf8.json",
+    "status": "Explicit UTF-8 protocol and real inert process boundary passed on host; helper message translation and Windows qualification pending"
+  },
+  "setupErrorProgress": {
+    "report": "tests/results/localization/second-pass-setup-errors.json",
+    "status": "Three errors translated in 33 non-English locales; declared helper lookups and safe quiet fault path tested on host; remaining bodies/NSIS and Windows qualification pending"
+  },
+  "setupPackageErrorProgress": {
+    "report": "tests/results/localization/second-pass-setup-package-errors.json",
+    "status": "Three integrity captions translated in 33 non-English locales; 238 declared lookup checks passed; production Windows paths and remaining messages pending"
+  },
+  "secondPassSetupFormatting": {
+    "status": "host fixtures passed; production dynamic-message conversion and Windows qualification pending",
+    "evidence": "tests/results/localization/second-pass-setup-formatting.json"
+  },
+  "secondPassSetupCodeErrors": {
+    "status": "two owned code-bearing setup errors translated; Windows failure paths and packages pending",
+    "evidence": "tests/results/localization/second-pass-setup-code-errors.json"
+  },
+  "secondPassSetupFailureHeading": {
+    "status": "host native/cable no-action faults passed; Windows attempt prevented by existing disk copy lock",
+    "evidence": "tests/results/localization/second-pass-setup-failure-heading.json"
+  },
+  "secondPassSetupProseGuard": {
+    "status": "host regression gate passed; 26 untranslated helper candidates explicitly remain",
+    "evidence": "tests/results/localization/second-pass-setup-prose-guard.json"
+  },
+  "secondPassNativePackageErrors": {
+    "status": "three owned errors translated; host missing-manager fault qualified; Windows package/signature paths pending",
+    "evidence": "tests/results/localization/second-pass-native-package-errors.json"
+  },
+  "secondPassNativeNotices": {
+    "status": "three notices translated; isolated native success conditional tested on host; Windows timeout/dialogs and lifecycle pending",
+    "evidence": "tests/results/localization/second-pass-native-notices.json"
+  },
+  "secondPassCableClientMessages": {
+    "status": "owned quit/readiness text translated; host isolated functions tested; Windows dialogs, waits and packages pending",
+    "evidence": "tests/results/localization/second-pass-cable-client-messages.json"
+  },
+  "secondPassCableRestartErrors": {
+    "status": "three owned messages translated; host lookup and regression checks passed; actual Windows paths and package lifecycle pending",
+    "evidence": "tests/results/localization/second-pass-cable-restart-errors.json"
+  },
+  "secondPassCableDialogCaptions": {
+    "status": "four messages translated; host nested-caption expression tested; real Windows dialogs and lifecycle pending",
+    "evidence": "tests/results/localization/second-pass-cable-dialog-captions.json"
+  },
+  "secondPassCableCompletion": {
+    "status": "three notices translated and external-label guard tested; Windows install/repair flows and packages pending",
+    "evidence": "tests/results/localization/second-pass-cable-completion.json"
+  },
+  "secondPassNsisSourceAudit": {
+    "status": "37 installer text candidates and four dynamic sites inventoried; English-only language declarations confirmed; translation and qualification pending",
+    "evidence": "tests/results/localization/second-pass-nsis-source-audit.json"
+  },
+  "secondPassCableRemoval": {
+    "status": "two messages translated and protected external labels tested; Windows dialogs and removal flow pending",
+    "evidence": "tests/results/localization/second-pass-cable-removal.json"
+  },
+  "secondPassCableEndpoint": {
+    "status": "one owned endpoint diagnostic translated and device labels protected; actual Windows endpoint path and packages pending",
+    "evidence": "tests/results/localization/second-pass-cable-endpoint.json"
+  },
+  "secondPassWindowsPowerShell51": {
+    "report": "tests/results/localization/second-pass-windows-ps51.json",
+    "status": "inert helper runtime passed; current installed UI and package lifecycle pending"
+  },
+  "secondPassCableRepairFailure": {
+    "report": "tests/results/localization/second-pass-cable-repair-failure.json",
+    "status": "translated extracted source in all catalogs; current Windows instruction/package qualification pending"
+  },
+  "secondPassSetupSourceInventory": {
+    "report": "tests/results/localization/second-pass-setup-source-inventory.json",
+    "status": "declared helper sources extracted directly; missing declaration invalidates existing catalogs"
+  },
+  "secondPassNsisLanguageDefinitions": {
+    "report": "tests/results/localization/second-pass-nsis-language-definitions.json",
+    "status": "direct definitions validated; installer translations and runtime qualification pending"
+  },
+  "secondPassInstallerAudioHeading": {
+    "report": "tests/results/localization/second-pass-installer-audio-heading.json",
+    "status": "heading translated in shared catalogs; English reference wired; other installer languages pending activation"
+  },
+  "secondPassInstallerSetupSubtitle": {
+    "report": "tests/results/localization/second-pass-installer-setup-subtitle.json",
+    "status": "all locale templates translated; English installer references wired; locale activation remains pending"
+  },
+  "secondPassInstallerDriverCheckbox": {
+    "report": "tests/results/localization/second-pass-installer-driver-checkbox.json",
+    "status": "all locale captions translated; English references wired; other installer languages pending activation"
+  },
+  "secondPassInstallerCaptionExport": {
+    "report": "tests/results/localization/second-pass-installer-caption-export.json",
+    "status": "shared exporter and all-locale syntax fixture passed; production integration and UI qualification pending"
+  },
+  "secondPassInstallerBuildIntegration": {
+    "report": "tests/results/localization/second-pass-installer-build-integration.json",
+    "status": "production script integration implemented; full Windows execution and packages pending"
+  },
+  "secondPassInstallerDriverCheck": {
+    "report": "tests/results/localization/second-pass-installer-driver-check.json",
+    "status": "all-locale failure guidance and translated setup action exported; locale activation and runtime qualification pending"
+  },
+  "secondPassInstallerReboot": {
+    "report": "tests/results/localization/second-pass-installer-reboot.json",
+    "status": "all-locale cable restart notice exported; language activation and current runtime qualification pending"
+  },
+  "secondPassInstallerSharedDriver": {
+    "report": "tests/results/localization/second-pass-installer-shared-driver.json",
+    "status": "native running-app notice corrected and translated; locale activation and current runtime qualification pending"
+  },
+  "secondPassInstallerNativeApproval": {
+    "report": "tests/results/localization/second-pass-installer-native-approval.json",
+    "status": "native signed-program approval notice translated; locale activation and runtime qualification pending"
+  },
+  "secondPassInstallerNativePresent": {
+    "report": "tests/results/localization/second-pass-installer-native-present.json",
+    "status": "native registration notice made conditional and translated; language activation and runtime qualification pending"
+  },
+  "secondPassInstallerNativeRouting": {
+    "report": "tests/results/localization/second-pass-installer-native-routing.json",
+    "status": "native output/routing explanation translated; locale activation and runtime qualification pending"
+  },
+  "secondPassWindowsCodepage": {
+    "report": "tests/results/localization/second-pass-windows-codepage.json",
+    "status": "observed Windows export encoding failure fixed and reproduced in host regression; fresh Windows qualification pending"
+  },
+  "secondPassInstallerSourceEndings": {
+    "report": "tests/results/localization/second-pass-installer-source-endings.json",
+    "status": "LF/CRLF/mixed preservation passed on host; Windows and package qualification pending"
+  },
+  "secondPassProcessOutputDiagnostics": {
+    "report": "tests/results/localization/second-pass-process-output-diagnostics.json",
+    "status": "Windows output fixture failure observed; diagnostics added and host-tested; root cause unresolved"
+  },
+  "secondPassStagedOutputFixture": {
+    "report": "tests/results/localization/second-pass-staged-output-fixture.json",
+    "status": "runtime deployment moved before fixture execution; Windows confirmation pending"
+  },
+  "secondPassInstallerCablePresent": {
+    "report": "tests/results/localization/second-pass-installer-cable-present.json",
+    "status": "reuse/translated Quit app guidance exported; locale activation and runtime qualification pending"
+  },
+  "windowsStagedOutputProgress": {
+    "repository": "soundcurrent-studio",
+    "runId": 37862439944,
+    "sourceCommit": "54aa95e",
+    "evidence": "tests/results/localization/studio-staged-output-ui-failure.log",
+    "result": "passed export/helper text tests, staged UTF-8 fixture and core/shared UI checks; failed German localized owned-validation check",
+    "wholeWindowsQualification": false
+  }
+}

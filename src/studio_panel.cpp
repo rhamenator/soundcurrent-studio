@@ -1,7 +1,10 @@
+#include "localized_file_dialog.h"
 #include "localization.h"
 // SPDX-License-Identifier: GPL-3.0-only
 #include "accelerating_spinbox.h"
 #include "studio_panel.h"
+#include "studio_name_text.h"
+#include "audio_error_text.h"
 #include "wav.h"
 #include <QCheckBox>
 #include <QComboBox>
@@ -85,10 +88,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     fxForm->addRow(reverb_); fxForm->addRow(SC_TR("Decay"), decay_); fxForm->addRow(SC_TR("Damping"), damping_); fxForm->addRow(SC_TR("Reverb wet mix"), wetReverb_);
     auto *delayLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetDelay_));
     auto *reverbLabel=qobject_cast<QLabel *>(fxForm->labelForField(wetReverb_));
-    delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(wetDelay_->value()));
-    reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(wetReverb_->value()));
-    connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(v));});
-    connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(v));});
+    delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(QLocale().toString(wetDelay_->value())));
+    reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(QLocale().toString(wetReverb_->value())));
+    connect(wetDelay_,&QSlider::valueChanged,this,[delayLabel](int v){delayLabel->setText(QString(SC_TR("Delay wet mix · %1%")).arg(QLocale().toString(v)));});
+    connect(wetReverb_,&QSlider::valueChanged,this,[reverbLabel](int v){reverbLabel->setText(QString(SC_TR("Reverb wet mix · %1%")).arg(QLocale().toString(v)));});
     enhancements_=new soundcurrent::EnhancementControls(true);
     editRoot->addWidget(enhancements_);
     enhancements_->onEdited=[this]{change([this](Session &s){s.engine.enhancements=enhancements_->settings();});if(!rebuilding_)preset_->setCurrentIndex(7);};
@@ -99,8 +102,8 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     mute_ = new QCheckBox(SC_TR("Mute")); solo_ = new QCheckBox(SC_TR("Solo")); auto *muteRow = new QHBoxLayout; muteRow->addWidget(mute_); muteRow->addWidget(solo_);
     ch->addRow(SC_TR("Channel"), channel_); ch->addRow(SC_TR("Name"), name_); ch->addRow(SC_TR("Trim"), trim_); ch->addRow(muteRow);
     auto *trimLabel=qobject_cast<QLabel *>(ch->labelForField(trim_));
-    trimLabel->setText(QString(SC_TR("Trim · %1 dB")).arg(trim_->value()/2.0,0,'f',1));
-    connect(trim_,&QSlider::valueChanged,this,[trimLabel](int v){trimLabel->setText(QString(SC_TR("Trim · %1 dB")).arg(v/2.0,0,'f',1));});
+    trimLabel->setText(QString(SC_TR("Trim · %1 dB")).arg(QLocale().toString(trim_->value()/2.0,'f',1)));
+    connect(trim_,&QSlider::valueChanged,this,[trimLabel](int v){trimLabel->setText(QString(SC_TR("Trim · %1 dB")).arg(QLocale().toString(v/2.0,'f',1)));});
     filters_ = table({SC_TR("Type"), "Hz", "dB", "Q"}); filters_->setAccessibleName(SC_TR("Selected channel EQ filters")); ch->addRow(filters_);
     filterType_ = new QComboBox; filterType_->addItems({SC_TR("Peaking"), SC_TR("Low shelf"), SC_TR("High shelf"), SC_TR("High pass"), SC_TR("Low pass")});
     filterHz_ = spin(20,20000,1000,10); filterDb_ = spin(-24,24,0,.5); filterQ_ = spin(.1,20,1);
@@ -127,15 +130,17 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
         if (rebuilding_) return;
         change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb; next.engine.enhancements=s.engine.enhancements;
             next.engine.automaticHeadroom=s.engine.automaticHeadroom; next.engine.bypass=s.engine.bypass; next.offline = true;
-            for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; next.names[c]=s.names[c]; next.solo[c]=s.solo[c]; }
+            for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; next.names[c]=s.names[c]; next.nameProvenance[std::size_t(c)]=s.nameProvenance[std::size_t(c)]; next.solo[c]=s.solo[c]; }
             s=std::move(next); }); rebuild();
     });
     connect(layout_, &QComboBox::activated, this, [this](int i) { constexpr int counts[]{2,1,6,8,16}; if(i<5) count_->setValue(counts[i]); });
     connect(channel_, &QComboBox::currentIndexChanged, this, [this] { if (!rebuilding_) loadChannel(); });
     connect(offline_, &QCheckBox::toggled, this, [this](bool on) { change([&](Session &s){s.offline=on;}); });
     connect(name_, &QLineEdit::editingFinished, this, [this] { if(name_->text().trimmed().isEmpty()) return;
-        change([&](Session &s){s.names[channel_->currentIndex()]=name_->text().trimmed();}); rebuild(); });
-    connect(trim_, &QSlider::valueChanged, this, [this](int v){ change([&](Session &s){s.engine.channels[channel_->currentIndex()].gainDb=v/2.0;}); trim_->setToolTip(QString::number(v/2.0)+SC_TR(" dB")); });
+        const int channel = channel_->currentIndex();
+        if (name_->text().trimmed() == channelNameText(session_,channel)) return;
+        change([&](Session &s){s.setCustomName(channel,name_->text().trimmed());}); rebuild(); });
+    connect(trim_, &QSlider::valueChanged, this, [this](int v){ change([&](Session &s){s.engine.channels[channel_->currentIndex()].gainDb=v/2.0;}); trim_->setToolTip(QLocale().toString(v/2.0,'f',1)+SC_TR(" dB")); });
     connect(mute_, &QCheckBox::toggled, this, [this](bool v){change([&](Session &s){s.engine.channels[channel_->currentIndex()].muted=v;});});
     connect(solo_, &QCheckBox::toggled, this, [this](bool v){change([&](Session &s){s.solo[channel_->currentIndex()]=v;});});
     const auto effects = [this] { change([&](Session &s) {
@@ -153,7 +158,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
             const EqBand filter{filterHz_->value(),filterDb_->value(),filterQ_->value(),static_cast<FilterType>(filterType_->currentIndex())};
             if(replace && row>=0) b[std::size_t(row)]=filter;
             else if(!replace && b.size()+shared_.size()<kMaxProcessingBands) b.push_back(filter);
-            else throw std::runtime_error("Select a filter to update, or remove filters before adding more"); }); loadChannel(); };
+            else throw std::runtime_error(SC_TR("Select a filter to update, or remove filters before adding more").toStdString()); }); loadChannel(); };
     connect(add,&QPushButton::clicked,this,[editFilter]{editFilter(false);}); connect(replace,&QPushButton::clicked,this,[editFilter]{editFilter(true);});
     connect(remove,&QPushButton::clicked,this,[this]{ const int row=filters_->currentRow(); if(row<0)return;
         change([&](Session &s){auto &b=s.engine.channels[channel_->currentIndex()].bands; b.erase(b.begin()+row);}); loadChannel();});
@@ -176,7 +181,7 @@ void StudioPanel::change(const std::function<void(Session &)> &fn) {
     try {fn(session_);AudioEngine validate(48000,session_.engine.channels.size());std::string error;
         if(!validate.configure(session_.effective(shared_,sharedGain_,balance_),&error))throw std::runtime_error(error);
         commit(before);
-    } catch(const std::exception &e){session_=before;status_->setText(e.what());rebuild();}
+    } catch(const std::exception &e){session_=before;status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));rebuild();}
 }
 void StudioPanel::commit(const Session &before) {
     if(session_.json()==before.json())return;
@@ -190,22 +195,22 @@ void StudioPanel::undo() { if(locked_||history_.empty())return;session_=history_
 void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
-    offline_->setChecked(session_.offline);channel_->clear();channel_->addItems(session_.names);channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
+    offline_->setChecked(session_.offline);channel_->clear();for(int c=0;c<int(session_.engine.channels.size());++c)channel_->addItem(channelNameText(session_,c));channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
     enhancements_->setSettings(session_.engine.enhancements);
     const auto &d=session_.engine.delay;const auto &r=session_.engine.reverb;
     delay_->setChecked(d.enabled);delayMs_->setValue(d.milliseconds);feedback_->setValue(d.feedback);wetDelay_->setValue(int(std::lround(d.mix*100)));
     reverb_->setChecked(r.enabled);decay_->setValue(r.decaySeconds);damping_->setValue(r.damping);wetReverb_->setValue(int(std::lround(r.mix*100)));
     bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);undo_->setEnabled(!locked_&&!history_.empty());
     preset_->setCurrentIndex(!d.enabled && !r.enabled && !session_.engine.enhancements.active() ? 0 : 7);
-    meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(c+1).arg(session_.names[c]));cell(meters_,c,1,"−∞ dBFS");}
+    meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(QLocale().toString(c+1)).arg(channelNameText(session_,c)));cell(meters_,c,1,SC_TR("−∞ dBFS"));}
     rebuilding_=false;loadChannel();
 }
 void StudioPanel::loadChannel() {
     rebuilding_=true;const int c=std::max(0,channel_->currentIndex());const auto &s=session_.engine.channels[std::size_t(c)];
-    name_->setText(session_.names[c]);trim_->setValue(int(std::lround(s.gainDb*2)));trim_->setToolTip(QString::number(s.gainDb)+SC_TR(" dB"));mute_->setChecked(s.muted);solo_->setChecked(session_.solo[std::size_t(c)]);
-    filters_->setRowCount(int(s.bands.size()));for(int r=0;r<int(s.bands.size());++r){const auto &b=s.bands[std::size_t(r)];cell(filters_,r,0,filterType_->itemText(int(b.type)));cell(filters_,r,1,QString::number(b.frequency));cell(filters_,r,2,QString::number(b.gainDb));cell(filters_,r,3,QString::number(b.q));}
+    name_->setText(channelNameText(session_,c));trim_->setValue(int(std::lround(s.gainDb*2)));trim_->setToolTip(QLocale().toString(s.gainDb,'f',1)+SC_TR(" dB"));mute_->setChecked(s.muted);solo_->setChecked(session_.solo[std::size_t(c)]);
+    filters_->setRowCount(int(s.bands.size()));for(int r=0;r<int(s.bands.size());++r){const auto &b=s.bands[std::size_t(r)];cell(filters_,r,0,filterType_->itemText(int(b.type)));cell(filters_,r,1,QLocale().toString(b.frequency,'g',6));cell(filters_,r,2,QLocale().toString(b.gainDb,'g',6));cell(filters_,r,3,QLocale().toString(b.q,'g',6));}
     routes_->setRowCount(0);for(int in=0;in<count_->value();++in){const auto weight=session_.routing[std::size_t(c)*std::size_t(count_->value())+std::size_t(in)];if(weight==0)continue;
-        const int row=routes_->rowCount();routes_->insertRow(row);cell(routes_,row,0,QString("%1 · %2").arg(in+1).arg(session_.names[in]));routes_->item(row,0)->setData(Qt::UserRole,in);cell(routes_,row,1,QString::number(weight,'f',3));}
+        const int row=routes_->rowCount();routes_->insertRow(row);cell(routes_,row,0,QString("%1 · %2").arg(QLocale().toString(in+1)).arg(channelNameText(session_,in)));routes_->item(row,0)->setData(Qt::UserRole,in);cell(routes_,row,1,QLocale().toString(weight,'f',3));}
     rebuilding_=false;
 }
 void StudioPanel::effectPreset(int i) {
@@ -215,27 +220,27 @@ void StudioPanel::effectPreset(int i) {
         if(i==5)s.engine.reverb={true,4,.35,.25};if(i==6){s.engine.delay={true,250,.3,.15};s.engine.reverb={true,1.5,.4,.15};}});rebuild();preset_->setCurrentIndex(i);
 }
 void StudioPanel::saveProfile() {
-    const auto filename=QFileDialog::getSaveFileName(this,SC_TR("Save Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
+    const auto filename=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("Save Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
     QSaveFile file(filename);if(!file.open(QIODevice::WriteOnly)){status_->setText(SC_TR("Cannot save setup"));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);
     file.write(QJsonDocument(session_.json()).toJson());status_->setText(file.commit()?SC_TR("Studio setup saved."):SC_TR("Cannot finish saving setup."));
 }
 void StudioPanel::openProfile() {
-    if(locked_)return;const auto filename=QFileDialog::getOpenFileName(this,SC_TR("Open Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
-    try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error("Setup cannot be read or exceeds 8 MiB");
+    if(locked_)return;const auto filename=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Open Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
+    try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
         auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));
-    }catch(const std::exception &e){status_->setText(e.what());}
+    }catch(const std::exception &e){status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::startPreview() {
     try {previewEngine_=std::make_unique<AudioEngine>(48000,session_.engine.channels.size());std::string error;
         if(!previewEngine_->configure(session_.effective(shared_,sharedGain_,balance_),&error))throw std::runtime_error(error);
         previewRouter_=std::make_unique<ChannelRouter>(count_->value(),count_->value());previewRouter_->setMatrix(session_.routing);
         raw_.resize(960*session_.engine.channels.size());processed_.resize(raw_.size());previewFrame_=0;
-    }catch(const std::exception &e){previewEngine_.reset();status_->setText(e.what());}
+    }catch(const std::exception &e){previewEngine_.reset();status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::setLiveLevels(std::span<const float> levels) {
     if(preview_->isChecked()&& !levels.empty())return;
     for(int c=0;c<meters_->rowCount();++c){const float value=std::size_t(c)<levels.size()?levels[std::size_t(c)]:0;
-        auto *item=meters_->item(c,1);item->setText(value>1e-8?QString::number(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));
+        auto *item=meters_->item(c,1);item->setText(value>1e-8?QLocale().toString(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));
         item->setForeground(value>=1?QColor("#ff6868"):value>=.7?QColor("#ffc66d"):QColor("#55d7c3"));}
 }
 void StudioPanel::liveStatus(const QString &message,bool rejected) {
@@ -255,8 +260,8 @@ void StudioPanel::tick() {
     if(renderJob_.valid()) {progress_->setValue(jobProgress_);if(renderJob_.wait_for(std::chrono::seconds(0))==std::future_status::ready){status_->setText(renderJob_.get());render_->setEnabled(true);cancel_->setEnabled(false);}}
 }
 void StudioPanel::render() {
-    if(renderJob_.valid())return;const auto input=QFileDialog::getOpenFileName(this,SC_TR("Input WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(input.isEmpty())return;
-    const auto output=QFileDialog::getSaveFileName(this,SC_TR("New rendered WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(output.isEmpty())return;
+    if(renderJob_.valid())return;const auto input=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Input WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(input.isEmpty())return;
+    const auto output=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("New rendered WAVE file"),{},SC_TR("WAVE audio (*.wav)"));if(output.isEmpty())return;
     renderFiles(input,output);
 }
 void StudioPanel::renderFiles(const QString &input,const QString &output) {
@@ -264,27 +269,118 @@ void StudioPanel::renderFiles(const QString &input,const QString &output) {
     const auto s=session_;const auto shared=shared_;const double gain=sharedGain_,tail=tail_->value();const int balance=balance_;
     cancelJob_=false;jobProgress_=0;render_->setEnabled(false);cancel_->setEnabled(true);status_->setText(SC_TR("Rendering…"));
     renderJob_=std::async(std::launch::async,[this,s,shared,gain,tail,balance,input,output]() -> QString {
-        try {const auto final=path(output);if(std::filesystem::exists(final))throw std::runtime_error("Output already exists; select a new filename");
+        try {const auto final=path(output);if(std::filesystem::exists(final))throw std::runtime_error(SC_TR("Output already exists; select a new filename").toStdString());
             QTemporaryDir staging(QFileInfo(output).absolutePath()+"/.soundcurrent-render-XXXXXX");
-            if(!staging.isValid())throw std::runtime_error("Cannot create output staging directory");
+            if(!staging.isValid())throw std::runtime_error(SC_TR("Cannot create output staging directory").toStdString());
             WaveReader reader(path(input));const auto source=reader.format();const auto n=s.engine.channels.size();
-            if(source.channels>n)throw std::runtime_error("Input has more channels than the Studio layout; choose a matching or larger layout");
+            if(source.channels>n)throw std::runtime_error(SC_TR("Input has more channels than the Studio layout; choose a matching or larger layout").toStdString());
             AudioEngine engine(int(source.sampleRate),n);std::string error;if(!engine.configure(s.effective(shared,gain,balance),&error))throw std::runtime_error(error);
             ChannelRouter router(n,n);router.setMatrix(s.routing);WaveFormat format=source;format.channels=unsigned(n);
             if(n!=source.channels||s.routing!=Session(n).routing)format.channelMask=0;
             format.frames+=std::uint64_t(std::llround(tail*source.sampleRate));const auto temporary=path(staging.filePath("audio.wav"));WaveWriter writer(temporary,format);
             std::vector<float> inputBlock(1024*source.channels),padded(1024*n),processed(1024*n);std::uint64_t clips=0;
             for(std::uint64_t position=0;position<format.frames;) {
-                if(cancelJob_)throw std::runtime_error("Render cancelled; no output file published");const auto frames=std::size_t(std::min<std::uint64_t>(1024,format.frames-position));
+                if(cancelJob_)throw std::runtime_error(SC_TR("Render cancelled; no output file published").toStdString());const auto frames=std::size_t(std::min<std::uint64_t>(1024,format.frames-position));
                 std::fill(inputBlock.begin(),inputBlock.end(),0.0f);reader.read(std::span(inputBlock).first(frames*source.channels));std::fill(padded.begin(),padded.end(),0.0f);
                 for(std::size_t f=0;f<frames;++f)std::copy_n(inputBlock.data()+f*source.channels,source.channels,padded.data()+f*n);
                 auto block=std::span(processed).first(frames*n);router.process(std::span(padded).first(frames*n),block);clips+=engine.process(block).clippedSamples;writer.write(block);
                 position+=frames;jobProgress_=int(position*100/std::max<std::uint64_t>(1,format.frames));
             }
-            writer.finish();if(cancelJob_)throw std::runtime_error("Render cancelled; no output file published");std::filesystem::create_hard_link(temporary,final);
-            return QString("Rendered %1 channels. Clipped samples: %2. %3").arg(n).arg(clips).arg(output);
-        }catch(const std::exception &e){return QString("Render: ")+e.what();}
+            writer.finish();if(cancelJob_)throw std::runtime_error(SC_TR("Render cancelled; no output file published").toStdString());std::filesystem::create_hard_link(temporary,final);
+            return SC_TR("Rendered %1 channels. Clipped samples: %2. %3").arg(QLocale().toString(qulonglong(n))).arg(QLocale().toString(qulonglong(clips))).arg(output);
+        }catch(const std::exception &e){return SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
     });
+}
+void StudioPanel::selfTestRenderErrors() {
+    QTemporaryDir files;
+    if (!files.isValid() || renderJob_.valid()) qFatal("Render diagnostic fixture unavailable");
+    const auto check = [this, &files](const QString &input, const char *source) {
+        const auto output = files.filePath("unpublished.wav");
+        renderFiles(input, output);
+        const auto result = renderJob_.get();
+        const auto expected = SC_TR("Render: %1").arg(soundcurrent::i18n::audioErrorText(QString::fromUtf8(source)));
+        if (result != expected || QFile::exists(output))
+            qFatal("Localized render failure or output preservation failed: %s", source);
+    };
+    check(files.filePath("missing.wav"), "Cannot open input WAVE file");
+    const auto malformed = files.filePath("malformed.wav");
+    {
+        QFile file(malformed);
+        if (!file.open(QIODevice::WriteOnly) || file.write(QByteArray::fromHex("524946460000000057415645")) != 12)
+            qFatal("Cannot create RIFF extent fixture");
+    }
+    check(malformed, "Invalid RIFF size");
+    {
+        QFile file(malformed);
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Truncate) ||
+            file.write(QByteArray::fromHex("524946460c000000574156454a554e4b64000000")) != 20)
+            qFatal("Cannot create RIFF chunk fixture");
+    }
+    check(malformed, "Chunk extends beyond RIFF bounds");
+    render_->setEnabled(true); cancel_->setEnabled(false);
+    status_->setText(SC_TR("Ready. Effects are dry until enabled."));
+}
+void StudioPanel::selfTestChannelNames() {
+    const auto original = session_;
+    const auto history = history_;
+    for (const auto count : {1,2,6,8,16,256}) {
+        session_ = Session(count); rebuild();
+        const auto snapshot = session_.json();
+        for (const int channel : {0,count-1}) {
+            channel_->setCurrentIndex(channel);
+            const auto caption = channelNameText(session_,channel);
+            if (channel_->itemText(channel) != caption || name_->text() != caption ||
+                !meters_->item(channel,0)->text().endsWith(caption) ||
+                !routes_->item(0,0)->text().endsWith(caption))
+                qFatal("Generated name display missed a Studio control");
+            QMetaObject::invokeMethod(name_,"editingFinished",Qt::DirectConnection);
+            if (session_.json() != snapshot) qFatal("Localized no-op name editing rewrote saved setup");
+        }
+        if (Session::parse(snapshot).json() != snapshot)
+            qFatal("Localized generated channel name changed canonical saved state");
+    }
+    session_ = Session(2); rebuild();channel_->setCurrentIndex(0);
+    name_->setText("User %1 / 音声 / Left");
+    QMetaObject::invokeMethod(name_,"editingFinished",Qt::DirectConnection);
+    if (!session_.defaultNameRole(0).isEmpty() || channel_->itemText(0)!="User %1 / 音声 / Left" ||
+        name_->text()!="User %1 / 音声 / Left") qFatal("Custom channel name was translated or altered");
+    undo();
+    if (session_.defaultNameRole(0)!="left" || name_->text()!=SC_TR("Left"))
+        qFatal("Undo failed to restore localized generated name");
+    session_ = original; history_ = history; rebuild();
+}
+void StudioPanel::selfTestFormatting() {
+    const auto original = session_;
+    const auto history = history_;
+    session_ = Session(2);
+    session_.engine.channels[0].gainDb = -1.5;
+    session_.engine.channels[0].bands = {{1234.5,-2.5,.707}};
+    session_.routing[1] = -.125;
+    const auto fixture = session_.json();
+    rebuild();
+    const QLocale locale;
+    if (trim_->toolTip() != locale.toString(-1.5,'f',1)+SC_TR(" dB") ||
+        filters_->item(0,1)->text() != locale.toString(1234.5,'g',6) ||
+        filters_->item(0,2)->text() != locale.toString(-2.5,'g',6) ||
+        filters_->item(0,3)->text() != locale.toString(.707,'g',6) ||
+        routes_->item(1,1)->text() != locale.toString(-.125,'f',3) ||
+        routes_->item(1,0)->data(Qt::UserRole).toInt() != 1)
+        qFatal("Studio regional filter/route/trim display failed");
+    const std::array<float,2> levels{.5f,0};
+    setLiveLevels(levels);
+    if (meters_->item(0,1)->text() != locale.toString(20*std::log10(.5f),'f',1)+SC_TR(" dBFS") ||
+        meters_->item(1,1)->text() != SC_TR("−∞ dBFS"))
+        qFatal("Studio regional live level display failed");
+    if (session_.json() != fixture) qFatal("Studio formatting changed persisted audio settings");
+    auto *delayLabel = qobject_cast<QLabel *>(qobject_cast<QFormLayout *>(wetDelay_->parentWidget()->layout())->labelForField(wetDelay_));
+    auto *reverbLabel = qobject_cast<QLabel *>(qobject_cast<QFormLayout *>(wetReverb_->parentWidget()->layout())->labelForField(wetReverb_));
+    if (!delayLabel || !reverbLabel) qFatal("Studio wet mix label fixture missing");
+    wetDelay_->setValue(37); wetReverb_->setValue(42);
+    if (delayLabel->text() != SC_TR("Delay wet mix · %1%").arg(locale.toString(37)) ||
+        reverbLabel->text() != SC_TR("Reverb wet mix · %1%").arg(locale.toString(42)) ||
+        session_.engine.delay.mix != .37 || session_.engine.reverb.mix != .42)
+        qFatal("Studio regional wet mix label or processing value failed");
+    session_ = original; history_ = history; rebuild();
 }
 void StudioPanel::selfTest() {
     Session lowGain(2);
@@ -297,6 +393,23 @@ void StudioPanel::selfTest() {
     quietEngine.process(quietFrame);
     if (std::abs(quietFrame[0] - .5 * std::pow(10., -84. / 20)) > 1e-9)
         qFatal("Studio low post gain amplitude is incorrect");
+    const auto provenanceSession = session_;
+    const auto provenanceHistory = history_;
+    session_ = Session(2); rebuild();
+    const auto noEdit = session_.json();
+    QMetaObject::invokeMethod(name_, "editingFinished", Qt::DirectConnection);
+    if (session_.json() != noEdit || session_.defaultNameRole(0) != "left")
+        qFatal("Unchanged name field discarded default name provenance");
+    name_->setText("Custom %1 / 音声");
+    QMetaObject::invokeMethod(name_, "editingFinished", Qt::DirectConnection);
+    if (!session_.defaultNameRole(0).isEmpty() || session_.names[0] != "Custom %1 / 音声")
+        qFatal("Custom channel name did not clear generated-name provenance");
+    count_->setValue(8);
+    if (session_.names[0] != "Custom %1 / 音声" || session_.defaultNameRole(1) != "right" ||
+        session_.defaultNameRole(7) != "side-right") qFatal("Channel resize lost name provenance");
+    undo(); undo();
+    if (session_.json() != noEdit) qFatal("Channel name/resize undo lost provenance");
+    session_ = provenanceSession; history_ = provenanceHistory; rebuild();
     const auto initial=session_.json();count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline)qFatal("Studio 256-channel UI failed");
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");

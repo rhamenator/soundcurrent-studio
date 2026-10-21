@@ -1,0 +1,30 @@
+{
+  "scope": "Studio generated channel-name provenance prerequisite",
+  "schema": "Existing schema 1 plus optional per-channel versioned nameProvenance metadata",
+  "targetedTestsPassed": 42,
+  "failed": 0,
+  "platform": "Linux Qt offscreen",
+  "parserLocaleFixtureScope": [
+    "Legacy profile without metadata preserves original JSON and does not infer roles",
+    "Known default role survives save/reopen",
+    "Unknown future role/version/opaque fields retained without interpretation",
+    "Stale metadata cannot override custom Unicode/placeholder name"
+  ],
+  "sharedUIFixtureScope": [
+    "Unchanged editingFinished preserves metadata",
+    "Custom Unicode/placeholder name clears default role",
+    "Resize preserves retained provenance and generates new roles",
+    "Undo resize and rename restores original session"
+  ],
+  "actualChannelNameTranslationsAdded": false,
+  "nextRequiredWork": "Translate generated-role display captions in all 33 non-English catalogs; wire UI labels and provenance-aware editing to display mapping",
+  "wholeInterfaceCoverageProven": false,
+  "nativeSpeakerVerification": "unverified",
+  "WindowsCurrentChangesQualified": false,
+  "newPackagesQualified": false,
+  "evidence": {
+    "log": "tests/results/localization/channel-name-provenance-runtime.log",
+    "logSha256": "cff7cdecefa7a73208351ad8e5811b474d91051960f074fb7e81109060a469a0",
+    "applicationBinarySha256": "895b316ba75bee14aee4f7e92fe13319bf5d3fa8ca0b5f70d7caa8efdbd936a3"
+  }
+}

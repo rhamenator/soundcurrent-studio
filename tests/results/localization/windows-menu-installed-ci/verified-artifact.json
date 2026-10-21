@@ -1,0 +1,21 @@
+{
+  "run": 37886565450,
+  "testedHead": "b34c4668c7cfb96e59e2247cf5b817d0de6e5d30",
+  "catalogMessages": 822,
+  "conclusion": "success",
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-installed-windows-37886565450/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "c9c568ad4a5be02057360aa9e080699a2a70e6bc71aac154494a2d287965d6c0",
+  "executableSha256": "eeb5f73b2739401b849e4c1547ae6e7d7160f8d33da59007f353dd99586b78a5",
+  "installedLocaleLogCount": 34,
+  "scope": "Native Windows CI compiled tests and actual installed app UI fixtures for 34 catalogs; silent French/Nynorsk/Arabic install and same-installer update, localized shortcuts, settings/user-file preservation and uninstall; audio device identities/status guarded unchanged by fixture. Not interactive chooser, older-version migration, live audio, native-driver lifecycle or native-speaker verification.",
+  "nativeReviewed": false,
+  "compiledLocalizationFixtureEvidence": {
+    "platform": "windows",
+    "testTargetBuilt": true,
+    "executionGate": "build-windows.ps1 launches the named test with native Windows platform, waits up to 90 seconds and fails on absent/nonzero exit; successful CI build step passed this gate",
+    "buildScriptSha256": "106f525e158d4c1e471c1c478edefbfdeb2849cd467bb321ff580d5ccd2e5f40",
+    "ciLogSha256": "c5a11473a9d3dcbf84f2155128584b7777d7bfd91b5f7bf7855509cbd8cdff13",
+    "ciLogPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-windows-menu-37886565450.log",
+    "limitations": "Successful GUI test stdout is not retained separately by this build script; installed app UI completion logs are retained separately"
+  }
+}

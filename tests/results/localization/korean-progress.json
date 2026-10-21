@@ -1,0 +1,31 @@
+{
+  "stage": "Korean current catalogs populated",
+  "catalogs": [
+    {
+      "tag": "ko",
+      "name": "한국어",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "760df8eaa2382f1bc55599e053bb3b0e01f9ce464fe52cbe295c73bcf5e55a27",
+      "qmSha256": "66f1e8cab397566022fd7d09272c85f573c89d80ec14296d07fd2ff93f064c72"
+    }
+  ],
+  "linuxTests": {
+    "passed": 3,
+    "total": 3,
+    "scope": "Embedded localization assertions, Korean MainWindow offscreen smoke test and structural catalog validation",
+    "log": "/tmp/soundcurrent-studio-ko-complete-tests.log"
+  },
+  "review": "Contextual AI review across current Korean catalogs: effects, calibration limitations, microphone versus speaker paths, save/quit behavior, profile validation and neutral rendering counts. Linguistic accuracy unverified; no native review.",
+  "nativeReviewed": false,
+  "windows": "Pending CI; no Windows runtime qualification for this batch",
+  "remaining": "Five target catalogs incomplete. Second-pass omitted source strings, visual and Windows lifecycle qualification remain open.",
+  "focusedWorkflowTests": {
+    "passed": 4,
+    "total": 4,
+    "scope": "Korean profile editor workflow, embedded catalog completeness, standard Save, regional resolution, LTR, MainWindow offscreen and structural checks",
+    "log": "/tmp/soundcurrent-studio-ko-workflows-tests.log"
+  }
+}

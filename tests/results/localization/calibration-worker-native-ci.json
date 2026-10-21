@@ -1,0 +1,11 @@
+{
+  "run": 37888316491,
+  "testedHead": "fa8814870b2b415ee82adb5774d19b492ef2ec33",
+  "catalogMessages": 827,
+  "platform": "Windows 2022 GitHub-hosted runner",
+  "scope": "Actual core-only calibration worker failure at out-of-range levels for 34 catalogs plus regional/fallback cases. No device lookup or playback. This predates the new parent UTF-8 buffering change.",
+  "verifiedCompletionLine": "windows\tBuild, test and package the shared application\t2026-10-09T05:26:45.6506431Z PASS: actual core-only calibration worker, 34 catalogs plus regional/fallback cases, exact UTF-8 failure text, no device lookup or playback",
+  "ciLogPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-calibration-native-37888316491.log",
+  "ciLogSha256": "79cfe116581015f470c371b5658f2e6e909a4a4fe9c12c6757dd0a6ad3e75b42",
+  "nativeReviewed": false
+}

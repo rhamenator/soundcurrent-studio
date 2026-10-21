@@ -1,0 +1,12 @@
+{
+  "run": 37878095228,
+  "testedHead": "d21a3f7496dc96670dccf83ee37d7a63eb963ddc",
+  "conclusion": "success",
+  "installerPath": "/home/rich/dev/soundcurrent-localization-artifacts/studio-installed-windows-37878095228/dist/SoundCurrent-Studio-1.1.0-windows-x64-setup.exe",
+  "installerSha256": "84ab3828ff6856c7726e3e8c83fd9fac1a0c8df13b567460b8f7a5098ca81fb6",
+  "executableSha256": "6b37b75b33f43946c239c66faed4818d25203822dba36b855019ad00ddaf6a1a",
+  "installedLocaleLogCount": 34,
+  "scope": "Actual installed cable app UI fixtures for all 34 catalogs; French/Nynorsk/Arabic same-installer updates, localized shortcut bytes/arguments, preservation sentinels, silent uninstall and unchanged audio device state. Not older-version migration, interactive chooser, live audio, native driver or native-language review.",
+  "nativeReviewed": false,
+  "currentStudioWaveAdditionsQualified": false
+}

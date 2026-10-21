@@ -1,0 +1,36 @@
+{
+  "scope": "Supported NSIS UI text sites in cable and native installers",
+  "textCandidates": 37,
+  "dynamicSites": 4,
+  "declaredLanguages": {
+    "packaging/windows/soundcurrent-studio-native.nsi": [
+      "English"
+    ],
+    "packaging/windows/soundcurrent-studio.nsi": [
+      "English"
+    ]
+  },
+  "nativeSpeakerVerification": "unverified",
+  "runtimeQualification": {
+    "platform": "Host Python unit tests",
+    "catalogUnitTestsPassed": 20,
+    "catalogUnitTestsSkipped": 0,
+    "fixtures": "comments, escaped quotes, literal comment punctuation, dynamic output, added raw text rejection, unaudited language-reference rejection"
+  },
+  "limitations": [
+    "Not a full NSIS parser; macro expansion and line continuation are not evaluated",
+    "LangString definitions and their translations are not qualified by marking a reference",
+    "Dynamic external/helper output needs separate runtime qualification",
+    "Builtin page translations, custom page layout and installer lifecycle require actual compiler/UI tests"
+  ],
+  "wholeInterfaceCoverageProven": false,
+  "installerTranslationsComplete": false,
+  "newPackagesQualified": false,
+  "VMUsed": false,
+  "binariesRebuilt": false,
+  "evidenceSha256": {
+    "scripts/nsis_string_audit.py": "cd15ab0a831bfc0a159228943854e749b8f4602482ecf1b612a45ebb4b855280",
+    "tests/translation_catalogs.py": "f7e7e51c780d11259d35bec048c55860021d7dbce04a53afc9c06e70ce96bc29",
+    "data/localization/nsis-text-backlog.json": "b0509d8571e31999b3537a637cc5376648eec1a38ba448b20c795ff040e1116b"
+  }
+}

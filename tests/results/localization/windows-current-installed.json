@@ -1,0 +1,31 @@
+{
+  "scope": "Silent per-user app lifecycle on independent clone; no driver installation/removal or visual qualification",
+  "settingsMarkerPreserved": true,
+  "uninstall": "passed",
+  "unknownFilePreserved": true,
+  "installerSha256": "A678F1BCC4A126AD67FD639123273A98C74888AF9991EB73D22EA882BDF27E78",
+  "audioDeviceStateUnchanged": true,
+  "nativeReviewed": false,
+  "product": "Studio",
+  "update": "passed",
+  "date": "2026-10-08",
+  "sourceCommit": "9166cfa",
+  "ciRun": 37747395879,
+  "ciWindowsJobStatus": "passed",
+  "installedLocaleFixturesPassed": 33,
+  "installedExeSha256": "efbc532ba7b977ce8243a9917f68a1bdec05e0c4ac6243bf3392cf30312f61ef",
+  "installedExeIdentityVerified": true,
+  "reinstall": "passed",
+  "regionalFormatting": "Arabic UI / German number format passed after reinstall",
+  "defenderStatus": {
+    "AMServiceEnabled": true,
+    "AntivirusEnabled": true,
+    "RealTimeProtectionEnabled": true,
+    "AntivirusSignatureVersion": "1.459.601.0"
+  },
+  "limitations": [
+    "Automated native-backend fixtures are not native-speaker review",
+    "Silent app lifecycle does not test driver installation/removal",
+    "Interactive installer and desktop sign-in remain unqualified"
+  ]
+}

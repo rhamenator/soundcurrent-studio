@@ -1,0 +1,35 @@
+{
+  "run": 37901215648,
+  "testedHead": "5a7234b047e7f41dcc77281cfba6ef512a8bdf1d",
+  "result": "passed and artifact hashes verified",
+  "packages": [
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-graph-37901215648/package-validation-0/soundcurrent-studio_1.1.0_amd64.deb",
+      "sha256": "1ed0c5003cb68cb6db5d2f8c37e967e1810be8f484dce8de626fe4d0253c0b2f",
+      "localeCompletions": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-graph-installed/package-validation-0"
+    },
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-graph-37901215648/package-validation-1/soundcurrent-studio-1.1.0-1.fc44.x86_64.rpm",
+      "sha256": "3aa708bae4554930decda22c646287d7511b8dfed8191370a188170ce66ad949",
+      "localeCompletions": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-graph-installed/package-validation-1"
+    },
+    {
+      "path": "/home/rich/dev/soundcurrent-localization-artifacts/studio-linux-graph-37901215648/package-validation-2/soundcurrent-studio-1.1.0-1.el10.x86_64.rpm",
+      "sha256": "1dd25c946d73e65cd2e353b8d586e67fa4acc24cc1f82b42c48b1da709129bfc",
+      "localeCompletions": 33,
+      "result": "PASS: soundcurrent-studio install, menu icon, installed GUI controls, in-place reinstall, uninstall cleanup, config preservation and reinstall",
+      "evidence": "tests/results/localization/linux-graph-installed/package-validation-2"
+    }
+  ],
+  "environments": [
+    "Ubuntu 24.04",
+    "Fedora 44",
+    "AlmaLinux 10"
+  ],
+  "scope": "Container full CTest and installed UI fixtures; same-package in-place reinstall, uninstall preservation/cleanup and reinstall. 33 non-English locales per image. No live audio, physical RHEL desktop, older-version migration or native-speaker verification.",
+  "nativeReviewed": false
+}

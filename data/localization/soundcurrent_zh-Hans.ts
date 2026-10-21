@@ -3,210 +3,438 @@
   <context>
     <name>SoundCurrent</name>
     <message>
-      <source>
-Apply this correction to the </source>
-      <translation type="unfinished" />
-    </message>
-    <message>
-      <source>
-Import into your library?</source>
-      <translation type="unfinished" />
-    </message>
-    <message>
       <source> (currently selected)</source>
-      <translation type="unfinished" />
+      <translation> （当前选中）</translation>
+    </message>
+    <message>
+      <source> (original; not SS-CS5M2)</source>
+      <translation>（原始型号；非 SS-CS5M2）</translation>
+      <extracomment>Display suffix distinguishing the original Sony SS-CS5 from SS-CS5M2. Preserve model identifier literally; it is not a measured response equivalence.</extracomment>
     </message>
     <message>
       <source> (restored selection)</source>
-      <translation type="unfinished" />
+      <translation> （已恢复选择）</translation>
+    </message>
+    <message>
+      <source> [custom]</source>
+      <translation> [自定义]</translation>
+    </message>
+    <message>
+      <source> and </source>
+      <translation>和</translation>
     </message>
     <message>
       <source> dB</source>
-      <translation type="unfinished" />
+      <translation> dB</translation>
     </message>
     <message>
       <source> dBFS</source>
-      <translation type="unfinished" />
-    </message>
-    <message>
-      <source> route?</source>
-      <translation type="unfinished" />
+      <translation> dBFS</translation>
     </message>
     <message>
       <source> · mono</source>
-      <translation type="unfinished" />
+      <translation> · 单声道</translation>
+    </message>
+    <message>
+      <source> · no USB microphone detected</source>
+      <translation> · 未检测到 USB 麦克风</translation>
     </message>
     <message>
       <source> · stereo</source>
-      <translation type="unfinished" />
+      <translation> · 立体声</translation>
+    </message>
+    <message>
+      <source>%1
+
+Technical details:
+%2</source>
+      <translation>%1
+
+技术详情：
+%2</translation>
+    </message>
+    <message>
+      <source>%1
+Directory not found.
+Please verify the correct directory name was given.</source>
+      <translation>%1
+目录未找到。
+请检查指定的目录名是否正确。</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>%1
+File not found.
+Please verify the correct file name was given.</source>
+      <translation>%1
+文件未找到。
+请检查指定的文件名是否正确。</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>%1
+The app remains open; your settings have been kept.</source>
+      <translation>%1
+应用保持打开；您的设置已保留。</translation>
     </message>
     <message>
       <source>%1 %2%3 dB</source>
-      <translation type="unfinished" />
+      <translation>%1 %2%3 dB</translation>
+    </message>
+    <message>
+      <source>%1 / %2
+%3
+Apply this correction to the %4 route?</source>
+      <translation>%1 / %2
+%3
+将此校正应用到 %4 路由？</translation>
+    </message>
+    <message>
+      <source>%1 / %2
+%3
+Import into your library?</source>
+      <translation>%1 / %2
+%3
+导入您的资料库？</translation>
+    </message>
+    <message>
+      <source>%1 Hz: measured %2%3 dB; suggested %4%5 dB</source>
+      <translation>%1 Hz：测量值 %2%3 dB；建议值 %4%5 dB</translation>
+    </message>
+    <message>
+      <source>%1 Hz: signal %2, background %3</source>
+      <translation>%1 Hz：信号 %2，背景 %3</translation>
+      <extracomment>Debug calibration tone amplitude and background noise amplitude. %1 is frequency, %2 signal amplitude, %3 background amplitude. Display only; no change to numerical analysis.</extracomment>
+    </message>
+    <message>
+      <source>%1 Hz: too quiet to measure</source>
+      <translation>%1 Hz：声音太小，无法测量</translation>
+    </message>
+    <message>
+      <source>%1 already exists.
+Do you want to replace it?</source>
+      <translation>%1 已存在。
+您想要替换它吗？</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>%1 disconnected. </source>
+      <translation>%1 已断开。 </translation>
+    </message>
+    <message>
+      <source>%1 failed (0x%2)</source>
+      <translation>操作失败：%1 (0x%2)</translation>
+    </message>
+    <message>
+      <source>%1 is already running or its instance lock is unavailable</source>
+      <translation>%1 已在运行，或其实例锁不可用</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
+      <source>%1 is running. Quit it before using SoundCurrent.</source>
+      <translation>%1 正在运行。使用 SoundCurrent 前请退出该程序。</translation>
+      <extracomment>A recognized competing equalizer process is active. %1 is its opaque executable name; quit that program completely, not merely its window. Preserve SoundCurrent brand and process identity.</extracomment>
+    </message>
+    <message>
+      <source>%1 setup did not finish. %2 itself is installed. Use %3 in the Start menu to retry; see setup details for the reason.</source>
+      <translation>%1 安装未完成。%2 应用本身已安装。请使用开始菜单中的 %3 重试；原因请查看安装详情。</translation>
+      <extracomment>Setup failure dialog after app files/shortcuts copied. %1 = stable driver name; %2 = stable app name; %3 = actual currently English Start-menu shortcut name Audio driver setup (not localized Qt button). Setup failure does not prove existing driver absent. Preserve app installed, Start-menu retry and details for reason. Shortcut display-name localization and upgrade cleanup remain open. AI review only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>%1 setup did not finish. Retry using the Start menu shortcut.</source>
+      <translation>%1 安装未完成。请使用开始菜单中的快捷方式重试。</translation>
+      <extracomment>Nonzero setup exit progress notice, excluding restart-required code 3010. %1 is driver name (SoundCurrent Audio or VB-CABLE). Start-menu shortcut is Audio driver setup. Failure may be installation or update failure; do not imply driver absent. AI review only; native review unverified.</extracomment>
     </message>
     <message>
       <source>%1%2 dB</source>
-      <translation type="unfinished" />
+      <translation>%1%2 dB</translation>
+    </message>
+    <message>
+      <source>'%1' is write protected.
+Do you want to delete it anyway?</source>
+      <translation>“%1”已被写入保护。
+您仍然想要删除它吗？</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>.1-10 seconds (default 1.5)</source>
+      <extracomment>Reverb decay parameter in seconds inclusive .1–10, default 1.5; used in feedback decay calculation. Numeric examples keep CLI decimal dots.</extracomment>
+      <translation>.1-10 秒（默认：1.5）</translation>
+    </message>
+    <message>
+      <source>0-.95 (default .4)</source>
+      <extracomment>Reverb damping coefficient inclusive 0–.95, default .4; larger value damps high-frequency recirculation more. Not damping in dB or delay feedback.</extracomment>
+      <translation>0-.95（默认：.4）</translation>
+    </message>
+    <message>
+      <source>0-0.9 (default .35)</source>
+      <extracomment>Delay feedback fraction inclusive 0–0.9, default .35. Numeric examples retain decimal dot accepted by from_chars, independent of regional decimal comma.</extracomment>
+      <translation>0-0.9（默认：.35）</translation>
+    </message>
+    <message>
+      <source>1-2000 ms (default 250)</source>
+      <extracomment>Delay duration in milliseconds, inclusive 1–2000, default 250. Preserve numeric CLI syntax and ms.</extracomment>
+      <translation>1-2000 ms（默认：250）</translation>
+    </message>
+    <message>
+      <source>1-256 output channels (default: input count)</source>
+      <extracomment>CLI output channel count is inclusive 1–256, default equal to input WAVE channel count. Preserve the literal numeric range 1-256. Not input device selection.</extracomment>
+      <translation>1-256 个输出通道（默认：输入通道数）</translation>
     </message>
     <message>
       <source>16 channels</source>
-      <translation type="unfinished" />
+      <translation>16 声道</translation>
+    </message>
+    <message>
+      <source>A private user runtime directory is required</source>
+      <translation>需要用户专用的运行时目录</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
+      <source>Abort</source>
+      <translation>中止</translation>
     </message>
     <message>
       <source>Acoustic</source>
-      <translation type="unfinished" />
+      <translation>原声</translation>
     </message>
     <message>
       <source>Active / passive / unknown</source>
-      <translation type="unfinished" />
+      <translation>有源 / 无源 / 未知</translation>
     </message>
     <message>
       <source>Add filter</source>
-      <translation type="unfinished" />
+      <translation>添加滤波器</translation>
     </message>
     <message>
       <source>Adjust the output from -60 to +12 dB after the EQ. Higher gain can cause clipping.</source>
-      <translation type="unfinished" />
+      <translation>在均衡器之后将输出调节为 -60 至 +12 dB。较高的增益可能导致削波。</translation>
     </message>
     <message>
       <source>Adjust this tone band around the natural voice profile</source>
-      <translation type="unfinished" />
+      <translation>在自然人声配置的基础上调节此音色频段</translation>
+    </message>
+    <message>
+      <source>Adjustable system-wide equalizer for PipeWire</source>
+      <translation>适用于 PipeWire 的可调节全系统均衡器</translation>
+      <extracomment>Linux launcher description. Adjustable EQ applies across system playback using PipeWire; not a claim of a new driver or automatic room correction. Preserve PipeWire product identity. Application name and launch command stay unchanged.</extracomment>
     </message>
     <message>
       <source>Advanced enhancement controls</source>
-      <translation type="unfinished" />
+      <translation>高级音效增强控制</translation>
     </message>
     <message>
       <source>Air</source>
-      <translation type="unfinished" />
+      <translation>空气感</translation>
     </message>
     <message>
       <source>All brands</source>
-      <translation type="unfinished" />
+      <translation>所有品牌</translation>
     </message>
     <message>
       <source>All equipment</source>
-      <translation type="unfinished" />
+      <translation>所有设备</translation>
     </message>
     <message>
       <source>All families</source>
-      <translation type="unfinished" />
+      <translation>所有系列</translation>
+    </message>
+    <message>
+      <source>All files (*)</source>
+      <translation>所有文件 (*)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>All manufacturers</source>
-      <translation type="unfinished" />
+      <translation>所有制造商</translation>
     </message>
     <message>
       <source>All speaker types</source>
-      <translation type="unfinished" />
+      <translation>所有扬声器类型</translation>
     </message>
     <message>
       <source>All subtypes</source>
-      <translation type="unfinished" />
+      <translation>所有子类型</translation>
     </message>
     <message>
       <source>Ambience</source>
-      <translation type="unfinished" />
+      <translation>空间感</translation>
     </message>
     <message>
       <source>Ambience damping</source>
-      <translation type="unfinished" />
+      <translation>空间感阻尼</translation>
     </message>
     <message>
       <source>Ambience decay</source>
-      <translation type="unfinished" />
+      <translation>空间感衰减时间</translation>
     </message>
     <message>
       <source>Amp details</source>
-      <translation type="unfinished" />
+      <translation>功放详情</translation>
+    </message>
+    <message>
+      <source>Amplifier</source>
+      <translation>功放</translation>
     </message>
     <message>
       <source>Amplifier / receiver</source>
-      <translation type="unfinished" />
+      <translation>功放 / 接收机</translation>
     </message>
     <message>
       <source>Amplifier model profile</source>
-      <translation type="unfinished" />
+      <translation>功放型号配置</translation>
     </message>
     <message>
       <source>Amplifier profile details</source>
-      <translation type="unfinished" />
+      <translation>功放配置详情</translation>
     </message>
     <message>
       <source>Amplifier profiles require electrical measurements with known speaker load, input, and tone settings. Import a measured correction file; no amplifier curves are assumed from marketing specifications.</source>
-      <translation type="unfinished" />
+      <translation>功放配置需要在已知扬声器负载、输入和音调设置下进行电气测量。请导入测量得到的校正文件；不会根据宣传规格推定功放曲线。</translation>
     </message>
     <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
-      <translation type="unfinished" />
+      <translation>已安装应用更新。请使用“退出”并重新打开以加载更新；关闭此窗口会让旧版本继续运行。</translation>
+    </message>
+    <message>
+      <source>Another SoundCurrent Studio sink is already running</source>
+      <translation>另一个 SoundCurrent Studio 音频输出节点已在运行</translation>
     </message>
     <message>
       <source>Another SoundCurrent app or audio driver setup is running. Quit it before opening this app.</source>
-      <translation type="unfinished" />
+      <translation>另一个 SoundCurrent 应用或音频驱动安装程序正在运行。请先退出它，再打开此应用。</translation>
     </message>
     <message>
       <source>Another SoundCurrent equalizer is running. Quit EQ or Studio before opening the other app.</source>
-      <translation type="unfinished" />
+      <translation>另一个 SoundCurrent 均衡器正在运行。请先退出 EQ 或 Studio，再打开另一个应用。</translation>
     </message>
     <message>
-      <source>Another equalizer route is present: </source>
-      <translation type="unfinished" />
+      <source>Another SoundCurrent microphone filter is running</source>
+      <translation>另一个 SoundCurrent 麦克风滤波器正在运行</translation>
+    </message>
+    <message>
+      <source>Another equalizer route is present: %1. Quit it before using SoundCurrent.</source>
+      <translation>存在另一个均衡器路由：%1。使用 SoundCurrent 前请先退出它。</translation>
     </message>
     <message>
       <source>Application update</source>
-      <translation type="unfinished" />
+      <translation>应用更新</translation>
     </message>
     <message>
       <source>Application updates</source>
-      <translation type="unfinished" />
+      <translation>应用更新</translation>
+    </message>
+    <message>
+      <source>Apply</source>
+      <translation>应用</translation>
+    </message>
+    <message>
+      <source>Apply amplifier correction?</source>
+      <translation>应用功放校正？</translation>
+      <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
       <source>Apply correction?</source>
-      <translation type="unfinished" />
+      <translation>应用校正？</translation>
+    </message>
+    <message>
+      <source>Apply only if these conditions match your system.</source>
+      <translation>仅在这些条件与您的系统一致时应用。</translation>
+      <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
+    </message>
+    <message>
+      <source>Apply profile</source>
+      <translation>应用配置</translation>
+    </message>
+    <message>
+      <source>Apply suggested EQ</source>
+      <translation>应用建议的均衡设置</translation>
+    </message>
+    <message>
+      <source>Are you sure you want to delete '%1'?</source>
+      <translation>您确定要删除“%1”吗？</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Audio bridge did not start</source>
+      <translation>音频桥接未能启动</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
-      <translation type="unfinished" />
+      <translation>音频驱动安装</translation>
+    </message>
+    <message>
+      <source>Audio driver setup completed. Restart Windows before using SoundCurrent.</source>
+      <translation>音频驱动程序设置已完成。使用 SoundCurrent 前请重启 Windows。</translation>
+    </message>
+    <message>
+      <source>Audio driver setup did not finish: %1</source>
+      <translation>音频驱动程序设置未完成：%1</translation>
     </message>
     <message>
       <source>Audio error: %1</source>
-      <translation type="unfinished" />
+      <translation>音频错误：%1</translation>
+    </message>
+    <message>
+      <source>Audio recovery helper</source>
+      <translation>音频恢复助手</translation>
+    </message>
+    <message>
+      <source>Audio route recovery helper could not start. Repair or reinstall SoundCurrent.</source>
+      <translation>无法启动音频路由恢复辅助程序。请修复或重新安装 SoundCurrent。</translation>
     </message>
     <message>
       <source>Audio setup</source>
-      <translation type="unfinished" />
+      <translation>音频设置</translation>
     </message>
     <message>
       <source>Audio setup could not finish</source>
-      <translation type="unfinished" />
+      <translation>音频设置未能完成</translation>
+    </message>
+    <message>
+      <source>Audio setup failed. Restart Windows if VB-CABLE was just installed, then try again.</source>
+      <translation>音频设置失败。如果刚安装了 VB-CABLE，请重启 Windows 后再试。</translation>
+    </message>
+    <message>
+      <source>Audio setup is missing. Repair or reinstall SoundCurrent.</source>
+      <translation>缺少音频设置程序。请修复或重新安装 SoundCurrent。</translation>
     </message>
     <message>
       <source>Audio setup is running. Processing is paused; the app remains open.</source>
-      <translation type="unfinished" />
+      <translation>音频设置程序正在运行。处理已暂停；应用保持打开。</translation>
     </message>
     <message>
       <source>Auto headroom %1 dB</source>
-      <translation type="unfinished" />
+      <translation>自动余量 %1 dB</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
-      <translation type="unfinished" />
+      <translation>自动（SoundCurrent Microphone）</translation>
     </message>
     <message>
       <source>Automatic (follow connected devices)</source>
-      <translation type="unfinished" />
+      <translation>自动（跟随已连接的设备）</translation>
     </message>
     <message>
       <source>Automatic (follow connected microphones)</source>
-      <translation type="unfinished" />
+      <translation>自动（跟随已连接的麦克风）</translation>
     </message>
     <message>
       <source>Automatic EQ headroom</source>
-      <translation type="unfinished" />
+      <translation>均衡器自动余量</translation>
+    </message>
+    <message>
+      <source>Automatic audio routing unavailable</source>
+      <translation>自动音频路由不可用</translation>
     </message>
     <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
-      <translation type="unfinished" />
+      <translation>自动调整已连接麦克风的音色；点击可旁路麦克风均衡器</translation>
+    </message>
+    <message>
+      <source>Back</source>
+      <translation>后退</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Balance</source>
@@ -215,15 +443,15 @@ Import into your library?</source>
     </message>
     <message>
       <source>Balance position</source>
-      <translation type="unfinished" />
+      <translation>平衡位置</translation>
     </message>
     <message>
       <source>Balanced</source>
-      <translation type="unfinished" />
+      <translation>均衡</translation>
     </message>
     <message>
       <source>Band %1 gain</source>
-      <translation type="unfinished" />
+      <translation>频段 %1 增益</translation>
     </message>
     <message>
       <source>Bands</source>
@@ -232,7 +460,7 @@ Import into your library?</source>
     </message>
     <message>
       <source>Bars beside the sliders show estimated post-EQ levels. Red peak text warns of possible clipping.</source>
-      <translation type="unfinished" />
+      <translation>滑块旁的条形指示器显示均衡处理后的估计电平。红色峰值文字警告可能出现削波。</translation>
     </message>
     <message>
       <source>Bass Boost</source>
@@ -240,283 +468,687 @@ Import into your library?</source>
     </message>
     <message>
       <source>Bass Cut</source>
-      <translation type="unfinished" />
+      <translation>低音衰减</translation>
     </message>
     <message>
       <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation type="unfinished" />
+      <translation>低音增加低频厚重感；清晰度增加高频细节；空间感添加房间反射；环绕扩展立体声宽度；动态增强压缩并提升较轻的声音，同时限制峰值上限。增强可能提高输出电平。</translation>
     </message>
     <message>
       <source>Bass frequency</source>
-      <translation type="unfinished" />
+      <translation>低音频率</translation>
+    </message>
+    <message>
+      <source>Bookshelf speaker</source>
+      <translation>书架音箱</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
     </message>
     <message>
       <source>Boxiness</source>
-      <translation type="unfinished" />
+      <translation>箱体感</translation>
     </message>
     <message>
       <source>Brand</source>
-      <translation type="unfinished" />
+      <translation>品牌</translation>
+    </message>
+    <message>
+      <source>Brand, family and model are required (maximum 120 characters each).</source>
+      <translation>品牌、系列和型号为必填项（每项最多 120 个字符）。</translation>
     </message>
     <message>
       <source>Bright</source>
-      <translation type="unfinished" />
+      <translation>明亮</translation>
     </message>
     <message>
       <source>Browse all equipment profiles / editor</source>
-      <translation type="unfinished" />
+      <translation>浏览所有设备配置 / 编辑器</translation>
     </message>
     <message>
       <source>Bypass Studio processing</source>
-      <translation type="unfinished" />
+      <translation>旁路 Studio 处理</translation>
+    </message>
+    <message>
+      <source>Cable packet exceeds its capture buffer</source>
+      <translation>音频线缆数据包超出捕获缓冲区容量</translation>
+    </message>
+    <message>
+      <source>Cable recording endpoint does not support shared 48 kHz stereo float audio</source>
+      <translation>虚拟音频线录音端点不支持共享模式下的 48 kHz 立体声浮点音频</translation>
     </message>
     <message>
       <source>Calibration test signal</source>
-      <translation type="unfinished" />
+      <translation>校准测试信号</translation>
     </message>
     <message>
       <source>Calibration tone level</source>
-      <translation type="unfinished" />
+      <translation>校准音调电平</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>取消</translation>
     </message>
     <message>
       <source>Cancel render</source>
-      <translation type="unfinished" />
+      <translation>取消渲染</translation>
     </message>
     <message>
       <source>Cannot acquire the shared SoundCurrent session guard.</source>
-      <translation type="unfinished" />
+      <translation>无法取得 SoundCurrent 共享会话保护锁。</translation>
+    </message>
+    <message>
+      <source>Cannot connect PipeWire streams</source>
+      <translation>无法连接 PipeWire 流</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire loop</source>
+      <translation>无法创建 PipeWire 循环</translation>
+    </message>
+    <message>
+      <source>Cannot create PipeWire streams</source>
+      <translation>无法创建 PipeWire 流</translation>
     </message>
     <message>
       <source>Cannot create amplifier profile folder.</source>
-      <translation type="unfinished" />
+      <translation>无法创建功放配置文件夹。</translation>
+    </message>
+    <message>
+      <source>Cannot create output WAVE file</source>
+      <translation>无法创建输出 WAVE 文件</translation>
+      <extracomment>Owned offline WAVE writer file-creation failure, including staging output. Does not assert missing disk space or permission denial. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Cannot create output staging directory</source>
+      <translation>无法创建输出暂存目录</translation>
+    </message>
+    <message>
+      <source>Cannot create profile folder.</source>
+      <translation>无法创建配置文件夹。</translation>
     </message>
     <message>
       <source>Cannot create the shared SoundCurrent session guard.</source>
-      <translation type="unfinished" />
+      <translation>无法创建 SoundCurrent 共享会话保护锁。</translation>
+    </message>
+    <message>
+      <source>Cannot create user settings directory</source>
+      <translation>无法创建用户设置目录</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
     </message>
     <message>
       <source>Cannot finish inspecting running equalizers; SoundCurrent will not enable processing.</source>
-      <translation type="unfinished" />
+      <translation>无法完成对正在运行的均衡器的检查；SoundCurrent 将不会启用处理。</translation>
     </message>
     <message>
       <source>Cannot finish saving amplifier profile.</source>
-      <translation type="unfinished" />
+      <translation>无法完成保存功放配置。</translation>
+    </message>
+    <message>
+      <source>Cannot finish saving profile library.</source>
+      <translation>无法完成保存配置资料库。</translation>
     </message>
     <message>
       <source>Cannot finish saving setup.</source>
-      <translation type="unfinished" />
+      <translation>无法完成保存设置。</translation>
     </message>
     <message>
       <source>Cannot inspect running equalizers; SoundCurrent will not enable processing.</source>
-      <translation type="unfinished" />
+      <translation>无法检查正在运行的均衡器；SoundCurrent 将不会启用处理。</translation>
+    </message>
+    <message>
+      <source>Cannot open input WAVE file</source>
+      <translation>无法打开输入 WAVE 文件</translation>
+      <extracomment>Owned offline-render input-file opening failure. WAVE is the file format, not an acoustic wave. Does not assert the cause is missing media or permissions. Preserve WAVE literally. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Cannot protect output staging directory</source>
+      <extracomment>POSIX permissions could not be restricted to owner-only on the renderer staging directory. Local temporary files, not encryption or network security. Windows branch does not emit this diagnostic.</extracomment>
+      <translation>无法保护临时输出目录</translation>
+    </message>
+    <message>
+      <source>Cannot publish output: %1; choose a new name on a filesystem supporting hard links</source>
+      <extracomment>Local atomic no-overwrite hard-link publication failed. %1 is the filesystem error detail and must be preserved verbatim. Publication means moving the completed render into its requested local filename, not Internet sharing. Hard links are filesystem links, not symbolic links.</extracomment>
+      <translation>无法发布输出：%1；请在支持硬链接的文件系统上选择新名称</translation>
+    </message>
+    <message>
+      <source>Cannot read profile library.</source>
+      <translation>无法读取配置资料库。</translation>
+    </message>
+    <message>
+      <source>Cannot read profile or file exceeds 1 MiB.</source>
+      <translation>无法读取配置，或文件大小超过 1 MiB。</translation>
+    </message>
+    <message>
+      <source>Cannot read response or file exceeds 1 MiB.</source>
+      <translation>无法读取响应，或文件大小超过 1 MiB。</translation>
     </message>
     <message>
       <source>Cannot save amplifier profile.</source>
-      <translation type="unfinished" />
+      <translation>无法保存功放配置。</translation>
+    </message>
+    <message>
+      <source>Cannot save profile library.</source>
+      <translation>无法保存配置资料库。</translation>
     </message>
     <message>
       <source>Cannot save profile.</source>
-      <translation type="unfinished" />
+      <translation>无法保存配置。</translation>
     </message>
     <message>
       <source>Cannot save setup</source>
-      <translation type="unfinished" />
+      <translation>无法保存设置</translation>
+    </message>
+    <message>
+      <source>Cannot seek to WAVE audio</source>
+      <translation>无法定位到 WAVE 音频数据</translation>
+      <extracomment>Owned WAVE file-stream seek failure when positioning the read cursor at the audio-data offset. Not device discovery or searching for a song. Preserve WAVE file-format identifier. Contextual AI translation; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Cannot start measurement: %1</source>
-      <translation type="unfinished" />
+      <translation>无法开始测量：%1</translation>
+    </message>
+    <message>
+      <source>Capture bytes: %1, noise bytes: %2</source>
+      <translation>采集字节数：%1，噪声字节数：%2</translation>
+      <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
       <source>Center</source>
-      <translation type="unfinished" />
+      <translation>居中</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Center channel</source>
+      <translation>中置</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Center speaker</source>
+      <translation>中置音箱</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Change default audio endpoint</source>
+      <translation>更改默认音频端点</translation>
+    </message>
+    <message>
+      <source>Change to detail view mode</source>
+      <translation>更改为详情视图模式</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Change to list view mode</source>
+      <translation>更改为列表视图模式</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Channel</source>
-      <translation type="unfinished" />
+      <translation>声道</translation>
+    </message>
+    <message>
+      <source>Channel %1</source>
+      <translation>声道 %1</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Channel configuration count does not match engine</source>
+      <translation>声道配置数量与引擎不匹配</translation>
     </message>
     <message>
       <source>Channel gain in half dB steps</source>
-      <translation type="unfinished" />
+      <translation>以半 dB 为步长调节声道增益</translation>
+    </message>
+    <message>
+      <source>Channel indexes are one-based and must exist</source>
+      <extracomment>Standalone CLI channel numbers start at 1; zero, fractions and numbers beyond the available channel count are rejected. This does not change internal zero-based indexes or routing.</extracomment>
+      <translation>通道索引从 1 开始，且必须指向现有通道</translation>
+    </message>
+    <message>
+      <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
+      <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
+      <translation>通道索引从 1 开始。绝不会覆盖现有的输出文件。</translation>
     </message>
     <message>
       <source>Channels and routing</source>
-      <translation type="unfinished" />
+      <translation>声道与路由</translation>
     </message>
     <message>
       <source>Check for updates</source>
       <translation>检查更新</translation>
     </message>
     <message>
+      <source>Checking %1 Hz</source>
+      <translation>正在检查 %1 Hz</translation>
+      <extracomment>Calibration worker progress for a single test frequency. %1 is a locale-formatted frequency; Hz is the physical unit.</extracomment>
+    </message>
+    <message>
       <source>Checking for published updates…</source>
-      <translation type="unfinished" />
+      <translation>正在检查已发布的更新…</translation>
     </message>
     <message>
       <source>Checks published releases and downloaded installers. No update is installed automatically.</source>
-      <translation type="unfinished" />
+      <translation>检查已发布的版本和已下载的安装程序。不会自动安装任何更新。</translation>
+    </message>
+    <message>
+      <source>Choose</source>
+      <translation>选择(C)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Choose a name that is not a built-in preset.</source>
-      <translation type="unfinished" />
+      <translation>请选择一个与内置预设名称不同的名称。</translation>
+    </message>
+    <message>
+      <source>Choose one audio setup action.</source>
+      <translation>请选择一项音频设置操作。</translation>
+      <extracomment>Exactly one helper action switch must be selected; this is action validation, not an audio-device choice.</extracomment>
     </message>
     <message>
       <source>Choose update folder…</source>
-      <translation type="unfinished" />
+      <translation>选择更新文件夹…</translation>
+    </message>
+    <message>
+      <source>Chunk extends beyond RIFF bounds</source>
+      <translation>数据块超出 RIFF 边界</translation>
+      <extracomment>Owned file-parser validation: a binary chunk payload length extends beyond the declared RIFF extent. Not an audio clip region or buffer overload. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Cinema speaker</source>
+      <translation>影院音箱</translation>
+      <extracomment>Speaker for cinema sound reproduction, not a film file or video player.</extracomment>
     </message>
     <message>
       <source>Clarity</source>
-      <translation type="unfinished" />
+      <translation>清晰度</translation>
     </message>
     <message>
       <source>Clarity frequency</source>
-      <translation type="unfinished" />
+      <translation>清晰度频率</translation>
     </message>
     <message>
       <source>Classical</source>
-      <translation type="unfinished" />
+      <translation>古典</translation>
     </message>
     <message>
       <source>Clear Voice</source>
-      <translation type="unfinished" />
+      <translation>清晰人声</translation>
     </message>
     <message>
       <source>Clear imported equipment corrections</source>
-      <translation type="unfinished" />
+      <translation>清除导入的设备校正</translation>
     </message>
     <message>
       <source>Click to turn the equalizer on or off</source>
-      <translation type="unfinished" />
+      <translation>点击开启或关闭均衡器</translation>
     </message>
     <message>
       <source>Clipping risk · estimated peak %1 dBFS</source>
-      <translation type="unfinished" />
+      <translation>削波风险 · 估计峰值 %1 dBFS</translation>
+    </message>
+    <message>
+      <source>Close</source>
+      <translation>关闭</translation>
+    </message>
+    <message>
+      <source>Column speaker</source>
+      <translation>声柱音箱</translation>
+      <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
+    </message>
+    <message>
+      <source>Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2</source>
+      <translation>扬声器、功放、麦克风和房间的综合响应；不是单个设备的独立测量。%1 / %2</translation>
+      <extracomment>New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.</extracomment>
     </message>
     <message>
       <source>Conditions</source>
-      <translation type="unfinished" />
+      <translation>条件</translation>
     </message>
     <message>
       <source>Connect an output and a microphone before measuring.</source>
-      <translation type="unfinished" />
+      <translation>测量前请连接输出设备和麦克风。</translation>
+    </message>
+    <message>
+      <source>Connect your audio</source>
+      <translation>连接音频</translation>
+    </message>
+    <message>
+      <source>Constant-beamwidth speaker</source>
+      <translation>恒定波束宽度音箱</translation>
+      <extracomment>Constant angular acoustic coverage/beam width across frequency; not constant bandwidth or frequency response. CBT examples verified with official JBL documentation.</extracomment>
+    </message>
+    <message>
+      <source>Copy</source>
+      <translation>复制</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
+      <source>Correction filters:</source>
+      <translation>校正滤波器：</translation>
+      <extracomment>Heading for the actual bounded EQ correction filters in the imported profile; JSON identifiers below remain unchanged.</extracomment>
     </message>
     <message>
       <source>Correction profile (*.json)</source>
-      <translation type="unfinished" />
+      <translation>校正配置 (*.json)</translation>
+    </message>
+    <message>
+      <source>Could not allocate effect state</source>
+      <translation>无法分配效果状态内存</translation>
+    </message>
+    <message>
+      <source>Could not close WAVE output</source>
+      <translation>无法关闭 WAVE 输出文件</translation>
+      <extracomment>Owned WaveWriter finalization failure: closing output file stream reported an error. Not closing the GUI or stopping an audio device. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not create a private test folder</source>
+      <translation>无法创建私有测试文件夹</translation>
+    </message>
+    <message>
+      <source>Could not create microphone configuration folder</source>
+      <translation>无法创建麦克风配置文件夹</translation>
     </message>
     <message>
       <source>Could not create preset folder.</source>
-      <translation type="unfinished" />
+      <translation>无法创建预设文件夹。</translation>
+    </message>
+    <message>
+      <source>Could not create quiet frequency sweep</source>
+      <translation>无法生成低音量扫频信号</translation>
+    </message>
+    <message>
+      <source>Could not create test tone</source>
+      <translation>无法生成测试音调</translation>
+    </message>
+    <message>
+      <source>Could not create the local activation socket for %1: %2</source>
+      <translation>无法为 %1 创建本地激活套接字：%2</translation>
+      <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
+    </message>
+    <message>
+      <source>Could not delete directory.</source>
+      <translation>无法删除目录。</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Could not finish saving preset.</source>
-      <translation type="unfinished" />
+      <translation>无法完成保存预设。</translation>
+    </message>
+    <message>
+      <source>Could not flush WAVE output</source>
+      <translation>无法刷新 WAVE 输出缓冲区</translation>
+      <extracomment>Owned WaveWriter finalization failure: flushing buffered file writes failed. Not clearing effects, deleting audio or changing speaker output. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not initialize Windows audio COM</source>
+      <translation>无法初始化 Windows 音频 COM</translation>
+    </message>
+    <message>
+      <source>Could not open test waveform</source>
+      <translation>无法打开测试波形</translation>
+    </message>
+    <message>
+      <source>Could not play quiet test audio</source>
+      <translation>无法播放低音量测试音频</translation>
+    </message>
+    <message>
+      <source>Could not play test audio through the selected output</source>
+      <translation>无法通过所选输出播放测试音频</translation>
+    </message>
+    <message>
+      <source>Could not read output volume</source>
+      <translation>无法读取输出音量</translation>
+    </message>
+    <message>
+      <source>Could not run %1</source>
+      <translation>无法运行 %1</translation>
     </message>
     <message>
       <source>Could not save preset.</source>
-      <translation type="unfinished" />
+      <translation>无法保存预设。</translation>
+    </message>
+    <message>
+      <source>Could not start audio setup: %1. The app remains open.</source>
+      <translation>无法启动音频设置：%1。应用保持打开。</translation>
+    </message>
+    <message>
+      <source>Could not start microphone capture</source>
+      <translation>无法开始麦克风采集</translation>
+    </message>
+    <message>
+      <source>Could not start microphone filter</source>
+      <translation>无法启动麦克风滤波器</translation>
+    </message>
+    <message>
+      <source>Could not start output volume safety guard</source>
+      <translation>无法启动输出音量安全保护</translation>
     </message>
     <message>
       <source>Could not start the measurement.</source>
-      <translation type="unfinished" />
+      <translation>无法开始测量。</translation>
+    </message>
+    <message>
+      <source>Could not update startup settings.</source>
+      <translation>无法更新启动设置。</translation>
+    </message>
+    <message>
+      <source>Could not write WAVE audio</source>
+      <translation>无法写入 WAVE 音频数据</translation>
+      <extracomment>Owned WaveWriter failure writing sample data into an output file. Not speaker playback or microphone recording. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write WAVE header</source>
+      <translation>无法写入 WAVE 文件头</translation>
+      <extracomment>Owned WaveWriter failure writing binary format/header metadata to output file. Header is not a UI title. Preserve WAVE identifier. Does not assert a particular disk failure cause. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Could not write frequency sweep</source>
+      <translation>无法写入扫频信号</translation>
+    </message>
+    <message>
+      <source>Could not write microphone configuration</source>
+      <translation>无法写入麦克风配置</translation>
+    </message>
+    <message>
+      <source>Could not write test tone</source>
+      <translation>无法写入测试音调</translation>
+    </message>
+    <message>
+      <source>Count audio endpoints</source>
+      <translation>统计音频端点数量</translation>
+    </message>
+    <message>
+      <source>Create a New Folder</source>
+      <translation>新建一个文件夹</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Create new folder</source>
+      <translation>新建文件夹</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Create profile</source>
+      <translation>创建配置</translation>
     </message>
     <message>
       <source>Current EQ kept.</source>
-      <translation type="unfinished" />
+      <translation>已保留当前均衡设置。</translation>
     </message>
     <message>
       <source>Custom</source>
       <translation>自定义</translation>
     </message>
     <message>
+      <source>Custom copy of %1</source>
+      <translation>%1 的自定义副本</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>Cut</source>
+      <translation>剪切</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
       <source>Damping</source>
-      <translation type="unfinished" />
+      <translation>阻尼</translation>
     </message>
     <message>
       <source>Dance</source>
-      <translation type="unfinished" />
+      <translation>舞曲</translation>
+    </message>
+    <message>
+      <source>Date modified</source>
+      <translation>修改日期</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Decay</source>
-      <translation type="unfinished" />
+      <translation>衰减时间</translation>
     </message>
     <message>
       <source>Deep Bass</source>
-      <translation type="unfinished" />
+      <translation>深沉低音</translation>
     </message>
     <message>
       <source>Delay / echo</source>
-      <translation type="unfinished" />
+      <translation>延迟 / 回声</translation>
+    </message>
+    <message>
+      <source>Delay settings are outside the supported range</source>
+      <translation>延迟设置超出支持范围</translation>
     </message>
     <message>
       <source>Delay time</source>
-      <translation type="unfinished" />
+      <translation>延迟时间</translation>
     </message>
     <message>
       <source>Delay wet mix</source>
-      <translation type="unfinished" />
+      <translation>延迟湿声混合量</translation>
     </message>
     <message>
       <source>Delay wet mix percent</source>
-      <translation type="unfinished" />
+      <translation>延迟湿声混合百分比</translation>
     </message>
     <message>
       <source>Delay wet mix · %1%</source>
-      <translation type="unfinished" />
+      <translation>延迟湿声混合量 · %1%</translation>
+    </message>
+    <message>
+      <source>Delete</source>
+      <translation>删除</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
+      <source>Detail view</source>
+      <translation>详情视图</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directories</source>
+      <translation>目录</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Directory:</source>
+      <translation>目录：</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Discard</source>
+      <translation>放弃更改</translation>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
-      <translation type="unfinished" />
+      <translation>拖动曲线上的点，或在下方调整所选频段。</translation>
+    </message>
+    <message>
+      <source>Drain test playback</source>
+      <translation>完成测试音频播放</translation>
+    </message>
+    <message>
+      <source>Drive</source>
+      <translation>驱动器</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Driver setup failed (code %1). No Windows security settings were changed.</source>
+      <translation>驱动程序设置失败（代码 %1）。未更改任何 Windows 安全设置。</translation>
     </message>
     <message>
       <source>Dry</source>
-      <translation type="unfinished" />
+      <translation>干声</translation>
+    </message>
+    <message>
+      <source>Duplicate Studio route</source>
+      <translation>Studio 音频连接重复</translation>
+      <extracomment>Same input/output routing edge appears more than once; not duplicated media or road route.</extracomment>
     </message>
     <message>
       <source>Dynamic Boost</source>
-      <translation type="unfinished" />
+      <translation>动态增强</translation>
     </message>
     <message>
       <source>Dynamics attack</source>
-      <translation type="unfinished" />
+      <translation>动态处理启动时间</translation>
     </message>
     <message>
       <source>Dynamics ceiling</source>
-      <translation type="unfinished" />
+      <translation>动态处理电平上限</translation>
     </message>
     <message>
       <source>Dynamics makeup</source>
-      <translation type="unfinished" />
+      <translation>动态处理补偿增益</translation>
     </message>
     <message>
       <source>Dynamics ratio</source>
-      <translation type="unfinished" />
+      <translation>动态处理比率</translation>
     </message>
     <message>
       <source>Dynamics release</source>
-      <translation type="unfinished" />
+      <translation>动态处理释放时间</translation>
     </message>
     <message>
       <source>Dynamics threshold</source>
-      <translation type="unfinished" />
+      <translation>动态处理阈值</translation>
     </message>
     <message>
       <source>Echo and space</source>
-      <translation type="unfinished" />
+      <translation>回声与空间</translation>
+    </message>
+    <message>
+      <source>Edit / save copy</source>
+      <translation>编辑 / 保存副本</translation>
     </message>
     <message>
       <source>Effect preset</source>
-      <translation type="unfinished" />
+      <translation>音效预设</translation>
     </message>
     <message>
       <source>Effect tail</source>
-      <translation type="unfinished" />
+      <translation>音效尾音</translation>
     </message>
     <message>
       <source>Effects</source>
-      <translation>效果</translation>
+      <translation>音效</translation>
+    </message>
+    <message>
+      <source>Effects exceed the preview's 128 MiB state budget</source>
+      <translation>效果超出预览的 128 MiB 状态内存预算</translation>
     </message>
     <message>
       <source>Electronic</source>
-      <translation type="unfinished" />
+      <translation>电子</translation>
+    </message>
+    <message>
+      <source>Enhancements outside supported ranges</source>
+      <translation>音效增强参数超出支持的范围</translation>
+      <extracomment>Enhancement values fail the supported range validation; not frequency coverage or wireless range.</extracomment>
+    </message>
+    <message>
+      <source>Enumerate audio devices</source>
+      <translation>枚举音频设备</translation>
+    </message>
+    <message>
+      <source>Enumerate endpoints</source>
+      <translation>枚举端点</translation>
     </message>
     <message>
       <source>Equalizer</source>
@@ -525,135 +1157,211 @@ Import into your library?</source>
     </message>
     <message>
       <source>Equalizer and configuration pages</source>
-      <translation type="unfinished" />
+      <translation>均衡器与设置页面</translation>
+    </message>
+    <message>
+      <source>Equalizer conflict</source>
+      <translation>均衡器冲突</translation>
+      <extracomment>Warning title when another equalizer or processing owner conflicts with this app. It is a software routing/ownership conflict, not clipping or a bad acoustic measurement.</extracomment>
     </message>
     <message>
       <source>Equalizer curve. Select a point or drag it to adjust frequency and gain.</source>
-      <translation type="unfinished" />
+      <translation>均衡器曲线。选择一个点，或拖动它来调整频率和增益。</translation>
     </message>
     <message>
       <source>Equalizer is off. Windows selected the physical output directly.</source>
-      <translation type="unfinished" />
+      <translation>均衡器已关闭。Windows 直接选择了物理输出。</translation>
     </message>
     <message>
       <source>Equalizer is off. Your audio uses its normal output.</source>
-      <translation type="unfinished" />
+      <translation>均衡器已关闭。音频使用正常输出。</translation>
     </message>
     <message>
       <source>Equalizer is still running. Use the tray icon to reopen or quit.</source>
-      <translation type="unfinished" />
+      <translation>均衡器仍在运行。使用系统托盘图标重新打开或退出。</translation>
     </message>
     <message>
       <source>Equalizer off</source>
-      <translation type="unfinished" />
+      <translation>均衡器关闭</translation>
     </message>
     <message>
       <source>Equalizer on</source>
-      <translation type="unfinished" />
+      <translation>均衡器开启</translation>
     </message>
     <message>
       <source>Equalizer on or off</source>
-      <translation type="unfinished" />
+      <translation>开启或关闭均衡器</translation>
     </message>
     <message>
       <source>Equipment brand</source>
-      <translation type="unfinished" />
+      <translation>设备品牌</translation>
     </message>
     <message>
       <source>Equipment family</source>
-      <translation type="unfinished" />
+      <translation>设备系列</translation>
+    </message>
+    <message>
+      <source>Equipment kind must be speaker, microphone or amplifier.</source>
+      <translation>设备类型必须为扬声器、麦克风或功放。</translation>
     </message>
     <message>
       <source>Equipment profile (*.json)</source>
-      <translation type="unfinished" />
+      <translation>设备配置 (*.json)</translation>
+    </message>
+    <message>
+      <source>Equipment profile editor</source>
+      <translation>设备配置编辑器</translation>
     </message>
     <message>
       <source>Equipment profiles (*.json)</source>
-      <translation type="unfinished" />
+      <translation>设备配置 (*.json)</translation>
     </message>
     <message>
       <source>Equipment profiles by brand family and model</source>
-      <translation type="unfinished" />
+      <translation>按品牌、系列和型号浏览设备配置</translation>
+    </message>
+    <message>
+      <source>Equipment profiles — brand / family / model</source>
+      <translation>设备配置 — 品牌 / 系列 / 型号</translation>
+    </message>
+    <message>
+      <source>Equipment resource missing.</source>
+      <translation>缺少设备资源。</translation>
     </message>
     <message>
       <source>Equipment subtype</source>
-      <translation type="unfinished" />
+      <translation>设备子类型</translation>
     </message>
     <message>
       <source>Equipment type</source>
-      <translation type="unfinished" />
+      <translation>设备类型</translation>
     </message>
     <message>
       <source>Estimated output level near band %1</source>
-      <translation type="unfinished" />
+      <translation>频段 %1 附近的估计输出电平</translation>
     </message>
     <message>
       <source>Estimated output near %1: %2 dBFS</source>
-      <translation type="unfinished" />
+      <translation>%1 附近的估计输出：%2 dBFS</translation>
     </message>
     <message>
       <source>Estimated output peak and clipping risk</source>
-      <translation type="unfinished" />
+      <translation>估计输出峰值与削波风险</translation>
     </message>
     <message>
       <source>Estimated overall output level</source>
-      <translation type="unfinished" />
+      <translation>估计总体输出电平</translation>
     </message>
     <message>
       <source>Estimated overall output peak: %1 dBFS</source>
-      <translation type="unfinished" />
+      <translation>估计总体输出峰值：%1 dBFS</translation>
     </message>
     <message>
       <source>Estimated peak %1 dBFS</source>
-      <translation type="unfinished" />
+      <translation>估计峰值 %1 dBFS</translation>
     </message>
     <message>
       <source>Estimated peak: EQ off</source>
-      <translation type="unfinished" />
+      <translation>估计峰值：均衡器关闭</translation>
     </message>
     <message>
       <source>Estimated peak: waiting for audio</source>
-      <translation type="unfinished" />
+      <translation>估计峰值：等待音频</translation>
     </message>
     <message>
       <source>Estimated post-EQ level near this frequency</source>
-      <translation type="unfinished" />
+      <translation>此频率附近均衡处理后的估计电平</translation>
     </message>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
-      <translation type="unfinished" />
+      <translation>均衡处理后的估计输出峰值，包括后级增益和平衡</translation>
+    </message>
+    <message>
+      <source>Excessive number of RIFF chunks</source>
+      <translation>RIFF 数据块数量过多</translation>
+      <extracomment>Owned RIFF parser resource limit: more than 4096 binary chunks. Chunk means container data block, not track, clip or channel. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Exit SoundCurrent Studio and restore normal audio</source>
-      <translation type="unfinished" />
+      <translation>退出 SoundCurrent Studio 并恢复正常音频</translation>
     </message>
     <message>
       <source>Expanded test language</source>
-      <translation type="unfinished" />
+      <translation>扩展文本测试语言</translation>
+    </message>
+    <message>
+      <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
+      <translation>需要 JSON 设备配置。请使用响应导入按钮导入响应文本。</translation>
+    </message>
+    <message>
+      <source>Expected frequency Hz and relative measured response dB on every data line.</source>
+      <translation>每行数据都需要以 Hz 为单位的频率和以 dB 为单位的相对实测响应。</translation>
     </message>
     <message>
       <source>Export</source>
-      <translation type="unfinished" />
+      <translation>导出</translation>
+    </message>
+    <message>
+      <source>Export JSON</source>
+      <translation>导出 JSON</translation>
     </message>
     <message>
       <source>Export profile</source>
-      <translation type="unfinished" />
+      <translation>导出配置</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
-      <translation type="unfinished" />
+      <translation>第一人称射击游戏脚步声</translation>
     </message>
     <message>
       <source>Family</source>
-      <translation type="unfinished" />
+      <translation>系列</translation>
     </message>
     <message>
       <source>Feedback</source>
-      <translation type="unfinished" />
+      <translation>反馈</translation>
+    </message>
+    <message>
+      <source>File</source>
+      <translation>文件</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>File name:</source>
+      <translation>文件名称(N)：</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Files</source>
+      <translation>文件</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Files of type:</source>
+      <translation>文件类型：</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Filter Q</source>
+      <translation>滤波器品质因数 Q</translation>
+      <extracomment>Dimensionless quality factor controlling filter sharpness: higher Q produces a narrower peak. Not a bandwidth in Hz. Stable processing parameter remains q.</extracomment>
     </message>
     <message>
       <source>Filter type</source>
-      <translation type="unfinished" />
+      <translation>滤波器类型</translation>
+    </message>
+    <message>
+      <source>Filter values must be numbers.</source>
+      <translation>滤波器数值必须为数字。</translation>
+    </message>
+    <message>
+      <source>Filters exceed frequency, gain or Q limits.</source>
+      <translation>滤波器超出频率、增益或 Q 限制。</translation>
+    </message>
+    <message>
+      <source>Find directory</source>
+      <translation>查找目录</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Flat</source>
@@ -661,16 +1369,41 @@ Import into your library?</source>
       <translation>平直</translation>
     </message>
     <message>
+      <source>Floorstanding speaker</source>
+      <translation>落地音箱</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
+    </message>
+    <message>
+      <source>Folder</source>
+      <translation>文件夹</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Forward</source>
+      <translation>前进</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>频率</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
-      <translation type="unfinished" />
+      <translation>频率 Hz</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
-      <translation type="unfinished" />
+      <translation>前置 L/R 增强（支持单声道）；其他声道保留各自的 Studio 音效。将增强量设为零可旁路该项增强。</translation>
+    </message>
+    <message>
+      <source>Front left</source>
+      <translation>前左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Front right</source>
+      <translation>前右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Gain</source>
@@ -679,127 +1412,442 @@ Import into your library?</source>
     </message>
     <message>
       <source>Gain / polarity</source>
-      <translation type="unfinished" />
+      <translation>增益 / 极性</translation>
     </message>
     <message>
       <source>Gain dB</source>
-      <translation type="unfinished" />
+      <translation>增益 dB</translation>
     </message>
     <message>
       <source>Gaming</source>
-      <translation type="unfinished" />
+      <translation>游戏</translation>
+    </message>
+    <message>
+      <source>Go back</source>
+      <translation>后退</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go forward</source>
+      <translation>前进</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Go to the parent directory</source>
+      <translation>转到父目录</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Headphones</source>
-      <translation type="unfinished" />
+      <translation>耳机</translation>
+    </message>
+    <message>
+      <source>Help</source>
+      <translation>帮助</translation>
     </message>
     <message>
       <source>Hide advanced controls</source>
-      <translation type="unfinished" />
+      <translation>隐藏高级控制</translation>
     </message>
     <message>
       <source>High pass</source>
-      <translation type="unfinished" />
+      <translation>高通</translation>
     </message>
     <message>
       <source>High shelf</source>
-      <translation type="unfinished" />
+      <translation>高架滤波器</translation>
+    </message>
+    <message>
+      <source>High-shelf filter</source>
+      <translation>高频搁架滤波器</translation>
+      <extracomment>Shelving EQ: raise/lower the high-frequency region. Do not translate as high-pass; it is not a cutoff filter.</extracomment>
     </message>
     <message>
       <source>Hip-Hop</source>
-      <translation type="unfinished" />
+      <translation>嘻哈</translation>
+    </message>
+    <message>
+      <source>Ignore</source>
+      <translation>忽略</translation>
     </message>
     <message>
       <source>Import</source>
-      <translation type="unfinished" />
+      <translation>导入</translation>
+    </message>
+    <message>
+      <source>Import JSON</source>
+      <translation>导入 JSON</translation>
     </message>
     <message>
       <source>Import create and edit equipment profiles</source>
-      <translation type="unfinished" />
+      <translation>导入、创建和编辑设备配置</translation>
     </message>
     <message>
       <source>Import equipment profile</source>
-      <translation type="unfinished" />
+      <translation>导入设备配置</translation>
     </message>
     <message>
       <source>Import measured amplifier correction</source>
-      <translation type="unfinished" />
+      <translation>导入实测功放校正</translation>
     </message>
     <message>
       <source>Import measured profile</source>
-      <translation type="unfinished" />
+      <translation>导入实测配置</translation>
     </message>
     <message>
       <source>Import profile?</source>
-      <translation type="unfinished" />
+      <translation>导入配置？</translation>
     </message>
     <message>
       <source>Import relative measured response</source>
-      <translation type="unfinished" />
+      <translation>导入相对实测响应</translation>
+    </message>
+    <message>
+      <source>Import response text</source>
+      <translation>导入响应文本</translation>
+    </message>
+    <message>
+      <source>Imported %1; SHA256 %2</source>
+      <translation>已导入 %1；SHA256 %2</translation>
+      <extracomment>%1 is an exact imported filename, %2 is its raw hexadecimal SHA256 digest. Preserve SHA256 and both placeholders; no identity or file-content changes.</extracomment>
+    </message>
+    <message>
+      <source>In-wall speaker</source>
+      <translation>嵌墙音箱</translation>
+      <extracomment>Speaker enclosure/installation category in equipment taxonomy. Display label only; original equipmentType key is preserved. Center means center-channel speaker, not a location control.</extracomment>
     </message>
     <message>
       <source>Include preview releases</source>
-      <translation type="unfinished" />
+      <translation>包含预览版本</translation>
+    </message>
+    <message>
+      <source>Incomplete WAVE output</source>
+      <translation>WAVE 输出不完整</translation>
+      <extracomment>Owned WaveWriter finalization validation: written frame count differs from the declared output frame count. Not merely a quiet or short musical passage. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Initialize audio capture</source>
+      <translation>初始化音频采集</translation>
+    </message>
+    <message>
+      <source>Initialize microphone recording</source>
+      <translation>初始化麦克风录音</translation>
+    </message>
+    <message>
+      <source>Initialize speaker output</source>
+      <translation>初始化扬声器输出</translation>
+    </message>
+    <message>
+      <source>Initialize test playback</source>
+      <translation>初始化测试音频播放</translation>
     </message>
     <message>
       <source>Input WAVE file</source>
-      <translation type="unfinished" />
+      <translation>输入 WAVE 文件</translation>
     </message>
     <message>
       <source>Input channel</source>
-      <translation type="unfinished" />
+      <translation>输入声道</translation>
+    </message>
+    <message>
+      <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
+      <translation>输入声道数多于 Studio 布局；请选择匹配或更大的布局</translation>
+    </message>
+    <message>
+      <source>Input is too short for RIFF/WAVE</source>
+      <translation>输入文件过短，无法构成 RIFF/WAVE</translation>
+      <extracomment>Owned parser minimum byte-length check before reading 12-byte RIFF/WAVE header. Not recording duration or speaker response. Preserve RIFF/WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.</source>
+      <extracomment>Input accepts PCM integer 16/24/32 or IEEE float32 in little-endian RIFF/WAVE. Output is float32 WAVE_FORMAT_EXTENSIBLE. Preserve PCM16/24/32, float32 (twice), RIFF/WAVE and WAVE format identifiers.</extracomment>
+      <translation>输入：PCM16/24/32 或 float32 RIFF/WAVE。输出：可扩展 WAVE 格式的 float32。</translation>
+    </message>
+    <message>
+      <source>Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.</source>
+      <translation>请通过音频驱动设置安装 SoundCurrent Audio，然后重新打开应用以启用麦克风音频路径。</translation>
+    </message>
+    <message>
+      <source>Install VB-CABLE if missing (administrator approval)</source>
+      <translation>未安装时安装 VB-CABLE（需要管理员批准）</translation>
     </message>
     <message>
       <source>Install new packages over this version — no uninstall needed. Presets and profiles are kept. Save your work, use Quit (closing the window keeps it running), install the update, then reopen.</source>
-      <translation type="unfinished" />
+      <translation>在此版本上直接安装新软件包 — 无需卸载。预设和配置会保留。请保存工作，使用“退出”（关闭窗口会让应用继续运行），安装更新，然后重新打开。</translation>
     </message>
     <message>
-      <source>Installed version: </source>
-      <translation type="unfinished" />
+      <source>Install or update %1. You do not need to uninstall an older version. Your settings, presets and equipment profiles will be kept.</source>
+      <translation>安装或更新 %1。无需卸载旧版本。您的设置、预设和设备配置文件将会保留。</translation>
+      <extracomment>Installer welcome first paragraph. %1 is stable app name. In-place install/update preserves user settings, listening presets, and equipment response/correction profiles; older app need not be uninstalled first. AI contextual review only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Install or update the shared SoundCurrent Audio driver</source>
+      <translation>安装或更新共享的 SoundCurrent Audio 驱动程序</translation>
+    </message>
+    <message>
+      <source>Install the Windows audio route using Audio driver setup, then reopen the app.</source>
+      <translation>请通过音频驱动设置安装 Windows 音频路径，然后重新打开应用。</translation>
+    </message>
+    <message>
+      <source>Installed version: %1</source>
+      <translation>已安装版本：%1</translation>
     </message>
     <message>
       <source>Interface language</source>
       <translation>界面语言</translation>
     </message>
     <message>
+      <source>Invalid EQ band</source>
+      <translation>均衡器频段无效</translation>
+    </message>
+    <message>
+      <source>Invalid RIFF size</source>
+      <translation>RIFF 大小无效</translation>
+      <extracomment>Owned file-parser validation: declared RIFF extent is too small or exceeds actual file length. Not sample rate or channel count. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel count</source>
+      <translation>Studio 通道数无效</translation>
+      <extracomment>Session channel count must be 1..256; audio channels, not stations.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio channel name or filters</source>
+      <translation>Studio 通道名称或滤波器列表无效</translation>
+      <extracomment>Saved channel name must be a nonempty string up to 80 characters, and bands must be an array; filter list, not filter-value validation.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio profile channel count</source>
+      <translation>Studio 配置文件中的通道数无效</translation>
+      <extracomment>Saved profile channels array must be nonempty and contain at most 256 channels.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio route</source>
+      <translation>Studio 音频连接无效</translation>
+      <extracomment>Saved audio routing edge must contain exactly three entries: output index, input index, mixing coefficient.</extracomment>
+    </message>
+    <message>
+      <source>Invalid Studio routing matrix</source>
+      <translation>Studio 路由矩阵无效</translation>
+    </message>
+    <message>
+      <source>Invalid Studio settings</source>
+      <translation>Studio 设置无效</translation>
+    </message>
+    <message>
+      <source>Invalid WAVE frame alignment or byte rate</source>
+      <translation>WAVE 帧对齐或字节率无效</translation>
+      <extracomment>Owned WAVE file metadata check: block alignment must equal channel count times bytes per sample, and byte rate must equal sample rate times block alignment. Not latency, visual frame alignment or clock sync. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid WAVE read buffer</source>
+      <translation>WAVE 读取缓冲区无效</translation>
+      <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid audio route: loopback requires a separate render source</source>
+      <translation>音频路由无效：回环捕获需要独立的播放源</translation>
+      <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid audio setup requester.</source>
+      <translation>请求音频设置的进程无效。</translation>
+      <extracomment>The requesting Windows process failed expected executable-name or same-session validation. Requester is a process, not the human user.</extracomment>
+    </message>
+    <message>
+      <source>Invalid calibration audio</source>
+      <translation>校准音频无效</translation>
+    </message>
+    <message>
+      <source>Invalid channel gain or too many EQ bands</source>
+      <translation>声道增益无效或均衡器频段过多</translation>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter count</source>
+      <translation>音效增强参数数量无效</translation>
+      <extracomment>Enhancement array must contain the required number of parameters.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement parameter type</source>
+      <translation>音效增强参数的数据类型无效</translation>
+      <extracomment>Enhancement parameter must be a JSON number; do not reinterpret strings or Boolean values.</extracomment>
+    </message>
+    <message>
+      <source>Invalid enhancement settings</source>
+      <translation>声音增强设置无效</translation>
+    </message>
+    <message>
+      <source>Invalid equalizer settings</source>
+      <translation>均衡器设置无效</translation>
+    </message>
+    <message>
+      <source>Invalid equipment subtype or power type</source>
+      <translation>设备子类型或供电类型无效</translation>
+    </message>
+    <message>
+      <source>Invalid filter type</source>
+      <translation>滤波器类型无效</translation>
+      <extracomment>Filter type numeric identifier must be a whole supported enum value; not a file type.</extracomment>
+    </message>
+    <message>
+      <source>Invalid filter.</source>
+      <translation>滤波器无效。</translation>
+    </message>
+    <message>
+      <source>Invalid finite numeric argument</source>
+      <translation>有限数值参数无效</translation>
+      <extracomment>Owned CLI from_chars numeric parser rejects invalid syntax, partial parses, NaN and infinity. Finite means mathematically finite, not final. Numeric option remains locale-independent machine syntax. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid float WAVE format</source>
+      <translation>浮点 WAVE 格式无效</translation>
+      <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
-      <translation type="unfinished" />
+      <translation>实测功放配置无效。需要型号、HTTPS 测量来源、测量条件以及 1–16 个在范围内的 PK/LS/HS 滤波器。请参阅 README 中的配置格式。</translation>
+    </message>
+    <message>
+      <source>Invalid microphone tuning</source>
+      <translation>麦克风调节设置无效</translation>
+    </message>
+    <message>
+      <source>Invalid or unordered measured response.</source>
+      <translation>实测响应无效或未按顺序排列。</translation>
+    </message>
+    <message>
+      <source>Invalid or unordered response data.</source>
+      <translation>响应数据无效或未按顺序排列。</translation>
+    </message>
+    <message>
+      <source>Invalid output WAVE format</source>
+      <translation>输出 WAVE 格式无效</translation>
+      <extracomment>Owned WaveWriter output format validation before file creation. Not an input file parsing error. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid output speaker mask</source>
+      <translation>输出扬声器声道掩码无效</translation>
+      <extracomment>Owned WAVE writer validation of output speaker-position bitmask against output channel count. Metadata error, not disconnected speakers or balance. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Invalid processing buffer</source>
+      <extracomment>AudioEngine reported an invalid interleaved sample buffer size relative to its channel count. Internal memory buffer, not an effect preset or playback device.</extracomment>
+      <translation>无效的处理缓冲区</translation>
+    </message>
+    <message>
+      <source>Invalid profile library.</source>
+      <translation>配置资料库无效。</translation>
+    </message>
+    <message>
+      <source>Invalid response from pactl</source>
+      <translation>pactl 返回的响应无效</translation>
+    </message>
+    <message>
+      <source>Invalid response point.</source>
+      <translation>响应点无效。</translation>
+    </message>
+    <message>
+      <source>Invalid route indexes or weight</source>
+      <translation>通道索引或混音系数无效</translation>
+      <extracomment>Audio route indices must be whole channel indices in range and mixing coefficient magnitude at most 4; weight means a signed mixing coefficient, not physical mass.</extracomment>
+    </message>
+    <message>
+      <source>Invalid route number</source>
+      <translation>音频连接中的数值无效</translation>
+      <extracomment>A saved audio routing entry contains a nonnumeric or nonfinite number.</extracomment>
+    </message>
+    <message>
+      <source>Invalid routing buffer</source>
+      <extracomment>ChannelRouter rejected interleaved input/output sample spans with incompatible sizes. Internal memory buffer, not physical routing hardware or network buffering.</extracomment>
+      <translation>无效的路由缓冲区</translation>
+    </message>
+    <message>
+      <source>Invalid routing matrix</source>
+      <extracomment>ChannelRouter rejected the supplied matrix dimensions or finite weight values. Mathematical audio mixing/routing matrix, not a visual grid.</extracomment>
+      <translation>无效的路由矩阵</translation>
+    </message>
+    <message>
+      <source>Invalid speaker correction filter count</source>
+      <translation>扬声器校正滤波器数量无效</translation>
+    </message>
+    <message>
+      <source>Invalid speaker filter type</source>
+      <translation>扬声器滤波器类型无效</translation>
+    </message>
+    <message>
+      <source>Invalid speaker identity</source>
+      <translation>扬声器标识无效</translation>
+    </message>
+    <message>
+      <source>Invalid speaker mix format</source>
+      <translation>扬声器混音格式无效</translation>
+    </message>
+    <message>
+      <source>Invalid valid-bit count</source>
+      <translation>有效位数不正确</translation>
+      <extracomment>Owned extensible WAVE metadata check: valid bits per sample must be greater than zero and not exceed stored bits per sample. Not file length, bitrate or successful packet count. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Jazz</source>
-      <translation type="unfinished" />
+      <translation>爵士</translation>
+    </message>
+    <message>
+      <source>Keep current EQ</source>
+      <translation>保留当前均衡设置</translation>
     </message>
     <message>
       <source>L</source>
-      <translation type="unfinished" />
+      <translation>L</translation>
     </message>
     <message>
       <source>Language and regional settings</source>
-      <translation>语言和区域设置</translation>
+      <translation>语言与区域设置</translation>
     </message>
     <message>
       <source>Large hall</source>
-      <translation type="unfinished" />
+      <translation>大厅</translation>
     </message>
     <message>
       <source>Layout</source>
-      <translation type="unfinished" />
+      <translation>布局</translation>
+    </message>
+    <message>
+      <source>Left</source>
+      <translation>左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Left right balance</source>
-      <translation type="unfinished" />
+      <translation>左右平衡</translation>
     </message>
     <message>
       <source>Level indicator refresh interval</source>
-      <translation type="unfinished" />
+      <translation>电平指示器刷新间隔</translation>
     </message>
     <message>
       <source>Level refresh</source>
-      <translation type="unfinished" />
+      <translation>电平刷新</translation>
+    </message>
+    <message>
+      <source>Library exceeds 16 MiB.</source>
+      <translation>资料库大小超过 16 MiB。</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
-      <translation type="unfinished" />
+      <translation>路由线性增益（负值 = 反转极性）</translation>
+    </message>
+    <message>
+      <source>List audio endpoints</source>
+      <translation>获取音频端点列表</translation>
+    </message>
+    <message>
+      <source>List of places and bookmarks</source>
+      <translation>位置和书签列表</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>List view</source>
+      <translation>列表视图</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Listening preset</source>
@@ -808,15 +1856,15 @@ Import into your library?</source>
     </message>
     <message>
       <source>Live</source>
-      <translation type="unfinished" />
+      <translation>实时</translation>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation type="unfinished" />
+      <translation>实时布局必须与所选音频设备匹配。离线渲染和静音电平测试支持全部 256 个声道。</translation>
     </message>
     <message>
       <source>Lo-Fi</source>
-      <translation type="unfinished" />
+      <translation>低保真</translation>
     </message>
     <message>
       <source>Lock EQ</source>
@@ -825,63 +1873,102 @@ Import into your library?</source>
     </message>
     <message>
       <source>Lock equalizer settings</source>
-      <translation type="unfinished" />
+      <translation>锁定均衡器设置</translation>
+    </message>
+    <message>
+      <source>Look in:</source>
+      <translation>查找范围：</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Loudness</source>
-      <translation type="unfinished" />
+      <translation>等响补偿</translation>
     </message>
     <message>
       <source>Low pass</source>
-      <translation type="unfinished" />
+      <translation>低通</translation>
     </message>
     <message>
       <source>Low shelf</source>
-      <translation type="unfinished" />
+      <translation>低架滤波器</translation>
+    </message>
+    <message>
+      <source>Low-shelf filter</source>
+      <translation>低频搁架滤波器</translation>
+      <extracomment>Shelving EQ: raise/lower the low-frequency region. Do not translate as low-pass; it is not a cutoff filter.</extracomment>
     </message>
     <message>
       <source>Manufacturer</source>
-      <translation type="unfinished" />
+      <translation>制造商</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
-      <translation type="unfinished" />
+      <translation>已达到最多 32 个功放配置的限制。</translation>
     </message>
     <message>
       <source>Maximum stereo width</source>
-      <translation type="unfinished" />
+      <translation>最大立体声宽度</translation>
     </message>
     <message>
       <source>Measure</source>
-      <translation type="unfinished" />
+      <translation>测量</translation>
     </message>
     <message>
       <source>Measure speaker room and microphone response</source>
-      <translation type="unfinished" />
+      <translation>测量扬声器、房间和麦克风的响应</translation>
+    </message>
+    <message>
+      <source>Measured listening position</source>
+      <translation>已测量的聆听位置</translation>
+      <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
     </message>
     <message>
       <source>Measured model correction is added to your listening EQ. You can still add bass or adjust any band. Includes conservative gain limits; room and amplifier effects require a system measurement.</source>
-      <translation type="unfinished" />
+      <translation>实测型号校正会叠加到您的聆听均衡设置上。您仍可增强低音或调整任意频段。包含保守的增益限制；房间和功放影响需要测量整个系统。</translation>
+    </message>
+    <message>
+      <source>Measured response</source>
+      <translation>测得的响应</translation>
+      <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measurement conditions are required.</source>
+      <translation>必须填写测量条件。</translation>
+    </message>
+    <message>
+      <source>Measurement conditions: %1</source>
+      <translation>测量条件：%1</translation>
+      <extracomment>Label for imported amplifier measurement conditions, including electrical load and tone settings. %1 is verbatim supplied data.</extracomment>
     </message>
     <message>
       <source>Measurement data was incomplete.</source>
-      <translation type="unfinished" />
+      <translation>测量数据不完整。</translation>
     </message>
     <message>
       <source>Measurement failed. Try a higher test level or move the mic closer.</source>
-      <translation type="unfinished" />
+      <translation>测量失败。请提高测试电平或将麦克风移近。</translation>
+    </message>
+    <message>
+      <source>Measurement failed: %1</source>
+      <translation>测量失败：%1</translation>
+      <extracomment>Calibration failure prefix. %1 is a translated owned diagnostic or preserved external technical detail; do not modify device identifiers or paths.</extracomment>
     </message>
     <message>
       <source>Measurement stopped.</source>
-      <translation type="unfinished" />
+      <translation>测量已停止。</translation>
+    </message>
+    <message>
+      <source>Measurement: %1</source>
+      <translation>测量：%1</translation>
+      <extracomment>Label for verbatim published speaker measurement attribution, not a new calibration run.</extracomment>
     </message>
     <message>
       <source>Metal</source>
-      <translation type="unfinished" />
+      <translation>金属</translation>
     </message>
     <message>
       <source>Mic gain</source>
-      <translation type="unfinished" />
+      <translation>麦克风增益</translation>
     </message>
     <message>
       <source>Microphone</source>
@@ -889,51 +1976,115 @@ Import into your library?</source>
     </message>
     <message>
       <source>Microphone %1 adjustment</source>
-      <translation type="unfinished" />
+      <translation>麦克风 %1 调节</translation>
     </message>
     <message>
       <source>Microphone EQ is off.</source>
-      <translation type="unfinished" />
+      <translation>麦克风均衡器已关闭。</translation>
+    </message>
+    <message>
+      <source>Microphone audio bridge did not start</source>
+      <translation>麦克风音频桥接未能启动</translation>
+    </message>
+    <message>
+      <source>Microphone capture stopped during playback</source>
+      <translation>麦克风采集在播放期间停止</translation>
+    </message>
+    <message>
+      <source>Microphone capture stopped during the test</source>
+      <translation>麦克风采集在测试期间停止</translation>
     </message>
     <message>
       <source>Microphone error: %1</source>
-      <translation type="unfinished" />
+      <translation>麦克风错误：%1</translation>
+    </message>
+    <message>
+      <source>Microphone filter did not appear</source>
+      <translation>麦克风滤波器未出现</translation>
+    </message>
+    <message>
+      <source>Microphone filter disappeared</source>
+      <translation>麦克风滤波器消失了</translation>
     </message>
     <message>
       <source>Microphone gain adjustment</source>
-      <translation type="unfinished" />
+      <translation>麦克风增益调节</translation>
     </message>
     <message>
       <source>Microphone input device</source>
-      <translation type="unfinished" />
+      <translation>麦克风输入设备</translation>
+    </message>
+    <message>
+      <source>Microphone recording consumer stalled</source>
+      <translation>麦克风录音处理已停滞</translation>
+    </message>
+    <message>
+      <source>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</source>
+      <translation>麦克风录音发生削波。请降低麦克风增益或增强量，然后重新测量。</translation>
     </message>
     <message>
       <source>Microphone route</source>
-      <translation type="unfinished" />
+      <translation>麦克风路由</translation>
+    </message>
+    <message>
+      <source>Microphone start timed out</source>
+      <translation>麦克风启动超时</translation>
+    </message>
+    <message>
+      <source>Missing RIFF padding byte</source>
+      <translation>缺少 RIFF 填充字节</translation>
+      <extracomment>Owned RIFF parser validation: the alignment padding byte after an odd-length binary chunk is outside declared extent. Not audio silence, delay or padded samples. Preserve RIFF identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Missing option value</source>
+      <translation>缺少选项值</translation>
+      <extracomment>Owned CLI parser error: an option requiring a following argument has no value. Not an unavailable UI choice or lost saved setting. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Missing or incomplete WAVE audio</source>
+      <translation>WAVE 音频数据缺失或不完整</translation>
+      <extracomment>Owned WaveReader validation: format/data chunk is missing or data length is not a whole number of frames. Not missing microphone, silent samples or absent speaker sound. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Missing, duplicate or oversized WAVE format</source>
+      <translation>WAVE 格式元数据缺失、重复或过大</translation>
+      <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Model</source>
-      <translation type="unfinished" />
+      <translation>型号</translation>
     </message>
     <message>
       <source>Mono</source>
-      <translation type="unfinished" />
+      <translation>单声道</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
-      <translation type="unfinished" />
+      <translation>向 L 或 R 移动可降低另一声道的电平；居中时两声道保持完整电平</translation>
     </message>
     <message>
       <source>Movies</source>
-      <translation type="unfinished" />
+      <translation>电影</translation>
+    </message>
+    <message>
+      <source>Multiple WAVE data chunks are unsupported</source>
+      <translation>不支持多个 WAVE 数据块</translation>
+      <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mute</source>
-      <translation type="unfinished" />
+      <translation>静音</translation>
+    </message>
+    <message>
+      <source>My equipment</source>
+      <translation>我的设备</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>Name</source>
-      <translation type="unfinished" />
+      <translation>名称</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Natural mic EQ</source>
@@ -941,52 +2092,70 @@ Import into your library?</source>
       <translation>自然麦克风均衡</translation>
     </message>
     <message>
-      <source>Natural mic EQ on · </source>
-      <translation type="unfinished" />
+      <source>Natural mic EQ on · %1</source>
+      <translation>自然麦克风均衡开启 · %1</translation>
     </message>
     <message>
       <source>Natural microphone equalizer on or off</source>
-      <translation type="unfinished" />
+      <translation>开启或关闭自然麦克风均衡器</translation>
+    </message>
+    <message>
+      <source>New folder</source>
+      <translation>新建文件夹</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>New profile</source>
+      <translation>新配置</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
       <source>New rendered WAVE file</source>
-      <translation type="unfinished" />
+      <translation>新渲染的 WAVE 文件</translation>
     </message>
     <message>
       <source>Night Listening</source>
-      <translation type="unfinished" />
+      <translation>夜间聆听</translation>
+    </message>
+    <message>
+      <source>No</source>
+      <translation>否</translation>
     </message>
     <message>
       <source>No imported equipment correction selected.</source>
-      <translation type="unfinished" />
+      <translation>未选择导入的设备校正。</translation>
     </message>
     <message>
       <source>No measured amplifier correction is selected. Marketing frequency-range specifications are insufficient to derive a correction curve.</source>
-      <translation type="unfinished" />
+      <translation>未选择实测功放校正。宣传中的频率范围规格不足以推导校正曲线。</translation>
     </message>
     <message>
       <source>No microphone connected.</source>
-      <translation type="unfinished" />
+      <translation>未连接麦克风。</translation>
     </message>
     <message>
       <source>No model correction selected. Your listening EQ works normally.</source>
-      <translation type="unfinished" />
+      <translation>未选择型号校正。您的聆听均衡设置正常工作。</translation>
     </message>
     <message>
       <source>No newer published release found. Downloaded installers are also checked.</source>
-      <translation type="unfinished" />
+      <translation>未发现更新的已发布版本。也会检查已下载的安装程序。</translation>
     </message>
     <message>
       <source>No output device is available.</source>
-      <translation type="unfinished" />
+      <translation>没有可用的输出设备。</translation>
     </message>
     <message>
       <source>No output device is connected.</source>
-      <translation type="unfinished" />
+      <translation>未连接输出设备。</translation>
+    </message>
+    <message>
+      <source>No to All</source>
+      <translation>全部否</translation>
     </message>
     <message>
       <source>None — use my own EQ</source>
-      <translation type="unfinished" />
+      <translation>无 — 使用我的均衡设置</translation>
     </message>
     <message>
       <source>Number and date format</source>
@@ -994,156 +2163,338 @@ Import into your library?</source>
     </message>
     <message>
       <source>Number of equalizer bands</source>
-      <translation type="unfinished" />
+      <translation>均衡器频段数</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>确定</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
-      <translation type="unfinished" />
+      <translation>离线 WAVE 渲染</translation>
     </message>
     <message>
       <source>Offline editing — keep current playback unchanged</source>
-      <translation type="unfinished" />
+      <translation>离线编辑 — 保持当前播放不变</translation>
+    </message>
+    <message>
+      <source>Offline editing. Current playback keeps its last live Studio setup.</source>
+      <translation>离线编辑。当前播放保留上一次实时 Studio 配置。</translation>
+    </message>
+    <message>
+      <source>Omnidirectional speaker</source>
+      <translation>全向音箱</translation>
+      <extracomment>Speaker radiating in all directions; not a microphone pickup pattern.</extracomment>
     </message>
     <message>
       <source>On · Playing through %1</source>
-      <translation type="unfinished" />
+      <translation>开启 · 通过 %1 播放</translation>
+    </message>
+    <message>
+      <source>Only PCM16/24/32 or float32 WAVE is supported</source>
+      <translation>仅支持 PCM16/24/32 或 float32 WAVE</translation>
+      <extracomment>Owned WAVE reader supports signed integer PCM 16/24/32-bit or 32-bit floating-point samples. Preserve PCM16/24/32, float32 and WAVE literally; numbers are bits per sample, not sample rates or channel counts. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only little-endian RIFF/WAVE is supported</source>
+      <translation>仅支持小端字节序的 RIFF/WAVE</translation>
+      <extracomment>Owned WAVE reader format support: RIFF/WAVE little-endian byte order only; big-endian RIFX is not supported. Little-endian is byte ordering, not audio phase or low frequencies. Preserve RIFF/WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Only one SoundCurrent app starts at sign-in. Enabling this replaces the other app's startup setting. It starts in the background when a tray icon is available.</source>
+      <translation>登录时只启动一个 SoundCurrent 应用。启用此选项会替换另一个应用的启动设置。如果系统托盘图标可用，应用将在后台启动。</translation>
+    </message>
+    <message>
+      <source>Open</source>
+      <translation>打开</translation>
     </message>
     <message>
       <source>Open Studio setup</source>
-      <translation type="unfinished" />
+      <translation>打开 Studio 设置</translation>
     </message>
     <message>
       <source>Open VB-Audio's control panel for cable latency and internal sample rate. Changing these while audio is running can interrupt playback.</source>
-      <translation type="unfinished" />
+      <translation>打开 VB-Audio 控制面板以调整线缆延迟和内部采样率。播放音频时更改这些设置可能中断播放。</translation>
     </message>
     <message>
       <source>Open VB-CABLE control panel</source>
-      <translation type="unfinished" />
+      <translation>打开 VB-CABLE 控制面板</translation>
+    </message>
+    <message>
+      <source>Open audio stream</source>
+      <translation>打开音频流</translation>
+    </message>
+    <message>
+      <source>Open cable capture stream</source>
+      <translation>打开虚拟音频线采集流</translation>
+    </message>
+    <message>
+      <source>Open cable recording endpoint</source>
+      <translation>打开虚拟音频线录音端点</translation>
+    </message>
+    <message>
+      <source>Open endpoint</source>
+      <translation>打开端点</translation>
+    </message>
+    <message>
+      <source>Open endpoint volume</source>
+      <translation>打开端点音量接口</translation>
+    </message>
+    <message>
+      <source>Open microphone reader</source>
+      <translation>打开麦克风读取接口</translation>
     </message>
     <message>
       <source>Open release downloads</source>
-      <translation type="unfinished" />
+      <translation>打开版本下载页面</translation>
+    </message>
+    <message>
+      <source>Open speaker endpoint</source>
+      <translation>打开扬声器端点</translation>
+    </message>
+    <message>
+      <source>Open speaker render stream</source>
+      <translation>打开扬声器播放流</translation>
+    </message>
+    <message>
+      <source>Open test playback writer</source>
+      <translation>打开测试音频写入接口</translation>
     </message>
     <message>
       <source>Open update folder</source>
-      <translation type="unfinished" />
+      <translation>打开更新文件夹</translation>
+    </message>
+    <message>
+      <source>Opening %1 setup...</source>
+      <translation>正在打开 %1 安装程序...</translation>
+      <extracomment>Cable setup launch progress. %1 is stable VB-CABLE name. Opening installer, not claim of successful installation.</extracomment>
     </message>
     <message>
       <source>Orange: measured response where supplied. Teal: correction at 48 kHz. Drag teal control points or edit the table. Saving preserves the reference and creates a custom copy.</source>
-      <translation type="unfinished" />
+      <translation>橙色：实测响应（如有）。青绿色：48 kHz 下的校正。拖动青绿色控制点或编辑表格。保存会保留参考数据并创建自定义副本。</translation>
+    </message>
+    <message>
+      <source>Outdoor speaker</source>
+      <translation>户外音箱</translation>
+      <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
+    </message>
+    <message>
+      <source>Output already exists; select a new filename</source>
+      <translation>输出文件已存在；请选择新文件名</translation>
     </message>
     <message>
       <source>Output device</source>
       <translation>输出设备</translation>
     </message>
     <message>
+      <source>Output device is no longer available</source>
+      <translation>输出设备已不可用</translation>
+    </message>
+    <message>
+      <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
+      <translation>输出超出 RIFF/WAVE 的 4 GiB 限制</translation>
+      <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Output has no volume channels</source>
+      <translation>输出没有音量控制声道</translation>
+    </message>
+    <message>
       <source>Overall output</source>
-      <translation type="unfinished" />
+      <translation>总体输出</translation>
+    </message>
+    <message>
+      <source>Panel speaker</source>
+      <translation>平板音箱</translation>
+      <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
+    </message>
+    <message>
+      <source>Parent directory</source>
+      <translation>父目录</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Paste</source>
+      <translation>粘贴</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Pause processing and open audio setup. The app stays open and reports the result. Restart Windows after installing the driver.</source>
-      <translation type="unfinished" />
+      <translation>暂停处理并打开音频设置。应用保持打开并报告结果。安装驱动后请重启 Windows。</translation>
     </message>
     <message>
       <source>Peak</source>
-      <translation type="unfinished" />
+      <translation>峰值</translation>
+    </message>
+    <message>
+      <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
+      <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
+      <translation>削波前峰值：%1；削波样本数：%2；无效样本数：%3</translation>
     </message>
     <message>
       <source>Peak markers</source>
-      <translation type="unfinished" />
+      <translation>峰值标记</translation>
     </message>
     <message>
       <source>Peaking</source>
-      <translation type="unfinished" />
+      <translation>峰值滤波器</translation>
+    </message>
+    <message>
+      <source>Peaking filter</source>
+      <translation>钟形滤波器</translation>
+      <extracomment>Bell-shaped parametric EQ filter centered at its frequency; this is not a peak/clipping indicator.</extracomment>
     </message>
     <message>
       <source>Piano</source>
-      <translation type="unfinished" />
+      <translation>钢琴</translation>
+    </message>
+    <message>
+      <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
+      <translation>PipeWire 实时流最多支持 64 个声道；更大的声道布局请使用离线渲染</translation>
+    </message>
+    <message>
+      <source>PipeWire stream failed</source>
+      <translation>PipeWire 音频流失败</translation>
+      <extracomment>Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.</extracomment>
     </message>
     <message>
       <source>Play quiet test audio and preview suggested playback EQ changes</source>
-      <translation type="unfinished" />
+      <translation>播放低音量测试音频并预览建议的播放均衡调整</translation>
     </message>
     <message>
       <source>Playback</source>
       <translation>播放</translation>
     </message>
     <message>
+      <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
+      <translation>正在播放从 20 Hz 到 25 kHz 的对数扫频</translation>
+      <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
-      <translation type="unfinished" />
+      <translation>正在播放低音量测试音频。如感到不适，请停止。</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
-      <translation type="unfinished" />
+      <translation>请连接麦克风以选择麦克风配置</translation>
     </message>
     <message>
       <source>Podcast</source>
-      <translation type="unfinished" />
+      <translation>播客</translation>
     </message>
     <message>
       <source>Pop</source>
-      <translation type="unfinished" />
+      <translation>流行</translation>
+    </message>
+    <message>
+      <source>Portable PA speaker</source>
+      <translation>便携式扩声音箱</translation>
+      <extracomment>Portable public-address/sound-reinforcement speaker; PA is not a country or personal assistant.</extracomment>
     </message>
     <message>
       <source>Post gain</source>
       <extracomment>Signal level adjustment after EQ processing, in dB; permits attenuation as well as amplification. Not financial profit.</extracomment>
-      <translation>输出增益</translation>
+      <translation>后级增益</translation>
     </message>
     <message>
       <source>Post gain after equalization</source>
-      <translation type="unfinished" />
+      <translation>均衡处理后的增益</translation>
+    </message>
+    <message>
+      <source>Post gain must be finite and within -84 to +24 dB</source>
+      <translation>输出增益必须为有限值，且介于 -84 和 +24 dB 之间</translation>
     </message>
     <message>
       <source>Post gain value in decibels</source>
-      <translation type="unfinished" />
+      <translation>后级增益值（分贝）</translation>
     </message>
     <message>
       <source>Preset name:</source>
-      <translation type="unfinished" />
+      <translation>预设名称：</translation>
     </message>
     <message>
       <source>Prevent changes to presets, EQ bands, post gain, and balance</source>
-      <translation type="unfinished" />
+      <translation>防止更改预设、均衡器频段、后级增益和平衡</translation>
     </message>
     <message>
       <source>Profile</source>
-      <translation type="unfinished" />
+      <translation>配置</translation>
     </message>
     <message>
       <source>Profile details</source>
-      <translation type="unfinished" />
+      <translation>配置详情</translation>
+    </message>
+    <message>
+      <source>Profile exceeds the 1 MiB limit.</source>
+      <translation>配置超过 1 MiB 限制。</translation>
+    </message>
+    <message>
+      <source>Profile library exceeds 16 MiB.</source>
+      <translation>配置资料库超过 16 MiB。</translation>
+    </message>
+    <message>
+      <source>Profile metadata is too long.</source>
+      <translation>配置元数据过长。</translation>
     </message>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
-      <translation type="unfinished" />
+      <translation>配置必须可读且小于 64 KiB。</translation>
+    </message>
+    <message>
+      <source>Profiles need 1–16 correction filters.</source>
+      <translation>配置需要 1–16 个校正滤波器。</translation>
     </message>
     <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
-      <translation type="unfinished" />
+      <translation>已发布的测量来源： &lt;a href="https://www.spinorama.org/"&gt;扬声器测量 / 均衡&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton 按序列号校准&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP 按序列号校准&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann 麦克风曲线&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 响应曲线&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;功放测量&lt;/a&gt;</translation>
     </message>
     <message>
-      <source>Published releases could not be checked. Private Studio releases require GitHub access. Use Open release downloads; downloaded installers are still detected locally.</source>
-      <translation type="unfinished" />
+      <source>Published profiles need an HTTPS measurement source.</source>
+      <translation>已发布的配置需要 HTTPS 测量来源。</translation>
+    </message>
+    <message>
+      <source>Published releases could not be checked. Use Open release downloads; downloaded installers are still detected locally.</source>
+      <translation>无法检查已发布的版本。请使用“打开版本下载页面”；已下载的安装程序仍会在本地检测。</translation>
+      <extracomment>Manual update-check failure in the public EQ/Studio repositories. Tell the user to open the release-download page; already-downloaded installers are still detected locally. No claim of private releases, required GitHub login, automatic download or installation.</extracomment>
     </message>
     <message>
       <source>Published response and editable correction curves</source>
-      <translation type="unfinished" />
+      <translation>已发布的响应与可编辑的校正曲线</translation>
     </message>
     <message>
       <source>Published update %1 is available. Open release downloads, then install over this version and reopen.</source>
-      <translation type="unfinished" />
+      <translation>已发布的更新 %1 可用。打开版本下载页面，然后在此版本上直接安装并重新打开。</translation>
     </message>
     <message>
       <source>Punchy Bass</source>
-      <translation type="unfinished" />
+      <translation>有力低音</translation>
     </message>
     <message>
       <source>Quiet logarithmic sweep</source>
-      <translation type="unfinished" />
+      <translation>低音量对数扫频</translation>
+    </message>
+    <message>
+      <source>Quit %1 before uninstalling it.</source>
+      <translation>卸载前请退出 %1。</translation>
+      <extracomment>Running application blocks uninstall. %1 is stable product name. Quit means fully exit process, not close/hide window. AI contextual review; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Quit %1 before updating. Closing the window keeps it running. No uninstall is needed.</source>
+      <translation>更新前请退出 %1。关闭窗口后应用仍会继续运行。无需卸载。</translation>
+      <extracomment>Running application blocks update. %1 is stable SoundCurrent product name. Quit fully exits process; closing UI leaves it running. In-place updates do not require prior uninstall. AI contextual review; native review unverified.</extracomment>
     </message>
     <message>
       <source>Quit SoundCurrent Studio</source>
-      <translation type="unfinished" />
+      <translation>退出 SoundCurrent Studio</translation>
+    </message>
+    <message>
+      <source>Quit any running SoundCurrent app before changing the shared driver. Removing one app keeps the driver if the other app still uses it.</source>
+      <translation>更改共享驱动程序前，请退出所有正在运行的 SoundCurrent 应用。卸载一个应用时，如果另一个应用仍在使用该驱动程序，则会保留驱动程序。</translation>
+    </message>
+    <message>
+      <source>Quit any running equalizer before driver setup. When removing the last SoundCurrent app, its uninstaller offers VB-CABLE removal. Other software may also need the cable. Extra A/B cables are not bundled.</source>
+      <translation>安装驱动程序前，请退出所有正在运行的均衡器。卸载最后一个 SoundCurrent 应用时，其卸载程序会提供卸载 VB-CABLE 的选项。其他软件也可能需要该虚拟音频线。额外的 A/B 虚拟音频线不包含在安装包中。</translation>
+      <extracomment>Shared virtual cable notice: quit exits the equalizer, not just closes UI. Cable removal is offered when the other SoundCurrent app is absent; user confirmation remains required, silent app removal does not remove cable. A/B refers to separate extra virtual cables, not physical wires. Other software may depend on shared VB-CABLE. AI contextual review only; native review unverified.</extracomment>
     </message>
     <message>
       <source>Quit app</source>
@@ -1151,117 +2502,370 @@ Import into your library?</source>
       <translation>退出应用</translation>
     </message>
     <message>
+      <source>Quit running SoundCurrent apps and wait for audio recovery to finish before changing the shared audio driver.</source>
+      <translation>更改共享音频驱动程序前，请退出正在运行的 SoundCurrent 应用，并等待音频恢复完成。</translation>
+    </message>
+    <message>
+      <source>Quit the following before changing VB-CABLE: %1.</source>
+      <translation>更改 VB-CABLE 前，请退出以下程序：%1。</translation>
+    </message>
+    <message>
       <source>R</source>
-      <translation type="unfinished" />
+      <translation>R</translation>
     </message>
     <message>
       <source>R&amp;B</source>
-      <translation type="unfinished" />
+      <translation>节奏布鲁斯</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint</source>
+      <translation>读取音频端点</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint ID</source>
+      <translation>读取音频端点标识符</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint name</source>
+      <translation>读取音频端点名称</translation>
+    </message>
+    <message>
+      <source>Read audio endpoint properties</source>
+      <translation>读取音频端点属性</translation>
+    </message>
+    <message>
+      <source>Read cable audio</source>
+      <translation>读取虚拟音频线音频</translation>
+    </message>
+    <message>
+      <source>Read cable capture interface</source>
+      <translation>获取虚拟音频线采集接口</translation>
+    </message>
+    <message>
+      <source>Read cable channel layout</source>
+      <translation>读取虚拟音频线声道布局</translation>
+    </message>
+    <message>
+      <source>Read cable packet size</source>
+      <translation>读取虚拟音频线数据包大小</translation>
+    </message>
+    <message>
+      <source>Read cable speaker mask</source>
+      <translation>读取虚拟音频线扬声器掩码</translation>
+    </message>
+    <message>
+      <source>Read default output ID</source>
+      <translation>读取默认输出标识符</translation>
+    </message>
+    <message>
+      <source>Read default output endpoint</source>
+      <translation>读取默认输出端点</translation>
+    </message>
+    <message>
+      <source>Read microphone mix format</source>
+      <translation>读取麦克风混音格式</translation>
+    </message>
+    <message>
+      <source>Read microphone packet size</source>
+      <translation>读取麦克风数据包大小</translation>
+    </message>
+    <message>
+      <source>Read microphone samples</source>
+      <translation>读取麦克风采样值</translation>
+    </message>
+    <message>
+      <source>Read next cable packet size</source>
+      <translation>读取虚拟音频线下一个数据包的大小</translation>
+    </message>
+    <message>
+      <source>Read next microphone packet</source>
+      <translation>读取下一个麦克风数据包</translation>
+    </message>
+    <message>
+      <source>Read output buffer level</source>
+      <translation>读取输出缓冲区填充量</translation>
+    </message>
+    <message>
+      <source>Read output level</source>
+      <translation>读取输出电平</translation>
+    </message>
+    <message>
+      <source>Read output mute</source>
+      <translation>读取输出静音状态</translation>
+    </message>
+    <message>
+      <source>Read speaker level</source>
+      <translation>读取扬声器电平</translation>
+    </message>
+    <message>
+      <source>Read speaker mix format</source>
+      <translation>读取扬声器混音格式</translation>
+    </message>
+    <message>
+      <source>Read speaker mute</source>
+      <translation>读取扬声器静音状态</translation>
+    </message>
+    <message>
+      <source>Read speaker render interface</source>
+      <translation>获取扬声器播放接口</translation>
+    </message>
+    <message>
+      <source>Read speaker volume</source>
+      <translation>读取扬声器音量</translation>
+    </message>
+    <message>
+      <source>Read test playback padding</source>
+      <translation>读取测试播放缓冲区中的音频帧数</translation>
+    </message>
+    <message>
+      <source>Read virtual output mix format</source>
+      <translation>读取虚拟输出混音格式</translation>
     </message>
     <message>
       <source>Ready. Effects are dry until enabled.</source>
-      <translation type="unfinished" />
+      <translation>就绪。音效在启用前仅输出干声。</translation>
+    </message>
+    <message>
+      <source>Rear left</source>
+      <translation>后左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Rear right</source>
+      <translation>后右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Recent places</source>
+      <translation>最近位置</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Redo</source>
+      <translation>重做</translation>
+      <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
       <source>Refresh devices</source>
       <translation>刷新设备</translation>
     </message>
     <message>
+      <source>Relative measurements include the speaker, room, and microphone response. The proposed changes are limited to 3 dB per measured frequency.
+
+%1</source>
+      <translation>相对测量包含扬声器、房间和麦克风的响应。建议调整在每个实测频率上最多为 3 dB。
+
+%1</translation>
+    </message>
+    <message>
+      <source>Release cable audio</source>
+      <translation>释放虚拟音频线音频数据包</translation>
+    </message>
+    <message>
+      <source>Release microphone packet</source>
+      <translation>释放麦克风数据包</translation>
+    </message>
+    <message>
+      <source>Release speaker buffer</source>
+      <translation>释放扬声器缓冲区</translation>
+    </message>
+    <message>
+      <source>Release test playback</source>
+      <translation>释放测试播放缓冲区</translation>
+    </message>
+    <message>
       <source>Remind me when updates are available or a restart is needed</source>
-      <translation type="unfinished" />
+      <translation>有可用更新或需要重启时提醒我</translation>
+    </message>
+    <message>
+      <source>Remove VB-CABLE?</source>
+      <translation>移除 VB-CABLE？</translation>
     </message>
     <message>
       <source>Remove selected</source>
-      <translation type="unfinished" />
+      <translation>移除所选项</translation>
     </message>
     <message>
       <source>Remove selected filter</source>
-      <translation type="unfinished" />
+      <translation>移除所选滤波器</translation>
     </message>
     <message>
       <source>Remove selected route</source>
-      <translation type="unfinished" />
+      <translation>移除所选路由</translation>
+    </message>
+    <message>
+      <source>Remove the shared VB-CABLE driver too? Other users, recording apps, or voice tools may need it. Confirm to open the official remover, then click Remove Driver. Decline to keep the cable and uninstall only SoundCurrent.</source>
+      <translation>是否也移除共享的 VB-CABLE 驱动程序？其他用户、录音应用或语音工具可能需要它。确认以打开官方卸载程序，然后点击 Remove Driver。拒绝以保留音频线缆并仅卸载 SoundCurrent。</translation>
+    </message>
+    <message>
+      <source>Rename</source>
+      <translation>重命名(R)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Render audio file…</source>
-      <translation type="unfinished" />
+      <translation>渲染音频文件…</translation>
+    </message>
+    <message>
+      <source>Render cancelled; no output file published</source>
+      <translation>渲染已取消；未发布输出文件</translation>
+    </message>
+    <message>
+      <source>Render: %1</source>
+      <translation>渲染：%1</translation>
+    </message>
+    <message>
+      <source>Rendered %1 -&gt; %2 channels, %3 frames at %4 Hz.</source>
+      <extracomment>Successful standalone offline render. %1 input channels, %2 output channels, %3 audio frame count (not per-channel samples), %4 sample rate. Keep Hz and -&gt; identifiers. Count-label wording is allowed to avoid number-dependent noun inflection.</extracomment>
+      <translation>渲染完成：通道 %1 -&gt; %2，帧数 %3，采样率 %4 Hz。</translation>
+    </message>
+    <message>
+      <source>Rendered %1 channels. Clipped samples: %2. %3</source>
+      <translation>已渲染声道数：%1。削波样本数：%2。%3</translation>
     </message>
     <message>
       <source>Rendering…</source>
-      <translation type="unfinished" />
+      <translation>正在渲染…</translation>
+    </message>
+    <message>
+      <source>Repair incomplete VB-CABLE installation</source>
+      <translation>修复不完整的 VB-CABLE 安装</translation>
+    </message>
+    <message>
+      <source>Reset</source>
+      <translation>重置</translation>
     </message>
     <message>
       <source>Reset all routing</source>
-      <translation type="unfinished" />
+      <translation>重置所有路由</translation>
     </message>
     <message>
       <source>Reset enhancements</source>
-      <translation type="unfinished" />
+      <translation>重置增强效果</translation>
     </message>
     <message>
       <source>Reset mic tone</source>
-      <translation type="unfinished" />
+      <translation>重置麦克风音色</translation>
     </message>
     <message>
       <source>Reset to flat</source>
       <extracomment>Restore zero gain in all EQ bands. Does not mute playback.</extracomment>
-      <translation>重置为平直</translation>
+      <translation>重置为平直响应</translation>
     </message>
     <message>
       <source>Response data (*.txt *.csv *.frd *.cal)</source>
-      <translation type="unfinished" />
+      <translation>响应数据 (*.txt *.csv *.frd *.cal)</translation>
+    </message>
+    <message>
+      <source>Response exceeds 4096 points.</source>
+      <translation>响应超过 4096 个点。</translation>
+    </message>
+    <message>
+      <source>Response frequencies must increase, with finite bounded values.</source>
+      <translation>响应频率必须递增，且数值必须有限并在范围内。</translation>
+    </message>
+    <message>
+      <source>Response has no usable audio range.</source>
+      <translation>响应没有可用的音频范围。</translation>
     </message>
     <message>
       <source>Response import</source>
-      <translation type="unfinished" />
+      <translation>导入响应</translation>
+    </message>
+    <message>
+      <source>Response needs 2–4096 measured points.</source>
+      <translation>响应需要 2–4096 个实测点。</translation>
+    </message>
+    <message>
+      <source>Restart Windows before using VB-CABLE. Audio setup has completed, but the driver and its settings require a system restart.</source>
+      <translation>使用 VB-CABLE 前请重启 Windows。音频设置已完成，但驱动程序及其设置需要重启系统才能生效。</translation>
+    </message>
+    <message>
+      <source>Restart Windows before using the equalizer or VB-CABLE settings. Audio driver changes need a system restart.</source>
+      <translation>使用均衡器或 VB-CABLE 设置前请重启 Windows。音频驱动更改需要重启系统。</translation>
+    </message>
+    <message>
+      <source>Restore Defaults</source>
+      <translation>恢复默认值</translation>
     </message>
     <message>
       <source>Restore the previous EQ setting (Ctrl+Z)</source>
-      <translation type="unfinished" />
+      <translation>恢复上一次均衡设置 (Ctrl+Z)</translation>
+    </message>
+    <message>
+      <source>Retry</source>
+      <translation>重试</translation>
     </message>
     <message>
       <source>Reverb</source>
-      <translation type="unfinished" />
+      <translation>混响</translation>
+    </message>
+    <message>
+      <source>Reverb settings are outside the supported range</source>
+      <translation>混响设置超出支持范围</translation>
     </message>
     <message>
       <source>Reverb wet mix</source>
-      <translation type="unfinished" />
+      <translation>混响湿声混合量</translation>
     </message>
     <message>
       <source>Reverb wet mix percent</source>
-      <translation type="unfinished" />
+      <translation>混响湿声混合百分比</translation>
     </message>
     <message>
       <source>Reverb wet mix · %1%</source>
-      <translation type="unfinished" />
+      <translation>混响湿声混合量 · %1%</translation>
     </message>
     <message>
       <source>Rhythmic echo</source>
-      <translation type="unfinished" />
+      <translation>节奏回声</translation>
+    </message>
+    <message>
+      <source>Right</source>
+      <translation>右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
       <source>Right-to-left test language</source>
-      <translation type="unfinished" />
+      <translation>从右到左测试语言</translation>
     </message>
     <message>
       <source>Rock</source>
-      <translation type="unfinished" />
+      <translation>摇滚</translation>
+    </message>
+    <message>
+      <source>Route gain must be between -120 and +12 dB</source>
+      <extracomment>Standalone --route OUT:IN:DB matrix entry gain, inclusive -120 to +12 dB; machine numeric syntax and dB identifier unchanged. Not post gain or channel trim, whose ranges differ.</extracomment>
+      <translation>路由增益必须介于 -120 到 +12 dB 之间</translation>
     </message>
     <message>
       <source>Routes into selected output channel</source>
-      <translation type="unfinished" />
+      <translation>进入所选输出声道的路由</translation>
+    </message>
+    <message>
+      <source>Save</source>
+      <translation>保存</translation>
+    </message>
+    <message>
+      <source>Save All</source>
+      <translation>全部保存</translation>
     </message>
     <message>
       <source>Save EQ preset</source>
-      <translation type="unfinished" />
+      <translation>保存均衡器预设</translation>
     </message>
     <message>
       <source>Save Studio setup</source>
-      <translation type="unfinished" />
+      <translation>保存 Studio 设置</translation>
+    </message>
+    <message>
+      <source>Save as</source>
+      <translation>另存为</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Save modified profile?</source>
-      <translation type="unfinished" />
+      <translation>保存修改后的配置？</translation>
     </message>
     <message>
       <source>Save preset</source>
@@ -1269,256 +2873,616 @@ Import into your library?</source>
     </message>
     <message>
       <source>Save profile</source>
-      <translation type="unfinished" />
+      <translation>保存配置</translation>
+    </message>
+    <message>
+      <source>Save system response profile</source>
+      <translation>保存系统响应配置</translation>
+    </message>
+    <message>
+      <source>Save your work and quit the running app before continuing. Closing its window keeps it running in the background.</source>
+      <translation>继续前请保存工作并退出正在运行的应用。关闭窗口后，应用仍会在后台运行。</translation>
+      <extracomment>Installer welcome second paragraph. Save work and fully quit running app before install/update; closing window hides UI while audio processing keeps running. Generic exit action, not a guessed untranslated Quit button caption. AI contextual review only; native review unverified.</extracomment>
     </message>
     <message>
       <source>Saved preset “%1”.</source>
-      <translation type="unfinished" />
+      <translation>已保存预设“%1”。</translation>
     </message>
     <message>
       <source>Search brand, family, model or measurement conditions</source>
-      <translation type="unfinished" />
+      <translation>搜索品牌、系列、型号或测量条件</translation>
     </message>
     <message>
       <source>Second virtual cable for microphone EQ</source>
-      <translation type="unfinished" />
+      <translation>用于麦克风均衡的第二条虚拟线缆</translation>
+    </message>
+    <message>
+      <source>Select a filter to update, or remove filters before adding more</source>
+      <translation>请选择要更新的滤波器，或在添加更多滤波器前移除现有滤波器</translation>
+    </message>
+    <message>
+      <source>Select all</source>
+      <translation>全选</translation>
+      <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
       <source>Select band %1</source>
-      <translation type="unfinished" />
+      <translation>选择频段 %1</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
-      <translation type="unfinished" />
+      <translation>选择此频段以编辑频率、增益和 Q</translation>
+    </message>
+    <message>
+      <source>Selected audio device is unavailable</source>
+      <translation>所选音频设备不可用</translation>
     </message>
     <message>
       <source>Selected band</source>
       <extracomment>Currently selected frequency band in the equalizer.</extracomment>
-      <translation>选定频段</translation>
+      <translation>所选频段</translation>
     </message>
     <message>
       <source>Selected band filter Q</source>
-      <translation type="unfinished" />
+      <translation>所选频段滤波器的品质因数 Q</translation>
     </message>
     <message>
       <source>Selected band frequency</source>
-      <translation type="unfinished" />
+      <translation>所选频段频率</translation>
     </message>
     <message>
       <source>Selected band gain</source>
-      <translation type="unfinished" />
+      <translation>所选频段增益</translation>
     </message>
     <message>
       <source>Selected channel</source>
-      <translation type="unfinished" />
+      <translation>所选声道</translation>
     </message>
     <message>
       <source>Selected channel EQ filters</source>
-      <translation type="unfinished" />
+      <translation>所选声道的均衡滤波器</translation>
+    </message>
+    <message>
+      <source>Selected output device is no longer available</source>
+      <translation>所选输出设备已不可用</translation>
     </message>
     <message>
       <source>Selected output was unplugged. Switched to automatic output.</source>
-      <translation type="unfinished" />
+      <translation>所选输出已断开。已切换为自动选择输出。</translation>
+    </message>
+    <message>
+      <source>Selected speakers are disconnected</source>
+      <translation>所选扬声器已断开连接</translation>
     </message>
     <message>
       <source>Separate quiet tones</source>
-      <translation type="unfinished" />
+      <translation>分开的低音量音调</translation>
+    </message>
+    <message>
+      <source>Set full speaker level for EQ</source>
+      <translation>为均衡器将扬声器电平设为最大值</translation>
+    </message>
+    <message>
+      <source>Set output level</source>
+      <translation>设置输出电平</translation>
+    </message>
+    <message>
+      <source>Set output mute</source>
+      <translation>设置输出静音状态</translation>
     </message>
     <message>
       <source>Set route</source>
-      <translation type="unfinished" />
+      <translation>设置路由</translation>
+    </message>
+    <message>
+      <source>Set up %1 for %2.</source>
+      <translation>为 %2 设置 %1。</translation>
+    </message>
+    <message>
+      <source>Setting up the shared %1 driver...</source>
+      <translation>正在设置共享的 %1 驱动程序...</translation>
+      <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>设置 &amp;&amp; 校准</translation>
     </message>
     <message>
+      <source>Setup cannot be read or exceeds 8 MiB</source>
+      <translation>无法读取设置，或大小超过 8 MiB</translation>
+    </message>
+    <message>
+      <source>Setup could not check the driver. You can retry with %1 in the app or Start menu.</source>
+      <translation>安装程序无法检查驱动程序。您可以通过应用内或开始菜单中的 %1 重试。</translation>
+    </message>
+    <message>
+      <source>Setup opens VB-Audio’s signed installer. Click Install Driver, then restart Windows before using the equalizer or VB-CABLE settings.</source>
+      <translation>安装程序会打开 VB-Audio 的已签名安装程序。请点击 Install Driver，然后重启 Windows，再使用均衡器或 VB-CABLE 设置。</translation>
+      <extracomment>Missing-driver installer notice (check exit 10). Signed means digitally signed installer software. Install Driver is the exact external button caption and remains English. Restart Windows before using EQ or cable settings. AI contextual review; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
+      <translation>共享均衡器和通道均衡器的滤波器总数超过 64；请删除一些通道滤波器</translation>
+      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+    </message>
+    <message>
+      <source>Shared audio driver removal did not finish. This app was kept so you can retry. Quit any running SoundCurrent app, then retry uninstalling.</source>
+      <translation>共享音频驱动程序未能完成卸载。此应用已保留，以便重试。请退出所有正在运行的 SoundCurrent 应用，然后再次尝试卸载。</translation>
+      <extracomment>Native uninstall nonzero failure (excluding restart code 3010) aborts before app payload deletion so user can retry. Shared audio driver means EQ/Studio ownership, not network. Quit any running SoundCurrent apps, not necessarily both products; fully exit rather than hide UI. SoundCurrent is invariant. AI contextual review only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Shortcut</source>
+      <translation>快捷方式</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
-      <translation type="unfinished" />
+      <translation>较短的间隔会更频繁地更新电平，并消耗更多 CPU；音频传输可能限制实际更新速率</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
-      <translation type="unfinished" />
+      <translation>在每个频率电平上显示逐渐下降的峰值保持线</translation>
     </message>
     <message>
       <source>Show advanced controls</source>
-      <translation type="unfinished" />
+      <translation>显示高级控制</translation>
+    </message>
+    <message>
+      <source>Show date modified</source>
+      <translation>显示修改日期</translation>
+      <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
+    </message>
+    <message>
+      <source>Show hidden files</source>
+      <translation>显示隐藏文件(H)</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
       <source>Show peak markers on frequency levels</source>
-      <translation type="unfinished" />
+      <translation>在频率电平上显示峰值标记</translation>
+    </message>
+    <message>
+      <source>Show size</source>
+      <translation>显示大小</translation>
+      <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
+    </message>
+    <message>
+      <source>Show type</source>
+      <translation>显示类型</translation>
+      <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
+    </message>
+    <message>
+      <source>Side left</source>
+      <translation>侧左</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Side right</source>
+      <translation>侧右</translation>
+      <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
+    </message>
+    <message>
+      <source>Sidebar</source>
+      <translation>侧边栏</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size</source>
+      <translation>体积</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Size capture buffer</source>
+      <translation>确定采集缓冲区大小</translation>
+    </message>
+    <message>
+      <source>Size output buffer</source>
+      <translation>确定输出缓冲区大小</translation>
+    </message>
+    <message>
+      <source>Size test playback buffer</source>
+      <translation>确定测试播放缓冲区大小</translation>
     </message>
     <message>
       <source>Slapback echo</source>
-      <translation type="unfinished" />
+      <translation>短延迟回声</translation>
     </message>
     <message>
       <source>Small Speakers</source>
-      <translation type="unfinished" />
+      <translation>小型扬声器</translation>
     </message>
     <message>
       <source>Small room</source>
-      <translation type="unfinished" />
+      <translation>小房间</translation>
     </message>
     <message>
       <source>Soft Treble</source>
-      <translation type="unfinished" />
+      <translation>柔和高音</translation>
     </message>
     <message>
       <source>Solo</source>
-      <translation type="unfinished" />
+      <translation>独奏</translation>
     </message>
     <message>
       <source>Sound enhancements</source>
-      <translation>音效增强</translation>
+      <translation>声音增强</translation>
+    </message>
+    <message>
+      <source>SoundCurrent Audio is already present. With driver setup enabled, setup will register this app and keep the shared driver available for the other SoundCurrent app.</source>
+      <translation>SoundCurrent Audio 已存在。如果保持启用驱动程序设置，安装程序会注册此应用，并保留共享驱动程序供另一个 SoundCurrent 应用使用。</translation>
+    </message>
+    <message>
+      <source>SoundCurrent Audio is ready. Open the app and choose your speakers or headphones.</source>
+      <translation>SoundCurrent Audio 已就绪。请打开应用并选择扬声器或耳机。</translation>
+    </message>
+    <message>
+      <source>SoundCurrent Audio provides its own microphone route when installed. With VB-CABLE, simultaneous microphone and speaker EQ needs a separately installed second cable (A or B). Select that cable in recording apps. Automatic prefers the SoundCurrent route when available.</source>
+      <translation>安装后，SoundCurrent Audio 会提供自己的麦克风路由。使用 VB-CABLE 时，同时处理麦克风和扬声器均衡需要另行安装第二条线缆（A 或 B）。请在录音应用中选择该线缆。自动模式会优先使用可用的 SoundCurrent 路由。</translation>
+    </message>
+    <message>
+      <source>SoundCurrent Audio routes playback through the app. Choose your physical speakers or headphones inside the app. Their hardware drivers are preserved.</source>
+      <translation>SoundCurrent Audio 将播放的音频经由此应用传送。请在应用内选择实际的扬声器或耳机。它们的硬件驱动程序会被保留。</translation>
+    </message>
+    <message>
+      <source>SoundCurrent EQ is already processing playback. Quit it before enabling SoundCurrent Studio.</source>
+      <translation>SoundCurrent EQ 已在处理播放音频。启用 SoundCurrent Studio 前请先退出它。</translation>
+    </message>
+    <message>
+      <source>SoundCurrent Studio offline renderer (no audio device required)</source>
+      <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
+      <translation>SoundCurrent Studio 离线渲染器（无需音频设备）</translation>
+    </message>
+    <message>
+      <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
+      <translation>SoundCurrent 扫频或音调测量；相对于中位数；已绕过麦克风均衡。可能包含播放均衡的影响。</translation>
+      <extracomment>New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.</extracomment>
+    </message>
+    <message>
+      <source>Soundbar</source>
+      <translation>条形音箱</translation>
+      <extracomment>Integrated elongated speaker system commonly used with televisions.</extracomment>
     </message>
     <message>
       <source>Source</source>
-      <translation type="unfinished" />
+      <translation>来源</translation>
+    </message>
+    <message>
+      <source>Source: %1</source>
+      <translation>来源：%1</translation>
+      <extracomment>Published measurement source URL. %1 is verbatim source data, not a translated equipment identifier.</extracomment>
+    </message>
+    <message>
+      <source>Speaker</source>
+      <translation>扬声器</translation>
     </message>
     <message>
       <source>Speaker &amp;&amp; room calibration</source>
-      <translation type="unfinished" />
+      <translation>扬声器 &amp;&amp; 房间校准</translation>
     </message>
     <message>
       <source>Speaker + room check</source>
-      <translation type="unfinished" />
+      <translation>扬声器与房间检查</translation>
+    </message>
+    <message>
+      <source>Speaker and room measurement</source>
+      <translation>扬声器和房间测量</translation>
+    </message>
+    <message>
+      <source>Speaker filter is outside conservative bounds</source>
+      <translation>扬声器滤波器超出保守范围</translation>
     </message>
     <message>
       <source>Speaker manufacturer</source>
-      <translation type="unfinished" />
+      <translation>扬声器制造商</translation>
+    </message>
+    <message>
+      <source>Speaker mask does not match channel count</source>
+      <translation>扬声器声道掩码与声道数不匹配</translation>
+      <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Speaker model correction</source>
-      <translation type="unfinished" />
+      <translation>扬声器型号校正</translation>
     </message>
     <message>
       <source>Speaker model profile</source>
-      <translation type="unfinished" />
+      <translation>扬声器型号配置</translation>
     </message>
     <message>
       <source>Speaker profile details</source>
-      <translation type="unfinished" />
+      <translation>扬声器配置详情</translation>
+    </message>
+    <message>
+      <source>Speaker profile resource is missing</source>
+      <translation>缺少扬声器配置资源</translation>
     </message>
     <message>
       <source>Speaker type</source>
-      <translation type="unfinished" />
+      <translation>扬声器类型</translation>
+    </message>
+    <message>
+      <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
+      <translation>Spinorama AutoEQ：校正增益限制为 %1，Q 限制为 %2。低于 %3 的提升被省略。您的聆听预设单独叠加。</translation>
+      <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
+    </message>
+    <message>
+      <source>Start cable capture</source>
+      <translation>启动虚拟音频线音频采集</translation>
+    </message>
+    <message>
+      <source>Start microphone recording</source>
+      <translation>启动麦克风录音</translation>
     </message>
     <message>
       <source>Start quiet. Raise only if the microphone cannot hear the tones.</source>
-      <translation type="unfinished" />
+      <translation>从低音量开始。仅在麦克风无法听到音调时提高音量。</translation>
+    </message>
+    <message>
+      <source>Start speaker output</source>
+      <translation>启动扬声器输出</translation>
+    </message>
+    <message>
+      <source>Start test playback</source>
+      <translation>启动测试音频播放</translation>
+    </message>
+    <message>
+      <source>Start when I sign in</source>
+      <translation>登录时启动</translation>
+    </message>
+    <message>
+      <source>Startup</source>
+      <translation>启动</translation>
+    </message>
+    <message>
+      <source>Step down</source>
+      <translation>减小数值</translation>
+      <extracomment>Decrease the numeric spin-box value by one step; not physical movement.</extracomment>
+    </message>
+    <message>
+      <source>Step up</source>
+      <translation>增大数值</translation>
+      <extracomment>Increase the numeric spin-box value by one step; not physical movement.</extracomment>
     </message>
     <message>
       <source>Stereo</source>
-      <translation type="unfinished" />
+      <translation>立体声</translation>
+    </message>
+    <message>
+      <source>Stop the microphone calibration before changing the audio driver.</source>
+      <translation>更改音频驱动前请停止麦克风校准。</translation>
     </message>
     <message>
       <source>Stop tones</source>
-      <translation type="unfinished" />
+      <translation>停止音调</translation>
     </message>
     <message>
       <source>Studio channel count</source>
-      <translation type="unfinished" />
+      <translation>Studio 声道数</translation>
     </message>
     <message>
       <source>Studio channel output levels</source>
-      <translation type="unfinished" />
+      <translation>Studio 声道输出电平</translation>
+    </message>
+    <message>
+      <source>Studio channels &amp;&amp; effects</source>
+      <translation>Studio 声道 &amp;&amp; 音效</translation>
     </message>
     <message>
       <source>Studio effect preset</source>
-      <translation type="unfinished" />
+      <translation>Studio 音效预设</translation>
+    </message>
+    <message>
+      <source>Studio profile has an invalid boolean field</source>
+      <translation>Studio 配置文件包含无效的布尔字段</translation>
+      <extracomment>Saved Studio setup requires a JSON true/false field. Wrong type or missing value is rejected; do not confuse this with an audio level or textual yes/no preference.</extracomment>
+    </message>
+    <message>
+      <source>Studio profile has an invalid numeric field</source>
+      <translation>Studio 配置文件包含无效的数值字段</translation>
+      <extracomment>Saved Studio setup numeric field is wrong type, nonfinite or outside its supported range. JSON numbers use invariant syntax; do not reinterpret them according to the interface locale.</extracomment>
     </message>
     <message>
       <source>Studio selected channel</source>
-      <translation type="unfinished" />
+      <translation>Studio 所选声道</translation>
+    </message>
+    <message>
+      <source>Studio settings applied to live playback.</source>
+      <translation>Studio 设置已应用于实时播放。</translation>
+    </message>
+    <message>
+      <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
+      <translation>Studio 设置已就绪。请在均衡器选项卡中启用播放。</translation>
     </message>
     <message>
       <source>Studio setup (*.scstudio)</source>
-      <translation type="unfinished" />
+      <translation>Studio 设置 (*.scstudio)</translation>
     </message>
     <message>
       <source>Studio setup loaded for offline review. Uncheck offline editing to use it live.</source>
-      <translation type="unfinished" />
+      <translation>已加载 Studio 设置以供离线查看。取消选中离线编辑可实时使用。</translation>
     </message>
     <message>
       <source>Studio setup saved.</source>
-      <translation type="unfinished" />
+      <translation>Studio 设置已保存。</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
-      <translation type="unfinished" />
+      <translation>已应用建议的均衡设置。使用“保存预设”可保留它。</translation>
     </message>
     <message>
       <source>Suggested changes to the playback EQ</source>
-      <translation type="unfinished" />
+      <translation>建议的播放均衡调整</translation>
     </message>
     <message>
       <source>Surround Sound</source>
-      <translation type="unfinished" />
+      <translation>环绕声</translation>
+    </message>
+    <message>
+      <source>Surround speaker</source>
+      <translation>环绕音箱</translation>
+      <extracomment>Speaker used for surround audio channels; not an app surround-mode toggle.</extracomment>
     </message>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
-      <translation type="unfinished" />
+      <translation>已打开系统响应配置编辑器。保存的配置可在设备资料库中找到。</translation>
     </message>
     <message>
       <source>TV Dialogue</source>
-      <translation type="unfinished" />
+      <translation>电视对白</translation>
+    </message>
+    <message>
+      <source>Tail must be between 0 and 30 seconds</source>
+      <extracomment>Standalone CLI --tail appends this many seconds of zero input after the source to render delay/reverb decay. Inclusive range 0–30 seconds; not animal anatomy, input duration or reverb decay parameter. Audio processing and flag syntax stay invariant.</extracomment>
+      <translation>效果尾音时长必须介于 0 到 30 秒之间</translation>
     </message>
     <message>
       <source>Teal: correction EQ. Orange: measured response, when supplied. Vertical scale is relative dB.</source>
-      <translation type="unfinished" />
+      <translation>青绿色：校正均衡曲线。橙色：实测响应（如有）。纵轴为相对 dB。</translation>
     </message>
     <message>
       <source>Test channel meters with a silent generated signal</source>
-      <translation type="unfinished" />
+      <translation>使用静音生成信号测试声道电平表</translation>
     </message>
     <message>
       <source>Test level</source>
-      <translation type="unfinished" />
+      <translation>测试电平</translation>
+    </message>
+    <message>
+      <source>Test level is outside the allowed range</source>
+      <translation>测试电平超出允许范围</translation>
+    </message>
+    <message>
+      <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
+      <translation>缺少 VB-CABLE 软件包。请修复 SoundCurrent 安装。</translation>
+      <extracomment>The bundled official VB-CABLE ZIP is absent. Repair the SoundCurrent app installation; do not change speakers or cable hardware.</extracomment>
     </message>
     <message>
       <source>The audio processor stopped unexpectedly.</source>
-      <translation type="unfinished" />
+      <translation>音频处理器意外停止。</translation>
+    </message>
+    <message>
+      <source>The audio readiness helper is missing. Repair the SoundCurrent installation.</source>
+      <translation>音频就绪检查助手缺失。请修复 SoundCurrent 安装。</translation>
+    </message>
+    <message>
+      <source>The custom library holds up to 256 profiles.</source>
+      <translation>自定义资料库最多可保存 256 个配置。</translation>
+    </message>
+    <message>
+      <source>The driver manager is not signed. Install a signed SoundCurrent release.</source>
+      <translation>驱动程序管理器未签名。请安装已签名的 SoundCurrent 版本。</translation>
+    </message>
+    <message>
+      <source>The driver package is incomplete or Windows cannot verify its signature.</source>
+      <translation>驱动程序包不完整，或 Windows 无法验证其签名。</translation>
+    </message>
+    <message>
+      <source>The incomplete VB-CABLE installation was removed. Restart Windows, open %1 again, click Install Driver, then restart once more.</source>
+      <translation>不完整的 VB-CABLE 安装已移除。请重启 Windows，再次打开 %1，点击 Install Driver，然后再重启一次。</translation>
+    </message>
+    <message>
+      <source>The route-preserving setup helper is missing.</source>
+      <translation>缺少用于保留音频路由的设置辅助程序。</translation>
+      <extracomment>The installed executable that preserves prior default audio routing while launching driver setup is missing. Route refers to audio endpoints, not navigation/network routing.</extracomment>
+    </message>
+    <message>
+      <source>The shared driver manager is missing. Repair the app installation.</source>
+      <translation>共享驱动程序管理器缺失。请修复应用安装。</translation>
     </message>
     <message>
       <source>The update response was invalid. No installer was opened.</source>
-      <translation type="unfinished" />
+      <translation>更新响应无效。未打开任何安装程序。</translation>
+    </message>
+    <message>
+      <source>This Studio layout has more channels than the output device. Use offline editing or select a compatible device.</source>
+      <translation>此 Studio 布局的声道数多于输出设备。请使用离线编辑或选择兼容设备。</translation>
     </message>
     <message>
       <source>This imports measured RESPONSE, not already-inverted EQ gains. Confirm equipment type. Absolute SPL needs normalization before import.</source>
-      <translation type="unfinished" />
+      <translation>这里导入的是实测响应，而不是已经反向转换的均衡器增益。请确认设备类型。绝对声压级 SPL 需要在导入前归一化。</translation>
     </message>
     <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
-      <translation type="unfinished" />
+      <translation>此配置已更改。离开前保存自定义副本？</translation>
+    </message>
+    <message>
+      <source>Timed out waiting for the equalizer sink: %1</source>
+      <translation>等待均衡器输出节点超时：%1</translation>
+    </message>
+    <message>
+      <source>Too little test audio reached the microphone. Move it closer or raise the test level slightly.</source>
+      <translation>到达麦克风的测试音频太弱。请将麦克风移近或稍微提高测试电平。</translation>
+    </message>
+    <message>
+      <source>Too many Studio channel filters</source>
+      <translation>Studio 通道中的滤波器过多</translation>
+      <extracomment>Per-channel EQ filter count exceeds 64; unchanged processing bound.</extracomment>
+    </message>
+    <message>
+      <source>Too many Studio routes</source>
+      <translation>Studio 音频连接过多</translation>
+      <extracomment>Saved audio routing edge count exceeds channel-count squared.</extracomment>
+    </message>
+    <message>
+      <source>Touring PA speaker</source>
+      <translation>巡演扩声音箱</translation>
+      <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
-      <translation type="unfinished" />
+      <translation>翻译覆盖率：%1 / %2 条消息。缺少翻译的消息使用英语。语言包未经验证，等待母语使用者审阅。请退出并重新打开以应用更改。</translation>
     </message>
     <message>
       <source>Treble Detail</source>
-      <translation type="unfinished" />
+      <translation>高音细节</translation>
     </message>
     <message>
       <source>Trim</source>
-      <translation type="unfinished" />
+      <translation>增益微调</translation>
     </message>
     <message>
       <source>Trim · %1 dB</source>
-      <translation type="unfinished" />
+      <translation>增益微调 · %1 dB</translation>
+    </message>
+    <message>
+      <source>Truncated WAVE file</source>
+      <translation>WAVE 文件不完整</translation>
+      <extracomment>Owned WAVE binary read failure: expected bytes cannot be read completely. Does not mean musical trim/crop or an intentionally shortened clip. WAVE denotes the file format. Contextual AI translation; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated chunk header</source>
+      <translation>数据块头不完整</translation>
+      <extracomment>Owned RIFF parser validation: fewer than eight bytes remain for a chunk header. Header means binary metadata, not a UI title. Not an intentionally trimmed audio clip. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Truncated extensible WAVE format</source>
+      <translation>可扩展 WAVE 格式结构不完整</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Turn equalizer off</source>
-      <translation type="unfinished" />
+      <translation>关闭均衡器</translation>
     </message>
     <message>
       <source>Turn equalizer on</source>
-      <translation type="unfinished" />
+      <translation>开启均衡器</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a different live channel layout</source>
+      <translation>应用不同的实时处理声道布局前，请先关闭播放</translation>
+    </message>
+    <message>
+      <source>Turn playback off before applying a new live channel layout</source>
+      <translation>应用新的实时声道布局前，请关闭播放</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation type="unfinished" />
+      <translation>类型</translation>
+    </message>
+    <message>
+      <source>Unclassified equipment</source>
+      <translation>未分类设备</translation>
+      <extracomment>Equipment taxonomy has no more specific classification; not an error, missing device, or user permission status.</extracomment>
     </message>
     <message>
       <source>Undo</source>
@@ -1527,35 +3491,106 @@ Import into your library?</source>
     </message>
     <message>
       <source>Undo Studio change</source>
-      <translation type="unfinished" />
+      <translation>撤销 Studio 更改</translation>
     </message>
     <message>
       <source>Undo last equalizer change</source>
-      <translation type="unfinished" />
+      <translation>撤销上一次均衡器更改</translation>
+    </message>
+    <message>
+      <source>Uninstall</source>
+      <translation>卸载</translation>
+      <extracomment>Windows Start-menu shortcut action removing this application. Distinct from Quit or closing the UI. Driver removal remains optional shared-driver policy.</extracomment>
+    </message>
+    <message>
+      <source>Unknown</source>
+      <translation>未知</translation>
+      <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown option: %1</source>
+      <extracomment>Standalone CLI diagnostic for an unrecognized command-line flag. %1 is the exact option spelling supplied by the caller; preserve it verbatim and do not translate/reparse it. Not a missing option value or unknown equipment model.</extracomment>
+      <translation>未知选项：%1</translation>
     </message>
     <message>
       <source>Unlock EQ</source>
-      <translation type="unfinished" />
+      <translation>解锁均衡器</translation>
     </message>
     <message>
       <source>Unlock controls and finish measurement before editing profiles.</source>
-      <translation type="unfinished" />
+      <translation>编辑配置前请解锁控制并完成测量。</translation>
+    </message>
+    <message>
+      <source>Unmute speaker for EQ</source>
+      <translation>为均衡器取消扬声器静音</translation>
+    </message>
+    <message>
+      <source>Unsupported Studio profile schema</source>
+      <translation>不支持的 Studio 配置文件格式</translation>
+      <extracomment>Saved Studio setup schema/version or required top-level structure is unsupported. This is a file format, not a visual theme or room calibration profile.</extracomment>
+    </message>
+    <message>
+      <source>Unsupported WAVE rate or channel count</source>
+      <translation>不支持的 WAVE 采样率或声道数</translation>
+      <extracomment>Owned WaveReader file-format support limit: channel count must be 1..maxChannels and sample rate 8000..384000 Hz. Rate means sample rate, not bitrate or playback speed. Not live device capability. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Unsupported cable channel count</source>
+      <translation>不支持此音频线缆声道数</translation>
+    </message>
+    <message>
+      <source>Unsupported equipment profile schema (expected 2).</source>
+      <translation>不支持的设备配置格式版本（应为 2）。</translation>
+    </message>
+    <message>
+      <source>Unsupported extensible WAVE subtype</source>
+      <translation>不支持的可扩展 WAVE 子类型</translation>
+      <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Unsupported filter type.</source>
+      <translation>不支持的滤波器类型。</translation>
+    </message>
+    <message>
+      <source>Unsupported microphone channel layout</source>
+      <translation>不支持的麦克风声道布局</translation>
+    </message>
+    <message>
+      <source>Unsupported recording format</source>
+      <translation>不支持此录音格式</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker channel layout or sample rate</source>
+      <translation>不支持此扬声器声道布局或采样率</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker mix sample format</source>
+      <translation>不支持此扬声器混音采样格式</translation>
+    </message>
+    <message>
+      <source>Unsupported speaker profile schema</source>
+      <translation>不支持的扬声器配置格式版本</translation>
     </message>
     <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
-      <translation type="unfinished" />
+      <translation>更新 %1 已下载：%2。请退出，在现有应用上直接安装，然后重新打开。</translation>
     </message>
     <message>
       <source>Update download folder</source>
-      <translation type="unfinished" />
+      <translation>更新下载文件夹</translation>
     </message>
     <message>
       <source>Update selected</source>
-      <translation type="unfinished" />
+      <translation>更新所选项</translation>
+    </message>
+    <message>
+      <source>Usage: %1 [options]</source>
+      <extracomment>CLI usage line. %1 is invariant executable name, required flags and example filenames. Translate only the surrounding usage/options words; flags and filenames remain literal.</extracomment>
+      <translation>用法：%1 [选项]</translation>
     </message>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
-      <translation type="unfinished" />
+      <translation>请使用安静的房间。同时测量扬声器、房间和麦克风；结果包含麦克风响应。</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -1567,44 +3602,236 @@ Import into your library?</source>
       <translation>使用系统区域设置</translation>
     </message>
     <message>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>用户导入的相对频率响应；使用前请注明麦克风朝向 / 序列号或扬声器测量条件。</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created correction; enter equipment and measurement conditions.</source>
+      <translation>用户创建的校正；请输入设备及测量条件。</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>User-created profile</source>
+      <translation>用户创建的配置</translation>
+      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+    </message>
+    <message>
+      <source>VB-CABLE has a driver record but no usable audio endpoints. Setup offers repair: remove the driver, restart, reinstall, and restart again.</source>
+      <translation>VB-CABLE 已有驱动程序记录，但没有可用的音频端点。安装程序提供修复选项：卸载驱动程序、重启电脑、重新安装，然后再次重启电脑。</translation>
+      <extracomment>Incomplete driver registration notice (check exit 11). Audio endpoints mean Windows playback/recording devices. Preserve two computer restarts and the remove/reinstall order. Not a claim that repair completed. VB-CABLE is invariant. Contextual AI review only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>VB-CABLE is already installed. If it was just installed or updated, restart Windows before using the equalizer or VB-CABLE settings. Otherwise, select your speakers in SoundCurrent.</source>
+      <translation>VB-CABLE 已安装。如果刚安装或更新，请在使用均衡器或 VB-CABLE 设置前重启 Windows。否则，请在 SoundCurrent 中选择扬声器。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE is already present. It will be reused. SoundCurrent restores your normal output when switched off or when you use %1.</source>
+      <translation>VB-CABLE 已存在，将继续使用。关闭 SoundCurrent 的均衡器或使用 %1 时，会恢复常规输出。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE is not installed. Open "%1", then restart Windows before opening the cable settings.</source>
+      <translation>VB-CABLE 未安装。请打开 "%1"，然后重启 Windows，再打开音频线缆设置。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE is not present. Restart Windows if requested, then retry audio setup.</source>
+      <translation>VB-CABLE 不存在。如果提示需要重启，请重启 Windows，然后重试音频设置。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE is still present. If removal requested a restart, restart Windows and retry SoundCurrent uninstall; otherwise finish Remove Driver in the official setup.</source>
+      <translation>VB-CABLE 仍然存在。如果移除时提示需要重启，请重启 Windows，然后重试卸载 SoundCurrent；否则，请在官方安装程序中完成 Remove Driver 操作。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE package checksum mismatch. Repair the installation.</source>
+      <translation>VB-CABLE 软件包校验和不匹配。请修复安装。</translation>
+      <extracomment>The bundled ZIP SHA-256 differs from the pinned official package checksum. It is rejected before extraction/execution. This is file integrity, not audio level or signal quality.</extracomment>
+    </message>
+    <message>
+      <source>VB-CABLE removal did not finish. This app was kept so you can retry.</source>
+      <translation>VB-CABLE 未能完成卸载。此应用已保留，以便重试。</translation>
+      <extracomment>Cable uninstall nonzero failure excluding restart code 3010 aborts before app payload deletion. App retained for retry. NSIS caller appends newline and actual helper output as $1; never put runtime variables in translations. VB-CABLE invariant. Contextual AI review only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>VB-CABLE routes playback through the app. Choose speakers inside SoundCurrent. VB-CABLE is VB-Audio donationware: https://vb-cable.com — donations are welcome.</source>
+      <translation>VB-CABLE 将播放音频路由到应用中处理。请在 SoundCurrent 中选择扬声器。VB-CABLE 是 VB-Audio 以捐赠支持的软件：https://vb-cable.com — 欢迎捐赠。</translation>
+      <extracomment>Cable audio page routing and donation notice. Software routes system playback through SoundCurrent to physical output selected inside app. Donationware means supported by voluntary donations, not mandatory payment. Preserve VB-CABLE twice, SoundCurrent, VB-Audio and exact donation URL. Contextual AI review only; native review unverified.</extracomment>
+    </message>
+    <message>
       <source>VB-CABLE settings</source>
-      <translation type="unfinished" />
+      <translation>VB-CABLE 设置</translation>
+    </message>
+    <message>
+      <source>VB-CABLE settings could not open. Restart Windows if the driver was just installed or updated, then try again.</source>
+      <translation>无法打开 VB-CABLE 设置。如果刚安装或更新驱动程序，请重启 Windows，然后重试。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup finished. Restart Windows now before using the equalizer or VB-CABLE settings. Your prior audio defaults were preserved where still available.</source>
+      <translation>VB-CABLE 设置已完成。请立即重启 Windows，再使用均衡器或 VB-CABLE 设置。之前仍可用的默认音频设备已保留。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup requires a Windows restart. Restart before using the equalizer or opening VB-CABLE settings.</source>
+      <translation>VB-CABLE 设置需要重启 Windows。请在使用均衡器或打开 VB-CABLE 设置之前重启。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE setup was cancelled or did not finish (code %1). SoundCurrent was retained for retry.</source>
+      <translation>VB-CABLE 设置已取消或未完成（代码 %1）。SoundCurrent 仍保持安装，可重试。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE still has no usable playback/recording endpoints. Complete Remove Driver in the official setup, restart Windows, then open %1 again to reinstall. Windows Sound settings must have CABLE Input and CABLE Output enabled.</source>
+      <translation>VB-CABLE 仍没有可用的播放或录音设备。请在官方安装程序中完成 Remove Driver，重启 Windows，然后再次打开 %1 以重新安装驱动程序。必须在 Windows 声音设置中启用 CABLE Input 和 CABLE Output。</translation>
+    </message>
+    <message>
+      <source>VB-CABLE was kept because the other SoundCurrent app is installed. Remove it with the last app if no other software needs it.</source>
+      <translation>由于另一个 SoundCurrent 应用仍已安装，VB-CABLE 已保留。如果其他软件不需要它，请在卸载最后一个应用时移除它。</translation>
+    </message>
+    <message>
+      <source>Virtual output requires a supported 48 kHz float channel layout</source>
+      <translation>虚拟输出需要受支持的 48 kHz 浮点声道布局</translation>
     </message>
     <message>
       <source>Vocal Focus</source>
-      <translation type="unfinished" />
+      <translation>人声突出</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>
-      <translation type="unfinished" />
+      <translation>WAVE 音频 (*.wav)</translation>
+    </message>
+    <message>
+      <source>WAVE output exceeds its declared length</source>
+      <translation>WAVE 输出超出其声明长度</translation>
+      <extracomment>Owned WaveWriter frame-count validation: attempted sample writes exceed the frame count declared for the output. Not exceeding volume, clipping threshold or speaker capability. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
       <source>Waiting for a microphone.</source>
-      <translation type="unfinished" />
+      <translation>等待麦克风。</translation>
     </message>
     <message>
       <source>Warm</source>
-      <translation type="unfinished" />
+      <translation>温暖</translation>
     </message>
     <message>
       <source>Warm hall</source>
-      <translation type="unfinished" />
+      <translation>温暖大厅</translation>
     </message>
     <message>
       <source>Warmth</source>
-      <translation type="unfinished" />
+      <translation>温暖感</translation>
     </message>
     <message>
-      <source>Width (Q)</source>
-      <translation type="unfinished" />
+      <source>Whole listening system</source>
+      <translation>完整聆听系统</translation>
+      <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
+    </message>
+    <message>
+      <source>Windows audio COM unavailable</source>
+      <translation>Windows 音频 COM 不可用</translation>
+    </message>
+    <message>
+      <source>Windows could not verify the VB-Audio executable signature.</source>
+      <translation>Windows 无法验证 VB-Audio 可执行文件的签名。</translation>
+      <extracomment>Windows Authenticode did not report a valid signature for the vendor executable. No claim is made about why verification failed; no instruction to bypass verification.</extracomment>
+    </message>
+    <message>
+      <source>Windows has a VB-CABLE driver record but no usable cable endpoints. First check that CABLE Input and CABLE Output are enabled in Windows Sound settings. To reinstall: click Remove Driver in the official setup that opens next, restart Windows, then open %1 in the app again and click Install Driver. Restart once more before playing audio through SoundCurrent. Removing this shared cable affects other apps that use it.</source>
+      <translation>Windows 中存在 VB-CABLE 驱动程序记录，但没有可用的虚拟音频线端点。请先检查 Windows 声音设置中的 CABLE Input 和 CABLE Output 是否已启用。要重新安装，请在接下来打开的官方安装程序中点击 Remove Driver，重启 Windows，然后在应用中再次打开 %1 并点击 Install Driver。在通过 SoundCurrent 播放音频之前，请再重启一次。卸载此共享虚拟音频线会影响使用它的其他应用。</translation>
+      <extracomment>Pre-repair modal, before official driver installer is opened. Existing driver record but endpoints unavailable; first check Windows endpoint enablement. Remove Driver and Install Driver are exact English external buttons. %1 is actual localized Audio driver setup button inside app, not English Start-menu shortcut. Preserve removal -&gt; Windows restart -&gt; app setup -&gt; reinstall -&gt; second restart, then audio playback; affects other users of shared cable. No claim removal already happened. AI contextual review only; native review unverified.</extracomment>
+    </message>
+    <message>
+      <source>Windows has a VB-CABLE driver record, but its playback or recording endpoint is unavailable. If you have already restarted, open %1 to repair it. Enable CABLE Input and CABLE Output in Windows Sound settings if they are disabled.</source>
+      <translation>Windows 有 VB-CABLE 驱动程序记录，但其播放或录音端点不可用。如果已重启，请打开 %1 进行修复。如果 CABLE Input 和 CABLE Output 已禁用，请在 Windows 声音设置中启用它们。</translation>
+    </message>
+    <message>
+      <source>Windows will request administrator approval for the signed driver manager. Setup will tell you if a restart is required.</source>
+      <translation>Windows 将为已签名的驱动程序管理器请求管理员批准。安装程序会告知您是否需要重启。</translation>
+    </message>
+    <message>
+      <source>Write speaker buffer</source>
+      <translation>写入扬声器缓冲区</translation>
+    </message>
+    <message>
+      <source>Write test playback</source>
+      <translation>写入用于播放的测试音频</translation>
+    </message>
+    <message>
+      <source>Wrong number of colon-separated fields</source>
+      <extracomment>Standalone CLI colon-delimited numeric option has an exact required field count (EQ: 4, filters/routes: 3, gain: 2). Colon syntax remains unchanged; this is not a CSV delimiter preference.</extracomment>
+      <translation>冒号分隔的字段数量错误</translation>
+    </message>
+    <message>
+      <source>Yes</source>
+      <translation>是</translation>
+    </message>
+    <message>
+      <source>Yes to All</source>
+      <translation>全部是</translation>
     </message>
     <message>
       <source>Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction.</source>
-      <translation type="unfinished" />
+      <translation>零值会关闭各项音效。这些聆听音效应用于扬声器播放，不用于麦克风校正。</translation>
+    </message>
+    <message>
+      <source>append 0-30 seconds to render effect tails</source>
+      <extracomment>Append 0–30 seconds of zero input after source audio so delay/reverb tails can decay into the export. Does not extend input media or change reverb decay itself. Preserve 0-30.</extracomment>
+      <translation>追加 0-30 秒以渲染效果尾音</translation>
+    </message>
+    <message>
+      <source>bypass EQ, effects, gains and mute</source>
+      <extracomment>Bypass engine EQ, delay/reverb/enhancements, channel/global gain and channel mute. Routing matrix still applies; final clipping and invalid-sample protection still apply. No device-routing bypass is implied.</extracomment>
+      <translation>旁路 EQ、效果、增益和静音</translation>
+    </message>
+    <message>
+      <source>disable automatic EQ headroom</source>
+      <extracomment>Disable automatic per-channel EQ gain compensation/headroom. Does not disable final clipping or invalid-sample protection.</extracomment>
+      <translation>禁用自动 EQ 电平余量</translation>
+    </message>
+    <message>
+      <source>explicit matrix gain; using any route clears defaults</source>
+      <extracomment>CLI --route OUT:IN:DB: when any explicit route exists the matrix starts at zero; only specified routes remain. Clearing defaults does not restore identity or automatic routing.</extracomment>
+      <translation>显式矩阵增益；使用任意路由都会清除默认路由</translation>
+    </message>
+    <message>
+      <source>interface language; unsupported tags use English</source>
+      <extracomment>CLI --language: selects interface catalog, normalizes tag case/separators and uses supported base language where available. Unresolved tags fall back to English. Does not change audio or numeric argument syntax.</extracomment>
+      <translation>界面语言；不支持的语言标签使用英语</translation>
+    </message>
+    <message>
+      <source>optional channel high-pass</source>
+      <extracomment>CLI high-pass output-channel filter attenuates low frequencies, passing high frequencies. Optional means absent unless specified. Not treble boost.</extracomment>
+      <translation>可选的通道高通滤波器</translation>
+    </message>
+    <message>
+      <source>optional channel low-pass (e.g. LFE)</source>
+      <extracomment>CLI low-pass output-channel filter attenuates high frequencies, passing low frequencies; LFE is only an example channel use, not an automatic speaker role. Preserve LFE identifier.</extracomment>
+      <translation>可选的通道低通滤波器（例如 LFE）</translation>
+    </message>
+    <message>
+      <source>output channel trim, -60 to +24 dB</source>
+      <extracomment>Per-output-channel gain/trim, inclusive -60 to +24 dB. Preserve signs, bounds and dB; this is not the wider global post-gain range.</extracomment>
+      <translation>输出通道电平微调，-60 到 +24 dB</translation>
+    </message>
+    <message>
+      <source>overall post gain, -84 to +24 dB</source>
+      <extracomment>Global post-gain control, inclusive -84 to +24 dB, applied to all channels. Preserve signs, bounds and dB; do not substitute the narrower channel trim range.</extracomment>
+      <translation>总体后级增益，-84 到 +24 dB</translation>
+    </message>
+    <message>
+      <source>peaking EQ for one output channel; repeat as needed</source>
+      <extracomment>CLI --eq CH:HZ:DB:Q adds one peaking/bell filter to an output channel, repeatable within 64 filters per channel. Not peak detection or a shelf filter. CLI flag and argument tokens remain unchanged.</extracomment>
+      <translation>为单个输出通道添加钟形 EQ；可按需重复</translation>
+    </message>
+    <message>
+      <source>wet fraction 0-1 (enables delay)</source>
+      <extracomment>Delay wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks delay enabled even if zero mix is inaudible. Wet is audio mixing, not humidity.</extracomment>
+      <translation>处理后信号比例 0-1（启用延迟）</translation>
+    </message>
+    <message>
+      <source>wet fraction 0-1 (enables reverb)</source>
+      <extracomment>Reverb wet/processed-signal mix fraction inclusive 0–1; zero dry, one wet. Setting the option marks reverb enabled. Wet is audio mixing, not humidity.</extracomment>
+      <translation>处理后信号比例 0-1（启用混响）</translation>
     </message>
     <message>
       <source>−∞ dBFS</source>
-      <translation type="unfinished" />
+      <translation>−∞ dBFS</translation>
     </message>
   </context>
 </TS>

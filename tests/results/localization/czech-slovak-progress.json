@@ -1,0 +1,46 @@
+{
+  "stage": "Czech and Slovak complete extracted catalog checkpoint",
+  "catalogs": [
+    {
+      "tag": "cs",
+      "name": "Čeština",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "0fa1121c6387f8fd20bb2a197eb696207ab6f25562edfeb4994f9eb320e37915",
+      "qmSha256": "aad7d514da59929a8936bdfcbc3f4dcdb71ad1c7086c8969ca0b0f24d9b8dfb3"
+    },
+    {
+      "tag": "sk",
+      "name": "Slovenčina",
+      "translated": 527,
+      "total": 527,
+      "status": "unverified",
+      "nativeReviewed": false,
+      "tsSha256": "cdf54bde2b56d42388072cef488794ec60ce0b7efe649821bae8098929caf84d",
+      "qmSha256": "29c8090ee4ac8450b9692313ee2ad3ef59c17d0705fc85382eb21ca8f4afd79f"
+    }
+  ],
+  "linuxTests": {
+    "passed": 60,
+    "total": 60,
+    "scope": "Full CTest including Czech/Slovak equipment import/edit/save workflows and all configured main windows",
+    "log": "/tmp/soundcurrent-studio-cs-sk-complete-tests.log"
+  },
+  "visualInspection": {
+    "platform": "xcb/Xvfb",
+    "display": "1280x720",
+    "sample": "Slovak Studio channels/effects",
+    "screenshots": "/tmp/sc-studio-sk-complete-xcb"
+  },
+  "review": "Contextual AI review, unverified. Render counts use label form to avoid fixed plural endings. HTML links unchanged, measured response differs from inverted correction, wet contribution differs from post gain.",
+  "nativeReviewed": false,
+  "windows": {
+    "runId": 37719842048,
+    "conclusion": "success",
+    "sourceCommit": "90a2042738ad41bb2befa79f8c9d348b02acdf48",
+    "scope": "Windows build, staged runtime and installer creation; actual desktop sign-in and manual installer lifecycle separate"
+  },
+  "remaining": "22 target locales incomplete; small-screen Polish layout, own backend/installer text and actual Windows lifecycle/sign-in qualification remain open."
+}

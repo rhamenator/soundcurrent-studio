@@ -1,0 +1,111 @@
+{
+  "scope": "Direct literal runtime_error calls in Windows audio adapter/backend only; dynamic errors, helpers, installers and other files require further audit. Not a complete user-facing inventory.",
+  "gaps": [
+    {
+      "file": "src/windows_platform.inc",
+      "line": 24,
+      "source": "Install the Windows audio route using Audio driver setup, then reopen the app.",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_platform.inc",
+      "line": 75,
+      "source": "Turn playback off before applying a different live channel layout",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_platform.inc",
+      "line": 77,
+      "source": "Invalid Studio settings",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_platform.inc",
+      "line": 85,
+      "source": "Selected speakers are disconnected",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_platform.inc",
+      "line": 105,
+      "source": "Invalid equalizer settings",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_platform.inc",
+      "line": 169,
+      "source": "Install SoundCurrent Audio using Audio driver setup, then reopen the app to enable the microphone route.",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_platform.inc",
+      "line": 187,
+      "source": "Invalid microphone tuning",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 40,
+      "source": "Could not initialize Windows audio COM",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 76,
+      "source": "Invalid speaker mix format",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 88,
+      "source": "Unsupported speaker mix sample format",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 350,
+      "source": "Virtual output requires a supported 48 kHz float channel layout",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 356,
+      "source": "Unsupported cable channel count",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 380,
+      "source": "Unsupported speaker channel layout or sample rate",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 442,
+      "source": "The selected EQ settings are invalid",
+      "inCatalog": false,
+      "translatedAtCall": false
+    },
+    {
+      "file": "src/windows_audio.cpp",
+      "line": 452,
+      "source": "Cable packet exceeds its capture buffer",
+      "inCatalog": false,
+      "translatedAtCall": false
+    }
+  ],
+  "nativeReviewed": false
+}
