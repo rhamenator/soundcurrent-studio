@@ -50,8 +50,12 @@ public:
             // write a volume to an endpoint inherited from the previous route.
             for(const auto &entry:list){const auto sink=entry.toObject();
                 if(sink.value("name").toString()!=queryEndpoint_)continue;
-                double max=0;const auto volumes=sink.value("volume").toObject();
-                for(const auto &v:volumes)max=std::max(max,v.toObject().value("value").toDouble(-1));
+                double max=-1;const auto volumes=sink.value("volume").toObject();
+                for(const auto &v:volumes){
+                    const double raw=v.toObject().value("value").toDouble(-1);
+                    if(!std::isfinite(raw) || raw<0 || raw>2147483647.){unavailable();return;}
+                    max=std::max(max,raw);
+                }
                 if(max<0 || volumes.isEmpty()){unavailable();return;}
                 if(pending_<0 && writer_.state()==QProcess::NotRunning)
                     applyRead(int(std::lround(max*100/65536)),sink.value("mute").toBool());

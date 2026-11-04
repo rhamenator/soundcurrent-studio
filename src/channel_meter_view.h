@@ -86,7 +86,7 @@ protected:
 private:
     int bank_=0;
     int displayedCount() const {return std::max(0,std::min(64,int(names_.size())-bank_*64));}
-    int columns() const {return std::max(1,std::min(8,width()/145));}
+    int columns() const {return std::max(1,std::min({8,width()/145,displayedCount()}));}
     QStringList names_;
     std::vector<QPointF> positions_;
     std::vector<float> levels_,held_;

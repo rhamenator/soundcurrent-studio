@@ -43,6 +43,10 @@ else:sys.exit(2)
     check(read()["mute"].toBool(),"slider silently unmuted system");
     state=read();state["endpoint"]="new-route";state["percent"]=26;save(state);
     wait([&]{return control.slider()->value()==26;});
+    state=read();state["percent"]=-1;save(state);
+    wait([&]{return !control.slider()->isEnabled();});
+    state=read();state["percent"]=26;save(state);
+    wait([&]{return control.slider()->isEnabled();});
     state=read();state["fail"]=true;save(state);
     wait([&]{return !control.slider()->isEnabled();});
     state=read();state["fail"]=false;state["percent"]=55;save(state);

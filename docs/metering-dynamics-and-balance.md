@@ -62,7 +62,9 @@ not apply another DSP gain. Startup reads the current level without setting or
 unmuting it. Unavailable devices disable the control; endpoint changes are
 re-read. Linux uses asynchronous pactl calls; Windows uses Core Audio endpoint
 volume, all outside audio callbacks. The UI refreshes system volume every
-200 ms. Existing saved post gain is retained under Settings as processing trim,
+200 ms. Linux read/write synchronization is covered by an isolated fake-server
+fixture; physical Windows media-key/endpoint-volume round-trip testing remains
+pending. Existing saved post gain is retained under Settings as processing trim,
 with its previous gain range and undo behavior. It remains distinct from the
 main listening-volume control and can still cause clipping if raised.
 
