@@ -255,8 +255,8 @@ void StudioPanel::startPreview() {
     }catch(const std::exception &e){previewEngine_.reset();status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::setLiveLevels(std::span<const float> levels) {
+    if(preview_->isChecked())return;
     meterView_->setLevels(levels);
-    if(preview_->isChecked()&& !levels.empty())return;
     for(int c=0;c<meters_->rowCount();++c){const float value=std::size_t(c)<levels.size()?levels[std::size_t(c)]:0;
         auto *item=meters_->item(c,1);item->setText(value>1e-8?QLocale().toString(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));
         item->setForeground(value>=1?QColor("#ff6868"):value>=.7?QColor("#ffc66d"):QColor("#55d7c3"));}
@@ -414,6 +414,18 @@ void StudioPanel::selfTest() {
     const auto provenanceSession = session_;
     const auto provenanceHistory = history_;
     session_ = Session(2); rebuild();
+    const std::array<float,2> displayedLevels{.25f,.5f}, liveLevels{.9f,.8f};
+    setLiveLevels(displayedLevels);
+    const auto displayedText=meters_->item(0,1)->text();
+    preview_->setChecked(true);
+    for(const auto feed:{std::span<const float>(liveLevels),std::span<const float>()}) {
+        setLiveLevels(feed);
+        if(meterView_->levelForChannel(0)!=displayedLevels[0] ||
+           meterView_->levelForChannel(1)!=displayedLevels[1] || meters_->item(0,1)->text()!=displayedText)
+            qFatal("Live/stopped playback overwrote silent-preview meters");
+    }
+    preview_->setChecked(false);
+    if(meterView_->levelForChannel(0)!=0)qFatal("Stopping silent preview did not reset graphical meters");
     const auto noEdit = session_.json();
     QMetaObject::invokeMethod(name_, "editingFinished", Qt::DirectConnection);
     if (session_.json() != noEdit || session_.defaultNameRole(0) != "left")

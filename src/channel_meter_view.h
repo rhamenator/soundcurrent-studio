@@ -49,6 +49,7 @@ public:
             if(levels_[c]>=held_[c] || now>=expires_[c]){held_[c]=levels_[c];expires_[c]=now+1000;}}
         update();
     }
+    float levelForChannel(std::size_t channel) const {return channel<levels_.size()?levels_[channel]:0;}
     bool spatial() const {return spatial_;}
     int channelCount() const {return names_.size();}
     QRectF channelRect(int c) const {
