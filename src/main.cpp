@@ -1966,7 +1966,8 @@ public:
         // The readout must not negotiate the meter width or its own height as
         // digits, warning text and font weight change during playback.
         peakStatus_->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
-        peakStatus_->setFixedHeight(2 * peakStatus_->fontMetrics().lineSpacing() + 4);
+        reservePeakStatusSpace();
+        peakStatus_->installEventFilter(this);
         playbackLayout->addLayout(meterRow);
         playbackLayout->addWidget(peakStatus_);
         auto *refreshRow = new QHBoxLayout;
@@ -2553,6 +2554,7 @@ public:
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override {
+        if (watched == peakStatus_ && event->type() == QEvent::FontChange) reservePeakStatusSpace();
         if (event->type() == QEvent::Wheel && scroll_) {
             auto *wheel = static_cast<QWheelEvent *>(event);
             if (wheel->angleDelta().y() || wheel->pixelDelta().y()) {
@@ -2619,6 +2621,9 @@ public:
                 for (double peak : {0.0, 0.000002, 0.01, 0.5, 0.95, 1.2, 0.0}) {
                     showLevels({}, peak);
                     QCoreApplication::processEvents();
+                    auto normalFont = peakStatus_->font(); normalFont.setBold(false);
+                    if (peakStatus_->height() < 2 * QFontMetrics(normalFont).lineSpacing())
+                        qFatal("Peak readout reserved height does not fit its font");
                     if (overallLevel_->geometry() != meterGeometry || peakStatus_->geometry() != textGeometry ||
                         outputGain_->geometry() != gainGeometry)
                         qFatal("Peak label reflow moved the meter or volume slider");
@@ -3031,6 +3036,14 @@ private:
         bandScroll_->setWidget(container);
         lastChangeSource_ = nullptr;
         if (lockButton_->isChecked()) updateControlsLock();
+    }
+
+    void reservePeakStatusSpace() {
+        auto normalFont = peakStatus_->font();
+        normalFont.setBold(false);
+        const int height = 2 * QFontMetrics(normalFont).lineSpacing() + 4;
+        if (peakStatus_->minimumHeight() != height || peakStatus_->maximumHeight() != height)
+            peakStatus_->setFixedHeight(height);
     }
 
     void showLevels(const QVector<double> &levels, double peak) {
