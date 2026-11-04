@@ -471,10 +471,6 @@ Czy na pewno chcesz go usunąć?</translation>
       <translation>Tłumienie basu</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas dodaje ciężaru niskim częstotliwościom; Klarowność dodaje szczegółów wysokim częstotliwościom; Przestrzeń dodaje odbicia pomieszczenia; Surround poszerza obraz stereo; Wzmocnienie dynamiczne kompresuje i podnosi cichszy materiał z ograniczeniem poziomu szczytowego. Podbicie może zwiększyć poziom wyjściowy.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Częstotliwość basu</translation>
     </message>
@@ -1290,6 +1286,10 @@ Czy na pewno chcesz go usunąć?</translation>
       <translation>Język testowy z wydłużonym tekstem</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Ekspansja / kompresja</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Oczekiwano profilu sprzętu JSON. Zaimportuj tekst odpowiedzi przyciskiem importowania odpowiedzi.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Czy na pewno chcesz go usunąć?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Biblioteka przekracza 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Czy na pewno chcesz go usunąć?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Otwarto edytor profilu odpowiedzi systemu. Zapisane profile są dostępne w bibliotece sprzętu.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Głośność systemowa</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

@@ -471,10 +471,6 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Bassabsenkung</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bass verleiht tiefen Frequenzen mehr Gewicht; Klarheit betont Details in hohen Frequenzen; Raumklang fügt Raumreflexionen hinzu; Surround verbreitert das Stereobild; Dynamische Verstärkung komprimiert und hebt leise Passagen mit einer Spitzenpegelbegrenzung an. Verstärkung kann den Ausgangspegel erhöhen.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Bassfrequenz</translation>
     </message>
@@ -1290,6 +1286,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Testsprache mit verlängertem Text</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansion / Kompression</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Ein JSON-Geräteprofil wird erwartet. Importieren Sie Frequenzgangtext über die Schaltfläche zum Importieren von Frequenzgangdaten.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Die Bibliothek überschreitet 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Der Editor für den Systemfrequenzgang wurde geöffnet. Gespeicherte Profile sind in der Gerätebibliothek verfügbar.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Systemlautstärke</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

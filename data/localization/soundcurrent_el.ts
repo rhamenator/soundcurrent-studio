@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>Μείωση μπάσων</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Τα Μπάσα προσθέτουν βάρος στις χαμηλές συχνότητες· η Καθαρότητα προσθέτει λεπτομέρειες στις υψηλές· η Αίσθηση χώρου προσθέτει ανακλάσεις· ο Περιβάλλων ήχος διευρύνει το στερεοφωνικό πεδίο· η Δυναμική ενίσχυση συμπιέζει και ενισχύει το πιο ήσυχο υλικό με όριο κορυφών. Η ενίσχυση μπορεί να αυξήσει τη στάθμη εξόδου.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Συχνότητα μπάσων</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>Εκτεταμένη δοκιμαστική γλώσσα</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Επέκταση / συμπίεση</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Αναμένεται προφίλ εξοπλισμού JSON. Εισαγάγετε κείμενο απόκρισης με το κουμπί εισαγωγής απόκρισης.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Η βιβλιοθήκη υπερβαίνει τα 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Περιοριστής</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Άνοιξε η επεξεργασία προφίλ απόκρισης συστήματος. Τα αποθηκευμένα προφίλ είναι διαθέσιμα στη βιβλιοθήκη εξοπλισμού.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Ένταση συστήματος</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

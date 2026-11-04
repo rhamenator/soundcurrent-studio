@@ -471,10 +471,6 @@ Přesto chcete soubor smazat?</translation>
       <translation>Potlačení basů</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Basy dodávají váhu nízkým frekvencím; Zřetelnost přidává detaily ve vysokých frekvencích; Prostorový dozvuk přidává odrazy místnosti; Surround rozšiřuje stereo; Dynamické zesílení komprimuje a zesiluje tišší materiál s omezením špiček. Zesílení může zvýšit výstupní úroveň.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Frekvence basů</translation>
     </message>
@@ -1290,6 +1286,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Rozšířený testovací jazyk</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expanze / komprese</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Očekáván profil zařízení ve formátu JSON. Text frekvenční odezvy importujte tlačítkem pro import odezvy.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Knihovna přesahuje 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Editor profilu odezvy systému otevřen. Uložené profily jsou dostupné v knihovně zařízení.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Systémová hlasitost</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

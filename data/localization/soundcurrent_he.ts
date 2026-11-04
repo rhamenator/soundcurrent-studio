@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>הפחתת בס</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>בס מוסיף משקל לתדרים נמוכים; בהירות מוסיפה פירוט לתדרים גבוהים; אווירה אקוסטית מוסיפה החזרי חדר; סראונד מרחיב את הסטריאו; הגברה דינמית דוחסת ומגבירה חומר חלש יותר עם תקרת שיא. הגברה עלולה להעלות את רמת היציאה.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>תדר הבס</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>שפת בדיקה עם טקסט מורחב</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>הרחבה / דחיסה</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>נדרש פרופיל ציוד מסוג JSON. יש לייבא טקסט תגובה באמצעות לחצן ייבוא התגובה.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>הספרייה גדולה מ־16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>מגביל</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>עורך פרופיל תגובת המערכת נפתח. פרופילים שנשמרו זמינים בספריית הציוד.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>עוצמת הקול של המערכת</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

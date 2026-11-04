@@ -471,10 +471,6 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Giảm âm trầm</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Âm trầm tăng độ đầy ở tần số thấp; Độ rõ tăng chi tiết ở tần số cao; Âm vang không gian thêm phản xạ phòng; Surround mở rộng stereo. Tăng cường động nén và nâng âm nhỏ với giới hạn đỉnh. Tăng cường có thể làm tăng mức đầu ra.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Tần số âm trầm</translation>
     </message>
@@ -1290,6 +1286,10 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Ngôn ngữ thử với chuỗi mở rộng</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Mở rộng / nén</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Cần cấu hình thiết bị JSON. Nhập văn bản đáp tuyến bằng nút nhập đáp tuyến.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Thư viện vượt quá 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Bộ giới hạn</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Đã mở trình sửa cấu hình đáp tuyến hệ thống. Các cấu hình đã lưu có trong thư viện thiết bị.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Âm lượng hệ thống</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

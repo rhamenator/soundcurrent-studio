@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>बास कट</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>बास निम्न आवृत्तियों में भराव जोड़ता है; स्पष्टता उच्च आवृत्तियों का बारीक विवरण बढ़ाती है; ऐम्बियंस कमरे के परावर्तन जोड़ता है; सराउंड स्टीरियो विस्तार बढ़ाता है। डायनैमिक बूस्ट पीक की सीमा तय करते हुए कंप्रेस करता है और धीमी ध्वनि को बढ़ाता है। बूस्ट करने से आउटपुट स्तर बढ़ सकता है।</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>बास आवृत्ति</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>विस्तारित परीक्षण भाषा</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>विस्तार / संपीड़न</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON उपकरण प्रोफ़ाइल अपेक्षित है। प्रतिक्रिया टेक्स्ट को प्रतिक्रिया आयात बटन से आयात करें।</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>लाइब्रेरी 16 MiB से बड़ी है।</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>लिमिटर</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>सिस्टम प्रतिक्रिया प्रोफ़ाइल संपादक खोला गया। सहेजी गई प्रोफ़ाइल उपकरण लाइब्रेरी में उपलब्ध हैं।</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>सिस्टम वॉल्यूम</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

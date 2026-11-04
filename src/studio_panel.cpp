@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "accelerating_spinbox.h"
 #include "studio_panel.h"
+#include "channel_meter_view.h"
 #include "studio_name_text.h"
 #include "audio_error_text.h"
 #include "wav.h"
@@ -74,6 +75,13 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     ioHint->setWordWrap(true); layoutForm->addRow(ioHint);
     root->addWidget(layoutBox);
     editing_ = new QWidget; auto *editRoot = new QVBoxLayout(editing_); editRoot->setContentsMargins(0,0,0,0);
+    roomBalanceBox_=new QGroupBox(SC_TR("Balance"));
+    auto *roomForm=new QVBoxLayout(roomBalanceBox_);
+    roomBalance_=new RoomBalancePad;roomForm->addWidget(roomBalance_);
+    auto *centerRoom=new QPushButton(SC_TR("Center"));roomForm->addWidget(centerRoom);
+    roomBalance_->onEdited=[this](double x,double y){change([=](Session &s){s.roomBalanceX=x;s.roomBalanceY=y;});};
+    connect(centerRoom,&QPushButton::clicked,this,[this]{roomBalance_->setPosition(0,0);change([](Session &s){s.roomBalanceX=0;s.roomBalanceY=0;});});
+    editRoot->addWidget(roomBalanceBox_);
     auto *fx = new QGroupBox(SC_TR("Effects")); auto *fxForm = new QFormLayout(fx);
     preset_ = new QComboBox; preset_->setAccessibleName(SC_TR("Studio effect preset"));
     preset_->addItems({SC_TR("Dry"), SC_TR("Slapback echo"), SC_TR("Rhythmic echo"), SC_TR("Small room"), SC_TR("Warm hall"), SC_TR("Large hall"), SC_TR("Echo and space"), SC_TR("Custom")});
@@ -118,7 +126,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     editRoot->addWidget(channelBox); root->addWidget(editing_);
     auto *tools = new QHBoxLayout; auto *save = new QPushButton(SC_TR("Save Studio setup")), *open = new QPushButton(SC_TR("Open Studio setup"));
     undo_ = new QPushButton(SC_TR("Undo Studio change")); tools->addWidget(save); tools->addWidget(open); tools->addWidget(undo_); root->addLayout(tools);
-    preview_ = new QCheckBox(SC_TR("Test channel meters with a silent generated signal")); root->addWidget(preview_);
+    meterBank_=new QComboBox;meterBank_->setAccessibleName(SC_TR("Studio channel output levels"));meterBank_->setObjectName("channelMeterBank");root->insertWidget(1,meterBank_);
+    meterView_=new ChannelMeterView;root->insertWidget(2,meterView_);
+    connect(meterBank_,&QComboBox::currentIndexChanged,this,[this](int bank){if(!rebuilding_)meterView_->setBank(bank);});
+    preview_ = new QCheckBox(SC_TR("Test channel meters with a silent generated signal")); root->insertWidget(3,preview_);
     meters_ = table({SC_TR("Channel"), SC_TR("Peak")}); meters_->setAccessibleName(SC_TR("Studio channel output levels")); root->addWidget(meters_);
     auto *renderBox = new QGroupBox(SC_TR("Offline WAVE rendering")); auto *rf = new QFormLayout(renderBox);
     tail_ = spin(0,30,3,.5); tail_->setSuffix(" s"); rf->addRow(SC_TR("Effect tail"), tail_);
@@ -128,7 +139,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     status_ = new QLabel(SC_TR("Ready. Effects are dry until enabled.")); status_->setWordWrap(true); root->addWidget(status_); root->addStretch();
     connect(count_, &QSpinBox::valueChanged, this, [this](int count) {
         if (rebuilding_) return;
-        change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb; next.engine.enhancements=s.engine.enhancements;
+        change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb; next.engine.enhancements=s.engine.enhancements;next.roomBalanceX=s.roomBalanceX;next.roomBalanceY=s.roomBalanceY;
             next.engine.automaticHeadroom=s.engine.automaticHeadroom; next.engine.bypass=s.engine.bypass; next.offline = true;
             for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; next.names[c]=s.names[c]; next.nameProvenance[std::size_t(c)]=s.nameProvenance[std::size_t(c)]; next.solo[c]=s.solo[c]; }
             s=std::move(next); }); rebuild();
@@ -197,6 +208,12 @@ void StudioPanel::rebuild() {
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
     offline_->setChecked(session_.offline);channel_->clear();for(int c=0;c<int(session_.engine.channels.size());++c)channel_->addItem(channelNameText(session_,c));channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
     enhancements_->setSettings(session_.engine.enhancements);
+    roomBalanceBox_->setVisible(session_.hasRoomLayout());
+    roomBalance_->setPosition(session_.roomBalanceX,session_.roomBalanceY);
+    meterView_->setSession(session_);
+    meterBank_->clear();
+    for(int first=0;first<count_->value();first+=64)meterBank_->addItem(QString("%1–%2").arg(QLocale().toString(first+1)).arg(QLocale().toString(std::min(first+64,count_->value()))));
+    meterBank_->setVisible(count_->value()>64);
     const auto &d=session_.engine.delay;const auto &r=session_.engine.reverb;
     delay_->setChecked(d.enabled);delayMs_->setValue(d.milliseconds);feedback_->setValue(d.feedback);wetDelay_->setValue(int(std::lround(d.mix*100)));
     reverb_->setChecked(r.enabled);decay_->setValue(r.decaySeconds);damping_->setValue(r.damping);wetReverb_->setValue(int(std::lround(r.mix*100)));
@@ -238,6 +255,7 @@ void StudioPanel::startPreview() {
     }catch(const std::exception &e){previewEngine_.reset();status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::setLiveLevels(std::span<const float> levels) {
+    meterView_->setLevels(levels);
     if(preview_->isChecked()&& !levels.empty())return;
     for(int c=0;c<meters_->rowCount();++c){const float value=std::size_t(c)<levels.size()?levels[std::size_t(c)]:0;
         auto *item=meters_->item(c,1);item->setText(value>1e-8?QLocale().toString(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));

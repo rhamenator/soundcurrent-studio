@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>کاهش باس</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>باس به فرکانس‌های پایین وزن می‌دهد؛ وضوح جزئیات فرکانس‌های بالا را افزایش می‌دهد؛ فضای آکوستیکی بازتاب‌های اتاق را اضافه می‌کند؛ صدای فراگیر استریو را گسترش می‌دهد؛ تقویت پویا بخش‌های آرام‌تر را فشرده و تقویت می‌کند و سقفی برای قله‌ها دارد. تقویت ممکن است سطح خروجی را افزایش دهد.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>فرکانس باس</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>زبان آزمون با متن گسترش‌یافته</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>گسترش / فشرده‌سازی</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>یک پروفایل تجهیزات JSON لازم است. متن پاسخ را با دکمه وارد کردن پاسخ وارد کنید.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>اندازه کتابخانه بیش از 16 MiB است.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>محدودکننده</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>ویرایشگر پروفایل پاسخ سیستم باز شد. پروفایل‌های ذخیره‌شده در کتابخانه تجهیزات در دسترس هستند.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>بلندی صدای سیستم</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

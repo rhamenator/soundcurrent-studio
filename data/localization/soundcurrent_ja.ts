@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>低音カット</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>低音は低域の厚みを加え、明瞭さは高域の細部を強調し、アンビエンスは室内の反射を加え、サラウンドはステレオの広がりを増します。ダイナミックブーストはピーク上限を設けて圧縮し、小さな音を持ち上げます。ブーストにより出力レベルが上がることがあります。</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>低音の周波数</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>文字列を拡張するテスト言語</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>エキスパンション / コンプレッション</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON 形式の機器プロファイルが必要です。周波数特性のテキストは、周波数特性のインポートボタンから読み込んでください。</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>ライブラリが 16 MiB を超えています。</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>リミッター</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>システムの周波数特性プロファイルエディターを開きました。保存したプロファイルは機器ライブラリで利用できます。</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>システム音量</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

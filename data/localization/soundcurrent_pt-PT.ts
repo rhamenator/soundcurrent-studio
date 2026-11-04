@@ -471,10 +471,6 @@ Pretende eliminá-lo mesmo assim?</translation>
       <translation>Redução de graves</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Graves dá peso às baixas frequências; Clareza acrescenta detalhe às altas frequências; Ambiência acrescenta reflexões da sala; Surround alarga a imagem estéreo; Reforço dinâmico comprime e eleva o material mais silencioso com um limite de pico. O reforço pode aumentar o nível de saída.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Frequência dos graves</translation>
     </message>
@@ -1290,6 +1286,10 @@ Pretende eliminá-lo mesmo assim?</translation>
       <translation>Idioma de teste com texto expandido</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansão / compressão</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Era esperado um perfil de equipamento JSON. Importe texto de resposta com o botão de importação de resposta.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Pretende eliminá-lo mesmo assim?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>A biblioteca excede 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limitador</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Pretende eliminá-lo mesmo assim?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Editor do perfil de resposta do sistema aberto. Os perfis guardados estão disponíveis na biblioteca de equipamentos.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Volume do sistema</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

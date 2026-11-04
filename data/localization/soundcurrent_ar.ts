@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>خفض الجهير</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>يضيف الجهير وزنًا للترددات المنخفضة؛ يضيف الوضوح تفاصيل للترددات العالية؛ تضيف أجواء المكان انعكاسات الغرفة؛ يوسع الصوت المحيطي صورة الستيريو؛ يضغط التعزيز الديناميكي المقاطع الأخفض ويرفعها مع حد أقصى للقمم. قد يزيد التعزيز مستوى الخرج.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>تردد الجهير</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>لغة اختبار النص الموسع</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>توسيع / ضغط</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>المطلوب ملف تعريف معدات بصيغة JSON. استورد نص الاستجابة باستخدام زر استيراد الاستجابة.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>تتجاوز المكتبة 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>محدد الذروة</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>تم فتح محرر ملف تعريف استجابة النظام. تتوفر ملفات التعريف المحفوظة في مكتبة المعدات.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>مستوى صوت النظام</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

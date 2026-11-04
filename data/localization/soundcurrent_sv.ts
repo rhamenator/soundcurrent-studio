@@ -471,10 +471,6 @@ Vill du ta bort den ändå?</translation>
       <translation>Bassänkning</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas ger tyngd åt låga frekvenser; Klarhet ger detaljer i höga frekvenser; Rumskänsla ger rumsreflexer; Surround breddar stereon; Dynamisk förstärkning komprimerar och höjer tystare material med en toppgräns. Förstärkning kan höja utgångsnivån.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Basfrekvens</translation>
     </message>
@@ -1290,6 +1286,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Utökad testspråkvariant</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansion / kompression</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>En JSON-utrustningsprofil förväntas. Importera frekvensgångstext med knappen för import av frekvensgång.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Biblioteket överstiger 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Profilredigeraren för systemets frekvensgång har öppnats. Sparade profiler finns i utrustningsbiblioteket.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Systemvolym</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

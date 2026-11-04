@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>Ослабление басов</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Басы добавляют вес низким частотам; Чёткость добавляет высокочастотные детали; Атмосфера помещения добавляет отражения; Объёмный звук расширяет стерео; Динамическое усиление сжимает и усиливает более тихий материал с ограничением пиков. Усиление может увеличить выходной уровень.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Частота басов</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>Расширенный тестовый язык</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Экспандирование / компрессия</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Ожидается профиль оборудования в формате JSON. Импортируйте текст частотной характеристики кнопкой импорта характеристики.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Библиотека превышает 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Лимитер</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Редактор профиля характеристики системы открыт. Сохранённые профили доступны в библиотеке оборудования.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Системная громкость</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

@@ -471,10 +471,6 @@ Haluatko silti poistaa sen?</translation>
       <translation>Bassovaimennus</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Basso lisää matalien taajuuksien painoa; Selkeys lisää korkeiden taajuuksien yksityiskohtia; Tilavaikutelma lisää huoneheijastuksia; Surround leventää stereokuvaa; Dynaaminen vahvistus kompressoi ja nostaa hiljaisempaa ääntä huipputason ylärajan puitteissa. Korostus voi nostaa lähtötasoa.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Bassotaajuus</translation>
     </message>
@@ -1290,6 +1286,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Laajennettu testikieli</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Laajennus / kompressio</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Odotettiin JSON-laiteprofiilia. Tuo taajuusvasteteksti taajuusvasteen tuontipainikkeella.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Kirjasto on suurempi kuin 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Rajoitin</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Järjestelmän taajuusvasteprofiilin muokkain avattiin. Tallennetut profiilit ovat saatavilla laitekirjastossa.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Järjestelmän äänenvoimakkuus</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

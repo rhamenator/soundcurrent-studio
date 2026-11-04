@@ -5,17 +5,18 @@
 #include <cstddef>
 namespace soundcurrent {
 enum EffectParameter : std::size_t { Clarity, Ambience, Surround, DynamicBoost, BassBoost,
-    ClarityHz, BassHz, Decay, Damping, Width, Threshold, Ratio, Attack, Release, Makeup, Ceiling, EffectParameterCount };
+    ClarityHz, BassHz, Decay, Damping, Width, Threshold, Ratio, Attack, Release, Makeup, Ceiling, Limiter, EffectParameterCount };
 struct EffectParameterInfo { const char *name; double low, high, initial, step; const char *unit; };
 inline constexpr std::array<EffectParameterInfo,EffectParameterCount> effectParameters{{
     {"Clarity",0,1,0,.01,""},{"Ambience",0,1,0,.01,""},{"Surround Sound",0,1,0,.01,""},
-    {"Dynamic Boost",0,1,0,.01,""},{"Bass Boost",0,1,0,.01,""},
+    {"Dynamic Boost",-1,1,0,.01,""},{"Bass Boost",0,1,0,.01,""},
     {"Clarity frequency",1000,10000,3000,100," Hz"},{"Bass frequency",35,250,90,5," Hz"},
     {"Ambience decay",.1,5,1.2,.1," s"},{"Ambience damping",0,.95,.45,.05,""},
     {"Maximum stereo width",1,2,1.6,.05,"×"},{"Dynamics threshold",-48,-6,-24,1," dBFS"},
     {"Dynamics ratio",1,10,3,.1,":1"},{"Dynamics attack",1,100,10,1," ms"},
     {"Dynamics release",20,1000,180,10," ms"},{"Dynamics makeup",0,18,9,.5," dB"},
-    {"Dynamics ceiling",-12,-.1,-1,.1," dBFS"}
+    {"Dynamics ceiling",-12,-.1,-1,.1," dBFS"},
+    {"Limiter",0,1,0,1,""}
 }};
 struct EnhancementSettings {
     std::array<double,EffectParameterCount> values{};

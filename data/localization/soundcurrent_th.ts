@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>ลดเสียงเบส</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>เบสเพิ่มน้ำหนักเสียงความถี่ต่ำ ความชัดเพิ่มรายละเอียดความถี่สูง บรรยากาศเสียงเพิ่มเสียงสะท้อนในห้อง เซอร์ราวด์ขยายภาพเสียงสเตอริโอ Dynamic Boost บีบอัดและเพิ่มระดับเสียงที่เบาโดยจำกัดพีก การเพิ่มเสียงอาจทำให้ระดับเอาต์พุตสูงขึ้น</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>ความถี่เบส</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>ภาษาทดสอบข้อความขยาย</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>ขยาย / บีบอัดไดนามิก</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>ต้องเป็นโปรไฟล์อุปกรณ์ JSON นำเข้าข้อความการตอบสนองด้วยปุ่มนำเข้าการตอบสนอง</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>คลังมีขนาดเกิน 16 MiB</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>ลิมิตเตอร์</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>เปิดตัวแก้ไขโปรไฟล์การตอบสนองของระบบแล้ว โปรไฟล์ที่บันทึกมีอยู่ในคลังอุปกรณ์</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>ระดับเสียงระบบ</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

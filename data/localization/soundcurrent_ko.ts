@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>저음 감쇠</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>저음은 저역의 무게감을 더하고, 명료도는 고역의 세부를 강조하며, 앰비언스는 실내 반사음을 더하고, 서라운드는 스테레오 폭을 넓힙니다. 다이내믹 부스트는 피크 상한을 두고 압축하여 작은 소리를 키웁니다. 부스트로 인해 출력 레벨이 높아질 수 있습니다.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>저음 주파수</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>문자열 확장 테스트 언어</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>익스팬션 / 컴프레션</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON 장비 프로파일이 필요합니다. 주파수 응답 텍스트는 응답 가져오기 버튼으로 가져오세요.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>라이브러리가 16 MiB를 초과합니다.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>리미터</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>시스템 응답 프로파일 편집기를 열었습니다. 저장한 프로파일은 장비 라이브러리에서 사용할 수 있습니다.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>시스템 음량</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

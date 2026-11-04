@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>低音衰减</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>低音增加低频厚重感；清晰度增加高频细节；空间感添加房间反射；环绕扩展立体声宽度；动态增强压缩并提升较轻的声音，同时限制峰值上限。增强可能提高输出电平。</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>低音频率</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>扩展文本测试语言</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>扩展 / 压缩</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>需要 JSON 设备配置。请使用响应导入按钮导入响应文本。</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>资料库大小超过 16 MiB。</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>限幅器</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>已打开系统响应配置编辑器。保存的配置可在设备资料库中找到。</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>系统音量</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

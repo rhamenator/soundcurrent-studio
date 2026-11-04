@@ -471,10 +471,6 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Atténuation des basses</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Basses renforce les basses fréquences ; Clarté détaille les hautes fréquences ; Ambiance ajoute des réflexions de pièce ; Surround élargit la stéréo ; Renforcement dynamique compresse et rehausse les passages faibles avec un plafond de crête. Ces renforcements peuvent augmenter le niveau de sortie.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Fréquence des basses</translation>
     </message>
@@ -1290,6 +1286,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Langue de test avec texte étendu</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansion / compression</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Un profil d’équipement JSON est attendu. Importez un texte de réponse avec le bouton d’importation de réponse.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>La bibliothèque dépasse 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiteur</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Éditeur de profil de réponse du système ouvert. Les profils enregistrés sont disponibles dans la bibliothèque d’équipement.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Volume du système</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

@@ -471,10 +471,6 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Punguza besi</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Besi huongeza uzito wa masafa ya chini; Uwazi huongeza maelezo ya masafa ya juu; Mwangwi wa mazingira huongeza sauti zinazorudi kutoka chumbani; Surround hupanua stereo; Dynamic Boost hubana na kuongeza sauti hafifu huku ikiweka kikomo cha kilele. Kuongeza sauti kunaweza kuongeza kiwango cha tokeo.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Masafa ya besi</translation>
     </message>
@@ -1290,6 +1286,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Lugha ya majaribio yenye maandishi yaliyopanuliwa</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Upanuzi / mgandamizo</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Wasifu wa kifaa wa JSON unahitajika. Ingiza maandishi ya mwitikio kwa kutumia kitufe cha kuingiza mwitikio.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Maktaba inazidi 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Kidhibiti cha kilele</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Kihariri cha wasifu wa mwitikio wa mfumo kimefunguliwa. Wasifu uliohifadhiwa unapatikana katika maktaba ya vifaa.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Sauti ya mfumo</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

@@ -208,9 +208,22 @@ void safetyAndRouting() {
           "In-place channel swap is wrong");
 }
 }
+void linkedLimiter() {
+    using namespace soundcurrent;using namespace soundcurrent::studio;
+    EngineSettings s;s.channels.resize(8);s.automaticHeadroom=false;
+    s.enhancements.values[Limiter]=1;s.enhancements.values[Ceiling]=-6;s.postGainDb=12;
+    AudioEngine engine(48000,8);check(engine.configure(s),"output limiter configure");
+    std::array<float,8> frame{.1f,.2f,.3f,.4f,.5f,.6f,.7f,1.f};
+    const auto before=allocations.load();trackAllocations=true;engine.process(frame);trackAllocations=false;
+    check(allocations.load()==before,"output limiter allocated");
+    check(std::abs(frame[7]-.5011872f)<1e-6,"limiter failed after post gain/on non-front channel");
+    check(std::abs(frame[0]/frame[7]-.1f)<1e-6,"linked limiter changed channel ratios");
+    s.enhancements.values[Limiter]=0;engine.configure(s);frame.fill(.2f);engine.process(frame);
+    check(std::abs(frame[0]-.7962143f)<1e-6,"independent limiter bypass failed");
+}
 int main() {
     try {
-        enhancementIntegration(); identityAndBounds(); eqResponse(); delayAndLiveGain(); reverbAndBlocks(); safetyAndRouting();
+        linkedLimiter(); enhancementIntegration(); identityAndBounds(); eqResponse(); delayAndLiveGain(); reverbAndBlocks(); safetyAndRouting();
         std::puts("PASS: 1-256 channels, independent EQ/gain, delay/reverb tails, routing, planar/block equivalence, bounds and allocation-free processing");
         return 0;
     } catch (const std::exception &error) {

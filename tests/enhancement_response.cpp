@@ -35,9 +35,23 @@ int main(){try{
     for(int i=0;i<24000;++i){l=r=0;room.process(l,r);tail+=l*l+r*r;}require(tail>1e-5,"ambience has no tail");
     room.reset();l=r=0;room.process(l,r);require(l==0 && r==0,"reset retained tail");
     require(tone(DynamicBoost,1000,.02)>.02/std::sqrt(2)*2,"dynamic quiet boost absent");
-    StereoEnhancer limiter(48000);s={};s.values[DynamicBoost]=1;limiter.configure(s);
+    StereoEnhancer limiter(48000);s={};s.values[DynamicBoost]=1;s.values[Limiter]=1;limiter.configure(s);
     for(int i=0;i<24000;++i){l=r=4;limiter.process(l,r);require(std::isfinite(l) && std::abs(l)<=std::pow(10.,-.05)+1e-9,"dynamic ceiling failed");}
     s.values[Ceiling]=-6;limiter.configure(s);l=r=4;limiter.process(l,r);require(std::abs(l)<=.502,"ceiling update not immediate");
+    // Expansion reduces low-level material while leaving above-threshold
+    // material unchanged. Compression and expansion share one signed amount.
+    StereoEnhancer expander(48000);s={};s.values[DynamicBoost]=-1;expander.configure(s);
+    for(int i=0;i<24000;++i){l=r=.01;expander.process(l,r);}
+    require(l<.001,"downward expansion absent");
+    for(int i=0;i<24000;++i){l=r=.5;expander.process(l,r);}
+    require(std::abs(l-.5)<1e-9,"expansion changed above-threshold audio");
+    s.values[DynamicBoost]=0;expander.configure(s);
+    for(int i=0;i<2000;++i){l=r=.01;expander.process(l,r);}
+    require(l==.01,"center dynamics position is not neutral");
+    StereoEnhancer independent(48000);s={};s.values[Limiter]=1;independent.configure(s);
+    l=r=4;independent.process(l,r);require(l<=.892,"independent limiter failed at neutral dynamics");
+    s.values[Limiter]=0;independent.configure(s);l=r=4;independent.process(l,r);
+    require(l==4,"limiter bypass failed");
     StereoEnhancer a(48000),b(48000);s={};for(int i=0;i<5;++i)s.values[i]=.5;a.configure(s);b.configure(s);
     for(int i=0;i<48000;++i){l=.1*std::sin(i*.17);r=.08*std::cos(i*.23);double x=l,y=r;a.process(l,r);b.process(x,y);require(l==x && r==y,"determinism failed");}
     s={};a.configure(s);for(int i=0;i<2000;++i){l=r=0;a.process(l,r);}l=.21;r=-.12;a.process(l,r);require(l==.21 && r==-.12,"disabled amount did not settle to bypass");

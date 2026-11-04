@@ -9,7 +9,7 @@ bool EnhancementSettings::valid() const noexcept {
     for(std::size_t i=0;i<values.size();++i) if(!std::isfinite(values[i]) || values[i]<effectParameters[i].low || values[i]>effectParameters[i].high) return false;
     return true;
 }
-bool EnhancementSettings::active() const noexcept {for(std::size_t i=0;i<5;++i)if(values[i]>0)return true;return false;}
+bool EnhancementSettings::active() const noexcept {for(std::size_t i=0;i<5;++i)if(values[i]!=0)return true;return values[Limiter]>0;}
 StereoEnhancer::StereoEnhancer(int rate):rate_(rate),ramp_(1.0/(rate*.02)) {
     if(rate<8000 || rate>384000)throw std::invalid_argument("Unsupported enhancement sample rate");
     constexpr double seconds[]{.0297,.0371,.0411,.0437};
@@ -53,12 +53,20 @@ void StereoEnhancer::process(double &l,double &r,bool stereo) noexcept {
     const double peak=std::max(std::abs(x[0]),std::abs(x[1]));
     const double coefficient=peak>envelope_?attack_:release_;envelope_=coefficient*envelope_+(1-coefficient)*peak;
     if(envelope_<1e-30)envelope_=0;
-    if(amounts_[DynamicBoost]>0){
+    if(amounts_[DynamicBoost]!=0){
         const double db=20*std::log10(std::max(1e-12,envelope_));
         const double over=std::max(0.,db-target_.values[Threshold]);
         const double reduction=over*(1-1/target_.values[Ratio]);
-        const double gain=std::pow(10.,amounts_[DynamicBoost]*(target_.values[Makeup]-reduction)/20);
+        // Positive: legacy upward gain plus compression above threshold.
+        // Negative: downward expansion below threshold; never simultaneous.
+        const double below=std::max(0.,target_.values[Threshold]-db);
+        const double gainDb=amounts_[DynamicBoost]>0
+            ? amounts_[DynamicBoost]*(target_.values[Makeup]-reduction)
+            : amounts_[DynamicBoost]*below*(target_.values[Ratio]-1);
+        const double gain=std::pow(10.,gainDb/20);
         x[0]*=gain;x[1]*=gain;
+    }
+    if(target_.values[Limiter]>0){
         const double ceiling=std::pow(10.,target_.values[Ceiling]/20);
         const double required=std::min(1.,ceiling/std::max(1e-12,std::max(std::abs(x[0]),std::abs(x[1]))));
         limiter_=required<limiter_?required:release_*limiter_+(1-release_)*required;

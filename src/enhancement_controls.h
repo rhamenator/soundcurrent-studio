@@ -9,6 +9,7 @@
 #include <QDoubleSpinBox>
 #include <QPushButton>
 #include <QLabel>
+#include <QCheckBox>
 #include <QLocale>
 #include <QSignalBlocker>
 #include <functional>
@@ -19,18 +20,23 @@ public:
     explicit EnhancementControls(bool advanced,QWidget *parent=nullptr):QGroupBox(SC_TR("Sound enhancements"),parent) {
         auto *form=new QFormLayout(this);
         auto *help=new QLabel(advanced?SC_TR("Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement."):SC_TR("Zero turns each effect off. These listening effects apply to speaker playback, not microphone correction."));help->setWordWrap(true);form->addRow(help);
-        for(std::size_t i=0;i<5;++i){auto *row=new QHBoxLayout;sliders_[i]=new QSlider(Qt::Horizontal);sliders_[i]->setRange(0,100);sliders_[i]->setAccessibleName(soundcurrent::i18n::text(effectParameters[i].name));
-            labels_[i]=new QLabel(QLocale().toString(0)+QLocale().percent());labels_[i]->setObjectName(QString("enhancementValue%1").arg(i));sliders_[i]->setObjectName(QString("enhancementAmount%1").arg(i));labels_[i]->setMinimumWidth(42);row->addWidget(sliders_[i]);row->addWidget(labels_[i]);form->addRow(soundcurrent::i18n::text(effectParameters[i].name),row);
+        for(std::size_t i=0;i<5;++i){auto *row=new QHBoxLayout;sliders_[i]=new QSlider(Qt::Horizontal);sliders_[i]->setRange(i==DynamicBoost?-100:0,100);sliders_[i]->setAccessibleName(soundcurrent::i18n::text(effectParameters[i].name));
+            labels_[i]=new QLabel(QLocale().toString(0)+QLocale().percent());labels_[i]->setObjectName(QString("enhancementValue%1").arg(i));sliders_[i]->setObjectName(QString("enhancementAmount%1").arg(i));labels_[i]->setMinimumWidth(42);row->addWidget(sliders_[i]);row->addWidget(labels_[i]);form->addRow(i==DynamicBoost?SC_TR("Expansion / compression"):soundcurrent::i18n::text(effectParameters[i].name),row);
+            if(i==DynamicBoost) {sliders_[i]->setAccessibleName(SC_TR("Expansion / compression"));sliders_[i]->setTickPosition(QSlider::TicksBelow);sliders_[i]->setTickInterval(100);sliders_[i]->setToolTip(SC_TR("Expansion / compression"));}
             connect(sliders_[i],&QSlider::valueChanged,this,[this,i](int v){state_.values[i]=v/100.;labels_[i]->setText(QLocale().toString(v)+QLocale().percent());if(onEdited)onEdited();});}
+        limiter_=new QCheckBox(SC_TR("Limiter"));limiter_->setObjectName("enhancementLimiter");form->addRow(limiter_);
+        connect(limiter_,&QCheckBox::toggled,this,[this](bool on){state_.values[Limiter]=on?1:0;if(onEdited)onEdited();});
         if(advanced){auto *box=new QGroupBox(SC_TR("Advanced enhancement controls"));auto *f=new QFormLayout(box);
-            for(std::size_t i=5;i<EffectParameterCount;++i){const auto &p=effectParameters[i];spins_[i]=new soundcurrent::AcceleratingDoubleSpinBox;spins_[i]->setRange(p.low,p.high);spins_[i]->setDecimals(2);spins_[i]->setSingleStep(p.step);spins_[i]->setValue(p.initial);spins_[i]->setSuffix(p.unit);spins_[i]->setAccessibleName(soundcurrent::i18n::text(p.name));f->addRow(soundcurrent::i18n::text(p.name),spins_[i]);connect(spins_[i],&QDoubleSpinBox::valueChanged,this,[this,i](double v){state_.values[i]=v;if(onEdited)onEdited();});}form->addRow(box);box->setVisible(false);auto *show=new QPushButton(SC_TR("Show advanced controls"));show->setCheckable(true);form->insertRow(6,show);connect(show,&QPushButton::toggled,this,[box,show](bool on){box->setVisible(on);show->setText(on?SC_TR("Hide advanced controls"):SC_TR("Show advanced controls"));});}
+            for(std::size_t i=5;i<Limiter;++i){const auto &p=effectParameters[i];spins_[i]=new soundcurrent::AcceleratingDoubleSpinBox;spins_[i]->setRange(p.low,p.high);spins_[i]->setDecimals(2);spins_[i]->setSingleStep(p.step);spins_[i]->setValue(p.initial);spins_[i]->setSuffix(p.unit);spins_[i]->setAccessibleName(soundcurrent::i18n::text(p.name));f->addRow(soundcurrent::i18n::text(p.name),spins_[i]);connect(spins_[i],&QDoubleSpinBox::valueChanged,this,[this,i](double v){state_.values[i]=v;if(onEdited)onEdited();});}form->addRow(box);box->setVisible(false);auto *show=new QPushButton(SC_TR("Show advanced controls"));show->setCheckable(true);form->insertRow(6,show);connect(show,&QPushButton::toggled,this,[box,show](bool on){box->setVisible(on);show->setText(on?SC_TR("Hide advanced controls"):SC_TR("Show advanced controls"));});}
         auto *reset=new QPushButton(SC_TR("Reset enhancements"));form->addRow(reset);connect(reset,&QPushButton::clicked,this,[this]{setSettings({});if(onEdited)onEdited();});
-        setToolTip(SC_TR("Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level."));
+
+        // Dynamics help lives on its signed slider; the limiter is independent.
     }
     EnhancementSettings settings() const {return state_;}
-    void setSettings(const EnhancementSettings &s){if(!s.valid())return;state_=s;for(std::size_t i=0;i<5;++i){QSignalBlocker b(sliders_[i]);sliders_[i]->setValue(int(std::lround(s.values[i]*100)));labels_[i]->setText(QLocale().toString(sliders_[i]->value())+QLocale().percent());}for(std::size_t i=5;i<EffectParameterCount;++i)if(spins_[i]){QSignalBlocker b(spins_[i]);spins_[i]->setValue(s.values[i]);}}
+    void setSettings(const EnhancementSettings &s){if(!s.valid())return;state_=s;{QSignalBlocker b(limiter_);limiter_->setChecked(s.values[Limiter]>0);}for(std::size_t i=0;i<5;++i){QSignalBlocker b(sliders_[i]);sliders_[i]->setValue(int(std::lround(s.values[i]*100)));labels_[i]->setText(QLocale().toString(sliders_[i]->value())+QLocale().percent());}for(std::size_t i=5;i<EffectParameterCount;++i)if(spins_[i]){QSignalBlocker b(spins_[i]);spins_[i]->setValue(s.values[i]);}}
     std::function<void()> onEdited;
 private:
+    QCheckBox *limiter_=nullptr;
     EnhancementSettings state_;
     std::array<QSlider *,5> sliders_{};
     std::array<QLabel *,5> labels_{};

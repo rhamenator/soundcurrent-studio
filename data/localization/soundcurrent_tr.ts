@@ -471,10 +471,6 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Bas azaltma</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas düşük frekanslara ağırlık katar; Netlik yüksek frekans ayrıntıları ekler; Oda ambiyansı oda yansımaları ekler; Çevresel ses stereo alanını genişletir; Dinamik artırma daha sessiz içeriği sıkıştırıp tepe sınırıyla yükseltir. Artırma çıkış seviyesini yükseltebilir.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Bas frekansı</translation>
     </message>
@@ -1290,6 +1286,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Genişletilmiş test dili</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Genişletme / sıkıştırma</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON ekipman profili bekleniyor. Frekans yanıtı metnini yanıt aktarma düğmesiyle aktarın.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Kitaplık 16 MiB sınırını aşıyor.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Sınırlayıcı</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Sistem yanıt profili düzenleyicisi açıldı. Kaydedilen profiller ekipman kitaplığında bulunur.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Sistem ses düzeyi</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

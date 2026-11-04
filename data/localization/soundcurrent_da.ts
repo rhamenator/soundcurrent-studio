@@ -471,10 +471,6 @@ Vil du slette den alligevel?</translation>
       <translation>Basreduktion</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas giver vægt til lave frekvenser; Klarhed giver detaljer i høje frekvenser; Rumfornemmelse giver rumrefleksioner; Surround udvider stereoen; Dynamisk forstærkning komprimerer og hæver svagere materiale med en grænse for spidsniveau. Forstærkning kan hæve udgangsniveauet.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Basfrekvens</translation>
     </message>
@@ -1290,6 +1286,10 @@ Vil du slette den alligevel?</translation>
       <translation>Udvidet testsprog</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Ekspansion / kompression</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Der forventes en JSON-udstyrsprofil. Importér frekvensgangstekst med knappen til import af frekvensgang.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Biblioteket overstiger 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Profileditoren for systemets frekvensgang er åbnet. Gemte profiler findes i udstyrsbiblioteket.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Systemlydstyrke</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

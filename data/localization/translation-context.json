@@ -236,5 +236,8 @@
   "Measured listening position": "New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.",
   "Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2": "New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.",
   "SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.": "New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.",
-  "PipeWire stream failed": "Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved."
+  "PipeWire stream failed": "Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.",
+  "Expansion / compression": "Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.",
+  "Limiter": "Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.",
+  "System volume": "Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified."
 }

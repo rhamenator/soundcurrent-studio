@@ -471,10 +471,6 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Atenuare bas</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Basul adaugă greutate frecvențelor joase; Claritatea adaugă detalii frecvențelor înalte; Ambianța adaugă reflexii de cameră; Surround lărgește imaginea stereo; Amplificarea dinamică comprimă și ridică materialul mai încet, cu o limită superioară a vârfurilor. Amplificarea poate crește nivelul de ieșire.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Frecvență bas</translation>
     </message>
@@ -1290,6 +1286,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Limbă de test extinsă</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansiune / compresie</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Se aștepta un profil de echipament JSON. Importați textul răspunsului în frecvență folosind butonul de import al răspunsului.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Biblioteca depășește 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limitator</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Editorul profilului răspunsului sistemului a fost deschis. Profilurile salvate sunt disponibile în biblioteca de echipament.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Volumul sistemului</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

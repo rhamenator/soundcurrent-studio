@@ -471,10 +471,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Pengurangan bas</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas menambah bobot frekuensi rendah; Kejernihan menambah detail frekuensi tinggi; Ambiens menambah pantulan ruangan; Surround memperlebar stereo. Penguatan Dinamis mengompresi dan meningkatkan suara pelan dengan batas puncak. Penguatan dapat meningkatkan level keluaran.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Frekuensi bas</translation>
     </message>
@@ -1290,6 +1286,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Bahasa uji dengan teks diperpanjang</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Ekspansi / kompresi</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Diperlukan profil peralatan JSON. Impor teks respons menggunakan tombol impor respons.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Pustaka melebihi 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Pembatas</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Editor profil respons sistem dibuka. Profil yang disimpan tersedia di pustaka peralatan.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Volume sistem</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

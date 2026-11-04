@@ -471,10 +471,6 @@ Wilt u het toch verwijderen?</translation>
       <translation>Basvermindering</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas geeft gewicht aan lage frequenties; Helderheid voegt detail toe aan hoge frequenties; Ambiance voegt kamerreflecties toe; Surround verbreedt het stereobeeld; Dynamische versterking comprimeert en versterkt zachter materiaal met een pieklimiet. Versterking kan het uitgangsniveau verhogen.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Basfrequentie</translation>
     </message>
@@ -1290,6 +1286,10 @@ Wilt u het toch verwijderen?</translation>
       <translation>Testtaal met uitgerekte tekst</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansie / compressie</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Een JSON-apparatuurprofiel werd verwacht. Importeer responstekst met de knop voor responsimport.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Bibliotheek is groter dan 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Systeemresponsprofieleditor geopend. Opgeslagen profielen zijn beschikbaar in de apparatuurbibliotheek.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Systeemvolume</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

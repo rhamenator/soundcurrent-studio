@@ -471,10 +471,6 @@ Do you want to delete it anyway?</source>
       <translation>Послаблення басів</translation>
     </message>
     <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Баси додають ваги низьким частотам; Чіткість додає високочастотних деталей; Атмосфера приміщення додає відбиття; Об’ємний звук розширює стерео; Динамічне підсилення стискає й підсилює тихіший матеріал з обмеженням піків. Підсилення може збільшити вихідний рівень.</translation>
-    </message>
-    <message>
       <source>Bass frequency</source>
       <translation>Частота басів</translation>
     </message>
@@ -1290,6 +1286,10 @@ Do you want to delete it anyway?</source>
       <translation>Розширена тестова мова</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Експандування / компресія</translation>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Очікується профіль обладнання у форматі JSON. Імпортуйте текст частотної характеристики кнопкою імпорту характеристики.</translation>
     </message>
@@ -1830,6 +1830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Library exceeds 16 MiB.</source>
       <translation>Бібліотека перевищує 16 MiB.</translation>
+    </message>
+    <message>
+      <source>Limiter</source>
+      <translation>Лімітер</translation>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -3329,6 +3333,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System response profile editor opened. Saved profiles are available in the equipment library.</source>
       <translation>Редактор профілю характеристики системи відкрито. Збережені профілі доступні в бібліотеці обладнання.</translation>
+    </message>
+    <message>
+      <source>System volume</source>
+      <translation>Системна гучність</translation>
     </message>
     <message>
       <source>TV Dialogue</source>

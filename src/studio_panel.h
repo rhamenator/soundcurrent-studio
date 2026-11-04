@@ -19,6 +19,8 @@ class QPushButton;
 class QProgressBar;
 
 namespace soundcurrent::studio {
+class ChannelMeterView;
+class RoomBalancePad;
 class StudioPanel : public QWidget {
 public:
     explicit StudioPanel(bool persist, QWidget *parent = nullptr);
@@ -60,6 +62,10 @@ private:
     QSlider *trim_, *wetDelay_, *wetReverb_;
     QDoubleSpinBox *delayMs_, *feedback_, *decay_, *damping_, *filterHz_, *filterDb_, *filterQ_, *routeGain_, *tail_;
     QTableWidget *filters_, *routes_, *meters_;
+    QComboBox *meterBank_;
+    ChannelMeterView *meterView_;
+    RoomBalancePad *roomBalance_;
+    QWidget *roomBalanceBox_;
     QLabel *status_;
     QPushButton *undo_, *render_, *cancel_;
     QProgressBar *progress_;
