@@ -19,7 +19,7 @@ See [release qualification and remaining gaps](docs/release-readiness.md).
 
 ## Easy Linux installer
 
-[Download the Linux installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/v1.1.1/SoundCurrent-Studio-Linux-Installer.run). Save it, then run:
+[Download the Linux installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/v1.1.2/SoundCurrent-Studio-Linux-Installer.run). Save it, then run:
 
 ```bash
 bash ~/Downloads/SoundCurrent-Studio-Linux-Installer.run
@@ -27,7 +27,7 @@ bash ~/Downloads/SoundCurrent-Studio-Linux-Installer.run
 
 It identifies your distribution, verifies the selected package against a pinned SHA-256, and installs or updates through APT or DNF with administrator approval. Presets and profiles are retained; an application-menu icon is included. Use Quit before updating. GTK/KDE confirmation dialogs are used when Zenity or KDialog is available.
 
-The installer installs Studio 1.1.1, including the current profile library and editor. It supports Debian/Ubuntu derivatives with compatible Qt 6.4+ and glibc, Fedora 44+, and RHEL 10-compatible systems including Rocky/AlmaLinux 10. Dependency availability still depends on enabled distribution repositories. Unsupported distributions or architectures are reported; Arch and openSUSE packages are not provided yet. Use `--dry-run` to see its selection, or `--download-only` to save a verified package.
+The installer installs Studio 1.1.2, including the current profile library and editor. It supports Debian/Ubuntu derivatives with compatible Qt 6.4+ and glibc, Fedora 44+, and RHEL 10-compatible systems including Rocky/AlmaLinux 10. Dependency availability still depends on enabled distribution repositories. Unsupported distributions or architectures are reported; Arch and openSUSE packages are not provided yet. Use `--dry-run` to see its selection, or `--download-only` to save a verified package.
 
 
 For an offline installation, download the matching DEB or RPM from the same release and run:
@@ -40,10 +40,10 @@ The local package must match the same pinned SHA-256 as the online package. Depe
 
 To uninstall, Quit the app and remove its package with `sudo apt remove soundcurrent-studio` or `sudo dnf remove soundcurrent-studio`. Your personal presets and profiles are retained for reinstallation.
 
-## Download for Windows — 1.1.1
+## Download for Windows — 1.1.2
 
-- [Windows x64 installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/v1.1.1/SoundCurrent-Studio-1.1.1-windows-x64-setup.exe)
-- [Release notes, checksums and corresponding source](https://github.com/rhamenator/soundcurrent-studio/releases/tag/v1.1.1)
+- [Windows x64 installer](https://github.com/rhamenator/soundcurrent-studio/releases/download/v1.1.2/SoundCurrent-Studio-1.1.2-windows-x64-setup.exe)
+- [Release notes, checksums and corresponding source](https://github.com/rhamenator/soundcurrent-studio/releases/tag/v1.1.2)
 
 This Windows release uses the signed VB-CABLE route. The SoundCurrent app/installer remain unsigned; Windows security policies may warn or block them. Quit the running app before updating. Our native-driver code remains preserved for later signing.
 
@@ -83,6 +83,9 @@ source history, GPL-3.0-only license and third-party notices.
 
 The shared first-page EQ retains Flat as its default, 34 listening presets,
 5–31 editable bands, post gain (-60 to +12 dB in 0.5 dB steps), balance, colored FFT meters and peak markers.
+Post gain, balance and the overall meter stay visible below the tabs without
+scrolling. The EQ-style peak readout uses a reserved text area so changing
+levels and clipping warnings do not resize the display.
 Speaker/amplifier profiles, microphone EQ, quiet sweep calibration with a preview,
 automatic device selection, background operation and Quit are retained.
 

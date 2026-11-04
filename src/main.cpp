@@ -1851,7 +1851,17 @@ public:
         tabs_ = new QTabWidget;
         tabs_->setAccessibleName(SC_TR("Equalizer and configuration pages"));
         tabs_->addTab(scroll_, SC_TR("Equalizer"));
-        setCentralWidget(tabs_);
+        auto *shell = new QWidget;
+        auto *shellLayout = new QVBoxLayout(shell);
+        shellLayout->setContentsMargins(0, 0, 0, 0);
+        shellLayout->setSpacing(0);
+        shellLayout->addWidget(tabs_, 1);
+        setCentralWidget(shell);
+        auto *playbackBar = new QWidget;
+        playbackBar->setObjectName("persistentPlaybackControls");
+        auto *playbackLayout = new QVBoxLayout(playbackBar);
+        playbackLayout->setContentsMargins(12, 6, 12, 6);
+        shellLayout->addWidget(playbackBar);
         auto *container = new QWidget;
         auto *root = new QVBoxLayout(container);
         root->setContentsMargins(26, 22, 26, 24);
@@ -1939,10 +1949,11 @@ public:
         balanceValue_->setAccessibleName(SC_TR("Balance position"));
         balanceValue_->setText(soundcurrent::i18n::balancePositionText(balance_->value()));
         gainRow->addWidget(balanceValue_);
-        outputLayout->addLayout(gainRow);
+        playbackLayout->addLayout(gainRow);
         auto *meterRow = new QHBoxLayout;
         meterRow->addWidget(new QLabel(SC_TR("Overall output")));
         overallLevel_ = new OverallLevelMeter;
+        overallLevel_->setObjectName("overallOutputMeter");
         overallLevel_->setAccessibleName(SC_TR("Estimated overall output level"));
         overallLevel_->setToolTip(SC_TR("Estimated post-EQ output peak, including post gain and balance"));
         meterRow->addWidget(overallLevel_, 1);
@@ -1950,9 +1961,15 @@ public:
         peakStatus_ = new QLabel(SC_TR("Estimated peak: waiting for audio"));
         peakStatus_->setAccessibleName(SC_TR("Estimated output peak and clipping risk"));
         peakStatus_->setObjectName("peakStatus");
+        peakStatus_->setTextFormat(Qt::PlainText);
         peakStatus_->setWordWrap(true);
-        meterRow->addWidget(peakStatus_);
-        outputLayout->addLayout(meterRow);
+        // The readout must not negotiate the meter width or its own height as
+        // digits, warning text and font weight change during playback.
+        peakStatus_->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
+        reservePeakStatusSpace();
+        peakStatus_->installEventFilter(this);
+        playbackLayout->addLayout(meterRow);
+        playbackLayout->addWidget(peakStatus_);
         auto *refreshRow = new QHBoxLayout;
         refreshRow->addWidget(new QLabel(SC_TR("Level refresh")));
         levelRefresh_ = new soundcurrent::AcceleratingSpinBox;
@@ -2537,6 +2554,7 @@ public:
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override {
+        if (watched == peakStatus_ && event->type() == QEvent::FontChange) reservePeakStatusSpace();
         if (event->type() == QEvent::Wheel && scroll_) {
             auto *wheel = static_cast<QWheelEvent *>(event);
             if (wheel->angleDelta().y() || wheel->pixelDelta().y()) {
@@ -2578,6 +2596,45 @@ protected:
             return;
         }
         QMainWindow::closeEvent(event);
+    }
+
+public:
+    void selfTestPlaybackLayout() {
+        auto *bar = findChild<QWidget *>("persistentPlaybackControls");
+        if (!bar || !bar->isAncestorOf(outputGain_)) qFatal("Post gain is not in the persistent playback bar");
+        const auto oldSize = size();
+        const int oldTab = tabs_->currentIndex();
+        const QSignalBlocker blockPower(power_);
+        const bool oldPower = power_->isChecked();
+        power_->setChecked(true); // Blocked: exercise metering, never start audio.
+        for (const auto &size : {QSize(1050, 640), QSize(800, 600), QSize(640, 480)}) {
+            resize(size);
+            for (int page = 0; page < tabs_->count(); ++page) {
+                tabs_->setCurrentIndex(page);
+                QCoreApplication::processEvents();
+                const QRect gainRect(outputGain_->mapTo(this, QPoint()), outputGain_->size());
+                if (!outputGain_->isVisible() || !rect().contains(gainRect))
+                    qFatal("Post gain is inaccessible without scrolling");
+                const auto meterGeometry = overallLevel_->geometry();
+                const auto textGeometry = peakStatus_->geometry();
+                const auto gainGeometry = outputGain_->geometry();
+                for (double peak : {0.0, 0.000002, 0.01, 0.5, 0.95, 1.2, 0.0}) {
+                    showLevels({}, peak);
+                    QCoreApplication::processEvents();
+                    auto normalFont = peakStatus_->font(); normalFont.setBold(false);
+                    if (peakStatus_->height() < 2 * QFontMetrics(normalFont).lineSpacing())
+                        qFatal("Peak readout reserved height does not fit its font");
+                    if (overallLevel_->geometry() != meterGeometry || peakStatus_->geometry() != textGeometry ||
+                        outputGain_->geometry() != gainGeometry)
+                        qFatal("Peak label reflow moved the meter or volume slider");
+                }
+            }
+        }
+        power_->setChecked(oldPower);
+        showLevels({}, 0.0);
+        tabs_->setCurrentIndex(oldTab);
+        resize(oldSize);
+        QCoreApplication::processEvents();
     }
 
 private:
@@ -2981,6 +3038,14 @@ private:
         if (lockButton_->isChecked()) updateControlsLock();
     }
 
+    void reservePeakStatusSpace() {
+        auto normalFont = peakStatus_->font();
+        normalFont.setBold(false);
+        const int height = 2 * QFontMetrics(normalFont).lineSpacing() + 4;
+        if (peakStatus_->minimumHeight() != height || peakStatus_->maximumHeight() != height)
+            peakStatus_->setFixedHeight(height);
+    }
+
     void showLevels(const QVector<double> &levels, double peak) {
         const auto count = std::min(levels.size(), levelBars_.size());
         for (qsizetype i = 0; i < count; ++i) {
@@ -3011,6 +3076,7 @@ private:
             peakStatus_->setStyleSheet(db >= -1.0 ? "color:#f16b76;font-weight:700;"
                                                     : db >= -6.0 ? "color:#e6b450;" : "color:#50d1ba;");
         }
+        peakStatus_->setToolTip(peakStatus_->text());
     }
 
     void syncBandControls() {
@@ -3998,6 +4064,7 @@ int main(int argc, char **argv) {
         presets->setCurrentText("Flat");
         testWindow.show();
         app.processEvents();
+        testWindow.selfTestPlaybackLayout();
         if (auto *display = testWindow.screen()) {
             const auto available = display->availableGeometry();
             if (testWindow.width() > available.width() || testWindow.height() > available.height())
@@ -4117,13 +4184,13 @@ int main(int argc, char **argv) {
         if (!firstBandSlider()->isEnabled()) qFatal("Unlock did not restore editing");
         testWindow.show();
         app.processEvents();
-        auto *tabs = qobject_cast<QTabWidget *>(testWindow.centralWidget());
+        auto *tabs = testWindow.findChild<QTabWidget *>();
         if (!tabs || tabs->count() != 3 || tabs->currentIndex() != 0 || tabs->tabText(0) != "Equalizer")
             qFatal("Equalizer must be the first and initially selected tab");
         auto *outer = qobject_cast<QScrollArea *>(tabs->widget(0));
         auto *settingsPage = qobject_cast<QScrollArea *>(tabs->widget(2));
         if (!outer || !settingsPage || !outer->isAncestorOf(firstBandSlider()) ||
-            !outer->isAncestorOf(presets) || !outer->isAncestorOf(outputGain) ||
+            !outer->isAncestorOf(presets) || outer->isAncestorOf(outputGain) ||
             !settingsPage->isAncestorOf(speakers))
             qFatal("Equalizer and configuration controls are on the wrong tabs");
         auto *firstGroup = qobject_cast<QGroupBox *>(outer->widget()->layout()->itemAt(0)->widget());
@@ -4325,6 +4392,8 @@ int main(int argc, char **argv) {
         int sonyCount = 0;
         for (const auto &profile : speakerProfiles()) if (profile.name == "Sony SS-CS5") ++sonyCount;
         if (sonyCount != 1) qFatal("Expected one canonical Sony SS-CS5 profile");
+        window.show();
+        window.selfTestPlaybackLayout();
         auto *preset=window.findChild<QComboBox *>("localizedPresetSelector");
         if(!preset || preset->currentData().toString()!="Flat") qFatal("Localized preset lost its stable ID");
         for (auto *combo : window.findChildren<QComboBox *>())
