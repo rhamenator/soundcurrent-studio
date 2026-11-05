@@ -86,7 +86,7 @@ EngineSettings Session::effective(std::span<const EqBand> sharedBands, double ga
     for (std::size_t c = 0; c < result.channels.size(); ++c) {
         auto &channel = result.channels[c];
         require(channel.bands.size() + sharedBands.size() <= kMaxProcessingBands,
-                "Shared and channel EQ exceed 64 filters; remove some channel filters");
+                "Shared and channel EQ exceed 96 filters; remove some channel filters");
         channel.bands.insert(channel.bands.begin(), sharedBands.begin(), sharedBands.end());
         channel.muted = channel.muted || (anySolo && !solo[c]);
         if (result.channels.size() == 2 && ((c == 0 && balance > 0) || (c == 1 && balance < 0))) {

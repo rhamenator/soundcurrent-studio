@@ -195,8 +195,16 @@ Do you want to delete it anyway?</source>
       <translation>アクティブ / パッシブ / 不明</translation>
     </message>
     <message>
+      <source>Add a JSON profile to your saved library.</source>
+      <translation>JSONプロファイルを保存済みライブラリに追加します。</translation>
+    </message>
+    <message>
       <source>Add filter</source>
       <translation>フィルターを追加</translation>
+    </message>
+    <message>
+      <source>Add point</source>
+      <translation>点を追加</translation>
     </message>
     <message>
       <source>Adjust the output from -60 to +12 dB after the EQ. Higher gain can cause clipping.</source>
@@ -210,6 +218,10 @@ Do you want to delete it anyway?</source>
       <source>Adjustable system-wide equalizer for PipeWire</source>
       <translation>PipeWire 用の調整可能なシステム全体のイコライザー</translation>
       <extracomment>Linux launcher description. Adjustable EQ applies across system playback using PipeWire; not a claim of a new driver or automatic room correction. Preserve PipeWire product identity. Application name and launch command stay unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Advanced</source>
+      <translation>詳細設定</translation>
     </message>
     <message>
       <source>Advanced enhancement controls</source>
@@ -317,6 +329,10 @@ Do you want to delete it anyway?</source>
       <translation>アプリの更新</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>適用済み</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>適用</translation>
     </message>
@@ -349,8 +365,16 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Arrow keys adjust the selected point; Delete removes it.</source>
+      <translation>矢印キーで選択した点を調整し、Deleteキーで削除します。</translation>
+    </message>
+    <message>
       <source>Audio bridge did not start</source>
       <translation>オーディオブリッジを開始できませんでした</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>オーディオバッファー</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -399,6 +423,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>自動ヘッドルーム %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>自動</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -787,6 +815,10 @@ Do you want to delete it anyway?</source>
       <translation>閉じる</translation>
     </message>
     <message>
+      <source>Close the dialog; keep the applied correction.</source>
+      <translation>適用した補正を維持してダイアログを閉じます。</translation>
+    </message>
+    <message>
       <source>Column speaker</source>
       <translation>コラム型スピーカー</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
@@ -959,6 +991,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Create a new correction profile.</source>
+      <translation>新しい補正プロファイルを作成します。</translation>
+    </message>
+    <message>
       <source>Create new folder</source>
       <translation>新しいフォルダの作成</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1036,6 +1072,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
+      <source>Delete this saved custom profile.</source>
+      <translation>この保存済みカスタムプロファイルを削除します。</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>詳細表示</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1059,8 +1099,16 @@ Do you want to delete it anyway?</source>
       <translation>カーブ上の点をドラッグするか、下の選択したバンドを調整してください。</translation>
     </message>
     <message>
+      <source>Drag points to shape the correction. Double-click to add a point.</source>
+      <translation>点をドラッグして補正を調整します。ダブルクリックで点を追加できます。</translation>
+    </message>
+    <message>
       <source>Drain test playback</source>
       <translation>テスト再生の完了待ち</translation>
+    </message>
+    <message>
+      <source>Drawn corrections are listening adjustments, not equipment measurements.</source>
+      <translation>描いた補正は聴感上の調整であり、機器の測定結果ではありません。</translation>
     </message>
     <message>
       <source>Drive</source>
@@ -1115,6 +1163,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Edit / save copy</source>
       <translation>編集 / コピーを保存</translation>
+    </message>
+    <message>
+      <source>Edit a copy; keep the original unchanged.</source>
+      <translation>元の内容を変えずにコピーを編集します。</translation>
     </message>
     <message>
       <source>Effect preset</source>
@@ -1312,6 +1364,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export profile</source>
       <translation>プロファイルをエクスポート</translation>
+    </message>
+    <message>
+      <source>Export the selected profile to a JSON file.</source>
+      <translation>選択したプロファイルをJSONファイルに書き出します。</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -2098,6 +2154,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Move right for a broader adjustment.</source>
+      <translation>右へ動かすと調整の幅が広がります。</translation>
+    </message>
+    <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
       <translation>L または R 側に動かすと、反対側のチャンネルのレベルが下がります。中央では両方のレベルをそのまま維持します</translation>
     </message>
@@ -2308,10 +2368,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Cable setup launch progress. %1 is stable VB-CABLE name. Opening installer, not claim of successful installation.</extracomment>
     </message>
     <message>
-      <source>Orange: measured response where supplied. Teal: correction at 48 kHz. Drag teal control points or edit the table. Saving preserves the reference and creates a custom copy.</source>
-      <translation>オレンジ: 提供されている場合の測定周波数特性。青緑: 48 kHz での補正。青緑のコントロールポイントをドラッグするか、表を編集してください。保存すると参照データを保持したまま、カスタムコピーを作成します。</translation>
-    </message>
-    <message>
       <source>Outdoor speaker</source>
       <translation>屋外用スピーカー</translation>
       <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
@@ -2460,6 +2516,14 @@ Do you want to delete it anyway?</source>
       <translation>プリセット、EQ バンド、ポストゲイン、バランスの変更を防ぐ</translation>
     </message>
     <message>
+      <source>Preview</source>
+      <translation>試聴</translation>
+    </message>
+    <message>
+      <source>Preview is temporary. Closing the editor restores the previous correction.</source>
+      <translation>試聴は一時的です。エディターを閉じると元の補正に戻ります。</translation>
+    </message>
+    <message>
       <source>Profile</source>
       <translation>プロファイル</translation>
     </message>
@@ -2488,8 +2552,8 @@ Do you want to delete it anyway?</source>
       <translation>プロファイルは選択するとすぐに適用されます。</translation>
     </message>
     <message>
-      <source>Profiles need 1–16 correction filters.</source>
-      <translation>プロファイルには補正フィルターが 1～16 個必要です。</translation>
+      <source>Profiles need 1–32 correction filters.</source>
+      <translation>プロファイルには補正フィルターが 1～32 個必要です。</translation>
     </message>
     <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
@@ -2725,12 +2789,12 @@ Do you want to delete it anyway?</source>
       <translation>VB-CABLE を削除しますか？</translation>
     </message>
     <message>
-      <source>Remove selected</source>
-      <translation>選択項目を削除</translation>
+      <source>Remove point</source>
+      <translation>点を削除</translation>
     </message>
     <message>
-      <source>Remove selected filter</source>
-      <translation>選択したフィルターを削除</translation>
+      <source>Remove selected</source>
+      <translation>選択項目を削除</translation>
     </message>
     <message>
       <source>Remove selected route</source>
@@ -2907,6 +2971,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Save copy</source>
+      <translation>コピーを保存</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>変更したプロファイルを保存しますか？</translation>
     </message>
@@ -3044,9 +3112,8 @@ Do you want to delete it anyway?</source>
       <extracomment>Missing-driver installer notice (check exit 10). Signed means digitally signed installer software. Install Driver is the exact external button caption and remains English. Restart Windows before using EQ or cable settings. AI contextual review; native review unverified.</extracomment>
     </message>
     <message>
-      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
-      <translation>共通 EQ とチャンネル EQ の合計が 64 フィルターを超えています。チャンネルのフィルターを減らしてください</translation>
-      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+      <source>Shared and channel EQ exceed 96 filters; remove some channel filters</source>
+      <translation>共通 EQ とチャンネル EQ の合計が 96 フィルターを超えています。チャンネルのフィルターを減らしてください</translation>
     </message>
     <message>
       <source>Shared audio driver removal did not finish. This app was kept so you can retry. Quit any running SoundCurrent app, then retry uninstalling.</source>
@@ -3083,6 +3150,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>周波数ごとのレベルにピークマーカーを表示</translation>
+    </message>
+    <message>
+      <source>Show saved custom profiles only.</source>
+      <translation>保存済みのカスタムプロファイルだけを表示します。</translation>
     </message>
     <message>
       <source>Show size</source>
@@ -3137,6 +3208,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Small room</source>
       <translation>小さな部屋</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>バッファーを小さくすると遅延は減りますが、音割れが発生する場合があります。自動では Linux の既定値を維持し、Windows では 40 ms を要求します。デバイスが要求を調整する場合があります。適用すると動作中の音声が一時的に再起動します。</translation>
     </message>
     <message>
       <source>Soft Treble</source>
@@ -3520,6 +3595,14 @@ Do you want to delete it anyway?</source>
       <translation>イコライザーをオン</translation>
     </message>
     <message>
+      <source>Turn measured response data into a correction curve.</source>
+      <translation>測定した応答データから補正カーブを作成します。</translation>
+    </message>
+    <message>
+      <source>Turn on the equalizer or microphone EQ before previewing.</source>
+      <translation>試聴する前にイコライザーまたはマイクEQをオンにしてください。</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>リアルタイム処理に新しいチャンネル構成を適用する前に、再生をオフにしてください</translation>
     </message>
@@ -3587,8 +3670,8 @@ Do you want to delete it anyway?</source>
       <translation>ケーブルのチャンネル数はサポートされていません</translation>
     </message>
     <message>
-      <source>Unsupported equipment profile schema (expected 2).</source>
-      <translation>対応していない機器プロファイルのスキーマです（必要なバージョンは 2）。</translation>
+      <source>Unsupported equipment profile schema (expected 2/3).</source>
+      <translation>対応していない機器プロファイルのスキーマです（必要なバージョンは 2/3）。</translation>
     </message>
     <message>
       <source>Unsupported extensible WAVE subtype</source>
@@ -3650,13 +3733,12 @@ Do you want to delete it anyway?</source>
       <translation>システムの地域設定を使用</translation>
     </message>
     <message>
-      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
-      <translation>ユーザーがインポートした相対周波数応答です。使用前にマイクの向き / シリアル番号、またはスピーカーの測定条件を指定してください。</translation>
-      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+      <source>Use the selected profile for this equipment.</source>
+      <translation>この機器に選択したプロファイルを使用します。</translation>
     </message>
     <message>
-      <source>User-created correction; enter equipment and measurement conditions.</source>
-      <translation>ユーザー作成の補正です。機器と測定条件を入力してください。</translation>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>ユーザーがインポートした相対周波数応答です。使用前にマイクの向き / シリアル番号、またはスピーカーの測定条件を指定してください。</translation>
       <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
@@ -3769,6 +3851,10 @@ Do you want to delete it anyway?</source>
       <source>Whole listening system</source>
       <translation>リスニングシステム全体</translation>
       <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
+    </message>
+    <message>
+      <source>Width</source>
+      <translation>幅</translation>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "linux_audio.h"
+#include "audio_buffering.h"
 #include <pipewire/pipewire.h>
 #include <spa/param/audio/format-utils.h>
 #include <algorithm>
@@ -69,7 +70,7 @@ struct LinuxBridge::Impl {
 LinuxBridge::LinuxBridge():impl_(std::make_unique<Impl>()) {pw_init(nullptr,nullptr);}
 LinuxBridge::~LinuxBridge(){stop();}
 void LinuxBridge::start(const std::string &target,const std::string &sink,const std::string &output,
-                        const EngineSettings &settings,std::span<const double> matrix) {
+                        const EngineSettings &settings,std::span<const double> matrix,int bufferMs) {
     stop();auto &s=*impl_;s.n=settings.channels.size();
     if(!s.n||s.n>SPA_AUDIO_MAX_CHANNELS)throw std::runtime_error("PipeWire live streams support at most 64 channels; use offline rendering for larger layouts");
     s.engine=std::make_unique<AudioEngine>(48000,s.n);std::string error;
@@ -77,13 +78,14 @@ void LinuxBridge::start(const std::string &target,const std::string &sink,const 
     s.router=std::make_unique<ChannelRouter>(s.n,s.n);if(!s.router->setMatrix(matrix))throw std::runtime_error("Invalid Studio routing matrix");
     s.raw.resize(Impl::block*s.n);s.scratch.resize(s.raw.size());s.ring.assign(Impl::capacity*s.n,0.0f);s.peaks.assign(s.n,0.0f);s.read=s.write=s.queued=0;s.failure.clear();
     s.loop=pw_thread_loop_new("SoundCurrent Studio",nullptr);if(!s.loop)throw std::runtime_error("Cannot create PipeWire loop");
+    const auto latency = buffering::valid(bufferMs) && bufferMs > 0 ? std::to_string(bufferMs * 48) + "/48000" : "512/48000";
     auto *captureProps=pw_properties_new(PW_KEY_MEDIA_TYPE,"Audio",PW_KEY_MEDIA_CATEGORY,"Capture",PW_KEY_MEDIA_ROLE,"DSP",
         PW_KEY_NODE_NAME,sink.c_str(),PW_KEY_NODE_DESCRIPTION,"SoundCurrent Studio",PW_KEY_MEDIA_CLASS,"Audio/Sink",
-        PW_KEY_NODE_VIRTUAL,"true",PW_KEY_NODE_AUTOCONNECT,"false",PW_KEY_NODE_LATENCY,"512/48000",
+        PW_KEY_NODE_VIRTUAL,"true",PW_KEY_NODE_AUTOCONNECT,"false",PW_KEY_NODE_LATENCY,latency.c_str(),
         PW_KEY_NODE_GROUP,sink.c_str(),PW_KEY_NODE_LINK_GROUP,sink.c_str(),nullptr);
     auto *outputProps=pw_properties_new(PW_KEY_MEDIA_TYPE,"Audio",PW_KEY_MEDIA_CATEGORY,"Playback",PW_KEY_MEDIA_ROLE,"DSP",
         PW_KEY_NODE_NAME,output.c_str(),PW_KEY_TARGET_OBJECT,target.c_str(),PW_KEY_NODE_PASSIVE,"false",
-        "state.restore-props","false","state.default-volume","1.0",PW_KEY_NODE_LATENCY,"512/48000",
+        "state.restore-props","false","state.default-volume","1.0",PW_KEY_NODE_LATENCY,latency.c_str(),
         PW_KEY_NODE_GROUP,sink.c_str(),PW_KEY_NODE_LINK_GROUP,sink.c_str(),nullptr);
     s.capture=pw_stream_new_simple(pw_thread_loop_get_loop(s.loop),"Studio capture",captureProps,&Impl::events(false),&s);
     s.playback=pw_stream_new_simple(pw_thread_loop_get_loop(s.loop),"Studio playback",outputProps,&Impl::events(true),&s);

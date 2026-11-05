@@ -501,8 +501,16 @@ void StudioPanel::selfTest() {
     {
         StudioPanel production(false);
         production.session_=Session(2);production.rebuild();
-        if(production.monitoringAvailable() || production.showMeters_->isEnabled())qFatal("Production stereo monitoring button should be disabled");
-        production.showMonitoring();if(production.monitorDialog_->isVisible())qFatal("Production stereo dialog unexpectedly opened");
+        if(!production.monitoringAvailable() || !production.showMeters_->isEnabled())qFatal("Production stereo monitoring button should be enabled");
+        production.showMonitoring();QCoreApplication::processEvents();
+        if(!production.monitorDialog_->isVisible() || production.monitorDialog_->windowModality()!=Qt::ApplicationModal || production.stereoBalanceControls_->isHidden())qFatal("Production stereo monitoring lacks its modal balance dialog");
+        const std::array<float,2> stereoLevels{.2f,.4f};production.setLiveLevels(stereoLevels);
+        if(production.meterView_->levelForChannel(0)!=stereoLevels[0] || production.meterView_->levelForChannel(1)!=stereoLevels[1])qFatal("Production stereo meters did not receive live levels");
+        production.stereoBalance_->setValue(35);production.centerBalance_->click();
+        if(production.stereoBalance_->value()!=0 || !production.centerBalance_->isEnabled())qFatal("Production stereo balance reset failed");
+        production.monitorDialog_->hide();production.count_->setValue(1);
+        if(production.monitoringAvailable() || production.showMeters_->isEnabled())qFatal("Production mono monitoring button should be disabled");
+        production.showMonitoring();if(production.monitorDialog_->isVisible())qFatal("Production mono dialog unexpectedly opened");
         production.count_->setValue(6);
         if(!production.monitoringAvailable() || !production.showMeters_->isEnabled() || production.session_.offline)qFatal("Live multichannel layout should enable monitoring without staging");
     }

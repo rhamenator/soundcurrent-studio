@@ -121,8 +121,8 @@ with tempfile.TemporaryDirectory() as directory:
         assert digest == processing_digest, (tag, 'Locale changed rendered audio')
         output.unlink()
         # The inclusive boundary remains usable; it is not lowered by the alias.
-        for arguments in [(['--eq', '1:100:0:1'] * 64),
-                          (['--eq', '1:100:0:1'] * 33 + ['--lowpass', '1:100:1'] * 31)]:
+        for arguments in [(['--eq', '1:100:0:1'] * 96),
+                          (['--eq', '1:100:0:1'] * 49 + ['--lowpass', '1:100:1'] * 47)]:
             accepted = subprocess.run([renderer, '--language', tag, '--input', str(input_wave),
                                        '--output', str(output)] + arguments,
                                       capture_output=True, timeout=10)
@@ -135,9 +135,9 @@ with tempfile.TemporaryDirectory() as directory:
 
             assert output.exists()
             output.unlink()
-        # Same 64-filter per-channel limit for EQ alone and mixed filter types.
-        for arguments in [(['--eq', '1:100:0:1'] * 65),
-                          (['--eq', '1:100:0:1'] * 33 + ['--lowpass', '1:100:1'] * 32)]:
+        # Same 96-filter per-channel limit for EQ alone and mixed filter types.
+        for arguments in [(['--eq', '1:100:0:1'] * 97),
+                          (['--eq', '1:100:0:1'] * 49 + ['--lowpass', '1:100:1'] * 48)]:
             invalid = subprocess.run([renderer, '--language', tag, '--input', str(input_wave),
                                       '--output', str(output)] + arguments,
                                      capture_output=True, timeout=10)

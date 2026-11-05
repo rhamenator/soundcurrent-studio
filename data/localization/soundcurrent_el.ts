@@ -195,8 +195,16 @@ Do you want to delete it anyway?</source>
       <translation>Ενεργό / παθητικό / άγνωστο</translation>
     </message>
     <message>
+      <source>Add a JSON profile to your saved library.</source>
+      <translation>Προσθήκη προφίλ JSON στην αποθηκευμένη βιβλιοθήκη.</translation>
+    </message>
+    <message>
       <source>Add filter</source>
       <translation>Προσθήκη φίλτρου</translation>
+    </message>
+    <message>
+      <source>Add point</source>
+      <translation>Προσθήκη σημείου</translation>
     </message>
     <message>
       <source>Adjust the output from -60 to +12 dB after the EQ. Higher gain can cause clipping.</source>
@@ -210,6 +218,10 @@ Do you want to delete it anyway?</source>
       <source>Adjustable system-wide equalizer for PipeWire</source>
       <translation>Ρυθμιζόμενος ισοσταθμιστής για ολόκληρο το σύστημα με PipeWire</translation>
       <extracomment>Linux launcher description. Adjustable EQ applies across system playback using PipeWire; not a claim of a new driver or automatic room correction. Preserve PipeWire product identity. Application name and launch command stay unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Advanced</source>
+      <translation>Για προχωρημένους</translation>
     </message>
     <message>
       <source>Advanced enhancement controls</source>
@@ -317,6 +329,10 @@ Do you want to delete it anyway?</source>
       <translation>Ενημερώσεις εφαρμογής</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Εφαρμόστηκε</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Εφαρμογή</translation>
     </message>
@@ -349,8 +365,16 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Arrow keys adjust the selected point; Delete removes it.</source>
+      <translation>Τα βέλη ρυθμίζουν το επιλεγμένο σημείο· το Delete το αφαιρεί.</translation>
+    </message>
+    <message>
       <source>Audio bridge did not start</source>
       <translation>Η γέφυρα ήχου δεν ξεκίνησε</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Προσωρινή αποθήκευση ήχου</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -399,6 +423,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Αυτόματο περιθώριο %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Αυτόματα</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -787,6 +815,10 @@ Do you want to delete it anyway?</source>
       <translation>Κλείσιμο</translation>
     </message>
     <message>
+      <source>Close the dialog; keep the applied correction.</source>
+      <translation>Κλείσιμο του διαλόγου με διατήρηση της εφαρμοσμένης διόρθωσης.</translation>
+    </message>
+    <message>
       <source>Column speaker</source>
       <translation>Ηχείο στήλης για ηχητική κάλυψη</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
@@ -959,6 +991,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Create a new correction profile.</source>
+      <translation>Δημιουργία νέου προφίλ διόρθωσης.</translation>
+    </message>
+    <message>
       <source>Create new folder</source>
       <translation>Δημιουργία νέου φακέλου</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1036,6 +1072,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
     </message>
     <message>
+      <source>Delete this saved custom profile.</source>
+      <translation>Διαγραφή αυτού του αποθηκευμένου προσαρμοσμένου προφίλ.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Λεπτομερής προβολή</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1059,8 +1099,16 @@ Do you want to delete it anyway?</source>
       <translation>Σύρετε σημεία της καμπύλης ή ρυθμίστε την επιλεγμένη ζώνη παρακάτω.</translation>
     </message>
     <message>
+      <source>Drag points to shape the correction. Double-click to add a point.</source>
+      <translation>Σύρετε σημεία για να διαμορφώσετε τη διόρθωση. Με διπλό κλικ προσθέτετε σημείο.</translation>
+    </message>
+    <message>
       <source>Drain test playback</source>
       <translation>Ολοκλήρωση αναπαραγωγής δοκιμαστικού ήχου</translation>
+    </message>
+    <message>
+      <source>Drawn corrections are listening adjustments, not equipment measurements.</source>
+      <translation>Οι σχεδιασμένες διορθώσεις είναι ρυθμίσεις ακρόασης, όχι μετρήσεις εξοπλισμού.</translation>
     </message>
     <message>
       <source>Drive</source>
@@ -1115,6 +1163,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Edit / save copy</source>
       <translation>Επεξεργασία / αποθήκευση αντιγράφου</translation>
+    </message>
+    <message>
+      <source>Edit a copy; keep the original unchanged.</source>
+      <translation>Επεξεργασία αντιγράφου χωρίς αλλαγή του πρωτοτύπου.</translation>
     </message>
     <message>
       <source>Effect preset</source>
@@ -1312,6 +1364,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export profile</source>
       <translation>Εξαγωγή προφίλ</translation>
+    </message>
+    <message>
+      <source>Export the selected profile to a JSON file.</source>
+      <translation>Εξαγωγή του επιλεγμένου προφίλ σε αρχείο JSON.</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -2098,6 +2154,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Move right for a broader adjustment.</source>
+      <translation>Μετακινήστε δεξιά για ευρύτερη ρύθμιση.</translation>
+    </message>
+    <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
       <translation>Μετακινήστε προς L ή R για να μειώσετε το αντίθετο κανάλι· το κέντρο διατηρεί και τα δύο στην πλήρη στάθμη</translation>
     </message>
@@ -2308,10 +2368,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Cable setup launch progress. %1 is stable VB-CABLE name. Opening installer, not claim of successful installation.</extracomment>
     </message>
     <message>
-      <source>Orange: measured response where supplied. Teal: correction at 48 kHz. Drag teal control points or edit the table. Saving preserves the reference and creates a custom copy.</source>
-      <translation>Πορτοκαλί: μετρημένη απόκριση, όταν παρέχεται. Τιρκουάζ: διόρθωση στα 48 kHz. Σύρετε τα τιρκουάζ σημεία ή επεξεργαστείτε τον πίνακα. Η αποθήκευση διατηρεί το προφίλ αναφοράς και δημιουργεί προσαρμοσμένο αντίγραφο.</translation>
-    </message>
-    <message>
       <source>Outdoor speaker</source>
       <translation>Ηχείο εξωτερικού χώρου</translation>
       <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
@@ -2460,6 +2516,14 @@ Do you want to delete it anyway?</source>
       <translation>Αποτροπή αλλαγών σε προρυθμίσεις, ζώνες EQ, τελική ενίσχυση και ισορροπία</translation>
     </message>
     <message>
+      <source>Preview</source>
+      <translation>Προεπισκόπηση</translation>
+    </message>
+    <message>
+      <source>Preview is temporary. Closing the editor restores the previous correction.</source>
+      <translation>Η προεπισκόπηση είναι προσωρινή. Το κλείσιμο του επεξεργαστή επαναφέρει την προηγούμενη διόρθωση.</translation>
+    </message>
+    <message>
       <source>Profile</source>
       <translation>Προφίλ</translation>
     </message>
@@ -2488,8 +2552,8 @@ Do you want to delete it anyway?</source>
       <translation>Τα προφίλ εφαρμόζονται αμέσως μόλις επιλεγούν.</translation>
     </message>
     <message>
-      <source>Profiles need 1–16 correction filters.</source>
-      <translation>Τα προφίλ χρειάζονται 1–16 φίλτρα διόρθωσης.</translation>
+      <source>Profiles need 1–32 correction filters.</source>
+      <translation>Τα προφίλ χρειάζονται 1–32 φίλτρα διόρθωσης.</translation>
     </message>
     <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
@@ -2725,12 +2789,12 @@ Do you want to delete it anyway?</source>
       <translation>Αφαίρεση του VB-CABLE;</translation>
     </message>
     <message>
-      <source>Remove selected</source>
-      <translation>Αφαίρεση επιλεγμένων</translation>
+      <source>Remove point</source>
+      <translation>Αφαίρεση σημείου</translation>
     </message>
     <message>
-      <source>Remove selected filter</source>
-      <translation>Αφαίρεση επιλεγμένου φίλτρου</translation>
+      <source>Remove selected</source>
+      <translation>Αφαίρεση επιλεγμένων</translation>
     </message>
     <message>
       <source>Remove selected route</source>
@@ -2907,6 +2971,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Save copy</source>
+      <translation>Αποθήκευση αντιγράφου</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>Αποθήκευση τροποποιημένου προφίλ;</translation>
     </message>
@@ -3044,9 +3112,8 @@ Do you want to delete it anyway?</source>
       <extracomment>Missing-driver installer notice (check exit 10). Signed means digitally signed installer software. Install Driver is the exact external button caption and remains English. Restart Windows before using EQ or cable settings. AI contextual review; native review unverified.</extracomment>
     </message>
     <message>
-      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
-      <translation>Το κοινό EQ και το EQ καναλιού υπερβαίνουν τα 64 φίλτρα· αφαιρέστε μερικά φίλτρα καναλιού</translation>
-      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+      <source>Shared and channel EQ exceed 96 filters; remove some channel filters</source>
+      <translation>Το κοινό EQ και το EQ καναλιού υπερβαίνουν τα 96 φίλτρα· αφαιρέστε μερικά φίλτρα καναλιού</translation>
     </message>
     <message>
       <source>Shared audio driver removal did not finish. This app was kept so you can retry. Quit any running SoundCurrent app, then retry uninstalling.</source>
@@ -3083,6 +3150,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Εμφάνιση δεικτών κορυφών στις ενδείξεις συχνότητας</translation>
+    </message>
+    <message>
+      <source>Show saved custom profiles only.</source>
+      <translation>Εμφάνιση μόνο αποθηκευμένων προσαρμοσμένων προφίλ.</translation>
     </message>
     <message>
       <source>Show size</source>
@@ -3137,6 +3208,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Small room</source>
       <translation>Μικρός χώρος</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Μικρότερα buffer μειώνουν την καθυστέρηση αλλά μπορεί να προκαλέσουν τριξίματα. Η αυτόματη ρύθμιση διατηρεί τις προεπιλογές Linux και ζητά 40 ms στα Windows. Οι συσκευές μπορεί να προσαρμόσουν το αίτημα. Η εφαρμογή επανεκκινεί για λίγο τον ενεργό ήχο.</translation>
     </message>
     <message>
       <source>Soft Treble</source>
@@ -3520,6 +3595,14 @@ Do you want to delete it anyway?</source>
       <translation>Ενεργοποίηση ισοσταθμιστή</translation>
     </message>
     <message>
+      <source>Turn measured response data into a correction curve.</source>
+      <translation>Μετατροπή μετρημένης απόκρισης σε καμπύλη διόρθωσης.</translation>
+    </message>
+    <message>
+      <source>Turn on the equalizer or microphone EQ before previewing.</source>
+      <translation>Ενεργοποιήστε τον ισοσταθμιστή ή το EQ μικροφώνου πριν από την προεπισκόπηση.</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>Απενεργοποιήστε την αναπαραγωγή πριν εφαρμόσετε νέα διάταξη καναλιών για επεξεργασία σε πραγματικό χρόνο</translation>
     </message>
@@ -3587,8 +3670,8 @@ Do you want to delete it anyway?</source>
       <translation>Μη υποστηριζόμενος αριθμός καναλιών καλωδίου</translation>
     </message>
     <message>
-      <source>Unsupported equipment profile schema (expected 2).</source>
-      <translation>Μη υποστηριζόμενο σχήμα προφίλ εξοπλισμού (αναμένεται 2).</translation>
+      <source>Unsupported equipment profile schema (expected 2/3).</source>
+      <translation>Μη υποστηριζόμενο σχήμα προφίλ εξοπλισμού (αναμένεται 2/3).</translation>
     </message>
     <message>
       <source>Unsupported extensible WAVE subtype</source>
@@ -3650,13 +3733,12 @@ Do you want to delete it anyway?</source>
       <translation>Χρήση τοπικών ρυθμίσεων συστήματος</translation>
     </message>
     <message>
-      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
-      <translation>Σχετική απόκριση συχνότητας που εισήγαγε ο χρήστης· πριν από τη χρήση δηλώστε τον προσανατολισμό / σειριακό αριθμό του μικροφώνου ή τις συνθήκες μέτρησης του ηχείου.</translation>
-      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
+      <source>Use the selected profile for this equipment.</source>
+      <translation>Χρήση του επιλεγμένου προφίλ για αυτόν τον εξοπλισμό.</translation>
     </message>
     <message>
-      <source>User-created correction; enter equipment and measurement conditions.</source>
-      <translation>Διόρθωση που δημιούργησε ο χρήστης· εισαγάγετε τον εξοπλισμό και τις συνθήκες μέτρησης.</translation>
+      <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
+      <translation>Σχετική απόκριση συχνότητας που εισήγαγε ο χρήστης· πριν από τη χρήση δηλώστε τον προσανατολισμό / σειριακό αριθμό του μικροφώνου ή τις συνθήκες μέτρησης του ηχείου.</translation>
       <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
@@ -3769,6 +3851,10 @@ Do you want to delete it anyway?</source>
       <source>Whole listening system</source>
       <translation>Ολόκληρο το σύστημα ακρόασης</translation>
       <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
+    </message>
+    <message>
+      <source>Width</source>
+      <translation>Πλάτος</translation>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>
