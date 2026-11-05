@@ -33,7 +33,7 @@ public:
     void undo();
     void setLiveLevels(std::span<const float>);
     void showMonitoring();
-    bool monitoringAvailable() const { return testControls_ || session_.engine.channels.size()>2; }
+    bool monitoringAvailable() const { return testControls_ || session_.engine.channels.size()>1; }
     std::function<void(int)> onStereoBalanceChanged;
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();

@@ -90,9 +90,9 @@ configuration without changing the current playback.
 
 Channel meters opens an application-modal, scrollable dialog sized to its contents
 and available display. Close it before changing channel layout. In production the
-same button is disabled for mono/stereo and enabled for multichannel layouts.
-Launch with `--test-controls` (or `--preview`) to enable mono/stereo dialog testing.
-Stereo test mode includes a balance slider synchronized with the always-visible
+same button is enabled for stereo and multichannel layouts, and visibly dimmed
+when disabled for mono. Launch with `--test-controls` (or `--preview`) to enable
+mono dialog testing. Stereo includes a balance slider synchronized with the always-visible
 balance slider. Center stays enabled when already centered and resets the slider;
 in surround it resets the room-control dot. Mono hides balance controls.
 Stereo consistently labels

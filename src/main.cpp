@@ -4152,6 +4152,8 @@ int main(int argc, char **argv) {
                                 border-radius: 7px; padding: 7px 10px; }
         QPushButton:hover, QComboBox:hover { background: #385572; }
         QPushButton:checked { background: #1f746e; border-color: #55d7c3; }
+        QPushButton#showChannelMeters:disabled, QPushButton#studioShowMeters:disabled { background: #1b2736; color: #7b8798;
+                                               border-color: #334357; }
         QComboBox QAbstractItemView { background: #26374d; selection-background-color: #2c9d91; }
         QSlider::groove:vertical { background: #344762; width: 7px; border-radius: 3px; }
         QSlider::handle:vertical { background: #eafbf7; height: 16px; margin: 0 -6px; border-radius: 8px; }
