@@ -195,6 +195,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Aktivní / pasivní / neznámý</translation>
     </message>
     <message>
+      <source>Add a JSON profile to your saved library.</source>
+      <translation>Přidat profil JSON do uložené knihovny.</translation>
+    </message>
+    <message>
       <source>Add filter</source>
       <translation>Přidat filtr</translation>
     </message>
@@ -787,6 +791,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Zavřít</translation>
     </message>
     <message>
+      <source>Close the dialog; keep the applied correction.</source>
+      <translation>Zavřít dialog a zachovat použitou korekci.</translation>
+    </message>
+    <message>
       <source>Column speaker</source>
       <translation>Sloupový reproduktor pro ozvučení</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
@@ -959,6 +967,10 @@ Přesto chcete soubor smazat?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Create a new correction profile.</source>
+      <translation>Vytvořit nový korekční profil.</translation>
+    </message>
+    <message>
       <source>Create new folder</source>
       <translation>Vytvořit novou složku</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1034,6 +1046,10 @@ Přesto chcete soubor smazat?</translation>
       <source>Delete</source>
       <translation>Odstranit</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
+      <source>Delete this saved custom profile.</source>
+      <translation>Smazat tento uložený vlastní profil.</translation>
     </message>
     <message>
       <source>Detail view</source>
@@ -1115,6 +1131,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Edit / save copy</source>
       <translation>Upravit / uložit kopii</translation>
+    </message>
+    <message>
+      <source>Edit a copy; keep the original unchanged.</source>
+      <translation>Upravit kopii a ponechat originál beze změny.</translation>
     </message>
     <message>
       <source>Effect preset</source>
@@ -1312,6 +1332,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Export profile</source>
       <translation>Exportovat profil</translation>
+    </message>
+    <message>
+      <source>Export the selected profile to a JSON file.</source>
+      <translation>Exportovat vybraný profil do souboru JSON.</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -3085,6 +3109,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Zobrazit značky špiček frekvenčních úrovní</translation>
     </message>
     <message>
+      <source>Show saved custom profiles only.</source>
+      <translation>Zobrazit pouze uložené vlastní profily.</translation>
+    </message>
+    <message>
       <source>Show size</source>
       <translation>Zobrazit velikost</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -3520,6 +3548,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Zapnout ekvalizér</translation>
     </message>
     <message>
+      <source>Turn measured response data into a correction curve.</source>
+      <translation>Převést naměřenou odezvu na korekční křivku.</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>Před použitím nového rozložení kanálů pro živé zpracování vypněte přehrávání</translation>
     </message>
@@ -3648,6 +3680,10 @@ Přesto chcete soubor smazat?</translation>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
       <translation>Použít místní nastavení systému</translation>
+    </message>
+    <message>
+      <source>Use the selected profile for this equipment.</source>
+      <translation>Použít vybraný profil pro toto zařízení.</translation>
     </message>
     <message>
       <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>

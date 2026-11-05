@@ -195,6 +195,10 @@ Do you want to delete it anyway?</source>
       <translation>主動式 / 被動式 / 未知</translation>
     </message>
     <message>
+      <source>Add a JSON profile to your saved library.</source>
+      <translation>將 JSON 設定檔加入已儲存的資料庫。</translation>
+    </message>
+    <message>
       <source>Add filter</source>
       <translation>新增濾波器</translation>
     </message>
@@ -787,6 +791,10 @@ Do you want to delete it anyway?</source>
       <translation>關閉</translation>
     </message>
     <message>
+      <source>Close the dialog; keep the applied correction.</source>
+      <translation>關閉對話框，保留已套用的校正。</translation>
+    </message>
+    <message>
       <source>Column speaker</source>
       <translation>聲柱喇叭</translation>
       <extracomment>Column-format speaker for sound reinforcement, distinct from the floorstanding home speaker category.</extracomment>
@@ -959,6 +967,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Create a new correction profile.</source>
+      <translation>建立新的校正設定檔。</translation>
+    </message>
+    <message>
       <source>Create new folder</source>
       <translation>建立新資料夾</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1034,6 +1046,10 @@ Do you want to delete it anyway?</source>
       <source>Delete</source>
       <translation>刪除</translation>
       <extracomment>Qt text-editing context-menu action; operates on text selection and clipboard, not files or audio processing.</extracomment>
+    </message>
+    <message>
+      <source>Delete this saved custom profile.</source>
+      <translation>刪除此已儲存的自訂設定檔。</translation>
     </message>
     <message>
       <source>Detail view</source>
@@ -1115,6 +1131,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Edit / save copy</source>
       <translation>編輯 / 儲存副本</translation>
+    </message>
+    <message>
+      <source>Edit a copy; keep the original unchanged.</source>
+      <translation>編輯副本，保留原始檔不變。</translation>
     </message>
     <message>
       <source>Effect preset</source>
@@ -1312,6 +1332,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export profile</source>
       <translation>匯出設定檔</translation>
+    </message>
+    <message>
+      <source>Export the selected profile to a JSON file.</source>
+      <translation>將選取的設定檔匯出為 JSON 檔案。</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -3085,6 +3109,10 @@ Do you want to delete it anyway?</source>
       <translation>在頻率位準上顯示峰值標記</translation>
     </message>
     <message>
+      <source>Show saved custom profiles only.</source>
+      <translation>僅顯示已儲存的自訂設定檔。</translation>
+    </message>
+    <message>
       <source>Show size</source>
       <translation>顯示大小</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -3520,6 +3548,10 @@ Do you want to delete it anyway?</source>
       <translation>開啟等化器</translation>
     </message>
     <message>
+      <source>Turn measured response data into a correction curve.</source>
+      <translation>將量測的響應資料轉換為校正曲線。</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>套用新的即時聲道配置前，請關閉播放</translation>
     </message>
@@ -3648,6 +3680,10 @@ Do you want to delete it anyway?</source>
       <source>Use system locale</source>
       <extracomment>Use the operating system regional number/date formatting settings; independent of interface language.</extracomment>
       <translation>使用系統區域設定</translation>
+    </message>
+    <message>
+      <source>Use the selected profile for this equipment.</source>
+      <translation>為此設備使用選取的設定檔。</translation>
     </message>
     <message>
       <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>

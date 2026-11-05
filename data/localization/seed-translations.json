@@ -162,7 +162,16 @@
     "Invalid input gain",
     "Changes apply immediately",
     "Meters show live playback",
-    "Live layout differs from staged layout"
+    "Live layout differs from staged layout",
+    "Add a JSON profile to your saved library.",
+    "Turn measured response data into a correction curve.",
+    "Create a new correction profile.",
+    "Edit a copy; keep the original unchanged.",
+    "Export the selected profile to a JSON file.",
+    "Use the selected profile for this equipment.",
+    "Delete this saved custom profile.",
+    "Show saved custom profiles only.",
+    "Close the dialog; keep the applied correction."
   ],
   "languages": {
     "de": [
@@ -329,7 +338,16 @@
       "Ungültige Eingangsverstärkung",
       "Änderungen werden sofort wirksam",
       "Pegelanzeigen zeigen die laufende Wiedergabe",
-      "Das aktive Layout unterscheidet sich vom vorbereiteten Layout"
+      "Das aktive Layout unterscheidet sich vom vorbereiteten Layout",
+      "Ein JSON-Profil zur gespeicherten Bibliothek hinzufügen.",
+      "Gemessene Frequenzgangdaten in eine Korrekturkurve umwandeln.",
+      "Ein neues Korrekturprofil erstellen.",
+      "Eine Kopie bearbeiten; das Original bleibt unverändert.",
+      "Das ausgewählte Profil als JSON-Datei exportieren.",
+      "Das ausgewählte Profil für dieses Gerät verwenden.",
+      "Dieses gespeicherte benutzerdefinierte Profil löschen.",
+      "Nur gespeicherte benutzerdefinierte Profile anzeigen.",
+      "Dialog schließen; die angewendete Korrektur bleibt aktiv."
     ],
     "fr": [
       "Français",
@@ -495,7 +513,16 @@
       "Gain d’entrée non valide",
       "Les modifications s’appliquent immédiatement",
       "Les indicateurs affichent la lecture en cours",
-      "La disposition active diffère de la disposition préparée"
+      "La disposition active diffère de la disposition préparée",
+      "Ajouter un profil JSON à la bibliothèque enregistrée.",
+      "Convertir les mesures de réponse en courbe de correction.",
+      "Créer un nouveau profil de correction.",
+      "Modifier une copie sans changer l’original.",
+      "Exporter le profil sélectionné dans un fichier JSON.",
+      "Utiliser le profil sélectionné pour cet équipement.",
+      "Supprimer ce profil personnalisé enregistré.",
+      "Afficher uniquement les profils personnalisés enregistrés.",
+      "Fermer la fenêtre en conservant la correction appliquée."
     ],
     "es": [
       "Español",
@@ -661,7 +688,16 @@
       "Ganancia de entrada no válida",
       "Los cambios se aplican inmediatamente",
       "Los medidores muestran la reproducción en directo",
-      "La disposición activa difiere de la preparada"
+      "La disposición activa difiere de la preparada",
+      "Añadir un perfil JSON a la biblioteca guardada.",
+      "Convertir los datos de respuesta medidos en una curva de corrección.",
+      "Crear un nuevo perfil de corrección.",
+      "Editar una copia sin cambiar el original.",
+      "Exportar el perfil seleccionado a un archivo JSON.",
+      "Usar el perfil seleccionado para este equipo.",
+      "Eliminar este perfil personalizado guardado.",
+      "Mostrar solo los perfiles personalizados guardados.",
+      "Cerrar el diálogo y mantener la corrección aplicada."
     ],
     "it": [
       "Italiano",
@@ -827,7 +863,16 @@
       "Guadagno di ingresso non valido",
       "Le modifiche si applicano immediatamente",
       "I misuratori mostrano la riproduzione in corso",
-      "La disposizione attiva è diversa da quella preparata"
+      "La disposizione attiva è diversa da quella preparata",
+      "Aggiungi un profilo JSON alla libreria salvata.",
+      "Converti i dati di risposta misurati in una curva di correzione.",
+      "Crea un nuovo profilo di correzione.",
+      "Modifica una copia senza cambiare l’originale.",
+      "Esporta il profilo selezionato in un file JSON.",
+      "Usa il profilo selezionato per questa apparecchiatura.",
+      "Elimina questo profilo personalizzato salvato.",
+      "Mostra solo i profili personalizzati salvati.",
+      "Chiudi la finestra mantenendo la correzione applicata."
     ],
     "pt-PT": [
       "Português (Portugal)",
@@ -993,7 +1038,16 @@
       "Ganho de entrada inválido",
       "As alterações são aplicadas imediatamente",
       "Os medidores mostram a reprodução atual",
-      "A disposição ativa difere da disposição preparada"
+      "A disposição ativa difere da disposição preparada",
+      "Adicionar um perfil JSON à biblioteca guardada.",
+      "Converter os dados de resposta medidos numa curva de correção.",
+      "Criar um novo perfil de correção.",
+      "Editar uma cópia sem alterar o original.",
+      "Exportar o perfil selecionado para um ficheiro JSON.",
+      "Utilizar o perfil selecionado para este equipamento.",
+      "Eliminar este perfil personalizado guardado.",
+      "Mostrar apenas perfis personalizados guardados.",
+      "Fechar a janela e manter a correção aplicada."
     ],
     "pt-BR": [
       "Português (Brasil)",
@@ -1159,7 +1213,16 @@
       "Ganho de entrada inválido",
       "As alterações são aplicadas imediatamente",
       "Os medidores mostram a reprodução atual",
-      "A disposição ativa difere da disposição preparada"
+      "A disposição ativa difere da disposição preparada",
+      "Adicionar um perfil JSON à biblioteca salva.",
+      "Converter os dados de resposta medidos em uma curva de correção.",
+      "Criar um novo perfil de correção.",
+      "Editar uma cópia sem alterar o original.",
+      "Exportar o perfil selecionado para um arquivo JSON.",
+      "Usar o perfil selecionado para este equipamento.",
+      "Excluir este perfil personalizado salvo.",
+      "Mostrar apenas perfis personalizados salvos.",
+      "Fechar a janela e manter a correção aplicada."
     ],
     "nl": [
       "Nederlands",
@@ -1325,7 +1388,16 @@
       "Ongeldige ingangsversterking",
       "Wijzigingen worden direct toegepast",
       "Meters tonen de huidige weergave",
-      "De actieve indeling verschilt van de voorbereide indeling"
+      "De actieve indeling verschilt van de voorbereide indeling",
+      "Voeg een JSON-profiel toe aan de opgeslagen bibliotheek.",
+      "Zet gemeten responsgegevens om in een correctiecurve.",
+      "Maak een nieuw correctieprofiel.",
+      "Bewerk een kopie; het origineel blijft ongewijzigd.",
+      "Exporteer het geselecteerde profiel naar een JSON-bestand.",
+      "Gebruik het geselecteerde profiel voor dit apparaat.",
+      "Verwijder dit opgeslagen aangepaste profiel.",
+      "Toon alleen opgeslagen aangepaste profielen.",
+      "Sluit het venster; de toegepaste correctie blijft actief."
     ],
     "pl": [
       "Polski",
@@ -1491,7 +1563,16 @@
       "Nieprawidłowe wzmocnienie wejściowe",
       "Zmiany są stosowane natychmiast",
       "Mierniki pokazują bieżące odtwarzanie",
-      "Aktywny układ różni się od przygotowanego układu"
+      "Aktywny układ różni się od przygotowanego układu",
+      "Dodaj profil JSON do zapisanej biblioteki.",
+      "Przekształć zmierzoną charakterystykę w krzywą korekcji.",
+      "Utwórz nowy profil korekcji.",
+      "Edytuj kopię, zachowując oryginał bez zmian.",
+      "Eksportuj wybrany profil do pliku JSON.",
+      "Użyj wybranego profilu dla tego urządzenia.",
+      "Usuń ten zapisany profil własny.",
+      "Pokaż tylko zapisane profile własne.",
+      "Zamknij okno, zachowując zastosowaną korekcję."
     ],
     "cs": [
       "Čeština",
@@ -1657,7 +1738,16 @@
       "Neplatné vstupní zesílení",
       "Změny se projeví okamžitě",
       "Měřiče zobrazují aktuální přehrávání",
-      "Aktivní rozložení se liší od připraveného rozložení"
+      "Aktivní rozložení se liší od připraveného rozložení",
+      "Přidat profil JSON do uložené knihovny.",
+      "Převést naměřenou odezvu na korekční křivku.",
+      "Vytvořit nový korekční profil.",
+      "Upravit kopii a ponechat originál beze změny.",
+      "Exportovat vybraný profil do souboru JSON.",
+      "Použít vybraný profil pro toto zařízení.",
+      "Smazat tento uložený vlastní profil.",
+      "Zobrazit pouze uložené vlastní profily.",
+      "Zavřít dialog a zachovat použitou korekci."
     ],
     "sk": [
       "Slovenčina",
@@ -1823,7 +1913,16 @@
       "Neplatné vstupné zosilnenie",
       "Zmeny sa prejavia okamžite",
       "Merače zobrazujú aktuálne prehrávanie",
-      "Aktívne rozloženie sa líši od pripraveného rozloženia"
+      "Aktívne rozloženie sa líši od pripraveného rozloženia",
+      "Pridať profil JSON do uloženej knižnice.",
+      "Previesť nameranú odozvu na korekčnú krivku.",
+      "Vytvoriť nový korekčný profil.",
+      "Upraviť kópiu a ponechať originál bez zmeny.",
+      "Exportovať vybraný profil do súboru JSON.",
+      "Použiť vybraný profil pre toto zariadenie.",
+      "Odstrániť tento uložený vlastný profil.",
+      "Zobraziť iba uložené vlastné profily.",
+      "Zavrieť dialóg a zachovať použitú korekciu."
     ],
     "uk": [
       "Українська",
@@ -1989,7 +2088,16 @@
       "Неприпустиме вхідне підсилення",
       "Зміни застосовуються негайно",
       "Індикатори показують поточне відтворення",
-      "Активна схема відрізняється від підготовленої"
+      "Активна схема відрізняється від підготовленої",
+      "Додати профіль JSON до збереженої бібліотеки.",
+      "Перетворити виміряну характеристику на криву корекції.",
+      "Створити новий профіль корекції.",
+      "Редагувати копію, не змінюючи оригінал.",
+      "Експортувати вибраний профіль у файл JSON.",
+      "Використати вибраний профіль для цього обладнання.",
+      "Видалити цей збережений власний профіль.",
+      "Показати лише збережені власні профілі.",
+      "Закрити діалог, зберігши застосовану корекцію."
     ],
     "ru": [
       "Русский",
@@ -2155,7 +2263,16 @@
       "Недопустимое входное усиление",
       "Изменения применяются сразу",
       "Индикаторы показывают текущее воспроизведение",
-      "Активная схема отличается от подготовленной"
+      "Активная схема отличается от подготовленной",
+      "Добавить профиль JSON в сохранённую библиотеку.",
+      "Преобразовать измеренную характеристику в кривую коррекции.",
+      "Создать новый профиль коррекции.",
+      "Редактировать копию, не изменяя оригинал.",
+      "Экспортировать выбранный профиль в файл JSON.",
+      "Использовать выбранный профиль для этого оборудования.",
+      "Удалить этот сохранённый пользовательский профиль.",
+      "Показать только сохранённые пользовательские профили.",
+      "Закрыть диалог, сохранив применённую коррекцию."
     ],
     "el": [
       "Ελληνικά",
@@ -2321,7 +2438,16 @@
       "Μη έγκυρη απολαβή εισόδου",
       "Οι αλλαγές εφαρμόζονται αμέσως",
       "Οι μετρητές δείχνουν την τρέχουσα αναπαραγωγή",
-      "Η ενεργή διάταξη διαφέρει από την προετοιμασμένη"
+      "Η ενεργή διάταξη διαφέρει από την προετοιμασμένη",
+      "Προσθήκη προφίλ JSON στην αποθηκευμένη βιβλιοθήκη.",
+      "Μετατροπή μετρημένης απόκρισης σε καμπύλη διόρθωσης.",
+      "Δημιουργία νέου προφίλ διόρθωσης.",
+      "Επεξεργασία αντιγράφου χωρίς αλλαγή του πρωτοτύπου.",
+      "Εξαγωγή του επιλεγμένου προφίλ σε αρχείο JSON.",
+      "Χρήση του επιλεγμένου προφίλ για αυτόν τον εξοπλισμό.",
+      "Διαγραφή αυτού του αποθηκευμένου προσαρμοσμένου προφίλ.",
+      "Εμφάνιση μόνο αποθηκευμένων προσαρμοσμένων προφίλ.",
+      "Κλείσιμο του διαλόγου με διατήρηση της εφαρμοσμένης διόρθωσης."
     ],
     "tr": [
       "Türkçe",
@@ -2487,7 +2613,16 @@
       "Geçersiz giriş kazancı",
       "Değişiklikler hemen uygulanır",
       "Göstergeler geçerli oynatmayı gösterir",
-      "Etkin düzen hazırlanan düzenden farklı"
+      "Etkin düzen hazırlanan düzenden farklı",
+      "Kayıtlı kitaplığa bir JSON profili ekleyin.",
+      "Ölçülen tepki verilerini bir düzeltme eğrisine dönüştürün.",
+      "Yeni bir düzeltme profili oluşturun.",
+      "Bir kopyayı düzenleyin; özgün dosya değişmesin.",
+      "Seçili profili bir JSON dosyasına aktarın.",
+      "Seçili profili bu ekipman için kullanın.",
+      "Bu kayıtlı özel profili silin.",
+      "Yalnızca kayıtlı özel profilleri gösterin.",
+      "İletişim kutusunu kapatın; uygulanan düzeltme korunsun."
     ],
     "sv": [
       "Svenska",
@@ -2653,7 +2788,16 @@
       "Ogiltig ingångsförstärkning",
       "Ändringar tillämpas direkt",
       "Mätarna visar aktuell uppspelning",
-      "Den aktiva layouten skiljer sig från den förberedda"
+      "Den aktiva layouten skiljer sig från den förberedda",
+      "Lägg till en JSON-profil i det sparade biblioteket.",
+      "Omvandla uppmätt frekvensgång till en korrigeringskurva.",
+      "Skapa en ny korrigeringsprofil.",
+      "Redigera en kopia och lämna originalet oförändrat.",
+      "Exportera den valda profilen till en JSON-fil.",
+      "Använd den valda profilen för den här utrustningen.",
+      "Ta bort den här sparade anpassade profilen.",
+      "Visa endast sparade anpassade profiler.",
+      "Stäng dialogrutan och behåll den tillämpade korrigeringen."
     ],
     "da": [
       "Dansk",
@@ -2819,7 +2963,16 @@
       "Ugyldig indgangsforstærkning",
       "Ændringer anvendes med det samme",
       "Målerne viser den aktuelle afspilning",
-      "Det aktive layout er forskelligt fra det forberedte"
+      "Det aktive layout er forskelligt fra det forberedte",
+      "Føj en JSON-profil til det gemte bibliotek.",
+      "Omdan målte responsdata til en korrektionskurve.",
+      "Opret en ny korrektionsprofil.",
+      "Rediger en kopi, og bevar originalen uændret.",
+      "Eksportér den valgte profil til en JSON-fil.",
+      "Brug den valgte profil til dette udstyr.",
+      "Slet denne gemte brugerdefinerede profil.",
+      "Vis kun gemte brugerdefinerede profiler.",
+      "Luk dialogen, og bevar den anvendte korrektion."
     ],
     "nb": [
       "Norsk bokmål",
@@ -2985,7 +3138,16 @@
       "Ugyldig inngangsforsterkning",
       "Endringer brukes umiddelbart",
       "Målerne viser gjeldende avspilling",
-      "Det aktive oppsettet er forskjellig fra det klargjorte"
+      "Det aktive oppsettet er forskjellig fra det klargjorte",
+      "Legg til en JSON-profil i det lagrede biblioteket.",
+      "Gjør målte responsdata om til en korreksjonskurve.",
+      "Opprett en ny korreksjonsprofil.",
+      "Rediger en kopi; behold originalen uendret.",
+      "Eksporter den valgte profilen til en JSON-fil.",
+      "Bruk den valgte profilen for dette utstyret.",
+      "Slett denne lagrede egendefinerte profilen.",
+      "Vis bare lagrede egendefinerte profiler.",
+      "Lukk dialogen; behold den brukte korreksjonen."
     ],
     "fi": [
       "Suomi",
@@ -3151,7 +3313,16 @@
       "Virheellinen tulovahvistus",
       "Muutokset tulevat voimaan heti",
       "Mittarit näyttävät nykyisen toiston",
-      "Aktiivinen asettelu eroaa valmistellusta asettelusta"
+      "Aktiivinen asettelu eroaa valmistellusta asettelusta",
+      "Lisää JSON-profiili tallennettuun kirjastoon.",
+      "Muunna mitattu vastedata korjauskäyräksi.",
+      "Luo uusi korjausprofiili.",
+      "Muokkaa kopiota; säilytä alkuperäinen ennallaan.",
+      "Vie valittu profiili JSON-tiedostoon.",
+      "Käytä valittua profiilia tälle laitteelle.",
+      "Poista tämä tallennettu mukautettu profiili.",
+      "Näytä vain tallennetut mukautetut profiilit.",
+      "Sulje valintaikkuna; säilytä käytössä oleva korjaus."
     ],
     "ro": [
       "Română",
@@ -3317,7 +3488,16 @@
       "Câștig de intrare nevalid",
       "Modificările se aplică imediat",
       "Indicatoarele arată redarea curentă",
-      "Configurația activă diferă de cea pregătită"
+      "Configurația activă diferă de cea pregătită",
+      "Adaugă un profil JSON în biblioteca salvată.",
+      "Transformă datele de răspuns măsurate într-o curbă de corecție.",
+      "Creează un profil de corecție nou.",
+      "Editează o copie, păstrând originalul neschimbat.",
+      "Exportă profilul selectat într-un fișier JSON.",
+      "Folosește profilul selectat pentru acest echipament.",
+      "Șterge acest profil personalizat salvat.",
+      "Afișează doar profilurile personalizate salvate.",
+      "Închide dialogul, păstrând corecția aplicată."
     ],
     "hu": [
       "Magyar",
@@ -3483,7 +3663,16 @@
       "Érvénytelen bemeneti erősítés",
       "A módosítások azonnal érvénybe lépnek",
       "A mérők az aktuális lejátszást mutatják",
-      "Az aktív elrendezés eltér az előkészítettől"
+      "Az aktív elrendezés eltér az előkészítettől",
+      "JSON-profil hozzáadása a mentett könyvtárhoz.",
+      "Mért átviteli adatok átalakítása korrekciós görbévé.",
+      "Új korrekciós profil létrehozása.",
+      "Másolat szerkesztése az eredeti módosítása nélkül.",
+      "A kijelölt profil exportálása JSON-fájlba.",
+      "A kijelölt profil használata ehhez az eszközhöz.",
+      "A mentett egyéni profil törlése.",
+      "Csak a mentett egyéni profilok megjelenítése.",
+      "Az ablak bezárása az alkalmazott korrekció megtartásával."
     ],
     "ar": [
       "العربية",
@@ -3649,7 +3838,16 @@
       "كسب دخل غير صالح",
       "تُطبَّق التغييرات فورًا",
       "تعرض المقاييس التشغيل الحالي",
-      "يختلف التخطيط النشط عن التخطيط المُجهَّز"
+      "يختلف التخطيط النشط عن التخطيط المُجهَّز",
+      "أضف ملف تعريف JSON إلى مكتبتك المحفوظة.",
+      "حوّل بيانات الاستجابة المقاسة إلى منحنى تصحيح.",
+      "أنشئ ملف تعريف تصحيح جديدًا.",
+      "حرّر نسخة مع إبقاء الأصل دون تغيير.",
+      "صدّر ملف التعريف المحدد إلى ملف JSON.",
+      "استخدم ملف التعريف المحدد لهذا الجهاز.",
+      "احذف ملف التعريف المخصص المحفوظ هذا.",
+      "اعرض ملفات التعريف المخصصة المحفوظة فقط.",
+      "أغلق مربع الحوار مع إبقاء التصحيح المطبق."
     ],
     "he": [
       "עברית",
@@ -3815,7 +4013,16 @@
       "הגבר כניסה לא תקין",
       "השינויים מוחלים מיד",
       "המדים מציגים את ההשמעה הנוכחית",
-      "הפריסה הפעילה שונה מהפריסה שהוכנה"
+      "הפריסה הפעילה שונה מהפריסה שהוכנה",
+      "הוסף פרופיל JSON לספרייה השמורה.",
+      "המר נתוני תגובה שנמדדו לעקומת תיקון.",
+      "צור פרופיל תיקון חדש.",
+      "ערוך עותק והשאר את המקור ללא שינוי.",
+      "ייצא את הפרופיל שנבחר לקובץ JSON.",
+      "השתמש בפרופיל שנבחר עבור ציוד זה.",
+      "מחק פרופיל מותאם אישית שמור זה.",
+      "הצג רק פרופילים מותאמים אישית שנשמרו.",
+      "סגור את החלון והשאר את התיקון שהוחל."
     ],
     "fa": [
       "فارسی",
@@ -3981,7 +4188,16 @@
       "بهرهٔ ورودی نامعتبر",
       "تغییرات بلافاصله اعمال می‌شوند",
       "سطح‌سنج‌ها پخش فعلی را نشان می‌دهند",
-      "چیدمان فعال با چیدمان آماده‌شده متفاوت است"
+      "چیدمان فعال با چیدمان آماده‌شده متفاوت است",
+      "یک نمایه JSON به کتابخانهٔ ذخیره‌شده اضافه کنید.",
+      "داده‌های پاسخ اندازه‌گیری‌شده را به منحنی اصلاح تبدیل کنید.",
+      "یک نمایهٔ اصلاح جدید بسازید.",
+      "یک کپی را ویرایش کنید؛ اصل را بدون تغییر نگه دارید.",
+      "نمایهٔ انتخاب‌شده را در یک فایل JSON صادر کنید.",
+      "از نمایهٔ انتخاب‌شده برای این تجهیزات استفاده کنید.",
+      "این نمایهٔ سفارشی ذخیره‌شده را حذف کنید.",
+      "فقط نمایه‌های سفارشی ذخیره‌شده را نشان دهید.",
+      "پنجره را ببندید؛ اصلاح اعمال‌شده را نگه دارید."
     ],
     "zh-Hans": [
       "简体中文",
@@ -4147,7 +4363,16 @@
       "输入增益无效",
       "更改立即生效",
       "电平表显示当前播放",
-      "当前布局与待应用布局不同"
+      "当前布局与待应用布局不同",
+      "将 JSON 配置文件添加到已保存的资料库。",
+      "将测得的响应数据转换为校正曲线。",
+      "创建新的校正配置。",
+      "编辑副本，保留原件不变。",
+      "将选中的配置导出为 JSON 文件。",
+      "为此设备使用选中的配置。",
+      "删除此已保存的自定义配置。",
+      "仅显示已保存的自定义配置。",
+      "关闭对话框，保留已应用的校正。"
     ],
     "zh-Hant": [
       "繁體中文",
@@ -4313,7 +4538,16 @@
       "輸入增益無效",
       "變更立即生效",
       "電平表顯示目前播放",
-      "目前配置與待套用配置不同"
+      "目前配置與待套用配置不同",
+      "將 JSON 設定檔加入已儲存的資料庫。",
+      "將量測的響應資料轉換為校正曲線。",
+      "建立新的校正設定檔。",
+      "編輯副本，保留原始檔不變。",
+      "將選取的設定檔匯出為 JSON 檔案。",
+      "為此設備使用選取的設定檔。",
+      "刪除此已儲存的自訂設定檔。",
+      "僅顯示已儲存的自訂設定檔。",
+      "關閉對話框，保留已套用的校正。"
     ],
     "ja": [
       "日本語",
@@ -4479,7 +4713,16 @@
       "入力ゲインが無効です",
       "変更はすぐに適用されます",
       "メーターは現在の再生を表示します",
-      "現在のレイアウトは適用待ちのレイアウトと異なります"
+      "現在のレイアウトは適用待ちのレイアウトと異なります",
+      "JSONプロファイルを保存済みライブラリに追加します。",
+      "測定した応答データから補正カーブを作成します。",
+      "新しい補正プロファイルを作成します。",
+      "元の内容を変えずにコピーを編集します。",
+      "選択したプロファイルをJSONファイルに書き出します。",
+      "この機器に選択したプロファイルを使用します。",
+      "この保存済みカスタムプロファイルを削除します。",
+      "保存済みのカスタムプロファイルだけを表示します。",
+      "適用した補正を維持してダイアログを閉じます。"
     ],
     "ko": [
       "한국어",
@@ -4645,7 +4888,16 @@
       "잘못된 입력 게인",
       "변경 사항이 즉시 적용됩니다",
       "미터가 현재 재생을 표시합니다",
-      "활성 레이아웃이 적용 대기 중인 레이아웃과 다릅니다"
+      "활성 레이아웃이 적용 대기 중인 레이아웃과 다릅니다",
+      "JSON 프로필을 저장된 라이브러리에 추가합니다.",
+      "측정한 응답 데이터를 보정 곡선으로 변환합니다.",
+      "새 보정 프로필을 만듭니다.",
+      "원본을 변경하지 않고 복사본을 편집합니다.",
+      "선택한 프로필을 JSON 파일로 내보냅니다.",
+      "이 장비에 선택한 프로필을 사용합니다.",
+      "이 저장된 사용자 지정 프로필을 삭제합니다.",
+      "저장된 사용자 지정 프로필만 표시합니다.",
+      "적용된 보정을 유지하고 대화 상자를 닫습니다."
     ],
     "hi": [
       "हिन्दी",
@@ -4811,7 +5063,16 @@
       "अमान्य इनपुट गेन",
       "बदलाव तुरंत लागू होते हैं",
       "मीटर वर्तमान प्लेबैक दिखाते हैं",
-      "सक्रिय लेआउट तैयार लेआउट से अलग है"
+      "सक्रिय लेआउट तैयार लेआउट से अलग है",
+      "सहेजी गई लाइब्रेरी में JSON प्रोफ़ाइल जोड़ें।",
+      "मापे गए प्रतिक्रिया डेटा से सुधार वक्र बनाएँ।",
+      "नई सुधार प्रोफ़ाइल बनाएँ।",
+      "प्रतिलिपि संपादित करें; मूल को अपरिवर्तित रखें।",
+      "चुनी गई प्रोफ़ाइल को JSON फ़ाइल में निर्यात करें।",
+      "इस उपकरण के लिए चुनी गई प्रोफ़ाइल का उपयोग करें।",
+      "इस सहेजी गई कस्टम प्रोफ़ाइल को हटाएँ।",
+      "केवल सहेजी गई कस्टम प्रोफ़ाइल दिखाएँ।",
+      "संवाद बंद करें; लागू सुधार बनाए रखें।"
     ],
     "id": [
       "Bahasa Indonesia",
@@ -4977,7 +5238,16 @@
       "Gain masukan tidak valid",
       "Perubahan langsung diterapkan",
       "Meter menampilkan pemutaran saat ini",
-      "Tata letak aktif berbeda dari tata letak yang disiapkan"
+      "Tata letak aktif berbeda dari tata letak yang disiapkan",
+      "Tambahkan profil JSON ke pustaka tersimpan.",
+      "Ubah data respons terukur menjadi kurva koreksi.",
+      "Buat profil koreksi baru.",
+      "Edit salinan; biarkan aslinya tetap utuh.",
+      "Ekspor profil yang dipilih ke berkas JSON.",
+      "Gunakan profil yang dipilih untuk perangkat ini.",
+      "Hapus profil kustom tersimpan ini.",
+      "Tampilkan hanya profil kustom tersimpan.",
+      "Tutup dialog; pertahankan koreksi yang diterapkan."
     ],
     "vi": [
       "Tiếng Việt",
@@ -5143,7 +5413,16 @@
       "Độ lợi đầu vào không hợp lệ",
       "Thay đổi có hiệu lực ngay lập tức",
       "Đồng hồ hiển thị âm thanh đang phát",
-      "Bố trí đang dùng khác với bố trí chờ áp dụng"
+      "Bố trí đang dùng khác với bố trí chờ áp dụng",
+      "Thêm hồ sơ JSON vào thư viện đã lưu.",
+      "Chuyển dữ liệu đáp ứng đo được thành đường cong hiệu chỉnh.",
+      "Tạo hồ sơ hiệu chỉnh mới.",
+      "Chỉnh sửa bản sao, giữ nguyên bản gốc.",
+      "Xuất hồ sơ đã chọn thành tệp JSON.",
+      "Dùng hồ sơ đã chọn cho thiết bị này.",
+      "Xóa hồ sơ tùy chỉnh đã lưu này.",
+      "Chỉ hiển thị hồ sơ tùy chỉnh đã lưu.",
+      "Đóng hộp thoại, giữ hiệu chỉnh đã áp dụng."
     ],
     "th": [
       "ไทย",
@@ -5309,7 +5588,16 @@
       "เกนขาเข้าไม่ถูกต้อง",
       "การเปลี่ยนแปลงมีผลทันที",
       "มิเตอร์แสดงเสียงที่กำลังเล่น",
-      "รูปแบบที่ใช้งานต่างจากรูปแบบที่เตรียมไว้"
+      "รูปแบบที่ใช้งานต่างจากรูปแบบที่เตรียมไว้",
+      "เพิ่มโปรไฟล์ JSON ลงในคลังที่บันทึกไว้",
+      "แปลงข้อมูลการตอบสนองที่วัดได้เป็นเส้นโค้งแก้ไข",
+      "สร้างโปรไฟล์การแก้ไขใหม่",
+      "แก้ไขสำเนาโดยคงต้นฉบับไว้",
+      "ส่งออกโปรไฟล์ที่เลือกเป็นไฟล์ JSON",
+      "ใช้โปรไฟล์ที่เลือกกับอุปกรณ์นี้",
+      "ลบโปรไฟล์กำหนดเองที่บันทึกไว้นี้",
+      "แสดงเฉพาะโปรไฟล์กำหนดเองที่บันทึกไว้",
+      "ปิดกล่องโต้ตอบโดยคงการแก้ไขที่ใช้อยู่"
     ],
     "sw": [
       "Kiswahili",
@@ -5475,7 +5763,16 @@
       "Ongezeko la ingizo si sahihi",
       "Mabadiliko yanatumika mara moja",
       "Vipima kiwango vinaonyesha uchezaji wa sasa",
-      "Mpangilio unaotumika unatofautiana na ulioandaliwa"
+      "Mpangilio unaotumika unatofautiana na ulioandaliwa",
+      "Ongeza wasifu wa JSON kwenye maktaba iliyohifadhiwa.",
+      "Badilisha data ya mwitikio iliyopimwa kuwa mkunjo wa marekebisho.",
+      "Unda wasifu mpya wa marekebisho.",
+      "Hariri nakala; acha asili bila mabadiliko.",
+      "Hamisha wasifu uliochaguliwa kwenye faili la JSON.",
+      "Tumia wasifu uliochaguliwa kwa kifaa hiki.",
+      "Futa wasifu huu maalumu uliohifadhiwa.",
+      "Onyesha wasifu maalumu uliohifadhiwa pekee.",
+      "Funga kidirisha; hifadhi marekebisho yaliyotumika."
     ],
     "nn": [
       "Norsk nynorsk",
@@ -5641,7 +5938,16 @@
       "Ugyldig inngangsforsterking",
       "Endringar blir tekne i bruk med ein gong",
       "Målarane viser gjeldande avspeling",
-      "Det aktive oppsettet er ulikt det klargjorde"
+      "Det aktive oppsettet er ulikt det klargjorde",
+      "Legg til ein JSON-profil i det lagra biblioteket.",
+      "Gjer målte responsdata om til ei korreksjonskurve.",
+      "Opprett ein ny korreksjonsprofil.",
+      "Rediger ein kopi; lat originalen vere uendra.",
+      "Eksporter den valde profilen til ei JSON-fil.",
+      "Bruk den valde profilen for dette utstyret.",
+      "Slett denne lagra eigendefinerte profilen.",
+      "Vis berre lagra eigendefinerte profilar.",
+      "Lukk dialogen; behald korreksjonen som er teken i bruk."
     ]
   },
   "requiredCompleteLocales": [
