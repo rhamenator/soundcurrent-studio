@@ -78,5 +78,6 @@
   "append 0-30 seconds to render effect tails",
   "disable automatic EQ headroom",
   "bypass EQ, effects, gains and mute",
-  "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE."
+  "Input: PCM16/24/32 or float32 RIFF/WAVE. Output: float32 extensible WAVE.",
+  "Invalid input gain"
 ]

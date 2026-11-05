@@ -155,6 +155,7 @@ inline QString audioErrorText(const QString &diagnostic) {
         return SC_TR("Channel configuration count does not match engine");
     if (diagnostic == QStringLiteral("Post gain must be finite and within -84 to +24 dB"))
         return SC_TR("Post gain must be finite and within -84 to +24 dB");
+    if (diagnostic == QStringLiteral("Invalid input gain"))return SC_TR("Invalid input gain");
     if (diagnostic == QStringLiteral("Invalid enhancement settings"))
         return SC_TR("Invalid enhancement settings");
     if (diagnostic == QStringLiteral("Delay settings are outside the supported range"))

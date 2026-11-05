@@ -71,8 +71,15 @@ public:
     bool legacyVolumeManaged() const { return false; }
     void setStudio(const soundcurrent::studio::Session &s) {
         if(s.offline)return;
-        if(active()&&s.engine.channels.size()!=session_.engine.channels.size())
-            throw std::runtime_error(SC_TR("Turn playback off before applying a different live channel layout").toStdString());
+        if(active()&&s.engine.channels.size()!=session_.engine.channels.size()) {
+            unsigned capacity=0;
+            for(const auto &device:soundcurrent::windowsAudioEndpoints(false))if(device.id==target_.name.toStdWString())capacity=device.channels;
+            if(s.engine.channels.size()>capacity)
+                throw std::runtime_error(SC_TR("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.").toStdString());
+            const auto device=target_;const auto bands=bands_;const auto gain=gain_;const auto balance=balance_;
+            soundcurrent::replaceLiveSession(session_,s,[]{},[this]{stop();},[&]{start(device,bands,gain,balance);});
+            return;
+        }
         auto filters=nativeBands(bands_);
         if(!bridge_.setStudio(s.effective(filters,gain_,balance_),s.routing))throw std::runtime_error(SC_TR("Invalid Studio settings").toStdString());
         session_=s;

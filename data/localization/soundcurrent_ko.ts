@@ -347,6 +347,11 @@ Do you want to delete it anyway?</source>
       <translation>프로파일 적용</translation>
     </message>
     <message>
+      <source>Apply settings</source>
+      <translation>설정 적용</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Apply suggested EQ</source>
       <translation>권장 EQ 적용</translation>
     </message>
@@ -676,6 +681,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>변경 사항이 즉시 적용됩니다</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>채널</translation>
     </message>
@@ -701,6 +711,11 @@ Do you want to delete it anyway?</source>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>채널 인덱스는 1부터 시작합니다. 기존 출력 파일은 절대 덮어쓰지 않습니다.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>채널 미터</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1288,6 +1303,7 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Expansion / compression</source>
       <translation>익스팬션 / 컴프레션</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
     </message>
     <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
@@ -1550,6 +1566,11 @@ Do you want to delete it anyway?</source>
       <translation>입력 채널</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>입력 게인</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>입력 채널 수가 Studio 레이아웃보다 많습니다. 같거나 더 많은 채널의 레이아웃을 선택하세요</translation>
     </message>
@@ -1703,6 +1724,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>잘못된 입력 게인</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>측정된 앰프 프로파일이 잘못되었습니다. 모델, HTTPS 측정 출처, 측정 조건 및 제한 범위 내의 PK/LS/HS 필터 1~16개가 필요합니다. README의 프로파일 형식을 참조하세요.</translation>
     </message>
@@ -1834,6 +1860,7 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Limiter</source>
       <translation>리미터</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -2057,6 +2084,11 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE 형식 메타데이터가 없거나 중복되었거나 너무 큽니다</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>믹서</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2302,6 +2334,11 @@ Do you want to delete it anyway?</source>
       <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
       <translation>출력이 RIFF/WAVE의 4 GiB 제한을 초과합니다</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Output gain</source>
+      <translation>출력 게인</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Output has no volume channels</source>
@@ -2628,10 +2665,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Read virtual output mix format</source>
       <translation>가상 출력 믹스 형식 읽기</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>준비되었습니다. 활성화하기 전까지 이펙트는 드라이 상태입니다.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3337,6 +3370,7 @@ Do you want to delete it anyway?</source>
     <message>
       <source>System volume</source>
       <translation>시스템 음량</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
     </message>
     <message>
       <source>TV Dialogue</source>
@@ -3478,10 +3512,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>이퀄라이저 켜기</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>실시간 처리에 다른 채널 구성을 적용하기 전에 재생을 끄세요</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

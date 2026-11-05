@@ -39,13 +39,15 @@ int main(int argc,char **argv){QApplication app(argc,argv);try{
         meters.show();app.processEvents();
         if(const auto path=qEnvironmentVariable("SOUNDCURRENT_SPATIAL_QA_DIR");!path.isEmpty())meters.grab().save(path+QString("/meters-%1.png").arg(n));
     }
-    Session room(8);room.roomBalanceX=.5;room.roomBalanceY=.25;
+    Session room(8);room.engine.preGainDb=-3;room.roomBalanceX=.5;room.roomBalanceY=.25;
     const auto settings=room.effective();
     check(std::abs(settings.channels[0].gainDb-20*std::log10(.5*.75))<1e-9,"front-left balance incorrect");
     check(settings.channels[3].gainDb==0 && !settings.channels[3].muted,"balance touched LFE");
     check(settings.channels[5].gainDb==0,"balance boosted/attenuated favored rear-right");
     check(std::abs(settings.channels[6].gainDb-20*std::log10(.5))<1e-9,"side channel balance incorrect");
     check(Session::parse(room.json()).json()==room.json(),"room balance not restored");
+    auto oldInput=room.json();oldInput.remove("preGain");check(Session::parse(oldInput).engine.preGainDb==0,"legacy input gain not neutral");
+    auto badInput=room.json();badInput["preGain"]=25;bool badGain=false;try{Session::parse(badInput);}catch(const std::exception &){badGain=true;}check(badGain,"invalid saved input gain accepted");
     auto malformed=room.json();malformed["roomBalance"]=QJsonObject{{"x",2},{"y",0}};
     bool rejected=false;try{Session::parse(malformed);}catch(const std::exception &){rejected=true;}check(rejected,"invalid room balance accepted");
     room.setCustomName(0,"Unknown output");check(!room.hasRoomLayout(),"custom layout incorrectly assigned speaker positions");

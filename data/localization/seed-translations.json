@@ -153,7 +153,14 @@
     "PipeWire stream failed",
     "Expansion / compression",
     "Limiter",
-    "System volume"
+    "System volume",
+    "Output gain",
+    "Input gain",
+    "Mixer",
+    "Channel meters",
+    "Apply settings",
+    "Invalid input gain",
+    "Changes apply immediately"
   ],
   "languages": {
     "de": [
@@ -311,7 +318,14 @@
       "PipeWire-Stream fehlgeschlagen",
       "Expansion / Kompression",
       "Limiter",
-      "Systemlautstärke"
+      "Systemlautstärke",
+      "Ausgangsverstärkung",
+      "Eingangsverstärkung",
+      "Mischpult",
+      "Kanalpegelanzeigen",
+      "Einstellungen anwenden",
+      "Ungültige Eingangsverstärkung",
+      "Änderungen werden sofort wirksam"
     ],
     "fr": [
       "Français",
@@ -468,7 +482,14 @@
       "Échec du flux PipeWire",
       "Expansion / compression",
       "Limiteur",
-      "Volume du système"
+      "Volume du système",
+      "Gain de sortie",
+      "Gain d’entrée",
+      "Mixeur",
+      "Indicateurs de niveau des canaux",
+      "Appliquer les réglages",
+      "Gain d’entrée non valide",
+      "Les modifications s’appliquent immédiatement"
     ],
     "es": [
       "Español",
@@ -625,7 +646,14 @@
       "Falló el flujo de PipeWire",
       "Expansión / compresión",
       "Limitador",
-      "Volumen del sistema"
+      "Volumen del sistema",
+      "Ganancia de salida",
+      "Ganancia de entrada",
+      "Mezclador",
+      "Medidores de canales",
+      "Aplicar ajustes",
+      "Ganancia de entrada no válida",
+      "Los cambios se aplican inmediatamente"
     ],
     "it": [
       "Italiano",
@@ -782,7 +810,14 @@
       "Il flusso PipeWire è fallito",
       "Espansione / compressione",
       "Limitatore",
-      "Volume di sistema"
+      "Volume di sistema",
+      "Guadagno di uscita",
+      "Guadagno di ingresso",
+      "Mixer",
+      "Misuratori dei canali",
+      "Applica impostazioni",
+      "Guadagno di ingresso non valido",
+      "Le modifiche si applicano immediatamente"
     ],
     "pt-PT": [
       "Português (Portugal)",
@@ -939,7 +974,14 @@
       "O fluxo PipeWire falhou",
       "Expansão / compressão",
       "Limitador",
-      "Volume do sistema"
+      "Volume do sistema",
+      "Ganho de saída",
+      "Ganho de entrada",
+      "Misturador",
+      "Medidores dos canais",
+      "Aplicar definições",
+      "Ganho de entrada inválido",
+      "As alterações são aplicadas imediatamente"
     ],
     "pt-BR": [
       "Português (Brasil)",
@@ -1096,7 +1138,14 @@
       "O fluxo PipeWire falhou",
       "Expansão / compressão",
       "Limitador",
-      "Volume do sistema"
+      "Volume do sistema",
+      "Ganho de saída",
+      "Ganho de entrada",
+      "Mixer",
+      "Medidores dos canais",
+      "Aplicar configurações",
+      "Ganho de entrada inválido",
+      "As alterações são aplicadas imediatamente"
     ],
     "nl": [
       "Nederlands",
@@ -1253,7 +1302,14 @@
       "PipeWire-stream mislukt",
       "Expansie / compressie",
       "Limiter",
-      "Systeemvolume"
+      "Systeemvolume",
+      "Uitgangsversterking",
+      "Ingangsversterking",
+      "Mengpaneel",
+      "Kanaalmeters",
+      "Instellingen toepassen",
+      "Ongeldige ingangsversterking",
+      "Wijzigingen worden direct toegepast"
     ],
     "pl": [
       "Polski",
@@ -1410,7 +1466,14 @@
       "Błąd strumienia PipeWire",
       "Ekspansja / kompresja",
       "Limiter",
-      "Głośność systemowa"
+      "Głośność systemowa",
+      "Wzmocnienie wyjściowe",
+      "Wzmocnienie wejściowe",
+      "Mikser",
+      "Mierniki kanałów",
+      "Zastosuj ustawienia",
+      "Nieprawidłowe wzmocnienie wejściowe",
+      "Zmiany są stosowane natychmiast"
     ],
     "cs": [
       "Čeština",
@@ -1567,7 +1630,14 @@
       "Selhal stream PipeWire",
       "Expanze / komprese",
       "Limiter",
-      "Systémová hlasitost"
+      "Systémová hlasitost",
+      "Výstupní zesílení",
+      "Vstupní zesílení",
+      "Mixážní pult",
+      "Měřiče kanálů",
+      "Použít nastavení",
+      "Neplatné vstupní zesílení",
+      "Změny se projeví okamžitě"
     ],
     "sk": [
       "Slovenčina",
@@ -1724,7 +1794,14 @@
       "Zlyhal stream PipeWire",
       "Expanzia / kompresia",
       "Limitér",
-      "Systémová hlasitosť"
+      "Systémová hlasitosť",
+      "Výstupné zosilnenie",
+      "Vstupné zosilnenie",
+      "Mixážny pult",
+      "Merače kanálov",
+      "Použiť nastavenia",
+      "Neplatné vstupné zosilnenie",
+      "Zmeny sa prejavia okamžite"
     ],
     "uk": [
       "Українська",
@@ -1881,7 +1958,14 @@
       "Збій потоку PipeWire",
       "Експандування / компресія",
       "Лімітер",
-      "Системна гучність"
+      "Системна гучність",
+      "Вихідне підсилення",
+      "Вхідне підсилення",
+      "Мікшер",
+      "Індикатори каналів",
+      "Застосувати налаштування",
+      "Неприпустиме вхідне підсилення",
+      "Зміни застосовуються негайно"
     ],
     "ru": [
       "Русский",
@@ -2038,7 +2122,14 @@
       "Сбой потока PipeWire",
       "Экспандирование / компрессия",
       "Лимитер",
-      "Системная громкость"
+      "Системная громкость",
+      "Выходное усиление",
+      "Входное усиление",
+      "Микшер",
+      "Индикаторы каналов",
+      "Применить настройки",
+      "Недопустимое входное усиление",
+      "Изменения применяются сразу"
     ],
     "el": [
       "Ελληνικά",
@@ -2195,7 +2286,14 @@
       "Αποτυχία ροής PipeWire",
       "Επέκταση / συμπίεση",
       "Περιοριστής",
-      "Ένταση συστήματος"
+      "Ένταση συστήματος",
+      "Απολαβή εξόδου",
+      "Απολαβή εισόδου",
+      "Μίκτης",
+      "Μετρητές καναλιών",
+      "Εφαρμογή ρυθμίσεων",
+      "Μη έγκυρη απολαβή εισόδου",
+      "Οι αλλαγές εφαρμόζονται αμέσως"
     ],
     "tr": [
       "Türkçe",
@@ -2352,7 +2450,14 @@
       "PipeWire akışı başarısız oldu",
       "Genişletme / sıkıştırma",
       "Sınırlayıcı",
-      "Sistem ses düzeyi"
+      "Sistem ses düzeyi",
+      "Çıkış kazancı",
+      "Giriş kazancı",
+      "Mikser",
+      "Kanal göstergeleri",
+      "Ayarları uygula",
+      "Geçersiz giriş kazancı",
+      "Değişiklikler hemen uygulanır"
     ],
     "sv": [
       "Svenska",
@@ -2509,7 +2614,14 @@
       "PipeWire-strömmen misslyckades",
       "Expansion / kompression",
       "Limiter",
-      "Systemvolym"
+      "Systemvolym",
+      "Utgångsförstärkning",
+      "Ingångsförstärkning",
+      "Mixer",
+      "Kanalmätare",
+      "Tillämpa inställningar",
+      "Ogiltig ingångsförstärkning",
+      "Ändringar tillämpas direkt"
     ],
     "da": [
       "Dansk",
@@ -2666,7 +2778,14 @@
       "PipeWire-strømmen fejlede",
       "Ekspansion / kompression",
       "Limiter",
-      "Systemlydstyrke"
+      "Systemlydstyrke",
+      "Udgangsforstærkning",
+      "Indgangsforstærkning",
+      "Mixer",
+      "Kanalmålere",
+      "Anvend indstillinger",
+      "Ugyldig indgangsforstærkning",
+      "Ændringer anvendes med det samme"
     ],
     "nb": [
       "Norsk bokmål",
@@ -2823,7 +2942,14 @@
       "PipeWire-strømmen mislyktes",
       "Ekspansjon / kompresjon",
       "Limiter",
-      "Systemvolum"
+      "Systemvolum",
+      "Utgangsforsterkning",
+      "Inngangsforsterkning",
+      "Mikser",
+      "Kanalmålere",
+      "Bruk innstillinger",
+      "Ugyldig inngangsforsterkning",
+      "Endringer brukes umiddelbart"
     ],
     "fi": [
       "Suomi",
@@ -2980,7 +3106,14 @@
       "PipeWire-virta epäonnistui",
       "Laajennus / kompressio",
       "Rajoitin",
-      "Järjestelmän äänenvoimakkuus"
+      "Järjestelmän äänenvoimakkuus",
+      "Lähtövahvistus",
+      "Tulovahvistus",
+      "Mikseri",
+      "Kanavamittarit",
+      "Ota asetukset käyttöön",
+      "Virheellinen tulovahvistus",
+      "Muutokset tulevat voimaan heti"
     ],
     "ro": [
       "Română",
@@ -3137,7 +3270,14 @@
       "Fluxul PipeWire a eșuat",
       "Expansiune / compresie",
       "Limitator",
-      "Volumul sistemului"
+      "Volumul sistemului",
+      "Câștig de ieșire",
+      "Câștig de intrare",
+      "Mixer",
+      "Indicatoare de canale",
+      "Aplică setările",
+      "Câștig de intrare nevalid",
+      "Modificările se aplică imediat"
     ],
     "hu": [
       "Magyar",
@@ -3294,7 +3434,14 @@
       "A PipeWire-adatfolyam hibája",
       "Expanzió / kompresszió",
       "Limiter",
-      "Rendszerhangerő"
+      "Rendszerhangerő",
+      "Kimeneti erősítés",
+      "Bemeneti erősítés",
+      "Keverő",
+      "Csatornamérők",
+      "Beállítások alkalmazása",
+      "Érvénytelen bemeneti erősítés",
+      "A módosítások azonnal érvénybe lépnek"
     ],
     "ar": [
       "العربية",
@@ -3451,7 +3598,14 @@
       "فشل تدفق PipeWire",
       "توسيع / ضغط",
       "محدد الذروة",
-      "مستوى صوت النظام"
+      "مستوى صوت النظام",
+      "كسب الخرج",
+      "كسب الدخل",
+      "مازج",
+      "مقاييس القنوات",
+      "تطبيق الإعدادات",
+      "كسب دخل غير صالح",
+      "تُطبَّق التغييرات فورًا"
     ],
     "he": [
       "עברית",
@@ -3608,7 +3762,14 @@
       "זרם PipeWire נכשל",
       "הרחבה / דחיסה",
       "מגביל",
-      "עוצמת הקול של המערכת"
+      "עוצמת הקול של המערכת",
+      "הגבר יציאה",
+      "הגבר כניסה",
+      "מיקסר",
+      "מדי ערוצים",
+      "החלת הגדרות",
+      "הגבר כניסה לא תקין",
+      "השינויים מוחלים מיד"
     ],
     "fa": [
       "فارسی",
@@ -3765,7 +3926,14 @@
       "جریان PipeWire ناموفق بود",
       "گسترش / فشرده‌سازی",
       "محدودکننده",
-      "بلندی صدای سیستم"
+      "بلندی صدای سیستم",
+      "بهرهٔ خروجی",
+      "بهرهٔ ورودی",
+      "میکسر",
+      "سطح‌سنج‌های کانال",
+      "اعمال تنظیمات",
+      "بهرهٔ ورودی نامعتبر",
+      "تغییرات بلافاصله اعمال می‌شوند"
     ],
     "zh-Hans": [
       "简体中文",
@@ -3922,7 +4090,14 @@
       "PipeWire 音频流失败",
       "扩展 / 压缩",
       "限幅器",
-      "系统音量"
+      "系统音量",
+      "输出增益",
+      "输入增益",
+      "混音器",
+      "声道电平表",
+      "应用设置",
+      "输入增益无效",
+      "更改立即生效"
     ],
     "zh-Hant": [
       "繁體中文",
@@ -4079,7 +4254,14 @@
       "PipeWire 音訊串流失敗",
       "擴展 / 壓縮",
       "限幅器",
-      "系統音量"
+      "系統音量",
+      "輸出增益",
+      "輸入增益",
+      "混音器",
+      "聲道電平表",
+      "套用設定",
+      "輸入增益無效",
+      "變更立即生效"
     ],
     "ja": [
       "日本語",
@@ -4236,7 +4418,14 @@
       "PipeWire ストリームが失敗しました",
       "エキスパンション / コンプレッション",
       "リミッター",
-      "システム音量"
+      "システム音量",
+      "出力ゲイン",
+      "入力ゲイン",
+      "ミキサー",
+      "チャンネルメーター",
+      "設定を適用",
+      "入力ゲインが無効です",
+      "変更はすぐに適用されます"
     ],
     "ko": [
       "한국어",
@@ -4393,7 +4582,14 @@
       "PipeWire 스트림 실패",
       "익스팬션 / 컴프레션",
       "리미터",
-      "시스템 음량"
+      "시스템 음량",
+      "출력 게인",
+      "입력 게인",
+      "믹서",
+      "채널 미터",
+      "설정 적용",
+      "잘못된 입력 게인",
+      "변경 사항이 즉시 적용됩니다"
     ],
     "hi": [
       "हिन्दी",
@@ -4550,7 +4746,14 @@
       "PipeWire स्ट्रीम विफल हुई",
       "विस्तार / संपीड़न",
       "लिमिटर",
-      "सिस्टम वॉल्यूम"
+      "सिस्टम वॉल्यूम",
+      "आउटपुट गेन",
+      "इनपुट गेन",
+      "मिक्सर",
+      "चैनल मीटर",
+      "सेटिंग लागू करें",
+      "अमान्य इनपुट गेन",
+      "बदलाव तुरंत लागू होते हैं"
     ],
     "id": [
       "Bahasa Indonesia",
@@ -4707,7 +4910,14 @@
       "Aliran PipeWire gagal",
       "Ekspansi / kompresi",
       "Pembatas",
-      "Volume sistem"
+      "Volume sistem",
+      "Gain keluaran",
+      "Gain masukan",
+      "Mixer",
+      "Meter kanal",
+      "Terapkan pengaturan",
+      "Gain masukan tidak valid",
+      "Perubahan langsung diterapkan"
     ],
     "vi": [
       "Tiếng Việt",
@@ -4864,7 +5074,14 @@
       "Luồng PipeWire bị lỗi",
       "Mở rộng / nén",
       "Bộ giới hạn",
-      "Âm lượng hệ thống"
+      "Âm lượng hệ thống",
+      "Độ lợi đầu ra",
+      "Độ lợi đầu vào",
+      "Bộ trộn",
+      "Đồng hồ mức kênh",
+      "Áp dụng cài đặt",
+      "Độ lợi đầu vào không hợp lệ",
+      "Thay đổi có hiệu lực ngay lập tức"
     ],
     "th": [
       "ไทย",
@@ -5021,7 +5238,14 @@
       "สตรีม PipeWire ล้มเหลว",
       "ขยาย / บีบอัดไดนามิก",
       "ลิมิตเตอร์",
-      "ระดับเสียงระบบ"
+      "ระดับเสียงระบบ",
+      "เกนขาออก",
+      "เกนขาเข้า",
+      "มิกเซอร์",
+      "มิเตอร์ช่องเสียง",
+      "ใช้การตั้งค่า",
+      "เกนขาเข้าไม่ถูกต้อง",
+      "การเปลี่ยนแปลงมีผลทันที"
     ],
     "sw": [
       "Kiswahili",
@@ -5178,7 +5402,14 @@
       "Mtiririko wa PipeWire umeshindwa",
       "Upanuzi / mgandamizo",
       "Kidhibiti cha kilele",
-      "Sauti ya mfumo"
+      "Sauti ya mfumo",
+      "Ongezeko la pato",
+      "Ongezeko la ingizo",
+      "Kichanganyaji",
+      "Vipima kiwango vya chaneli",
+      "Tumia mipangilio",
+      "Ongezeko la ingizo si sahihi",
+      "Mabadiliko yanatumika mara moja"
     ],
     "nn": [
       "Norsk nynorsk",
@@ -5335,7 +5566,14 @@
       "PipeWire-straumen feila",
       "Ekspansjon / kompresjon",
       "Limiter",
-      "Systemvolum"
+      "Systemvolum",
+      "Utgangsforsterking",
+      "Inngangsforsterking",
+      "Miksar",
+      "Kanalmålarar",
+      "Bruk innstillingane",
+      "Ugyldig inngangsforsterking",
+      "Endringar blir tekne i bruk med ein gong"
     ]
   },
   "requiredCompleteLocales": [

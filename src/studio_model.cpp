@@ -126,7 +126,7 @@ QJsonObject Session::json() const {
     const auto &d = engine.delay; const auto &r = engine.reverb;
     QJsonArray enhancements;for(double v:engine.enhancements.values)enhancements.append(v);
     return {{"roomBalance",QJsonObject{{"x",roomBalanceX},{"y",roomBalanceY}}},{"enhancements",enhancements},{"schema", 1}, {"channels", channels}, {"routing", routes}, {"offline", offline},
-            {"postGain", engine.postGainDb}, {"headroom", engine.automaticHeadroom}, {"bypass", engine.bypass},
+            {"preGain",engine.preGainDb},{"postGain", engine.postGainDb}, {"headroom", engine.automaticHeadroom}, {"bypass", engine.bypass},
             {"delay", QJsonObject{{"enabled", d.enabled}, {"milliseconds", d.milliseconds}, {"feedback", d.feedback}, {"mix", d.mix}}},
             {"reverb", QJsonObject{{"enabled", r.enabled}, {"decay", r.decaySeconds}, {"damping", r.damping}, {"mix", r.mix}}}};
 }
@@ -141,6 +141,7 @@ Session Session::parse(const QJsonObject &o) {
         const auto balance=o.value("roomBalance").toObject();
         s.roomBalanceX=numeric(balance,"x",-1,1);s.roomBalanceY=numeric(balance,"y",-1,1);
     }
+    if(o.contains("preGain"))s.engine.preGainDb=numeric(o,"preGain",-60,24);
     s.offline = boolean(o, "offline"); s.engine.automaticHeadroom = boolean(o, "headroom");
     s.engine.bypass = boolean(o, "bypass"); s.engine.postGainDb = numeric(o, "postGain", -24, 24);
     for (int c = 0; c < channels.size(); ++c) {

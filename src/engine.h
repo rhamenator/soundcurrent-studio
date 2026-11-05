@@ -35,6 +35,7 @@ struct EngineSettings {
     ReverbSettings reverb;
     EnhancementSettings enhancements;
     double postGainDb = 0;
+    double preGainDb = 0;
     bool automaticHeadroom = true;
     bool bypass = false;
 };

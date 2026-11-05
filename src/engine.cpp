@@ -93,7 +93,7 @@ struct AudioEngine::Impl {
     ReverbSettings reverb;
     bool bypass = false;
     bool automaticHeadroom = true;
-    double postGain = 1;
+    double postGain = 1, inputGain = 1;
     bool limiterEnabled = false;
     double limiterCeiling = 1, limiterRelease = 0, limiterGain = 1;
 
@@ -115,6 +115,7 @@ struct AudioEngine::Impl {
         if (!std::isfinite(value)) { value = 0; ++report.invalidSamples; }
         auto &channel = state[index];
         if (!bypass) {
+            value *= inputGain;
             for (auto &filter : channel.eq) value = filter.process(value);
             value *= channel.preamp;
             if (!std::isfinite(value)) { channel.reset(); value = 0; ++report.invalidSamples; }
@@ -177,6 +178,7 @@ std::span<const float> AudioEngine::channelPeaks() const noexcept { return impl_
 bool AudioEngine::configure(const EngineSettings &settings, std::string *error) {
     const auto reject = [&](const char *message) { if (error) *error = message; return false; };
     if (settings.channels.size() != channels()) return reject("Channel configuration count does not match engine");
+    if (!range(settings.preGainDb,-60,24)) return reject("Invalid input gain");
     if (!range(settings.postGainDb, kMinPostGainDb - 24, 24)) return reject("Post gain must be finite and within -84 to +24 dB");
     const auto &delay = settings.delay;
     const auto &reverb = settings.reverb;
@@ -284,6 +286,7 @@ bool AudioEngine::configure(const EngineSettings &settings, std::string *error) 
         impl_->limiterRelease=std::exp(-1/(sampleRate()*settings.enhancements.values[Release]*.001));
         impl_->bypass = settings.bypass;
         impl_->automaticHeadroom = settings.automaticHeadroom;
+        impl_->inputGain = std::pow(10.,settings.preGainDb/20);
         impl_->postGain = std::pow(10.0, settings.postGainDb / 20);
         if (error) error->clear();
         return true;

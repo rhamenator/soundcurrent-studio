@@ -17,6 +17,8 @@ class QLineEdit;
 class QLabel;
 class QPushButton;
 class QProgressBar;
+class QDialog;
+class QTabWidget;
 
 namespace soundcurrent::studio {
 class ChannelMeterView;
@@ -30,6 +32,7 @@ public:
     void setLocked(bool);
     void undo();
     void setLiveLevels(std::span<const float>);
+    void showMonitoring();
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();
     void selfTestFormatting();
@@ -39,6 +42,9 @@ public:
 private:
     void rebuild();
     void loadChannel();
+    void rebuildMixer();
+    void syncMixer();
+    void updateApplyState();
     void commit(const Session &before);
     void change(const std::function<void(Session &)> &);
     void effectPreset(int);
@@ -55,6 +61,11 @@ private:
     double sharedGain_ = 0;
     int balance_ = 0;
     bool persist_, rebuilding_ = false, locked_ = false;
+    QDialog *monitorDialog_;
+    QTabWidget *pages_;
+    QTableWidget *mixer_;
+    QDoubleSpinBox *preGain_;
+    QPushButton *apply_;
     QSpinBox *count_, *routeInput_;
     QComboBox *layout_, *channel_, *preset_, *filterType_;
     QCheckBox *offline_, *mute_, *solo_, *delay_, *reverb_, *bypass_, *headroom_, *preview_;
@@ -66,7 +77,7 @@ private:
     ChannelMeterView *meterView_;
     RoomBalancePad *roomBalance_;
     QWidget *roomBalanceBox_;
-    QLabel *status_;
+    QLabel *status_, *modeHint_;
     QPushButton *undo_, *render_, *cancel_;
     QProgressBar *progress_;
     QWidget *editing_;

@@ -347,6 +347,11 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Použiť profil</translation>
     </message>
     <message>
+      <source>Apply settings</source>
+      <translation>Použiť nastavenia</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Apply suggested EQ</source>
       <translation>Použiť odporúčané nastavenie EQ</translation>
     </message>
@@ -676,6 +681,11 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Zmeny sa prejavia okamžite</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanál</translation>
     </message>
@@ -701,6 +711,11 @@ Chcete ho aj tak zmazať?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Indexy kanálov začínajú od 1. Existujúce výstupné súbory sa nikdy neprepisujú.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Merače kanálov</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1288,6 +1303,7 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Expansion / compression</source>
       <translation>Expanzia / kompresia</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
     </message>
     <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
@@ -1550,6 +1566,11 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Vstupný kanál</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Vstupné zosilnenie</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>Vstup má viac kanálov než rozloženie Studio; zvoľte zodpovedajúce alebo väčšie rozloženie</translation>
     </message>
@@ -1703,6 +1724,11 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Neplatné vstupné zosilnenie</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Neplatný nameraný profil zosilňovača. Vyžaduje model, zdroj merania cez HTTPS, podmienky a 1–16 filtrov PK/LS/HS v povolených rozsahoch. Formát profilu je uvedený v README.</translation>
     </message>
@@ -1834,6 +1860,7 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Limiter</source>
       <translation>Limitér</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -2057,6 +2084,11 @@ Chcete ho aj tak zmazať?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Chýbajúce, duplicitné alebo príliš veľké metadáta formátu WAVE</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Mixážny pult</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2302,6 +2334,11 @@ Chcete ho aj tak zmazať?</translation>
       <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
       <translation>Výstup prekračuje limit RIFF/WAVE 4 GiB</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Output gain</source>
+      <translation>Výstupné zosilnenie</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Output has no volume channels</source>
@@ -2628,10 +2665,6 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Prečítať zmiešavací formát virtuálneho výstupu</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Pripravené. Kým efekty nezapnete, signál zostáva bez efektov.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3337,6 +3370,7 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>System volume</source>
       <translation>Systémová hlasitosť</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
     </message>
     <message>
       <source>TV Dialogue</source>
@@ -3478,10 +3512,6 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Zapnúť ekvalizér</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Pred použitím iného rozloženia kanálov na spracovanie v reálnom čase vypnite prehrávanie</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

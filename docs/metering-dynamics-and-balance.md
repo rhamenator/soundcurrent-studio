@@ -64,14 +64,14 @@ re-read. Linux uses asynchronous pactl calls; Windows uses Core Audio endpoint
 volume, all outside audio callbacks. The UI refreshes system volume every
 200 ms. Linux read/write synchronization is covered by an isolated fake-server
 fixture; physical Windows media-key/endpoint-volume round-trip testing remains
-pending. Existing saved post gain is retained under Settings as processing trim,
+pending. Existing saved post gain is retained in the persistent Output gain control as processing trim,
 with its previous gain range and undo behavior. It remains distinct from the
 main listening-volume control and can still cause clipping if raised.
 
 ## Room balance and future source panning
 
 Stereo retains a left/right balance slider. Recognized 5.1/7.1 layouts use a
-mouse-draggable room balance pad in the Studio tab, with keyboard arrows
+mouse-draggable room balance pad in the Channel meters dialog, with keyboard arrows
 (Shift for fine adjustment), Home/double-click and Center reset. Center applies
 unity gain. Moving right attenuates left speakers; moving rearward attenuates
 front speakers. Axes combine multiplicatively. The control never boosts favored
@@ -90,3 +90,6 @@ Design references:
 - [Cubase Pro 15 joystick panning](https://www.steinberg.help/r/cubase-pro/15.0/en/cubase_nuendo/topics/surround_sound/surround_sound_use_joystick_for_panning_t.html)
 - [Audient speaker-position metering](https://docs.audient.com/horizon32/metering/)
 - [Microsoft endpoint-volume scalar API](https://learn.microsoft.com/en-us/windows/win32/api/endpointvolume/nf-endpointvolume-iaudioendpointvolume-getmastervolumelevelscalar)
+
+See [Using Studio](using-studio.md) for the Effects, Mixer, Selected channel and
+Offline rendering pages, input/output gain, and immediate versus staged settings.

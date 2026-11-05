@@ -347,6 +347,11 @@ Wilt u het toch verwijderen?</translation>
       <translation>Profiel toepassen</translation>
     </message>
     <message>
+      <source>Apply settings</source>
+      <translation>Instellingen toepassen</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Apply suggested EQ</source>
       <translation>Voorgestelde EQ toepassen</translation>
     </message>
@@ -676,6 +681,11 @@ Wilt u het toch verwijderen?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Wijzigingen worden direct toegepast</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanaal</translation>
     </message>
@@ -701,6 +711,11 @@ Wilt u het toch verwijderen?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Kanaalindexen beginnen bij 1. Bestaande uitvoerbestanden worden nooit overschreven.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Kanaalmeters</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1288,6 +1303,7 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Expansion / compression</source>
       <translation>Expansie / compressie</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
     </message>
     <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
@@ -1550,6 +1566,11 @@ Wilt u het toch verwijderen?</translation>
       <translation>Invoerkanaal</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Ingangsversterking</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>De invoer heeft meer kanalen dan de Studio-indeling; kies een gelijke of grotere indeling</translation>
     </message>
@@ -1703,6 +1724,11 @@ Wilt u het toch verwijderen?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Ongeldige ingangsversterking</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Ongeldig gemeten versterkerprofiel. Vereist model, HTTPS-meetbron, omstandigheden en 1–16 PK/LS/HS-filters binnen de grenzen. Zie het profielformaat in de README.</translation>
     </message>
@@ -1834,6 +1860,7 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Limiter</source>
       <translation>Limiter</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -2057,6 +2084,11 @@ Wilt u het toch verwijderen?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Ontbrekende, dubbele of te grote WAVE-formaatmetadata</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Mengpaneel</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2302,6 +2334,11 @@ Wilt u het toch verwijderen?</translation>
       <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
       <translation>De uitvoer overschrijdt de RIFF/WAVE-limiet van 4 GiB</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Output gain</source>
+      <translation>Uitgangsversterking</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Output has no volume channels</source>
@@ -2628,10 +2665,6 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Mengformaat van virtuele uitgang lezen</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Gereed. Effecten worden pas toegepast wanneer ze zijn ingeschakeld.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3337,6 +3370,7 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>System volume</source>
       <translation>Systeemvolume</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
     </message>
     <message>
       <source>TV Dialogue</source>
@@ -3478,10 +3512,6 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Equalizer inschakelen</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Schakel het afspelen uit voordat u een andere kanaalindeling voor live verwerking toepast</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

@@ -8,6 +8,7 @@
 // Copyright (C) 2026 rhamenator
 
 #include "dsp.h"
+#include "live_reconfiguration.h"
 #include "readable_peak.h"
 #include "system_volume_control.h"
 #include <QFontDatabase>
@@ -682,6 +683,16 @@ public:
     bool legacyVolumeManaged() const { return legacyVolumeManaged_; }
     void setStudio(const soundcurrent::studio::Session &s) {
         if(s.offline)return;
+        if(active()&&s.engine.channels.size()!=session_.engine.channels.size()) {
+            int capacity=0;
+            for(const auto &value:pactlList("sinks"))if(value.toObject().value("name").toString()==target_.name)
+                capacity=value.toObject().value("channel_map").toString().split(',',Qt::SkipEmptyParts).size();
+            if(s.engine.channels.size()>std::size_t(std::min(64,capacity)))
+                throw std::runtime_error(SC_TR("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.").toStdString());
+            const auto device=target_;const auto bands=bands_;const auto gain=gain_;const auto balance=balance_;
+            soundcurrent::replaceLiveSession(session_,s,[]{},[this]{stop();},[&]{start(device,bands,gain,balance);});
+            return;
+        }
         if(active()){std::vector<soundcurrent::EqBand> filters;for(const auto &b:bands_)filters.push_back({b.frequency,b.gain,b.q,b.type});bridge_.update(s.effective(filters,gain_,balance_),s.routing);}
         session_=s;
     }
@@ -1888,8 +1899,7 @@ public:
         auto *deviceBox = new QGroupBox(SC_TR("Output device"));
         auto *deviceLayout = new QVBoxLayout(deviceBox);
         settingsRoot->addWidget(deviceBox);
-        auto *outputBox = new QGroupBox(SC_TR("Playback"));
-        auto *outputLayout = new QVBoxLayout(outputBox);
+        auto *outputLayout = deviceLayout;
         auto *outputRow = new QHBoxLayout;
         outputCombo_ = new QComboBox;
         outputCombo_->setAccessibleName(SC_TR("Output device"));
@@ -1904,19 +1914,22 @@ public:
         power_->setAccessibleName(SC_TR("Equalizer on or off"));
         power_->setToolTip(SC_TR("Click to turn the equalizer on or off"));
         outputRow->addWidget(power_);
-        outputRow->addStretch();
         auto *quit = new QPushButton(SC_TR("Quit app"));
         quit->setAccessibleName(SC_TR("Quit SoundCurrent Studio"));
         quit->setToolTip(SC_TR("Exit SoundCurrent Studio and restore normal audio"));
-        outputRow->addWidget(quit);
-        outputLayout->addLayout(outputRow);
+        quit->setObjectName("persistentQuit");
+        tabs_->setCornerWidget(quit,Qt::TopRightCorner);
         outputCombo_->setLayoutDirection(Qt::LeftToRight);
         systemVolume_ = new soundcurrent::SystemVolumeControl(startEnabled);
-        playbackLayout->addWidget(systemVolume_);
-        auto *gainBox = new QGroupBox(SC_TR("Post gain"));
-        auto *gainRow = new QHBoxLayout(gainBox);
-        settingsRoot->addWidget(gainBox);
-        gainRow->addWidget(new QLabel(SC_TR("Post gain")));
+        outputRow->addWidget(systemVolume_,1);
+        auto *monitorChannels=new QPushButton(SC_TR("Channel meters"));
+        monitorChannels->setObjectName("showChannelMeters");
+        outputRow->addWidget(monitorChannels);
+        connect(monitorChannels,&QPushButton::clicked,studio_,[this]{studio_->showMonitoring();});
+        playbackLayout->addLayout(outputRow);
+        auto *gainRow = new QHBoxLayout;
+        playbackLayout->addLayout(gainRow);
+        gainRow->addWidget(new QLabel(SC_TR("Output gain")));
         outputGain_ = new QSlider(Qt::Horizontal);
         outputGain_->setLayoutDirection(Qt::LeftToRight);
         outputGain_->setRange(int(soundcurrent::kMinPostGainDb * 2), 24);
@@ -2362,7 +2375,7 @@ public:
         meterHelp->setWordWrap(true);
         eqLayout->addWidget(meterHelp);
         root->insertWidget(0, eqBox);
-        root->addWidget(outputBox);
+
         root->addStretch();
 
         loadCustomPresets();
@@ -2616,7 +2629,7 @@ protected:
 public:
     void selfTestPlaybackLayout() {
         auto *bar = findChild<QWidget *>("persistentPlaybackControls");
-        if (!bar || !bar->isAncestorOf(systemVolume_->slider())) qFatal("System volume is not in the persistent playback bar");
+        if (!bar || !bar->isAncestorOf(outputGain_) || !bar->isAncestorOf(power_) || !bar->isAncestorOf(systemVolume_->slider())) qFatal("System volume is not in the persistent playback bar");
         systemVolume_->applyRead(71,false);
         if(systemVolume_->slider()->value()!=71)qFatal("System volume read synchronization failed");
         systemVolume_->slider()->setValue(42); // Isolated test: never changes system audio.
@@ -2634,6 +2647,10 @@ public:
                 const QRect gainRect(systemVolume_->slider()->mapTo(this, QPoint()), systemVolume_->slider()->size());
                 if (!systemVolume_->slider()->isVisible() || !rect().contains(gainRect))
                     qFatal("System volume is inaccessible without scrolling");
+                auto *quit=findChild<QPushButton *>("persistentQuit");
+                const QRect quitRect(quit->mapTo(this,QPoint()),quit->size());
+                const QRect outputRect(outputGain_->mapTo(this,QPoint()),outputGain_->size());
+                if(!quit->isVisible() || !rect().contains(quitRect) || !rect().contains(outputRect))qFatal("Quit/output gain scrolled out of view");
                 const auto meterGeometry = overallLevel_->geometry();
                 const auto textGeometry = peakStatus_->geometry();
                 const auto gainGeometry = systemVolume_->slider()->geometry();
@@ -4248,6 +4265,12 @@ int main(int argc, char **argv) {
         tabs->setCurrentIndex(1);app.processEvents();
         if (!screenshotDirectory.isEmpty() && !testWindow.grab().save(QDir(screenshotDirectory).filePath("studio.png")))
             qFatal("Cannot save Studio UI screenshot");
+        if(!screenshotDirectory.isEmpty()) {
+            auto *workPages=testWindow.findChild<QTabWidget *>("studioWorkPages");
+            for(int page=0;page<workPages->count();++page) {workPages->setCurrentIndex(page);app.processEvents();
+                testWindow.grab().save(QDir(screenshotDirectory).filePath(QString("studio-page-%1.png").arg(page)));}
+            workPages->setCurrentIndex(0);
+        }
         tabs->setCurrentIndex(2);app.processEvents();
         if (!speakers->isVisible()) qFatal("Settings tab does not display its controls");
         tabs->setCurrentIndex(0);

@@ -83,9 +83,9 @@ source history, GPL-3.0-only license and third-party notices.
 
 The shared first-page EQ retains Flat as its default, 34 listening presets,
 5–31 editable bands, post gain (-60 to +12 dB in 0.5 dB steps), balance, colored FFT meters and peak markers.
-System volume, stereo balance and the overall meter stay visible below the tabs
+System volume, Output gain, stereo balance and the overall meter stay visible below the tabs
 without scrolling. The volume slider follows OS/media-key volume in both directions;
-processing post gain remains under Settings. The right-aligned peak number updates
+processing post gain is labeled Output gain and remains visible. The right-aligned peak number updates
 at a readable five times per second with smoothed ballistics and a held clipping warning.
 Studio adds a centered expansion/compression control, an independent linked output
 limiter, and speaker-position meters/room balance for recognized surround layouts.
@@ -334,3 +334,6 @@ Interface language and regional number/date formatting are independent settings.
 Current localization completion work is described in [the progress record](docs/localization-progress.md). Published 1.1.0 packages are unchanged by these development commits.
 
 See [metering, dynamics, volume and room balance](docs/metering-dynamics-and-balance.md), including the stereo-only development hardware limitation and the bounds of silent multichannel verification.
+
+[Using Studio](docs/using-studio.md) explains the Effects/Mixer/channel/render pages,
+input versus output gain, Apply settings, the Channel meters dialog and opt-in startup.

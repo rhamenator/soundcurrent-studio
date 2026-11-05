@@ -208,6 +208,21 @@ void safetyAndRouting() {
           "In-place channel swap is wrong");
 }
 }
+void inputGain() {
+    using namespace soundcurrent;using namespace soundcurrent::studio;
+    EngineSettings s;s.channels.resize(2);s.automaticHeadroom=false;s.preGainDb=6;
+    AudioEngine engine(48000,2);check(engine.configure(s),"input gain configure");
+    std::array<float,2> frame{.1f,-.1f};engine.process(frame);
+    check(std::abs(frame[0]-.1*std::pow(10.,6./20))<1e-7,"input gain amplitude");
+    s.bypass=true;engine.configure(s);frame={.1f,-.1f};engine.process(frame);check(frame[0]==.1f,"input gain not bypassed");
+    s.bypass=false;s.preGainDb=25;check(!engine.configure(s),"invalid input gain accepted");
+    s.preGainDb=std::numeric_limits<double>::quiet_NaN();check(!engine.configure(s),"NaN input gain accepted");
+    s.preGainDb=6;s.enhancements.values[DynamicBoost]=1;s.enhancements.values[Makeup]=0;
+    AudioEngine before(48000,2),after(48000,2);check(before.configure(s),"pre dynamics gain configure");
+    s.preGainDb=0;s.postGainDb=6;check(after.configure(s),"post dynamics gain configure");
+    std::vector<float> pre(48000,.1f),post=pre;before.process(pre);after.process(post);
+    check(pre.back()<post.back()*.8f,"input gain does not precede compression");
+}
 void linkedLimiter() {
     using namespace soundcurrent;using namespace soundcurrent::studio;
     EngineSettings s;s.channels.resize(8);s.automaticHeadroom=false;
@@ -223,7 +238,7 @@ void linkedLimiter() {
 }
 int main() {
     try {
-        linkedLimiter(); enhancementIntegration(); identityAndBounds(); eqResponse(); delayAndLiveGain(); reverbAndBlocks(); safetyAndRouting();
+        inputGain(); linkedLimiter(); enhancementIntegration(); identityAndBounds(); eqResponse(); delayAndLiveGain(); reverbAndBlocks(); safetyAndRouting();
         std::puts("PASS: 1-256 channels, independent EQ/gain, delay/reverb tails, routing, planar/block equivalence, bounds and allocation-free processing");
         return 0;
     } catch (const std::exception &error) {

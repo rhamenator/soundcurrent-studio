@@ -347,6 +347,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Käytä profiilia</translation>
     </message>
     <message>
+      <source>Apply settings</source>
+      <translation>Ota asetukset käyttöön</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Apply suggested EQ</source>
       <translation>Käytä ehdotettua taajuuskorjausta</translation>
     </message>
@@ -676,6 +681,11 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Muutokset tulevat voimaan heti</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanava</translation>
     </message>
@@ -701,6 +711,11 @@ Haluatko silti poistaa sen?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Kanavaindeksit alkavat numerosta 1. Olemassa olevia tulostiedostoja ei koskaan korvata.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Kanavamittarit</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1288,6 +1303,7 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Expansion / compression</source>
       <translation>Laajennus / kompressio</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
     </message>
     <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
@@ -1550,6 +1566,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Tulokanava</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Tulovahvistus</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>Tulossa on enemmän kanavia kuin Studio-kokoonpanossa; valitse vastaava tai suurempi kokoonpano</translation>
     </message>
@@ -1703,6 +1724,11 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Virheellinen tulovahvistus</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Virheellinen mitattu vahvistinprofiili. Vaatii mallin, HTTPS-mittauslähteen, olosuhteet ja 1–16 rajoissa olevaa PK/LS/HS-suodatinta. Katso profiilimuoto README-tiedostosta.</translation>
     </message>
@@ -1834,6 +1860,7 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Limiter</source>
       <translation>Rajoitin</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
       <source>Linear route gain (negative = invert)</source>
@@ -2057,6 +2084,11 @@ Haluatko silti poistaa sen?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Puuttuvat, päällekkäiset tai liian suuret WAVE-muototiedot</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Mikseri</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2302,6 +2334,11 @@ Haluatko silti poistaa sen?</translation>
       <source>Output exceeds the RIFF/WAVE 4 GiB limit</source>
       <translation>Tuloste ylittää RIFF/WAVE-muodon 4 GiB:n rajan</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Output gain</source>
+      <translation>Lähtövahvistus</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Output has no volume channels</source>
@@ -2628,10 +2665,6 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Virtuaaliulostulon miksausmuodon lukeminen</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Valmis. Efektit ovat käsittelemättömiä, kunnes ne otetaan käyttöön.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3337,6 +3370,7 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>System volume</source>
       <translation>Järjestelmän äänenvoimakkuus</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
     </message>
     <message>
       <source>TV Dialogue</source>
@@ -3478,10 +3512,6 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Ota taajuuskorjain käyttöön</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Poista toisto käytöstä ennen toisen kanava-asettelun käyttöönottoa reaaliaikaista käsittelyä varten</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>
