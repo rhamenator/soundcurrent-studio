@@ -4480,9 +4480,9 @@ int main(int argc, char **argv) {
         if (presets->currentText() != "Flat") qFatal("Flat is not the default preset");
         presets->setCurrentIndex(presets->findData("Balanced"));
         {
-            MainWindow reopened(false, true);
+            auto reopened = std::make_unique<MainWindow>(false, true);
             bool restoredSelection = false;
-            for (auto *combo : reopened.findChildren<QComboBox *>())
+            for (auto *combo : reopened->findChildren<QComboBox *>())
                 if (combo->findData("Balanced") >= 0)
                     restoredSelection = combo->currentData().toString() == "Balanced";
             if (!restoredSelection) qFatal("Reopened UI lost the listening preset");
@@ -4494,9 +4494,9 @@ int main(int argc, char **argv) {
         }
         gain->setValue(3.5);
         {
-            MainWindow reopened(false, true);
+            auto reopened = std::make_unique<MainWindow>(false, true);
             bool custom = false;
-            for (auto *combo : reopened.findChildren<QComboBox *>())
+            for (auto *combo : reopened->findChildren<QComboBox *>())
                 if (combo->findData("Balanced") >= 0)
                     custom = combo->currentData().toString() == "Custom";
             if (!custom) qFatal("Edited curve lost Custom identity on reopen");
@@ -4505,8 +4505,8 @@ int main(int argc, char **argv) {
             !applicationLogo().name().isEmpty()) qFatal("Embedded tray logo is missing or theme-dependent");
         QSettings().setValue("listening/state", QByteArray("{invalid"));
         {
-            MainWindow reopened(false, true);
-            for (auto *combo : reopened.findChildren<QComboBox *>())
+            auto reopened = std::make_unique<MainWindow>(false, true);
+            for (auto *combo : reopened->findChildren<QComboBox *>())
                 if (combo->findData("Balanced") >= 0 && combo->currentData().toString() != "Flat")
                     qFatal("Invalid saved listening state did not fall back to Flat");
         }
