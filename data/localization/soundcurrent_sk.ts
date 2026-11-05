@@ -1890,6 +1890,11 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Naživo</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Aktívne rozloženie sa líši od pripraveného rozloženia</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Živé rozloženia musia zodpovedať možnostiam vybraného zvukového zariadenia. Offline renderovanie a tiché testy ukazovateľov podporujú všetkých 256 kanálov.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Merače zobrazujú aktuálne prehrávanie</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

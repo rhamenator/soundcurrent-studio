@@ -93,3 +93,9 @@ Design references:
 
 See [Using Studio](using-studio.md) for the Effects, Mixer, Selected channel and
 Offline rendering pages, input/output gain, and immediate versus staged settings.
+
+Live channel-meter polling continues in offline/staged editing. Matching channel
+counts display the live route; mismatched counts are reported explicitly and
+not drawn as staged-channel readings. The silent test overrides the live feed.
+The manual Linux null-sink fixture checks eight-channel audio and meter-peak
+delivery without sending test audio to physical speakers.

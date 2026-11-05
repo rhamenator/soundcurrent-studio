@@ -1890,6 +1890,11 @@ Do you want to delete it anyway?</source>
       <translation>สด</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>รูปแบบที่ใช้งานต่างจากรูปแบบที่เตรียมไว้</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>โครงร่างสำหรับใช้งานสดต้องมีแชนเนลไม่เกินอุปกรณ์เสียงที่เลือก การเรนเดอร์ออฟไลน์และการทดสอบมิเตอร์แบบเงียบรองรับครบ 256 แชนเนล</translation>
     </message>
@@ -2000,6 +2005,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Metal</source>
       <translation>เมทัล</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>มิเตอร์แสดงเสียงที่กำลังเล่น</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

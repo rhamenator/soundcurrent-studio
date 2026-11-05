@@ -246,5 +246,7 @@
   "Channel meters": "Command opening a modeless dialog containing channel meters and room balance. Unverified native review.",
   "Apply settings": "Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.",
   "Invalid input gain": "DSP input gain must be finite and between -60 and +24 dB. Unverified native review.",
-  "Changes apply immediately": "Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified."
+  "Changes apply immediately": "Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.",
+  "Meters show live playback": "Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.",
+  "Live layout differs from staged layout": "The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified."
 }

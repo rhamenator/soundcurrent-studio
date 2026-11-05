@@ -1890,6 +1890,11 @@ Do you want to delete it anyway?</source>
       <translation>עיבוד חי</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>הפריסה הפעילה שונה מהפריסה שהוכנה</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>תצורות לעיבוד חי חייבות להתאים למכשיר השמע שנבחר. עיבוד לקובץ ללא חיבור ובדיקות מחוונים שקטות תומכים בכל 256 הערוצים.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Metal</source>
       <translation>מטאל</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>המדים מציגים את ההשמעה הנוכחית</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

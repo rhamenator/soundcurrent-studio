@@ -1890,6 +1890,11 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>En direct</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>La disposition active diffère de la disposition préparée</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>La configuration en direct doit être compatible avec l’appareil audio sélectionné. Le rendu hors ligne et les tests silencieux des indicateurs prennent en charge les 256 canaux.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Les indicateurs affichent la lecture en cours</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

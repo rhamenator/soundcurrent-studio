@@ -1890,6 +1890,11 @@ Vil du slette den alligevel?</translation>
       <translation>Live</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Det aktive layout er forskelligt fra det forberedte</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Live-layout skal passe til den valgte lydenhed. Offline-rendering og lydløse indikatortest understøtter alle 256 kanaler.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Målerne viser den aktuelle afspilning</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

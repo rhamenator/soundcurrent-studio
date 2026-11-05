@@ -9,6 +9,12 @@ namespace soundcurrent::studio {
 // Unknown/legacy/custom names are user data and remain verbatim.
 inline QString channelNameText(const Session &session, int channel) {
     const auto role = session.defaultNameRole(channel);
+    // Legacy generated surround names can survive a resize to stereo. Display
+    // the stereo pair consistently without rewriting user-owned saved names.
+    if(session.engine.channels.size()==2) {
+        if(role=="front-left")return SC_TR("Left");
+        if(role=="front-right")return SC_TR("Right");
+    }
     if (role == "channel") return SC_TR("Channel %1").arg(QLocale().toString(channel + 1));
     if (role == "mono") return SC_TR("Mono");
     if (role == "left") return SC_TR("Left");

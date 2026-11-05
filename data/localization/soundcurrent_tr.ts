@@ -1890,6 +1890,11 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Canlı</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Etkin düzen hazırlanan düzenden farklı</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Canlı düzenler seçili ses cihazına uygun olmalıdır. Çevrimdışı ses dosyası oluşturma ve sessiz gösterge testleri 256 kanalın tümünü destekler.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Göstergeler geçerli oynatmayı gösterir</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

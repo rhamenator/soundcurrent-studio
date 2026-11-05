@@ -1890,6 +1890,11 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Moja kwa moja</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Mpangilio unaotumika unatofautiana na ulioandaliwa</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Mipangilio ya moja kwa moja lazima itoshee kifaa cha sauti kilichochaguliwa. Uundaji wa faili nje ya mtandao na majaribio ya kimya ya mita hutumia chaneli zote 256.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Vipima kiwango vinaonyesha uchezaji wa sasa</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

@@ -159,6 +159,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     monitorDialog_=new QDialog(this);monitorDialog_->setObjectName("channelMonitoring");monitorDialog_->setWindowTitle(SC_TR("Channel meters"));
     auto *monitorRoot=new QVBoxLayout(monitorDialog_);auto *monitorScroll=new QScrollArea;monitorScroll->setWidgetResizable(true);monitorRoot->addWidget(monitorScroll);
     auto *monitorPage=new QWidget;auto *monitorLayout=new QVBoxLayout(monitorPage);monitorScroll->setWidget(monitorPage);
+    meterSource_=new QLabel;meterSource_->setObjectName("channelMeterSource");meterSource_->setWordWrap(true);monitorLayout->addWidget(meterSource_);
     monitorLayout->addWidget(meterBank_);monitorLayout->addWidget(meterView_);monitorLayout->addWidget(preview_);monitorLayout->addWidget(roomBalanceBox_);monitorLayout->addWidget(meters_);monitorLayout->addStretch();
     auto *showMeters=new QPushButton(SC_TR("Channel meters"));showMeters->setObjectName("studioShowMeters");layoutForm->addRow(showMeters);connect(showMeters,&QPushButton::clicked,this,[this]{showMonitoring();});
     status_ = new QLabel; status_->setWordWrap(true);root->insertWidget(1,status_);root->addStretch();
@@ -205,7 +206,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
         change([&](Session &s){s.routing[std::size_t(channel_->currentIndex())*s.engine.channels.size()+std::size_t(input)]=0;});loadChannel();});
     connect(identity,&QPushButton::clicked,this,[this]{change([](Session &s){s.routing=Session(s.engine.channels.size()).routing;});loadChannel();});
     connect(save,&QPushButton::clicked,this,[this]{saveProfile();});connect(open,&QPushButton::clicked,this,[this]{openProfile();});connect(undo_,&QPushButton::clicked,this,[this]{undo();});
-    connect(preview_,&QCheckBox::toggled,this,[this](bool on){if(on)startPreview();else {previewEngine_.reset();setLiveLevels({});}});
+    connect(preview_,&QCheckBox::toggled,this,[this](bool on){if(on){startPreview();meterSource_->setText(SC_TR("Test channel meters with a silent generated signal"));}else {previewEngine_.reset();setLiveLevels({});}});
     connect(render_,&QPushButton::clicked,this,[this]{render();});connect(cancel_,&QPushButton::clicked,this,[this]{cancelJob_=true;});
     connect(&timer_,&QTimer::timeout,this,[this]{tick();});timer_.start(20);rebuild();
 }
@@ -314,6 +315,14 @@ void StudioPanel::startPreview() {
 }
 void StudioPanel::setLiveLevels(std::span<const float> levels) {
     if(preview_->isChecked())return;
+    if(!levels.empty() && levels.size()!=session_.engine.channels.size()) {
+        meterSource_->setText(SC_TR("Live layout differs from staged layout"));
+        updateDisplayedLevels({});return;
+    }
+    meterSource_->setText(levels.empty()?SC_TR("Equalizer is off. Your audio uses its normal output."):SC_TR("Meters show live playback"));
+    updateDisplayedLevels(levels);
+}
+void StudioPanel::updateDisplayedLevels(std::span<const float> levels) {
     meterView_->setLevels(levels);
     for(int c=0;c<meters_->rowCount();++c){const float value=std::size_t(c)<levels.size()?levels[std::size_t(c)]:0;
         auto *item=meters_->item(c,1);item->setText(value>1e-8?QLocale().toString(20*std::log10(value),'f',1)+SC_TR(" dBFS"):SC_TR("−∞ dBFS"));
@@ -331,7 +340,8 @@ void StudioPanel::tick() {
         const auto n=session_.engine.channels.size();for(std::size_t f=0;f<960;++f)for(std::size_t c=0;c<n;++c)
             raw_[f*n+c]=float(.05*std::sin(2*std::numbers::pi*(110+10*c)*(previewFrame_+f)/48000.0));
         previewFrame_+=960;previewRouter_->process(raw_,processed_);previewEngine_->process(processed_);
-        preview_->blockSignals(true);preview_->setChecked(false);setLiveLevels(previewEngine_->channelPeaks());preview_->setChecked(true);preview_->blockSignals(false);
+        updateDisplayedLevels(previewEngine_->channelPeaks());
+        meterSource_->setText(SC_TR("Test channel meters with a silent generated signal"));
     }
     if(renderJob_.valid()) {progress_->setValue(jobProgress_);if(renderJob_.wait_for(std::chrono::seconds(0))==std::future_status::ready){status_->setText(renderJob_.get());render_->setEnabled(true);cancel_->setEnabled(false);}}
 }
@@ -474,6 +484,14 @@ void StudioPanel::selfTest() {
     session_ = Session(2); rebuild();
     const std::array<float,2> displayedLevels{.25f,.5f}, liveLevels{.9f,.8f};
     setLiveLevels(displayedLevels);
+    session_.offline=true;updateApplyState();
+    setLiveLevels(liveLevels);
+    if(meterView_->levelForChannel(0)!=liveLevels[0] || meterSource_->text()!=SC_TR("Meters show live playback"))
+        qFatal("Offline editing suppresses actual live meters");
+    const std::array<float,1> wrongLayout{.8f};setLiveLevels(wrongLayout);
+    if(meterView_->levelForChannel(0)!=0 || meterSource_->text()!=SC_TR("Live layout differs from staged layout"))
+        qFatal("Mismatched live layout shown as draft channels");
+    session_.offline=false;updateApplyState();setLiveLevels(displayedLevels);
     const auto displayedText=meters_->item(0,1)->text();
     preview_->setChecked(true);
     for(const auto feed:{std::span<const float>(liveLevels),std::span<const float>()}) {
@@ -484,6 +502,8 @@ void StudioPanel::selfTest() {
     }
     preview_->setChecked(false);
     if(meterView_->levelForChannel(0)!=0)qFatal("Stopping silent preview did not reset graphical meters");
+    setLiveLevels(liveLevels);
+    if(meterView_->levelForChannel(0)!=liveLevels[0])qFatal("Live meters did not resume after silent preview");
     const auto noEdit = session_.json();
     QMetaObject::invokeMethod(name_, "editingFinished", Qt::DirectConnection);
     if (session_.json() != noEdit || session_.defaultNameRole(0) != "left")
@@ -524,6 +544,7 @@ void StudioPanel::selfTest() {
         count_->setValue(6);QCoreApplication::processEvents();
         if(!session_.hasRoomLayout() || roomBalanceBox_->isHidden())qFatal("Choosing surround did not expose room balance");
         monitorDialog_->grab().save(shots+"/monitor-surround.png");
+        roomBalanceBox_->grab().save(shots+"/balance-surround.png");
         count_->setValue(256);QCoreApplication::processEvents();monitorDialog_->grab().save(shots+"/monitor-256.png");
     }
     monitorDialog_->hide();

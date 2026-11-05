@@ -1890,6 +1890,11 @@ Do you want to delete it anyway?</source>
       <translation>زنده</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>چیدمان فعال با چیدمان آماده‌شده متفاوت است</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>چیدمان‌های زنده باید با دستگاه صوتی انتخاب‌شده سازگار باشند. رندر آفلاین و آزمون‌های بی‌صدای نشانگرها از همه 256 کانال پشتیبانی می‌کنند.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Metal</source>
       <translation>متال</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>سطح‌سنج‌ها پخش فعلی را نشان می‌دهند</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

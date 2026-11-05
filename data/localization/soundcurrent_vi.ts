@@ -1890,6 +1890,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Trực tiếp</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Bố trí đang dùng khác với bố trí chờ áp dụng</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Bố cục xử lý trực tiếp phải phù hợp với số kênh của thiết bị âm thanh đã chọn. Kết xuất ngoại tuyến và thử đồng hồ bằng tín hiệu không tiếng hỗ trợ đủ 256 kênh.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Đồng hồ hiển thị âm thanh đang phát</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

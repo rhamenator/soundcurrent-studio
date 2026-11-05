@@ -1890,6 +1890,11 @@ Do you want to delete it anyway?</source>
       <translation>라이브</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>활성 레이아웃이 적용 대기 중인 레이아웃과 다릅니다</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>라이브 레이아웃의 채널 수는 선택한 오디오 장치에 맞아야 합니다. 오프라인 렌더링과 무음 미터 테스트는 전체 256채널을 지원합니다.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Metal</source>
       <translation>메탈</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>미터가 현재 재생을 표시합니다</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

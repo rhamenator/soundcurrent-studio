@@ -39,6 +39,12 @@ int main(int argc,char **argv){QApplication app(argc,argv);try{
         meters.show();app.processEvents();
         if(const auto path=qEnvironmentVariable("SOUNDCURRENT_SPATIAL_QA_DIR");!path.isEmpty())meters.grab().save(path+QString("/meters-%1.png").arg(n));
     }
+    Session stereo(2),surroundNames(6);
+    for(int c=0;c<2;++c){stereo.names[c]=surroundNames.names[c];stereo.nameProvenance[std::size_t(c)]=surroundNames.nameProvenance[std::size_t(c)];}
+    const auto storedStereo=stereo.json();
+    check(channelNameText(stereo,0)==SC_TR("Left") && channelNameText(stereo,1)==SC_TR("Right"),"stereo legacy names inconsistent");
+    check(stereo.json()==storedStereo,"stereo naming mutated saved profile");
+    stereo.setCustomName(0,"Front left custom");check(channelNameText(stereo,0)=="Front left custom","custom stereo name replaced");
     Session room(8);room.engine.preGainDb=-3;room.roomBalanceX=.5;room.roomBalanceY=.25;
     const auto settings=room.effective();
     check(std::abs(settings.channels[0].gainDb-20*std::log10(.5*.75))<1e-9,"front-left balance incorrect");

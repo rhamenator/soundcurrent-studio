@@ -1890,6 +1890,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>În timp real</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Configurația activă diferă de cea pregătită</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Configurațiile în timp real trebuie să se potrivească dispozitivului audio selectat. Randarea offline și testele silențioase ale indicatoarelor acceptă toate cele 256 de canale.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Metal</source>
       <translation>Metal</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Indicatoarele arată redarea curentă</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

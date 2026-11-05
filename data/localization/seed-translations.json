@@ -160,7 +160,9 @@
     "Channel meters",
     "Apply settings",
     "Invalid input gain",
-    "Changes apply immediately"
+    "Changes apply immediately",
+    "Meters show live playback",
+    "Live layout differs from staged layout"
   ],
   "languages": {
     "de": [
@@ -325,7 +327,9 @@
       "Kanalpegelanzeigen",
       "Einstellungen anwenden",
       "Ungültige Eingangsverstärkung",
-      "Änderungen werden sofort wirksam"
+      "Änderungen werden sofort wirksam",
+      "Pegelanzeigen zeigen die laufende Wiedergabe",
+      "Das aktive Layout unterscheidet sich vom vorbereiteten Layout"
     ],
     "fr": [
       "Français",
@@ -489,7 +493,9 @@
       "Indicateurs de niveau des canaux",
       "Appliquer les réglages",
       "Gain d’entrée non valide",
-      "Les modifications s’appliquent immédiatement"
+      "Les modifications s’appliquent immédiatement",
+      "Les indicateurs affichent la lecture en cours",
+      "La disposition active diffère de la disposition préparée"
     ],
     "es": [
       "Español",
@@ -653,7 +659,9 @@
       "Medidores de canales",
       "Aplicar ajustes",
       "Ganancia de entrada no válida",
-      "Los cambios se aplican inmediatamente"
+      "Los cambios se aplican inmediatamente",
+      "Los medidores muestran la reproducción en directo",
+      "La disposición activa difiere de la preparada"
     ],
     "it": [
       "Italiano",
@@ -817,7 +825,9 @@
       "Misuratori dei canali",
       "Applica impostazioni",
       "Guadagno di ingresso non valido",
-      "Le modifiche si applicano immediatamente"
+      "Le modifiche si applicano immediatamente",
+      "I misuratori mostrano la riproduzione in corso",
+      "La disposizione attiva è diversa da quella preparata"
     ],
     "pt-PT": [
       "Português (Portugal)",
@@ -981,7 +991,9 @@
       "Medidores dos canais",
       "Aplicar definições",
       "Ganho de entrada inválido",
-      "As alterações são aplicadas imediatamente"
+      "As alterações são aplicadas imediatamente",
+      "Os medidores mostram a reprodução atual",
+      "A disposição ativa difere da disposição preparada"
     ],
     "pt-BR": [
       "Português (Brasil)",
@@ -1145,7 +1157,9 @@
       "Medidores dos canais",
       "Aplicar configurações",
       "Ganho de entrada inválido",
-      "As alterações são aplicadas imediatamente"
+      "As alterações são aplicadas imediatamente",
+      "Os medidores mostram a reprodução atual",
+      "A disposição ativa difere da disposição preparada"
     ],
     "nl": [
       "Nederlands",
@@ -1309,7 +1323,9 @@
       "Kanaalmeters",
       "Instellingen toepassen",
       "Ongeldige ingangsversterking",
-      "Wijzigingen worden direct toegepast"
+      "Wijzigingen worden direct toegepast",
+      "Meters tonen de huidige weergave",
+      "De actieve indeling verschilt van de voorbereide indeling"
     ],
     "pl": [
       "Polski",
@@ -1473,7 +1489,9 @@
       "Mierniki kanałów",
       "Zastosuj ustawienia",
       "Nieprawidłowe wzmocnienie wejściowe",
-      "Zmiany są stosowane natychmiast"
+      "Zmiany są stosowane natychmiast",
+      "Mierniki pokazują bieżące odtwarzanie",
+      "Aktywny układ różni się od przygotowanego układu"
     ],
     "cs": [
       "Čeština",
@@ -1637,7 +1655,9 @@
       "Měřiče kanálů",
       "Použít nastavení",
       "Neplatné vstupní zesílení",
-      "Změny se projeví okamžitě"
+      "Změny se projeví okamžitě",
+      "Měřiče zobrazují aktuální přehrávání",
+      "Aktivní rozložení se liší od připraveného rozložení"
     ],
     "sk": [
       "Slovenčina",
@@ -1801,7 +1821,9 @@
       "Merače kanálov",
       "Použiť nastavenia",
       "Neplatné vstupné zosilnenie",
-      "Zmeny sa prejavia okamžite"
+      "Zmeny sa prejavia okamžite",
+      "Merače zobrazujú aktuálne prehrávanie",
+      "Aktívne rozloženie sa líši od pripraveného rozloženia"
     ],
     "uk": [
       "Українська",
@@ -1965,7 +1987,9 @@
       "Індикатори каналів",
       "Застосувати налаштування",
       "Неприпустиме вхідне підсилення",
-      "Зміни застосовуються негайно"
+      "Зміни застосовуються негайно",
+      "Індикатори показують поточне відтворення",
+      "Активна схема відрізняється від підготовленої"
     ],
     "ru": [
       "Русский",
@@ -2129,7 +2153,9 @@
       "Индикаторы каналов",
       "Применить настройки",
       "Недопустимое входное усиление",
-      "Изменения применяются сразу"
+      "Изменения применяются сразу",
+      "Индикаторы показывают текущее воспроизведение",
+      "Активная схема отличается от подготовленной"
     ],
     "el": [
       "Ελληνικά",
@@ -2293,7 +2319,9 @@
       "Μετρητές καναλιών",
       "Εφαρμογή ρυθμίσεων",
       "Μη έγκυρη απολαβή εισόδου",
-      "Οι αλλαγές εφαρμόζονται αμέσως"
+      "Οι αλλαγές εφαρμόζονται αμέσως",
+      "Οι μετρητές δείχνουν την τρέχουσα αναπαραγωγή",
+      "Η ενεργή διάταξη διαφέρει από την προετοιμασμένη"
     ],
     "tr": [
       "Türkçe",
@@ -2457,7 +2485,9 @@
       "Kanal göstergeleri",
       "Ayarları uygula",
       "Geçersiz giriş kazancı",
-      "Değişiklikler hemen uygulanır"
+      "Değişiklikler hemen uygulanır",
+      "Göstergeler geçerli oynatmayı gösterir",
+      "Etkin düzen hazırlanan düzenden farklı"
     ],
     "sv": [
       "Svenska",
@@ -2621,7 +2651,9 @@
       "Kanalmätare",
       "Tillämpa inställningar",
       "Ogiltig ingångsförstärkning",
-      "Ändringar tillämpas direkt"
+      "Ändringar tillämpas direkt",
+      "Mätarna visar aktuell uppspelning",
+      "Den aktiva layouten skiljer sig från den förberedda"
     ],
     "da": [
       "Dansk",
@@ -2785,7 +2817,9 @@
       "Kanalmålere",
       "Anvend indstillinger",
       "Ugyldig indgangsforstærkning",
-      "Ændringer anvendes med det samme"
+      "Ændringer anvendes med det samme",
+      "Målerne viser den aktuelle afspilning",
+      "Det aktive layout er forskelligt fra det forberedte"
     ],
     "nb": [
       "Norsk bokmål",
@@ -2949,7 +2983,9 @@
       "Kanalmålere",
       "Bruk innstillinger",
       "Ugyldig inngangsforsterkning",
-      "Endringer brukes umiddelbart"
+      "Endringer brukes umiddelbart",
+      "Målerne viser gjeldende avspilling",
+      "Det aktive oppsettet er forskjellig fra det klargjorte"
     ],
     "fi": [
       "Suomi",
@@ -3113,7 +3149,9 @@
       "Kanavamittarit",
       "Ota asetukset käyttöön",
       "Virheellinen tulovahvistus",
-      "Muutokset tulevat voimaan heti"
+      "Muutokset tulevat voimaan heti",
+      "Mittarit näyttävät nykyisen toiston",
+      "Aktiivinen asettelu eroaa valmistellusta asettelusta"
     ],
     "ro": [
       "Română",
@@ -3277,7 +3315,9 @@
       "Indicatoare de canale",
       "Aplică setările",
       "Câștig de intrare nevalid",
-      "Modificările se aplică imediat"
+      "Modificările se aplică imediat",
+      "Indicatoarele arată redarea curentă",
+      "Configurația activă diferă de cea pregătită"
     ],
     "hu": [
       "Magyar",
@@ -3441,7 +3481,9 @@
       "Csatornamérők",
       "Beállítások alkalmazása",
       "Érvénytelen bemeneti erősítés",
-      "A módosítások azonnal érvénybe lépnek"
+      "A módosítások azonnal érvénybe lépnek",
+      "A mérők az aktuális lejátszást mutatják",
+      "Az aktív elrendezés eltér az előkészítettől"
     ],
     "ar": [
       "العربية",
@@ -3605,7 +3647,9 @@
       "مقاييس القنوات",
       "تطبيق الإعدادات",
       "كسب دخل غير صالح",
-      "تُطبَّق التغييرات فورًا"
+      "تُطبَّق التغييرات فورًا",
+      "تعرض المقاييس التشغيل الحالي",
+      "يختلف التخطيط النشط عن التخطيط المُجهَّز"
     ],
     "he": [
       "עברית",
@@ -3769,7 +3813,9 @@
       "מדי ערוצים",
       "החלת הגדרות",
       "הגבר כניסה לא תקין",
-      "השינויים מוחלים מיד"
+      "השינויים מוחלים מיד",
+      "המדים מציגים את ההשמעה הנוכחית",
+      "הפריסה הפעילה שונה מהפריסה שהוכנה"
     ],
     "fa": [
       "فارسی",
@@ -3933,7 +3979,9 @@
       "سطح‌سنج‌های کانال",
       "اعمال تنظیمات",
       "بهرهٔ ورودی نامعتبر",
-      "تغییرات بلافاصله اعمال می‌شوند"
+      "تغییرات بلافاصله اعمال می‌شوند",
+      "سطح‌سنج‌ها پخش فعلی را نشان می‌دهند",
+      "چیدمان فعال با چیدمان آماده‌شده متفاوت است"
     ],
     "zh-Hans": [
       "简体中文",
@@ -4097,7 +4145,9 @@
       "声道电平表",
       "应用设置",
       "输入增益无效",
-      "更改立即生效"
+      "更改立即生效",
+      "电平表显示当前播放",
+      "当前布局与待应用布局不同"
     ],
     "zh-Hant": [
       "繁體中文",
@@ -4261,7 +4311,9 @@
       "聲道電平表",
       "套用設定",
       "輸入增益無效",
-      "變更立即生效"
+      "變更立即生效",
+      "電平表顯示目前播放",
+      "目前配置與待套用配置不同"
     ],
     "ja": [
       "日本語",
@@ -4425,7 +4477,9 @@
       "チャンネルメーター",
       "設定を適用",
       "入力ゲインが無効です",
-      "変更はすぐに適用されます"
+      "変更はすぐに適用されます",
+      "メーターは現在の再生を表示します",
+      "現在のレイアウトは適用待ちのレイアウトと異なります"
     ],
     "ko": [
       "한국어",
@@ -4589,7 +4643,9 @@
       "채널 미터",
       "설정 적용",
       "잘못된 입력 게인",
-      "변경 사항이 즉시 적용됩니다"
+      "변경 사항이 즉시 적용됩니다",
+      "미터가 현재 재생을 표시합니다",
+      "활성 레이아웃이 적용 대기 중인 레이아웃과 다릅니다"
     ],
     "hi": [
       "हिन्दी",
@@ -4753,7 +4809,9 @@
       "चैनल मीटर",
       "सेटिंग लागू करें",
       "अमान्य इनपुट गेन",
-      "बदलाव तुरंत लागू होते हैं"
+      "बदलाव तुरंत लागू होते हैं",
+      "मीटर वर्तमान प्लेबैक दिखाते हैं",
+      "सक्रिय लेआउट तैयार लेआउट से अलग है"
     ],
     "id": [
       "Bahasa Indonesia",
@@ -4917,7 +4975,9 @@
       "Meter kanal",
       "Terapkan pengaturan",
       "Gain masukan tidak valid",
-      "Perubahan langsung diterapkan"
+      "Perubahan langsung diterapkan",
+      "Meter menampilkan pemutaran saat ini",
+      "Tata letak aktif berbeda dari tata letak yang disiapkan"
     ],
     "vi": [
       "Tiếng Việt",
@@ -5081,7 +5141,9 @@
       "Đồng hồ mức kênh",
       "Áp dụng cài đặt",
       "Độ lợi đầu vào không hợp lệ",
-      "Thay đổi có hiệu lực ngay lập tức"
+      "Thay đổi có hiệu lực ngay lập tức",
+      "Đồng hồ hiển thị âm thanh đang phát",
+      "Bố trí đang dùng khác với bố trí chờ áp dụng"
     ],
     "th": [
       "ไทย",
@@ -5245,7 +5307,9 @@
       "มิเตอร์ช่องเสียง",
       "ใช้การตั้งค่า",
       "เกนขาเข้าไม่ถูกต้อง",
-      "การเปลี่ยนแปลงมีผลทันที"
+      "การเปลี่ยนแปลงมีผลทันที",
+      "มิเตอร์แสดงเสียงที่กำลังเล่น",
+      "รูปแบบที่ใช้งานต่างจากรูปแบบที่เตรียมไว้"
     ],
     "sw": [
       "Kiswahili",
@@ -5409,7 +5473,9 @@
       "Vipima kiwango vya chaneli",
       "Tumia mipangilio",
       "Ongezeko la ingizo si sahihi",
-      "Mabadiliko yanatumika mara moja"
+      "Mabadiliko yanatumika mara moja",
+      "Vipima kiwango vinaonyesha uchezaji wa sasa",
+      "Mpangilio unaotumika unatofautiana na ulioandaliwa"
     ],
     "nn": [
       "Norsk nynorsk",
@@ -5573,7 +5639,9 @@
       "Kanalmålarar",
       "Bruk innstillingane",
       "Ugyldig inngangsforsterking",
-      "Endringar blir tekne i bruk med ein gong"
+      "Endringar blir tekne i bruk med ein gong",
+      "Målarane viser gjeldande avspeling",
+      "Det aktive oppsettet er ulikt det klargjorde"
     ]
   },
   "requiredCompleteLocales": [

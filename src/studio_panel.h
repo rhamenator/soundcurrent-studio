@@ -45,6 +45,7 @@ private:
     void rebuildMixer();
     void syncMixer();
     void updateApplyState();
+    void updateDisplayedLevels(std::span<const float>);
     void commit(const Session &before);
     void change(const std::function<void(Session &)> &);
     void effectPreset(int);
@@ -77,7 +78,7 @@ private:
     ChannelMeterView *meterView_;
     RoomBalancePad *roomBalance_;
     QWidget *roomBalanceBox_;
-    QLabel *status_, *modeHint_;
+    QLabel *status_, *modeHint_, *meterSource_;
     QPushButton *undo_, *render_, *cancel_;
     QProgressBar *progress_;
     QWidget *editing_;

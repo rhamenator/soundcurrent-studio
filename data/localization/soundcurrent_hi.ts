@@ -1890,6 +1890,11 @@ Do you want to delete it anyway?</source>
       <translation>लाइव</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>सक्रिय लेआउट तैयार लेआउट से अलग है</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>लाइव लेआउट चयनित ऑडियो उपकरण की चैनल क्षमता के भीतर होना चाहिए। ऑफ़लाइन रेंडरिंग और मूक मीटर परीक्षण सभी 256 चैनल का समर्थन करते हैं।</translation>
     </message>
@@ -2000,6 +2005,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Metal</source>
       <translation>मेटल</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>मीटर वर्तमान प्लेबैक दिखाते हैं</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

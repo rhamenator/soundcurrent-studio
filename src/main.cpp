@@ -2469,7 +2469,7 @@ public:
             catch(const std::exception &error){showError(error.what());studio_->liveStatus(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what())),true);}
         };
         auto *studioLevels=new QTimer(this);studioLevels->setInterval(40);
-        connect(studioLevels,&QTimer::timeout,this,[this]{if(!studio_->session().offline)studio_->setLiveLevels(audio_.levels());});studioLevels->start();
+        connect(studioLevels,&QTimer::timeout,this,[this]{studio_->setLiveLevels(audio_.levels());});studioLevels->start();
         audio_.setStudio(studio_->session());
         balanceControls_->setVisible(studio_->session().engine.channels.size()==2);
         connect(outputGain_, &QSlider::valueChanged, this, [this](int) {

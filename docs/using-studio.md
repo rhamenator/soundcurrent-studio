@@ -87,10 +87,17 @@ configuration without changing the current playback.
 
 ## Channel monitoring
 
-Channel meters opens a modeless, scrollable dialog. Stereo shows L/R bars;
+Channel meters opens a modeless, scrollable dialog. Stereo consistently labels
+generated channels Left and Right, including old generated Front left/right
+names; custom names remain unchanged. Stereo shows L/R bars;
 recognized 5.1/7.1 roles use a speaker-position display and room-balance pad.
 Mono shows its single meter with no balance pad. Arbitrary layouts use labeled
 banks of up to 64 meters, through 256 channels, and per-channel mixer trims.
+Meters show current live playback even while settings are staged, provided the
+live and editing channel counts match. A different live/staged channel count is
+reported explicitly, without assigning live peaks to unrelated draft channels.
+The dialog labels live playback, disabled processing, and silent-test readings.
+These readings do not apply staged effects: use Apply settings to hear those.
 The room pad changes balance, not source panning; LFE is unaffected. Lock also
 protects the room pad. The silent generated-signal test never plays test tones.
 

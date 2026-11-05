@@ -1890,6 +1890,11 @@ Do you want to delete it anyway?</source>
       <translation>即時</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>目前配置與待套用配置不同</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>即時配置必須與所選音訊裝置相符。離線算繪及靜音位準測試支援全部 256 個聲道。</translation>
     </message>
@@ -2000,6 +2005,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Metal</source>
       <translation>金屬</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>電平表顯示目前播放</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>

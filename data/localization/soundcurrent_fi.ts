@@ -1890,6 +1890,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Reaaliaikainen</translation>
     </message>
     <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Aktiivinen asettelu eroaa valmistellusta asettelusta</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
       <translation>Reaaliaikaisen kokoonpanon on sovittava valittuun äänilaitteeseen. Offline-renderöinti ja äänettömät mittaritestit tukevat kaikkia 256 kanavaa.</translation>
     </message>
@@ -2000,6 +2005,11 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Metal</source>
       <translation>Metalli</translation>
+    </message>
+    <message>
+      <source>Meters show live playback</source>
+      <translation>Mittarit näyttävät nykyisen toiston</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Mic gain</source>
