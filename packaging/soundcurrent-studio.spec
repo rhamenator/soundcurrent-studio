@@ -1,6 +1,6 @@
 Name:           soundcurrent-studio
 %global debug_package %{nil}
-Version:        1.1.2
+Version:        1.1.3
 Release:        1%{?dist}
 Summary:        Adjustable desktop equalizer for PipeWire
 License:        GPL-3.0-only
@@ -51,11 +51,16 @@ DESTDIR=%{buildroot} cmake --install build
 %{_datadir}/doc/soundcurrent-studio/LICENSE
 %{_datadir}/doc/soundcurrent-studio/THIRD-PARTY-NOTICES.md
 %{_datadir}/doc/soundcurrent-studio/studio-engine.md
+%{_datadir}/doc/soundcurrent-studio/using-studio.md
+%{_datadir}/doc/soundcurrent-studio/metering-dynamics-and-balance.md
 %{_datadir}/doc/soundcurrent-studio/speakers
 %{_datadir}/doc/soundcurrent-studio/equipment
 %{_datadir}/doc/soundcurrent-studio/equipment-profiles.md
 
 %changelog
+* Thu Nov 05 2026 rhamenator <rhamenator@gmail.com> - 1.1.3-1
+- Add measured equipment corrections and immediate profile selection
+- Include profile compiler source in RPM build archives
 * Mon Oct 05 2026 rhamenator <rhamenator@gmail.com> - 0.8.4-1
 - Add listening enhancements and controls, with advanced Studio parameters
 

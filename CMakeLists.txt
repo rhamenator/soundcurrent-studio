@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(soundcurrent-studio VERSION 1.1.2 LANGUAGES CXX)
+project(soundcurrent-studio VERSION 1.1.3 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -387,3 +387,8 @@ add_test(NAME equipment-real-import COMMAND soundcurrent-equipment-ui-test)
 set_tests_properties(equipment-real-import PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen;SOUNDCURRENT_PROFILE_IMPORT_FIXTURE=${CMAKE_CURRENT_SOURCE_DIR}/data/examples/acoustic-research-ar-2ax-experimental.json" TIMEOUT 120)
 
 endif() # Equipment desktop tools/tests
+
+# Exercise real custom-profile replacement in the main-window integration test.
+if(TEST shared-ui)
+  set_property(TEST shared-ui APPEND PROPERTY ENVIRONMENT "SOUNDCURRENT_PROFILE_IMPORT_FIXTURE=${CMAKE_CURRENT_SOURCE_DIR}/data/examples/acoustic-research-ar-2ax-experimental.json")
+endif()
