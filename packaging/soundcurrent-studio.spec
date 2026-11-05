@@ -51,6 +51,8 @@ DESTDIR=%{buildroot} cmake --install build
 %{_datadir}/doc/soundcurrent-studio/LICENSE
 %{_datadir}/doc/soundcurrent-studio/THIRD-PARTY-NOTICES.md
 %{_datadir}/doc/soundcurrent-studio/studio-engine.md
+%{_datadir}/doc/soundcurrent-studio/using-studio.md
+%{_datadir}/doc/soundcurrent-studio/metering-dynamics-and-balance.md
 %{_datadir}/doc/soundcurrent-studio/speakers
 %{_datadir}/doc/soundcurrent-studio/equipment
 %{_datadir}/doc/soundcurrent-studio/equipment-profiles.md
