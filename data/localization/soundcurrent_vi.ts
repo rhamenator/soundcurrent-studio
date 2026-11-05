@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Áp dụng hiệu chỉnh này cho tuyến %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Bạn vẫn muốn xóa không?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>Áp dụng hiệu chỉnh?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>Chỉ áp dụng nếu các điều kiện này phù hợp với hệ thống của bạn.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Apply profile</source>
       <translation>Áp dụng cấu hình</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>Áp dụng cài đặt</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Bass Cut</source>
       <translation>Giảm âm trầm</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Âm trầm tăng độ đầy ở tần số thấp; Độ rõ tăng chi tiết ở tần số cao; Âm vang không gian thêm phản xạ phòng; Surround mở rộng stereo. Tăng cường động nén và nâng âm nhỏ với giới hạn đỉnh. Tăng cường có thể làm tăng mức đầu ra.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Bạn vẫn muốn xóa không?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Thay đổi có hiệu lực ngay lập tức</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kênh</translation>
     </message>
@@ -705,6 +699,11 @@ Bạn vẫn muốn xóa không?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Chỉ số kênh bắt đầu từ 1. Tệp đầu ra hiện có sẽ không bao giờ bị ghi đè.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Đồng hồ mức kênh</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Ngôn ngữ thử với chuỗi mở rộng</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Mở rộng / nén</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Cần cấu hình thiết bị JSON. Nhập văn bản đáp tuyến bằng nút nhập đáp tuyến.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Kênh đầu vào</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Độ lợi đầu vào</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>Đầu vào có nhiều kênh hơn bố cục Studio; chọn bố cục có số kênh bằng hoặc lớn hơn</translation>
     </message>
@@ -1703,6 +1712,11 @@ Bạn vẫn muốn xóa không?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Độ lợi đầu vào không hợp lệ</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Cấu hình ampli từ phép đo không hợp lệ. Cần có mẫu, nguồn đo HTTPS, điều kiện đo và 1–16 bộ lọc PK/LS/HS trong giới hạn. Xem định dạng cấu hình trong README.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Thư viện vượt quá 16 MiB.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>Bộ giới hạn</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Gain tuyến tính của tuyến (âm = đảo cực tính)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Live</source>
       <translation>Trực tiếp</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Bố trí đang dùng khác với bố trí chờ áp dụng</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Metal</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>Đồng hồ hiển thị âm thanh đang phát</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>Gain micrô</translation>
     </message>
@@ -2053,6 +2082,11 @@ Bạn vẫn muốn xóa không?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Siêu dữ liệu định dạng WAVE bị thiếu, trùng lặp hoặc quá lớn</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Bộ trộn</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Bạn vẫn muốn xóa không?</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>Độ lợi đầu ra</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Đầu ra không có kênh âm lượng</translation>
     </message>
@@ -2443,6 +2482,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>Cấu hình phải đọc được và nhỏ hơn 64 KiB.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Hồ sơ được áp dụng ngay khi chọn.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Đọc định dạng trộn của đầu ra ảo</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Sẵn sàng. Chưa áp dụng hiệu ứng cho đến khi bật.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Đã mở trình sửa cấu hình đáp tuyến hệ thống. Các cấu hình đã lưu có trong thư viện thiết bị.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>Âm lượng hệ thống</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>Lời thoại TV</translation>
     </message>
@@ -3354,6 +3398,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Mức thử nằm ngoài phạm vi cho phép</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Chế độ thử nghiệm</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Bật bộ cân bằng âm</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Tắt phát âm thanh trước khi áp dụng bố trí kênh khác để xử lý theo thời gian thực</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

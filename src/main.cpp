@@ -8,6 +8,10 @@
 // Copyright (C) 2026 rhamenator
 
 #include "dsp.h"
+#include "live_reconfiguration.h"
+#include "readable_peak.h"
+#include "system_volume_control.h"
+#include <QFontDatabase>
 #include "update_panel.h"
 #include "startup_controls.h"
 #include "equipment_display_text.h"
@@ -679,6 +683,16 @@ public:
     bool legacyVolumeManaged() const { return legacyVolumeManaged_; }
     void setStudio(const soundcurrent::studio::Session &s) {
         if(s.offline)return;
+        if(active()&&s.engine.channels.size()!=session_.engine.channels.size()) {
+            int capacity=0;
+            for(const auto &value:pactlList("sinks"))if(value.toObject().value("name").toString()==target_.name)
+                capacity=value.toObject().value("channel_map").toString().split(',',Qt::SkipEmptyParts).size();
+            if(s.engine.channels.size()>std::size_t(std::min(64,capacity)))
+                throw std::runtime_error(SC_TR("This Studio layout has more channels than the output device. Use offline editing or select a compatible device.").toStdString());
+            const auto device=target_;const auto bands=bands_;const auto gain=gain_;const auto balance=balance_;
+            soundcurrent::replaceLiveSession(session_,s,[]{},[this]{stop();},[&]{start(device,bands,gain,balance);});
+            return;
+        }
         if(active()){std::vector<soundcurrent::EqBand> filters;for(const auto &b:bands_)filters.push_back({b.frequency,b.gain,b.q,b.type});bridge_.update(s.effective(filters,gain_,balance_),s.routing);}
         session_=s;
     }
@@ -1835,7 +1849,7 @@ static soundcurrent::equipment::Profile measuredSystemProfile(const QString &inp
 
 class MainWindow : public QMainWindow {
 public:
-    explicit MainWindow(bool startEnabled = true) : bands_(builtinProfile("Flat", kDefaultBands)) {
+    explicit MainWindow(bool startEnabled = true, bool testControls = false) : bands_(builtinProfile("Flat", kDefaultBands)) {
         setWindowTitle("SoundCurrent Studio");
         setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")));
         setMinimumSize(480, 320);
@@ -1876,7 +1890,7 @@ public:
         settingsScroll->setWidget(settingsContainer);
         tabs_->addTab(settingsScroll, SC_TR("Settings && calibration"));
         auto *studioScroll=new QScrollArea;studioScroll->setWidgetResizable(true);
-        studio_=new soundcurrent::studio::StudioPanel(startEnabled);studioScroll->setWidget(studio_);
+        studio_=new soundcurrent::studio::StudioPanel(startEnabled,nullptr,testControls);studioScroll->setWidget(studio_);
         tabs_->insertTab(1,studioScroll,SC_TR("Studio channels && effects"));
         tabs_->setCurrentIndex(0);
         settingsRoot->addWidget(soundcurrent::i18n::settingsPanel());
@@ -1885,8 +1899,7 @@ public:
         auto *deviceBox = new QGroupBox(SC_TR("Output device"));
         auto *deviceLayout = new QVBoxLayout(deviceBox);
         settingsRoot->addWidget(deviceBox);
-        auto *outputBox = new QGroupBox(SC_TR("Playback"));
-        auto *outputLayout = new QVBoxLayout(outputBox);
+        auto *outputLayout = deviceLayout;
         auto *outputRow = new QHBoxLayout;
         outputCombo_ = new QComboBox;
         outputCombo_->setAccessibleName(SC_TR("Output device"));
@@ -1901,15 +1914,23 @@ public:
         power_->setAccessibleName(SC_TR("Equalizer on or off"));
         power_->setToolTip(SC_TR("Click to turn the equalizer on or off"));
         outputRow->addWidget(power_);
-        outputRow->addStretch();
         auto *quit = new QPushButton(SC_TR("Quit app"));
         quit->setAccessibleName(SC_TR("Quit SoundCurrent Studio"));
         quit->setToolTip(SC_TR("Exit SoundCurrent Studio and restore normal audio"));
-        outputRow->addWidget(quit);
-        outputLayout->addLayout(outputRow);
+        quit->setObjectName("persistentQuit");
+        tabs_->setCornerWidget(quit,Qt::TopRightCorner);
         outputCombo_->setLayoutDirection(Qt::LeftToRight);
+        systemVolume_ = new soundcurrent::SystemVolumeControl(startEnabled);
+        outputRow->addWidget(systemVolume_,1);
+        auto *monitorChannels=new QPushButton(SC_TR("Channel meters"));
+        monitorChannels->setObjectName("showChannelMeters");
+        monitorChannels->setEnabled(studio_->monitoringAvailable());
+        outputRow->addWidget(monitorChannels);
+        connect(monitorChannels,&QPushButton::clicked,studio_,[this]{studio_->showMonitoring();});
+        playbackLayout->addLayout(outputRow);
         auto *gainRow = new QHBoxLayout;
-        gainRow->addWidget(new QLabel(SC_TR("Post gain")));
+        playbackLayout->addLayout(gainRow);
+        gainRow->addWidget(new QLabel(SC_TR("Output gain")));
         outputGain_ = new QSlider(Qt::Horizontal);
         outputGain_->setLayoutDirection(Qt::LeftToRight);
         outputGain_->setRange(int(soundcurrent::kMinPostGainDb * 2), 24);
@@ -1929,9 +1950,11 @@ public:
         outputGainValue_->setText(QString(SC_TR("%1%2 dB")).arg(outputGainDb() > 0 ? "+" : "")
                                       .arg(QLocale().toString(outputGainDb(), 'f', 1)));
         gainRow->addWidget(outputGainValue_);
-        gainRow->addSpacing(18);
-        gainRow->addWidget(new QLabel(SC_TR("Balance")));
-        gainRow->addWidget(new QLabel(SC_TR("L")));
+        balanceControls_=new QWidget;
+        auto *balanceRow = new QHBoxLayout(balanceControls_);
+        balanceRow->setContentsMargins(0,0,0,0);
+        balanceRow->addWidget(new QLabel(SC_TR("Balance")));
+        balanceRow->addWidget(new QLabel(SC_TR("L")));
         balance_ = new QSlider(Qt::Horizontal);
         balance_->setLayoutDirection(Qt::LeftToRight);
         balance_->setRange(-100, 100);
@@ -1942,14 +1965,15 @@ public:
         balance_->setAccessibleName(SC_TR("Left right balance"));
         balance_->setToolTip(SC_TR("Move toward L or R to reduce the opposite channel; center keeps both at full level"));
         balance_->setValue(std::clamp(QSettings().value("balancePercent", 0).toInt(), -100, 100));
-        gainRow->addWidget(balance_, 1);
-        gainRow->addWidget(new QLabel(SC_TR("R")));
+        balanceRow->addWidget(balance_, 1);
+        studio_->onStereoBalanceChanged=[this](int value){balance_->setValue(value);};
+        balanceRow->addWidget(new QLabel(SC_TR("R")));
         balanceValue_ = new QLabel;
         balanceValue_->setMinimumWidth(62);
         balanceValue_->setAccessibleName(SC_TR("Balance position"));
         balanceValue_->setText(soundcurrent::i18n::balancePositionText(balance_->value()));
-        gainRow->addWidget(balanceValue_);
-        playbackLayout->addLayout(gainRow);
+        balanceRow->addWidget(balanceValue_);
+        playbackLayout->addWidget(balanceControls_);
         auto *meterRow = new QHBoxLayout;
         meterRow->addWidget(new QLabel(SC_TR("Overall output")));
         overallLevel_ = new OverallLevelMeter;
@@ -1963,6 +1987,10 @@ public:
         peakStatus_->setObjectName("peakStatus");
         peakStatus_->setTextFormat(Qt::PlainText);
         peakStatus_->setWordWrap(true);
+        peakStatus_->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
+        peakStatus_->setLayoutDirection(Qt::LeftToRight);
+        peakStatus_->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
+        peakClock_.start();
         // The readout must not negotiate the meter width or its own height as
         // digits, warning text and font weight change during playback.
         peakStatus_->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
@@ -2162,7 +2190,7 @@ public:
         micPower_ = new QCheckBox(SC_TR("Natural mic EQ"));
         micPower_->setAccessibleName(SC_TR("Natural microphone equalizer on or off"));
         micPower_->setToolTip(SC_TR("Automatically shape a connected microphone; click to bypass the microphone EQ"));
-        micPower_->setChecked(QSettings().value("microphoneEnabled", true).toBool());
+        micPower_->setChecked(QSettings().value("microphoneEnabled", false).toBool());
         inputRow->addWidget(micPower_);
         inputLayout->addLayout(inputRow);
         auto *toneRow = new QGridLayout;
@@ -2349,7 +2377,7 @@ public:
         meterHelp->setWordWrap(true);
         eqLayout->addWidget(meterHelp);
         root->insertWidget(0, eqBox);
-        root->addWidget(outputBox);
+
         root->addStretch();
 
         loadCustomPresets();
@@ -2434,7 +2462,9 @@ public:
         connect(undoButton_, &QPushButton::clicked, this, [this] { undoChange(); });
         auto *undoShortcut = new QShortcut(QKeySequence::Undo, this);
         connect(undoShortcut, &QShortcut::activated, this, [this] { if(tabs_->currentIndex()==1)studio_->undo();else undoChange(); });
-        studio_->onChanged=[this]{
+        studio_->onChanged=[this,monitorChannels]{
+            monitorChannels->setEnabled(studio_->monitoringAvailable());
+            balanceControls_->setVisible(studio_->session().engine.channels.size()==2);
             try { audio_.setStudio(studio_->session());applyChanges();
                 studio_->liveStatus(studio_->session().offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):
                                     audio_.active()?SC_TR("Studio settings applied to live playback."):SC_TR("Studio settings ready. Enable playback on the Equalizer tab."));
@@ -2442,8 +2472,9 @@ public:
             catch(const std::exception &error){showError(error.what());studio_->liveStatus(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what())),true);}
         };
         auto *studioLevels=new QTimer(this);studioLevels->setInterval(40);
-        connect(studioLevels,&QTimer::timeout,this,[this]{if(!studio_->session().offline)studio_->setLiveLevels(audio_.levels());});studioLevels->start();
+        connect(studioLevels,&QTimer::timeout,this,[this]{studio_->setLiveLevels(audio_.levels());});studioLevels->start();
         audio_.setStudio(studio_->session());
+        balanceControls_->setVisible(studio_->session().engine.channels.size()==2);
         connect(outputGain_, &QSlider::valueChanged, this, [this](int) {
             recordChange(outputGain_);
             const double value = outputGainDb();
@@ -2555,7 +2586,8 @@ public:
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override {
         if (watched == peakStatus_ && event->type() == QEvent::FontChange) reservePeakStatusSpace();
-        if (event->type() == QEvent::Wheel && scroll_) {
+        if (event->type() == QEvent::Wheel && scroll_ &&
+            (!qobject_cast<QWidget *>(watched) || qobject_cast<QWidget *>(watched)->window()==this)) {
             auto *wheel = static_cast<QWheelEvent *>(event);
             if (wheel->angleDelta().y() || wheel->pixelDelta().y()) {
                 auto *page = qobject_cast<QScrollArea *>(tabs_->currentWidget());
@@ -2601,7 +2633,11 @@ protected:
 public:
     void selfTestPlaybackLayout() {
         auto *bar = findChild<QWidget *>("persistentPlaybackControls");
-        if (!bar || !bar->isAncestorOf(outputGain_)) qFatal("Post gain is not in the persistent playback bar");
+        if (!bar || !bar->isAncestorOf(outputGain_) || !bar->isAncestorOf(power_) || !bar->isAncestorOf(systemVolume_->slider())) qFatal("System volume is not in the persistent playback bar");
+        systemVolume_->applyRead(71,false);
+        if(systemVolume_->slider()->value()!=71)qFatal("System volume read synchronization failed");
+        systemVolume_->slider()->setValue(42); // Isolated test: never changes system audio.
+        if(!(peakStatus_->alignment() & Qt::AlignRight))qFatal("Peak readout not right aligned");
         const auto oldSize = size();
         const int oldTab = tabs_->currentIndex();
         const QSignalBlocker blockPower(power_);
@@ -2612,12 +2648,16 @@ public:
             for (int page = 0; page < tabs_->count(); ++page) {
                 tabs_->setCurrentIndex(page);
                 QCoreApplication::processEvents();
-                const QRect gainRect(outputGain_->mapTo(this, QPoint()), outputGain_->size());
-                if (!outputGain_->isVisible() || !rect().contains(gainRect))
-                    qFatal("Post gain is inaccessible without scrolling");
+                const QRect gainRect(systemVolume_->slider()->mapTo(this, QPoint()), systemVolume_->slider()->size());
+                if (!systemVolume_->slider()->isVisible() || !rect().contains(gainRect))
+                    qFatal("System volume is inaccessible without scrolling");
+                auto *quit=findChild<QPushButton *>("persistentQuit");
+                const QRect quitRect(quit->mapTo(this,QPoint()),quit->size());
+                const QRect outputRect(outputGain_->mapTo(this,QPoint()),outputGain_->size());
+                if(!quit->isVisible() || !rect().contains(quitRect) || !rect().contains(outputRect))qFatal("Quit/output gain scrolled out of view");
                 const auto meterGeometry = overallLevel_->geometry();
                 const auto textGeometry = peakStatus_->geometry();
-                const auto gainGeometry = outputGain_->geometry();
+                const auto gainGeometry = systemVolume_->slider()->geometry();
                 for (double peak : {0.0, 0.000002, 0.01, 0.5, 0.95, 1.2, 0.0}) {
                     showLevels({}, peak);
                     QCoreApplication::processEvents();
@@ -2625,7 +2665,7 @@ public:
                     if (peakStatus_->height() < 2 * QFontMetrics(normalFont).lineSpacing())
                         qFatal("Peak readout reserved height does not fit its font");
                     if (overallLevel_->geometry() != meterGeometry || peakStatus_->geometry() != textGeometry ||
-                        outputGain_->geometry() != gainGeometry)
+                        systemVolume_->slider()->geometry() != gainGeometry)
                         qFatal("Peak label reflow moved the meter or volume slider");
                 }
             }
@@ -3055,26 +3095,33 @@ private:
             levelBars_[i]->setToolTip(soundcurrent::i18n::estimatedBandLevelText(frequencyLabel(bands_[i].frequency),db));
         }
         if (!power_->isChecked()) {
+            peakReadout_.reset();
             overallLevel_->reset();
             peakStatus_->setText(SC_TR("Estimated peak: EQ off"));
             peakStatus_->setStyleSheet("color:#8fa2bb;");
-        } else if (peak <= 0.000001) {
-            overallLevel_->setLevel(-60.0);
-            peakStatus_->setText(SC_TR("Estimated peak: waiting for audio"));
-            peakStatus_->setStyleSheet("color:#8fa2bb;");
         } else {
-            const double db = 20.0 * std::log10(peak);
+            const double db = 20.0 * std::log10(std::max(peak, 0.000001));
             overallLevel_->setLevel(db);
             overallLevel_->setToolTip(soundcurrent::i18n::numberWithUnit(
                 SC_TR("Estimated overall output peak: %1 dBFS"),
                 QLocale().toString(db, 'f', 1), QStringLiteral("dBFS")));
-            peakStatus_->setText(db >= -1.0
+            const auto now = peakClock_.elapsed();
+            if (!peakReadout_.update(peak, now)) return;
+            const double readableDb = peakReadout_.db();
+            const bool clipping = peakReadout_.clipping(now);
+            if (readableDb <= -119) {
+                peakStatus_->setText(SC_TR("Estimated peak: waiting for audio"));
+                peakStatus_->setStyleSheet("color:#8fa2bb;");
+                peakStatus_->setToolTip(peakStatus_->text());
+                return;
+            }
+            peakStatus_->setText(clipping
                                      ? soundcurrent::i18n::numberWithUnit(SC_TR("Clipping risk · estimated peak %1 dBFS"),
-                                           QLocale().toString(db, 'f', 1), QStringLiteral("dBFS"))
+                                           QLocale().toString(readableDb, 'f', 1), QStringLiteral("dBFS"))
                                      : soundcurrent::i18n::numberWithUnit(SC_TR("Estimated peak %1 dBFS"),
-                                           QLocale().toString(db, 'f', 1), QStringLiteral("dBFS")));
-            peakStatus_->setStyleSheet(db >= -1.0 ? "color:#f16b76;font-weight:700;"
-                                                    : db >= -6.0 ? "color:#e6b450;" : "color:#50d1ba;");
+                                           QLocale().toString(readableDb, 'f', 1), QStringLiteral("dBFS")));
+            peakStatus_->setStyleSheet(clipping ? "color:#f16b76;font-weight:700;"
+                                                    : readableDb >= -6.0 ? "color:#e6b450;" : "color:#50d1ba;");
         }
         peakStatus_->setToolTip(peakStatus_->text());
     }
@@ -3144,7 +3191,16 @@ private:
     void setEquipment(const soundcurrent::equipment::Profile &profile) {
         if (lockButton_->isChecked() || calibrating_) return;
         recordChange(equipmentStatus_);
-        QSettings().setValue("equipment/" + profile.kind, QJsonDocument(soundcurrent::equipment::serialize(profile)).toJson(QJsonDocument::Compact));
+        if (profile.id.isEmpty()) {
+            for (const QString kind : {QString("speaker"), QString("amplifier"), QString("microphone")}) {
+                if (!profile.kind.isEmpty() && profile.kind != kind) continue;
+                QSettings().remove("equipment/" + kind);
+                if (kind == "speaker") { const QSignalBlocker b(speakerCombo_); speakerCombo_->setCurrentIndex(0); QSettings().remove("speakerModelId"); }
+                if (kind == "amplifier") { const QSignalBlocker b(ampCombo_); ampCombo_->setCurrentIndex(0); QSettings().remove("amplifierModelId"); }
+            }
+        } else {
+            QSettings().setValue("equipment/" + profile.kind, QJsonDocument(soundcurrent::equipment::serialize(profile)).toJson(QJsonDocument::Compact));
+        }
         refreshEquipmentStatus(); syncBandControls(); applyChanges(); commitChange();
         try { microphone_.update(micAdjustments(), micGain_->value() / 2.0); } catch (const std::exception &e) { showError(e.what()); }
     }
@@ -3562,6 +3618,8 @@ private:
     QPushButton *lockButton_ = nullptr;
     QPushButton *undoButton_ = nullptr;
     QCheckBox *power_ = nullptr;
+    QWidget *balanceControls_ = nullptr;
+    soundcurrent::SystemVolumeControl *systemVolume_ = nullptr;
     QSlider *outputGain_ = nullptr;
     QLabel *outputGainValue_ = nullptr;
     QSlider *balance_ = nullptr;
@@ -3570,6 +3628,8 @@ private:
     QSpinBox *levelRefresh_ = nullptr;
     QCheckBox *peakMarkers_ = nullptr;
     QLabel *peakStatus_ = nullptr;
+    QElapsedTimer peakClock_;
+    soundcurrent::ReadablePeak peakReadout_;
     QLabel *status_ = nullptr;
     QLabel *headroom_ = nullptr;
     QSpinBox *countBox_ = nullptr;
@@ -3810,7 +3870,7 @@ int main(int argc, char **argv) {
         ampTest.insert("conditions", "8 ohms"); ampTest.insert("filters", QJsonArray{});
         if (parseAmplifierProfile(ampTest)) qFatal("Empty amplifier profile accepted");
         qInfo("UI self-test: constructing window");
-        MainWindow testWindow(false);
+        MainWindow testWindow(false,true);
         qInfo("UI self-test: window constructed");
         for (const auto &entry : {std::pair{"manageSpeakerProfiles", "speaker"},
                                   std::pair{"manageMicrophoneProfiles", "microphone"},
@@ -4218,6 +4278,12 @@ int main(int argc, char **argv) {
         tabs->setCurrentIndex(1);app.processEvents();
         if (!screenshotDirectory.isEmpty() && !testWindow.grab().save(QDir(screenshotDirectory).filePath("studio.png")))
             qFatal("Cannot save Studio UI screenshot");
+        if(!screenshotDirectory.isEmpty()) {
+            auto *workPages=testWindow.findChild<QTabWidget *>("studioWorkPages");
+            for(int page=0;page<workPages->count();++page) {workPages->setCurrentIndex(page);app.processEvents();
+                testWindow.grab().save(QDir(screenshotDirectory).filePath(QString("studio-page-%1.png").arg(page)));}
+            workPages->setCurrentIndex(0);
+        }
         tabs->setCurrentIndex(2);app.processEvents();
         if (!speakers->isVisible()) qFatal("Settings tab does not display its controls");
         tabs->setCurrentIndex(0);
@@ -4637,7 +4703,8 @@ int main(int argc, char **argv) {
     if (!processingGuard.acquire(soundcurrent::processingGuardDirectory())) { showConflict(processingGuard.error()); return 1; }
     const auto conflict=soundcurrent::otherEqualizerConflict(kSink);
     if (!conflict.isEmpty()) { showConflict(conflict); return 1; }
-    MainWindow window(!app.arguments().contains("--preview"));
+    MainWindow window(!app.arguments().contains("--preview"),
+                      app.arguments().contains("--preview") || app.arguments().contains("--test-controls"));
 #ifdef Q_OS_WIN
 #include "windows_live_conflict_test.inc"
 #endif

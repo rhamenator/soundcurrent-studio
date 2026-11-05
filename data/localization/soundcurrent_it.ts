@@ -84,14 +84,6 @@ L’app rimane aperta; le impostazioni sono state conservate.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Applicare questa correzione al percorso %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Vuoi eliminarlo comunque?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>Applicare la correzione?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>Applicare solo se queste condizioni corrispondono al proprio sistema.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Apply profile</source>
       <translation>Applica profilo</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>Applica impostazioni</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Bass Cut</source>
       <translation>Riduzione dei bassi</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bassi dà peso alle basse frequenze; Chiarezza aggiunge dettaglio alle alte frequenze; Ambienza aggiunge riflessioni della stanza; Surround amplia l’immagine stereo; Enfasi dinamica comprime e alza il materiale più silenzioso con un limite di picco. L’enfasi può aumentare il livello di uscita.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Vuoi eliminarlo comunque?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Le modifiche si applicano immediatamente</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Canale</translation>
     </message>
@@ -705,6 +699,11 @@ Vuoi eliminarlo comunque?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Gli indici dei canali iniziano da 1. I file di uscita esistenti non vengono mai sovrascritti.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Misuratori dei canali</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Lingua di prova con testo espanso</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Espansione / compressione</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Era previsto un profilo apparecchiatura JSON. Importa il testo della risposta con il pulsante di importazione della risposta.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Canale di ingresso</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Guadagno di ingresso</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>L’ingresso ha più canali della configurazione Studio; scegli una configurazione uguale o più ampia</translation>
     </message>
@@ -1703,6 +1712,11 @@ Vuoi eliminarlo comunque?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Guadagno di ingresso non valido</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Profilo misurato dell’amplificatore non valido. Richiede modello, fonte di misurazione HTTPS, condizioni e 1–16 filtri PK/LS/HS entro i limiti. Vedi il formato del profilo nel README.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Vuoi eliminarlo comunque?</translation>
       <translation>La libreria supera 16 MiB.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>Limitatore</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Guadagno lineare del percorso (negativo = inverti)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Live</source>
       <translation>Dal vivo</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>La disposizione attiva è diversa da quella preparata</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Metal</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>I misuratori mostrano la riproduzione in corso</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>Guadagno microfono</translation>
     </message>
@@ -2053,6 +2082,11 @@ Vuoi eliminarlo comunque?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Metadati del formato WAVE mancanti, duplicati o troppo grandi</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Mixer</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Vuoi eliminarlo comunque?</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>Guadagno di uscita</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>L’uscita non ha canali di volume</translation>
     </message>
@@ -2443,6 +2482,10 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>Il profilo deve essere leggibile e inferiore a 64 KiB.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>I profili vengono applicati immediatamente alla selezione.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Leggere il formato di mixaggio dell’uscita virtuale</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Pronto. Gli effetti non vengono applicati finché non sono attivati.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Editor del profilo di risposta del sistema aperto. I profili salvati sono disponibili nella libreria apparecchiature.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>Volume di sistema</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>Dialoghi TV</translation>
     </message>
@@ -3354,6 +3398,10 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Il livello di test è fuori dall’intervallo consentito</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Modalità di test</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Attiva equalizzatore</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Disattiva la riproduzione prima di applicare una diversa disposizione dei canali per l’elaborazione dal vivo</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

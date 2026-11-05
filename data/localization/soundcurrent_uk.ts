@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Застосувати цю корекцію до аудіотракту типу %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>Застосувати корекцію?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>Застосовуйте лише якщо ці умови відповідають вашій системі.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Apply profile</source>
       <translation>Застосувати профіль</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>Застосувати налаштування</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass Cut</source>
       <translation>Послаблення басів</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Баси додають ваги низьким частотам; Чіткість додає високочастотних деталей; Атмосфера приміщення додає відбиття; Об’ємний звук розширює стерео; Динамічне підсилення стискає й підсилює тихіший матеріал з обмеженням піків. Підсилення може збільшити вихідний рівень.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Зміни застосовуються негайно</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Канал</translation>
     </message>
@@ -705,6 +699,11 @@ Do you want to delete it anyway?</source>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Індекси каналів починаються з 1. Наявні вихідні файли ніколи не перезаписуються.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Індикатори каналів</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Do you want to delete it anyway?</source>
       <translation>Розширена тестова мова</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Експандування / компресія</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Очікується профіль обладнання у форматі JSON. Імпортуйте текст частотної характеристики кнопкою імпорту характеристики.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Do you want to delete it anyway?</source>
       <translation>Вхідний канал</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Вхідне підсилення</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>Вхід має більше каналів, ніж конфігурація Studio; виберіть відповідну або більшу конфігурацію</translation>
     </message>
@@ -1703,6 +1712,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Неприпустиме вхідне підсилення</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Неприпустимий виміряний профіль підсилювача. Потрібні модель, джерело вимірювання через HTTPS, умови та 1–16 фільтрів PK/LS/HS у допустимих межах. Формат профілю дивіться в README.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Do you want to delete it anyway?</source>
       <translation>Бібліотека перевищує 16 MiB.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>Лімітер</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Лінійне підсилення аудіотракту (від’ємне = інверсія полярності)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Live</source>
       <translation>Наживо</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Активна схема відрізняється від підготовленої</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Do you want to delete it anyway?</source>
       <translation>Метал</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>Індикатори показують поточне відтворення</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>Підсилення мікрофона</translation>
     </message>
@@ -2053,6 +2082,11 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Метадані формату WAVE відсутні, дублюються або завеликі</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Мікшер</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>Вихідне підсилення</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Вихід не має каналів керування гучністю</translation>
     </message>
@@ -2443,6 +2482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>Профіль має бути читабельним і меншим за 64 KiB.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Профілі застосовуються одразу після вибору.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Прочитати формат мікшування віртуального виходу</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Готово. До ввімкнення ефектів сигнал залишається без обробки ефектами.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Do you want to delete it anyway?</source>
       <translation>Редактор профілю характеристики системи відкрито. Збережені профілі доступні в бібліотеці обладнання.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>Системна гучність</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>Телевізійні діалоги</translation>
     </message>
@@ -3354,6 +3398,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Тестовий рівень поза допустимим діапазоном</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Тестовий режим</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>Увімкнути еквалайзер</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Вимкніть відтворення, перш ніж застосовувати іншу конфігурацію каналів для обробки в реальному часі</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

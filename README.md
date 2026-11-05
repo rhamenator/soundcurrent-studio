@@ -83,9 +83,12 @@ source history, GPL-3.0-only license and third-party notices.
 
 The shared first-page EQ retains Flat as its default, 34 listening presets,
 5–31 editable bands, post gain (-60 to +12 dB in 0.5 dB steps), balance, colored FFT meters and peak markers.
-Post gain, balance and the overall meter stay visible below the tabs without
-scrolling. The EQ-style peak readout uses a reserved text area so changing
-levels and clipping warnings do not resize the display.
+System volume, Output gain, stereo balance and the overall meter stay visible below the tabs
+without scrolling. The volume slider follows OS/media-key volume in both directions;
+processing post gain is labeled Output gain and remains visible. The right-aligned peak number updates
+at a readable five times per second with smoothed ballistics and a held clipping warning.
+Studio adds a centered expansion/compression control, an independent linked output
+limiter, and speaker-position meters/room balance for recognized surround layouts.
 Speaker/amplifier profiles, microphone EQ, quiet sweep calibration with a preview,
 automatic device selection, background operation and Quit are retained.
 
@@ -134,7 +137,7 @@ surround content, and unsupported output layouts are reported explicitly.
 
 Delay and reverb currently have one settings set shared across channels, with
 separate effect state on each channel. The processing order is EQ/headroom →
-delay → reverb → trim/post gain → output clipping. Studio bypass skips that
+delay → reverb → front-channel enhancements → trim/post gain → optional linked limiter → output clipping. Studio bypass skips that
 processing, while the first-page on/off control unloads the live route.
 
 ## Installation
@@ -329,3 +332,8 @@ includes update-available and Quit/reopen reminders. See
 Interface language and regional number/date formatting are independent settings. The current development catalogs cover 33 non-English locales plus English, including Nynorsk, with explicit coverage and English fallback. All declared messages are populated; native-speaker verification remains unverified. Source coverage, contextual AI review and runtime qualification are reported separately. See [localization and contributor instructions](docs/localization.md). Version 1.1.0 introduces this support.
 
 Current localization completion work is described in [the progress record](docs/localization-progress.md). Published 1.1.0 packages are unchanged by these development commits.
+
+See [metering, dynamics, volume and room balance](docs/metering-dynamics-and-balance.md), including the stereo-only development hardware limitation and the bounds of silent multichannel verification.
+
+[Using Studio](docs/using-studio.md) explains the Effects/Mixer/channel/render pages,
+input versus output gain, Apply settings, the Channel meters dialog and opt-in startup.

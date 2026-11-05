@@ -84,14 +84,6 @@ Az alkalmazás nyitva marad; a beállítások megmaradtak.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Alkalmazza ezt a korrekciót a(z) %4 útvonalra?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>Alkalmazza a korrekciót?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>Csak akkor alkalmazza, ha ezek a körülmények megfelelnek a rendszerének.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Apply profile</source>
       <translation>Profil alkalmazása</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>Beállítások alkalmazása</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Bass Cut</source>
       <translation>Basszuscsökkentés</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>A Basszus súlyt ad az alacsony frekvenciáknak; a Tisztaság részleteket ad a magas frekvenciáknak; a Térérzet szobai visszaverődéseket ad hozzá; a Surround szélesíti a sztereóképet; a Dinamikus erősítés kompresszálja és emeli a halkabb anyagot, csúcsszinthatárral. A kiemelés növelheti a kimeneti szintet.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>A módosítások azonnal érvénybe lépnek</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Csatorna</translation>
     </message>
@@ -705,6 +699,11 @@ Mindenképp törölni szeretné?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>A csatornaindexek 1-től kezdődnek. A meglévő kimeneti fájlok soha nem íródnak felül.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Csatornamérők</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>Kibővített tesztnyelv</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expanzió / kompresszió</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON-eszközprofil szükséges. A frekvenciamenet szövegét a frekvenciamenet-importáló gombbal importálja.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>Bemeneti csatorna</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Bemeneti erősítés</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>A bemenet több csatornát tartalmaz, mint a Studio-elrendezés; válasszon megfelelő vagy nagyobb elrendezést</translation>
     </message>
@@ -1703,6 +1712,11 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Érvénytelen bemeneti erősítés</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Érvénytelen mért erősítőprofil. Modell, HTTPS-mérési forrás, körülmények és 1–16 határokon belüli PK/LS/HS-szűrő szükséges. A profilformátumot lásd a README-ben.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>A könyvtár meghaladja a 16 MiB-ot.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>Limiter</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Útvonal lineáris erősítése (negatív = polaritásfordítás)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Live</source>
       <translation>Valós idejű</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Az aktív elrendezés eltér az előkészítettől</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>Metal</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>A mérők az aktuális lejátszást mutatják</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>Mikrofonerősítés</translation>
     </message>
@@ -2053,6 +2082,11 @@ Mindenképp törölni szeretné?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Hiányzó, ismétlődő vagy túl nagy WAVE-formátummetaadatok</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Keverő</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>Kimeneti erősítés</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>A kimenetnek nincs hangerőcsatornája</translation>
     </message>
@@ -2443,6 +2482,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>A profilnak olvashatónak és 64 KiB-nál kisebbnek kell lennie.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>A profilok a kiválasztáskor azonnal érvénybe lépnek.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>A virtuális kimenet keverési formátumának olvasása</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Kész. Az effektek feldolgozatlanok, amíg be nem kapcsolja őket.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>A rendszer-frekvenciamenetprofil szerkesztője megnyílt. A mentett profilok az eszközkönyvtárban érhetők el.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>Rendszerhangerő</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>TV-párbeszéd</translation>
     </message>
@@ -3354,6 +3398,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>A tesztszint a megengedett tartományon kívül van</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Tesztmód</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Hangszínszabályzó bekapcsolása</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Kapcsolja ki a lejátszást, mielőtt másik csatornaelrendezést alkalmaz a valós idejű feldolgozáshoz</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

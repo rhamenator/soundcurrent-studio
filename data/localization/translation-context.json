@@ -236,5 +236,17 @@
   "Measured listening position": "New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.",
   "Combined speaker/amplifier/microphone/room response; not an isolated equipment measurement. %1 / %2": "New authored measurement condition note. %1 and %2 preserve input/output device captions. Does not claim independent speaker or microphone calibration.",
   "SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.": "New authored provenance note. Measurement is relative to median response; microphone equalization bypassed; speaker playback equalization may be included. Preserve uncertainty and SoundCurrent identity.",
-  "PipeWire stream failed": "Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved."
+  "PipeWire stream failed": "Fallback owned diagnostic when PipeWire enters stream error state without provider detail. Audio stream failure, not internet streaming. Translate at desktop boundary; real provider detail preserved.",
+  "Expansion / compression": "Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.",
+  "Limiter": "Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.",
+  "System volume": "Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.",
+  "Output gain": "DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.",
+  "Input gain": "DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.",
+  "Mixer": "Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.",
+  "Channel meters": "Command opening a modeless dialog containing channel meters and room balance. Unverified native review.",
+  "Apply settings": "Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.",
+  "Invalid input gain": "DSP input gain must be finite and between -60 and +24 dB. Unverified native review.",
+  "Changes apply immediately": "Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.",
+  "Meters show live playback": "Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.",
+  "Live layout differs from staged layout": "The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified."
 }

@@ -61,3 +61,12 @@ filter an entire required PR workflow by changed paths: GitHub may otherwise
 leave its merge gate waiting for a check that never starts. Manually dispatched
 branch checks are useful verification but do not necessarily satisfy the PR
 merge-ref gate. Keep branch protections enabled.
+
+### Multichannel hardware limitation
+
+The development workstation exposes stereo output only. Synthetic signal tests,
+silent meter fixtures and offline WAV rendering cover logical layouts through
+256 channels; they do not qualify physical surround output or Windows/Linux
+multichannel interface drivers. Real speaker assignment, timing and listening
+checks remain pending suitable hardware. See
+[metering and room balance](metering-dynamics-and-balance.md).

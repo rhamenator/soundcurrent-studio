@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-להחיל תיקון זה על הנתיב %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>להחיל תיקון?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>יש להחיל רק אם תנאים אלה תואמים למערכת שלך.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Apply profile</source>
       <translation>החלת פרופיל</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>החלת הגדרות</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass Cut</source>
       <translation>הפחתת בס</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>בס מוסיף משקל לתדרים נמוכים; בהירות מוסיפה פירוט לתדרים גבוהים; אווירה אקוסטית מוסיפה החזרי חדר; סראונד מרחיב את הסטריאו; הגברה דינמית דוחסת ומגבירה חומר חלש יותר עם תקרת שיא. הגברה עלולה להעלות את רמת היציאה.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>השינויים מוחלים מיד</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>ערוץ</translation>
     </message>
@@ -705,6 +699,11 @@ Do you want to delete it anyway?</source>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>מספור הערוצים מתחיל ב־1. קובצי פלט קיימים לעולם אינם נדרסים.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>מדי ערוצים</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Do you want to delete it anyway?</source>
       <translation>שפת בדיקה עם טקסט מורחב</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>הרחבה / דחיסה</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>נדרש פרופיל ציוד מסוג JSON. יש לייבא טקסט תגובה באמצעות לחצן ייבוא התגובה.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Do you want to delete it anyway?</source>
       <translation>ערוץ קלט</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>הגבר כניסה</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>לקלט יש יותר ערוצים מאשר בתצורת Studio; יש לבחור תצורה תואמת או גדולה יותר</translation>
     </message>
@@ -1703,6 +1712,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>הגבר כניסה לא תקין</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>פרופיל מגבר שנמדד אינו תקין. נדרשים דגם, מקור מדידה ב־HTTPS, תנאים ו־1–16 מסנני PK/LS/HS בטווח המותר. יש לעיין בפורמט הפרופיל ב־README.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Do you want to delete it anyway?</source>
       <translation>הספרייה גדולה מ־16 MiB.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>מגביל</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>הגבר נתיב ליניארי (שלילי = היפוך קוטביות)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Live</source>
       <translation>עיבוד חי</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>הפריסה הפעילה שונה מהפריסה שהוכנה</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Do you want to delete it anyway?</source>
       <translation>מטאל</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>המדים מציגים את ההשמעה הנוכחית</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>הגבר המיקרופון</translation>
     </message>
@@ -2053,6 +2082,11 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>מטא-נתוני פורמט WAVE חסרים, כפולים או גדולים מדי</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>מיקסר</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>הגבר יציאה</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>ליציאה אין ערוצי עוצמה</translation>
     </message>
@@ -2443,6 +2482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>הפרופיל חייב להיות קריא וקטן מ־64 KiB.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>הפרופילים מוחלים מיד עם בחירתם.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Read virtual output mix format</source>
       <translation>קריאת תבנית המיקס של הפלט הווירטואלי</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>מוכן. האפקטים אינם מוחלים עד להפעלתם.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Do you want to delete it anyway?</source>
       <translation>עורך פרופיל תגובת המערכת נפתח. פרופילים שנשמרו זמינים בספריית הציוד.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>עוצמת הקול של המערכת</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>דיאלוג בטלוויזיה</translation>
     </message>
@@ -3354,6 +3398,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>עוצמת הבדיקה חורגת מהטווח המותר</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>מצב בדיקה</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>הפעלת האקולייזר</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>יש לכבות את ההשמעה לפני החלת פריסת ערוצים אחרת לעיבוד בזמן אמת</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

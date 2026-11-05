@@ -65,21 +65,45 @@ void Session::setCustomName(int channel, const QString &name) {
     nameProvenance[std::size_t(channel)] = QJsonValue(QJsonValue::Undefined);
 }
 
+bool Session::hasRoomLayout() const {
+    if(names.size()!=6 && names.size()!=8)return false;
+    QStringList roles;
+    for(int c=0;c<names.size();++c){auto role=defaultNameRole(c);
+        if(role=="left")role="front-left";if(role=="right")role="front-right";
+        roles<<role;
+    }
+    auto expected=QStringList{"front-left","front-right","center","lfe","rear-left","rear-right"};
+    if(names.size()==8)expected<<"side-left"<<"side-right";
+    roles.sort();expected.sort();return roles==expected;
+}
+
 EngineSettings Session::effective(std::span<const EqBand> sharedBands, double gainDb, int balance) const {
     auto result = engine;
     const bool anySolo = std::find(solo.begin(), solo.end(), true) != solo.end();
     // Include the shared -60 dB fader and the saved Studio post gain (down to -24 dB).
     result.postGainDb = std::clamp(result.postGainDb + gainDb, kMinPostGainDb - 24.0, 24.0);
+    const bool roomLayout=hasRoomLayout();
     for (std::size_t c = 0; c < result.channels.size(); ++c) {
         auto &channel = result.channels[c];
         require(channel.bands.size() + sharedBands.size() <= kMaxProcessingBands,
                 "Shared and channel EQ exceed 64 filters; remove some channel filters");
         channel.bands.insert(channel.bands.begin(), sharedBands.begin(), sharedBands.end());
         channel.muted = channel.muted || (anySolo && !solo[c]);
-        if (result.channels.size() >= 2 && ((c == 0 && balance > 0) || (c == 1 && balance < 0))) {
+        if (result.channels.size() == 2 && ((c == 0 && balance > 0) || (c == 1 && balance < 0))) {
             const auto factor = 1.0 - std::abs(balance) / 100.0;
             if (factor <= 0) channel.muted = true;
             else channel.gainDb = std::max(-60.0, channel.gainDb + 20 * std::log10(factor));
+        }
+        if(roomLayout) {
+            const auto role=defaultNameRole(int(c));
+            if(role!="lfe") {
+                const double x=role.contains("left")?-1:role.contains("right")?1:0;
+                const double y=role.startsWith("rear")?1:role.startsWith("side")?0:-1;
+                const double factor=(x*roomBalanceX<0?1-std::abs(roomBalanceX):1)*
+                                    (y*roomBalanceY<0?1-std::abs(roomBalanceY):1);
+                if(factor<=0)channel.muted=true;
+                else channel.gainDb=std::max(-60.,channel.gainDb+20*std::log10(factor));
+            }
         }
     }
     return result;
@@ -101,8 +125,8 @@ QJsonObject Session::json() const {
     }
     const auto &d = engine.delay; const auto &r = engine.reverb;
     QJsonArray enhancements;for(double v:engine.enhancements.values)enhancements.append(v);
-    return {{"enhancements",enhancements},{"schema", 1}, {"channels", channels}, {"routing", routes}, {"offline", offline},
-            {"postGain", engine.postGainDb}, {"headroom", engine.automaticHeadroom}, {"bypass", engine.bypass},
+    return {{"roomBalance",QJsonObject{{"x",roomBalanceX},{"y",roomBalanceY}}},{"enhancements",enhancements},{"schema", 1}, {"channels", channels}, {"routing", routes}, {"offline", offline},
+            {"preGain",engine.preGainDb},{"postGain", engine.postGainDb}, {"headroom", engine.automaticHeadroom}, {"bypass", engine.bypass},
             {"delay", QJsonObject{{"enabled", d.enabled}, {"milliseconds", d.milliseconds}, {"feedback", d.feedback}, {"mix", d.mix}}},
             {"reverb", QJsonObject{{"enabled", r.enabled}, {"decay", r.decaySeconds}, {"damping", r.damping}, {"mix", r.mix}}}};
 }
@@ -112,6 +136,12 @@ Session Session::parse(const QJsonObject &o) {
     const auto channels = o.value("channels").toArray();
     require(!channels.isEmpty() && channels.size() <= int(maxChannels), "Invalid Studio profile channel count");
     Session s(channels.size());
+    if(o.contains("roomBalance")) {
+        require(o.value("roomBalance").isObject(),"Studio profile has an invalid numeric field");
+        const auto balance=o.value("roomBalance").toObject();
+        s.roomBalanceX=numeric(balance,"x",-1,1);s.roomBalanceY=numeric(balance,"y",-1,1);
+    }
+    if(o.contains("preGain"))s.engine.preGainDb=numeric(o,"preGain",-60,24);
     s.offline = boolean(o, "offline"); s.engine.automaticHeadroom = boolean(o, "headroom");
     s.engine.bypass = boolean(o, "bypass"); s.engine.postGainDb = numeric(o, "postGain", -24, 24);
     for (int c = 0; c < channels.size(); ++c) {
@@ -147,8 +177,14 @@ Session Session::parse(const QJsonObject &o) {
     s.engine.delay = {boolean(d, "enabled"), numeric(d, "milliseconds", 1, 2000), numeric(d, "feedback", 0, .9), numeric(d, "mix", 0, 1)};
     s.engine.reverb = {boolean(r, "enabled"), numeric(r, "decay", .1, 10), numeric(r, "damping", 0, .95), numeric(r, "mix", 0, 1)};
     if(o.contains("enhancements")) {
-        const auto values=o.value("enhancements").toArray();require(values.size()==EffectParameterCount,"Invalid enhancement parameter count");
+        const auto values=o.value("enhancements").toArray();require(values.size()==EffectParameterCount || values.size()==EffectParameterCount-1,"Invalid enhancement parameter count");
         for(int i=0;i<values.size();++i) {require(values[i].isDouble(),"Invalid enhancement parameter type");s.engine.enhancements.values[std::size_t(i)]=values[i].toDouble();}
+        // The original 16-parameter format tied limiting to positive boost.
+        // Preserve its sound; new profiles store the independent limiter flag.
+        if(values.size()==EffectParameterCount-1) {
+            require(s.engine.enhancements.values[DynamicBoost]>=0,"Enhancements outside supported ranges");
+            s.engine.enhancements.values[Limiter]=s.engine.enhancements.values[DynamicBoost]>0?1:0;
+        }
         require(s.engine.enhancements.valid(),"Enhancements outside supported ranges");
     }
     AudioEngine validator(48000, channels.size()); std::string error;

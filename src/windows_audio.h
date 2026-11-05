@@ -30,6 +30,9 @@ struct AudioEndpoint {
 
 std::vector<AudioEndpoint> windowsAudioEndpoints(bool capture);
 std::wstring windowsDefaultOutputId();
+struct SystemOutputVolume { float level; bool muted; };
+SystemOutputVolume windowsSystemOutputVolume();
+void windowsSetSystemOutputVolume(float level);
 std::wstring windowsDefaultInputId();
 std::wstring windowsDefaultEndpointId(bool capture, int role = 1);
 

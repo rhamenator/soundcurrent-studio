@@ -17,17 +17,24 @@ class QLineEdit;
 class QLabel;
 class QPushButton;
 class QProgressBar;
+class QDialog;
+class QTabWidget;
 
 namespace soundcurrent::studio {
+class ChannelMeterView;
+class RoomBalancePad;
 class StudioPanel : public QWidget {
 public:
-    explicit StudioPanel(bool persist, QWidget *parent = nullptr);
+    explicit StudioPanel(bool persist, QWidget *parent = nullptr, bool testControls = false);
     ~StudioPanel() override;
     Session session() const { return session_; }
     void setShared(std::span<const EqBand>, double gain, int balance);
     void setLocked(bool);
     void undo();
     void setLiveLevels(std::span<const float>);
+    void showMonitoring();
+    bool monitoringAvailable() const { return testControls_ || session_.engine.channels.size()>2; }
+    std::function<void(int)> onStereoBalanceChanged;
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();
     void selfTestFormatting();
@@ -37,6 +44,10 @@ public:
 private:
     void rebuild();
     void loadChannel();
+    void rebuildMixer();
+    void syncMixer();
+    void updateApplyState();
+    void updateDisplayedLevels(std::span<const float>);
     void commit(const Session &before);
     void change(const std::function<void(Session &)> &);
     void effectPreset(int);
@@ -52,7 +63,15 @@ private:
     std::vector<EqBand> shared_;
     double sharedGain_ = 0;
     int balance_ = 0;
-    bool persist_, rebuilding_ = false, locked_ = false;
+    bool persist_, rebuilding_ = false, locked_ = false, testControls_ = false;
+    QDialog *monitorDialog_;
+    QTabWidget *pages_;
+    QTableWidget *mixer_;
+    QSlider *preGain_, *stereoBalance_;
+    QLabel *preGainValue_, *stereoBalanceValue_;
+    QWidget *stereoBalanceControls_;
+    QPushButton *showMeters_, *centerBalance_;
+    QPushButton *apply_;
     QSpinBox *count_, *routeInput_;
     QComboBox *layout_, *channel_, *preset_, *filterType_;
     QCheckBox *offline_, *mute_, *solo_, *delay_, *reverb_, *bypass_, *headroom_, *preview_;
@@ -60,7 +79,11 @@ private:
     QSlider *trim_, *wetDelay_, *wetReverb_;
     QDoubleSpinBox *delayMs_, *feedback_, *decay_, *damping_, *filterHz_, *filterDb_, *filterQ_, *routeGain_, *tail_;
     QTableWidget *filters_, *routes_, *meters_;
-    QLabel *status_;
+    QComboBox *meterBank_;
+    ChannelMeterView *meterView_;
+    RoomBalancePad *roomBalance_;
+    QWidget *roomBalanceBox_;
+    QLabel *status_, *modeHint_, *meterSource_;
     QPushButton *undo_, *render_, *cancel_;
     QProgressBar *progress_;
     QWidget *editing_;

@@ -16,6 +16,8 @@ struct Session {
     void setCustomName(int channel, const QString &name);
     std::vector<bool> solo;
     bool offline = false;
+    double roomBalanceX = 0, roomBalanceY = 0;
+    bool hasRoomLayout() const;
     explicit Session(std::size_t channels = 2);
     EngineSettings effective(std::span<const EqBand> sharedBands = {}, double gainDb = 0,
                              int balance = 0) const;

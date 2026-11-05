@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-यह सुधार %4 रूट पर लागू करें?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>सुधार लागू करें?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>केवल तभी लागू करें जब ये स्थितियाँ आपके सिस्टम से मेल खाती हों।</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Apply profile</source>
       <translation>प्रोफ़ाइल लागू करें</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>सेटिंग लागू करें</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass Cut</source>
       <translation>बास कट</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>बास निम्न आवृत्तियों में भराव जोड़ता है; स्पष्टता उच्च आवृत्तियों का बारीक विवरण बढ़ाती है; ऐम्बियंस कमरे के परावर्तन जोड़ता है; सराउंड स्टीरियो विस्तार बढ़ाता है। डायनैमिक बूस्ट पीक की सीमा तय करते हुए कंप्रेस करता है और धीमी ध्वनि को बढ़ाता है। बूस्ट करने से आउटपुट स्तर बढ़ सकता है।</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>बदलाव तुरंत लागू होते हैं</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>चैनल</translation>
     </message>
@@ -705,6 +699,11 @@ Do you want to delete it anyway?</source>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>चैनल सूचकांक 1 से शुरू होते हैं। मौजूदा आउटपुट फ़ाइलें कभी ओवरराइट नहीं की जातीं।</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>चैनल मीटर</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Do you want to delete it anyway?</source>
       <translation>विस्तारित परीक्षण भाषा</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>विस्तार / संपीड़न</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON उपकरण प्रोफ़ाइल अपेक्षित है। प्रतिक्रिया टेक्स्ट को प्रतिक्रिया आयात बटन से आयात करें।</translation>
     </message>
@@ -1550,6 +1554,11 @@ Do you want to delete it anyway?</source>
       <translation>इनपुट चैनल</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>इनपुट गेन</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>इनपुट में Studio लेआउट से अधिक चैनल हैं; समान या अधिक चैनल वाला लेआउट चुनें</translation>
     </message>
@@ -1703,6 +1712,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>अमान्य इनपुट गेन</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>मापी गई ऐम्प्लिफ़ायर प्रोफ़ाइल अमान्य है। मॉडल, HTTPS माप स्रोत, माप की स्थितियाँ और सीमा के भीतर 1–16 PK/LS/HS फ़िल्टर आवश्यक हैं। README में प्रोफ़ाइल प्रारूप देखें।</translation>
     </message>
@@ -1832,6 +1846,11 @@ Do you want to delete it anyway?</source>
       <translation>लाइब्रेरी 16 MiB से बड़ी है।</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>लिमिटर</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>रूट का रैखिक गेन (ऋणात्मक = पोलैरिटी उलटें)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Live</source>
       <translation>लाइव</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>सक्रिय लेआउट तैयार लेआउट से अलग है</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Do you want to delete it anyway?</source>
       <translation>मेटल</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>मीटर वर्तमान प्लेबैक दिखाते हैं</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>माइक गेन</translation>
     </message>
@@ -2053,6 +2082,11 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE प्रारूप मेटाडेटा गायब, दोहराया गया या बहुत बड़ा है</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>मिक्सर</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>आउटपुट गेन</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>आउटपुट में वॉल्यूम चैनल नहीं हैं</translation>
     </message>
@@ -2443,6 +2482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>प्रोफ़ाइल पढ़ने योग्य और 64 KiB से छोटी होनी चाहिए।</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>प्रोफ़ाइल चुनते ही लागू हो जाती हैं।</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Read virtual output mix format</source>
       <translation>वर्चुअल आउटपुट का मिक्स फ़ॉर्मैट पढ़ना</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>तैयार। सक्षम होने तक इफ़ेक्ट ड्राई रहते हैं।</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Do you want to delete it anyway?</source>
       <translation>सिस्टम प्रतिक्रिया प्रोफ़ाइल संपादक खोला गया। सहेजी गई प्रोफ़ाइल उपकरण लाइब्रेरी में उपलब्ध हैं।</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>सिस्टम वॉल्यूम</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>टीवी संवाद</translation>
     </message>
@@ -3354,6 +3398,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>परीक्षण स्तर अनुमत सीमा से बाहर है</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>परीक्षण मोड</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>इक्वलाइज़र चालू करें</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>रियल-टाइम प्रोसेसिंग के लिए अलग चैनल लेआउट लागू करने से पहले प्लेबैक बंद करें</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

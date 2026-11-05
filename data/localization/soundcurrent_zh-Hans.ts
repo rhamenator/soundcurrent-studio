@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-将此校正应用到 %4 路由？</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>应用校正？</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>仅在这些条件与您的系统一致时应用。</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Apply profile</source>
       <translation>应用配置</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>应用设置</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass Cut</source>
       <translation>低音衰减</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>低音增加低频厚重感；清晰度增加高频细节；空间感添加房间反射；环绕扩展立体声宽度；动态增强压缩并提升较轻的声音，同时限制峰值上限。增强可能提高输出电平。</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>更改立即生效</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>声道</translation>
     </message>
@@ -705,6 +699,11 @@ Do you want to delete it anyway?</source>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>通道索引从 1 开始。绝不会覆盖现有的输出文件。</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>声道电平表</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Do you want to delete it anyway?</source>
       <translation>扩展文本测试语言</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>扩展 / 压缩</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>需要 JSON 设备配置。请使用响应导入按钮导入响应文本。</translation>
     </message>
@@ -1550,6 +1554,11 @@ Do you want to delete it anyway?</source>
       <translation>输入声道</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>输入增益</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>输入声道数多于 Studio 布局；请选择匹配或更大的布局</translation>
     </message>
@@ -1703,6 +1712,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>输入增益无效</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>实测功放配置无效。需要型号、HTTPS 测量来源、测量条件以及 1–16 个在范围内的 PK/LS/HS 滤波器。请参阅 README 中的配置格式。</translation>
     </message>
@@ -1832,6 +1846,11 @@ Do you want to delete it anyway?</source>
       <translation>资料库大小超过 16 MiB。</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>限幅器</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>路由线性增益（负值 = 反转极性）</translation>
     </message>
@@ -1857,6 +1876,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Live</source>
       <translation>实时</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>当前布局与待应用布局不同</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Do you want to delete it anyway?</source>
       <translation>金属</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>电平表显示当前播放</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>麦克风增益</translation>
     </message>
@@ -2053,6 +2082,11 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE 格式元数据缺失、重复或过大</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>混音器</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>输出增益</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>输出没有音量控制声道</translation>
     </message>
@@ -2443,6 +2482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>配置必须可读且小于 64 KiB。</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>选择配置文件后立即应用。</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Read virtual output mix format</source>
       <translation>读取虚拟输出混音格式</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>就绪。音效在启用前仅输出干声。</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Do you want to delete it anyway?</source>
       <translation>已打开系统响应配置编辑器。保存的配置可在设备资料库中找到。</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>系统音量</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>电视对白</translation>
     </message>
@@ -3354,6 +3398,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>测试电平超出允许范围</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>测试模式</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>开启均衡器</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>应用不同的实时处理声道布局前，请先关闭播放</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

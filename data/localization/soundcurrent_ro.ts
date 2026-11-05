@@ -84,14 +84,6 @@ Aplicația rămâne deschisă; setările au fost păstrate.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Aplicați această corecție rutei %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>Aplicați corecția?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>Aplicați numai dacă aceste condiții corespund sistemului dumneavoastră.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Apply profile</source>
       <translation>Aplicați profilul</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>Aplică setările</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Bass Cut</source>
       <translation>Atenuare bas</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Basul adaugă greutate frecvențelor joase; Claritatea adaugă detalii frecvențelor înalte; Ambianța adaugă reflexii de cameră; Surround lărgește imaginea stereo; Amplificarea dinamică comprimă și ridică materialul mai încet, cu o limită superioară a vârfurilor. Amplificarea poate crește nivelul de ieșire.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Modificările se aplică imediat</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Canal</translation>
     </message>
@@ -705,6 +699,11 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Indicii canalelor încep de la 1. Fișierele de ieșire existente nu sunt niciodată suprascrise.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Indicatoare de canale</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Limbă de test extinsă</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Expansiune / compresie</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Se aștepta un profil de echipament JSON. Importați textul răspunsului în frecvență folosind butonul de import al răspunsului.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Canal de intrare</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Câștig de intrare</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>Intrarea are mai multe canale decât configurația Studio; alegeți o configurație corespunzătoare sau mai mare</translation>
     </message>
@@ -1703,6 +1712,11 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Câștig de intrare nevalid</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Profil măsurat de amplificator nevalid. Necesită model, sursă de măsurare HTTPS, condiții și 1–16 filtre PK/LS/HS în limite. Consultați formatul profilului în README.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Biblioteca depășește 16 MiB.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>Limitator</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Câștig liniar al rutei (negativ = inversare de polaritate)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Live</source>
       <translation>În timp real</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Configurația activă diferă de cea pregătită</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Metal</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>Indicatoarele arată redarea curentă</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>Câștig microfon</translation>
     </message>
@@ -2053,6 +2082,11 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Metadate de format WAVE lipsă, duplicate sau prea mari</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Mixer</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>Câștig de ieșire</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Ieșirea nu are canale de volum</translation>
     </message>
@@ -2443,6 +2482,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>Profilul trebuie să poată fi citit și să fie mai mic de 64 KiB.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Profilurile se aplică imediat după selectare.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Citirea formatului de mixare al ieșirii virtuale</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Gata. Efectele sunt neprocesate până la activare.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Editorul profilului răspunsului sistemului a fost deschis. Profilurile salvate sunt disponibile în biblioteca de echipament.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>Volumul sistemului</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>Dialog TV</translation>
     </message>
@@ -3354,6 +3398,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Nivelul de test este în afara intervalului permis</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Mod de testare</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Porniți egalizatorul</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Oprește redarea înainte de a aplica o altă configurație de canale pentru procesarea în timp real</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

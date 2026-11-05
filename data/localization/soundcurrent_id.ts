@@ -84,14 +84,6 @@ Aplikasi tetap terbuka; pengaturan Anda dipertahankan.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Terapkan koreksi ini ke jalur %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>Terapkan koreksi?</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>Terapkan hanya jika kondisi ini sesuai dengan sistem Anda.</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Apply profile</source>
       <translation>Terapkan profil</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>Terapkan pengaturan</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Bass Cut</source>
       <translation>Pengurangan bas</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>Bas menambah bobot frekuensi rendah; Kejernihan menambah detail frekuensi tinggi; Ambiens menambah pantulan ruangan; Surround memperlebar stereo. Penguatan Dinamis mengompresi dan meningkatkan suara pelan dengan batas puncak. Penguatan dapat meningkatkan level keluaran.</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>Perubahan langsung diterapkan</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>Kanal</translation>
     </message>
@@ -705,6 +699,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>Indeks kanal dimulai dari 1. Berkas keluaran yang sudah ada tidak pernah ditimpa.</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>Meter kanal</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Bahasa uji dengan teks diperpanjang</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>Ekspansi / kompresi</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>Diperlukan profil peralatan JSON. Impor teks respons menggunakan tombol impor respons.</translation>
     </message>
@@ -1550,6 +1554,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Kanal masukan</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>Gain masukan</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>Masukan memiliki lebih banyak kanal daripada tata letak Studio; pilih tata letak dengan jumlah kanal yang sama atau lebih besar</translation>
     </message>
@@ -1703,6 +1712,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>Gain masukan tidak valid</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>Profil amplifier hasil pengukuran tidak valid. Diperlukan model, sumber pengukuran HTTPS, kondisi pengukuran, dan 1–16 filter PK/LS/HS dalam batas yang ditentukan. Lihat format profil di README.</translation>
     </message>
@@ -1832,6 +1846,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Pustaka melebihi 16 MiB.</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>Pembatas</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Gain jalur linear (negatif = balik polaritas)</translation>
     </message>
@@ -1857,6 +1876,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Live</source>
       <translation>Live</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>Tata letak aktif berbeda dari tata letak yang disiapkan</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Metal</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>Meter menampilkan pemutaran saat ini</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>Gain mikrofon</translation>
     </message>
@@ -2053,6 +2082,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Metadata format WAVE tidak ada, terduplikasi, atau terlalu besar</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>Mixer</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>Gain keluaran</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>Keluaran tidak memiliki kanal volume</translation>
     </message>
@@ -2443,6 +2482,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>Profil harus dapat dibaca dan berukuran kurang dari 64 KiB.</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Profil langsung diterapkan saat dipilih.</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Read virtual output mix format</source>
       <translation>Membaca format pencampuran keluaran virtual</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>Siap. Efek tetap dry hingga diaktifkan.</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Editor profil respons sistem dibuka. Profil yang disimpan tersedia di pustaka peralatan.</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>Volume sistem</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>Dialog TV</translation>
     </message>
@@ -3354,6 +3398,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Level uji berada di luar rentang yang diizinkan</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Mode uji</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Turn equalizer on</source>
       <translation>Aktifkan equalizer</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>Matikan pemutaran sebelum menerapkan tata letak kanal lain untuk pemrosesan waktu nyata</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

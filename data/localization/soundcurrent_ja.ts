@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-この補正を %4 の経路に適用しますか？</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -334,10 +326,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
     </message>
     <message>
-      <source>Apply correction?</source>
-      <translation>補正を適用しますか？</translation>
-    </message>
-    <message>
       <source>Apply only if these conditions match your system.</source>
       <translation>これらの条件がご使用のシステムと一致する場合にのみ適用してください。</translation>
       <extracomment>Only apply measured amplifier EQ correction if the measurement setup matches the user’s actual equipment. This prevents using a load-dependent curve indiscriminately.</extracomment>
@@ -345,6 +333,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Apply profile</source>
       <translation>プロファイルを適用</translation>
+    </message>
+    <message>
+      <source>Apply settings</source>
+      <translation>設定を適用</translation>
+      <extracomment>Apply staged/offline Studio configuration to live playback; a channel-count change may restart the route. Ordinary live effects already apply immediately. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Apply suggested EQ</source>
@@ -469,10 +462,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass Cut</source>
       <translation>低音カット</translation>
-    </message>
-    <message>
-      <source>Bass adds low-frequency weight; Clarity adds high-frequency detail; Ambience adds room reflections; Surround widens stereo; Dynamic Boost compresses and raises quieter material with a peak ceiling. Boosting can increase output level.</source>
-      <translation>低音は低域の厚みを加え、明瞭さは高域の細部を強調し、アンビエンスは室内の反射を加え、サラウンドはステレオの広がりを増します。ダイナミックブーストはピーク上限を設けて圧縮し、小さな音を持ち上げます。ブーストにより出力レベルが上がることがあります。</translation>
     </message>
     <message>
       <source>Bass frequency</source>
@@ -680,6 +669,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Changes apply immediately</source>
+      <translation>変更はすぐに適用されます</translation>
+      <extracomment>Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Channel</source>
       <translation>チャンネル</translation>
     </message>
@@ -705,6 +699,11 @@ Do you want to delete it anyway?</source>
       <source>Channel indexes start at 1. Existing output files are never overwritten.</source>
       <extracomment>CLI channel numbers are one-based. Existing output file protection is unconditional: the renderer refuses overwriting, including races at publication. No option to overwrite is implied.</extracomment>
       <translation>チャンネル番号は 1 から始まります。既存の出力ファイルは上書きされません。</translation>
+    </message>
+    <message>
+      <source>Channel meters</source>
+      <translation>チャンネルメーター</translation>
+      <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Channels and routing</source>
@@ -1290,6 +1289,11 @@ Do you want to delete it anyway?</source>
       <translation>文字列を拡張するテスト言語</translation>
     </message>
     <message>
+      <source>Expansion / compression</source>
+      <translation>エキスパンション / コンプレッション</translation>
+      <extracomment>Signed audio dynamics control: left of zero applies downward expansion below threshold; zero is neutral; right of zero compresses above threshold and adds makeup gain. Expansion refers to dynamic range, not spatial/stereo widening. Terminology translations remain unverified by native speakers.</extracomment>
+    </message>
+    <message>
       <source>Expected a JSON equipment profile. Import response text using the response import button.</source>
       <translation>JSON 形式の機器プロファイルが必要です。周波数特性のテキストは、周波数特性のインポートボタンから読み込んでください。</translation>
     </message>
@@ -1550,6 +1554,11 @@ Do you want to delete it anyway?</source>
       <translation>入力チャンネル</translation>
     </message>
     <message>
+      <source>Input gain</source>
+      <translation>入力ゲイン</translation>
+      <extracomment>DSP gain before EQ, dynamics, delay and reverb. Not microphone input gain or OS recording level. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Input has more channels than the Studio layout; choose a matching or larger layout</source>
       <translation>入力のチャンネル数が Studio のレイアウトを超えています。同じか、より多いチャンネル数のレイアウトを選んでください</translation>
     </message>
@@ -1703,6 +1712,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE floating-point validation: valid-bit field must be 32 for supported float samples. Float means floating-point numbers, not floating playback position. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid input gain</source>
+      <translation>入力ゲインが無効です</translation>
+      <extracomment>DSP input gain must be finite and between -60 and +24 dB. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Invalid measured amplifier profile. Requires model, HTTPS measurement source, conditions, and 1–16 bounded PK/LS/HS filters. See the profile format in the README.</source>
       <translation>測定済みのアンププロファイルが無効です。モデル、HTTPS の測定出典、測定条件、および制限範囲内の PK/LS/HS フィルター 1～16 個が必要です。README のプロファイル形式を参照してください。</translation>
     </message>
@@ -1832,6 +1846,11 @@ Do you want to delete it anyway?</source>
       <translation>ライブラリが 16 MiB を超えています。</translation>
     </message>
     <message>
+      <source>Limiter</source>
+      <translation>リミッター</translation>
+      <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>経路のリニアゲイン（負の値 = 極性反転）</translation>
     </message>
@@ -1857,6 +1876,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Live</source>
       <translation>ライブ</translation>
+    </message>
+    <message>
+      <source>Live layout differs from staged layout</source>
+      <translation>現在のレイアウトは適用待ちのレイアウトと異なります</translation>
+      <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
       <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
@@ -1971,6 +1995,11 @@ Do you want to delete it anyway?</source>
       <translation>メタル</translation>
     </message>
     <message>
+      <source>Meters show live playback</source>
+      <translation>メーターは現在の再生を表示します</translation>
+      <extracomment>Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.</extracomment>
+    </message>
+    <message>
       <source>Mic gain</source>
       <translation>マイクゲイン</translation>
     </message>
@@ -2053,6 +2082,11 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE形式のメタデータがないか、重複しているか、大きすぎます</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mixer</source>
+      <translation>ミキサー</translation>
+      <extracomment>Portable Studio output-channel mixer with channel trim, mute and solo; not an OS per-application session mixer. Unverified native review.</extracomment>
     </message>
     <message>
       <source>Model</source>
@@ -2300,6 +2334,11 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveWriter size validation: output payload plus RIFF header must fit supported 32-bit RIFF size. Preserve RIFF/WAVE and 4 GiB literally; GiB is binary size, not GB. Does not mean insufficient RAM or free disk space. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Output gain</source>
+      <translation>出力ゲイン</translation>
+      <extracomment>DSP post gain after Studio EQ/effects, before the independent limiter. This is separate from OS System volume. Unverified native review.</extracomment>
+    </message>
+    <message>
       <source>Output has no volume channels</source>
       <translation>出力に音量チャンネルがありません</translation>
     </message>
@@ -2443,6 +2482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Profile must be readable and smaller than 64 KiB.</source>
       <translation>プロファイルは読み取り可能で、64 KiB 未満である必要があります。</translation>
+    </message>
+    <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>プロファイルは選択するとすぐに適用されます。</translation>
     </message>
     <message>
       <source>Profiles need 1–16 correction filters.</source>
@@ -2624,10 +2667,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Read virtual output mix format</source>
       <translation>仮想出力のミックスフォーマットの読み取り</translation>
-    </message>
-    <message>
-      <source>Ready. Effects are dry until enabled.</source>
-      <translation>準備完了。有効にするまで、エフェクトはドライです。</translation>
     </message>
     <message>
       <source>Rear left</source>
@@ -3331,6 +3370,11 @@ Do you want to delete it anyway?</source>
       <translation>システムの周波数特性プロファイルエディターを開きました。保存したプロファイルは機器ライブラリで利用できます。</translation>
     </message>
     <message>
+      <source>System volume</source>
+      <translation>システム音量</translation>
+      <extracomment>Operating-system default playback endpoint volume. The app slider and keyboard media-volume keys adjust the same endpoint; this is distinct from advanced processing gain. Native review unverified.</extracomment>
+    </message>
+    <message>
       <source>TV Dialogue</source>
       <translation>テレビの会話</translation>
     </message>
@@ -3354,6 +3398,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>テストレベルが許容範囲外です</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>テストモード</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>
@@ -3470,10 +3518,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Turn equalizer on</source>
       <translation>イコライザーをオン</translation>
-    </message>
-    <message>
-      <source>Turn playback off before applying a different live channel layout</source>
-      <translation>リアルタイム処理のチャンネル構成を変更する前に、再生をオフにしてください</translation>
     </message>
     <message>
       <source>Turn playback off before applying a new live channel layout</source>

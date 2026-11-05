@@ -34,6 +34,9 @@ double runTone(LinuxBridge &bridge,EngineSettings settings,const std::vector<dou
     for(qsizetype i=0;i+qsizetype(n*sizeof(float))<=bytes.size();i+=qsizetype(n*sizeof(float))){float x=0;std::memcpy(&x,bytes.constData()+i+channel*sizeof(float),sizeof(float));
         if(std::abs(x)>1e-6){energy+=double(x)*x;++active;}if(n>=2){float y=0;std::memcpy(&y,bytes.constData()+i+((channel+1)%n)*sizeof(float),sizeof(float));other+=double(y)*y;}}
     require(active>1000,"No audio reached the virtual output");if(rightMustBeSilent)require(other<1e-8,"Live processing mixed channels");
+    const auto peaks=bridge.levels();
+    require(peaks.size()==std::size_t(n) && peaks[std::size_t(channel)]>.01f,"Live channel meter did not receive audio peaks");
+    if(rightMustBeSilent)require(peaks[std::size_t((channel+1)%n)]<1e-6f,"Live channel meter mixed channels");
     return std::sqrt(energy/double(active));
 }
 }
@@ -49,6 +52,6 @@ int main(int argc,char **argv) {
         const double gain=runTone(bridge,settings,matrix,8,5,true);require(std::abs(20*std::log10(gain/flat)-6)<.7,"Live gain did not apply immediately");
         settings.delay={true,20,.3,.25};settings.reverb={true,.5,.4,.15};runTone(bridge,settings,matrix,8,5,true);
         bridge.stop();command("pactl",{"unload-module",module});module.clear();
-        std::cout<<"Live PipeWire: eight channels isolated; EQ "<<20*std::log10(cut/flat)<<" dB; gain "<<20*std::log10(gain/flat)<<" dB; delay/reverb output verified. No physical output used.\n";return 0;
+        std::cout<<"Live PipeWire: eight channels isolated; EQ "<<20*std::log10(cut/flat)<<" dB; gain "<<20*std::log10(gain/flat)<<" dB; delay/reverb output and live meter peaks verified. No physical output used.\n";return 0;
     }catch(const std::exception &e){if(!module.isEmpty())try{command("pactl",{"unload-module",module});}catch(...){}std::cerr<<e.what()<<'\n';return 1;}
 }

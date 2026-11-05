@@ -225,6 +225,31 @@ std::wstring windowsDefaultEndpointId(bool capture, int role) {
     return result;
 }
 
+SystemOutputVolume windowsSystemOutputVolume() {
+    Apartment apartment;
+    auto devices=enumerator();
+    ComPtr<IMMDevice> device;
+    check(devices->GetDefaultAudioEndpoint(eRender,eMultimedia,&device),"Read default output endpoint");
+    ComPtr<IAudioEndpointVolume> volume;
+    check(device->Activate(__uuidof(IAudioEndpointVolume),CLSCTX_ALL,nullptr,
+        reinterpret_cast<void **>(volume.GetAddressOf())),"Read speaker volume");
+    float level=0;BOOL muted=FALSE;
+    check(volume->GetMasterVolumeLevelScalar(&level),"Read speaker volume");
+    check(volume->GetMute(&muted),"Read speaker mute");
+    return {level,muted!=FALSE};
+}
+void windowsSetSystemOutputVolume(float level) {
+    if(!std::isfinite(level) || level<0 || level>1)throw std::invalid_argument("Invalid system volume");
+    Apartment apartment;
+    auto devices=enumerator();
+    ComPtr<IMMDevice> device;
+    check(devices->GetDefaultAudioEndpoint(eRender,eMultimedia,&device),"Read default output endpoint");
+    ComPtr<IAudioEndpointVolume> volume;
+    check(device->Activate(__uuidof(IAudioEndpointVolume),CLSCTX_ALL,nullptr,
+        reinterpret_cast<void **>(volume.GetAddressOf())),"Read speaker volume");
+    check(volume->SetMasterVolumeLevelScalar(level,nullptr),"Set output level");
+}
+
 std::wstring windowsDefaultOutputId() { return windowsDefaultEndpointId(false); }
 std::wstring windowsDefaultInputId() { return windowsDefaultEndpointId(true); }
 
