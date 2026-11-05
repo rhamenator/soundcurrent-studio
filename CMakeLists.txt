@@ -389,4 +389,6 @@ set_tests_properties(equipment-real-import PROPERTIES ENVIRONMENT "QT_QPA_PLATFO
 endif() # Equipment desktop tools/tests
 
 # Exercise real custom-profile replacement in the main-window integration test.
-set_property(TEST shared-ui APPEND PROPERTY ENVIRONMENT "SOUNDCURRENT_PROFILE_IMPORT_FIXTURE=${CMAKE_CURRENT_SOURCE_DIR}/data/examples/acoustic-research-ar-2ax-experimental.json")
+if(TEST shared-ui)
+  set_property(TEST shared-ui APPEND PROPERTY ENVIRONMENT "SOUNDCURRENT_PROFILE_IMPORT_FIXTURE=${CMAKE_CURRENT_SOURCE_DIR}/data/examples/acoustic-research-ar-2ax-experimental.json")
+endif()
