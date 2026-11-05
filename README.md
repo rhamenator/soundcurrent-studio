@@ -337,3 +337,5 @@ See [metering, dynamics, volume and room balance](docs/metering-dynamics-and-bal
 
 [Using Studio](docs/using-studio.md) explains the Effects/Mixer/channel/render pages,
 input versus output gain, Apply settings, the Channel meters dialog and opt-in startup.
+
+[Audio buffering](docs/audio-buffering.md) explains the shared Linux/Windows setting, latency trade-offs, and Apply/recovery behavior.

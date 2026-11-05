@@ -329,6 +329,10 @@ Do you want to delete it anyway?</source>
       <translation>앱 업데이트</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>적용됨</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>적용</translation>
     </message>
@@ -367,6 +371,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Audio bridge did not start</source>
       <translation>오디오 브리지를 시작하지 못했습니다</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>오디오 버퍼링</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>자동 헤드룸 %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>자동</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Small room</source>
       <translation>작은 방</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>버퍼가 작으면 지연이 줄지만 잡음이 생길 수 있습니다. 자동은 Linux 기본값을 유지하고 Windows에서 40ms를 요청합니다. 장치가 요청을 조정할 수 있습니다. 적용하면 실행 중인 오디오가 잠시 다시 시작됩니다.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

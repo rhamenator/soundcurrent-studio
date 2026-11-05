@@ -329,6 +329,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Actualizări aplicație</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Aplicat</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Aplicați</translation>
     </message>
@@ -367,6 +371,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Audio bridge did not start</source>
       <translation>Puntea audio nu a pornit</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Memorie tampon audio</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Rezervă automată de nivel %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Automat</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Small room</source>
       <translation>Cameră mică</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Memoriile tampon mai mici reduc întârzierea, dar pot provoca pocnituri. Automat păstrează valorile Linux și solicită 40 ms în Windows. Dispozitivele pot adapta cererea. Aplică repornește pentru scurt timp sunetul activ.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

@@ -329,6 +329,10 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Cập nhật ứng dụng</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Đã áp dụng</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Áp dụng</translation>
     </message>
@@ -367,6 +371,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Audio bridge did not start</source>
       <translation>Cầu nối âm thanh không khởi động được</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Bộ đệm âm thanh</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Khoảng dự phòng tự động %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Tự động</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Small room</source>
       <translation>Phòng nhỏ</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Bộ đệm nhỏ hơn giảm độ trễ nhưng có thể gây tiếng lách tách. Tự động giữ mặc định Linux và yêu cầu 40 ms trên Windows. Thiết bị có thể điều chỉnh yêu cầu. Áp dụng khởi động lại âm thanh đang hoạt động trong chốc lát.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

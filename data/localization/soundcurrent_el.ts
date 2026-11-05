@@ -329,6 +329,10 @@ Do you want to delete it anyway?</source>
       <translation>Ενημερώσεις εφαρμογής</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Εφαρμόστηκε</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Εφαρμογή</translation>
     </message>
@@ -367,6 +371,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Audio bridge did not start</source>
       <translation>Η γέφυρα ήχου δεν ξεκίνησε</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Προσωρινή αποθήκευση ήχου</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Αυτόματο περιθώριο %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Αυτόματα</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Small room</source>
       <translation>Μικρός χώρος</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Μικρότερα buffer μειώνουν την καθυστέρηση αλλά μπορεί να προκαλέσουν τριξίματα. Η αυτόματη ρύθμιση διατηρεί τις προεπιλογές Linux και ζητά 40 ms στα Windows. Οι συσκευές μπορεί να προσαρμόσουν το αίτημα. Η εφαρμογή επανεκκινεί για λίγο τον ενεργό ήχο.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

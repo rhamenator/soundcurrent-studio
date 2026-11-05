@@ -329,6 +329,10 @@ Do you want to delete it anyway?</source>
       <translation>עדכוני האפליקציה</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>הוחל</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>החלה</translation>
     </message>
@@ -367,6 +371,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Audio bridge did not start</source>
       <translation>גשר השמע לא הופעל</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>אגירת שמע</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>מרווח עוצמה אוטומטי %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>אוטומטי</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Small room</source>
       <translation>חדר קטן</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>מאגרים קטנים יותר מפחיתים השהיה אך עלולים לגרום לפצפוצים. המצב האוטומטי שומר על ברירות המחדל של Linux ומבקש 40 אלפיות שנייה ב־Windows. התקנים עשויים להתאים את הבקשה. החלה מפעילה מחדש לזמן קצר את השמע הפעיל.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

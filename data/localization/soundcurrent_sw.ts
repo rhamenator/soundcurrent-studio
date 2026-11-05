@@ -329,6 +329,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Masasisho ya programu</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Imetumika</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Tumia</translation>
     </message>
@@ -367,6 +371,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Audio bridge did not start</source>
       <translation>Daraja la sauti halikuanza</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Uhifadhi wa muda wa sauti</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Nafasi ya akiba ya kiotomatiki %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Otomatiki</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Small room</source>
       <translation>Chumba kidogo</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Bafa ndogo hupunguza ucheleweshaji lakini zinaweza kusababisha sauti za kupasuka. Otomatiki huhifadhi chaguo-msingi za Linux na kuomba ms 40 kwenye Windows. Vifaa vinaweza kurekebisha ombi. Tumia huanzisha upya sauti inayotumika kwa muda mfupi.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

@@ -329,6 +329,10 @@ Do you want to delete it anyway?</translation>
       <translation>Application updates</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Applied</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Apply</translation>
     </message>
@@ -367,6 +371,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Audio bridge did not start</source>
       <translation>Audio bridge did not start</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Audio buffering</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Auto headroom %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Automatic</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Small room</source>
       <translation>Small room</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</translation>
     </message>
     <message>
       <source>Soft Treble</source>

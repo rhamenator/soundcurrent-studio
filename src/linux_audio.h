@@ -11,7 +11,7 @@ public:
     LinuxBridge();
     ~LinuxBridge();
     void start(const std::string &target, const std::string &sink, const std::string &output,
-               const EngineSettings &, std::span<const double> matrix);
+               const EngineSettings &, std::span<const double> matrix, int bufferMs = 0);
     void update(const EngineSettings &, std::span<const double> matrix);
     void stop();
     bool running() const;

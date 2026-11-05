@@ -329,6 +329,10 @@ Do you want to delete it anyway?</source>
       <translation>Actualizaciones de la aplicación</translation>
     </message>
     <message>
+      <source>Applied</source>
+      <translation>Aplicado</translation>
+    </message>
+    <message>
       <source>Apply</source>
       <translation>Aplicar</translation>
     </message>
@@ -367,6 +371,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Audio bridge did not start</source>
       <translation>El puente de audio no se inició</translation>
+    </message>
+    <message>
+      <source>Audio buffering</source>
+      <translation>Almacenamiento de audio en búfer</translation>
     </message>
     <message>
       <source>Audio driver setup</source>
@@ -415,6 +423,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Auto headroom %1 dB</source>
       <translation>Margen automático de %1 dB</translation>
+    </message>
+    <message>
+      <source>Automatic</source>
+      <translation>Automático</translation>
     </message>
     <message>
       <source>Automatic (SoundCurrent Microphone)</source>
@@ -3196,6 +3208,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Small room</source>
       <translation>Sala pequeña</translation>
+    </message>
+    <message>
+      <source>Smaller buffers reduce delay but may cause crackling. Automatic preserves Linux defaults and requests 40 ms on Windows. Devices may adjust the request. Apply briefly restarts active audio.</source>
+      <translation>Los búferes pequeños reducen el retardo, pero pueden causar chasquidos. Automático conserva los valores de Linux y solicita 40 ms en Windows. Los dispositivos pueden ajustar la solicitud. Aplicar reinicia brevemente el audio activo.</translation>
     </message>
     <message>
       <source>Soft Treble</source>
