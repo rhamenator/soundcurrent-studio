@@ -3729,6 +3729,7 @@ private:
         file.write(QJsonDocument(object).toJson());
         if (!file.commit()) { showError(SC_TR("Could not finish saving preset.")); return; }
         rebuildPresetList(name);
+        saveListeningState();
         commitChange();
         status_->setText(SC_TR("Saved preset “%1”.").arg(name));
     }
