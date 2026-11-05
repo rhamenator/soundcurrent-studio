@@ -203,6 +203,10 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Pridať filter</translation>
     </message>
     <message>
+      <source>Add point</source>
+      <translation>Pridať bod</translation>
+    </message>
+    <message>
       <source>Adjust the output from -60 to +12 dB after the EQ. Higher gain can cause clipping.</source>
       <translation>Upravte výstup za ekvalizérom v rozsahu −60 až +12 dB. Vyššie zosilnenie môže spôsobiť prebudenie.</translation>
     </message>
@@ -214,6 +218,10 @@ Chcete ho aj tak zmazať?</translation>
       <source>Adjustable system-wide equalizer for PipeWire</source>
       <translation>Nastaviteľný ekvalizér pre celý systém s PipeWire</translation>
       <extracomment>Linux launcher description. Adjustable EQ applies across system playback using PipeWire; not a claim of a new driver or automatic room correction. Preserve PipeWire product identity. Application name and launch command stay unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Advanced</source>
+      <translation>Pokročilé</translation>
     </message>
     <message>
       <source>Advanced enhancement controls</source>
@@ -351,6 +359,10 @@ Chcete ho aj tak zmazať?</translation>
       <source>Are you sure you want to delete '%1'?</source>
       <translation>Naozaj chcete zmazať '%1'?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Arrow keys adjust the selected point; Delete removes it.</source>
+      <translation>Šípky upravujú vybraný bod; Delete ho odstráni.</translation>
     </message>
     <message>
       <source>Audio bridge did not start</source>
@@ -1075,8 +1087,16 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Presúvajte body krivky alebo dolaďte vybrané pásmo nižšie.</translation>
     </message>
     <message>
+      <source>Drag points to shape the correction. Double-click to add a point.</source>
+      <translation>Ťahaním bodov tvarujte korekciu. Dvojklikom pridáte bod.</translation>
+    </message>
+    <message>
       <source>Drain test playback</source>
       <translation>Vyprázdniť buffer testovacieho prehrávania</translation>
+    </message>
+    <message>
+      <source>Drawn corrections are listening adjustments, not equipment measurements.</source>
+      <translation>Nakreslené korekcie sú posluchové úpravy, nie merania zariadenia.</translation>
     </message>
     <message>
       <source>Drive</source>
@@ -2122,6 +2142,10 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Move right for a broader adjustment.</source>
+      <translation>Posunutím doprava rozšírite úpravu.</translation>
+    </message>
+    <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
       <translation>Posunom k L alebo R znížite opačný kanál; v strede zostávajú oba na plnej úrovni</translation>
     </message>
@@ -2332,10 +2356,6 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Cable setup launch progress. %1 is stable VB-CABLE name. Opening installer, not claim of successful installation.</extracomment>
     </message>
     <message>
-      <source>Orange: measured response where supplied. Teal: correction at 48 kHz. Drag teal control points or edit the table. Saving preserves the reference and creates a custom copy.</source>
-      <translation>Oranžová: nameraná odozva, ak je dodaná. Tyrkysová: korekcia pri 48 kHz. Presúvajte tyrkysové body alebo upravujte tabuľku. Uložením zachováte referenčný profil a vytvoríte vlastnú kópiu.</translation>
-    </message>
-    <message>
       <source>Outdoor speaker</source>
       <translation>Vonkajší reproduktor</translation>
       <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
@@ -2484,6 +2504,14 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Zabrániť zmenám predvolieb, pásiem EQ, výstupného zosilnenia a vyváženia</translation>
     </message>
     <message>
+      <source>Preview</source>
+      <translation>Náhľad</translation>
+    </message>
+    <message>
+      <source>Preview is temporary. Closing the editor restores the previous correction.</source>
+      <translation>Náhľad je dočasný. Zatvorením editora sa obnoví predchádzajúca korekcia.</translation>
+    </message>
+    <message>
       <source>Profile</source>
       <translation>Profil</translation>
     </message>
@@ -2512,8 +2540,8 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Profily sa použijú ihneď po výbere.</translation>
     </message>
     <message>
-      <source>Profiles need 1–16 correction filters.</source>
-      <translation>Profily potrebujú 1–16 korekčných filtrov.</translation>
+      <source>Profiles need 1–32 correction filters.</source>
+      <translation>Profily potrebujú 1–32 korekčných filtrov.</translation>
     </message>
     <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
@@ -2749,12 +2777,12 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Odstrániť VB-CABLE?</translation>
     </message>
     <message>
-      <source>Remove selected</source>
-      <translation>Odstrániť vybrané</translation>
+      <source>Remove point</source>
+      <translation>Odstrániť bod</translation>
     </message>
     <message>
-      <source>Remove selected filter</source>
-      <translation>Odstrániť vybraný filter</translation>
+      <source>Remove selected</source>
+      <translation>Odstrániť vybrané</translation>
     </message>
     <message>
       <source>Remove selected route</source>
@@ -2931,6 +2959,10 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Save copy</source>
+      <translation>Uložiť kópiu</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>Uložiť upravený profil?</translation>
     </message>
@@ -3068,9 +3100,8 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>Missing-driver installer notice (check exit 10). Signed means digitally signed installer software. Install Driver is the exact external button caption and remains English. Restart Windows before using EQ or cable settings. AI contextual review; native review unverified.</extracomment>
     </message>
     <message>
-      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
-      <translation>Spoločný EQ a EQ kanála prekračujú 64 filtrov; odstráňte niektoré filtre kanála</translation>
-      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+      <source>Shared and channel EQ exceed 96 filters; remove some channel filters</source>
+      <translation>Spoločný EQ a EQ kanála prekračujú 96 filtrov; odstráňte niektoré filtre kanála</translation>
     </message>
     <message>
       <source>Shared audio driver removal did not finish. This app was kept so you can retry. Quit any running SoundCurrent app, then retry uninstalling.</source>
@@ -3552,6 +3583,10 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Previesť nameranú odozvu na korekčnú krivku.</translation>
     </message>
     <message>
+      <source>Turn on the equalizer or microphone EQ before previewing.</source>
+      <translation>Pred náhľadom zapnite ekvalizér alebo mikrofónny EQ.</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>Pred použitím nového rozloženia kanálov pre živé spracovanie vypnite prehrávanie</translation>
     </message>
@@ -3619,8 +3654,8 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Nepodporovaný počet kanálov kábla</translation>
     </message>
     <message>
-      <source>Unsupported equipment profile schema (expected 2).</source>
-      <translation>Nepodporovaná schéma profilu zariadenia (očakávané 2).</translation>
+      <source>Unsupported equipment profile schema (expected 2/3).</source>
+      <translation>Nepodporovaná schéma profilu zariadenia (očakávané 2/3).</translation>
     </message>
     <message>
       <source>Unsupported extensible WAVE subtype</source>
@@ -3688,11 +3723,6 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
       <translation>Relatívna frekvenčná odozva importovaná používateľom; pred použitím uveďte orientáciu / sériové číslo mikrofónu alebo podmienky merania reproduktora.</translation>
-      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
-    </message>
-    <message>
-      <source>User-created correction; enter equipment and measurement conditions.</source>
-      <translation>Korekcia vytvorená používateľom; zadajte vybavenie a podmienky merania.</translation>
       <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
@@ -3805,6 +3835,10 @@ Chcete ho aj tak zmazať?</translation>
       <source>Whole listening system</source>
       <translation>Celá posluchová sústava</translation>
       <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
+    </message>
+    <message>
+      <source>Width</source>
+      <translation>Šírka</translation>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>

@@ -101,7 +101,7 @@ The **Equalizer** tab opens first, with the frequency controls at the top.
 **Settings & calibration** contains devices and measurements.
 
 1. Use the shared EQ for the general listening curve. Per-channel filters add
-   channel-specific corrections. Their combined limit is 64 filters per channel.
+   channel-specific corrections. Their combined limit is 96 filters per channel.
 2. Choose a Studio layout and select a channel to edit its name, trim, mute/solo,
    additional filters and input routes. Negative routing gains invert polarity.
 3. Enable delay or reverb, choose an effect preset, then adjust its controls.

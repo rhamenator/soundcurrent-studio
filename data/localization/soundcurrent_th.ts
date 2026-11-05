@@ -203,6 +203,10 @@ Do you want to delete it anyway?</source>
       <translation>เพิ่มฟิลเตอร์</translation>
     </message>
     <message>
+      <source>Add point</source>
+      <translation>เพิ่มจุด</translation>
+    </message>
+    <message>
       <source>Adjust the output from -60 to +12 dB after the EQ. Higher gain can cause clipping.</source>
       <translation>ปรับระดับเอาต์พุตหลัง EQ จาก -60 ถึง +12 dB เกนที่สูงขึ้นอาจทำให้สัญญาณคลิป</translation>
     </message>
@@ -214,6 +218,10 @@ Do you want to delete it anyway?</source>
       <source>Adjustable system-wide equalizer for PipeWire</source>
       <translation>อีควอไลเซอร์ที่ปรับได้สำหรับทั้งระบบด้วย PipeWire</translation>
       <extracomment>Linux launcher description. Adjustable EQ applies across system playback using PipeWire; not a claim of a new driver or automatic room correction. Preserve PipeWire product identity. Application name and launch command stay unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Advanced</source>
+      <translation>ขั้นสูง</translation>
     </message>
     <message>
       <source>Advanced enhancement controls</source>
@@ -351,6 +359,10 @@ Do you want to delete it anyway?</source>
       <source>Are you sure you want to delete '%1'?</source>
       <translation>คุณแน่ใจหรือไม่ว่าต้องการลบ '%1'?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Arrow keys adjust the selected point; Delete removes it.</source>
+      <translation>ปุ่มลูกศรปรับจุดที่เลือก และปุ่ม Delete ลบจุดนั้น</translation>
     </message>
     <message>
       <source>Audio bridge did not start</source>
@@ -1075,8 +1087,16 @@ Do you want to delete it anyway?</source>
       <translation>ลากจุดบนกราฟหรือปรับย่านที่เลือกด้านล่าง</translation>
     </message>
     <message>
+      <source>Drag points to shape the correction. Double-click to add a point.</source>
+      <translation>ลากจุดเพื่อปรับเส้นโค้งแก้ไข ดับเบิลคลิกเพื่อเพิ่มจุด</translation>
+    </message>
+    <message>
       <source>Drain test playback</source>
       <translation>รอให้การเล่นเสียงทดสอบเสร็จสิ้น</translation>
+    </message>
+    <message>
+      <source>Drawn corrections are listening adjustments, not equipment measurements.</source>
+      <translation>การแก้ไขที่วาดเป็นการปรับเพื่อการฟัง ไม่ใช่การวัดอุปกรณ์</translation>
     </message>
     <message>
       <source>Drive</source>
@@ -2122,6 +2142,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Move right for a broader adjustment.</source>
+      <translation>เลื่อนไปทางขวาเพื่อขยายช่วงการปรับ</translation>
+    </message>
+    <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
       <translation>เลื่อนไปทาง L หรือ R เพื่อลดระดับแชนเนลตรงข้าม ตำแหน่งกึ่งกลางคงทั้งสองแชนเนลไว้ที่ระดับเต็ม</translation>
     </message>
@@ -2332,10 +2356,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Cable setup launch progress. %1 is stable VB-CABLE name. Opening installer, not claim of successful installation.</extracomment>
     </message>
     <message>
-      <source>Orange: measured response where supplied. Teal: correction at 48 kHz. Drag teal control points or edit the table. Saving preserves the reference and creates a custom copy.</source>
-      <translation>สีส้ม: การตอบสนองที่วัดได้เมื่อมีข้อมูล สีเขียวอมฟ้า: การชดเชยที่ 48 kHz ลากจุดควบคุมสีเขียวอมฟ้าหรือแก้ไขตาราง การบันทึกจะเก็บข้อมูลอ้างอิงไว้และสร้างสำเนากำหนดเอง</translation>
-    </message>
-    <message>
       <source>Outdoor speaker</source>
       <translation>ลำโพงกลางแจ้ง</translation>
       <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
@@ -2484,6 +2504,14 @@ Do you want to delete it anyway?</source>
       <translation>ป้องกันการเปลี่ยนพรีเซ็ต ย่าน EQ เกนหลัง EQ และสมดุลซ้าย–ขวา</translation>
     </message>
     <message>
+      <source>Preview</source>
+      <translation>ฟังตัวอย่าง</translation>
+    </message>
+    <message>
+      <source>Preview is temporary. Closing the editor restores the previous correction.</source>
+      <translation>การฟังตัวอย่างมีผลชั่วคราว เมื่อปิดตัวแก้ไขจะคืนค่าการแก้ไขเดิม</translation>
+    </message>
+    <message>
       <source>Profile</source>
       <translation>โปรไฟล์</translation>
     </message>
@@ -2512,8 +2540,8 @@ Do you want to delete it anyway?</source>
       <translation>โปรไฟล์จะมีผลทันทีเมื่อเลือก</translation>
     </message>
     <message>
-      <source>Profiles need 1–16 correction filters.</source>
-      <translation>โปรไฟล์ต้องมีฟิลเตอร์ชดเชย 1–16 ตัว</translation>
+      <source>Profiles need 1–32 correction filters.</source>
+      <translation>โปรไฟล์ต้องมีฟิลเตอร์ชดเชย 1–32 ตัว</translation>
     </message>
     <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
@@ -2749,12 +2777,12 @@ Do you want to delete it anyway?</source>
       <translation>ลบ VB-CABLE หรือไม่?</translation>
     </message>
     <message>
-      <source>Remove selected</source>
-      <translation>ลบรายการที่เลือก</translation>
+      <source>Remove point</source>
+      <translation>ลบจุด</translation>
     </message>
     <message>
-      <source>Remove selected filter</source>
-      <translation>ลบฟิลเตอร์ที่เลือก</translation>
+      <source>Remove selected</source>
+      <translation>ลบรายการที่เลือก</translation>
     </message>
     <message>
       <source>Remove selected route</source>
@@ -2931,6 +2959,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Save copy</source>
+      <translation>บันทึกสำเนา</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>บันทึกโปรไฟล์ที่แก้ไขหรือไม่?</translation>
     </message>
@@ -3068,9 +3100,8 @@ Do you want to delete it anyway?</source>
       <extracomment>Missing-driver installer notice (check exit 10). Signed means digitally signed installer software. Install Driver is the exact external button caption and remains English. Restart Windows before using EQ or cable settings. AI contextual review; native review unverified.</extracomment>
     </message>
     <message>
-      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
-      <translation>EQ ส่วนกลางและ EQ ของช่องสัญญาณมีตัวกรองรวมเกิน 64 ตัว ให้ลบตัวกรองของช่องสัญญาณบางส่วน</translation>
-      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+      <source>Shared and channel EQ exceed 96 filters; remove some channel filters</source>
+      <translation>EQ ส่วนกลางและ EQ ของช่องสัญญาณมีตัวกรองรวมเกิน 96 ตัว ให้ลบตัวกรองของช่องสัญญาณบางส่วน</translation>
     </message>
     <message>
       <source>Shared audio driver removal did not finish. This app was kept so you can retry. Quit any running SoundCurrent app, then retry uninstalling.</source>
@@ -3552,6 +3583,10 @@ Do you want to delete it anyway?</source>
       <translation>แปลงข้อมูลการตอบสนองที่วัดได้เป็นเส้นโค้งแก้ไข</translation>
     </message>
     <message>
+      <source>Turn on the equalizer or microphone EQ before previewing.</source>
+      <translation>เปิดอีควอไลเซอร์หรือ EQ ไมโครโฟนก่อนฟังตัวอย่าง</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>ปิดการเล่นเสียงก่อนใช้รูปแบบการจัดช่องเสียงใหม่สำหรับการประมวลผลแบบเรียลไทม์</translation>
     </message>
@@ -3619,8 +3654,8 @@ Do you want to delete it anyway?</source>
       <translation>ไม่รองรับจำนวนแชนเนลของสาย</translation>
     </message>
     <message>
-      <source>Unsupported equipment profile schema (expected 2).</source>
-      <translation>ไม่รองรับรุ่นโครงสร้างโปรไฟล์อุปกรณ์ (ต้องเป็น 2)</translation>
+      <source>Unsupported equipment profile schema (expected 2/3).</source>
+      <translation>ไม่รองรับรุ่นโครงสร้างโปรไฟล์อุปกรณ์ (ต้องเป็น 2/3)</translation>
     </message>
     <message>
       <source>Unsupported extensible WAVE subtype</source>
@@ -3688,11 +3723,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
       <translation>ผลตอบสนองความถี่สัมพัทธ์ที่ผู้ใช้นำเข้า ระบุทิศทาง / หมายเลขซีเรียลของไมโครโฟนหรือเงื่อนไขการวัดลำโพงก่อนใช้งาน</translation>
-      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
-    </message>
-    <message>
-      <source>User-created correction; enter equipment and measurement conditions.</source>
-      <translation>การแก้ไขที่ผู้ใช้สร้าง โปรดป้อนอุปกรณ์และเงื่อนไขการวัด</translation>
       <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
@@ -3805,6 +3835,10 @@ Do you want to delete it anyway?</source>
       <source>Whole listening system</source>
       <translation>ระบบการฟังทั้งหมด</translation>
       <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
+    </message>
+    <message>
+      <source>Width</source>
+      <translation>ความกว้าง</translation>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>

@@ -203,6 +203,10 @@ Do you want to delete it anyway?</source>
       <translation>افزودن فیلتر</translation>
     </message>
     <message>
+      <source>Add point</source>
+      <translation>افزودن نقطه</translation>
+    </message>
+    <message>
       <source>Adjust the output from -60 to +12 dB after the EQ. Higher gain can cause clipping.</source>
       <translation>خروجی را پس از اکولایزر از -60 تا +12 dB تنظیم کنید. بهره بیشتر ممکن است باعث برش قله‌های سیگنال شود.</translation>
     </message>
@@ -214,6 +218,10 @@ Do you want to delete it anyway?</source>
       <source>Adjustable system-wide equalizer for PipeWire</source>
       <translation>اکولایزر قابل تنظیم برای کل سیستم با PipeWire</translation>
       <extracomment>Linux launcher description. Adjustable EQ applies across system playback using PipeWire; not a claim of a new driver or automatic room correction. Preserve PipeWire product identity. Application name and launch command stay unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Advanced</source>
+      <translation>پیشرفته</translation>
     </message>
     <message>
       <source>Advanced enhancement controls</source>
@@ -351,6 +359,10 @@ Do you want to delete it anyway?</source>
       <source>Are you sure you want to delete '%1'?</source>
       <translation>آیا مطمئن هستید که می‌خواهید '%1' را حذف نمایید؟</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Arrow keys adjust the selected point; Delete removes it.</source>
+      <translation>کلیدهای جهت نقطهٔ انتخاب‌شده را تنظیم می‌کنند؛ Delete آن را حذف می‌کند.</translation>
     </message>
     <message>
       <source>Audio bridge did not start</source>
@@ -1075,8 +1087,16 @@ Do you want to delete it anyway?</source>
       <translation>نقاط منحنی را بکشید یا باند انتخاب‌شده را در پایین تنظیم کنید.</translation>
     </message>
     <message>
+      <source>Drag points to shape the correction. Double-click to add a point.</source>
+      <translation>نقطه‌ها را برای شکل‌دادن به اصلاح بکشید. برای افزودن نقطه دوبار کلیک کنید.</translation>
+    </message>
+    <message>
       <source>Drain test playback</source>
       <translation>تکمیل پخش آزمایشی</translation>
+    </message>
+    <message>
+      <source>Drawn corrections are listening adjustments, not equipment measurements.</source>
+      <translation>اصلاح‌های ترسیم‌شده تنظیمات شنیداری هستند، نه اندازه‌گیری تجهیزات.</translation>
     </message>
     <message>
       <source>Drive</source>
@@ -2122,6 +2142,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
     </message>
     <message>
+      <source>Move right for a broader adjustment.</source>
+      <translation>برای تنظیم گسترده‌تر به راست ببرید.</translation>
+    </message>
+    <message>
       <source>Move toward L or R to reduce the opposite channel; center keeps both at full level</source>
       <translation>به سمت L یا R حرکت دهید تا سطح کانال مقابل کاهش یابد؛ مرکز هر دو کانال را در سطح کامل نگه می‌دارد</translation>
     </message>
@@ -2332,10 +2356,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Cable setup launch progress. %1 is stable VB-CABLE name. Opening installer, not claim of successful installation.</extracomment>
     </message>
     <message>
-      <source>Orange: measured response where supplied. Teal: correction at 48 kHz. Drag teal control points or edit the table. Saving preserves the reference and creates a custom copy.</source>
-      <translation>نارنجی: پاسخ اندازه‌گیری‌شده در صورت وجود. سبزآبی: اصلاح در 48 kHz. نقاط کنترل سبزآبی را بکشید یا جدول را ویرایش کنید. ذخیره، مرجع را حفظ می‌کند و نسخه سفارشی می‌سازد.</translation>
-    </message>
-    <message>
       <source>Outdoor speaker</source>
       <translation>بلندگوی فضای باز</translation>
       <extracomment>Speaker designed for outdoor use; not an output device selector.</extracomment>
@@ -2484,6 +2504,14 @@ Do you want to delete it anyway?</source>
       <translation>جلوگیری از تغییر پیش‌تنظیم‌ها، باندهای اکولایزر، بهره پس از پردازش و توازن</translation>
     </message>
     <message>
+      <source>Preview</source>
+      <translation>پیش‌نمایش</translation>
+    </message>
+    <message>
+      <source>Preview is temporary. Closing the editor restores the previous correction.</source>
+      <translation>پیش‌نمایش موقتی است. بستن ویرایشگر اصلاح قبلی را برمی‌گرداند.</translation>
+    </message>
+    <message>
       <source>Profile</source>
       <translation>پروفایل</translation>
     </message>
@@ -2512,8 +2540,8 @@ Do you want to delete it anyway?</source>
       <translation>نمایه‌ها بلافاصله پس از انتخاب اعمال می‌شوند.</translation>
     </message>
     <message>
-      <source>Profiles need 1–16 correction filters.</source>
-      <translation>پروفایل‌ها به 1–16 فیلتر اصلاح نیاز دارند.</translation>
+      <source>Profiles need 1–32 correction filters.</source>
+      <translation>پروفایل‌ها به 1–32 فیلتر اصلاح نیاز دارند.</translation>
     </message>
     <message>
       <source>Published measurement sources: &lt;a href="https://www.spinorama.org/"&gt;Speaker measurements / EQ&lt;/a&gt; · &lt;a href="https://support.daytonaudio.com/microphonecalibrationtool"&gt;Dayton serial calibration&lt;/a&gt; · &lt;a href="https://www.minidsp.com/products/acoustic-measurement/umik-1"&gt;miniDSP serial calibration&lt;/a&gt; · &lt;a href="https://www.neumann.com/de-de/downloads/"&gt;Neumann microphone graphs&lt;/a&gt; · &lt;a href="https://docs.audio-technica.com/us/at2020_english.pdf"&gt;AT2020 response graph&lt;/a&gt; · &lt;a href="https://www.soundstagenetwork.com/index.php?Itemid=154&amp;amp;id=97&amp;amp;option=com_content&amp;amp;view=category"&gt;Amplifier measurements&lt;/a&gt;</source>
@@ -2749,12 +2777,12 @@ Do you want to delete it anyway?</source>
       <translation>VB-CABLE حذف شود؟</translation>
     </message>
     <message>
-      <source>Remove selected</source>
-      <translation>حذف مورد انتخاب‌شده</translation>
+      <source>Remove point</source>
+      <translation>حذف نقطه</translation>
     </message>
     <message>
-      <source>Remove selected filter</source>
-      <translation>حذف فیلتر انتخاب‌شده</translation>
+      <source>Remove selected</source>
+      <translation>حذف مورد انتخاب‌شده</translation>
     </message>
     <message>
       <source>Remove selected route</source>
@@ -2931,6 +2959,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Save copy</source>
+      <translation>ذخیرهٔ کپی</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>پروفایل تغییرکرده ذخیره شود؟</translation>
     </message>
@@ -3068,9 +3100,8 @@ Do you want to delete it anyway?</source>
       <extracomment>Missing-driver installer notice (check exit 10). Signed means digitally signed installer software. Install Driver is the exact external button caption and remains English. Restart Windows before using EQ or cable settings. AI contextual review; native review unverified.</extracomment>
     </message>
     <message>
-      <source>Shared and channel EQ exceed 64 filters; remove some channel filters</source>
-      <translation>اکولایزر مشترک و اکولایزر کانال از 64 فیلتر فراتر می‌روند؛ برخی فیلترهای کانال را حذف کنید</translation>
-      <extracomment>Sum of shared EQ and channel EQ must not exceed 64 filters. Remove channel filters, not speaker profiles. Keep the limit 64.</extracomment>
+      <source>Shared and channel EQ exceed 96 filters; remove some channel filters</source>
+      <translation>اکولایزر مشترک و اکولایزر کانال از 96 فیلتر فراتر می‌روند؛ برخی فیلترهای کانال را حذف کنید</translation>
     </message>
     <message>
       <source>Shared audio driver removal did not finish. This app was kept so you can retry. Quit any running SoundCurrent app, then retry uninstalling.</source>
@@ -3552,6 +3583,10 @@ Do you want to delete it anyway?</source>
       <translation>داده‌های پاسخ اندازه‌گیری‌شده را به منحنی اصلاح تبدیل کنید.</translation>
     </message>
     <message>
+      <source>Turn on the equalizer or microphone EQ before previewing.</source>
+      <translation>پیش از پیش‌نمایش، اکولایزر یا EQ میکروفون را روشن کنید.</translation>
+    </message>
+    <message>
       <source>Turn playback off before applying a new live channel layout</source>
       <translation>پیش از اعمال چینش کانال جدید برای پردازش بلادرنگ، پخش را خاموش کنید</translation>
     </message>
@@ -3619,8 +3654,8 @@ Do you want to delete it anyway?</source>
       <translation>تعداد کانال‌های کابل پشتیبانی نمی‌شود</translation>
     </message>
     <message>
-      <source>Unsupported equipment profile schema (expected 2).</source>
-      <translation>طرح ساختار پروفایل تجهیزات پشتیبانی نمی‌شود (نسخه مورد انتظار 2).</translation>
+      <source>Unsupported equipment profile schema (expected 2/3).</source>
+      <translation>طرح ساختار پروفایل تجهیزات پشتیبانی نمی‌شود (نسخه مورد انتظار 2/3).</translation>
     </message>
     <message>
       <source>Unsupported extensible WAVE subtype</source>
@@ -3688,11 +3723,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>User imported relative frequency response; specify microphone orientation / serial, or speaker measurement conditions before use.</source>
       <translation>پاسخ فرکانسی نسبی واردشده توسط کاربر؛ پیش از استفاده جهت میکروفون / شمارهٔ سریال یا شرایط اندازه‌گیری بلندگو را مشخص کنید.</translation>
-      <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
-    </message>
-    <message>
-      <source>User-created correction; enter equipment and measurement conditions.</source>
-      <translation>اصلاح ساخته‌شده توسط کاربر؛ تجهیزات و شرایط اندازه‌گیری را وارد کنید.</translation>
       <extracomment>App-authored editable defaults or provenance for a newly created/imported profile or explicitly saved copy. Existing saved/imported metadata remains verbatim. Never translate filenames, hashes or source IDs substituted for placeholders.</extracomment>
     </message>
     <message>
@@ -3805,6 +3835,10 @@ Do you want to delete it anyway?</source>
       <source>Whole listening system</source>
       <translation>کل سامانهٔ شنیدن</translation>
       <extracomment>New editable calibration profile family; combined speaker, amplifier, microphone and room, not isolated speaker response. Translate only on creation, preserve loaded metadata.</extracomment>
+    </message>
+    <message>
+      <source>Width</source>
+      <translation>پهنای باند</translation>
     </message>
     <message>
       <source>Windows audio COM unavailable</source>
