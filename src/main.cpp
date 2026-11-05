@@ -29,6 +29,7 @@
 #include "windows_managed_route.h"
 #endif
 #include <QApplication>
+#include <QDebug>
 #include <QDesktopServices>
 #include <QUrl>
 #include <QAbstractSpinBox>
@@ -2656,6 +2657,9 @@ public:
         power_->setChecked(true); // Blocked: exercise metering, never start audio.
         for (const auto &size : {QSize(1050, 640), QSize(800, 600), QSize(640, 480)}) {
             resize(size);
+            // A requested test size may exceed the real display. Settle the
+            // application's fit before attributing geometry changes to metering.
+            fitToDisplay();
             for (int page = 0; page < tabs_->count(); ++page) {
                 tabs_->setCurrentIndex(page);
                 QCoreApplication::processEvents();
@@ -2676,8 +2680,12 @@ public:
                     if (peakStatus_->height() < 2 * QFontMetrics(normalFont).lineSpacing())
                         qFatal("Peak readout reserved height does not fit its font");
                     if (overallLevel_->geometry() != meterGeometry || peakStatus_->geometry() != textGeometry ||
-                        systemVolume_->slider()->geometry() != gainGeometry)
+                        systemVolume_->slider()->geometry() != gainGeometry) {
+                        qWarning() << "Peak layout changed" << size << page << peak << meterGeometry << overallLevel_->geometry()
+                                   << textGeometry << peakStatus_->geometry() << gainGeometry << systemVolume_->slider()->geometry()
+                                   << "window" << this->size();
                         qFatal("Peak label reflow moved the meter or volume slider");
+                    }
                 }
             }
         }
