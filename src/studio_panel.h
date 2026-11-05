@@ -25,7 +25,7 @@ class ChannelMeterView;
 class RoomBalancePad;
 class StudioPanel : public QWidget {
 public:
-    explicit StudioPanel(bool persist, QWidget *parent = nullptr);
+    explicit StudioPanel(bool persist, QWidget *parent = nullptr, bool testControls = false);
     ~StudioPanel() override;
     Session session() const { return session_; }
     void setShared(std::span<const EqBand>, double gain, int balance);
@@ -33,6 +33,8 @@ public:
     void undo();
     void setLiveLevels(std::span<const float>);
     void showMonitoring();
+    bool monitoringAvailable() const { return testControls_ || session_.engine.channels.size()>2; }
+    std::function<void(int)> onStereoBalanceChanged;
     void liveStatus(const QString &, bool rejected = false);
     void selfTest();
     void selfTestFormatting();
@@ -61,11 +63,14 @@ private:
     std::vector<EqBand> shared_;
     double sharedGain_ = 0;
     int balance_ = 0;
-    bool persist_, rebuilding_ = false, locked_ = false;
+    bool persist_, rebuilding_ = false, locked_ = false, testControls_ = false;
     QDialog *monitorDialog_;
     QTabWidget *pages_;
     QTableWidget *mixer_;
-    QDoubleSpinBox *preGain_;
+    QSlider *preGain_, *stereoBalance_;
+    QLabel *preGainValue_, *stereoBalanceValue_;
+    QWidget *stereoBalanceControls_;
+    QPushButton *showMeters_, *centerBalance_;
     QPushButton *apply_;
     QSpinBox *count_, *routeInput_;
     QComboBox *layout_, *channel_, *preset_, *filterType_;

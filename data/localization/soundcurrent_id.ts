@@ -84,14 +84,6 @@ Aplikasi tetap terbuka; pengaturan Anda dipertahankan.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Terapkan koreksi ini ke jalur %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>Apply amplifier correction?</source>
       <translation>Terapkan koreksi amplifier?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>Terapkan koreksi?</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Profil harus dapat dibaca dan berukuran kurang dari 64 KiB.</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Profil langsung diterapkan saat dipilih.</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>Profil memerlukan 1–16 filter koreksi.</translation>
     </message>
@@ -3406,6 +3398,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Level uji berada di luar rentang yang diizinkan</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Mode uji</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

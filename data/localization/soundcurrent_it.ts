@@ -84,14 +84,6 @@ L’app rimane aperta; le impostazioni sono state conservate.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Applicare questa correzione al percorso %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Vuoi eliminarlo comunque?</translation>
       <source>Apply amplifier correction?</source>
       <translation>Applicare la correzione dell’amplificatore?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>Applicare la correzione?</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Il profilo deve essere leggibile e inferiore a 64 KiB.</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>I profili vengono applicati immediatamente alla selezione.</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>I profili richiedono 1–16 filtri di correzione.</translation>
     </message>
@@ -3406,6 +3398,10 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Il livello di test è fuori dall’intervallo consentito</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Modalità di test</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

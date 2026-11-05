@@ -84,14 +84,6 @@ The app remains open; your settings have been kept.</source>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-この補正を %4 の経路に適用しますか？</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Do you want to delete it anyway?</source>
       <source>Apply amplifier correction?</source>
       <translation>アンプの補正を適用しますか？</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>補正を適用しますか？</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Do you want to delete it anyway?</source>
       <translation>プロファイルは読み取り可能で、64 KiB 未満である必要があります。</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>プロファイルは選択するとすぐに適用されます。</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>プロファイルには補正フィルターが 1～16 個必要です。</translation>
     </message>
@@ -3406,6 +3398,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>テストレベルが許容範囲外です</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>テストモード</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

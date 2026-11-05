@@ -84,14 +84,6 @@ Appen förblir öppen; dina inställningar har behållits.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Tillämpa denna korrigering på signalvägen av typen %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Vill du ta bort den ändå?</translation>
       <source>Apply amplifier correction?</source>
       <translation>Tillämpa förstärkarkorrigering?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>Tillämpa korrigering?</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Profilen måste vara läsbar och mindre än 64 KiB.</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Profiler tillämpas direkt när de väljs.</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>Profiler behöver 1–16 korrigeringsfilter.</translation>
     </message>
@@ -3406,6 +3398,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Testnivån ligger utanför det tillåtna området</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Testläge</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

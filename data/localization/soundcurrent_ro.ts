@@ -84,14 +84,6 @@ Aplicația rămâne deschisă; setările au fost păstrate.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Aplicați această corecție rutei %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Apply amplifier correction?</source>
       <translation>Aplicați corecția amplificatorului?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>Aplicați corecția?</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Profilul trebuie să poată fi citit și să fie mai mic de 64 KiB.</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Profilurile se aplică imediat după selectare.</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>Profilurile necesită 1–16 filtre de corecție.</translation>
     </message>
@@ -3406,6 +3398,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Nivelul de test este în afara intervalului permis</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Mod de testare</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

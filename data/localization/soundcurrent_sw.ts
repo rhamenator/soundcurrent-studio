@@ -84,14 +84,6 @@ Programu bado iko wazi; mipangilio yako imehifadhiwa.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Utumie usahihishaji huu kwenye njia ya %4?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Apply amplifier correction?</source>
       <translation>Utumie marekebisho ya amplifaya?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>Utumie usahihishaji?</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Wasifu lazima usomeke na uwe mdogo kuliko 64 KiB.</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Wasifu hutumika mara tu unapochaguliwa.</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>Wasifu unahitaji vichujio 1–16 vya usahihishaji.</translation>
     </message>
@@ -3406,6 +3398,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Kiwango cha majaribio kiko nje ya eneo linaloruhusiwa</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Hali ya majaribio</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

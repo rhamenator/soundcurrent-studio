@@ -26,7 +26,7 @@ The first controls select a channel layout. The pages below separate the jobs:
 
 ### Effects
 
-Input gain changes the signal **before** EQ, dynamics, delay and reverb. Its
+The Input gain slider changes the signal **before** EQ, dynamics, delay and reverb. Its
 range is −60 to +24 dB. Increasing it drives the compressor harder; Output gain
 changes the level after those effects. Both default to 0 dB for a fresh setup.
 
@@ -74,9 +74,10 @@ mixer controls and committed filter/routing changes apply immediately. The
 status line near the top reports whether the settings were applied or whether
 playback needs to be enabled.
 
-Changing channel count/layout or opening a saved setup selects Offline editing.
-That stages the configuration while existing playback keeps its last live
-setup. Use Apply settings when ready. A compatible channel-layout change may
+Live editing is the default. Changing channel count/layout preserves the current
+live/offline choice. Opening a saved setup selects Offline editing for review;
+that stages the configuration while existing playback keeps its last live setup.
+Use Apply settings when ready. A compatible live channel-layout change may
 restart the route; if the device cannot support it, the app reports the problem
 and keeps the configuration staged. Supported-capacity checks happen before
 stopping the existing route; failed restarts attempt to restore the prior setup.
@@ -87,7 +88,14 @@ configuration without changing the current playback.
 
 ## Channel monitoring
 
-Channel meters opens a modeless, scrollable dialog. Stereo consistently labels
+Channel meters opens an application-modal, scrollable dialog sized to its contents
+and available display. Close it before changing channel layout. In production the
+same button is disabled for mono/stereo and enabled for multichannel layouts.
+Launch with `--test-controls` (or `--preview`) to enable mono/stereo dialog testing.
+Stereo test mode includes a balance slider synchronized with the always-visible
+balance slider. Center stays enabled when already centered and resets the slider;
+in surround it resets the room-control dot. Mono hides balance controls.
+Stereo consistently labels
 generated channels Left and Right, including old generated Front left/right
 names; custom names remain unchanged. Stereo shows L/R bars;
 recognized 5.1/7.1 roles use a speaker-position display and room-balance pad.

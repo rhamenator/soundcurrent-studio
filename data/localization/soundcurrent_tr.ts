@@ -84,14 +84,6 @@ Uygulama açık kalır; ayarlarınız korunmuştur.</translation>
     <message>
       <source>%1 / %2
 %3
-Apply this correction to the %4 route?</source>
-      <translation>%1 / %2
-%3
-Bu düzeltme %4 türündeki ses yoluna uygulansın mı?</translation>
-    </message>
-    <message>
-      <source>%1 / %2
-%3
 Import into your library?</source>
       <translation>%1 / %2
 %3
@@ -332,10 +324,6 @@ Yine de silmek istiyor musunuz?</translation>
       <source>Apply amplifier correction?</source>
       <translation>Amplifikatör düzeltmesi uygulansın mı?</translation>
       <extracomment>Confirmation title before applying a measured amplifier frequency-response correction. Correction changes EQ, not hardware gain or firmware.</extracomment>
-    </message>
-    <message>
-      <source>Apply correction?</source>
-      <translation>Düzeltme uygulansın mı?</translation>
     </message>
     <message>
       <source>Apply only if these conditions match your system.</source>
@@ -2496,6 +2484,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Profil okunabilir ve 64 KiB'den küçük olmalıdır.</translation>
     </message>
     <message>
+      <source>Profiles apply immediately when selected.</source>
+      <translation>Profiller seçildikleri anda uygulanır.</translation>
+    </message>
+    <message>
       <source>Profiles need 1–16 correction filters.</source>
       <translation>Profiller 1–16 düzeltme filtresi gerektirir.</translation>
     </message>
@@ -3406,6 +3398,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Test level is outside the allowed range</source>
       <translation>Test seviyesi izin verilen aralığın dışında</translation>
+    </message>
+    <message>
+      <source>Test mode</source>
+      <translation>Test modu</translation>
     </message>
     <message>
       <source>The VB-CABLE package is missing. Repair the SoundCurrent installation.</source>

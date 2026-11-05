@@ -1849,7 +1849,7 @@ static soundcurrent::equipment::Profile measuredSystemProfile(const QString &inp
 
 class MainWindow : public QMainWindow {
 public:
-    explicit MainWindow(bool startEnabled = true) : bands_(builtinProfile("Flat", kDefaultBands)) {
+    explicit MainWindow(bool startEnabled = true, bool testControls = false) : bands_(builtinProfile("Flat", kDefaultBands)) {
         setWindowTitle("SoundCurrent Studio");
         setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")));
         setMinimumSize(480, 320);
@@ -1890,7 +1890,7 @@ public:
         settingsScroll->setWidget(settingsContainer);
         tabs_->addTab(settingsScroll, SC_TR("Settings && calibration"));
         auto *studioScroll=new QScrollArea;studioScroll->setWidgetResizable(true);
-        studio_=new soundcurrent::studio::StudioPanel(startEnabled);studioScroll->setWidget(studio_);
+        studio_=new soundcurrent::studio::StudioPanel(startEnabled,nullptr,testControls);studioScroll->setWidget(studio_);
         tabs_->insertTab(1,studioScroll,SC_TR("Studio channels && effects"));
         tabs_->setCurrentIndex(0);
         settingsRoot->addWidget(soundcurrent::i18n::settingsPanel());
@@ -1924,6 +1924,7 @@ public:
         outputRow->addWidget(systemVolume_,1);
         auto *monitorChannels=new QPushButton(SC_TR("Channel meters"));
         monitorChannels->setObjectName("showChannelMeters");
+        monitorChannels->setEnabled(studio_->monitoringAvailable());
         outputRow->addWidget(monitorChannels);
         connect(monitorChannels,&QPushButton::clicked,studio_,[this]{studio_->showMonitoring();});
         playbackLayout->addLayout(outputRow);
@@ -1965,6 +1966,7 @@ public:
         balance_->setToolTip(SC_TR("Move toward L or R to reduce the opposite channel; center keeps both at full level"));
         balance_->setValue(std::clamp(QSettings().value("balancePercent", 0).toInt(), -100, 100));
         balanceRow->addWidget(balance_, 1);
+        studio_->onStereoBalanceChanged=[this](int value){balance_->setValue(value);};
         balanceRow->addWidget(new QLabel(SC_TR("R")));
         balanceValue_ = new QLabel;
         balanceValue_->setMinimumWidth(62);
@@ -2188,7 +2190,7 @@ public:
         micPower_ = new QCheckBox(SC_TR("Natural mic EQ"));
         micPower_->setAccessibleName(SC_TR("Natural microphone equalizer on or off"));
         micPower_->setToolTip(SC_TR("Automatically shape a connected microphone; click to bypass the microphone EQ"));
-        micPower_->setChecked(QSettings().value("microphoneEnabled", true).toBool());
+        micPower_->setChecked(QSettings().value("microphoneEnabled", false).toBool());
         inputRow->addWidget(micPower_);
         inputLayout->addLayout(inputRow);
         auto *toneRow = new QGridLayout;
@@ -2460,7 +2462,8 @@ public:
         connect(undoButton_, &QPushButton::clicked, this, [this] { undoChange(); });
         auto *undoShortcut = new QShortcut(QKeySequence::Undo, this);
         connect(undoShortcut, &QShortcut::activated, this, [this] { if(tabs_->currentIndex()==1)studio_->undo();else undoChange(); });
-        studio_->onChanged=[this]{
+        studio_->onChanged=[this,monitorChannels]{
+            monitorChannels->setEnabled(studio_->monitoringAvailable());
             balanceControls_->setVisible(studio_->session().engine.channels.size()==2);
             try { audio_.setStudio(studio_->session());applyChanges();
                 studio_->liveStatus(studio_->session().offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):
@@ -2583,7 +2586,8 @@ public:
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override {
         if (watched == peakStatus_ && event->type() == QEvent::FontChange) reservePeakStatusSpace();
-        if (event->type() == QEvent::Wheel && scroll_) {
+        if (event->type() == QEvent::Wheel && scroll_ &&
+            (!qobject_cast<QWidget *>(watched) || qobject_cast<QWidget *>(watched)->window()==this)) {
             auto *wheel = static_cast<QWheelEvent *>(event);
             if (wheel->angleDelta().y() || wheel->pixelDelta().y()) {
                 auto *page = qobject_cast<QScrollArea *>(tabs_->currentWidget());
@@ -3187,7 +3191,16 @@ private:
     void setEquipment(const soundcurrent::equipment::Profile &profile) {
         if (lockButton_->isChecked() || calibrating_) return;
         recordChange(equipmentStatus_);
-        QSettings().setValue("equipment/" + profile.kind, QJsonDocument(soundcurrent::equipment::serialize(profile)).toJson(QJsonDocument::Compact));
+        if (profile.id.isEmpty()) {
+            for (const QString kind : {QString("speaker"), QString("amplifier"), QString("microphone")}) {
+                if (!profile.kind.isEmpty() && profile.kind != kind) continue;
+                QSettings().remove("equipment/" + kind);
+                if (kind == "speaker") { const QSignalBlocker b(speakerCombo_); speakerCombo_->setCurrentIndex(0); QSettings().remove("speakerModelId"); }
+                if (kind == "amplifier") { const QSignalBlocker b(ampCombo_); ampCombo_->setCurrentIndex(0); QSettings().remove("amplifierModelId"); }
+            }
+        } else {
+            QSettings().setValue("equipment/" + profile.kind, QJsonDocument(soundcurrent::equipment::serialize(profile)).toJson(QJsonDocument::Compact));
+        }
         refreshEquipmentStatus(); syncBandControls(); applyChanges(); commitChange();
         try { microphone_.update(micAdjustments(), micGain_->value() / 2.0); } catch (const std::exception &e) { showError(e.what()); }
     }
@@ -3857,7 +3870,7 @@ int main(int argc, char **argv) {
         ampTest.insert("conditions", "8 ohms"); ampTest.insert("filters", QJsonArray{});
         if (parseAmplifierProfile(ampTest)) qFatal("Empty amplifier profile accepted");
         qInfo("UI self-test: constructing window");
-        MainWindow testWindow(false);
+        MainWindow testWindow(false,true);
         qInfo("UI self-test: window constructed");
         for (const auto &entry : {std::pair{"manageSpeakerProfiles", "speaker"},
                                   std::pair{"manageMicrophoneProfiles", "microphone"},
@@ -4690,7 +4703,8 @@ int main(int argc, char **argv) {
     if (!processingGuard.acquire(soundcurrent::processingGuardDirectory())) { showConflict(processingGuard.error()); return 1; }
     const auto conflict=soundcurrent::otherEqualizerConflict(kSink);
     if (!conflict.isEmpty()) { showConflict(conflict); return 1; }
-    MainWindow window(!app.arguments().contains("--preview"));
+    MainWindow window(!app.arguments().contains("--preview"),
+                      app.arguments().contains("--preview") || app.arguments().contains("--test-controls"));
 #ifdef Q_OS_WIN
 #include "windows_live_conflict_test.inc"
 #endif

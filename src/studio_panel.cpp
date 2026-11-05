@@ -68,7 +68,7 @@ std::filesystem::path path(const QString &s) {
 #endif
 }
 }
-StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persist_(persist) {
+StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWidget(parent), persist_(persist), testControls_(testControls) {
     if (persist) try {
         const auto data = QSettings().value("studioSession").toByteArray();
         if (!data.isEmpty() && data.size() <= 8 * 1024 * 1024) session_ = Session::parse(QJsonDocument::fromJson(data).object());
@@ -90,15 +90,25 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     roomBalanceBox_=new QGroupBox(SC_TR("Balance"));
     auto *roomForm=new QVBoxLayout(roomBalanceBox_);
     roomBalance_=new RoomBalancePad;roomForm->addWidget(roomBalance_);
-    auto *centerRoom=new QPushButton(SC_TR("Center"));roomForm->addWidget(centerRoom);
+    stereoBalanceControls_=new QWidget;auto *stereoRow=new QHBoxLayout(stereoBalanceControls_);
+    stereoRow->addWidget(new QLabel(SC_TR("L")));stereoBalance_=slider(-100,100,0);stereoBalance_->setObjectName("dialogStereoBalance");stereoBalance_->setAccessibleName(SC_TR("Left right balance"));stereoRow->addWidget(stereoBalance_,1);stereoRow->addWidget(new QLabel(SC_TR("R")));
+    stereoBalanceValue_=new QLabel(SC_TR("Center"));stereoBalanceValue_->setMinimumWidth(62);stereoRow->addWidget(stereoBalanceValue_);roomForm->addWidget(stereoBalanceControls_);
+    centerBalance_=new QPushButton(SC_TR("Center"));centerBalance_->setObjectName("centerDialogBalance");
     roomBalance_->onEdited=[this](double x,double y){change([=](Session &s){s.roomBalanceX=x;s.roomBalanceY=y;});};
-    connect(centerRoom,&QPushButton::clicked,this,[this]{roomBalance_->setPosition(0,0);change([](Session &s){s.roomBalanceX=0;s.roomBalanceY=0;});});
+    connect(stereoBalance_,&QSlider::valueChanged,this,[this](int value){balance_=value;stereoBalanceValue_->setText(soundcurrent::i18n::balancePositionText(value));if(onStereoBalanceChanged)onStereoBalanceChanged(value);if(preview_->isChecked())startPreview();});
+    connect(centerBalance_,&QPushButton::clicked,this,[this]{
+        stereoBalance_->setValue(0);roomBalance_->setPosition(0,0);
+        const bool wasLocked=locked_;locked_=false;
+        change([](Session &s){s.roomBalanceX=0;s.roomBalanceY=0;});
+        setLocked(wasLocked); // Center is an explicit reset, including in test mode.
+    });
     editRoot->addWidget(roomBalanceBox_);
     pages_=new QTabWidget;pages_->setObjectName("studioWorkPages");editRoot->addWidget(pages_);
     auto *effectsPage=new QWidget;auto *effectsLayout=new QVBoxLayout(effectsPage);pages_->addTab(effectsPage,SC_TR("Effects"));
     auto *inputRow=new QHBoxLayout;inputRow->addWidget(new QLabel(SC_TR("Input gain")));
-    preGain_=spin(-60,24,0,.5);preGain_->setObjectName("inputGain");preGain_->setSuffix(SC_TR(" dB"));inputRow->addWidget(preGain_);inputRow->addStretch();effectsLayout->addLayout(inputRow);
-    connect(preGain_,&QDoubleSpinBox::valueChanged,this,[this](double gain){change([&](Session &s){s.engine.preGainDb=gain;});});
+    preGain_=slider(-6000,2400,0);preGain_->setSingleStep(50);preGain_->setPageStep(100);preGain_->setObjectName("inputGain");preGain_->setAccessibleName(SC_TR("Input gain"));inputRow->addWidget(preGain_,1);
+    preGainValue_=new QLabel;preGainValue_->setMinimumWidth(76);inputRow->addWidget(preGainValue_);effectsLayout->addLayout(inputRow);
+    connect(preGain_,&QSlider::valueChanged,this,[this](int gain){change([&](Session &s){s.engine.preGainDb=gain/100.;});preGainValue_->setText(QLocale().toString(gain/100.,'f',2)+SC_TR(" dB"));});
     mixer_=table({SC_TR("Channel"),SC_TR("Gain"),SC_TR("Mute"),SC_TR("Solo")});mixer_->setObjectName("channelMixer");mixer_->setMaximumHeight(480);pages_->addTab(mixer_,SC_TR("Mixer"));
     auto *channelPage=new QWidget;auto *channelLayout=new QVBoxLayout(channelPage);pages_->addTab(channelPage,SC_TR("Selected channel"));
     auto *fx = new QGroupBox(SC_TR("Effects")); auto *fxForm = new QFormLayout(fx);
@@ -156,17 +166,18 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     renderRow->addWidget(render_); renderRow->addWidget(cancel_); rf->addRow(renderRow);
     progress_ = new QProgressBar; progress_->setRange(0,100); rf->addRow(progress_);
     pages_->addTab(renderBox,SC_TR("Offline WAVE rendering"));
-    monitorDialog_=new QDialog(this);monitorDialog_->setObjectName("channelMonitoring");monitorDialog_->setWindowTitle(SC_TR("Channel meters"));
+    monitorDialog_=new QDialog(this);monitorDialog_->setObjectName("channelMonitoring");monitorDialog_->setWindowModality(Qt::ApplicationModal);monitorDialog_->setWindowTitle(SC_TR("Channel meters")+(testControls_?QStringLiteral(" · ")+SC_TR("Test mode"):QString()));
     auto *monitorRoot=new QVBoxLayout(monitorDialog_);auto *monitorScroll=new QScrollArea;monitorScroll->setWidgetResizable(true);monitorRoot->addWidget(monitorScroll);
     auto *monitorPage=new QWidget;auto *monitorLayout=new QVBoxLayout(monitorPage);monitorScroll->setWidget(monitorPage);
     meterSource_=new QLabel;meterSource_->setObjectName("channelMeterSource");meterSource_->setWordWrap(true);monitorLayout->addWidget(meterSource_);
-    monitorLayout->addWidget(meterBank_);monitorLayout->addWidget(meterView_);monitorLayout->addWidget(preview_);monitorLayout->addWidget(roomBalanceBox_);monitorLayout->addWidget(meters_);monitorLayout->addStretch();
-    auto *showMeters=new QPushButton(SC_TR("Channel meters"));showMeters->setObjectName("studioShowMeters");layoutForm->addRow(showMeters);connect(showMeters,&QPushButton::clicked,this,[this]{showMonitoring();});
+    monitorLayout->addWidget(meterBank_);monitorLayout->addWidget(meterView_);monitorLayout->addWidget(preview_);monitorLayout->addWidget(roomBalanceBox_);monitorLayout->addWidget(centerBalance_);monitorLayout->addWidget(meters_);
+    showMeters_=new QPushButton(SC_TR("Channel meters"));showMeters_->setObjectName("studioShowMeters");layoutForm->addRow(showMeters_);connect(showMeters_,&QPushButton::clicked,this,[this]{showMonitoring();});
     status_ = new QLabel; status_->setWordWrap(true);root->insertWidget(1,status_);root->addStretch();
     connect(count_, &QSpinBox::valueChanged, this, [this](int count) {
         if (rebuilding_) return;
+        if(monitorDialog_->isVisible()){const QSignalBlocker blocked(count_);count_->setValue(int(session_.engine.channels.size()));return;}
         change([&](Session &s) { Session next(count); next.engine.delay=s.engine.delay; next.engine.reverb=s.engine.reverb; next.engine.enhancements=s.engine.enhancements;next.roomBalanceX=s.roomBalanceX;next.roomBalanceY=s.roomBalanceY;
-            next.engine.preGainDb=s.engine.preGainDb;next.engine.automaticHeadroom=s.engine.automaticHeadroom; next.engine.bypass=s.engine.bypass; next.offline = true;
+            next.engine.preGainDb=s.engine.preGainDb;next.engine.automaticHeadroom=s.engine.automaticHeadroom; next.engine.bypass=s.engine.bypass; next.offline = s.offline;
             for (int c=0;c<std::min(count,int(s.engine.channels.size()));++c) { next.engine.channels[c]=s.engine.channels[c]; if(s.defaultNameRole(c).isEmpty()){next.names[c]=s.names[c]; next.nameProvenance[std::size_t(c)]=s.nameProvenance[std::size_t(c)];} next.solo[c]=s.solo[c]; }
             s=std::move(next); }); rebuild();
     });
@@ -211,7 +222,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent) : QWidget(parent), persi
     connect(&timer_,&QTimer::timeout,this,[this]{tick();});timer_.start(20);rebuild();
 }
 StudioPanel::~StudioPanel() { cancelJob_=true; if(renderJob_.valid())renderJob_.wait(); }
-void StudioPanel::setShared(std::span<const EqBand> bands,double gain,int balance) { shared_.assign(bands.begin(),bands.end());sharedGain_=gain;balance_=balance;if(preview_->isChecked())startPreview(); }
+void StudioPanel::setShared(std::span<const EqBand> bands,double gain,int balance) { shared_.assign(bands.begin(),bands.end());sharedGain_=gain;balance_=balance;const QSignalBlocker blocked(stereoBalance_);stereoBalance_->setValue(balance);stereoBalanceValue_->setText(soundcurrent::i18n::balancePositionText(balance));if(preview_->isChecked())startPreview(); }
 void StudioPanel::change(const std::function<void(Session &)> &fn) {
     if(rebuilding_||locked_)return;
     const auto before=session_;
@@ -234,11 +245,12 @@ void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
     offline_->setChecked(session_.offline);channel_->clear();for(int c=0;c<int(session_.engine.channels.size());++c)channel_->addItem(channelNameText(session_,c));channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
-    preGain_->setValue(session_.engine.preGainDb);
+    preGain_->setValue(int(std::lround(session_.engine.preGainDb*100)));
+    preGainValue_->setText(QLocale().toString(session_.engine.preGainDb,'f',2)+SC_TR(" dB"));
     updateApplyState();
     rebuildMixer();
     enhancements_->setSettings(session_.engine.enhancements);
-    roomBalanceBox_->setVisible(session_.hasRoomLayout());
+    roomBalanceBox_->setVisible(session_.hasRoomLayout()||count_->value()==2);roomBalance_->setVisible(session_.hasRoomLayout());stereoBalanceControls_->setVisible(count_->value()==2);
     roomBalance_->setPosition(session_.roomBalanceX,session_.roomBalanceY);
     meterView_->setSession(session_);
     meterBank_->clear();
@@ -250,6 +262,7 @@ void StudioPanel::rebuild() {
     bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);undo_->setEnabled(!locked_&&!history_.empty());
     preset_->setCurrentIndex(!d.enabled && !r.enabled && !session_.engine.enhancements.active() ? 0 : 7);
     meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(QLocale().toString(c+1)).arg(channelNameText(session_,c)));cell(meters_,c,1,SC_TR("−∞ dBFS"));}
+    meters_->setFixedHeight(std::min(190,meters_->horizontalHeader()->sizeHint().height()+count_->value()*meters_->verticalHeader()->defaultSectionSize()+2*meters_->frameWidth()));
     rebuilding_=false;loadChannel();
 }
 void StudioPanel::loadChannel() {
@@ -261,12 +274,18 @@ void StudioPanel::loadChannel() {
     rebuilding_=false;syncMixer();
 }
 void StudioPanel::updateApplyState() {
+    showMeters_->setEnabled(monitoringAvailable());
     apply_->setVisible(session_.offline);apply_->setEnabled(!locked_&&session_.offline);
     modeHint_->setText(session_.offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):SC_TR("Changes apply immediately"));
 }
 void StudioPanel::showMonitoring() {
+    if(!monitoringAvailable())return;
     const auto available=screen()->availableGeometry();
-    monitorDialog_->resize(std::min(850,available.width()-40),std::min(680,available.height()-60));
+    const int width=std::max(1,std::min(session_.engine.channels.size()>2?780:560,available.width()-40));
+    auto *scroll=monitorDialog_->findChild<QScrollArea *>();auto *content=scroll->widget();content->ensurePolished();content->layout()->activate();
+    int height=content->layout()->totalHeightForWidth(width-40);if(height<0)height=content->layout()->sizeHint().height();
+    const int maximumHeight=std::max(1,available.height()-60);
+    monitorDialog_->resize(width,std::clamp(height+40,std::min(220,maximumHeight),maximumHeight));
     monitorDialog_->show();monitorDialog_->raise();monitorDialog_->activateWindow();
 }
 void StudioPanel::rebuildMixer() {
@@ -479,9 +498,25 @@ void StudioPanel::selfTest() {
     quietEngine.process(quietFrame);
     if (std::abs(quietFrame[0] - .5 * std::pow(10., -84. / 20)) > 1e-9)
         qFatal("Studio low post gain amplitude is incorrect");
+    {
+        StudioPanel production(false);
+        production.session_=Session(2);production.rebuild();
+        if(production.monitoringAvailable() || production.showMeters_->isEnabled())qFatal("Production stereo monitoring button should be disabled");
+        production.showMonitoring();if(production.monitorDialog_->isVisible())qFatal("Production stereo dialog unexpectedly opened");
+        production.count_->setValue(6);
+        if(!production.monitoringAvailable() || !production.showMeters_->isEnabled() || production.session_.offline)qFatal("Live multichannel layout should enable monitoring without staging");
+    }
     const auto provenanceSession = session_;
     const auto provenanceHistory = history_;
     session_ = Session(2); rebuild();
+    if(!testControls_)qFatal("Studio self-test requires explicit test controls");
+    showMonitoring();QCoreApplication::processEvents();
+    if(monitorDialog_->windowModality()!=Qt::ApplicationModal || !centerBalance_->isEnabled() || stereoBalanceControls_->isHidden())qFatal("Stereo test dialog lacks modality/balance/reset");
+    stereoBalance_->setValue(67);centerBalance_->click();
+    if(stereoBalance_->value()!=0 || balance_!=0 || !centerBalance_->isEnabled())qFatal("Stereo Center reset failed");
+    count_->setValue(6);
+    if(session_.engine.channels.size()!=2 || count_->value()!=2)qFatal("Modal monitoring allowed a channel-layout change");
+    monitorDialog_->hide();
     const std::array<float,2> displayedLevels{.25f,.5f}, liveLevels{.9f,.8f};
     setLiveLevels(displayedLevels);
     session_.offline=true;updateApplyState();
@@ -529,10 +564,10 @@ void StudioPanel::selfTest() {
     qobject_cast<QCheckBox *>(mixer_->cellWidget(0,2))->setChecked(true);
     if(!session_.engine.channels[0].muted || !mute_->isChecked())qFatal("Mixer mute is not immediate/shared");
     undo();undo();
-    preGain_->setValue(3);if(session_.engine.preGainDb!=3)qFatal("Input gain not applied immediately");undo();
+    preGain_->setValue(300);if(session_.engine.preGainDb!=3)qFatal("Input gain not applied immediately");undo();
     if(session_.engine.preGainDb!=0)qFatal("Input gain undo failed");
     if(pages_->count()!=4 || pages_->tabText(0)!=SC_TR("Effects"))qFatal("Studio pages not organized");
-    const auto initial=session_.json();count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline||!apply_->isEnabled()||mixer_->rowCount()!=256)qFatal("Studio 256-channel UI failed");
+    const auto initial=session_.json();offline_->setChecked(true);count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline||!apply_->isEnabled()||mixer_->rowCount()!=256)qFatal("Studio 256-channel UI failed");
     apply_->click();if(session_.offline||apply_->isEnabled()||!apply_->isHidden())qFatal("Apply settings did not switch staged settings to live state");
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");
@@ -541,11 +576,11 @@ void StudioPanel::selfTest() {
     const auto shots=qEnvironmentVariable("SOUNDCURRENT_UI_SCREENSHOT_DIR");
     if(!shots.isEmpty()) {
         monitorDialog_->grab().save(shots+"/monitor-mono.png");
-        count_->setValue(6);QCoreApplication::processEvents();
+        monitorDialog_->hide();count_->setValue(6);showMonitoring();QCoreApplication::processEvents();
         if(!session_.hasRoomLayout() || roomBalanceBox_->isHidden())qFatal("Choosing surround did not expose room balance");
         monitorDialog_->grab().save(shots+"/monitor-surround.png");
         roomBalanceBox_->grab().save(shots+"/balance-surround.png");
-        count_->setValue(256);QCoreApplication::processEvents();monitorDialog_->grab().save(shots+"/monitor-256.png");
+        monitorDialog_->hide();count_->setValue(256);showMonitoring();QCoreApplication::processEvents();monitorDialog_->grab().save(shots+"/monitor-256.png");
     }
     monitorDialog_->hide();
     count_->setValue(2);effectPreset(6);if(!session_.engine.delay.enabled||!session_.engine.reverb.enabled)qFatal("Studio effect preset failed");
