@@ -178,6 +178,18 @@ Do you want to delete it anyway?</source>
       <translation>16 کانال</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>یک جزء را نمی‌توان دو بار یا از خودش کم کرد.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>پاسخ اندازه‌گیری‌شدهٔ زنجیره لازم است؛ فیلترهای تصحیح قابل تفریق نیستند.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>پاسخ اندازه‌گیری‌شدهٔ جزء لازم است؛ فیلترهای تصحیح قابل تفریق نیستند.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>یک پوشهٔ زمان اجرای خصوصی برای کاربر لازم است</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Do you want to delete it anyway?</source>
       <translation>همه زیرنوع‌ها</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>کهربایی</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>فضای آکوستیکی</translation>
     </message>
@@ -297,8 +313,16 @@ Do you want to delete it anyway?</source>
       <translation>پروفایل تقویت‌کننده به اندازه‌گیری‌های الکتریکی با بار بلندگو، ورودی و تنظیمات تُن مشخص نیاز دارد. یک فایل اصلاح اندازه‌گیری‌شده وارد کنید؛ منحنی تقویت‌کننده از مشخصات تبلیغاتی فرض نمی‌شود.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>دامنه</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>به‌روزرسانی برنامه نصب شد. برای بارگذاری آن از خروج استفاده کنید و برنامه را دوباره باز کنید؛ بستن این پنجره نسخه قدیمی را در حال اجرا نگه می‌دارد.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>نرخ نمونه‌برداری تحلیل</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Do you want to delete it anyway?</source>
       <translation>مسیریابی خودکار صدا در دسترس نیست</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>بازهٔ خودکار</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>تنظیم خودکار صدای میکروفون متصل؛ برای دور زدن اکولایزر میکروفون کلیک کنید</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>میانگین</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>طیف میانگین</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass frequency</source>
       <translation>فرکانس باس</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>گیتار باس</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>آبی</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Do you want to delete it anyway?</source>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>ثبت مرجع</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>ویولنسل</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>مرکز</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>کانال‌ها</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>کانال‌ها و مسیریابی</translation>
     </message>
@@ -771,6 +830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Choose update folder…</source>
       <translation>انتخاب پوشه به‌روزرسانی…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>کروماتیک</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Do you want to delete it anyway?</source>
       <translation>شروع محافظ ایمنی بلندی صدای خروجی ممکن نشد</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>پایش پخش آغاز نشد</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>شروع اندازه‌گیری ممکن نشد.</translation>
     </message>
@@ -993,6 +1060,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Create a new correction profile.</source>
       <translation>یک نمایهٔ اصلاح جدید بسازید.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>ساخت نمایهٔ میکروفون</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Do you want to delete it anyway?</source>
       <translation>این نمایهٔ سفارشی ذخیره‌شده را حذف کنید.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>فرادادهٔ استنتاج از 32 KiB بیشتر است.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>فرادادهٔ استنتاج به نمایهٔ برآوردی نیاز دارد.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>نمایش با جزئیات</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Discard</source>
       <translation>دور انداختن تغییرات</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>حد بالای نمایش</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>حساسیت نمایش</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Do you want to delete it anyway?</source>
       <translation>نوع تجهیزات</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>برآورد نمایه</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>سطح تخمینی خروجی نزدیک باند %1</translation>
     </message>
@@ -1326,6 +1420,26 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>قله تخمینی خروجی پس از اکولایزر، شامل بهره پس از پردازش و توازن</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>نمایهٔ برآوردی</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>طرح 4 به وضعیت نمایهٔ برآوردی نیاز دارد.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>نمایه‌های برآوردی به فرادادهٔ استنتاج نیاز دارند.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>نمایه‌های برآوردی به روش و محدودیت‌ها نیاز دارند.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>پاسخ برآوردی از بازهٔ پشتیبانی‌شده فراتر است.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>نمایهٔ انتخاب‌شده را در یک فایل JSON صادر کنید.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>اندازهٔ FFT</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>قاب‌ها: %1 · FFT: %2 ms · تفکیک‌پذیری: %3 Hz · پنجره: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>ثابت کردن نمایش</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>فرکانس</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>فرکانس Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>مقیاس بسامد</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>خاکستری</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>سبز</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>شبکه</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>گیتار</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>هدفون</translation>
     </message>
@@ -1525,6 +1672,18 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Hip-Hop</source>
       <translation>هیپ‌هاپ</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>مدت تاریخچه</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>می‌دانم که اثرات ناشناختهٔ اتاق، میکروفون، لباس و جای‌گذاری در این برآورد باقی می‌مانند.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>یخی</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Do you want to delete it anyway?</source>
       <translation>نسخه نصب‌شده: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>ساز</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>زبان رابط</translation>
     </message>
@@ -1709,6 +1872,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>تنظیمات تحلیل نامعتبر است. پنجرهٔ FFT باید حداکثر 250 ms باشد و بسامدها در محدودهٔ باند صدای دریافت‌شده بمانند.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>مسیر صوتی نامعتبر است: ضبط صدای پخش به منبع پخش جداگانه نیاز دارد</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>زیرنوع تجهیزات یا نوع تغذیه نامعتبر است</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>نوع تجهیزات برآوردی نامعتبر است.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>وضعیت نمایهٔ برآوردی نامعتبر است.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Do you want to delete it anyway?</source>
       <translation>حفظ تنظیمات فعلی اکولایزر</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>پاسخ‌های شناخته‌شدهٔ اجزا</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2086,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>خطی</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>بهره خطی مسیر (منفی = وارونگی قطبیت)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Do you want to delete it anyway?</source>
       <translation>لوفای</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>بارگذاری پیش‌تنظیم</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>قفل اکولایزر</translation>
@@ -1954,6 +2141,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Lock equalizer settings</source>
       <translation>قفل تنظیمات اکولایزر</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>لگاریتمی</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Do you want to delete it anyway?</source>
       <translation>مدیریت نمایه‌ها</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>ماندولین</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>سازنده</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>بیشینهٔ بسامد</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Do you want to delete it anyway?</source>
       <translation>اندازه‌گیری پاسخ بلندگو، اتاق و میکروفون</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>زنجیرهٔ اندازه‌گیری‌شده</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>موقعیت شنیدن اندازه‌گیری‌شده</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Do you want to delete it anyway?</source>
       <source>Measured response</source>
       <translation>پاسخ اندازه‌گیری‌شده</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>پاسخ‌های اندازه‌گیری‌شده باید دست‌کم دو اکتاو هم‌پوشانی داشته باشند.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Do you want to delete it anyway?</source>
       <translation>قله‌های سیگنال ضبط میکروفون بریده می‌شوند. بهره یا تقویت میکروفون را کاهش دهید و اندازه‌گیری را تکرار کنید.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>پاسخ میکروفون</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>مسیر میکروفون</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>مهلت شروع میکروفون به پایان رسید</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>کمینهٔ بسامد</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>فرادادهٔ قالب WAVE وجود ندارد، تکراری است یا بیش از حد بزرگ است</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>ترکیب</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Do you want to delete it anyway?</source>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>چندین بلوک دادهٔ WAVE پشتیبانی نمی‌شود</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>حالت موسیقی</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Do you want to delete it anyway?</source>
       <translation>هیچ‌کدام — استفاده از اکولایزر خودم</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>دادهٔ مرجع پهن‌باند کافی نیست.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>شبکهٔ نت‌ها</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>قالب اعداد و تاریخ</translation>
     </message>
@@ -2266,6 +2498,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>OK</source>
       <translation>تأیید</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>اکتاو</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Do you want to delete it anyway?</source>
       <translation>باز کردن رابط نوشتن برای پخش آزمایشی</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>باز کردن پاسخ برآوردی و تصحیح در ویرایشگر. هنوز چیزی ذخیره یا اعمال نمی‌شود.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>باز کردن پوشه به‌روزرسانی</translation>
     </message>
@@ -2403,6 +2643,10 @@ Do you want to delete it anyway?</source>
       <translation>خروجی کلی</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>پالت رنگ</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>بلندگوی پنلی</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Do you want to delete it anyway?</source>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>قله پیش از کلیپینگ: %1؛ نمونه‌های کلیپ‌شده: %2؛ نمونه‌های نامعتبر: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>نگه‌داشتن قله</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Playback</source>
       <translation>پخش</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>پایش پخش</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>مقایسه‌های مرجع شامل منبع صدا، اتاق و میکروفون مرجع هستند. این مقایسه‌ها اندازه‌گیری مستقل یا تأییدشدهٔ میکروفون نیستند.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>تازه‌سازی دستگاه‌ها</translation>
     </message>
@@ -2924,6 +3180,10 @@ Do you want to delete it anyway?</source>
       <translation>ترکیب سیگنال ریورب پردازش‌شده · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>بازبینی نمایهٔ برآوردی</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>اکوی ریتمیک</translation>
     </message>
@@ -3000,6 +3260,10 @@ Do you want to delete it anyway?</source>
       <translation>پیش‌تنظیم «%1» ذخیره شد.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>سرعت پیمایش</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>جستجوی برند، خانواده، مدل یا شرایط اندازه‌گیری</translation>
     </message>
@@ -3019,6 +3283,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Select band %1</source>
       <translation>انتخاب باند %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>بین یک تا هشت پاسخ شناخته‌شدهٔ اجزا را انتخاب کنید.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>تنظیمات</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>تنظیمات &amp;&amp; کالیبراسیون</translation>
     </message>
@@ -3128,6 +3400,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>فاصله‌های کوتاه‌تر سطح‌ها را بیشتر تازه می‌کنند و پردازنده بیشتری مصرف می‌کنند؛ دریافت صدا ممکن است نرخ واقعی را محدود کند</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>نمایش منحنی پاسخ EQ</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Do you want to delete it anyway?</source>
       <translation>نوع بلندگو</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>طیف‌نگاره</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>طیف</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: بهرهٔ اصلاح به %1 و Q به %2 محدود است. تقویت‌های زیر %3 حذف می‌شوند. پیش‌تنظیم شنیداری شما جداگانه اضافه می‌شود.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio setup saved.</source>
       <translation>پیکربندی Studio ذخیره شد.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>پاسخ‌های اندازه‌گیری‌شدهٔ شناخته‌شده را از پاسخ زنجیره کم کنید و تصحیح برآوردی را بازبینی کنید.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Do you want to delete it anyway?</source>
       <translation>این گزینه پاسخ اندازه‌گیری‌شده را وارد می‌کند، نه بهره‌های اکولایزری که قبلاً برای اصلاح وارونه شده‌اند. نوع تجهیزات را تأیید کنید. SPL مطلق پیش از وارد کردن به نرمال‌سازی نیاز دارد.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>این یک پاسخ باقی‌ماندهٔ برآوردی است، نه اندازه‌گیری تأییدشدهٔ تجهیزات. اثرات ناشناختهٔ اتاق، میکروفون، لباس، جای‌گذاری یا رابط باقی می‌مانند. منحنی‌های منتشرشده ممکن است با چیدمان شما مطابقت نداشته باشند. افت‌های عمیق یا بسامدهای اندازه‌گیری‌نشده را تصحیح نکنید.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>این پروفایل تغییر کرده است. پیش از خروج یک نسخه سفارشی ذخیره شود؟</translation>
     </message>
@@ -3554,6 +3846,10 @@ Do you want to delete it anyway?</source>
       <source>Touring PA speaker</source>
       <translation>بلندگوی سامانهٔ صوت عمومی برای تورهای اجرا</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>نشانگرهای گذرا</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>کوک‌کننده</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>خاموش کردن اکولایزر</translation>
     </message>
@@ -3609,6 +3909,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Type</source>
       <translation>نوع</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>یوکللی</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Do you want to delete it anyway?</source>
       <translation>طرح ساختار پروفایل تجهیزات پشتیبانی نمی‌شود (نسخه مورد انتظار 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>طرح نمایهٔ تجهیزات پشتیبانی نمی‌شود (مورد انتظار 2/3/4).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>زیرنوع قالب توسعه‌پذیر WAVE پشتیبانی نمی‌شود</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Do you want to delete it anyway?</source>
       <translation>طرح ساختار پروفایل بلندگو پشتیبانی نمی‌شود</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>به‌روزرسانی</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>به‌روزرسانی %1 دانلود شده است: %2. از برنامه خارج شوید، روی برنامه موجود نصب کنید و دوباره باز کنید.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>از اتاقی آرام استفاده کنید. بلندگوها، اتاق و میکروفون را با هم اندازه‌گیری می‌کند؛ نتایج شامل پاسخ میکروفون هستند.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>از اندازه‌گیری واردشدهٔ کل زنجیره استفاده کنید. فقط پاسخ‌های اندازه‌گیری‌شدهٔ اجزای همان زنجیره را انتخاب کنید. فیلترهای تصحیح هرگز کم نمی‌شوند.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Do you want to delete it anyway?</source>
       <translation>VB-CABLE نگه داشته شد چون برنامهٔ دیگر SoundCurrent نصب است. اگر نرم‌افزار دیگری به آن نیاز ندارد، آن را همراه با آخرین برنامه حذف کنید.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>بردارسنج</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>نما</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>ویولا</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>ویولن</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>خروجی مجازی به چیدمان کانال پشتیبانی‌شدهٔ 48 kHz با قالب ممیز شناور نیاز دارد</translation>
     </message>
@@ -3846,6 +4179,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Warmth</source>
       <translation>گرمی صدا</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>شکل موج</translation>
     </message>
     <message>
       <source>Whole listening system</source>

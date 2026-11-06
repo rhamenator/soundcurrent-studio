@@ -178,6 +178,18 @@ Do you want to delete it anyway?</source>
       <translation>16채널</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>구성 요소를 두 번 빼거나 자기 자신에서 뺄 수 없습니다.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>전체 경로의 실측 응답이 필요합니다. 보정 필터는 뺄 수 없습니다.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>구성 요소의 실측 응답이 필요합니다. 보정 필터는 뺄 수 없습니다.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>사용자 전용 런타임 디렉터리가 필요합니다</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Do you want to delete it anyway?</source>
       <translation>모든 하위 유형</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>호박색</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>앰비언스</translation>
     </message>
@@ -297,8 +313,16 @@ Do you want to delete it anyway?</source>
       <translation>앰프 프로파일에는 스피커 부하, 입력 및 톤 설정이 명확한 전기적 측정이 필요합니다. 측정된 보정 파일을 가져오세요. 홍보용 사양에서 앰프의 주파수 응답 곡선을 추정하지 않습니다.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>진폭</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>앱 업데이트가 설치되었습니다. 적용하려면 종료한 후 다시 여세요. 이 창만 닫으면 이전 버전이 계속 실행됩니다.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>분석 샘플 레이트</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Do you want to delete it anyway?</source>
       <translation>자동 오디오 라우팅을 사용할 수 없음</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>자동 범위</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>연결된 마이크의 음질을 자동 보정합니다. 클릭하면 마이크 EQ를 바이패스합니다</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>평균</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>평균 스펙트럼</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass frequency</source>
       <translation>저음 주파수</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>베이스 기타</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>파랑</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Do you want to delete it anyway?</source>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>기준 캡처</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>첼로</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>중앙</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>채널 수</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>채널 및 라우팅</translation>
     </message>
@@ -771,6 +830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Choose update folder…</source>
       <translation>업데이트 폴더 선택…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>크로매틱</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Do you want to delete it anyway?</source>
       <translation>출력 음량 안전 가드를 시작하지 못했습니다</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>재생 모니터링을 시작할 수 없습니다</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>측정을 시작하지 못했습니다.</translation>
     </message>
@@ -993,6 +1060,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Create a new correction profile.</source>
       <translation>새 보정 프로필을 만듭니다.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>마이크 프로필 만들기</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Do you want to delete it anyway?</source>
       <translation>이 저장된 사용자 지정 프로필을 삭제합니다.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>도출 메타데이터가 32 KiB를 초과합니다.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>도출 메타데이터에는 추정 프로필이 필요합니다.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>자세히 보기</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Discard</source>
       <translation>변경 내용 버리기</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>표시 상한</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>표시 감도</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Do you want to delete it anyway?</source>
       <translation>장비 유형</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>프로필 추정</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>밴드 %1 부근의 추정 출력 레벨</translation>
     </message>
@@ -1326,6 +1420,26 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>포스트 게인과 밸런스를 포함한 EQ 적용 후 추정 출력 피크</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>추정 프로필</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>스키마 4에는 추정 프로필 상태가 필요합니다.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>추정 프로필에는 도출 메타데이터가 필요합니다.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>추정 프로필에는 방법과 한계가 필요합니다.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>추정 응답이 지원 범위를 초과합니다.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>선택한 프로필을 JSON 파일로 내보냅니다.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>FFT 크기</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>프레임: %1 · FFT: %2 ms · 해상도: %3 Hz · 창 길이: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>화면 고정</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>주파수</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>주파수 (Hz)</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>주파수 눈금</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>회색</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>초록</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>격자</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>기타</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>헤드폰</translation>
     </message>
@@ -1525,6 +1672,18 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Hip-Hop</source>
       <translation>힙합</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>기록 길이</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>실내, 마이크, 의복 및 배치의 알 수 없는 영향이 이 추정에 남는다는 점을 이해합니다.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>얼음색</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Do you want to delete it anyway?</source>
       <translation>설치된 버전: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>악기</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>인터페이스 언어</translation>
     </message>
@@ -1709,6 +1872,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>분석 설정이 잘못되었습니다. FFT 창은 250 ms 이하여야 하며 주파수는 캡처한 오디오 대역 안에 있어야 합니다.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>잘못된 오디오 경로: 루프백 캡처에는 별도의 재생 소스가 필요합니다</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>장비 하위 유형 또는 구동 방식이 잘못되었습니다</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>추정 장비 종류가 잘못되었습니다.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>추정 프로필 상태가 잘못되었습니다.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Do you want to delete it anyway?</source>
       <translation>현재 EQ 유지</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>알려진 구성 요소 응답</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2086,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>선형</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>경로 선형 게인 (음수 = 극성 반전)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Do you want to delete it anyway?</source>
       <translation>로파이</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>프리셋 불러오기</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>EQ 잠금</translation>
@@ -1954,6 +2141,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Lock equalizer settings</source>
       <translation>이퀄라이저 설정 잠금</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>로그</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Do you want to delete it anyway?</source>
       <translation>프로필 관리</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>만돌린</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>제조사</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>최고 주파수</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Do you want to delete it anyway?</source>
       <translation>스피커, 실내 및 마이크 응답 측정</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>측정된 전체 경로</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>측정한 청취 위치</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Do you want to delete it anyway?</source>
       <source>Measured response</source>
       <translation>측정된 응답</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>실측 응답은 최소 두 옥타브 겹쳐야 합니다.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Do you want to delete it anyway?</source>
       <translation>마이크 녹음에 클리핑이 발생합니다. 마이크 게인이나 부스트를 낮춘 후 다시 측정하세요.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>마이크 응답</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>마이크 경로</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>마이크 시작 시간 초과</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>최저 주파수</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE 형식 메타데이터가 없거나 중복되었거나 너무 큽니다</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>믹스</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Do you want to delete it anyway?</source>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>여러 WAVE 데이터 청크는 지원되지 않습니다</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>음악 모드</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Do you want to delete it anyway?</source>
       <translation>없음 — 내 EQ 사용</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>광대역 기준 데이터가 부족합니다.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>음표 격자</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>숫자 및 날짜 형식</translation>
     </message>
@@ -2266,6 +2498,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>OK</source>
       <translation>확인</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>옥타브</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Do you want to delete it anyway?</source>
       <translation>테스트 재생 쓰기 인터페이스 열기</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>추정 응답과 보정을 편집기에서 엽니다. 아직 저장하거나 적용하지 않습니다.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>업데이트 폴더 열기</translation>
     </message>
@@ -2403,6 +2643,10 @@ Do you want to delete it anyway?</source>
       <translation>전체 출력</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>팔레트</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>패널 스피커</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Do you want to delete it anyway?</source>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>클리핑 전 피크: %1; 클리핑된 샘플 수: %2; 잘못된 샘플 수: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>피크 홀드</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Playback</source>
       <translation>재생</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>재생 모니터</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>기준 비교에는 음원, 방, 기준 마이크의 영향이 포함됩니다. 마이크만 따로 측정한 결과나 인증된 측정이 아닙니다.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>장치 새로 고침</translation>
     </message>
@@ -2924,6 +3180,10 @@ Do you want to delete it anyway?</source>
       <translation>리버브 웨트 믹스 · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>추정 프로필 검토</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>리듬 에코</translation>
     </message>
@@ -3000,6 +3260,10 @@ Do you want to delete it anyway?</source>
       <translation>프리셋 “%1”을 저장했습니다.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>스크롤 속도</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>브랜드, 제품군, 모델 또는 측정 조건 검색</translation>
     </message>
@@ -3019,6 +3283,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Select band %1</source>
       <translation>밴드 %1 선택</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>알려진 구성 요소 응답을 1~8개 선택하십시오.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>설정</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>설정 &amp;&amp; 캘리브레이션</translation>
     </message>
@@ -3128,6 +3400,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>간격을 줄이면 레벨 표시가 더 자주 갱신되고 CPU 사용량이 증가합니다. 오디오 데이터 공급에 따라 실제 갱신 속도가 제한될 수 있습니다</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>EQ 응답 곡선 표시</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Do you want to delete it anyway?</source>
       <translation>스피커 유형</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>스펙트로그램</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>스펙트럼</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: 보정 게인은 %1, Q는 %2로 제한됩니다. %3 미만의 부스트는 제외됩니다. 청취 프리셋은 별도로 더해집니다.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio setup saved.</source>
       <translation>Studio 설정을 저장했습니다.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>전체 경로 응답에서 알려진 실측 응답을 빼고 추정 보정을 검토합니다.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Do you want to delete it anyway?</source>
       <translation>이 기능은 이미 반전된 EQ 게인이 아닌 측정 응답을 가져옵니다. 장비 유형을 확인하세요. 절대 SPL은 가져오기 전에 정규화해야 합니다.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>이는 추정된 잔여 응답이며 인증된 장비 측정이 아닙니다. 실내, 마이크, 의복, 배치 또는 인터페이스의 알 수 없는 영향이 남습니다. 공개된 곡선이 실제 구성과 다를 수 있습니다. 깊은 상쇄나 측정하지 않은 주파수를 보정하지 마십시오.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>이 프로파일이 변경되었습니다. 나가기 전에 사용자 지정 사본을 저장하시겠습니까?</translation>
     </message>
@@ -3554,6 +3846,10 @@ Do you want to delete it anyway?</source>
       <source>Touring PA speaker</source>
       <translation>투어용 PA 스피커</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>트랜지언트 표시</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>튜너</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>이퀄라이저 끄기</translation>
     </message>
@@ -3609,6 +3909,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Type</source>
       <translation>유형</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>우쿨렐레</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Do you want to delete it anyway?</source>
       <translation>지원하지 않는 장비 프로파일 스키마입니다 (필요한 버전: 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>지원하지 않는 장비 프로필 스키마입니다(2/3/4 필요).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>확장 가능한 WAVE 하위 형식이 지원되지 않습니다</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Do you want to delete it anyway?</source>
       <translation>지원하지 않는 스피커 프로파일 스키마입니다</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>업데이트</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>업데이트 %1이 다운로드되었습니다: %2. 종료하고 기존 앱에 덮어 설치한 후 다시 여세요.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>조용한 방에서 사용하세요. 스피커, 실내 및 마이크를 함께 측정하므로 결과에 마이크 응답이 포함됩니다.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>전체 경로의 측정값을 가져와 사용하십시오. 해당 경로에 포함된 구성 요소의 실측 응답만 선택하십시오. 보정 필터는 절대 빼지 않습니다.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Do you want to delete it anyway?</source>
       <translation>다른 SoundCurrent 앱이 설치되어 있어 VB-CABLE이 유지되었습니다. 다른 소프트웨어에서 필요하지 않다면 마지막 앱과 함께 제거하세요.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>벡터스코프</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>보기</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>비올라</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>바이올린</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>가상 출력에는 지원되는 48 kHz 부동 소수점 채널 구성이 필요합니다</translation>
     </message>
@@ -3846,6 +4179,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Warmth</source>
       <translation>따뜻함</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>파형</translation>
     </message>
     <message>
       <source>Whole listening system</source>

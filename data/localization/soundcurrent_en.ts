@@ -178,6 +178,18 @@ Do you want to delete it anyway?</translation>
       <translation>16 channels</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>A component cannot be subtracted twice or from itself.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>A measured chain response is required; correction filters cannot be subtracted.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>A measured component response is required; correction filters cannot be subtracted.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>A private user runtime directory is required</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Do you want to delete it anyway?</translation>
       <translation>All subtypes</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>Amber</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>Ambience</translation>
     </message>
@@ -297,8 +313,16 @@ Do you want to delete it anyway?</translation>
       <translation>Amplifier profiles require electrical measurements with known speaker load, input, and tone settings. Import a measured correction file; no amplifier curves are assumed from marketing specifications.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>Amplitude</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>Analysis sample rate</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Do you want to delete it anyway?</translation>
       <translation>Automatic audio routing unavailable</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>Automatic range</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Automatically shape a connected microphone; click to bypass the microphone EQ</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>Average</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>Averaged spectrum</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Bass frequency</source>
       <translation>Bass frequency</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>Bass guitar</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>Blue</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Do you want to delete it anyway?</translation>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>Capture reference</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>Cello</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Center</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Do you want to delete it anyway?</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>Channels</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Channels and routing</translation>
     </message>
@@ -771,6 +830,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Choose update folder…</source>
       <translation>Choose update folder…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>Chromatic</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Do you want to delete it anyway?</translation>
       <translation>Could not start output volume safety guard</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>Could not start playback monitoring</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>Could not start the measurement.</translation>
     </message>
@@ -993,6 +1060,11 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Create a new correction profile.</source>
       <translation>Create a new correction profile.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>Create microphone profile</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Do you want to delete it anyway?</translation>
       <translation>Delete this saved custom profile.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>Derivation metadata exceeds 32 KiB.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>Derivation metadata requires an estimated profile.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Detail view</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Discard</source>
       <translation>Discard</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>Display ceiling</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>Display sensitivity</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Do you want to delete it anyway?</translation>
       <translation>Equipment type</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>Estimate profile</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>Estimated output level near band %1</translation>
     </message>
@@ -1326,6 +1420,26 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>Estimated post-EQ output peak, including post gain and balance</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>Estimated profile</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>Estimated profile status is required for schema 4.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>Estimated profiles require derivation metadata.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>Estimated profiles require method and limitations.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>Estimated response exceeds the supported range.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>Export the selected profile to a JSON file.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>FFT size</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Do you want to delete it anyway?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>Freeze display</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>Frequency</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>Frequency Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>Frequency scale</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Do you want to delete it anyway?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>Gray</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>Green</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>Grid</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>Guitar</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>Headphones</translation>
     </message>
@@ -1525,6 +1672,18 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>History length</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>Ice</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Do you want to delete it anyway?</translation>
       <translation>Installed version: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>Instrument</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>Interface language</translation>
     </message>
@@ -1709,6 +1872,10 @@ Do you want to delete it anyway?</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Invalid audio route: loopback requires a separate render source</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Invalid equipment subtype or power type</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>Invalid estimated equipment kind.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>Invalid estimated profile status.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Do you want to delete it anyway?</translation>
       <translation>Keep current EQ</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>Known component responses</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2086,10 @@ Do you want to delete it anyway?</translation>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>Linear</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Linear route gain (negative = invert)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Do you want to delete it anyway?</translation>
       <translation>Lo-Fi</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>Load preset</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>Lock EQ</translation>
@@ -1954,6 +2141,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Lock equalizer settings</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>Logarithmic</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Do you want to delete it anyway?</translation>
       <translation>Manage profiles</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>Mandolin</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Manufacturer</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>Maximum frequency</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Do you want to delete it anyway?</translation>
       <translation>Measure speaker room and microphone response</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>Measured chain</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>Measured listening position</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Do you want to delete it anyway?</translation>
       <source>Measured response</source>
       <translation>Measured response</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>Measured responses must overlap by at least two octaves.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Do you want to delete it anyway?</translation>
       <translation>Microphone recording is clipping. Lower microphone gain or boost and repeat the measurement.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>Microphone response</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>Microphone route</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>Microphone start timed out</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>Minimum frequency</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Do you want to delete it anyway?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Missing, duplicate or oversized WAVE format</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>Mix</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Do you want to delete it anyway?</translation>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>Multiple WAVE data chunks are unsupported</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>Music mode</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Do you want to delete it anyway?</translation>
       <translation>None — use my own EQ</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>Not enough broadband reference data.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>Note grid</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Number and date format</translation>
     </message>
@@ -2266,6 +2498,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>OK</source>
       <translation>OK</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>Octave</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Do you want to delete it anyway?</translation>
       <translation>Open test playback writer</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>Open update folder</translation>
     </message>
@@ -2403,6 +2643,10 @@ Do you want to delete it anyway?</translation>
       <translation>Overall output</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>Palette</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>Panel speaker</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Do you want to delete it anyway?</translation>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>Peak hold</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Playback</source>
       <translation>Playback</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>Playback monitor</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Do you want to delete it anyway?</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Refresh devices</translation>
     </message>
@@ -2924,6 +3180,10 @@ Do you want to delete it anyway?</translation>
       <translation>Reverb wet mix · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>Review estimated profile</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>Rhythmic echo</translation>
     </message>
@@ -3000,6 +3260,10 @@ Do you want to delete it anyway?</translation>
       <translation>Saved preset “%1”.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>Scroll speed</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>Search brand, family, model or measurement conditions</translation>
     </message>
@@ -3019,6 +3283,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Select band %1</source>
       <translation>Select band %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>Select between one and eight known component responses.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Do you want to delete it anyway?</translation>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>Settings</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Settings &amp;&amp; calibration</translation>
     </message>
@@ -3128,6 +3400,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>Show EQ response graph</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Do you want to delete it anyway?</translation>
       <translation>Speaker type</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>Spectrogram</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>Spectrum</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Studio setup saved.</source>
       <translation>Studio setup saved.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>Subtract known measured responses from a measured chain response, then review the estimated correction.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Do you want to delete it anyway?</translation>
       <translation>This imports measured RESPONSE, not already-inverted EQ gains. Confirm equipment type. Absolute SPL needs normalization before import.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>This profile has changed. Save a custom copy before leaving?</translation>
     </message>
@@ -3554,6 +3846,10 @@ Do you want to delete it anyway?</translation>
       <source>Touring PA speaker</source>
       <translation>Touring PA speaker</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>Transient markers</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Do you want to delete it anyway?</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>Tuner</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Turn equalizer off</translation>
     </message>
@@ -3609,6 +3909,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Type</source>
       <translation>Type</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>Ukulele</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Do you want to delete it anyway?</translation>
       <translation>Unsupported equipment profile schema (expected 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>Unsupported equipment profile schema (expected 2/3/4).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>Unsupported extensible WAVE subtype</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Do you want to delete it anyway?</translation>
       <translation>Unsupported speaker profile schema</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>Update</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Do you want to delete it anyway?</translation>
       <translation>VB-CABLE was kept because the other SoundCurrent app is installed. Remove it with the last app if no other software needs it.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>Vectorscope</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>View</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>Viola</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>Violin</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>Virtual output requires a supported 48 kHz float channel layout</translation>
     </message>
@@ -3846,6 +4179,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Warmth</source>
       <translation>Warmth</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>Waveform</translation>
     </message>
     <message>
       <source>Whole listening system</source>

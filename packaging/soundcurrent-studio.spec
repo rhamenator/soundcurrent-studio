@@ -57,6 +57,8 @@ DESTDIR=%{buildroot} cmake --install build
 %{_datadir}/doc/soundcurrent-studio/equipment
 %{_datadir}/doc/soundcurrent-studio/equipment-profiles.md
 %{_datadir}/doc/soundcurrent-studio/audio-buffering.md
+%{_datadir}/doc/soundcurrent-studio/analysis-and-microphone-profiles.md
+%{_datadir}/doc/soundcurrent-studio/AudioSpectrogram-LICENSE
 
 %changelog
 * Thu Nov 05 2026 rhamenator <rhamenator@gmail.com> - 1.2.1-1

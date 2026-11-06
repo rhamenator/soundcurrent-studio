@@ -178,6 +178,18 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>16 canale</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>Un component nu poate fi scăzut de două ori sau din el însuși.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>Este necesar un răspuns măsurat al lanțului; filtrele de corecție nu pot fi scăzute.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>Este necesar un răspuns măsurat al componentei; filtrele de corecție nu pot fi scăzute.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>Este necesar un director privat de execuție al utilizatorului</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Toate subtipurile</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>Chihlimbar</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>Ambianță</translation>
     </message>
@@ -297,8 +313,16 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Profilurile amplificatoarelor necesită măsurători electrice cu sarcină de boxă, intrare și setări de ton cunoscute. Importați un fișier de corecție măsurată; curbele amplificatoarelor nu sunt deduse din specificațiile de marketing.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>Amplitudine</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>A fost instalată o actualizare a aplicației. Folosiți Ieșire și redeschideți pentru a o încărca; închiderea acestei ferestre păstrează versiunea veche în funcțiune.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>Rata de eșantionare a analizei</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Rutarea automată a sunetului nu este disponibilă</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>Interval automat</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Modelați automat sunetul unui microfon conectat; clic pentru a ocoli EQ-ul microfonului</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>Medie</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>Spectru mediat</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Bass frequency</source>
       <translation>Frecvență bas</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>Chitară bas</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>Albastru</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>Capturează referința</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>Violoncel</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Centru</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>Canale</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Canale și rutare</translation>
     </message>
@@ -771,6 +830,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Choose update folder…</source>
       <translation>Alegeți dosarul de actualizare…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>Cromatic</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Nu s-a putut porni protecția volumului de ieșire</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>Nu s-a putut porni monitorizarea redării</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>Nu s-a putut începe măsurarea.</translation>
     </message>
@@ -993,6 +1060,11 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Create a new correction profile.</source>
       <translation>Creează un profil de corecție nou.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>Creează profil de microfon</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Șterge acest profil personalizat salvat.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>Metadatele derivării depășesc 32 KiB.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>Metadatele derivării necesită un profil estimat.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Vizualizare detaliată</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Discard</source>
       <translation>Renunțați la modificări</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>Limita superioară a afișării</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>Sensibilitatea afișării</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Tip echipament</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>Estimează profilul</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>Nivel de ieșire estimat lângă banda %1</translation>
     </message>
@@ -1326,6 +1420,26 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>Vârf de ieșire estimat după EQ, incluzând câștigul final și balansul</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>Profil estimat</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>Schema 4 necesită starea de profil estimat.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>Profilurile estimate necesită metadatele derivării.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>Profilurile estimate necesită metodă și limitări.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>Răspunsul estimat depășește intervalul acceptat.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>Exportă profilul selectat într-un fișier JSON.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>Dimensiune FFT</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>Cadre: %1 · FFT: %2 ms · Rezoluție: %3 Hz · Fereastră: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>Îngheață afișarea</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>Frecvență</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>Frecvență Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>Scală de frecvență</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>Gri</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>Verde</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>Grilă</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>Chitară</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>Căști</translation>
     </message>
@@ -1525,6 +1672,18 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>Durata istoricului</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>Înțeleg că efectele necunoscute ale camerei, microfonului, îmbrăcămintei și amplasării rămân în estimare.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>Gheață</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Versiune instalată: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>Instrument</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>Limba interfeței</translation>
     </message>
@@ -1709,6 +1872,10 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>Setări de analiză nevalide. Fereastra FFT trebuie să aibă cel mult 250 ms, iar frecvențele trebuie să fie în banda audio captată.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Rutare audio nevalidă: capturarea în buclă necesită o sursă de redare separată</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Subtip de echipament sau tip activ/pasiv nevalid</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>Tip de echipament estimat nevalid.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>Stare de profil estimat nevalidă.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Păstrați EQ-ul curent</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>Răspunsuri cunoscute ale componentelor</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>S</translation>
     </message>
@@ -1907,6 +2086,10 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>Liniară</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Câștig liniar al rutei (negativ = inversare de polaritate)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Lo-Fi</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>Încarcă presetarea</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>Blocați EQ</translation>
@@ -1954,6 +2141,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Blocați setările egalizatorului</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>Logaritmică</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Gestionează profilurile</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>Mandolină</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Producător</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>Frecvență maximă</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Măsurați răspunsul boxei, camerei și microfonului</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>Lanț măsurat</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>Poziția de audiție măsurată</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Measured response</source>
       <translation>Răspuns măsurat</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>Răspunsurile măsurate trebuie să se suprapună cu cel puțin două octave.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Înregistrarea microfonului are vârfuri tăiate. Reduceți câștigul sau amplificarea suplimentară a microfonului și repetați măsurarea.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>Răspunsul microfonului</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>Rută microfon</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>A expirat timpul de așteptare pentru pornirea microfonului</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>Frecvență minimă</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Metadate de format WAVE lipsă, duplicate sau prea mari</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>Mixaj</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>Mai multe blocuri de date WAVE nu sunt acceptate</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>Mod muzical</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Niciuna — folosiți propriul meu EQ</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>Date de referință în bandă largă insuficiente.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>Grilă de note</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Formatul numerelor și datelor</translation>
     </message>
@@ -2266,6 +2498,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>OK</source>
       <translation>OK</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>Octavă</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Deschiderea interfeței de scriere pentru redarea de test</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>Deschide răspunsul estimat și corecția în editor. Nimic nu este încă salvat sau aplicat.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>Deschideți dosarul de actualizare</translation>
     </message>
@@ -2403,6 +2643,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Ieșire generală</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>Paletă</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>Boxă tip panou</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>Vârf înainte de clipping: %1; eșantioane cu clipping: %2; eșantioane nevalide: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>Menținerea vârfurilor</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Playback</source>
       <translation>Redare</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>Monitor de redare</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>Comparațiile cu referința includ sursa sonoră, camera și microfonul de referință. Nu reprezintă o măsurare izolată sau certificată a microfonului.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Actualizați dispozitivele</translation>
     </message>
@@ -2924,6 +3180,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Proporția efectului de reverberație · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>Examinează profilul estimat</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>Ecou ritmic</translation>
     </message>
@@ -3000,6 +3260,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Presetarea „%1” a fost salvată.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>Viteză de derulare</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>Căutați marca, familia, modelul sau condițiile de măsurare</translation>
     </message>
@@ -3019,6 +3283,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Select band %1</source>
       <translation>Selectați banda %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>Selectează între unul și opt răspunsuri cunoscute ale componentelor.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>Setări</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Setări &amp;&amp; calibrare</translation>
     </message>
@@ -3128,6 +3400,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Intervalele mai scurte actualizează nivelurile mai des și folosesc mai mult CPU; furnizarea sunetului poate limita rata efectivă</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>Afișează curba de răspuns EQ</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Tip de boxă</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>Spectrogramă</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>Spectru</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: câștigul corecției este limitat la %1, iar Q la %2. Amplificările sub %3 sunt omise. Presetarea de audiție este adăugată separat.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Studio setup saved.</source>
       <translation>Configurația Studio a fost salvată.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>Scade răspunsurile măsurate cunoscute din răspunsul lanțului și examinează corecția estimată.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Se importă RĂSPUNSUL măsurat, nu câștiguri EQ deja inversate. Confirmați tipul echipamentului. Nivelul absolut de presiune sonoră necesită normalizare înainte de import.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>Acesta este un răspuns rezidual estimat, nu o măsurare certificată a echipamentului. Efectele necunoscute ale camerei, microfonului, îmbrăcămintei, amplasării sau interfeței rămân incluse. Curbele publicate pot să nu corespundă configurației. Nu corecta anulările adânci sau frecvențele nemăsurate.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>Acest profil a fost modificat. Salvați o copie personalizată înainte de a pleca?</translation>
     </message>
@@ -3554,6 +3846,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Touring PA speaker</source>
       <translation>Boxă PA pentru turnee</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>Marcaje de tranzienți</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>Acordor</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Opriți egalizatorul</translation>
     </message>
@@ -3609,6 +3909,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Type</source>
       <translation>Tip</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>Ukulele</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Schemă de profil de echipament neacceptată (se aștepta 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>Schemă de profil neacceptată (se așteaptă 2/3/4).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>Subtip WAVE extensibil neacceptat</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Schemă de profil de boxă neacceptată</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>Actualizează</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>Actualizarea %1 a fost descărcată: %2. Ieșiți, instalați peste aplicația existentă, apoi redeschideți.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>Folosiți o cameră liniștită. Măsoară boxele, camera și microfonul împreună; rezultatele includ răspunsul microfonului.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>Folosește o măsurare importată a întregului lanț. Selectează doar răspunsurile măsurate ale componentelor din acel lanț. Filtrele de corecție nu sunt niciodată scăzute.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>VB-CABLE a fost păstrat deoarece cealaltă aplicație SoundCurrent este instalată. Eliminați-l odată cu ultima aplicație dacă niciun alt program nu are nevoie de el.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>Vectorscop</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Vizualizare</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>Violă</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>Vioară</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>Ieșirea virtuală necesită o configurație de canale acceptată la 48 kHz în virgulă mobilă</translation>
     </message>
@@ -3846,6 +4179,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Warmth</source>
       <translation>Căldură</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>Formă de undă</translation>
     </message>
     <message>
       <source>Whole listening system</source>

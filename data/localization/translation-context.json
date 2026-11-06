@@ -248,5 +248,16 @@
   "Invalid input gain": "DSP input gain must be finite and between -60 and +24 dB. Unverified native review.",
   "Changes apply immediately": "Studio is in live-editing mode. Effect/mixer changes update the configured engine immediately, audible when playback is enabled. The staged Apply settings button is hidden in this mode. Native review unverified.",
   "Meters show live playback": "Meters display the actual current processing output, including when effects edits are staged/offline. Not generated test signals. Native verification unverified.",
-  "Live layout differs from staged layout": "The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified."
+  "Live layout differs from staged layout": "The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.",
+  "Microphone response": "A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.",
+  "Averaged spectrum": "A time-smoothed digital frequency spectrum, not a measured room response.",
+  "Display ceiling": "Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.",
+  "Display sensitivity": "Displayed dynamic range in dB. Does not change hardware microphone gain.",
+  "Freeze display": "Hold the current analyzer picture; capture can continue, but visualization FFT work stops.",
+  "Update": "Button opening the official software-release downloads. Does not refresh audio data or install automatically.",
+  "Bass guitar": "Instrument tuner preset for standard bass-guitar strings.",
+  "Capture reference": "Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.",
+  "Create microphone profile": "Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.",
+  "Estimated profile": "A derived frequency-response estimate, not a certified direct measurement. Keep the distinction from a measured response and from the editable inverse EQ correction.",
+  "Measured chain": "Measured response of the complete audio signal path, not a hardware model or a correction filter."
 }

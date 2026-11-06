@@ -178,6 +178,18 @@ Do you want to delete it anyway?</source>
       <translation>16 قناة</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>لا يمكن طرح المكوّن مرتين أو من نفسه.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>يلزم وجود استجابة مقاسة للسلسلة؛ لا يمكن طرح مرشحات التصحيح.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>يلزم وجود استجابة مقاسة للمكوّن؛ لا يمكن طرح مرشحات التصحيح.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>يلزم وجود مجلد تشغيل خاص بالمستخدم</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Do you want to delete it anyway?</source>
       <translation>كل الأنواع الفرعية</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>كهرماني</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>أجواء المكان</translation>
     </message>
@@ -297,8 +313,16 @@ Do you want to delete it anyway?</source>
       <translation>تتطلب ملفات المضخمات قياسات كهربائية بحمل مكبر صوت ومدخل وإعدادات نغمة معروفة. استورد ملف تصحيح مقاسًا؛ لا تُفترض منحنيات المضخم من المواصفات التسويقية.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>السعة</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>تم تثبيت تحديث للتطبيق. استخدم إنهاء ثم أعد فتحه لتحميل التحديث؛ إغلاق هذه النافذة يبقي الإصدار القديم قيد التشغيل.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>معدل أخذ عينات التحليل</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Do you want to delete it anyway?</source>
       <translation>توجيه الصوت التلقائي غير متاح</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>نطاق تلقائي</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>تشكيل صوت الميكروفون المتصل تلقائيًا؛ انقر لتجاوز معادل الميكروفون</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>المتوسط</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>الطيف المتوسط</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass frequency</source>
       <translation>تردد الجهير</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>غيتار باس</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>أزرق</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Do you want to delete it anyway?</source>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>التقاط المرجع</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>تشيلو</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>الوسط</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>القنوات</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>القنوات والتوجيه</translation>
     </message>
@@ -771,6 +830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Choose update folder…</source>
       <translation>اختيار مجلد التحديث…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>كروماتيكي</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Do you want to delete it anyway?</source>
       <translation>تعذر بدء حارس أمان مستوى صوت المخرج</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>تعذر بدء مراقبة التشغيل</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>تعذر بدء القياس.</translation>
     </message>
@@ -993,6 +1060,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Create a new correction profile.</source>
       <translation>أنشئ ملف تعريف تصحيح جديدًا.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>إنشاء ملف تعريف ميكروفون</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Do you want to delete it anyway?</source>
       <translation>احذف ملف التعريف المخصص المحفوظ هذا.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>تتجاوز بيانات الاشتقاق 32 KiB.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>تتطلب بيانات الاشتقاق ملف تعريف تقديريًا.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>منظور تفصيليّ</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Discard</source>
       <translation>تجاهل التغييرات</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>الحد الأعلى للعرض</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>حساسية العرض</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Do you want to delete it anyway?</source>
       <translation>نوع المعدات</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>تقدير ملف تعريف</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>مستوى المخرج المقدر قرب النطاق %1</translation>
     </message>
@@ -1326,6 +1420,26 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>قمة المخرج المقدرة بعد المعادلة، بما يشمل الكسب اللاحق والتوازن</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>ملف تعريف تقديري</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>يتطلب المخطط 4 حالة ملف تعريف تقديري.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>تتطلب ملفات التعريف التقديرية بيانات اشتقاق.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>تتطلب ملفات التعريف التقديرية طريقة وقيودًا.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>تتجاوز الاستجابة المقدّرة النطاق المدعوم.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>صدّر ملف التعريف المحدد إلى ملف JSON.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>حجم FFT</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>الإطارات: %1 · FFT: %2 ms · الدقة: %3 Hz · النافذة: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>تجميد العرض</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>التردد</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>التردد Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>مقياس التردد</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>رمادي</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>أخضر</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>الشبكة</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>غيتار</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>سماعات الرأس</translation>
     </message>
@@ -1525,6 +1672,18 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Hip-Hop</source>
       <translation>هيب هوب</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>مدة السجل</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>أفهم أن التأثيرات غير المعروفة للغرفة والميكروفون والملابس والموضع تبقى ضمن هذا التقدير.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>جليدي</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Do you want to delete it anyway?</source>
       <translation>الإصدار المثبت: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>الآلة</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>لغة الواجهة</translation>
     </message>
@@ -1709,6 +1872,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>إعدادات التحليل غير صالحة. يجب ألا تتجاوز نافذة FFT مقدار 250 ms وأن تبقى الترددات ضمن النطاق الصوتي الملتقط.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>مسار صوت غير صالح: يتطلب التقاط صوت التشغيل مصدر تشغيل منفصلًا</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>النوع الفرعي للمعدات أو نوع التغذية بالطاقة غير صالح</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>نوع المعدات المقدّرة غير صالح.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>حالة ملف التعريف التقديري غير صالحة.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Do you want to delete it anyway?</source>
       <translation>الاحتفاظ بإعدادات معادل الصوت الحالية</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>استجابات المكونات المعروفة</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2086,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>خطي</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>الكسب الخطي للمسار (سالب = عكس القطبية)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Do you want to delete it anyway?</source>
       <translation>لو فاي</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>تحميل إعداد مسبق</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>قفل معادل الصوت</translation>
@@ -1954,6 +2141,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Lock equalizer settings</source>
       <translation>قفل إعدادات معادل الصوت</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>لوغاريتمي</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Do you want to delete it anyway?</source>
       <translation>إدارة الملفات التعريفية</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>مندولين</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>الشركة المصنعة</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>أقصى تردد</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Do you want to delete it anyway?</source>
       <translation>قياس استجابة مكبر الصوت والغرفة والميكروفون</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>السلسلة المقاسة</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>موضع الاستماع المقاس</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Do you want to delete it anyway?</source>
       <source>Measured response</source>
       <translation>الاستجابة المقاسة</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>يجب أن تتداخل الاستجابات المقاسة بمقدار أوكتافين على الأقل.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Do you want to delete it anyway?</source>
       <translation>يتعرض تسجيل الميكروفون لقص قمم الإشارة. اخفض كسب الميكروفون أو تعزيزه وأعد القياس.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>استجابة الميكروفون</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>مسار الميكروفون</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>انتهت مهلة بدء الميكروفون</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>أدنى تردد</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>بيانات تنسيق WAVE الوصفية مفقودة أو مكررة أو كبيرة جدًا</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>مزج</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Do you want to delete it anyway?</source>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>كتل بيانات WAVE المتعددة غير مدعومة</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>وضع الموسيقى</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Do you want to delete it anyway?</source>
       <translation>بدون — استخدام إعدادات معادل الصوت الخاصة بي</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>لا تتوفر بيانات مرجعية عريضة النطاق كافية.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>شبكة النغمات</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>تنسيق الأرقام والتواريخ</translation>
     </message>
@@ -2266,6 +2498,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>OK</source>
       <translation>موافق</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>أوكتاف</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Do you want to delete it anyway?</source>
       <translation>فتح واجهة كتابة صوت الاختبار</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>فتح الاستجابة المقدّرة والتصحيح في المحرر. لن يُحفظ أو يُطبّق شيء بعد.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>فتح مجلد التحديث</translation>
     </message>
@@ -2403,6 +2643,10 @@ Do you want to delete it anyway?</source>
       <translation>المخرج العام</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>لوحة الألوان</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>مكبر صوت لوحي</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Do you want to delete it anyway?</source>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>الذروة قبل القص: %1؛ العينات المقصوصة: %2؛ العينات غير الصالحة: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>الاحتفاظ بالقمم</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Playback</source>
       <translation>التشغيل</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>مراقبة التشغيل</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>تشمل المقارنات المرجعية مصدر الصوت والغرفة والميكروفون المرجعي. وهي ليست قياسًا معزولًا أو معتمدًا للميكروفون.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>تحديث الأجهزة</translation>
     </message>
@@ -2924,6 +3180,10 @@ Do you want to delete it anyway?</source>
       <translation>مزج إشارة الارتداد الصوتي المعالجة · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>مراجعة ملف التعريف التقديري</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>صدى إيقاعي</translation>
     </message>
@@ -3000,6 +3260,10 @@ Do you want to delete it anyway?</source>
       <translation>تم حفظ الإعداد المسبق «%1».</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>سرعة التمرير</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>البحث حسب العلامة التجارية أو العائلة أو الطراز أو ظروف القياس</translation>
     </message>
@@ -3019,6 +3283,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Select band %1</source>
       <translation>تحديد النطاق %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>اختر من استجابة واحدة إلى ثماني استجابات معروفة للمكونات.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>الإعدادات</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>الإعدادات &amp;&amp; المعايرة</translation>
     </message>
@@ -3128,6 +3400,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>تحدّث الفواصل الأقصر المستويات بوتيرة أعلى وتستهلك مزيدًا من المعالج؛ قد يحد تدفق الصوت من معدل التحديث الفعلي</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>إظهار منحنى استجابة EQ</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Do you want to delete it anyway?</source>
       <translation>نوع مكبر الصوت</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>مخطط طيفي زمني</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>الطيف</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: كسب التصحيح محدود بـ %1 وQ بـ %2. تُحذف التعزيزات دون %3. يُضاف إعداد الاستماع المسبق بشكل منفصل.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio setup saved.</source>
       <translation>تم حفظ إعداد Studio.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>طرح الاستجابات المقاسة المعروفة من استجابة السلسلة ثم مراجعة التصحيح المقدّر.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Do you want to delete it anyway?</source>
       <translation>يستورد هذا الاستجابة المقاسة، وليس قيم كسب المعادلة المعكوسة مسبقًا. تأكد من نوع المعدات. يحتاج مستوى ضغط الصوت المطلق SPL إلى تطبيع قبل الاستيراد.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>هذه استجابة متبقية تقديرية وليست قياسًا معتمدًا للمعدات. تبقى تأثيرات الغرفة والميكروفون والملابس والموضع أو الواجهة غير المعروفة مشمولة. قد لا تطابق المنحنيات المنشورة إعدادك. لا تصحح الإلغاءات العميقة أو الترددات غير المقاسة.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>تم تغيير ملف التعريف هذا. هل تريد حفظ نسخة مخصصة قبل المغادرة؟</translation>
     </message>
@@ -3554,6 +3846,10 @@ Do you want to delete it anyway?</source>
       <source>Touring PA speaker</source>
       <translation>مكبر صوت لنظام مخاطبة الجمهور في الجولات</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>علامات العبور</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>ضابط النغمات</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>إيقاف معادل الصوت</translation>
     </message>
@@ -3609,6 +3909,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Type</source>
       <translation>النوع</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>يوكليلي</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Do you want to delete it anyway?</source>
       <translation>مخطط ملف تعريف المعدات غير مدعوم (المتوقع 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>مخطط ملف المعدات غير مدعوم (المتوقع 2/3/4).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>نوع فرعي غير مدعوم لتنسيق WAVE القابل للتوسيع</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Do you want to delete it anyway?</source>
       <translation>مخطط ملف تعريف مكبر الصوت غير مدعوم</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>تحديث</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>تم تنزيل التحديث %1: %2. أنهِ التطبيق، وثبّته فوق التطبيق الحالي، ثم أعد فتحه.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>استخدم غرفة هادئة. يقيس مكبرات الصوت والغرفة والميكروفون معًا؛ تتضمن النتائج استجابة الميكروفون.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>استخدم قياسًا مستوردًا للسلسلة الكاملة. اختر فقط الاستجابات المقاسة لمكونات تلك السلسلة. لا تُطرح مرشحات التصحيح مطلقًا.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Do you want to delete it anyway?</source>
       <translation>تم الاحتفاظ بـ VB-CABLE لأن تطبيق SoundCurrent الآخر مثبت. أزله مع التطبيق الأخير إذا لم يكن أي برنامج آخر بحاجة إليه.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>راسم المتجهات</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>العرض</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>فيولا</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>كمان</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>يتطلب الخرج الافتراضي تخطيط قنوات مدعومًا بتردد 48 kHz وتنسيق الفاصلة العائمة</translation>
     </message>
@@ -3846,6 +4179,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Warmth</source>
       <translation>الدفء</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>شكل الموجة</translation>
     </message>
     <message>
       <source>Whole listening system</source>

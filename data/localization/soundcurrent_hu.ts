@@ -178,6 +178,18 @@ Mindenképp törölni szeretné?</translation>
       <translation>16 csatorna</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>Egy komponens nem vonható ki kétszer vagy önmagából.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>Mért láncátvitel szükséges; korrekciós szűrők nem vonhatók ki.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>Mért komponensátvitel szükséges; korrekciós szűrők nem vonhatók ki.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>Privát felhasználói futásidejű könyvtár szükséges</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Minden altípus</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>Borostyán</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>Térérzet</translation>
     </message>
@@ -297,8 +313,16 @@ Mindenképp törölni szeretné?</translation>
       <translation>Az erősítőprofilokhoz ismert hangsugárzóterheléssel, bemenettel és hangszínbeállításokkal végzett elektromos mérések szükségesek. Importáljon mért korrekciós fájlt; marketingadatokból nem következtetünk erősítőgörbékre.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>Amplitúdó</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>Alkalmazásfrissítés lett telepítve. Betöltéséhez válassza a Kilépés lehetőséget, majd nyissa meg újra; az ablak bezárása futva hagyja a régi verziót.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>Elemzés mintavételi frekvenciája</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Mindenképp törölni szeretné?</translation>
       <translation>Az automatikus hangútválasztás nem érhető el</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>Automatikus tartomány</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Csatlakoztatott mikrofon hangjának automatikus formálása; kattintson a mikrofon-EQ megkerüléséhez</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>Átlag</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>Átlagolt spektrum</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Bass frequency</source>
       <translation>Basszusfrekvencia</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>Basszusgitár</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>Kék</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>Referencia rögzítése</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>Cselló</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Közép</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>Csatornák</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Csatornák és útválasztás</translation>
     </message>
@@ -771,6 +830,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Choose update folder…</source>
       <translation>Frissítési mappa kiválasztása…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>Kromatikus</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Nem indítható a kimeneti hangerő biztonsági felügyelete</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>A lejátszás figyelése nem indítható el</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>Nem indítható a mérés.</translation>
     </message>
@@ -993,6 +1060,11 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Create a new correction profile.</source>
       <translation>Új korrekciós profil létrehozása.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>Mikrofonprofil létrehozása</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Mindenképp törölni szeretné?</translation>
       <translation>A mentett egyéni profil törlése.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>A származtatási metaadatok meghaladják a 32 KiB méretet.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>A származtatási metaadatok becsült profilt igényelnek.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Részletes nézet</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Discard</source>
       <translation>Elvetés</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>Kijelzés felső határa</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>Kijelzés érzékenysége</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Eszköz típusa</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>Profil becslése</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>Becsült kimeneti szint a(z) %1. sáv közelében</translation>
     </message>
@@ -1326,6 +1420,26 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>Becsült EQ utáni kimeneti csúcs, az utóerősítéssel és balansszal együtt</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>Becsült profil</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>A 4-es séma becsült profilállapotot igényel.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>A becsült profilok származtatási metaadatokat igényelnek.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>A becsült profilok módszert és korlátozásokat igényelnek.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>A becsült átvitel túllépi a támogatott tartományt.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>A kijelölt profil exportálása JSON-fájlba.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>FFT-méret</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>Keretek: %1 · FFT: %2 ms · Felbontás: %3 Hz · Ablak: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>Kijelzés kimerevítése</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>Frekvencia</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>Frekvencia Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>Frekvenciaskála</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>Szürke</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>Zöld</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>Rács</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>Gitár</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>Fejhallgató</translation>
     </message>
@@ -1525,6 +1672,18 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>Előzmények időtartama</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>Megértettem, hogy a szoba, mikrofon, ruházat és elhelyezés ismeretlen hatásai benne maradnak a becslésben.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>Jég</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Telepített verzió: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>Hangszer</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>Felület nyelve</translation>
     </message>
@@ -1709,6 +1872,10 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>Érvénytelen elemzési beállítások. Az FFT-ablak legfeljebb 250 ms lehet, és a frekvenciáknak a rögzített hangsávon belül kell maradniuk.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Érvénytelen hangútvonal: a visszacsatolt rögzítéshez külön lejátszási forrás szükséges</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Érvénytelen eszközaltípus vagy aktív/passzív típus</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>Érvénytelen becsült berendezéstípus.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>Érvénytelen becsült profilállapot.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Jelenlegi EQ megtartása</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>Ismert komponensátvitelek</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>B</translation>
     </message>
@@ -1907,6 +2086,10 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>Lineáris</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Útvonal lineáris erősítése (negatív = polaritásfordítás)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Lo-Fi</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>Beállítás betöltése</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>EQ zárolása</translation>
@@ -1954,6 +2141,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Hangszínszabályzó-beállítások zárolása</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>Logaritmikus</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Mindenképp törölni szeretné?</translation>
       <translation>Profilok kezelése</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>Mandolin</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Gyártó</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>Legnagyobb frekvencia</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Hangsugárzó, szoba és mikrofon frekvenciamenetének mérése</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>Mért lánc</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>Mért hallgatási pozíció</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Measured response</source>
       <translation>Mért átvitel</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>A mért átviteleknek legalább két oktávon át kell fedniük egymást.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Mindenképp törölni szeretné?</translation>
       <translation>A mikrofonfelvétel túlvezérelt. Csökkentse a mikrofonerősítést vagy a kiemelést, és ismételje meg a mérést.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>Mikrofon frekvenciamenete</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>Mikrofonútvonal</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>A mikrofon indítása túllépte az időkorlátot</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>Legkisebb frekvencia</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Hiányzó, ismétlődő vagy túl nagy WAVE-formátummetaadatok</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>Keverés</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>Több WAVE-adatblokk nem támogatott</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>Zenei mód</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Mindenképp törölni szeretné?</translation>
       <translation>Nincs — saját EQ használata</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>Nincs elegendő szélessávú referenciaadat.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>Hangrács</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Szám- és dátumformátum</translation>
     </message>
@@ -2266,6 +2498,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>OK</source>
       <translation>OK</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>Oktáv</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>A tesztlejátszás írási interfészének megnyitása</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>A becsült átvitel és korrekció megnyitása a szerkesztőben. Még semmi nem kerül mentésre vagy alkalmazásra.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>Frissítési mappa megnyitása</translation>
     </message>
@@ -2403,6 +2643,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Teljes kimenet</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>Paletta</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>Paneles hangsugárzó</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>Csúcs a levágás előtt: %1; levágott minták: %2; érvénytelen minták: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>Csúcsérték tartása</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Playback</source>
       <translation>Lejátszás</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>Lejátszásfigyelő</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>A referencia-összehasonlítás tartalmazza a hangforrás, a szoba és a referenciamikrofon hatását. Ez nem a mikrofon elkülönített vagy hitelesített mérése.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Eszközök frissítése</translation>
     </message>
@@ -2924,6 +3180,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Zengetett effekt aránya · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>Becsült profil áttekintése</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>Ritmikus visszhang</translation>
     </message>
@@ -3000,6 +3260,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>A(z) „%1” előbeállítás mentve.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>Görgetési sebesség</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>Márka, termékcsalád, modell vagy mérési körülmények keresése</translation>
     </message>
@@ -3019,6 +3283,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Select band %1</source>
       <translation>%1. sáv kiválasztása</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>Válasszon egy–nyolc ismert komponensátvitelt.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>Beállítások</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Beállítások &amp;&amp; kalibráció</translation>
     </message>
@@ -3128,6 +3400,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Rövidebb időközzel a szintek gyakrabban frissülnek és több CPU-t használnak; a hangellátás korlátozhatja a tényleges ütemet</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>EQ átviteli görbe megjelenítése</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Mindenképp törölni szeretné?</translation>
       <translation>Hangsugárzó típusa</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>Spektrogram</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>Spektrum</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: a korrekció erősítése %1 értékre, a Q pedig %2 értékre van korlátozva. A %3 alatti kiemelések kimaradnak. A hallgatási beállítás külön adódik hozzá.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Studio setup saved.</source>
       <translation>Studio-összeállítás mentve.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>Az ismert mért átvitelek kivonása a lánc átviteléből, majd a becsült korrekció áttekintése.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Ez mért FREKVENCIAMENETET importál, nem előre invertált EQ-erősítéseket. Erősítse meg az eszköztípust. Az abszolút hangnyomásszintet importálás előtt normalizálni kell.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>Ez becsült maradékátvitel, nem hitelesített berendezésmérés. A szoba, mikrofon, ruházat, elhelyezés és interfész ismeretlen hatásai benne maradnak. A közzétett görbék eltérhetnek a beállítástól. Ne korrigáljon mély kioltásokat vagy nem mért frekvenciákat.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>Ez a profil módosult. Ment egyéni másolatot távozás előtt?</translation>
     </message>
@@ -3554,6 +3846,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Touring PA speaker</source>
       <translation>Turnékon használt PA-hangsugárzó</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>Tranziensjelölők</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Mindenképp törölni szeretné?</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>Hangoló</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Hangszínszabályzó kikapcsolása</translation>
     </message>
@@ -3609,6 +3909,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Type</source>
       <translation>Típus</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>Ukulele</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Nem támogatott eszközprofil-séma (elvárt: 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>Nem támogatott berendezésprofilséma (várt: 2/3/4).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>Nem támogatott bővíthető WAVE-altípus</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Mindenképp törölni szeretné?</translation>
       <translation>Nem támogatott hangsugárzóprofil-séma</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>Frissítés</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>A(z) %1 frissítés letöltve: %2. Lépjen ki, telepítse a meglévő alkalmazásra, majd nyissa meg újra.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>Használjon csendes szobát. Együtt méri a hangsugárzókat, a szobát és a mikrofont; az eredmény tartalmazza a mikrofon frekvenciamenetét.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>Használja a teljes lánc importált mérését. Csak az abban szereplő komponensek mért átvitelét válassza ki. A korrekciós szűrők soha nem kerülnek kivonásra.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Mindenképp törölni szeretné?</translation>
       <translation>A VB-CABLE megmaradt, mert a másik SoundCurrent alkalmazás telepítve van. Az utolsó alkalmazással együtt távolítsa el, ha más szoftvernek nincs szüksége rá.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>Vektorszkóp</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Nézet</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>Brácsa</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>Hegedű</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>A virtuális kimenet támogatott 48 kHz-es, lebegőpontos csatornaelrendezést igényel</translation>
     </message>
@@ -3846,6 +4179,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Warmth</source>
       <translation>Melegség</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>Hullámforma</translation>
     </message>
     <message>
       <source>Whole listening system</source>

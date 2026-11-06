@@ -178,6 +178,18 @@ Do you want to delete it anyway?</source>
       <translation>16 แชนเนล</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>ไม่สามารถลบส่วนประกอบซ้ำสองครั้งหรือลบออกจากตัวเองได้</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>ต้องมีการตอบสนองที่วัดของสายสัญญาณ ไม่สามารถลบตัวกรองแก้ไขได้</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>ต้องมีการตอบสนองที่วัดของส่วนประกอบ ไม่สามารถลบตัวกรองแก้ไขได้</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>ต้องมีไดเรกทอรีรันไทม์ส่วนตัวของผู้ใช้</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Do you want to delete it anyway?</source>
       <translation>ทุกประเภทย่อย</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>อำพัน</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>บรรยากาศเสียง</translation>
     </message>
@@ -297,8 +313,16 @@ Do you want to delete it anyway?</source>
       <translation>โปรไฟล์เครื่องขยายเสียงต้องอาศัยการวัดทางไฟฟ้าที่ทราบโหลดลำโพง อินพุต และการตั้งค่าโทนเสียง ให้นำเข้าไฟล์ชดเชยที่ได้จากการวัด ไม่อนุมานกราฟเครื่องขยายเสียงจากสเปกทางการตลาด</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>แอมพลิจูด</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>ติดตั้งอัปเดตแอปแล้ว ใช้ ออกจากแอป แล้วเปิดใหม่เพื่อโหลดอัปเดต การปิดหน้าต่างนี้จะทำให้เวอร์ชันเก่ายังคงทำงานอยู่</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>อัตราสุ่มตัวอย่างการวิเคราะห์</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Do you want to delete it anyway?</source>
       <translation>ไม่สามารถใช้การกำหนดเส้นทางเสียงอัตโนมัติได้</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>ช่วงอัตโนมัติ</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>ปรับเสียงไมโครโฟนที่เชื่อมต่อโดยอัตโนมัติ คลิกเพื่อบายพาส EQ ไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>ค่าเฉลี่ย</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>สเปกตรัมเฉลี่ย</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass frequency</source>
       <translation>ความถี่เบส</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>กีตาร์เบส</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>น้ำเงิน</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Do you want to delete it anyway?</source>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>บันทึกค่าอ้างอิง</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>เชลโล</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>กึ่งกลาง</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>ช่องสัญญาณ</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>แชนเนลและการกำหนดเส้นทาง</translation>
     </message>
@@ -771,6 +830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Choose update folder…</source>
       <translation>เลือกโฟลเดอร์อัปเดต…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>โครมาติก</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Do you want to delete it anyway?</source>
       <translation>ไม่สามารถเริ่มตัวป้องกันความปลอดภัยของระดับเสียงเอาต์พุตได้</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>ไม่สามารถเริ่มการมอนิเตอร์การเล่นได้</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>ไม่สามารถเริ่มการวัดได้</translation>
     </message>
@@ -993,6 +1060,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Create a new correction profile.</source>
       <translation>สร้างโปรไฟล์การแก้ไขใหม่</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>สร้างโปรไฟล์ไมโครโฟน</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Do you want to delete it anyway?</source>
       <translation>ลบโปรไฟล์กำหนดเองที่บันทึกไว้นี้</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>ข้อมูลเมตาของการอนุมานเกิน 32 KiB</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>ข้อมูลเมตาของการอนุมานต้องใช้โปรไฟล์โดยประมาณ</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>มุมมองรายละเอียด</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Discard</source>
       <translation>ละทิ้ง</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>ขีดจำกัดบนของการแสดงผล</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>ความไวการแสดงผล</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Do you want to delete it anyway?</source>
       <translation>ประเภทอุปกรณ์</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>ประมาณค่าโปรไฟล์</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>ระดับเอาต์พุตโดยประมาณใกล้ย่าน %1</translation>
     </message>
@@ -1326,6 +1420,26 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>พีกเอาต์พุตโดยประมาณหลัง EQ รวมเกนหลัง EQ และสมดุลซ้าย–ขวา</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>โปรไฟล์โดยประมาณ</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>สคีมา 4 ต้องมีสถานะโปรไฟล์โดยประมาณ</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>โปรไฟล์โดยประมาณต้องมีข้อมูลเมตาของการอนุมาน</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>โปรไฟล์โดยประมาณต้องมีวิธีและข้อจำกัด</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>การตอบสนองโดยประมาณเกินช่วงที่รองรับ</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>ส่งออกโปรไฟล์ที่เลือกเป็นไฟล์ JSON</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>ขนาด FFT</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>เฟรม: %1 · FFT: %2 ms · ความละเอียด: %3 Hz · หน้าต่าง: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>ตรึงการแสดงผล</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>ความถี่</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>ความถี่ Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>มาตราส่วนความถี่</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>เทา</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>เขียว</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>เส้นตาราง</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>กีตาร์</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>หูฟัง</translation>
     </message>
@@ -1525,6 +1672,18 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Hip-Hop</source>
       <translation>ฮิปฮอป</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>ระยะเวลาประวัติ</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>ฉันเข้าใจว่าผลที่ไม่ทราบจากห้อง ไมโครโฟน เสื้อผ้า และตำแหน่งยังรวมอยู่ในค่าประมาณนี้</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>น้ำแข็ง</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Do you want to delete it anyway?</source>
       <translation>เวอร์ชันที่ติดตั้ง: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>เครื่องดนตรี</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>ภาษาของส่วนติดต่อ</translation>
     </message>
@@ -1709,6 +1872,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>การตั้งค่าการวิเคราะห์ไม่ถูกต้อง หน้าต่าง FFT ต้องไม่เกิน 250 ms และความถี่ต้องอยู่ในย่านเสียงที่บันทึกได้</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>เส้นทางเสียงไม่ถูกต้อง: การบันทึกเสียงแบบลูปแบ็กต้องใช้แหล่งเล่นเสียงแยกต่างหาก</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>ประเภทย่อยอุปกรณ์หรือประเภทกำลังขับไม่ถูกต้อง</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>ประเภทอุปกรณ์โดยประมาณไม่ถูกต้อง</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>สถานะโปรไฟล์โดยประมาณไม่ถูกต้อง</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Do you want to delete it anyway?</source>
       <translation>คง EQ ปัจจุบัน</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>การตอบสนองของส่วนประกอบที่ทราบ</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2086,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>เชิงเส้น</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>เกนเส้นทางแบบเชิงเส้น (ค่าลบ = กลับขั้ว)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Do you want to delete it anyway?</source>
       <translation>โลไฟ</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>โหลดพรีเซ็ต</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>ล็อก EQ</translation>
@@ -1954,6 +2141,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Lock equalizer settings</source>
       <translation>ล็อกการตั้งค่าอีควอไลเซอร์</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>ลอการิทึม</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Do you want to delete it anyway?</source>
       <translation>จัดการโปรไฟล์</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>แมนโดลิน</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>ผู้ผลิต</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>ความถี่สูงสุด</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Do you want to delete it anyway?</source>
       <translation>วัดการตอบสนองของลำโพง ห้อง และไมโครโฟน</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>สายสัญญาณที่วัดแล้ว</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>ตำแหน่งฟังที่วัดแล้ว</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Do you want to delete it anyway?</source>
       <source>Measured response</source>
       <translation>ผลตอบสนองที่วัดได้</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>การตอบสนองที่วัดต้องทับซ้อนกันอย่างน้อยสองอ็อกเทฟ</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Do you want to delete it anyway?</source>
       <translation>การบันทึกไมโครโฟนเกิดสัญญาณคลิป ลดเกนไมโครโฟนหรือบูสต์แล้ววัดใหม่</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>การตอบสนองไมโครโฟน</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>เส้นทางไมโครโฟน</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>หมดเวลารอเริ่มไมโครโฟน</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>ความถี่ต่ำสุด</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>ข้อมูลเมตารูปแบบ WAVE ไม่มี ซ้ำ หรือใหญ่เกินไป</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>ผสม</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Do you want to delete it anyway?</source>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>ไม่รองรับบล็อกข้อมูล WAVE หลายบล็อก</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>โหมดดนตรี</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Do you want to delete it anyway?</source>
       <translation>ไม่มี — ใช้ EQ ของฉันเอง</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>ข้อมูลอ้างอิงย่านกว้างไม่เพียงพอ</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>ตารางโน้ต</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>รูปแบบตัวเลขและวันที่</translation>
     </message>
@@ -2266,6 +2498,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>OK</source>
       <translation>ตกลง</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>อ็อกเทฟ</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Do you want to delete it anyway?</source>
       <translation>เปิดอินเทอร์เฟซเขียนข้อมูลสำหรับการเล่นเสียงทดสอบ</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>เปิดการตอบสนองโดยประมาณและการแก้ไขในตัวแก้ไข ยังไม่มีการบันทึกหรือนำไปใช้</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>เปิดโฟลเดอร์อัปเดต</translation>
     </message>
@@ -2403,6 +2643,10 @@ Do you want to delete it anyway?</source>
       <translation>เอาต์พุตรวม</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>ชุดสี</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>ลำโพงแบบแผง</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Do you want to delete it anyway?</source>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>ค่าสูงสุดก่อนคลิป: %1; จำนวนตัวอย่างที่ถูกคลิป: %2; จำนวนตัวอย่างที่ไม่ถูกต้อง: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>ค้างค่าสูงสุด</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Playback</source>
       <translation>การเล่นเสียง</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>มอนิเตอร์การเล่น</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>การเปรียบเทียบอ้างอิงรวมผลจากแหล่งเสียง ห้อง และไมโครโฟนอ้างอิง จึงไม่ใช่การวัดไมโครโฟนเพียงอย่างเดียวหรือการวัดที่ผ่านการรับรอง</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>รีเฟรชอุปกรณ์</translation>
     </message>
@@ -2924,6 +3180,10 @@ Do you want to delete it anyway?</source>
       <translation>สัดส่วนผสมเสียงรีเวิร์บ · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>ตรวจสอบโปรไฟล์โดยประมาณ</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>เสียงสะท้อนตามจังหวะ</translation>
     </message>
@@ -3000,6 +3260,10 @@ Do you want to delete it anyway?</source>
       <translation>บันทึกพรีเซ็ต “%1” แล้ว</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>ความเร็วการเลื่อน</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>ค้นหาแบรนด์ ตระกูลรุ่น รุ่น หรือเงื่อนไขการวัด</translation>
     </message>
@@ -3019,6 +3283,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Select band %1</source>
       <translation>เลือกย่าน %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>เลือกการตอบสนองของส่วนประกอบที่ทราบหนึ่งถึงแปดรายการ</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>การตั้งค่า</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>การตั้งค่า &amp;&amp; การปรับเทียบ</translation>
     </message>
@@ -3128,6 +3400,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>ช่วงเวลาที่สั้นลงจะอัปเดตระดับบ่อยขึ้นและใช้ CPU มากขึ้น การส่งเสียงอาจจำกัดอัตราจริง</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>แสดงกราฟการตอบสนอง EQ</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Do you want to delete it anyway?</source>
       <translation>ประเภทลำโพง</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>สเปกโตรแกรม</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>สเปกตรัม</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: เกนการแก้ไขจำกัดไว้ที่ %1 และ Q ที่ %2 การเพิ่มเกนต่ำกว่า %3 จะถูกละเว้น พรีเซ็ตการฟังของคุณจะถูกเพิ่มแยกต่างหาก</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio setup saved.</source>
       <translation>บันทึกการตั้งค่า Studio แล้ว</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>ลบการตอบสนองที่วัดและทราบแล้วออกจากการตอบสนองของสายสัญญาณ แล้วตรวจสอบการแก้ไขโดยประมาณ</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Do you want to delete it anyway?</source>
       <translation>นี่เป็นการนำเข้าการตอบสนองที่วัดได้ ไม่ใช่เกน EQ ที่กลับค่าแล้ว ยืนยันประเภทอุปกรณ์ SPL สัมบูรณ์ต้องปรับให้อยู่ในมาตรฐานก่อนนำเข้า</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>นี่คือการตอบสนองคงเหลือโดยประมาณ ไม่ใช่การวัดอุปกรณ์ที่ได้รับการรับรอง ผลที่ไม่ทราบจากห้อง ไมโครโฟน เสื้อผ้า ตำแหน่ง หรืออินเทอร์เฟซยังคงรวมอยู่ เส้นโค้งที่เผยแพร่อาจไม่ตรงกับระบบของคุณ อย่าแก้ไขจุดหักล้างลึกหรือความถี่ที่ไม่ได้วัด</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>โปรไฟล์นี้มีการเปลี่ยนแปลง บันทึกสำเนากำหนดเองก่อนออกหรือไม่?</translation>
     </message>
@@ -3554,6 +3846,10 @@ Do you want to delete it anyway?</source>
       <source>Touring PA speaker</source>
       <translation>ลำโพง PA สำหรับทัวร์แสดง</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>เครื่องหมายเสียงชั่วขณะ</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>เครื่องตั้งเสียง</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>ปิดอีควอไลเซอร์</translation>
     </message>
@@ -3609,6 +3909,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Type</source>
       <translation>ประเภท</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>อูคูเลเล่</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Do you want to delete it anyway?</source>
       <translation>ไม่รองรับรุ่นโครงสร้างโปรไฟล์อุปกรณ์ (ต้องเป็น 2/3)</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>ไม่รองรับสคีมาโปรไฟล์อุปกรณ์ (ต้องเป็น 2/3/4)</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>ไม่รองรับชนิดย่อยของรูปแบบ WAVE แบบขยายได้</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Do you want to delete it anyway?</source>
       <translation>ไม่รองรับรุ่นโครงสร้างโปรไฟล์ลำโพง</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>อัปเดต</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>ดาวน์โหลดอัปเดต %1 แล้ว: %2 ออกจากแอป ติดตั้งทับแอปเดิม แล้วเปิดใหม่</translation>
     </message>
@@ -3722,6 +4035,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>ใช้ห้องเงียบ วัดลำโพง ห้อง และไมโครโฟนร่วมกัน ผลรวมการตอบสนองของไมโครโฟนด้วย</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>ใช้ผลการวัดที่นำเข้าของสายสัญญาณทั้งหมด เลือกเฉพาะการตอบสนองที่วัดของส่วนประกอบในสายสัญญาณนั้น จะไม่ลบตัวกรองแก้ไขออกเด็ดขาด</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Do you want to delete it anyway?</source>
       <translation>เก็บ VB-CABLE ไว้เนื่องจากยังติดตั้งแอป SoundCurrent อีกแอปอยู่ ให้ลบพร้อมกับแอปสุดท้ายหากไม่มีซอฟต์แวร์อื่นต้องใช้</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>เวกเตอร์สโคป</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>มุมมอง</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>วิโอลา</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>ไวโอลิน</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>เอาต์พุตเสมือนต้องใช้โครงร่างแชนเนล 48 kHz แบบทศนิยมลอยตัวที่รองรับ</translation>
     </message>
@@ -3846,6 +4179,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Warmth</source>
       <translation>ความอุ่น</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>รูปคลื่น</translation>
     </message>
     <message>
       <source>Whole listening system</source>

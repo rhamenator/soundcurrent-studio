@@ -178,6 +178,18 @@ Vill du ta bort den ändå?</translation>
       <translation>16 kanaler</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>En komponent kan inte subtraheras två gånger eller från sig själv.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>En uppmätt kedjerespons krävs; korrigeringsfilter kan inte subtraheras.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>En uppmätt komponentrespons krävs; korrigeringsfilter kan inte subtraheras.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>En privat körningskatalog för användaren krävs</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Alla undertyper</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>Bärnsten</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>Rumskänsla</translation>
     </message>
@@ -297,8 +313,16 @@ Vill du ta bort den ändå?</translation>
       <translation>Förstärkarprofiler kräver elektriska mätningar med känd högtalarlast, ingång och toninställningar. Importera en uppmätt korrigeringsfil; förstärkarkurvor härleds inte från marknadsföringsspecifikationer.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>Amplitud</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>En appuppdatering har installerats. Använd Avsluta och öppna appen igen för att läsa in den; om du stänger detta fönster fortsätter den gamla versionen att köras.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>Samplingsfrekvens för analys</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Vill du ta bort den ändå?</translation>
       <translation>Automatisk ljudroutning är inte tillgänglig</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>Automatiskt omfång</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Forma en ansluten mikrofons ljud automatiskt; klicka för att förbigå mikrofonens EQ</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>Medelvärde</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>Medelvärdesbildat spektrum</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Bass frequency</source>
       <translation>Basfrekvens</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>Basgitarr</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>Blå</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>Fånga referens</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>Cello</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Mitten</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>Kanaler</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanaler och routning</translation>
     </message>
@@ -771,6 +830,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Choose update folder…</source>
       <translation>Välj uppdateringsmapp…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>Kromatisk</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Kunde inte starta utgångsvolymens säkerhetsskydd</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>Kunde inte starta uppspelningsövervakningen</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>Kunde inte starta mätningen.</translation>
     </message>
@@ -993,6 +1060,11 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Create a new correction profile.</source>
       <translation>Skapa en ny korrigeringsprofil.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>Skapa mikrofonprofil</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Vill du ta bort den ändå?</translation>
       <translation>Ta bort den här sparade anpassade profilen.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>Härledningsmetadata överstiger 32 KiB.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>Härledningsmetadata kräver en uppskattad profil.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Detaljerad vy</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Discard</source>
       <translation>Kasta ändringar</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>Övre visningsgräns</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>Visningskänslighet</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Utrustningstyp</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>Uppskatta profil</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>Uppskattad utgångsnivå nära band %1</translation>
     </message>
@@ -1326,6 +1420,26 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>Uppskattad utgångstopp efter EQ, inklusive utgångsförstärkning och balans</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>Uppskattad profil</translation>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>Schema 4 kräver status som uppskattad profil.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>Uppskattade profiler kräver härledningsmetadata.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>Uppskattade profiler kräver metod och begränsningar.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>Uppskattad respons överskrider det stödda området.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1482,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>Exportera den valda profilen till en JSON-fil.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>FFT-storlek</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1562,25 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 Hz · Window: %4 ms</source>
+      <translation>Ramar: %1 · FFT: %2 ms · Upplösning: %3 Hz · Fönster: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>Frys visningen</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>Frekvens</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>Frekvens i Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>Frekvensskala</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1629,22 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>Grå</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>Grön</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>Rutnät</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>Gitarr</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>Hörlurar</translation>
     </message>
@@ -1525,6 +1672,18 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>Historiklängd</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>Jag förstår att okända effekter av rum, mikrofon, kläder och placering finns kvar i uppskattningen.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>Is</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1817,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Installerad version: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>Instrument</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>Gränssnittsspråk</translation>
     </message>
@@ -1709,6 +1872,10 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>Ogiltiga analysinställningar. FFT-fönstret får vara högst 250 ms och frekvenserna måste ligga inom det insamlade ljudbandet.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Ogiltig ljudroutning: loopback kräver en separat uppspelningskälla</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1914,14 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Ogiltig utrustningsundertyp eller strömförsörjningstyp</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>Ogiltig uppskattad utrustningstyp.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>Ogiltig status för uppskattad profil.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2040,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Behåll aktuell EQ</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>Kända komponentresponser</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2086,10 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>Linjär</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Linjär förstärkning för signalväg (negativ = invertera polaritet)</translation>
     </message>
@@ -1947,6 +2130,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Lo-Fi</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>Läs in förinställning</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>Lås EQ</translation>
@@ -1954,6 +2141,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Lås equalizerinställningar</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>Logaritmisk</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2173,16 @@ Vill du ta bort den ändå?</translation>
       <translation>Hantera profiler</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>Mandolin</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Tillverkare</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>Högsta frekvens</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2201,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Mät högtalarnas, rummets och mikrofonens frekvensgång</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>Uppmätt kedja</translation>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>Uppmätt lyssningsposition</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2217,10 @@ Vill du ta bort den ändå?</translation>
       <source>Measured response</source>
       <translation>Uppmätt respons</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>Uppmätta responser måste överlappa minst två oktaver.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2319,21 @@ Vill du ta bort den ändå?</translation>
       <translation>Mikrofoninspelningen klipper. Sänk mikrofonförstärkningen eller extra förstärkning och upprepa mätningen.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>Mikrofonrespons</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>Mikrofonens signalväg</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>Tidsgränsen för mikrofonstart överskreds</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>Lägsta frekvens</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2354,10 @@ Vill du ta bort den ändå?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE-formatmetadata saknas, är duplicerade eller för stora</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>Mix</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2389,10 @@ Vill du ta bort den ändå?</translation>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>Flera WAVE-datablock stöds inte</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>Musikläge</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2480,14 @@ Vill du ta bort den ändå?</translation>
       <translation>Ingen — använd min egen EQ</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>Otillräckliga bredbandiga referensdata.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>Notrutnät</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Tal- och datumformat</translation>
     </message>
@@ -2266,6 +2498,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>OK</source>
       <translation>OK</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>Oktav</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2595,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Öppna testljudets skrivgränssnitt</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>Öppna den uppskattade responsen och korrigeringen i redigeraren. Inget sparas eller tillämpas ännu.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>Öppna uppdateringsmapp</translation>
     </message>
@@ -2403,6 +2643,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Total utgång</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>Palett</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>Panelhögtalare</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2673,10 @@ Vill du ta bort den ändå?</translation>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>Topp före klippning: %1; klippta sampel: %2; ogiltiga sampel: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>Håll toppvärde</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2711,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Playback</source>
       <translation>Uppspelning</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>Uppspelningsmonitor</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3005,10 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>Referensjämförelser omfattar ljudkällan, rummet och referensmikrofonen. De är inte en isolerad eller certifierad mikrofonmätning.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Uppdatera enheter</translation>
     </message>
@@ -2924,6 +3180,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Efterklangens effektandel · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>Granska uppskattad profil</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>Rytmiskt eko</translation>
     </message>
@@ -3000,6 +3260,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Förinställningen ”%1” sparades.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>Rullningshastighet</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>Sök efter tillverkare, familj, modell eller mätförhållanden</translation>
     </message>
@@ -3019,6 +3283,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Select band %1</source>
       <translation>Välj band %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>Välj en till åtta kända komponentresponser.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3363,10 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>Inställningar</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Inställningar &amp;&amp; kalibrering</translation>
     </message>
@@ -3128,6 +3400,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Kortare intervall uppdaterar nivåerna oftare och använder mer CPU; ljudleveransen kan begränsa den faktiska uppdateringstakten</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>Visa EQ-responskurva</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3595,14 @@ Vill du ta bort den ändå?</translation>
       <translation>Högtalartyp</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>Spektrogram</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>Spektrum</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: korrigeringsförstärkningen begränsas till %1 och Q till %2. Förstärkningar under %3 utelämnas. Din lyssningsförinställning läggs till separat.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3706,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Studio setup saved.</source>
       <translation>Studio-konfigurationen sparades.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>Subtrahera kända uppmätta responser från kedjans respons och granska den uppskattade korrigeringen.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3817,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Detta importerar uppmätt FREKVENSGÅNG, inte redan inverterade EQ-förstärkningar. Bekräfta utrustningstypen. Absolut ljudtrycksnivå behöver normaliseras före import.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>Detta är en uppskattad restrespons, inte en certifierad utrustningsmätning. Okända effekter av rum, mikrofon, kläder, placering eller gränssnitt finns kvar. Publicerade kurvor kanske inte motsvarar din uppställning. Korrigera inte djupa utsläckningar eller omätta frekvenser.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>Denna profil har ändrats. Spara en anpassad kopia innan du lämnar den?</translation>
     </message>
@@ -3554,6 +3846,10 @@ Vill du ta bort den ändå?</translation>
       <source>Touring PA speaker</source>
       <translation>PA-högtalare för turnéer</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>Transientmarkörer</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3883,10 @@ Vill du ta bort den ändå?</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>Stämapparat</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Stäng av equalizern</translation>
     </message>
@@ -3609,6 +3909,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Type</source>
       <translation>Typ</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>Ukulele</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3978,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Utrustningsprofilens schema stöds inte (förväntat: 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>Utrustningsprofilens schema stöds inte (2/3/4 förväntas).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>Undertyp av utökningsbart WAVE-format stöds inte</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4011,11 @@ Vill du ta bort den ändå?</translation>
       <translation>Högtalarprofilens schema stöds inte</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>Uppdatera</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>Uppdateringen %1 har hämtats: %2. Avsluta, installera över den befintliga appen och öppna sedan igen.</translation>
     </message>
@@ -3722,6 +4035,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>Använd ett tyst rum. Mäter högtalare, rum och mikrofon tillsammans; resultaten inkluderar mikrofonens frekvensgång.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>Använd en importerad mätning av hela kedjan. Välj endast uppmätta responser för komponenter i den kedjan. Korrigeringsfilter subtraheras aldrig.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4132,22 @@ Vill du ta bort den ändå?</translation>
       <translation>VB-CABLE behölls eftersom den andra SoundCurrent-appen är installerad. Ta bort det med den sista appen om ingen annan programvara behöver det.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>Vektorskop</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Vy</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>Viola</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>Violin</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>Den virtuella utgången kräver en kanaluppsättning som stöds med 48 kHz i flyttalsformat</translation>
     </message>
@@ -3846,6 +4179,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Warmth</source>
       <translation>Värme</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>Vågform</translation>
     </message>
     <message>
       <source>Whole listening system</source>
