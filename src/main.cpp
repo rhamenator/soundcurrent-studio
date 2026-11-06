@@ -1381,6 +1381,16 @@ std::optional<Bands> parseBands(const QJsonValue &value) {
     return result;
 }
 
+// Use embedded pixels rather than a desktop-theme name: tray hosts may resolve
+// an unavailable/cached theme name to a generic information icon.
+QIcon applicationLogo() {
+    const QIcon source(":/app-logo.png");
+    QIcon result;
+    for (const int size : {16, 22, 24, 32, 48, 64, 128, 256})
+        result.addPixmap(source.pixmap(size, size));
+    return result;
+}
+
 QString presetsPath() {
     return QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/presets.json";
 }
@@ -1854,7 +1864,7 @@ class MainWindow : public QMainWindow {
 public:
     explicit MainWindow(bool startEnabled = true, bool testControls = false) : bands_(builtinProfile("Flat", kDefaultBands)) {
         setWindowTitle("SoundCurrent Studio");
-        setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")));
+        setWindowIcon(applicationLogo());
         setMinimumSize(480, 320);
         if (auto *display = QGuiApplication::primaryScreen()) {
             const auto available = display->availableGeometry();
@@ -2385,7 +2395,7 @@ public:
         root->addStretch();
 
         loadCustomPresets();
-        rebuildPresetList("Flat");
+        restoreListeningState();
         rebuildBandControls();
         syncBandControls();
         if (!startEnabled) refreshDevices();
@@ -3133,7 +3143,7 @@ private:
 
     void setupTray() {
         if (!QSystemTrayIcon::isSystemTrayAvailable()) return;
-        tray_ = new QSystemTrayIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")), this);
+        tray_ = new QSystemTrayIcon(applicationLogo(), this);
         tray_->setToolTip("SoundCurrent Studio");
         auto *menu = new QMenu(this);
         menu->addAction(SC_TR("Open"), this, [this] { reopen(); });
@@ -3592,7 +3602,32 @@ private:
     QComboBox *speakerCombo_ = nullptr;
     soundcurrent::studio::StudioPanel *studio_ = nullptr;
 
+    void restoreListeningState() {
+        QString preset = "Flat";
+        const auto state = QJsonDocument::fromJson(QSettings().value("listening/state").toByteArray()).object();
+        if (state.value("schema").toInt() == 1) {
+            if (const auto restored = parseBands(state)) {
+                bands_ = *restored;
+                preset = state.value("preset").toString();
+                const auto expected = builtinShapes().contains(preset)
+                    ? builtinProfile(preset, bands_.size()) : custom_.value(preset);
+                // Removed/changed named presets retain their actual curve as Custom.
+                if (serializeBands(expected) != serializeBands(bands_)) preset = "Custom";
+            }
+        }
+        const QSignalBlocker block(countBox_);
+        countBox_->setValue(bands_.size());
+        rebuildPresetList(preset);
+    }
+
+    void saveListeningState() const {
+        const QJsonObject state{{"schema", 1}, {"preset", presetCombo_->currentData().toString()},
+                                {"bands", serializeBands(bands_)}};
+        QSettings().setValue("listening/state", QJsonDocument(state).toJson(QJsonDocument::Compact));
+    }
+
     void applyChanges() {
+        saveListeningState();
         std::vector<soundcurrent::EqBand> shared;for(const auto &b:processingBands())shared.push_back({b.frequency,b.gain,b.q,b.type});
         studio_->setShared(shared,outputGainDb(),balance_->value());
         meter_.setProfile(bands_, outputGainDb(), balance_->value(), speakerCorrection());
@@ -3694,6 +3729,7 @@ private:
         file.write(QJsonDocument(object).toJson());
         if (!file.commit()) { showError(SC_TR("Could not finish saving preset.")); return; }
         rebuildPresetList(name);
+        saveListeningState();
         commitChange();
         status_->setText(SC_TR("Saved preset “%1”.").arg(name));
     }
@@ -3967,7 +4003,7 @@ private:
 
 int main(int argc, char **argv) {
     for (int i = 1; i < argc; ++i) {
-        if (std::strcmp(argv[i], "--windows-audio-setup-test") == 0 || std::strcmp(argv[i], "--ui-self-test") == 0 || std::strcmp(argv[i], "--windows-live-manual-route-test") == 0 || std::strcmp(argv[i], "--windows-live-conflict-test") == 0) {
+        if (std::strcmp(argv[i], "--windows-audio-setup-test") == 0 || std::strcmp(argv[i], "--ui-self-test") == 0 || std::strcmp(argv[i], "--localization-ui-test") == 0 || std::strcmp(argv[i], "--windows-live-manual-route-test") == 0 || std::strcmp(argv[i], "--windows-live-conflict-test") == 0) {
             qInstallMessageHandler([](QtMsgType, const QMessageLogContext &, const QString &message) {
                 const auto utf8 = message.toUtf8();
                 std::fprintf(stderr, "%s\n", utf8.constData());
@@ -3997,6 +4033,8 @@ int main(int argc, char **argv) {
     }
 #endif
     QApplication app(argc, argv);
+    if (app.arguments().contains("--ui-self-test") || app.arguments().contains("--localization-ui-test"))
+        qInfo("UI test application initialized");
     QCoreApplication::setOrganizationName("SoundCurrent");
     QCoreApplication::setApplicationName("soundcurrent-studio");
     QTemporaryDir testSettings;
@@ -4020,7 +4058,7 @@ int main(int argc, char **argv) {
     localization.initialize(app.arguments().contains("--ui-self-test"));
     soundcurrent::ui::installButtonHelp();
     QGuiApplication::setDesktopFileName("io.github.rhamenator.SoundCurrentStudio");
-    app.setWindowIcon(QIcon::fromTheme("io.github.rhamenator.SoundCurrentStudio", QIcon(":/app.ico")));
+    app.setWindowIcon(applicationLogo());
     if (app.arguments().size() == 3 && app.arguments()[1] == "--check-amplifier-profile") {
         QFile file(app.arguments()[2]);
         if (!file.open(QIODevice::ReadOnly) || file.size() > 65536) return 2;
@@ -4441,6 +4479,52 @@ int main(int argc, char **argv) {
             if (check->accessibleName() == "Show peak markers on frequency levels") peakMarkers = check;
         if (!peakMarkers) qFatal("Peak marker toggle is missing");
         if (presets->currentText() != "Flat") qFatal("Flat is not the default preset");
+        presets->setCurrentIndex(presets->findData("Balanced"));
+        {
+            auto reopened = std::make_unique<MainWindow>(false, true);
+            bool restoredSelection = false;
+            for (auto *combo : reopened->findChildren<QComboBox *>())
+                if (combo->findData("Balanced") >= 0)
+                    restoredSelection = combo->currentData().toString() == "Balanced";
+            if (!restoredSelection) qFatal("Reopened UI lost the listening preset");
+            // Verify persisted stable ID and actual bands, independently of captions.
+            const auto state = QJsonDocument::fromJson(QSettings().value("listening/state").toByteArray()).object();
+            if (state.value("preset").toString() != "Balanced" ||
+                state.value("bands").toArray() != serializeBands(builtinProfile("Balanced", kDefaultBands)))
+                qFatal("Listening preset did not survive reopen");
+        }
+        gain->setValue(3.5);
+        {
+            auto reopened = std::make_unique<MainWindow>(false, true);
+            bool custom = false;
+            for (auto *combo : reopened->findChildren<QComboBox *>())
+                if (combo->findData("Balanced") >= 0)
+                    custom = combo->currentData().toString() == "Custom";
+            if (!custom) qFatal("Edited curve lost Custom identity on reopen");
+        }
+        count->setValue(9);
+        presets->setCurrentIndex(presets->findData("Balanced"));
+        {
+            auto reopened = std::make_unique<MainWindow>(false, true);
+            bool nineBands = false;
+            for (auto *spin : reopened->findChildren<QSpinBox *>())
+                if (spin->accessibleName() == "Number of equalizer bands") nineBands = spin->value() == 9;
+            if (!nineBands) qFatal("Structured nine-band state was mistaken for legacy gains");
+            for (auto *combo : reopened->findChildren<QComboBox *>())
+                if (combo->findData("Balanced") >= 0 && combo->currentData().toString() != "Balanced")
+                    qFatal("Nine-band preset identity did not survive reopen");
+        }
+        count->setValue(kDefaultBands);
+        if (applicationLogo().isNull() || applicationLogo().pixmap(22, 22).isNull() ||
+            !applicationLogo().name().isEmpty()) qFatal("Embedded tray logo is missing or theme-dependent");
+        QSettings().setValue("listening/state", QByteArray("{invalid"));
+        {
+            auto reopened = std::make_unique<MainWindow>(false, true);
+            for (auto *combo : reopened->findChildren<QComboBox *>())
+                if (combo->findData("Balanced") >= 0 && combo->currentData().toString() != "Flat")
+                    qFatal("Invalid saved listening state did not fall back to Flat");
+        }
+        presets->setCurrentIndex(presets->findData("Flat"));
         if (presets->findText("Loudness") < 0) qFatal("Loudness preset is missing");
         if (presets->findText("Entertainment") >= 0) qFatal("Category title appears as a preset");
         for (auto it = builtinShapes().begin(); it != builtinShapes().end(); ++it) {
