@@ -404,7 +404,8 @@ add_test(NAME audio-buffering COMMAND soundcurrent-buffering-test)
 set_tests_properties(audio-buffering PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen" TIMEOUT 20)
 endif()
 
-# Shared analysis UI; all processing runs on the GUI/analysis side, never the audio callback.
+# Shared analysis UI; keep engine-only builds independent of Qt and desktop targets.
+if(SOUNDCURRENT_BUILD_DESKTOP)
 target_sources(soundcurrent-studio PRIVATE src/analysis_scope.cpp src/analysis_panel.cpp src/spectrogram/spectrogram_core.cpp)
 
 add_executable(soundcurrent-analysis-test tests/analysis.cpp src/analysis_scope.cpp src/analysis_panel.cpp src/spectrogram/spectrogram_core.cpp src/equipment_profiles.cpp data/localization/resources.qrc)
@@ -421,3 +422,4 @@ install(FILES src/spectrogram/LICENSE DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/s
 add_test(NAME analysis-views-fr COMMAND soundcurrent-analysis-test --language fr)
 add_test(NAME analysis-views-ar COMMAND soundcurrent-analysis-test --language ar)
 set_tests_properties(analysis-views-fr analysis-views-ar PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen" TIMEOUT 60)
+endif() # Analysis desktop UI/tests
