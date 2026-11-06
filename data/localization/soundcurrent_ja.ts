@@ -178,6 +178,18 @@ Do you want to delete it anyway?</source>
       <translation>16 チャンネル</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>構成機器を二重に、または自身から差し引くことはできません。</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>全経路の実測応答が必要です。補正フィルターは差し引けません。</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>構成機器の実測応答が必要です。補正フィルターは差し引けません。</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>ユーザー専用のランタイムディレクトリが必要です</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Do you want to delete it anyway?</source>
       <translation>すべてのサブタイプ</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>アンバー</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>アンビエンス</translation>
     </message>
@@ -297,8 +313,16 @@ Do you want to delete it anyway?</source>
       <translation>アンプのプロファイルには、スピーカー負荷、入力、トーン設定が明確な電気的測定が必要です。測定済みの補正ファイルをインポートしてください。製品の宣伝用仕様からアンプの周波数特性を推定することはありません。</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>振幅</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>アプリの更新がインストールされました。「終了」を選択してから開き直すと更新が反映されます。このウィンドウを閉じるだけでは、古いバージョンが動作し続けます。</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>解析サンプルレート</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Do you want to delete it anyway?</source>
       <translation>自動オーディオルーティングは利用できません</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>自動範囲</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>接続されたマイクの音質を自動補正します。クリックするとマイク EQ をバイパスします</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>平均</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>平均スペクトル</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Bass frequency</source>
       <translation>低音の周波数</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>ベースギター</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>ブルー</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Do you want to delete it anyway?</source>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>基準を取得</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>チェロ</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>中央</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>チャンネル数</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>チャンネルとルーティング</translation>
     </message>
@@ -771,6 +830,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Choose update folder…</source>
       <translation>更新フォルダーを選択…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>クロマチック</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Do you want to delete it anyway?</source>
       <translation>出力音量の安全ガードを開始できませんでした</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>再生モニターを開始できませんでした</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>測定を開始できませんでした。</translation>
     </message>
@@ -993,6 +1060,11 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Create a new correction profile.</source>
       <translation>新しい補正プロファイルを作成します。</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>マイクプロファイルを作成</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Do you want to delete it anyway?</source>
       <translation>この保存済みカスタムプロファイルを削除します。</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>導出メタデータが 32 KiB を超えています。</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>導出メタデータには推定プロファイルが必要です。</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>詳細表示</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Discard</source>
       <translation>破棄</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>表示の上限</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>表示感度</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Do you want to delete it anyway?</source>
       <translation>機器の種類</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>プロファイルを推定</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>バンド %1 付近の推定出力レベル</translation>
     </message>
@@ -1326,6 +1420,27 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>ポストゲインとバランスを含む、EQ 適用後の推定出力ピーク</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>推定プロファイル</translation>
+      <extracomment>A derived frequency-response estimate, not a certified direct measurement. Keep the distinction from a measured response and from the editable inverse EQ correction.</extracomment>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>スキーマ 4 には推定プロファイル状態が必要です。</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>推定プロファイルには導出メタデータが必要です。</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>推定プロファイルには方法と制約の記載が必要です。</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>推定応答が対応範囲を超えています。</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1483,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>選択したプロファイルをJSONファイルに書き出します。</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>FFT サイズ</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1563,25 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 · Window: %4 ms</source>
+      <translation>フレーム数: %1 · FFT: %2 ms · 分解能: %3 · 窓長: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>表示を固定</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>周波数</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>周波数（Hz）</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>周波数スケール</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1630,22 @@ Do you want to delete it anyway?</source>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>グレー</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>グリーン</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>グリッド</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>ギター</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>ヘッドホン</translation>
     </message>
@@ -1525,6 +1673,18 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Hip-Hop</source>
       <translation>ヒップホップ</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>履歴の長さ</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>部屋、マイク、衣服、配置による未知の影響が推定に残ることを理解しています。</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>アイス</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1818,10 @@ Do you want to delete it anyway?</source>
       <translation>インストール済みのバージョン: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>楽器</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>表示言語</translation>
     </message>
@@ -1709,6 +1873,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>解析設定が無効です。FFT 窓は 250 ms 以下とし、周波数は取り込んだ音声の帯域内にしてください。</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>無効な音声ルーティングです。ループバック録音には別の再生ソースが必要です</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1915,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>機器のサブタイプまたは駆動方式が無効です</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>推定機器の種類が無効です。</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>推定プロファイル状態が無効です。</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2041,10 @@ Do you want to delete it anyway?</source>
       <translation>現在の EQ を保持</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>既知の構成機器の応答</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2087,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>線形</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>経路のリニアゲイン（負の値 = 極性反転）</translation>
     </message>
@@ -1947,6 +2131,10 @@ Do you want to delete it anyway?</source>
       <translation>ローファイ</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>プリセットを読み込む</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>EQ をロック</translation>
@@ -1954,6 +2142,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Lock equalizer settings</source>
       <translation>イコライザー設定をロック</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>対数</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2174,16 @@ Do you want to delete it anyway?</source>
       <translation>プロファイルを管理</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>マンドリン</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>メーカー</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>最高周波数</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2202,11 @@ Do you want to delete it anyway?</source>
       <translation>スピーカー、部屋、マイクの周波数特性を測定</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>測定した全信号経路</translation>
+      <extracomment>Measured response of the complete audio signal path, not a hardware model or a correction filter.</extracomment>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>測定したリスニング位置</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2219,10 @@ Do you want to delete it anyway?</source>
       <source>Measured response</source>
       <translation>測定された応答</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>実測応答は最低 2 オクターブ重なる必要があります。</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2321,21 @@ Do you want to delete it anyway?</source>
       <translation>マイク録音でクリッピングが発生しています。マイクゲインまたはブーストを下げて、測定をやり直してください。</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>マイクの周波数応答</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>マイクの経路</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>マイクの開始がタイムアウトしました</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>最低周波数</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2356,10 @@ Do you want to delete it anyway?</source>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>WAVE形式のメタデータがないか、重複しているか、大きすぎます</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>ミックス</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2391,10 @@ Do you want to delete it anyway?</source>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>複数のWAVEデータチャンクには対応していません</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>音楽モード</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2482,14 @@ Do you want to delete it anyway?</source>
       <translation>なし — 自分の EQ を使用</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>広帯域の基準データが不足しています。</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>音符グリッド</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>数値と日付の形式</translation>
     </message>
@@ -2266,6 +2500,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>OK</source>
       <translation>OK</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>オクターブ</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2597,10 @@ Do you want to delete it anyway?</source>
       <translation>テスト再生書き込みインターフェースのオープン</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>推定応答と補正をエディターで開きます。まだ保存や適用は行いません。</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>更新フォルダーを開く</translation>
     </message>
@@ -2403,6 +2645,10 @@ Do you want to delete it anyway?</source>
       <translation>全体出力</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>パレット</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>パネル型スピーカー</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2675,10 @@ Do you want to delete it anyway?</source>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>クリッピング前のピーク: %1、クリップしたサンプル数: %2、無効なサンプル数: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>ピークホールド</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2713,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Playback</source>
       <translation>再生</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>再生モニター</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3007,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>基準との比較には音源、部屋、基準マイクの影響が含まれます。マイク単体の測定でも、認証された測定でもありません。</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>デバイスを再検出</translation>
     </message>
@@ -2924,6 +3182,10 @@ Do you want to delete it anyway?</source>
       <translation>リバーブのウェットミックス · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>推定プロファイルを確認</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>リズミカルなエコー</translation>
     </message>
@@ -3000,6 +3262,10 @@ Do you want to delete it anyway?</source>
       <translation>プリセット「%1」を保存しました。</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>スクロール速度</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>ブランド、シリーズ、モデル、測定条件を検索</translation>
     </message>
@@ -3019,6 +3285,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Select band %1</source>
       <translation>バンド %1 を選択</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>既知の構成機器の応答を 1～8 個選択してください。</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3365,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>設定</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>設定 &amp;&amp; キャリブレーション</translation>
     </message>
@@ -3128,6 +3402,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>間隔を短くするとレベル表示の更新が増え、CPU 使用量も増えます。音声データの供給により、実際の更新頻度が制限されることがあります</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>EQ 応答曲線を表示</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3597,14 @@ Do you want to delete it anyway?</source>
       <translation>スピーカーの種類</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>スペクトログラム</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>スペクトル</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ：補正ゲインは %1、Q は %2 に制限されます。%3 未満のブーストは除外されます。リスニングプリセットは別途加算されます。</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3708,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio setup saved.</source>
       <translation>Studio 設定を保存しました。</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>全経路の応答から既知の実測応答を差し引き、推定補正を確認します。</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3819,10 @@ Do you want to delete it anyway?</source>
       <translation>インポートするのは測定された周波数特性であり、反転済みの EQ ゲインではありません。機器の種類を確認してください。絶対 SPL はインポート前に正規化する必要があります。</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>これは推定の残留応答であり、認証された機器測定ではありません。部屋、マイク、衣服、配置、インターフェースによる未知の影響が残ります。公開曲線が実際の構成と一致するとは限りません。深い打ち消しや未測定の周波数を補正しないでください。</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>このプロファイルは変更されています。移動する前にカスタムコピーを保存しますか？</translation>
     </message>
@@ -3554,6 +3848,10 @@ Do you want to delete it anyway?</source>
       <source>Touring PA speaker</source>
       <translation>ツアー用PAスピーカー</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>トランジェントマーカー</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3885,10 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>チューナー</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>イコライザーをオフ</translation>
     </message>
@@ -3609,6 +3911,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Type</source>
       <translation>種類</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>ウクレレ</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3980,10 @@ Do you want to delete it anyway?</source>
       <translation>対応していない機器プロファイルのスキーマです（必要なバージョンは 2/3）。</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>未対応の機器プロファイルスキーマです（2/3/4 が必要）。</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>拡張可能WAVE形式のサブタイプに対応していません</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4013,11 @@ Do you want to delete it anyway?</source>
       <translation>対応していないスピーカープロファイルのスキーマです</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>更新</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>更新 %1 をダウンロード済みです: %2。終了し、既存のアプリに上書きインストールしてから開き直してください。</translation>
     </message>
@@ -3722,6 +4037,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>静かな部屋で使用してください。スピーカー、部屋、マイクをまとめて測定するため、結果にはマイクの周波数特性も含まれます。</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>全信号経路の測定をインポートして使用します。その経路を構成した機器の実測応答のみを選択してください。補正フィルターを差し引くことはありません。</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4134,22 @@ Do you want to delete it anyway?</source>
       <translation>もう一方の SoundCurrent アプリがインストールされているため、VB-CABLE は保持されました。他のソフトウェアで不要であれば、最後のアプリと一緒に削除してください。</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>ベクトルスコープ</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>表示</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>ビオラ</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>バイオリン</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>仮想出力にはサポートされている 48 kHz の浮動小数点チャンネル構成が必要です</translation>
     </message>
@@ -3846,6 +4181,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Warmth</source>
       <translation>温かみ</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>波形</translation>
     </message>
     <message>
       <source>Whole listening system</source>

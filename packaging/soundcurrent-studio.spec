@@ -1,6 +1,6 @@
 Name:           soundcurrent-studio
 %global debug_package %{nil}
-Version:        1.2.1
+Version:        1.3.0
 Release:        1%{?dist}
 Summary:        Adjustable desktop equalizer for PipeWire
 License:        GPL-3.0-only
@@ -57,8 +57,13 @@ DESTDIR=%{buildroot} cmake --install build
 %{_datadir}/doc/soundcurrent-studio/equipment
 %{_datadir}/doc/soundcurrent-studio/equipment-profiles.md
 %{_datadir}/doc/soundcurrent-studio/audio-buffering.md
+%{_datadir}/doc/soundcurrent-studio/analysis-and-microphone-profiles.md
+%{_datadir}/doc/soundcurrent-studio/AudioSpectrogram-LICENSE
 
 %changelog
+* Fri Nov 06 2026 rhamenator <rhamenator@gmail.com> - 1.3.0-1
+- Add inactive-tab analysis views, estimated profile review, readable scale-aware axes and startup updates
+
 * Thu Nov 05 2026 rhamenator <rhamenator@gmail.com> - 1.2.1-1
 - Restore listening presets, embed tray logo pixels, and allow DAW routes.
 

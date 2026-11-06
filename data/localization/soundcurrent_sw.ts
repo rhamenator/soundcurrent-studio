@@ -178,6 +178,18 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Chaneli 16</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>Kipengele hakiwezi kuondolewa mara mbili au kutoka chenyewe.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>Mwitikio wa mnyororo uliopimwa unahitajika; vichujio vya marekebisho haviwezi kuondolewa.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>Mwitikio wa kipengele uliopimwa unahitajika; vichujio vya marekebisho haviwezi kuondolewa.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>Saraka binafsi ya mazingira ya utekelezaji ya mtumiaji inahitajika</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Aina ndogo zote</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>Kaharabu</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>Mwangwi wa mazingira</translation>
     </message>
@@ -297,8 +313,16 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Wasifu wa amplifaya unahitaji vipimo vya umeme vyenye mzigo wa spika, ingizo na mipangilio ya toni inayojulikana. Ingiza faili ya usahihishaji iliyopimwa; mikunjo ya amplifaya haikadiriwi kutokana na maelezo ya matangazo.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>Amplitudo</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>Sasisho la programu limesakinishwa. Tumia Toka na ufungue tena ili kulipakia; kufunga dirisha hili huacha toleo la zamani likiendelea kufanya kazi.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>Kiwango cha sampuli za uchanganuzi</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Uelekezaji wa sauti kiotomatiki haupatikani</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>Wigo wa kiotomatiki</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Rekebisha sauti ya maikrofoni iliyounganishwa kiotomatiki; bofya ili kupita EQ ya maikrofoni</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>Wastani</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>Spektra ya wastani</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Bass frequency</source>
       <translation>Masafa ya besi</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>Gitaa la besi</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>Bluu</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>Nasa rejea</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>Selo</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Katikati</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>Chaneli</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Chaneli na njia za sauti</translation>
     </message>
@@ -771,6 +830,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Choose update folder…</source>
       <translation>Chagua folda ya masasisho…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>Kromatiki</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Haikuwezekana kuanzisha kilinzi cha usalama wa kiwango cha sauti ya tokeo</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>Imeshindwa kuanza ufuatiliaji wa uchezaji</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>Haikuwezekana kuanza kipimo.</translation>
     </message>
@@ -993,6 +1060,11 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Create a new correction profile.</source>
       <translation>Unda wasifu mpya wa marekebisho.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>Unda wasifu wa maikrofoni</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Futa wasifu huu maalumu uliohifadhiwa.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>Metadata za uundaji zinazidi 32 KiB.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>Metadata za uundaji zinahitaji wasifu uliokadiriwa.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Mwonekano wa maelezo</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Discard</source>
       <translation>Tupa mabadiliko</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>Kikomo cha juu cha mwonekano</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>Unyeti wa mwonekano</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Aina ya kifaa</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>Kadiria wasifu</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>Kiwango cha tokeo kinachokadiriwa karibu na bendi %1</translation>
     </message>
@@ -1326,6 +1420,27 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>Kilele cha tokeo kinachokadiriwa baada ya EQ, pamoja na gain ya baada na usawa</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>Wasifu uliokadiriwa</translation>
+      <extracomment>A derived frequency-response estimate, not a certified direct measurement. Keep the distinction from a measured response and from the editable inverse EQ correction.</extracomment>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>Muundo 4 unahitaji hali ya wasifu uliokadiriwa.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>Wasifu uliokadiriwa unahitaji metadata za uundaji.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>Wasifu uliokadiriwa unahitaji mbinu na mipaka.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>Mwitikio uliokadiriwa unazidi masafa yanayokubaliwa.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1483,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>Hamisha wasifu uliochaguliwa kwenye faili la JSON.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>Ukubwa wa FFT</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1563,25 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 · Window: %4 ms</source>
+      <translation>Fremu: %1 · FFT: %2 ms · Azimio: %3 · Dirisha: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>Gandisha mwonekano</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>Masafa</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>Masafa Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>Kipimo cha masafa</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1630,22 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>Kijivu</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>Kijani</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>Gridi</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>Gitaa</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>Vipokea sauti vya masikioni</translation>
     </message>
@@ -1525,6 +1673,18 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>Urefu wa historia</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>Ninaelewa kuwa athari zisizojulikana za chumba, maikrofoni, mavazi na uwekaji zinabaki katika makadirio haya.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>Barafu</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1818,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Toleo lililosakinishwa: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>Ala</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>Lugha ya kiolesura</translation>
     </message>
@@ -1709,6 +1873,10 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>Mipangilio ya uchanganuzi si halali. Dirisha la FFT lisizidi 250 ms na masafa yabaki ndani ya bendi ya sauti iliyonaswa.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Uelekezaji wa sauti si halali: kunasa sauti inayochezwa kunahitaji chanzo tofauti cha uchezaji</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1915,14 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Aina ndogo ya kifaa au aina ya nguvu si sahihi</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>Aina ya vifaa vinavyokadiriwa si sahihi.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>Hali ya wasifu uliokadiriwa si sahihi.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2041,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Weka EQ ya sasa</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>Miitikio inayojulikana ya vipengele</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>L</translation>
     </message>
@@ -1907,6 +2087,10 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>Mstari</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Gain ya njia ya mstari (hasi = geuza polarity)</translation>
     </message>
@@ -1947,6 +2131,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Lo-Fi</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>Pakia mpangilio awali</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>Funga EQ</translation>
@@ -1954,6 +2142,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Funga mipangilio ya kisawazishi</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>Logarithimu</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2174,16 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Dhibiti wasifu</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>Mandolini</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Mtengenezaji</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>Masafa ya juu</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2202,11 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Pima mwitikio wa spika, chumba na maikrofoni</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>Mnyororo uliopimwa</translation>
+      <extracomment>Measured response of the complete audio signal path, not a hardware model or a correction filter.</extracomment>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>Nafasi ya kusikiliza iliyopimwa</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2219,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Measured response</source>
       <translation>Mwitikio uliopimwa</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>Miitikio iliyopimwa lazima ipishane kwa angalau oktava mbili.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2321,21 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Rekodi ya maikrofoni ina clipping. Punguza gain au ongezeko la maikrofoni na urudie kipimo.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>Mwitikio wa maikrofoni</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>Njia ya maikrofoni</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>Muda wa kusubiri kuanza maikrofoni umeisha</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>Masafa ya chini</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2356,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Metadata ya umbizo la WAVE haipo, imerudiwa au ni kubwa mno</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>Mchanganyiko</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2391,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>Vizuizi vingi vya data ya WAVE havitumiki</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>Hali ya muziki</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2482,14 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Hakuna — tumia EQ yangu mwenyewe</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>Hakuna data ya rejea ya bendi pana ya kutosha.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>Gridi ya noti</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Muundo wa namba na tarehe</translation>
     </message>
@@ -2266,6 +2500,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>OK</source>
       <translation>Sawa</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>Oktava</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2597,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Kufungua kiolesura cha kuandika sauti ya majaribio</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>Fungua mwitikio uliokadiriwa na marekebisho katika kihariri. Bado hakuna kinachohifadhiwa au kutumika.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>Fungua folda ya masasisho</translation>
     </message>
@@ -2403,6 +2645,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Tokeo la jumla</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>Paleti</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>Spika ya paneli</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2675,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>Kilele kabla ya kukatwa: %1; sampuli zilizokatwa: %2; sampuli zisizo halali: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>Shikilia kilele</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2713,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Playback</source>
       <translation>Uchezaji</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>Kichunguzi cha uchezaji</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3007,10 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>Ulinganisho wa rejea unajumuisha chanzo cha sauti, chumba na maikrofoni ya rejea. Hauwakilishi kipimo cha maikrofoni pekee wala kipimo kilichothibitishwa.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Onyesha vifaa upya</translation>
     </message>
@@ -2924,6 +3182,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Mchanganyiko wa sauti ya reverb · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>Kagua wasifu uliokadiriwa</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>Mwangwi wa mdundo</translation>
     </message>
@@ -3000,6 +3262,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Mpangilio uliowekwa tayari “%1” umehifadhiwa.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>Kasi ya kusogeza</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>Tafuta chapa, familia, modeli au masharti ya kipimo</translation>
     </message>
@@ -3019,6 +3285,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Select band %1</source>
       <translation>Chagua bendi %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>Chagua mwitikio mmoja hadi minane inayojulikana ya vipengele.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3365,10 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>Mipangilio</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Mipangilio &amp;&amp; urekebishaji</translation>
     </message>
@@ -3128,6 +3402,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Vipindi vifupi husasisha viwango mara nyingi zaidi na kutumia CPU zaidi; utoaji wa sauti unaweza kupunguza kasi halisi</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>Onyesha mkunjo wa mwitikio wa EQ</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3597,14 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Aina ya spika</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>Spektrogramu</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>Spektra</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: ongezeko la marekebisho limewekewa kikomo cha %1 na Q cha %2. Nyongeza chini ya %3 huondolewa. Mpangilio wako wa kusikiliza huongezwa kando.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3708,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Studio setup saved.</source>
       <translation>Usanidi wa Studio umehifadhiwa.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>Ondoa miitikio inayojulikana iliyopimwa kutoka mwitikio wa mnyororo, kisha kagua marekebisho yaliyokadiriwa.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3819,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Hii huingiza MWITIKIO uliopimwa, si gain za EQ ambazo tayari zimegeuzwa. Thibitisha aina ya kifaa. SPL kamili inahitaji kusawazishwa kabla ya kuingizwa.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>Huu ni mwitikio baki uliokadiriwa, si kipimo cha vifaa kilichoidhinishwa. Athari zisizojulikana za chumba, maikrofoni, mavazi, uwekaji au kiolesura zinabaki. Mikunjo iliyochapishwa huenda isilingane na mfumo wako. Usirekebishe maeneo yenye ufutaji mkubwa au masafa yasiyopimwa.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>Wasifu huu umebadilishwa. Uhifadhi nakala maalumu kabla ya kuondoka?</translation>
     </message>
@@ -3554,6 +3848,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Touring PA speaker</source>
       <translation>Spika ya mfumo wa sauti kwa umma kwa ziara za maonyesho</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>Alama za mpito</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3885,10 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>Kipima sauti za ala</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Zima kisawazishi</translation>
     </message>
@@ -3609,6 +3911,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Type</source>
       <translation>Aina</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>Ukulele</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3980,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Muundo wa wasifu wa kifaa hautumiki (unatarajiwa 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>Muundo wa wasifu wa vifaa haukubaliki (2/3/4 inatarajiwa).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>Aina ndogo ya WAVE inayopanuka haitumiki</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4013,11 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Muundo wa wasifu wa spika hautumiki</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>Sasisha</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>Sasisho %1 limepakuliwa: %2. Toka, sakinisha juu ya programu iliyopo, kisha ufungue tena.</translation>
     </message>
@@ -3722,6 +4037,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>Tumia chumba tulivu. Hupima spika, chumba na maikrofoni pamoja; matokeo yanajumuisha mwitikio wa maikrofoni.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>Tumia kipimo kilichoingizwa cha mnyororo mzima. Chagua tu miitikio iliyopimwa ya vipengele vya mnyororo huo. Vichujio vya marekebisho haviondolewi kamwe.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4134,22 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>VB-CABLE imehifadhiwa kwa sababu programu nyingine ya SoundCurrent imesakinishwa. Iondoe pamoja na programu ya mwisho ikiwa hakuna programu nyingine inayoihitaji.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>Kionyeshi cha vekta</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Mwonekano</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>Viola</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>Violino</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>Tokeo pepe linahitaji mpangilio unaotumika wa chaneli za 48 kHz katika muundo wa namba zenye nukta inayoelea</translation>
     </message>
@@ -3846,6 +4181,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Warmth</source>
       <translation>Joto la sauti</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>Umbo la wimbi</translation>
     </message>
     <message>
       <source>Whole listening system</source>

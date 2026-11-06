@@ -178,6 +178,18 @@ Haluatko silti poistaa sen?</translation>
       <translation>16 kanavaa</translation>
     </message>
     <message>
+      <source>A component cannot be subtracted twice or from itself.</source>
+      <translation>Komponenttia ei voi vähentää kahdesti tai itsestään.</translation>
+    </message>
+    <message>
+      <source>A measured chain response is required; correction filters cannot be subtracted.</source>
+      <translation>Mitattu ketjuvaste vaaditaan; korjaussuodattimia ei voi vähentää.</translation>
+    </message>
+    <message>
+      <source>A measured component response is required; correction filters cannot be subtracted.</source>
+      <translation>Mitattu komponenttivaste vaaditaan; korjaussuodattimia ei voi vähentää.</translation>
+    </message>
+    <message>
       <source>A private user runtime directory is required</source>
       <translation>Tarvitaan käyttäjän yksityinen ajonaikainen hakemisto</translation>
       <extracomment>Production startup failure reported to stderr; process exits with code 1. Instance lock means a per-user single-application process lock, not an audio control lock. Activation socket enables a second launch to show the existing window. %1 is the unchanged product name, %2 is opaque Qt/system diagnostic text. Do not imply the app is safe to run twice or remove a lock.</extracomment>
@@ -261,6 +273,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Kaikki alatyypit</translation>
     </message>
     <message>
+      <source>Amber</source>
+      <translation>Meripihka</translation>
+    </message>
+    <message>
       <source>Ambience</source>
       <translation>Tilavaikutelma</translation>
     </message>
@@ -297,8 +313,16 @@ Haluatko silti poistaa sen?</translation>
       <translation>Vahvistinprofiilit edellyttävät sähköisiä mittauksia tunnetulla kaiutinkuormalla, tulolla ja äänensävyn asetuksilla. Tuo mitattu korjaustiedosto; vahvistimen vastekäyriä ei päätellä markkinointitiedoista.</translation>
     </message>
     <message>
+      <source>Amplitude</source>
+      <translation>Amplitudi</translation>
+    </message>
+    <message>
       <source>An application update was installed. Use Quit and reopen to load it; closing this window keeps the old version running.</source>
       <translation>Sovelluspäivitys on asennettu. Ota se käyttöön valitsemalla Lopeta ja avaamalla sovellus uudelleen; tämän ikkunan sulkeminen jättää vanhan version käyntiin.</translation>
+    </message>
+    <message>
+      <source>Analysis sample rate</source>
+      <translation>Analyysin näytteenottotaajuus</translation>
     </message>
     <message>
       <source>Another SoundCurrent Studio sink is already running</source>
@@ -449,8 +473,21 @@ Haluatko silti poistaa sen?</translation>
       <translation>Automaattinen äänen reititys ei ole käytettävissä</translation>
     </message>
     <message>
+      <source>Automatic range</source>
+      <translation>Automaattinen alue</translation>
+    </message>
+    <message>
       <source>Automatically shape a connected microphone; click to bypass the microphone EQ</source>
       <translation>Muokkaa liitetyn mikrofonin ääntä automaattisesti; ohita mikrofonin taajuuskorjaus napsauttamalla</translation>
+    </message>
+    <message>
+      <source>Average</source>
+      <translation>Keskiarvo</translation>
+    </message>
+    <message>
+      <source>Averaged spectrum</source>
+      <translation>Keskiarvoistettu spektri</translation>
+      <extracomment>A time-smoothed digital frequency spectrum, not a measured room response.</extracomment>
     </message>
     <message>
       <source>Back</source>
@@ -494,6 +531,15 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Bass frequency</source>
       <translation>Bassotaajuus</translation>
+    </message>
+    <message>
+      <source>Bass guitar</source>
+      <translation>Bassokitara</translation>
+      <extracomment>Instrument tuner preset for standard bass-guitar strings.</extracomment>
+    </message>
+    <message>
+      <source>Blue</source>
+      <translation>Sininen</translation>
     </message>
     <message>
       <source>Bookshelf speaker</source>
@@ -668,6 +714,15 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Debug calibration counts: %1 captured audio bytes, %2 background-noise audio bytes. Counts are byte lengths, not loudness, frequency or monetary amounts.</extracomment>
     </message>
     <message>
+      <source>Capture reference</source>
+      <translation>Tallenna vertailu</translation>
+      <extracomment>Snapshot the accumulated spectrum as a reference and reset the running average for the comparison measurement.</extracomment>
+    </message>
+    <message>
+      <source>Cello</source>
+      <translation>Sello</translation>
+    </message>
+    <message>
       <source>Center</source>
       <translation>Keskellä</translation>
       <extracomment>Generated audio channel display name only, backed by explicit saved role provenance. Direction is the loudspeaker/channel position from the listener perspective. Center is the center audio channel, not a UI alignment or political meaning. Mono is single-channel audio. Generic channel placeholder is a regional one-based index. Never translate arbitrary saved/custom names.</extracomment>
@@ -734,6 +789,10 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
     </message>
     <message>
+      <source>Channels</source>
+      <translation>Kanavat</translation>
+    </message>
+    <message>
       <source>Channels and routing</source>
       <translation>Kanavat ja reititys</translation>
     </message>
@@ -771,6 +830,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Choose update folder…</source>
       <translation>Valitse päivityskansio…</translation>
+    </message>
+    <message>
+      <source>Chromatic</source>
+      <translation>Kromaattinen</translation>
     </message>
     <message>
       <source>Chunk extends beyond RIFF bounds</source>
@@ -952,6 +1015,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Lähtövoimakkuuden turvavalvontaa ei voitu käynnistää</translation>
     </message>
     <message>
+      <source>Could not start playback monitoring</source>
+      <translation>Toiston valvontaa ei voitu käynnistää</translation>
+    </message>
+    <message>
       <source>Could not start the measurement.</source>
       <translation>Mittausta ei voitu aloittaa.</translation>
     </message>
@@ -993,6 +1060,11 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Create a new correction profile.</source>
       <translation>Luo uusi korjausprofiili.</translation>
+    </message>
+    <message>
+      <source>Create microphone profile</source>
+      <translation>Luo mikrofoniprofiili</translation>
+      <extracomment>Propose relative correction filters for review in the profile editor. Saving does not apply them automatically.</extracomment>
     </message>
     <message>
       <source>Create new folder</source>
@@ -1076,6 +1148,14 @@ Haluatko silti poistaa sen?</translation>
       <translation>Poista tämä tallennettu mukautettu profiili.</translation>
     </message>
     <message>
+      <source>Derivation metadata exceeds 32 KiB.</source>
+      <translation>Johtamisen metatiedot ylittävät 32 KiB.</translation>
+    </message>
+    <message>
+      <source>Derivation metadata requires an estimated profile.</source>
+      <translation>Johtamisen metatiedot edellyttävät arvioitua profiilia.</translation>
+    </message>
+    <message>
       <source>Detail view</source>
       <translation>Yksityiskohtainen näkymä</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
@@ -1093,6 +1173,16 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Discard</source>
       <translation>Hylkää</translation>
+    </message>
+    <message>
+      <source>Display ceiling</source>
+      <translation>Näytön yläraja</translation>
+      <extracomment>Upper vertical-axis limit in dBFS. Changes visualization only; never a limiter or audio gain.</extracomment>
+    </message>
+    <message>
+      <source>Display sensitivity</source>
+      <translation>Näytön herkkyys</translation>
+      <extracomment>Displayed dynamic range in dB. Does not change hardware microphone gain.</extracomment>
     </message>
     <message>
       <source>Drag curve points or tune the selected band below.</source>
@@ -1288,6 +1378,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Laitetyyppi</translation>
     </message>
     <message>
+      <source>Estimate profile</source>
+      <translation>Arvioi profiili</translation>
+    </message>
+    <message>
       <source>Estimated output level near band %1</source>
       <translation>Arvioitu lähtötaso kaistan %1 lähellä</translation>
     </message>
@@ -1326,6 +1420,27 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Estimated post-EQ output peak, including post gain and balance</source>
       <translation>Arvioitu lähtöhuippu taajuuskorjauksen jälkeen, mukaan lukien jälkivahvistus ja tasapaino</translation>
+    </message>
+    <message>
+      <source>Estimated profile</source>
+      <translation>Arvioitu profiili</translation>
+      <extracomment>A derived frequency-response estimate, not a certified direct measurement. Keep the distinction from a measured response and from the editable inverse EQ correction.</extracomment>
+    </message>
+    <message>
+      <source>Estimated profile status is required for schema 4.</source>
+      <translation>Skeema 4 edellyttää arvioidun profiilin tilaa.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require derivation metadata.</source>
+      <translation>Arvioidut profiilit edellyttävät johtamisen metatietoja.</translation>
+    </message>
+    <message>
+      <source>Estimated profiles require method and limitations.</source>
+      <translation>Arvioidut profiilit edellyttävät menetelmää ja rajoituksia.</translation>
+    </message>
+    <message>
+      <source>Estimated response exceeds the supported range.</source>
+      <translation>Arvioitu vaste ylittää tuetun alueen.</translation>
     </message>
     <message>
       <source>Excessive number of RIFF chunks</source>
@@ -1368,6 +1483,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Export the selected profile to a JSON file.</source>
       <translation>Vie valittu profiili JSON-tiedostoon.</translation>
+    </message>
+    <message>
+      <source>FFT size</source>
+      <translation>FFT-koko</translation>
     </message>
     <message>
       <source>FPS Footsteps</source>
@@ -1444,12 +1563,25 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Frames: %1 · FFT: %2 ms · Resolution: %3 · Window: %4 ms</source>
+      <translation>Kehykset: %1 · FFT: %2 ms · Erottelukyky: %3 · Ikkuna: %4 ms</translation>
+    </message>
+    <message>
+      <source>Freeze display</source>
+      <translation>Pysäytä näyttö</translation>
+      <extracomment>Hold the current analyzer picture; capture can continue, but visualization FFT work stops.</extracomment>
+    </message>
+    <message>
       <source>Frequency</source>
       <translation>Taajuus</translation>
     </message>
     <message>
       <source>Frequency Hz</source>
       <translation>Taajuus Hz</translation>
+    </message>
+    <message>
+      <source>Frequency scale</source>
+      <translation>Taajuusasteikko</translation>
     </message>
     <message>
       <source>Front L/R enhancements (mono supported); other channels keep their own Studio effects. Zero amounts bypass each enhancement.</source>
@@ -1498,6 +1630,22 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Gray</source>
+      <translation>Harmaa</translation>
+    </message>
+    <message>
+      <source>Green</source>
+      <translation>Vihreä</translation>
+    </message>
+    <message>
+      <source>Grid</source>
+      <translation>Ruudukko</translation>
+    </message>
+    <message>
+      <source>Guitar</source>
+      <translation>Kitara</translation>
+    </message>
+    <message>
       <source>Headphones</source>
       <translation>Kuulokkeet</translation>
     </message>
@@ -1525,6 +1673,18 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Hip-Hop</source>
       <translation>Hip-Hop</translation>
+    </message>
+    <message>
+      <source>History length</source>
+      <translation>Historian pituus</translation>
+    </message>
+    <message>
+      <source>I understand that unknown room, microphone, clothing and placement effects remain in this estimate.</source>
+      <translation>Ymmärrän, että huoneen, mikrofonin, vaatteiden ja sijoittelun tuntemattomat vaikutukset jäävät arvioon.</translation>
+    </message>
+    <message>
+      <source>Ice</source>
+      <translation>Jää</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -1658,6 +1818,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Asennettu versio: %1</translation>
     </message>
     <message>
+      <source>Instrument</source>
+      <translation>Soitin</translation>
+    </message>
+    <message>
       <source>Interface language</source>
       <translation>Käyttöliittymän kieli</translation>
     </message>
@@ -1709,6 +1873,10 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Owned WaveReader buffer validation: destination sample count is not a multiple of file channel count. Not a playback device buffer or memory allocation failure. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth.</source>
+      <translation>Virheelliset analyysiasetukset. FFT-ikkuna saa olla enintään 250 ms, ja taajuuksien on oltava tallennetun äänikaistan sisällä.</translation>
+    </message>
+    <message>
       <source>Invalid audio route: loopback requires a separate render source</source>
       <translation>Virheellinen äänireititys: loopback-kaappaus vaatii erillisen toistolähteen</translation>
       <extracomment>Owned Windows routing diagnostic displayed at the desktop boundary. Loopback captures a render source; it must not capture the processed destination, which would feed audio back into itself. No change to routing IDs or backend strings. Contextual AI translation only; native review unverified.</extracomment>
@@ -1747,6 +1915,14 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Invalid equipment subtype or power type</source>
       <translation>Virheellinen laitteen alatyyppi tai aktiivinen/passiivinen-tyyppi</translation>
+    </message>
+    <message>
+      <source>Invalid estimated equipment kind.</source>
+      <translation>Virheellinen arvioidun laitteen tyyppi.</translation>
+    </message>
+    <message>
+      <source>Invalid estimated profile status.</source>
+      <translation>Virheellinen arvioidun profiilin tila.</translation>
     </message>
     <message>
       <source>Invalid filter type</source>
@@ -1865,6 +2041,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Säilytä nykyinen taajuuskorjaus</translation>
     </message>
     <message>
+      <source>Known component responses</source>
+      <translation>Tunnetut komponenttivasteet</translation>
+    </message>
+    <message>
       <source>L</source>
       <translation>V</translation>
     </message>
@@ -1907,6 +2087,10 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Audio peak-level limiter enable, independent of compression/expansion. In Studio it links all output channels after output gain. Not a speed/rate limiter. Native review unverified.</extracomment>
     </message>
     <message>
+      <source>Linear</source>
+      <translation>Lineaarinen</translation>
+    </message>
+    <message>
       <source>Linear route gain (negative = invert)</source>
       <translation>Reitin lineaarinen vahvistus (negatiivinen = käännä napaisuus)</translation>
     </message>
@@ -1947,6 +2131,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Lo-Fi</translation>
     </message>
     <message>
+      <source>Load preset</source>
+      <translation>Lataa esiasetus</translation>
+    </message>
+    <message>
       <source>Lock EQ</source>
       <extracomment>Prevent accidental editing of EQ controls; not encryption or a security lock.</extracomment>
       <translation>Lukitse taajuuskorjain</translation>
@@ -1954,6 +2142,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Lock equalizer settings</source>
       <translation>Lukitse taajuuskorjaimen asetukset</translation>
+    </message>
+    <message>
+      <source>Logarithmic</source>
+      <translation>Logaritminen</translation>
     </message>
     <message>
       <source>Look in:</source>
@@ -1982,8 +2174,16 @@ Haluatko silti poistaa sen?</translation>
       <translation>Hallitse profiileja</translation>
     </message>
     <message>
+      <source>Mandolin</source>
+      <translation>Mandoliini</translation>
+    </message>
+    <message>
       <source>Manufacturer</source>
       <translation>Valmistaja</translation>
+    </message>
+    <message>
+      <source>Maximum frequency</source>
+      <translation>Enimmäistaajuus</translation>
     </message>
     <message>
       <source>Maximum of 32 amplifier profiles reached.</source>
@@ -2002,6 +2202,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Mittaa kaiuttimen, huoneen ja mikrofonin taajuusvaste</translation>
     </message>
     <message>
+      <source>Measured chain</source>
+      <translation>Mitattu ketju</translation>
+      <extracomment>Measured response of the complete audio signal path, not a hardware model or a correction filter.</extracomment>
+    </message>
+    <message>
       <source>Measured listening position</source>
       <translation>Mitattu kuuntelupaikka</translation>
       <extracomment>New editable calibration profile model caption: location where the user listens and microphone measured. Not a microphone model.</extracomment>
@@ -2014,6 +2219,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Measured response</source>
       <translation>Mitattu vaste</translation>
       <extracomment>Editable family default for imported relative frequency-response measurements; not the already-inverted correction EQ.</extracomment>
+    </message>
+    <message>
+      <source>Measured responses must overlap by at least two octaves.</source>
+      <translation>Mitattujen vasteiden on oltava päällekkäisiä vähintään kaksi oktaavia.</translation>
     </message>
     <message>
       <source>Measurement conditions are required.</source>
@@ -2112,12 +2321,21 @@ Haluatko silti poistaa sen?</translation>
       <translation>Mikrofonitallennus leikkautuu. Pienennä mikrofonivahvistusta tai korostusta ja toista mittaus.</translation>
     </message>
     <message>
+      <source>Microphone response</source>
+      <translation>Mikrofonin vaste</translation>
+      <extracomment>A relative spectrum comparison against a captured reference. Includes source and room; not certified isolated microphone calibration.</extracomment>
+    </message>
+    <message>
       <source>Microphone route</source>
       <translation>Mikrofonireitti</translation>
     </message>
     <message>
       <source>Microphone start timed out</source>
       <translation>Mikrofonin käynnistys aikakatkaistiin</translation>
+    </message>
+    <message>
+      <source>Minimum frequency</source>
+      <translation>Vähimmäistaajuus</translation>
     </message>
     <message>
       <source>Missing RIFF padding byte</source>
@@ -2138,6 +2356,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Missing, duplicate or oversized WAVE format</source>
       <translation>Puuttuvat, päällekkäiset tai liian suuret WAVE-muototiedot</translation>
       <extracomment>Owned WaveReader fmt-chunk validation: no duplicate format chunk and payload size must be 16..4096 bytes. Format means binary metadata, not file extension or project type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Mix</source>
+      <translation>Miksaus</translation>
     </message>
     <message>
       <source>Mixer</source>
@@ -2169,6 +2391,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Multiple WAVE data chunks are unsupported</source>
       <translation>Useita WAVE-datalohkoja ei tueta</translation>
       <extracomment>Owned WaveReader support limitation: a second binary data chunk was encountered. Not multichannel audio, multiple tracks or multiple selected files. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
+    </message>
+    <message>
+      <source>Music mode</source>
+      <translation>Musiikkitila</translation>
     </message>
     <message>
       <source>Mute</source>
@@ -2256,6 +2482,14 @@ Haluatko silti poistaa sen?</translation>
       <translation>Ei mitään — käytä omaa taajuuskorjausta</translation>
     </message>
     <message>
+      <source>Not enough broadband reference data.</source>
+      <translation>Laajakaistaista vertailudataa ei ole riittävästi.</translation>
+    </message>
+    <message>
+      <source>Note grid</source>
+      <translation>Nuottiruudukko</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Lukujen ja päivämäärien muoto</translation>
     </message>
@@ -2266,6 +2500,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>OK</source>
       <translation>OK</translation>
+    </message>
+    <message>
+      <source>Octave</source>
+      <translation>Oktaavi</translation>
     </message>
     <message>
       <source>Offline WAVE rendering</source>
@@ -2359,6 +2597,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Testitoiston kirjoitusrajapinnan avaaminen</translation>
     </message>
     <message>
+      <source>Open the estimated response and correction in the editor. Nothing is saved or applied yet.</source>
+      <translation>Avaa arvioitu vaste ja korjaus editorissa. Mitään ei vielä tallenneta tai oteta käyttöön.</translation>
+    </message>
+    <message>
       <source>Open update folder</source>
       <translation>Avaa päivityskansio</translation>
     </message>
@@ -2403,6 +2645,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Kokonaislähtö</translation>
     </message>
     <message>
+      <source>Palette</source>
+      <translation>Väripaletti</translation>
+    </message>
+    <message>
       <source>Panel speaker</source>
       <translation>Paneelikaiutin</translation>
       <extracomment>Panel-format speaker category, including planar/electrostatic models; not an application UI panel.</extracomment>
@@ -2429,6 +2675,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Peak before clipping: %1; clipped samples: %2; invalid samples: %3</source>
       <extracomment>Successful standalone render statistics. %1 linear absolute peak before hard clipping (not dB); %2 individual clipped samples across channels; %3 invalid/nonfinite input or processing samples. Numbers and processing stay unchanged; labels may avoid plural inflection.</extracomment>
       <translation>Huippu ennen leikkautumista: %1; leikkautuneet näytteet: %2; virheelliset näytteet: %3</translation>
+    </message>
+    <message>
+      <source>Peak hold</source>
+      <translation>Huipun pito</translation>
     </message>
     <message>
       <source>Peak markers</source>
@@ -2463,6 +2713,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Playback</source>
       <translation>Toisto</translation>
+    </message>
+    <message>
+      <source>Playback monitor</source>
+      <translation>Toiston tarkkailu</translation>
     </message>
     <message>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
@@ -2753,6 +3007,10 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Reapply the last undone text edit; does not reset the audio profile.</extracomment>
     </message>
     <message>
+      <source>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</source>
+      <translation>Vertailut sisältävät äänilähteen, huoneen ja vertailumikrofonin vaikutukset. Ne eivät ole erillinen tai sertifioitu mikrofonimittaus.</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Päivitä laitteet</translation>
     </message>
@@ -2924,6 +3182,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Kaikuntaefektin osuus · %1%</translation>
     </message>
     <message>
+      <source>Review estimated profile</source>
+      <translation>Tarkista arvioitu profiili</translation>
+    </message>
+    <message>
       <source>Rhythmic echo</source>
       <translation>Rytminen kaiku</translation>
     </message>
@@ -3000,6 +3262,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Esiasetus ”%1” tallennettiin.</translation>
     </message>
     <message>
+      <source>Scroll speed</source>
+      <translation>Vieritysnopeus</translation>
+    </message>
+    <message>
       <source>Search brand, family, model or measurement conditions</source>
       <translation>Hae tuotemerkkiä, tuoteperhettä, mallia tai mittausolosuhteita</translation>
     </message>
@@ -3019,6 +3285,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Select band %1</source>
       <translation>Valitse kaista %1</translation>
+    </message>
+    <message>
+      <source>Select between one and eight known component responses.</source>
+      <translation>Valitse yhdestä kahdeksaan tunnettua komponenttivastetta.</translation>
     </message>
     <message>
       <source>Select this band to edit frequency, gain, and Q</source>
@@ -3095,6 +3365,10 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Native driver setup progress. %1 is stable SoundCurrent Audio name; shared means EQ and Studio share driver ownership, not network sharing. Not completion.</extracomment>
     </message>
     <message>
+      <source>Settings</source>
+      <translation>Asetukset</translation>
+    </message>
+    <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Asetukset &amp;&amp; kalibrointi</translation>
     </message>
@@ -3128,6 +3402,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Shorter intervals update levels more often and use more CPU; audio delivery may limit the actual rate</source>
       <translation>Lyhyemmät välit päivittävät tasoja useammin ja käyttävät enemmän CPU:ta; äänen toimitus voi rajoittaa todellista päivitysnopeutta</translation>
+    </message>
+    <message>
+      <source>Show EQ response graph</source>
+      <translation>Näytä EQ:n vastekäyrä</translation>
     </message>
     <message>
       <source>Show a falling peak hold line on each frequency level</source>
@@ -3319,6 +3597,14 @@ Haluatko silti poistaa sen?</translation>
       <translation>Kaiutintyyppi</translation>
     </message>
     <message>
+      <source>Spectrogram</source>
+      <translation>Spektrogrammi</translation>
+    </message>
+    <message>
+      <source>Spectrum</source>
+      <translation>Spektri</translation>
+    </message>
+    <message>
       <source>Spinorama AutoEQ: correction gain is limited to %1 and Q to %2. Boosts below %3 are omitted. Your listening preset is added separately.</source>
       <translation>Spinorama AutoEQ: korjauksen vahvistus rajataan arvoon %1 ja Q arvoon %2. Taajuuden %3 alapuoliset korostukset jätetään pois. Kuunteluesiasetuksesi lisätään erikseen.</translation>
       <extracomment>Speaker correction safety policy. %1 is the signed gain limit including dB, %2 is the dimensionless Q limit, %3 is the minimum boost frequency including Hz. Listening preset EQ is summed separately and can exceed these correction-only bounds. Spinorama AutoEQ is a name.</extracomment>
@@ -3422,6 +3708,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Studio setup saved.</source>
       <translation>Studio-kokoonpano tallennettiin.</translation>
+    </message>
+    <message>
+      <source>Subtract known measured responses from a measured chain response, then review the estimated correction.</source>
+      <translation>Vähennä tunnetut mitatut vasteet ketjun vasteesta ja tarkista arvioitu korjaus.</translation>
     </message>
     <message>
       <source>Suggested EQ applied. Use Save preset to keep it.</source>
@@ -3529,6 +3819,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Tämä tuo mitatun TAAJUUSVASTEEN, ei valmiiksi käännettyjä taajuuskorjausvahvistuksia. Vahvista laitetyyppi. Absoluuttinen äänenpainetaso on normalisoitava ennen tuontia.</translation>
     </message>
     <message>
+      <source>This is an estimated residual, not a certified equipment measurement. Any unknown room, microphone, clothing, placement or interface response remains included. Published curves may not match your setup. Do not correct deep nulls or unmeasured frequencies.</source>
+      <translation>Tämä on arvioitu jäännösvaste, ei sertifioitu laitemittaus. Huoneen, mikrofonin, vaatteiden, sijoittelun ja ääniliitännän tuntemattomat vaikutukset jäävät mukaan. Julkaistut käyrät eivät ehkä vastaa laitteistoasi. Älä korjaa syviä kumoutumia tai mittaamattomia taajuuksia.</translation>
+    </message>
+    <message>
       <source>This profile has changed. Save a custom copy before leaving?</source>
       <translation>Tätä profiilia on muutettu. Tallennetaanko oma kopio ennen poistumista?</translation>
     </message>
@@ -3554,6 +3848,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Touring PA speaker</source>
       <translation>Kiertueiden PA-kaiutin</translation>
       <extracomment>Professional sound-reinforcement speaker for touring/live events, distinct from portable PA.</extracomment>
+    </message>
+    <message>
+      <source>Transient markers</source>
+      <translation>Transienttimerkit</translation>
     </message>
     <message>
       <source>Translation coverage: %1 of %2 messages. Missing translations use English. Language packs are unverified and await native-speaker review. Use Quit and reopen to apply changes.</source>
@@ -3587,6 +3885,10 @@ Haluatko silti poistaa sen?</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE header validation: extension structure lacks declared fields or length. Extensible is the format variant, not ability to lengthen music. Preserve WAVE identifier. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
+      <source>Tuner</source>
+      <translation>Viritin</translation>
+    </message>
+    <message>
       <source>Turn equalizer off</source>
       <translation>Poista taajuuskorjain käytöstä</translation>
     </message>
@@ -3609,6 +3911,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Type</source>
       <translation>Tyyppi</translation>
+    </message>
+    <message>
+      <source>Ukulele</source>
+      <translation>Ukulele</translation>
     </message>
     <message>
       <source>Unclassified equipment</source>
@@ -3674,6 +3980,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Laiteprofiilin skeemaa ei tueta (odotettu: 2/3).</translation>
     </message>
     <message>
+      <source>Unsupported equipment profile schema (expected 2/3/4).</source>
+      <translation>Laitteen profiiliskeemaa ei tueta (odotettu 2/3/4).</translation>
+    </message>
+    <message>
       <source>Unsupported extensible WAVE subtype</source>
       <translation>Laajennettavan WAVE-muodon alatyyppiä ei tueta</translation>
       <extracomment>Owned WAVE_FORMAT_EXTENSIBLE subtype identifier validation: GUID tail is unsupported. Not a physical speaker model or plugin type. Preserve WAVE. Contextual AI review; native verification unverified.</extracomment>
@@ -3703,6 +4013,11 @@ Haluatko silti poistaa sen?</translation>
       <translation>Kaiutinprofiilin skeemaa ei tueta</translation>
     </message>
     <message>
+      <source>Update</source>
+      <translation>Päivitä</translation>
+      <extracomment>Button opening the official software-release downloads. Does not refresh audio data or install automatically.</extracomment>
+    </message>
+    <message>
       <source>Update %1 is downloaded: %2. Quit, install over the existing app, then reopen.</source>
       <translation>Päivitys %1 on ladattu: %2. Lopeta, asenna nykyisen sovelluksen päälle ja avaa uudelleen.</translation>
     </message>
@@ -3722,6 +4037,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Use a quiet room. Measures speakers, room, and microphone together; results include the mic response.</source>
       <translation>Käytä hiljaista huonetta. Mittaa kaiuttimet, huoneen ja mikrofonin yhdessä; tulokset sisältävät mikrofonin taajuusvasteen.</translation>
+    </message>
+    <message>
+      <source>Use an imported measurement of the complete chain. Select only measured component responses that were part of that chain. Correction EQ filters are never subtracted.</source>
+      <translation>Käytä koko ketjun tuotua mittausta. Valitse vain ketjun komponenttien mitatut vasteet. Korjaussuodattimia ei koskaan vähennetä.</translation>
     </message>
     <message>
       <source>Use system language</source>
@@ -3815,6 +4134,22 @@ Haluatko silti poistaa sen?</translation>
       <translation>VB-CABLE säilytettiin, koska toinen SoundCurrent-sovellus on asennettu. Poista se viimeisen sovelluksen kanssa, jos muut ohjelmistot eivät tarvitse sitä.</translation>
     </message>
     <message>
+      <source>Vectorscope</source>
+      <translation>Vektoriskooppi</translation>
+    </message>
+    <message>
+      <source>View</source>
+      <translation>Näkymä</translation>
+    </message>
+    <message>
+      <source>Viola</source>
+      <translation>Alttoviulu</translation>
+    </message>
+    <message>
+      <source>Violin</source>
+      <translation>Viulu</translation>
+    </message>
+    <message>
       <source>Virtual output requires a supported 48 kHz float channel layout</source>
       <translation>Virtuaalilähtö vaatii tuetun 48 kHz:n kanava-asettelun liukulukumuodossa</translation>
     </message>
@@ -3846,6 +4181,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Warmth</source>
       <translation>Lämpö</translation>
+    </message>
+    <message>
+      <source>Waveform</source>
+      <translation>Aaltomuoto</translation>
     </message>
     <message>
       <source>Whole listening system</source>
