@@ -1,5 +1,17 @@
 # SoundCurrent virtual audio driver development
 
+## Current instructions (November 7, 2026)
+
+Native playback, microphone feed/capture and Studio digital integration have
+now been built and tested; the older development notes below are historical.
+Start with the [developer reproduction guide](../../../docs/native-windows-driver-reproduction.md)
+and [end-user setup/rollback guide](../../../docs/native-windows-driver-user-guide.md).
+`reproduce-build.ps1` builds pinned unsigned inputs with one worker;
+`test-sign-package.ps1` signs copied test inputs without changing Windows trust;
+`manage-driver.ps1` wraps the existing shared-owner, trust-checking manager for
+setup/rollback. No production-signed native release is claimed. See PR #13 for
+the complete frozen passing bundle and current machine state.
+
 The independently built kernel driver dependency lives in `vendor/` and is
 licensed under MS-PL, including derivatives. The surrounding SoundCurrent apps
 remain GPL-3.0-only. Driver source is not linked into the application binaries.
