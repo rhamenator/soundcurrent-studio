@@ -34,8 +34,10 @@ int main(int argc,char** argv){
  QCoreApplication app(argc,argv);
  const bool read=app.arguments().size()==3&&app.arguments()[1]=="--read-volume";
  const bool set=app.arguments().size()==5&&app.arguments()[1]=="--set-volume";
- const bool hold=app.arguments().size()==5&&app.arguments()[1]=="--hold-volume";
- if(!hold&&!read&&!set&&(app.arguments().size()!=2||app.arguments()[1]!="--run")){
+ const bool native=app.arguments().size()==2&&app.arguments()[1]=="--run-native";
+ const bool nativeHold=app.arguments().size()==5&&app.arguments()[1]=="--hold-native-volume";
+ const bool hold=nativeHold||(app.arguments().size()==5&&app.arguments()[1]=="--hold-volume");
+ if(!hold&&!read&&!set&&!native&&(app.arguments().size()!=2||app.arguments()[1]!="--run")){
   std::cout<<"Use --run only on an independent Windows clone; changes guest routes/volume.\n";return 0;
  }
  HRESULT initialized=CoInitializeEx(nullptr,COINIT_MULTITHREADED);
@@ -58,7 +60,7 @@ int main(int argc,char** argv){
    {
     soundcurrent::ManagedWindowsRoute route(false,app.arguments()[2].toStdWString(),app.arguments()[4].toStdWString(),true);
     soundcurrent::WindowsBridge bridge;
-    require(bridge.start(app.arguments()[3].toStdWString(),app.arguments()[4].toStdWString(),false,false),"Child bridge did not initialize");
+    require(bridge.start(app.arguments()[3].toStdWString(),app.arguments()[4].toStdWString(),false,nativeHold),"Child bridge did not initialize");
     std::cout<<"ready"<<std::endl;
     while(std::getchar()!=EOF){}
    }
@@ -67,18 +69,19 @@ int main(int argc,char** argv){
   {
   std::wstring render,capture,physical;
   for(auto& d:soundcurrent::windowsAudioEndpoints(false)){
-   if(d.name.find(L"CABLE Input")!=std::wstring::npos&&render.empty())render=d.id;
-   if(!d.virtualCable&&physical.empty())physical=d.id;
+   if((native?d.soundCurrent:d.name.find(L"CABLE Input")!=std::wstring::npos)&&render.empty())render=d.id;
+   if(!d.virtualCable&&d.id==soundcurrent::windowsDefaultOutputId())physical=d.id;
   }
   for(auto& d:soundcurrent::windowsAudioEndpoints(true))
    if(d.name.find(L"CABLE Output")!=std::wstring::npos&&capture.empty())capture=d.id;
+  if(native)capture=render;
   require(!render.empty()&&!capture.empty()&&!physical.empty(),"Need existing cable and physical fixture endpoints");
   Volume speakers(physical),source(render);
   speakers.set(0.71f,FALSE);source.set(0.35f,TRUE);
   auto route=std::make_unique<soundcurrent::ManagedWindowsRoute>(false,render,physical,true);
   source.expect(0.71f,FALSE);
   soundcurrent::WindowsBridge bridge;
-  require(bridge.start(capture,physical,false,false),"Bridge did not initialize");
+  require(bridge.start(capture,physical,false,native),"Bridge did not initialize");
   speakers.expect(1.0f,FALSE);
   // Change system volume/mute on the owned endpoint while the bridge is active.
   source.set(0.53f,TRUE);
@@ -93,7 +96,7 @@ int main(int argc,char** argv){
   } cleanup{render,physical,expected};
   speakers.set(0.71f,FALSE);source.set(0.35f,TRUE);
   QProcess child;
-  child.start(QCoreApplication::applicationFilePath(),{"--hold-volume",QString::fromStdWString(render),QString::fromStdWString(capture),QString::fromStdWString(physical)});
+  child.start(QCoreApplication::applicationFilePath(),{native?"--hold-native-volume":"--hold-volume",QString::fromStdWString(render),QString::fromStdWString(capture),QString::fromStdWString(physical)});
   require(child.waitForStarted(5000)&&child.waitForReadyRead(10000)&&child.readAllStandardOutput().trimmed()=="ready","Volume owner handshake failed");
   source.expect(0.71f,FALSE);speakers.expect(1.0f,FALSE);
   source.set(0.42f,FALSE);
@@ -112,7 +115,7 @@ int main(int argc,char** argv){
    speakers.set(0.71f,TRUE);source.set(0.35f,FALSE);
    bool stopped=false;
    auto guarded=std::make_unique<soundcurrent::ManagedWindowsRoute>(false,render,physical,true,[&]{bridge.stop();stopped=true;});
-   require(bridge.start(capture,physical,false,false),"Guardian-fault bridge did not initialize");
+   require(bridge.start(capture,physical,false,native),"Guardian-fault bridge did not initialize");
    speakers.expect(1.0f,FALSE);
    source.set(desired.first,desired.second);
    HANDLE snapshot=CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS,0);
