@@ -1,5 +1,38 @@
 # Native Windows transport and Studio integration — November 7, 2026
 
+## Follow-up: installed for normal use
+
+At the user's request, the exact tested Studio executable and route guardian
+were installed into the existing per-user installation. SHA-256 values match
+the previously recorded tested binaries. Matching Qt 6.5.3/MinGW libraries and
+plugins were deployed together; loaded-module inspection confirms the running
+app loads Qt from its installation directory. The cable setup helper was built
+with the matching toolchain. A packaged UI self-test and all six integration
+invocations passed again, with GUI tests executing the installed Studio binary.
+
+The normal app was opened with existing presets, EQ/gain and microphone-off
+settings preserved. All three playback roles selected native playback
+`{0.0.0.00000000}.{bfef26d6-5bd4-46bf-8d2a-de78c4e6ef43}`, with Realtek as the
+physical destination. A normal quit restored Realtek defaults; reopening
+automatically selected native playback again. The app is left running.
+Windows volume is approximately 71.13%, unmuted. Studio's slider changed the
+native endpoint level; setting Windows endpoint mute was reflected as “Mute”
+in the live UI. Original level and unmuted state were restored. Hardware media
+key injection was unavailable in the UI tool; those keys were not simulated.
+
+Original installation and user data/registry settings are backed up under
+`C:\Users\wyurd\Downloads\SoundCurrent-Studio-native-install-20261107`.
+Its `rollback-studio.ps1` is syntax-checked and ready to run elevated if needed:
+it closes Studio, validates/disables only the native `ROOT\MEDIA\0002 / oem54.inf`
+device, retains the candidate files and restores the original Studio. Original
+settings backups are retained separately. VB-CABLE remains installed for this
+fallback; startup preferences and boot/security policies were not changed.
+Rollback was not executed against the working installation.
+
+The dated build/test sections below describe the earlier validation stage;
+their statement that the installed release had not yet been replaced was true
+at that stage and is superseded by this follow-up.
+
 Source revision: `30d064a0c9f7d75297cf8c9819263b8353a1d98f`.
 Destination: Windows 11 Pro x64 build 26300, Dell OptiPlex 7040.
 The changes remain hardware-independent. Global WDK/SDK 10.0.28000.2526 builds

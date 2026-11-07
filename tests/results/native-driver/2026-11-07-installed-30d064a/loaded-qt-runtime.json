@@ -1,0 +1,22 @@
+[
+  {
+    "ModuleName": "Qt6Core.dll",
+    "FileName": "C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\Qt6Core.dll"
+  },
+  {
+    "ModuleName": "Qt6Gui.dll",
+    "FileName": "C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\Qt6Gui.dll"
+  },
+  {
+    "ModuleName": "Qt6Network.dll",
+    "FileName": "C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\Qt6Network.dll"
+  },
+  {
+    "ModuleName": "Qt6Widgets.dll",
+    "FileName": "C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\Qt6Widgets.dll"
+  },
+  {
+    "ModuleName": "Qt6Svg.dll",
+    "FileName": "C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\Qt6Svg.dll"
+  }
+]
