@@ -1,6 +1,17 @@
 // SPDX-License-Identifier: MS-PL
 // SoundCurrent microphone transport endpoints, using SYSVAD automation tables.
 #pragma once
+// The native transport has no hardware mixer. SYSVAD's microphone topology
+// volume/mute/peak nodes only store simulated hardware state and do not scale
+// queued PCM. Advertise a direct topology so Windows supplies software controls.
+static PCCONNECTION_DESCRIPTOR ScMicTopoConnections[] = {
+    {PCFILTER_NODE,KSPIN_TOPO_MIC_ELEMENTS,PCFILTER_NODE,KSPIN_TOPO_BRIDGE}
+};
+static PCFILTER_DESCRIPTOR ScMicTopoDescriptor = {
+    0,&AutomationMicInTopoFilter,sizeof(PCPIN_DESCRIPTOR),SIZEOF_ARRAY(MicInTopoMiniportPins),MicInTopoMiniportPins,
+    sizeof(PCNODE_DESCRIPTOR),0,NULL,
+    SIZEOF_ARRAY(ScMicTopoConnections),ScMicTopoConnections,0,NULL
+};
 // One kernel stream per direction is required by the SPSC adapter transport.
 static PCPIN_DESCRIPTOR ScMicFeedPins[] = {
     {1,1,0,&AutomationSpeakerHostPin,

@@ -513,7 +513,7 @@ static ENDPOINT_MINIPAIR ScMicFeedMiniports = {
 };
 static ENDPOINT_MINIPAIR ScMicCaptureMiniports = {
     eSoundCurrentMicCaptureDevice,L"TopologySoundCurrentMic",NULL,
-    CreateMiniportTopologySYSVAD,&MicInTopoMiniportFilterDescriptor,0,NULL,
+    CreateMiniportTopologySYSVAD,&ScMicTopoDescriptor,0,NULL,
     L"WaveSoundCurrentMic",NULL,CreateMiniportWaveRTSYSVAD,&ScMicCaptureDescriptor,0,NULL,
     2,ScMicCaptureFormats,SIZEOF_ARRAY(ScMicCaptureFormats),
     MicInTopologyPhysicalConnections,SIZEOF_ARRAY(MicInTopologyPhysicalConnections),
