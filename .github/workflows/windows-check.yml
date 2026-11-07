@@ -46,5 +46,6 @@ jobs:
             build-windows-native/Release/soundcurrent-endpoint-identity-test.exe
             build-windows-native/Release/soundcurrent-audio-state.exe
             build-windows-native/Release/soundcurrent-native-format-probe.exe
+            build-windows-native/native/windows/driver-manager/Release/soundcurrent-driver-manager.exe
             build-windows-native/ui-self-test.log
             build-windows-native/installed-runtime/**
