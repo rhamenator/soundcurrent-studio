@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "30d064a0c9f7d75297cf8c9819263b8353a1d98f",
+  "wdk": "10.0.28000.2526",
+  "configuration": "Release",
+  "architecture": "x64",
+  "localTestCertificate": "1108F79C7624852BACD68546E3E92CE2DB80D8CE",
+  "validation": "build, InfVerif, ApiValidator, Inf2Cat and SignTool passed",
+  "runtimeTested": true,
+  "runtimeResult": "All six integration invocations, all three format probes, playback and microphone volume/mute, Studio GUI and recovery passed",
+  "physicalMicrophoneTested": false
+}

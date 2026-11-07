@@ -1,5 +1,17 @@
 # Build handoff: native Windows audio driver for local testing
 
+## Latest: full digital transport and Studio integration pass locally
+
+Source `30d064a0c9f7d75297cf8c9819263b8353a1d98f` was rebuilt, locally signed
+and installed as `oem54.inf` on the existing test device. Signal-bearing native
+transport, Studio processing, endpoint volume/mute, GUI routing and guardian
+recovery tests now pass. Additional fixes address endpoint role discovery,
+loopback mute and simulated microphone hardware controls. Read the
+[integration report](native-windows-driver-integration-result-2026-11-07.md)
+and its raw evidence before continuing. No physical microphone was connected;
+physical capture and acoustic calibration were not retested. The earlier
+sections are historical. Preserve all original inputs and keep this PR draft.
+
 ## Latest result: local format fix passes (November 7, 2026)
 
 The destination PC now has a global WDK installation and has built and loaded

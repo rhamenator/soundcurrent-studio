@@ -1,0 +1,18 @@
+Render: Speakers (SoundCurrent Audio)
+  id={0.0.0.00000000}.{008b7b4d-4395-4d48-915d-34958fe2a77e} playback=1 feed=0 microphone=0
+Render: Speakers / Headphones (Realtek Audio)
+  id={0.0.0.00000000}.{0251edad-ca47-4384-8b82-7e4f649dfa8b} playback=0 feed=0 microphone=0
+Render: Speakers (SoundCurrent Audio)
+  id={0.0.0.00000000}.{13b6b9e9-3528-4b73-b2f7-872a5d6b15fd} playback=1 feed=0 microphone=0
+Render: CABLE Input (VB-Audio Virtual Cable)
+  id={0.0.0.00000000}.{b10d4d90-bb31-4469-9725-ef7d206d85bd} playback=0 feed=0 microphone=0
+Render: CABLE In 16ch (VB-Audio Virtual Cable)
+  id={0.0.0.00000000}.{ed1f82ac-4fe2-4df7-984a-8c7c741c03d5} playback=0 feed=0 microphone=0
+Render: FxSound Speakers (FxSound Audio Enhancer)
+  id={0.0.0.00000000}.{f7373c9e-fb11-4c24-8ca2-eaeaf5e9af8c} playback=0 feed=0 microphone=0
+Capture: CABLE Output (VB-Audio Virtual Cable)
+  id={0.0.1.00000000}.{35a56f34-eb01-451d-89be-ca2b645015d5} playback=0 feed=0 microphone=0
+Capture: Microphone (SoundCurrent Audio)
+  id={0.0.1.00000000}.{dcd53eed-dc34-4714-bcc5-86b9a58fe314} playback=1 feed=0 microphone=0
+FAIL: Native microphone endpoint identity missing
+Exit=1

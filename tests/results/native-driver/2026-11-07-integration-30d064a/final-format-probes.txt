@@ -1,0 +1,60 @@
+capture {0.0.1.00000000}.{393638BB-A1DF-41C0-8F4D-58DED5FF01AB} Exit=0
+CoInitializeEx=0x0
+Enumerator=0x0
+GetDevice=0x0
+Endpoint=0x0
+GetDataFlow=0x0
+EndpointVolume=0x0
+AudioClient=0x0
+GetMixFormat=0x0
+mix tag=65534 channels=2 rate=48000 bits=32
+MixFormatSupport=0x0
+InitializeShared=0x0
+GetBufferSize=0x0
+bufferFrames=4800
+StartSilent=0x0
+Stop=0x0
+Extensible48kStereo16Support=0x0
+PASS: format negotiation and silent shared stream start/stop
+render {0.0.0.00000000}.{BBFB9294-6D3E-4AB4-B9D2-21336B76B907} Exit=0
+CoInitializeEx=0x0
+Enumerator=0x0
+GetDevice=0x0
+Endpoint=0x0
+GetDataFlow=0x0
+EndpointVolume=0x0
+AudioClient=0x0
+GetMixFormat=0x0
+mix tag=65534 channels=2 rate=48000 bits=32
+MixFormatSupport=0x0
+InitializeShared=0x0
+GetBufferSize=0x0
+bufferFrames=4800
+RenderClient=0x0
+GetSilentBuffer=0x0
+ReleaseSilentBuffer=0x0
+StartSilent=0x0
+Stop=0x0
+Extensible48kStereo16Support=0x0
+PASS: format negotiation and silent shared stream start/stop
+render {0.0.0.00000000}.{BFEF26D6-5BD4-46BF-8D2A-DE78C4E6EF43} Exit=0
+CoInitializeEx=0x0
+Enumerator=0x0
+GetDevice=0x0
+Endpoint=0x0
+GetDataFlow=0x0
+EndpointVolume=0x0
+AudioClient=0x0
+GetMixFormat=0x0
+mix tag=65534 channels=2 rate=48000 bits=32
+MixFormatSupport=0x0
+InitializeShared=0x0
+GetBufferSize=0x0
+bufferFrames=4800
+RenderClient=0x0
+GetSilentBuffer=0x0
+ReleaseSilentBuffer=0x0
+StartSilent=0x0
+Stop=0x0
+Extensible48kStereo16Support=0x0
+PASS: format negotiation and silent shared stream start/stop

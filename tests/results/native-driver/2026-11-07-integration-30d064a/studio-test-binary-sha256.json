@@ -1,0 +1,22 @@
+[
+  {
+    "File": "soundcurrent-studio.exe",
+    "Hash": "F2B317B31D6A05C1CEA57F2209FE19F02BA797F90E14B8642567D6F2902A3E66"
+  },
+  {
+    "File": "soundcurrent-route-guardian.exe",
+    "Hash": "86A163F1E905716CDF781014C8774E0A884D9D59036C35DC8F6C8FACEA36AABC"
+  },
+  {
+    "File": "soundcurrent-windows-audio-smoke.exe",
+    "Hash": "83A37D8AECF31EC7CA4EE8564B1CA0EBE6B1331CD7ECE23A6DDAA2B5F9F105B7"
+  },
+  {
+    "File": "soundcurrent-windows-volume-smoke.exe",
+    "Hash": "18E6E253671ED19816EF2080AF964F79A1E9CE3109389837F86DC5947B0BDF20"
+  },
+  {
+    "File": "soundcurrent-endpoint-identity-test.exe",
+    "Hash": "D2C584B9A10543E0C6E114F838866E561D108A9507B00597EBFB27483771499B"
+  }
+]

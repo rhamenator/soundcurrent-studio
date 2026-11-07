@@ -1,0 +1,28 @@
+
+
+Verifying: C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\signed-driver\soundcurrentvad.inf
+
+File is signed in catalog: C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\signed-driver\soundcurrentvad.cat
+
+Hash of file (sha1): 04CAB71F3A7D53B9FBB6D697487F2CD713367954
+
+Signing Certificate Chain:
+    Issued to: SoundCurrent Local Driver Test 2026-11-07
+
+    Issued by: SoundCurrent Local Driver Test 2026-11-07
+
+    Expires:   Fri May 07 13:44:32 2027
+
+    SHA1 hash: 1108F79C7624852BACD68546E3E92CE2DB80D8CE
+
+
+File is not timestamped.
+
+Successfully verified: C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\signed-driver\soundcurrentvad.inf
+
+
+Number of files successfully Verified: 1
+
+Number of warnings: 0
+
+Number of errors: 0

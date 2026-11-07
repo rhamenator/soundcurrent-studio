@@ -1,0 +1,8 @@
+{
+    "InstanceId":  "ROOT\\MEDIA\\0002",
+    "PublishedInf":  "oem54.inf",
+    "Status":  "OK",
+    "HardwareId":  "Root\\SOUNDCURRENTVAD",
+    "Service":  "SoundCurrentVAD",
+    "DevConExit":  0
+}

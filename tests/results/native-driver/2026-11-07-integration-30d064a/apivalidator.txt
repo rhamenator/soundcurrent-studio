@@ -1,0 +1,5 @@
+ApiValidation: Calling aitStatic 'aitstatic.exe'.
+ApiValidation: All binaries are Universal
+ApiValidation:
+Summary:
+	"C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\unsigned-driver\soundcurrentvad.sys" is Universal
