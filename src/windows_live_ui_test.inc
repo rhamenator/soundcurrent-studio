@@ -128,6 +128,7 @@ if (app.arguments().contains("--windows-live-ui-test")) {
         const auto physical = devices();
         if (physical.isEmpty()) throw std::runtime_error("No physical output fixture");
         const auto owned = standardCable(false).toStdWString();
+        QTextStream(stdout)<<"Managed output endpoint: "<<QString::fromStdWString(owned)<<Qt::endl;
         std::array<std::wstring,3> before;
         for (int role=0; role<3; ++role) {
             before[role]=soundcurrent::windowsDefaultEndpointId(false,role);
@@ -159,7 +160,7 @@ if (app.arguments().contains("--windows-live-ui-test")) {
             if (app.exec()!=0) throw std::runtime_error("Quit event loop failed");
         }
         verify(false);
-        qInfo("PASS: live UI enable, disable, re-enable and Quit restored all output roles");
+        QTextStream(stdout)<<"PASS: live UI enable, disable, re-enable and Quit restored all output roles"<<Qt::endl;
         return 0;
     } catch (const std::exception &error) {
         qCritical("Live UI route test failed: %s",error.what());
