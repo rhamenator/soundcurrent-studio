@@ -15,18 +15,13 @@ $SignToolPath=(Resolve-Path $SignToolPath).Path
 $Inf2CatPath=(Resolve-Path $Inf2CatPath).Path
 $certificate=Get-Item "Cert:\CurrentUser\My\$CertificateThumbprint"
 if(!$certificate.HasPrivateKey){throw 'Signing certificate has no local private key'}
-$inputs=Get-Content "$BuildDirectory\unsigned-driver-sha256.json" -Raw|ConvertFrom-Json
-$inputs=@($inputs)
-if($inputs.Count -ne 3 -or @($inputs.File|Select-Object -Unique).Count -ne 3){throw 'Expected exactly three distinct driver input hashes'}
-foreach($item in $inputs){
- if($item.File -notin 'soundcurrentvad.sys','soundcurrentvad.inf','soundcurrentvad.cat'){throw 'Unexpected input file'}
- if((Get-FileHash (Join-Path "$BuildDirectory\unsigned-driver" $item.File)).Hash -ne $item.Hash){throw 'Unsigned input checksum mismatch'}
-}
+. "$PSScriptRoot\driver-inputs.ps1"
+$null=@(Get-VerifiedUnsignedDriverInputs -BuildDirectory $BuildDirectory)
 New-Item -ItemType Directory -Path $OutputDirectory|Out-Null
 $OutputDirectory=(Resolve-Path $OutputDirectory).Path
 New-Item -ItemType Directory "$OutputDirectory\signed-driver","$OutputDirectory\logs"|Out-Null
 $package="$OutputDirectory\signed-driver"
-Copy-Item "$BuildDirectory\unsigned-driver\soundcurrentvad.inf","$BuildDirectory\unsigned-driver\soundcurrentvad.sys" $package
+Copy-VerifiedUnsignedDriverInputs -BuildDirectory $BuildDirectory -DestinationDirectory $package
 Start-Transcript "$OutputDirectory\logs\test-sign.txt"
 try{
  & $SignToolPath sign /v /fd SHA256 /s My /sha1 $CertificateThumbprint "$package\soundcurrentvad.sys"
