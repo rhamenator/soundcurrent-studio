@@ -1,0 +1,5 @@
+Managed output endpoint: {0.0.0.00000000}.{bfef26d6-5bd4-46bf-8d2a-de78c4e6ef43}
+PASS: live UI enable, disable, re-enable and Quit restored all output roles
+
+
+Exit=0

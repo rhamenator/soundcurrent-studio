@@ -1,0 +1,4 @@
+PASS: direct Windows output choice disables processing and preserves all roles
+
+
+Exit=0
