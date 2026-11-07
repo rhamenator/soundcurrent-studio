@@ -1,0 +1,31 @@
+**********************
+PowerShell transcript start
+Start time: 20261107163101
+Username: OPTIPLEX-7040\wyurd
+RunAs User: OPTIPLEX-7040\wyurd
+Configuration Name:
+Machine: OPTIPLEX-7040 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\powershell\pwsh.dll -NoProfile -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+& .\native\windows\virtual-driver\reproduce-build.ps1 -SourceRoot 'E:\E-work-current\soundcurrent-studio' -ExpectedRevision 6d655d40d333fa9586583d78dc5f07c4fc36435b -PackageCache 'C:\Users\wyurd\Downloads\SoundCurrent-native-reproduction-cache-20261107' -OutputDirectory 'C:\Users\wyurd\Downloads\SoundCurrent-native-reproduction-6d655d4'
+Process ID: 6896
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\wyurd\Downloads\SoundCurrent-native-reproduction-6d655d4\logs\build.txt
+
+
+
+
+
+
+**********************
+PowerShell transcript end
+End time: 20261107163156
+**********************

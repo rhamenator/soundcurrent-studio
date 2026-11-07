@@ -21,14 +21,20 @@ if($Action -in 'Install','Rollback'){
 }
 New-Item -ItemType Directory -Force $LogDirectory|Out-Null
 $log=Join-Path $LogDirectory ((Get-Date -Format 'yyyyMMdd-HHmmss-fff')+'-'+$Action+'.txt')
-$arguments=switch($Action){
+$arguments=@(switch($Action){
  'Status' {@('--status')}
  'Verify' {if(!$PackageDirectory){throw 'PackageDirectory required'};@('--verify',(Resolve-Path $PackageDirectory).Path)}
  'Install' {if(!$PackageDirectory){throw 'PackageDirectory required'};@('--install',$App,(Resolve-Path $PackageDirectory).Path)}
  'Rollback' {@('--remove',$App)}
-}
-& $ManagerPath @arguments 2>&1|Tee-Object $log
-$code=$LASTEXITCODE
+})
+$oldPreference=$ErrorActionPreference
+try{
+ # Windows PowerShell 5.1 represents native stderr as ErrorRecords. Capture
+ # those in the log, then use the manager's actual exit status consistently.
+ $ErrorActionPreference='Continue'
+ & $ManagerPath @arguments 2>&1|Tee-Object $log
+ $code=$LASTEXITCODE
+}finally{$ErrorActionPreference=$oldPreference}
 "Exit=$code"|Add-Content $log
 if($Action -eq 'Status' -and $code -eq 10){Write-Output 'Native device not installed';return}
 if($code -eq 3010){Write-Output 'Operation succeeded; Windows requests a restart. Save work and restart when ready.';return}

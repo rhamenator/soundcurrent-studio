@@ -33,6 +33,7 @@ OS build and test locally on Windows. Do not change the Linux host's firmware.
 | Pinned NuGet inputs | Microsoft.Windows.WDK.x64, Microsoft.Windows.SDK.CPP, Microsoft.Windows.SDK.CPP.x64, all 10.0.28000.2526 |
 | Toolchain identities | MSBuild 18.11.1-1.26513.3; actual compiler printed MSVC 19.51.36260; retain file versions/logs if installer component versions differ |
 | Restore tooling | Git and .NET SDK with `dotnet nuget verify --all`; recorded .NET SDK 10.0.403 |
+| PowerShell | Build script validated with PowerShell 7.6; wrapper parsing/Status/trust rejection also checked under clean Windows PowerShell 5.1. Do not inherit PowerShell 7 module paths when launching 5.1 from another host |
 | Network/disk | Official Microsoft/NuGet downloads; roughly 330 MB of NuGet archives plus extracted SDK/WDK, VS and build outputs; provision several GB free |
 | Resource limits | BelowNormal process priority, `/m:1`, `CL_MPCount=1`, `UseMultiToolTask=false`, `BuildInParallel=false`; no competing large dev jobs |
 

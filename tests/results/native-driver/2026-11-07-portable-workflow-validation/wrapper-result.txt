@@ -1,0 +1,3 @@
+PASS: Status and fail-closed unsigned Verify; no install/remove performed
+PASS: mismatched manager hash rejected before execution
+PASS: missing local signing key rejected without output/trust changes

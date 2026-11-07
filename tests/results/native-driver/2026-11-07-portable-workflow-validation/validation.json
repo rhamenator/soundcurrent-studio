@@ -1,0 +1,15 @@
+{
+  "UnsignedReproductionBuildPassed": true,
+  "BuildScriptRevision": "6d655d40d333fa9586583d78dc5f07c4fc36435b",
+  "DriverSourceMatchesFrozenRuntimeCommit": "30d064a0c9f7d75297cf8c9819263b8353a1d98f",
+  "ScriptParsingPassed": true,
+  "ManagerStatusPassed": true,
+  "UnsignedVerifyRejected": true,
+  "BadManagerHashRejected": true,
+  "MissingSigningKeyRejectedWithoutOutput": true,
+  "WindowsPowerShell51Checked": true,
+  "InstallOrRemovalPerformed": false,
+  "TestSigningPerformed": false,
+  "NativeDeviceProblemCode": 22,
+  "FullInstallerLifecycleValidation": "Still required on independent Windows worker"
+}
