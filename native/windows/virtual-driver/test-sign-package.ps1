@@ -15,7 +15,8 @@ $SignToolPath=(Resolve-Path $SignToolPath).Path
 $Inf2CatPath=(Resolve-Path $Inf2CatPath).Path
 $certificate=Get-Item "Cert:\CurrentUser\My\$CertificateThumbprint"
 if(!$certificate.HasPrivateKey){throw 'Signing certificate has no local private key'}
-$inputs=@(Get-Content "$BuildDirectory\unsigned-driver-sha256.json" -Raw|ConvertFrom-Json)
+$inputs=Get-Content "$BuildDirectory\unsigned-driver-sha256.json" -Raw|ConvertFrom-Json
+$inputs=@($inputs)
 if($inputs.Count -ne 3 -or @($inputs.File|Select-Object -Unique).Count -ne 3){throw 'Expected exactly three distinct driver input hashes'}
 foreach($item in $inputs){
  if($item.File -notin 'soundcurrentvad.sys','soundcurrentvad.inf','soundcurrentvad.cat'){throw 'Unexpected input file'}

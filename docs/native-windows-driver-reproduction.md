@@ -214,3 +214,27 @@ probes all three formats, runs the six integration cases, preserves the explicit
 GUI completion marker, and records exact exit codes. An unavailable endpoint or
 failed restoration is a failure, not a passing result. This improves reproducibility;
 it does not replace real driver installation, reboot or shared-owner lifecycle tests.
+
+### Verify package acceptance and tamper rejection
+
+On the explicitly configured test worker, after trusting the reviewed public
+certificate, run the read-only opt-in checks against a fresh result directory:
+
+```powershell
+& .\tests\windows_driver_package_verify.ps1 `
+  -Manager '<reviewed manager executable>' -ManagerSHA256 '<its SHA-256>' `
+  -PackageDirectory '<matching signed-driver directory>' `
+  -ResultDirectory '<new package-verification result directory>'
+```
+
+This checks acceptance of the valid package and rejection of separately altered
+INF, SYS and CAT files. It changes no boot setting, trust store or device. It
+retains the altered copies solely as diagnostic test inputs; do not install them.
+Windows' `SetupVerifyInfFile` can report `ERROR_AUTHENTICODE_TRUSTED_PUBLISHER`
+with a FALSE return for a valid non-WHQL signature. The manager accepts only that
+explicit trusted-publisher result or WHQL success, still checks catalog trust,
+and verifies both exact INF and SYS against the package catalog. Unknown,
+disallowed, untrusted, and mismatched files remain rejected.
+
+For an independently generated local test certificate, see
+[the owner certificate workflow](native-driver-own-test-certificate.md).
