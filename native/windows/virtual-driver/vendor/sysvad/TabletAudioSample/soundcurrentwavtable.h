@@ -19,11 +19,16 @@ static PIN_DEVICE_FORMATS_AND_MODES ScPinFormats[] = {
     {BridgePin,NULL,0,NULL,0}
 };
 static KSDATARANGE_AUDIO ScRenderRange = {
-    {sizeof(KSDATARANGE_AUDIO),0,0,0,STATICGUIDOF(KSDATAFORMAT_TYPE_AUDIO),
+    {sizeof(KSDATARANGE_AUDIO),KSDATARANGE_ATTRIBUTES,0,0,STATICGUIDOF(KSDATAFORMAT_TYPE_AUDIO),
      STATICGUIDOF(KSDATAFORMAT_SUBTYPE_PCM),STATICGUIDOF(KSDATAFORMAT_SPECIFIER_WAVEFORMATEX)},
     2,16,16,48000,48000
 };
-static PKSDATARANGE ScRenderRanges[] = {reinterpret_cast<PKSDATARANGE>(&ScRenderRange)};
+// Advertise processing-mode attributes together with the modes/default formats
+// supplied by ScPinFormats. The capture/feed endpoints share this range.
+static PKSDATARANGE ScRenderRanges[] = {
+    reinterpret_cast<PKSDATARANGE>(&ScRenderRange),
+    reinterpret_cast<PKSDATARANGE>(&PinDataRangeAttributeList)
+};
 static PCPIN_DESCRIPTOR ScRenderPins[] = {
     {6,6,0,&AutomationSpeakerHostPin,
      {0,NULL,0,NULL,SIZEOF_ARRAY(ScRenderRanges),ScRenderRanges,
