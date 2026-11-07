@@ -1,0 +1,24 @@
+{
+    "os":  {
+               "Caption":  "Microsoft Windows 11 Pro",
+               "Version":  "10.0.26200",
+               "BuildNumber":  "26200"
+           },
+    "secureBoot":  true,
+    "deviceGuard":  {
+                        "SecurityServicesConfigured":  [
+                                                           0
+                                                       ],
+                        "SecurityServicesRunning":  [
+                                                        0
+                                                    ],
+                        "VirtualizationBasedSecurityStatus":  0
+                    },
+    "bitlocker":  {
+                      "MountPoint":  "C:",
+                      "VolumeStatus":  2,
+                      "ProtectionStatus":  0
+                  },
+    "testCertInRoot":  false,
+    "testCertInPublisher":  false
+}

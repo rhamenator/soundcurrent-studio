@@ -1,0 +1,6 @@
+PASS: direct Windows output choice disables processing and preserves all roles
+
+QFontDatabase: Cannot find font directory C:/SoundCurrentNativeAudit20261107/BIN/lib/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+
+Exit=0

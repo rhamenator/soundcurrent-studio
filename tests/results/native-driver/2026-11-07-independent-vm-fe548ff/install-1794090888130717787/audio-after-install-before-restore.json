@@ -1,0 +1,72 @@
+{
+    "levels": [
+        {
+            "capture": false,
+            "id": "{0.0.0.00000000}.{1b5c1cf2-e797-4a87-aba5-687a589c5b3d}",
+            "level": 1,
+            "muted": false,
+            "nativeRole": "playback"
+        },
+        {
+            "capture": false,
+            "id": "{0.0.0.00000000}.{3b925689-b97e-464a-802e-7f198dc1040e}",
+            "level": 0.6713365316390991,
+            "muted": false,
+            "nativeRole": ""
+        },
+        {
+            "capture": false,
+            "id": "{0.0.0.00000000}.{fa8e4b07-3839-4318-a268-23caa232fa8a}",
+            "level": 1,
+            "muted": false,
+            "nativeRole": "feed"
+        },
+        {
+            "capture": true,
+            "id": "{0.0.1.00000000}.{5eece62b-78ee-4541-83d5-5d80f5e782ca}",
+            "level": 0.6713365316390991,
+            "muted": false,
+            "nativeRole": ""
+        },
+        {
+            "capture": true,
+            "id": "{0.0.1.00000000}.{c61d1603-1266-41c5-b591-f59f3ac45f9a}",
+            "level": 0.5368810892105103,
+            "muted": false,
+            "nativeRole": "capture"
+        }
+    ],
+    "roles": [
+        {
+            "capture": false,
+            "id": "{0.0.0.00000000}.{fa8e4b07-3839-4318-a268-23caa232fa8a}",
+            "role": 0
+        },
+        {
+            "capture": false,
+            "id": "{0.0.0.00000000}.{fa8e4b07-3839-4318-a268-23caa232fa8a}",
+            "role": 1
+        },
+        {
+            "capture": false,
+            "id": "{0.0.0.00000000}.{fa8e4b07-3839-4318-a268-23caa232fa8a}",
+            "role": 2
+        },
+        {
+            "capture": true,
+            "id": "{0.0.1.00000000}.{c61d1603-1266-41c5-b591-f59f3ac45f9a}",
+            "role": 0
+        },
+        {
+            "capture": true,
+            "id": "{0.0.1.00000000}.{c61d1603-1266-41c5-b591-f59f3ac45f9a}",
+            "role": 1
+        },
+        {
+            "capture": true,
+            "id": "{0.0.1.00000000}.{c61d1603-1266-41c5-b591-f59f3ac45f9a}",
+            "role": 2
+        }
+    ],
+    "schema": 1
+}

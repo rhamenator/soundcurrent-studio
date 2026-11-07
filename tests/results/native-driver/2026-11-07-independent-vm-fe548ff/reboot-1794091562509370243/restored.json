@@ -1,0 +1,7 @@
+{
+    "secureBoot":  true,
+    "testCertRoot":  false,
+    "testCertPublisher":  false,
+    "nativeDevicePresent":  false,
+    "boot":  "\/Date(1794091408500)\/"
+}

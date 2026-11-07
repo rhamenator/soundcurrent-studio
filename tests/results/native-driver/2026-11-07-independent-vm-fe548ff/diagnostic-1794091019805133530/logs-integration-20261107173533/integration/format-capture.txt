@@ -1,0 +1,20 @@
+CoInitializeEx=0x0
+Enumerator=0x0
+GetDevice=0x0
+Endpoint=0x0
+GetDataFlow=0x0
+EndpointVolume=0x0
+AudioClient=0x0
+GetMixFormat=0x0
+mix tag=65534 channels=2 rate=48000 bits=32
+MixFormatSupport=0x0
+InitializeShared=0x0
+GetBufferSize=0x0
+bufferFrames=4800
+StartSilent=0x0
+Stop=0x0
+Extensible48kStereo16Support=0x0
+PASS: format negotiation and silent shared stream start/stop
+
+
+Exit=0

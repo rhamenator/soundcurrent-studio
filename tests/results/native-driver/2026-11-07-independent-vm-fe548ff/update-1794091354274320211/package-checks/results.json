@@ -1,0 +1,22 @@
+[
+    {
+        "name":  "valid",
+        "exitCode":  0,
+        "expectedValid":  true
+    },
+    {
+        "name":  "soundcurrentvad.inf",
+        "exitCode":  30,
+        "expectedValid":  false
+    },
+    {
+        "name":  "soundcurrentvad.sys",
+        "exitCode":  30,
+        "expectedValid":  false
+    },
+    {
+        "name":  "soundcurrentvad.cat",
+        "exitCode":  30,
+        "expectedValid":  false
+    }
+]

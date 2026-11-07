@@ -1,0 +1,6 @@
+{
+    "phase":  "Install",
+    "utc":  "2026-11-07T22:28:32.1071512Z",
+    "success":  false,
+    "error":  "System.Management.Automation.RuntimeException: Unexpected package member"
+}

@@ -1,0 +1,30 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20261107174107
+Username: CF-WIN11-TEST\copperfin
+RunAs User: CF-WIN11-TEST\copperfin
+Configuration Name: 
+Machine: CF-WIN11-TEST (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoProfile -ExecutionPolicy Bypass -File d:\AUDIT.PS1 -Phase Update
+Process ID: 984
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\SoundCurrentNativeAudit20261107\logs-update-20261107174107\transcript.txt
+PS>TerminatingError(Resolve-Path): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find path 'C:\Windows\System32\drivers\soundcurrentvad.sys' because it does not exist."
+>> TerminatingError(Resolve-Path): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find path 'C:\Windows\System32\drivers\soundcurrentvad.sys' because it does not exist."
+System.Management.Automation.ItemNotFoundException: Cannot find path 'C:\Windows\System32\drivers\soundcurrentvad.sys' because it does not exist.
+   at System.Management.Automation.LocationGlobber.ExpandMshGlobPath(String path, Boolean allowNonexistingPaths, PSDriveInfo drive, ContainerCmdletProvider provider, CmdletProviderContext context)
+   at System.Management.Automation.LocationGlobber.ResolveDriveQualifiedPath(String path, CmdletProviderContext context, Boolean allowNonexistingPaths, CmdletProvider& providerInstance)
+   at System.Management.Automation.LocationGlobber.GetGlobbedMonadPathsFromMonadPath(String path, Boolean allowNonexistingPaths, CmdletProviderContext context, CmdletProvider& providerInstance)
+   at Microsoft.PowerShell.Commands.ResolvePathCommand.ProcessRecord()
+**********************
+Windows PowerShell transcript end
+End time: 20261107174111
+**********************

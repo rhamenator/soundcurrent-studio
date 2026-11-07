@@ -1,0 +1,6 @@
+{
+    "phase":  "Install",
+    "utc":  "2026-11-07T22:29:16.7360614Z",
+    "success":  false,
+    "error":  "System.Management.Automation.RemoteException: INF catalog binding/signature validation failed"
+}
