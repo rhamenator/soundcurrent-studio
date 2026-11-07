@@ -1,0 +1,11 @@
+........................
+Signability test complete.
+
+Errors:
+None
+
+Warnings:
+None
+
+Catalog generation complete.
+C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\unsigned-driver\soundcurrentvad.cat

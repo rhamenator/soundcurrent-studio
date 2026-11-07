@@ -1,0 +1,28 @@
+Render: Speakers / Headphones (Realtek Audio)
+  id={0.0.0.00000000}.{0251edad-ca47-4384-8b82-7e4f649dfa8b} playback=0 feed=0 microphone=0
+Render: CABLE Input (VB-Audio Virtual Cable)
+  id={0.0.0.00000000}.{b10d4d90-bb31-4469-9725-ef7d206d85bd} playback=0 feed=0 microphone=0
+Render: SoundCurrent Microphone Feed
+  id={0.0.0.00000000}.{bbfb9294-6d3e-4ab4-b9d2-21336b76b907} playback=0 feed=1 microphone=0
+Render: Speakers (SoundCurrent Audio)
+  id={0.0.0.00000000}.{bfef26d6-5bd4-46bf-8d2a-de78c4e6ef43} playback=1 feed=0 microphone=0
+Render: CABLE In 16ch (VB-Audio Virtual Cable)
+  id={0.0.0.00000000}.{ed1f82ac-4fe2-4df7-984a-8c7c741c03d5} playback=0 feed=0 microphone=0
+Render: FxSound Speakers (FxSound Audio Enhancer)
+  id={0.0.0.00000000}.{f7373c9e-fb11-4c24-8ca2-eaeaf5e9af8c} playback=0 feed=0 microphone=0
+Capture: CABLE Output (VB-Audio Virtual Cable)
+  id={0.0.1.00000000}.{35a56f34-eb01-451d-89be-ca2b645015d5} playback=0 feed=0 microphone=0
+Capture: SoundCurrent Microphone
+  id={0.0.1.00000000}.{393638bb-a1df-41c0-8f4d-58ded5ff01ab} playback=0 feed=0 microphone=1
+Test source original volume 1.000, mute 0
+Tone mix: 48000 Hz, 2 channels; loopback: 48000 Hz, 2 channels
+Native microphone transport frames=152640 RMS L=0.014142 R=0.014142
+Native microphone silence RMS L=0.00001463 R=0.00001459
+Native feed muted RMS L=0.00000000 R=0.00000000
+Test source original volume 0.537, mute 0
+Native capture volume measured -31.08 dB, endpoint reported -31.08 dB
+Native capture muted RMS L=0.00000000 R=0.00000000
+PASS: native microphone feed reaches capture with bounded stereo signal
+
+
+Exit=0

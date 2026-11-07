@@ -1,0 +1,19 @@
+The following certificate was selected:
+    Issued to: SoundCurrent Local Driver Test 2026-11-07
+
+    Issued by: SoundCurrent Local Driver Test 2026-11-07
+
+    Expires:   Fri May 07 13:44:32 2027
+
+    SHA1 hash: 1108F79C7624852BACD68546E3E92CE2DB80D8CE
+
+
+Done Adding Additional Store
+Successfully signed: C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\signed-driver\soundcurrentvad.cat
+
+
+Number of files successfully Signed: 1
+
+Number of warnings: 0
+
+Number of errors: 0

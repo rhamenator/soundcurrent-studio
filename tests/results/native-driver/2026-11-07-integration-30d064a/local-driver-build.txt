@@ -1,0 +1,44 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20261107151731
+Username: OPTIPLEX-7040\wyurd
+RunAs User: OPTIPLEX-7040\wyurd
+Configuration Name:
+Machine: OPTIPLEX-7040 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\build.ps1
+Process ID: 23964
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-30d064a\logs\local-driver-build.txt
+
+Restored Microsoft.Windows.WDK.x64
+
+Restored Microsoft.Windows.SDK.CPP
+
+Restored Microsoft.Windows.SDK.CPP.x64
+MSBuild version 18.11.1-1.26513.3+940033be3 for .NET Framework
+
+  Building 'EndpointsCommon' with toolset 'WindowsKernelModeDriver10.0' and the 'Windows Driver' target platform.
+  EndpointsCommon.vcxproj -> E:\E-work-current\soundcurrent-studio\native\windows\virtual-driver\vendor\sysvad\Endpoint
+  sCommon\x64\Release\EndpointsCommon.lib
+MSBuild version 18.11.1-1.26513.3+940033be3 for .NET Framework
+
+  Building 'TabletAudioSample' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\soundcurrentvad.inf
+  Stamping [Version] section with DriverVer=11/07/2026,15.17.45.93
+  adapter.cpp
+  TabletAudioSample.vcxproj -> E:\E-work-current\soundcurrent-studio\native\windows\virtual-driver\vendor\sysvad\Tablet
+  AudioSample\x64\Release\soundcurrentvad.sys
+  Driver is 'Universal'.
+  DrvCat task was skipped as there was no catalog file to process
+**********************
+Windows PowerShell transcript end
+End time: 20261107151748
+**********************
