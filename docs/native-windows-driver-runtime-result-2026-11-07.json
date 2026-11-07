@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-07",
+  "sourceCommit": "59dbb99b126654a7e53b208a387fba87574c0385",
+  "os": "Windows 11 Pro x64",
+  "build": 26300,
+  "secureBoot": false,
+  "runtimeTestSigning": true,
+  "hvciRunning": true,
+  "deviceHardwareId": "Root\\SOUNDCURRENTVAD",
+  "deviceInstanceId": "ROOT\\MEDIA\\0002",
+  "publishedInf": "oem49.inf",
+  "service": "SoundCurrentVAD",
+  "driverLoaded": true,
+  "pnpProblemCodeBeforeDisable": 0,
+  "renderEndpointCount": 2,
+  "captureEndpointCount": 1,
+  "audioClientActivation": "S_OK",
+  "endpointVolumeActivation": "0x88890008",
+  "getMixFormat": "0x88890008",
+  "shared48kStereo16Support": "0x88890008",
+  "shared48kStereo16Initialize": "0x88890008",
+  "streamStarted": false,
+  "nativeAudioPassed": false,
+  "testDeviceDisabledAfterFailure": true,
+  "driverServiceStoppedAfterDisable": true,
+  "playbackDefaultsRestoredTo": "Physical Realtek",
+  "signedPayloadSHA256": [
+    {
+      "File": "soundcurrentvad.cat",
+      "Hash": "454029EAFAC08AAB7F2044DDB834849C1F760000E82870E682CB6C897F5C7C47"
+    },
+    {
+      "File": "soundcurrentvad.inf",
+      "Hash": "D61B863B87C5AD347A763B01183547542A3E5E966188425AEF7A2E46A616945E"
+    },
+    {
+      "File": "soundcurrentvad.sys",
+      "Hash": "DB51A5D1620D285980186EA22E7364AB21CC071365AECA3F0B33A0BBFC8DFF36"
+    }
+  ]
+}

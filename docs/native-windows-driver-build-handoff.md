@@ -1,5 +1,95 @@
 # Build handoff: native Windows audio driver for local testing
 
+## Current task: fix first native runtime failure (November 7, 2026)
+
+The first build below was test-signed and installed on the destination PC.
+Kernel load/enumeration passed with HVCI running, but **all three endpoints fail
+WASAPI format negotiation and shared-stream initialization with
+`AUDCLNT_E_UNSUPPORTED_FORMAT` (`0x88890008`)**. The device is now disabled and
+physical Realtek playback defaults restored. The original build handoff and
+November 6 build report below are historical; this is now a fix/rebuild task.
+
+Read [the runtime report](native-windows-driver-runtime-result-2026-11-07.md),
+[machine-readable results](native-windows-driver-runtime-result-2026-11-07.json),
+and the exact probe source/output under
+`tests/results/native-driver/2026-11-07-win11-26300/` before changing code.
+
+### Diagnose and fix on the development machine
+
+1. Fetch this PR branch and any newer relevant native stack work; preserve the
+   separate volume-control PRs. Start from a clean isolated worktree and record
+   the failing source `59dbb99b126654a7e53b208a387fba87574c0385`. The raw probe's
+   endpoint GUIDs are local to the destination PC, not portable device identities.
+   Adapt discovery to the exact SoundCurrent hardware/service identity and map
+   the two render endpoints to playback vs microphone feed. Do not use friendly
+   names alone or assume the probe's enumeration order establishes that mapping.
+2. Reproduce the failures on the independent Windows VM hosted by Linux. Use a
+   local test certificate/private key on that worker and the reviewed test-mode
+   prerequisites; do not transfer private keys or alter the Linux host. The
+   destination had Secure Boot off, runtime TESTSIGN enabled and HVCI running;
+   its SYS/CAT signatures and catalog membership were verified. Do not attribute
+   this format error to signing without contrary evidence, disable HVCI to hide
+   it, or weaken the production manager's trust checks.
+3. Inspect the actual native render/feed/capture WaveRT pin descriptors, data
+   ranges and format intersections, supported processing-mode/default formats,
+   channel masks/valid bits and block alignment, topology/endpoint property
+   wiring, and Audio Engine/Kernel Streaming initialization diagnostics. These
+   are investigation targets, not established diagnoses. Review both
+   WAVEFORMATEX PCM and valid WAVEFORMATEXTENSIBLE PCM at 48 kHz/stereo/16 bits;
+   do not blindly expand advertised formats beyond what the transport supports.
+   GetMixFormat and endpoint-volume activation also failed independently of the
+   probe's explicitly constructed WAVEFORMATEX, so merely changing that probe's
+   input is not enough to claim a driver fix.
+4. Make the smallest justified source fix and add meaningful regression coverage
+   for the defect. Record failing and passing native runtime probes. For each
+   render/feed/capture endpoint require GetMixFormat and supported-format checks
+   to produce valid results (handle S_FALSE and free closest-format buffers),
+   then initialize and safely start/stop a stream. Test render loopback and
+   actual microphone feed-to-capture transport separately. Do not mistake silent
+   buffers or endpoint enumeration for end-to-end audio success. Exercise mute/
+   volume where implemented; document explicit unsupported controls rather than
+   promising controls the driver does not provide.
+5. Keep defaults on physical audio while direct endpoint probes run. Capture
+   defaults before installing: Windows automatically selected the new virtual
+   render endpoint on this PC, interrupting normal audio until it was restored.
+   Make future tests restore original roles even after failures. Record exact
+   hardware ID, assigned instance ID and published OEM INF. The first install
+   produced `ROOT\MEDIA\0002`, not an instance path beginning with
+   `ROOT\SOUNDCURRENTVAD`; match the HardwareID property, not that path assumption.
+   Repeating DevCon install creates duplicate root nodes. Use the recorded device
+   for update/re-enable, and stop on ambiguous matches. Coordinate the common
+   driver fix with EQ without overwriting its unrelated work.
+
+### Build and package the next test input
+
+Freeze the fix in a new source commit and use the existing pinned Windows
+MSVC/SDK/WDK build route. Repeat compiler, Universal API, InfVerif and Inf2Cat
+checks, but runtime evidence is also required before calling the format bug
+fixed. If worker reproduction/runtime is blocked, state precisely what remains
+unverified and still provide the complete package for a clearly labeled retest.
+
+Provide a **new, separately named unsigned** x64 test-input archive and download
+link in this draft PR, with the exact fixed source revision/snapshot, licenses,
+INF/SYS/CAT and dependencies, compiler and validator logs, native before/after
+probe output, manifest, internal SHA256SUMS and external ZIP SHA-256 sidecar.
+Do not overwrite the first failing archive or publish a production release.
+Use a valid newer DriverVer for an update path and record it. Do not copy this
+PC's test signature or reuse a catalog after changing its payload. We will sign
+the new final package locally here and regenerate/re-sign its catalog.
+
+Include a narrowly scoped retest/update/removal plan for this PC: its old test
+device is disabled (`ROOT\MEDIA\0002`, `oem49.inf`), its service stopped, and
+Realtek/VB-CABLE retained. These IDs must be reverified here, not blindly reused
+on the worker or hard-coded into shipping code. Preserve local test certificate
+ownership and original unsigned vs signed checksums. No new installation on the
+destination PC is authorized by this handoff alone; report the new artifact and
+evidence first so this chat can inspect, sign and perform the next controlled test.
+
+Keep PR #13 draft. Update its description around the final fix and results;
+retain the distinction between successful build, successful kernel load, valid
+stream negotiation and measured audio behavior. Heavy work belongs on the Linux
+machine's Windows worker, not this resource-limited Windows desktop.
+
 Status: fresh build and unsigned-input packaging completed. The report below
 supersedes the initial build-only request; runtime acceptance is still pending.
 

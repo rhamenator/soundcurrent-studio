@@ -1,0 +1,21 @@
+ENDPOINT {0.0.0.00000000}.{6e82412c-4084-46e9-804f-bdca7ebe7329}
+GetDevice=0x0
+EndpointVolume=0x88890008
+AudioClient=0x0
+GetMixFormat=0x88890008
+Shared48kStereo16Support=0x88890008
+InitializeShared=0x88890008
+ENDPOINT {0.0.0.00000000}.{3ff2d4ab-b99f-44f7-89c5-9ebbd7bdd8c8}
+GetDevice=0x0
+EndpointVolume=0x88890008
+AudioClient=0x0
+GetMixFormat=0x88890008
+Shared48kStereo16Support=0x88890008
+InitializeShared=0x88890008
+ENDPOINT {0.0.1.00000000}.{17c656d0-1382-4ef7-9bf5-918555b2fb57}
+GetDevice=0x0
+EndpointVolume=0x88890008
+AudioClient=0x0
+GetMixFormat=0x88890008
+Shared48kStereo16Support=0x88890008
+InitializeShared=0x88890008
