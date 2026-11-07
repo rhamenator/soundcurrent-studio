@@ -50,5 +50,8 @@ jobs:
             build-windows-native/Release/soundcurrent-audio-state.exe
             build-windows-native/Release/soundcurrent-native-format-probe.exe
             build-windows-native/native/windows/driver-manager/Release/soundcurrent-driver-manager.exe
+            build-windows-native/Release/soundcurrent-microphone-access-test.exe
+            build-windows-native/Release/soundcurrent-responsive-ui-test.exe
+            build-windows-native/Release/soundcurrent-windows-microphone-privacy-test.exe
             build-windows-native/ui-self-test.log
             build-windows-native/installed-runtime/**
