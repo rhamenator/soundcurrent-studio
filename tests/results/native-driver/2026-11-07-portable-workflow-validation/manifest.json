@@ -1,0 +1,29 @@
+{
+  "sourceCommit": "6d655d40d333fa9586583d78dc5f07c4fc36435b",
+  "configuration": "Release",
+  "architecture": "x64",
+  "packages": [
+    {
+      "id": "Microsoft.Windows.WDK.x64",
+      "version": "10.0.28000.2526",
+      "sha256": "63C939FB5A79295BF40E941DB592681272219B04EDFF095FE2F3D123E5579A90"
+    },
+    {
+      "id": "Microsoft.Windows.SDK.CPP",
+      "version": "10.0.28000.2526",
+      "sha256": "BE1B419491607EAE6F7C57844EBAB39FACE9643C51E2AF1D9176A3BA0D0B23FC"
+    },
+    {
+      "id": "Microsoft.Windows.SDK.CPP.x64",
+      "version": "10.0.28000.2526",
+      "sha256": "A9CAE2A8C5DA7F5DC5838AE6A76D06D0D2E2FDC3D8CFC69CA6C184E4B9193A00"
+    }
+  ],
+  "msbuild": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+  "msbuildVersion": "18.11.1.51303",
+  "dotnet": "10.0.403",
+  "builtAtUtc": "2026-11-07T21:31:56.2587218Z",
+  "runtimeTested": false,
+  "signing": "unsigned",
+  "reproducibility": "Same source/toolchain and validations; timestamps/signatures are not byte-for-byte reproducible"
+}

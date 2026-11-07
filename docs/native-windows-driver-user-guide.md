@@ -71,6 +71,12 @@ not a complete example of that future production distribution.
    gain compensation for an EQ/profile difference.
 
 Logs are retained under `%LOCALAPPDATA%\SoundCurrent\driver-setup-logs`.
+Use Windows PowerShell 5.1 or PowerShell 7 with the standard modules available.
+If script execution is restricted, use a process-scoped `-ExecutionPolicy
+RemoteSigned` invocation rather than changing machine policy. After verifying
+the release hashes and reviewing scripts, unblock those verified downloaded
+scripts if Windows marked them as internet files. Organizational policy may
+require your administrator's approved deployment method.
 The manager validates package identity, trust and catalog binding, records
 ownership and imported packages, avoids duplicate root creation, and retains
 shared EQ/Studio ownership. Status absence is distinct from a setup error.

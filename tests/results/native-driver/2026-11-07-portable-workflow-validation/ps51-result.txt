@@ -1,0 +1,1 @@
+PASS: Windows PowerShell 5.1.26100.9818 parsing, Status, unsigned Verify rejection
