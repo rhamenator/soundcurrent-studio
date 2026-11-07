@@ -15,6 +15,8 @@ Abstract:
 #ifndef _SYSVAD_MINIPAIRS_H_
 #define _SYSVAD_MINIPAIRS_H_
 
+#include <devpkey.h>
+
 #include "speakertopo.h"
 #include "speakertoptable.h"
 #include "speakerwavtable.h"
@@ -503,18 +505,31 @@ ENDPOINT_MINIPAIR MicArray3Miniports =
 };
 
 // Dedicated feed and capture endpoints share only this adapter's mic queue.
+// Set the unified interface property explicitly before PortCls registration.
+// INF FriendlyName registry strings alone fell back to the adapter name on
+// Windows 11, making Studio classify every endpoint as playback.
+static WCHAR ScMicFeedName[] = L"SoundCurrent Microphone Feed";
+static WCHAR ScMicCaptureName[] = L"SoundCurrent Microphone";
+static const SYSVAD_DEVPROPERTY ScMicFeedProperties[] = {
+    {&DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_TYPE_STRING,
+     sizeof(ScMicFeedName), ScMicFeedName}
+};
+static const SYSVAD_DEVPROPERTY ScMicCaptureProperties[] = {
+    {&DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_TYPE_STRING,
+     sizeof(ScMicCaptureName), ScMicCaptureName}
+};
 static ENDPOINT_MINIPAIR ScMicFeedMiniports = {
     eSoundCurrentMicFeedDevice,L"TopologySoundCurrentMicFeed",NULL,
-    CreateMiniportTopologySYSVAD,&SpeakerTopoMiniportFilterDescriptor,0,NULL,
-    L"WaveSoundCurrentMicFeed",NULL,CreateMiniportWaveRTSYSVAD,&ScMicFeedDescriptor,0,NULL,
+    CreateMiniportTopologySYSVAD,&SpeakerTopoMiniportFilterDescriptor,SIZEOF_ARRAY(ScMicFeedProperties),ScMicFeedProperties,
+    L"WaveSoundCurrentMicFeed",NULL,CreateMiniportWaveRTSYSVAD,&ScMicFeedDescriptor,SIZEOF_ARRAY(ScMicFeedProperties),ScMicFeedProperties,
     2,ScPinFormats,SIZEOF_ARRAY(ScPinFormats),
     SpeakerTopologyPhysicalConnections,SIZEOF_ARRAY(SpeakerTopologyPhysicalConnections),
     ENDPOINT_NO_FLAGS,NULL,0,NULL
 };
 static ENDPOINT_MINIPAIR ScMicCaptureMiniports = {
     eSoundCurrentMicCaptureDevice,L"TopologySoundCurrentMic",NULL,
-    CreateMiniportTopologySYSVAD,&MicInTopoMiniportFilterDescriptor,0,NULL,
-    L"WaveSoundCurrentMic",NULL,CreateMiniportWaveRTSYSVAD,&ScMicCaptureDescriptor,0,NULL,
+    CreateMiniportTopologySYSVAD,&MicInTopoMiniportFilterDescriptor,SIZEOF_ARRAY(ScMicCaptureProperties),ScMicCaptureProperties,
+    L"WaveSoundCurrentMic",NULL,CreateMiniportWaveRTSYSVAD,&ScMicCaptureDescriptor,SIZEOF_ARRAY(ScMicCaptureProperties),ScMicCaptureProperties,
     2,ScMicCaptureFormats,SIZEOF_ARRAY(ScMicCaptureFormats),
     MicInTopologyPhysicalConnections,SIZEOF_ARRAY(MicInTopologyPhysicalConnections),
     ENDPOINT_NO_FLAGS,NULL,0,NULL

@@ -16,6 +16,7 @@
 #include <cstdio>
 #include <cstring>
 #include <memory>
+#include <iostream>
 #include <numbers>
 #include <stdexcept>
 #include <string>
@@ -58,7 +59,7 @@ public:
 struct Measurement { double left = 0, right = 0; std::size_t frames = 0; };
 class Probe {
 public:
-    Probe(const std::wstring &renderId, const std::wstring &loopbackId) {
+    Probe(const std::wstring &renderId, const std::wstring &loopbackId, bool microphone = false) {
         ComPtr<IMMDeviceEnumerator> devices;
         check(CoCreateInstance(__uuidof(MMDeviceEnumerator), nullptr, CLSCTX_ALL,
                                IID_PPV_ARGS(devices.GetAddressOf())), "Enumerator");
@@ -86,7 +87,7 @@ public:
                     captureFormat_->nSamplesPerSec, captureFormat_->nChannels);
         check(render_->Initialize(AUDCLNT_SHAREMODE_SHARED, 0, 1000000, 0,
                                    renderFormat_.get(), nullptr), "Tone initialize");
-        check(capture_->Initialize(AUDCLNT_SHAREMODE_SHARED, AUDCLNT_STREAMFLAGS_LOOPBACK,
+        check(capture_->Initialize(AUDCLNT_SHAREMODE_SHARED, microphone ? 0 : AUDCLNT_STREAMFLAGS_LOOPBACK,
                                     1000000, 0, captureFormat_.get(), nullptr), "Loopback initialize");
         check(render_->GetBufferSize(&capacity_), "Tone buffer size");
         check(render_->GetService(IID_PPV_ARGS(writer_.GetAddressOf())), "Tone writer");
@@ -160,27 +161,46 @@ int main(int argc, char **argv) {
     std::setvbuf(stdout, nullptr, _IONBF, 0);
     try {
         check(CoInitializeEx(nullptr, COINIT_MULTITHREADED), "COM");
-        std::wstring cableInput, cableOutput, speakers;
+        const bool native = argc == 2 && std::string(argv[1]) == "--run-native";
+        const bool nativeMic = argc == 2 && std::string(argv[1]) == "--run-native-mic";
+        std::wstring cableInput, cableOutput, speakers, nativePlayback, nativeFeed, nativeCapture;
         for (bool capture : {false, true}) {
             for (const auto &device : soundcurrent::windowsAudioEndpoints(capture)) {
                 // Keep narrow console output independent of the Windows console code page.
                 const std::string name(device.name.begin(), device.name.end());
                 std::printf("%s: %s\n", capture ? "Capture" : "Render", name.c_str());
+                std::wcout << L"  id=" << device.id << L" playback=" << device.soundCurrent
+                    << L" feed=" << device.soundCurrentMicFeed << L" microphone=" << device.soundCurrentMicCapture << L'\n';
+                if (!capture && device.soundCurrent) nativePlayback = device.id;
+                if (!capture && device.soundCurrentMicFeed) nativeFeed = device.id;
+                if (capture && device.soundCurrentMicCapture) nativeCapture = device.id;
                 if (!capture && device.name.find(L"CABLE Input") != std::wstring::npos) cableInput = device.id;
                 else if (capture && device.name.find(L"CABLE Output") != std::wstring::npos) cableOutput = device.id;
-                else if (!capture && device.name.find(L"VB-Audio") == std::wstring::npos && speakers.empty()) speakers = device.id;
+                else if (!capture && !device.virtualCable && device.id == soundcurrent::windowsDefaultOutputId()) speakers = device.id;
             }
         }
         const bool physicalLoopback = argc == 2 && std::string(argv[1]) == "--run-loopback-physical";
-        const bool loopback = physicalLoopback || (argc == 2 && std::string(argv[1]) == "--run-loopback");
-        if (argc != 2 || (std::string(argv[1]) != "--run" && !loopback)) {
+        const bool loopback = native || physicalLoopback || (argc == 2 && std::string(argv[1]) == "--run-loopback");
+        if (argc != 2 || (std::string(argv[1]) != "--run" && !loopback && !nativeMic)) {
             std::puts("Use --run or --run-loopback in an isolated Windows test system to play a -34 dBFS test tone.");
             return 0;
         }
+        if (nativeMic) {
+            if (nativeFeed.empty() || nativeCapture.empty()) throw std::runtime_error("Native microphone endpoint identity missing");
+            TestSourceVolume sourceVolume(nativeFeed);
+            Probe probe(nativeFeed, nativeCapture, true);
+            const auto measured = probe.measure(997, 4000);
+            std::printf("Native microphone transport frames=%zu RMS L=%.6f R=%.6f\n", measured.frames, measured.left, measured.right);
+            if (measured.left < .005 || measured.right < .005 || measured.left > .03 || measured.right > .03)
+                throw std::runtime_error("Native microphone transport missing or incorrect signal level");
+            std::puts("PASS: native microphone feed reaches capture with bounded stereo signal");
+            return 0;
+        }
+        if (native) { cableInput = nativePlayback; cableOutput = nativeCapture; }
         if (cableInput.empty() || cableOutput.empty() || speakers.empty())
             throw std::runtime_error("VB-CABLE and a physical stereo output are required");
         if (physicalLoopback) std::swap(cableInput, speakers);
-        if (!physicalLoopback) {
+        if (!physicalLoopback && !native) {
         std::array<std::wstring, 3> originalDefaults;
         for (int i = 0; i < 3; ++i) originalDefaults[i] = soundcurrent::windowsDefaultEndpointId(false, i);
         {
