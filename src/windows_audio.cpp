@@ -9,6 +9,7 @@
 #include <avrt.h>
 #include <endpointvolume.h>
 #include <mmdeviceapi.h>
+#include <devicetopology.h>
 #include <mmreg.h>
 #include <propvarutil.h>
 #include <initguid.h>
@@ -191,10 +192,24 @@ std::vector<AudioEndpoint> windowsAudioEndpoints(bool capture) {
         if (SUCCEEDED(properties->GetValue(PKEY_DeviceInterface_FriendlyName, &interfaceName)) &&
             interfaceName.vt == VT_LPWSTR) {
             const std::wstring interfaceText = interfaceName.pwszVal;
-            const auto kind = managedEndpointKind(interfaceText);
+            auto kind = ManagedEndpointKind::Other;
+            if (managedEndpointKind(interfaceText) != ManagedEndpointKind::Other) {
+                ComPtr<IDeviceTopology> topology;
+                ComPtr<IConnector> connector;
+                LPWSTR connectedId = nullptr;
+                if (SUCCEEDED(device->Activate(__uuidof(IDeviceTopology), CLSCTX_ALL, nullptr,
+                        reinterpret_cast<void **>(topology.GetAddressOf()))) &&
+                    SUCCEEDED(topology->GetConnector(0, connector.GetAddressOf())) &&
+                    SUCCEEDED(connector->GetDeviceIdConnectedTo(&connectedId))) {
+                    kind = managedTopologyKind(interfaceText, connectedId, capture);
+                }
+                CoTaskMemFree(connectedId);
+            }
             endpoint.soundCurrent = kind == ManagedEndpointKind::Playback;
             endpoint.soundCurrentMicFeed = kind == ManagedEndpointKind::MicrophoneFeed;
             endpoint.soundCurrentMicCapture = kind == ManagedEndpointKind::MicrophoneCapture;
+            if (endpoint.soundCurrentMicFeed) endpoint.name = L"SoundCurrent Microphone Feed";
+            if (endpoint.soundCurrentMicCapture) endpoint.name = L"SoundCurrent Microphone";
             endpoint.virtualCable = kind != ManagedEndpointKind::Other || interfaceText.find(L"VB-Audio") != std::wstring::npos;
         }
         PropVariantClear(&interfaceName);

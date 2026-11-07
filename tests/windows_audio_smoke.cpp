@@ -196,7 +196,11 @@ int main(int argc, char **argv) {
             std::puts("PASS: native microphone feed reaches capture with bounded stereo signal");
             return 0;
         }
-        if (native) { cableInput = nativePlayback; cableOutput = nativeCapture; }
+        if (native) {
+            cableInput = nativePlayback; cableOutput = nativeCapture; speakers = nativeFeed;
+            if (nativeFeed.empty() || nativeCapture.empty()) throw std::runtime_error("Native microphone endpoint identity missing");
+            std::puts("Native isolated chain: playback -> Studio loopback bridge -> mic feed -> mic capture");
+        }
         if (cableInput.empty() || cableOutput.empty() || speakers.empty())
             throw std::runtime_error("VB-CABLE and a physical stereo output are required");
         if (physicalLoopback) std::swap(cableInput, speakers);
@@ -221,7 +225,7 @@ int main(int argc, char **argv) {
         });
         bridge.setProfile({}, 0, 0, true);
         if (!bridge.start(loopback ? cableInput : cableOutput, speakers, false, loopback)) throw std::runtime_error(bridge.error());
-        Probe probe(cableInput, speakers);
+        Probe probe(cableInput, native ? nativeCapture : speakers, native);
         const auto flat = probe.measure(1000);
         std::printf("Captured meter samples: %zu\n", bridge.takeMeterPcm().size());
         std::printf("Flat frames: %zu, bridge peak: %.6f, RMS: %.6f / %.6f\n", flat.frames, bridge.peak(), flat.left, flat.right);
@@ -246,8 +250,12 @@ int main(int argc, char **argv) {
         if (std::abs(bypassDb) > 0.5) throw std::runtime_error("Bypass failed");
         bridge.setProfile({}, 0, -100, true);
         const auto balance = probe.measure(1000);
+        // Native transport is PCM16: Windows float/PCM conversion can dither
+        // a silent channel. Bound it by two 16-bit LSBs, rather than a float
+        // threshold below one quantization step.
+        const double silentLimit = native ? 2.0 / 32768 : flat.right * .001;
         std::printf("Full-left balance RMS: L %.6f, R %.6f\n", balance.left, balance.right);
-        if (std::abs(decibels(balance.left, flat.left)) > 0.5 || balance.right > flat.right * 0.001)
+        if (std::abs(decibels(balance.left, flat.left)) > 0.5 || balance.right > silentLimit)
             throw std::runtime_error("Live balance change failed");
         bridge.stop();
         bridge.setProfile({}, 0, 0, true);
@@ -278,7 +286,7 @@ int main(int argc, char **argv) {
         studio.channels[0].bands.clear(); studio.channels[1].muted = true;
         studio.delay={true,50,.3,.25}; studio.reverb={true,.5,.4,.15};
         bridge.setStudio(studio,identity); const auto effects = probe.measure(1000);
-        if (effects.left < .0001 || effects.right > studioFlat.right * .001)
+        if (effects.left < .0001 || effects.right > (native ? silentLimit : studioFlat.right * .001))
             throw std::runtime_error("Studio effects or mute failed");
         studio.bypass=true;bridge.setStudio(studio,identity);const auto studioBypass=probe.measure(1000);
         if(std::abs(decibels(studioBypass.left,studioFlat.left))>.5 ||
