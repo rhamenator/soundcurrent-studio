@@ -7,6 +7,7 @@ namespace soundcurrent::i18n {
 // Desktop boundary only. Backend diagnostic strings and processing identifiers
 // remain invariant; unknown/external messages retain their original detail.
 inline QString audioErrorText(const QString &diagnostic) {
+    if(diagnostic==QStringLiteral("Microphone access is disabled."))return SC_TR("Microphone access is disabled.");
     if (diagnostic == QStringLiteral("PipeWire stream failed"))
         return SC_TR("PipeWire stream failed");
     if (diagnostic == QStringLiteral("Missing, duplicate or oversized WAVE format"))

@@ -1171,6 +1171,10 @@ Vil du likevel sletta ho?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Disable microphone access</source>
+      <translation>Slå av mikrofontilgang</translation>
+    </message>
+    <message>
       <source>Discard</source>
       <translation>Forkast</translation>
     </message>
@@ -2281,6 +2285,10 @@ Vil du likevel sletta ho?</translation>
       <translation>Mikrofon-EQ er av.</translation>
     </message>
     <message>
+      <source>Microphone access is disabled.</source>
+      <translation>Mikrofontilgang er slått av.</translation>
+    </message>
+    <message>
       <source>Microphone audio bridge did not start</source>
       <translation>Lydbrua til mikrofonen starta ikkje</translation>
     </message>
@@ -2837,6 +2845,10 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Quiet logarithmic sweep</source>
       <translation>Stille logaritmisk sveip</translation>
+    </message>
+    <message>
+      <source>Quit</source>
+      <translation>Avslutt</translation>
     </message>
     <message>
       <source>Quit %1 before uninstalling it.</source>

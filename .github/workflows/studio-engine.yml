@@ -69,3 +69,9 @@ jobs:
         run: ctest --test-dir build-localization -R '^localization$' --output-on-failure
       - name: Check actual X11 editing menus and platform-theme buttons
         run: QT_QPA_PLATFORM=xcb xvfb-run -a timeout 30s ./build-localization/soundcurrent-localization-test
+      - name: Build microphone privacy and responsive desktop fixtures
+        run: cmake --build build-localization --target soundcurrent-studio soundcurrent-analysis-test soundcurrent-microphone-access-test soundcurrent-responsive-ui-test --parallel 2
+      - name: Check microphone privacy and responsive desktop behavior
+        run: ctest --test-dir build-localization -R '^(shared-ui|microphone-access|responsive-ui|analysis-views.*|calibration-worker-localization)$' --output-on-failure
+      - name: Check small X11 desktop with larger fonts
+        run: QT_QPA_PLATFORM=xcb SOUNDCURRENT_TEST_FONT_SCALE=1.5 xvfb-run -a -s '-screen 0 800x600x24' timeout 60s ./build-localization/soundcurrent-studio --ui-self-test

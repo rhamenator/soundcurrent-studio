@@ -430,3 +430,23 @@ add_test(NAME analysis-views-fr COMMAND soundcurrent-analysis-test --language fr
 add_test(NAME analysis-views-ar COMMAND soundcurrent-analysis-test --language ar)
 set_tests_properties(analysis-views-fr analysis-views-ar PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen" TIMEOUT 60)
 endif() # Analysis desktop UI/tests
+
+add_executable(soundcurrent-microphone-access-test tests/microphone_access.cpp)
+target_include_directories(soundcurrent-microphone-access-test PRIVATE src)
+target_compile_features(soundcurrent-microphone-access-test PRIVATE cxx_std_20)
+add_test(NAME microphone-access COMMAND soundcurrent-microphone-access-test)
+
+if(SOUNDCURRENT_BUILD_DESKTOP)
+add_executable(soundcurrent-responsive-ui-test tests/responsive_ui.cpp)
+target_include_directories(soundcurrent-responsive-ui-test PRIVATE src)
+target_link_libraries(soundcurrent-responsive-ui-test PRIVATE Qt6::Widgets)
+target_compile_features(soundcurrent-responsive-ui-test PRIVATE cxx_std_20)
+add_test(NAME responsive-ui COMMAND soundcurrent-responsive-ui-test)
+set_tests_properties(responsive-ui PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+endif() # Responsive desktop UI tests
+
+if(TARGET soundcurrent-windows-audio)
+add_executable(soundcurrent-windows-microphone-privacy-test tests/windows_microphone_privacy.cpp)
+target_link_libraries(soundcurrent-windows-microphone-privacy-test PRIVATE soundcurrent-windows-audio)
+add_test(NAME windows-microphone-privacy COMMAND soundcurrent-windows-microphone-privacy-test)
+endif()

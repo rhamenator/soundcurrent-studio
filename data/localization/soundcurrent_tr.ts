@@ -1171,6 +1171,10 @@ Yine de silmek istiyor musunuz?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Disable microphone access</source>
+      <translation>Mikrofon erişimini devre dışı bırak</translation>
+    </message>
+    <message>
       <source>Discard</source>
       <translation>Değişiklikleri at</translation>
     </message>
@@ -2281,6 +2285,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Mikrofon EQ'su kapalı.</translation>
     </message>
     <message>
+      <source>Microphone access is disabled.</source>
+      <translation>Mikrofon erişimi devre dışı.</translation>
+    </message>
+    <message>
       <source>Microphone audio bridge did not start</source>
       <translation>Mikrofon ses köprüsü başlatılamadı</translation>
     </message>
@@ -2837,6 +2845,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Quiet logarithmic sweep</source>
       <translation>Düşük seviyeli logaritmik frekans taraması</translation>
+    </message>
+    <message>
+      <source>Quit</source>
+      <translation>Çık</translation>
     </message>
     <message>
       <source>Quit %1 before uninstalling it.</source>
