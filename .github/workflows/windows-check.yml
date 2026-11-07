@@ -19,6 +19,9 @@ jobs:
       - name: Install verified Qt SDK
         shell: pwsh
         run: ./scripts/install-windows-qt.ps1
+      - name: Check signing input validation with Windows PowerShell 5.1
+        shell: powershell
+        run: ./tests/windows_driver_signing_inputs.ps1
       - name: Ensure installer tools are available
         shell: pwsh
         run: |
