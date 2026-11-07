@@ -189,3 +189,28 @@ Publish a new draft artifact; never replace the original failing/passing ZIPs.
 Include readable user setup/rollback instructions and the supported scripts in
 the distribution. Update PR #13 and the retrieval guide with precise scope,
 test gaps and latest artifact checksum.
+
+## Independent-worker runner (follow-up audit)
+
+The original archived run-integration.ps1/local-integration-runner.ps1 is historical:
+it relies on the destination PC's temporary AudioCheck.cs and hard-coded paths.
+Use the tracked `tests/windows_native_integration.ps1` instead. Its native
+`soundcurrent-audio-state` helper enumerates endpoints without opening a microphone,
+journals all available default roles and endpoint master levels/mute, restores them
+in a finally path and compares the result. No temporary C# source is required.
+Build the `soundcurrent-audio-state` and `soundcurrent-native-format-probe` targets
+alongside the listed app/test targets and deploy their matching Qt/runtime files.
+The Windows CI artifact includes these helpers and the endpoint identity test.
+
+```powershell
+.\tests\windows_native_integration.ps1 -Run `
+  -BinaryDirectory C:\work\deployed-test-binaries `
+  -ResultDirectory C:\artifacts\native-independent-run1
+```
+
+Run only on an independent authorized test worker, with no other SoundCurrent
+processor running. It discovers endpoint IDs from the adapter/topology identity,
+probes all three formats, runs the six integration cases, preserves the explicit
+GUI completion marker, and records exact exit codes. An unavailable endpoint or
+failed restoration is a failure, not a passing result. This improves reproducibility;
+it does not replace real driver installation, reboot or shared-owner lifecycle tests.
