@@ -18,6 +18,7 @@
 #include <stdexcept>
 #include <cwctype>
 #include "../../../src/windows_audio_session_gate.h"
+#include "install_audio_defaults.h"
 namespace fs=std::filesystem;
 constexpr wchar_t hardware[]=L"Root\\SOUNDCURRENTVAD";
 constexpr wchar_t ownersKey[]=L"Software\\SoundCurrent\\AudioDriver\\Owners";
@@ -315,6 +316,7 @@ int run(int argc,wchar_t** argv){
   }
   packages.cleanup();owners.remove(owner);return reboot?3010:0;
  }
+ InstallAudioDefaults defaults;
  pending.recover(packages);
  auto package=stage(fs::absolute(argv[3]));bool intentRecorded=false;bool created=false;SP_DEVINFO_DATA device{};device.cbSize=sizeof(device);
  try{
@@ -334,7 +336,7 @@ int run(int argc,wchar_t** argv){
   BOOL reboot=FALSE;
   // Windows enforces kernel signing here. No test mode or force-install flag.
   require(UpdateDriverForPlugAndPlayDevicesW(nullptr,hardware,(package/L"soundcurrentvad.inf").c_str(),0,&reboot),"Windows rejected the driver package or its kernel signature");
-  pending.finishCleanup();intentRecorded=false;return reboot?3010:0;
- }catch(...){if(created)SetupDiCallClassInstaller(DIF_REMOVE,devices.handle,&device);if(!intentRecorded)fs::remove_all(package);throw;}
+  pending.finishCleanup();intentRecorded=false;defaults.restore();return reboot?3010:0;
+ }catch(...){if(created)SetupDiCallClassInstaller(DIF_REMOVE,devices.handle,&device);if(!intentRecorded)fs::remove_all(package);try{defaults.restore();}catch(...){std::cerr<<"Restore your Windows default speakers/microphone in Sound settings before retrying setup.\n";}throw;}
 }
 int main(){int count=0;auto args=CommandLineToArgvW(GetCommandLineW(),&count);try{require(args!=nullptr,"Invalid command line");int result=run(count,args);LocalFree(args);return result;}catch(const std::exception& e){if(args)LocalFree(args);std::cerr<<e.what()<<'\n';return 30;}}
