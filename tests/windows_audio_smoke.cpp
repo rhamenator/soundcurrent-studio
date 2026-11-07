@@ -203,6 +203,26 @@ int main(int argc, char **argv) {
             std::printf("Native microphone silence RMS L=%.8f R=%.8f\n", silence.left, silence.right);
             if (silence.left > 2.0/32768 || silence.right > 2.0/32768)
                 throw std::runtime_error("Native microphone retained signal after producer silence");
+            sourceVolume.set(1, true);
+            const auto feedMuted = probe.measure(997);
+            std::printf("Native feed muted RMS L=%.8f R=%.8f\n", feedMuted.left, feedMuted.right);
+            if (feedMuted.left > 2.0/32768 || feedMuted.right > 2.0/32768)
+                throw std::runtime_error("Native microphone feed mute did not silence capture");
+            sourceVolume.set(1, false);
+            TestSourceVolume captureVolume(nativeCapture);
+            const auto captureFullDb = captureVolume.set(1, false);
+            const auto captureFull = probe.measure(997);
+            const auto captureHalfDb = captureVolume.set(.5f, false);
+            const auto captureHalf = probe.measure(997);
+            const auto captureChange = decibels(captureHalf.left, captureFull.left);
+            std::printf("Native capture volume measured %.2f dB, endpoint reported %.2f dB\n", captureChange, captureHalfDb-captureFullDb);
+            if (std::abs(captureChange-(captureHalfDb-captureFullDb)) > .7)
+                throw std::runtime_error("Native microphone capture volume did not affect transport");
+            captureVolume.set(.5f, true);
+            const auto captureMuted = probe.measure(997);
+            std::printf("Native capture muted RMS L=%.8f R=%.8f\n", captureMuted.left, captureMuted.right);
+            if (captureMuted.left > 2.0/32768 || captureMuted.right > 2.0/32768)
+                throw std::runtime_error("Native microphone capture mute did not silence transport");
             std::puts("PASS: native microphone feed reaches capture with bounded stereo signal");
             return 0;
         }
