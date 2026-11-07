@@ -2,6 +2,22 @@
 
 ## Follow-up: installed for normal use
 
+Automatic startup was subsequently enabled at the user's request using the
+standard per-user `Run` entry `SoundCurrent`, pointing to the installed Studio
+with `--background`. The saved command was read back and exercised after a
+normal quit. Studio selected native playback for all three output roles;
+endpoint volume, mute and unmute round-trips passed, restoring 0.71131474 and
+unmuted. The native PnP device remains healthy, problem code zero, `oem54.inf`;
+its normal PnP-managed service start configuration was retained. No boot-policy
+change or Windows restart was performed. This validates startup-style launch,
+not the actual post-reboot sign-in sequence, which remains untested.
+
+The startup change journal, verification log and `restore-startup.ps1` are in
+the installation backup directory below. Studio rollback now also restores the
+saved startup configuration. Both rollback scripts were syntax-checked, not
+executed against the working configuration. Studio is left running in the
+background as it will at sign-in.
+
 At the user's request, the exact tested Studio executable and route guardian
 were installed into the existing per-user installation. SHA-256 values match
 the previously recorded tested binaries. Matching Qt 6.5.3/MinGW libraries and
