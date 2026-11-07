@@ -1,0 +1,11 @@
+{
+  "Name": "SoundCurrent",
+  "Command": "\"C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\soundcurrent-studio.exe\" --background",
+  "VerifiedBackgroundLaunch": true,
+  "ActualWindowsRebootTested": false,
+  "NativeDevice": "ROOT\\MEDIA\\0002",
+  "PublishedInf": "oem54.inf",
+  "StudioPID": 24164,
+  "StudioResponding": true,
+  "Rollback": "C:\\Users\\wyurd\\Downloads\\SoundCurrent-Studio-native-install-20261107\\restore-startup.ps1"
+}

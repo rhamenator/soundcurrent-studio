@@ -1,0 +1,1 @@
+PASS: startup-style --background launch selects native playback for all three roles; volume/mute/unmute control round-trip passed; restored level=0.71131474 mute=False
