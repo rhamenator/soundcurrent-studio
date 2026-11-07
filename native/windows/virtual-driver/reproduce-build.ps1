@@ -50,8 +50,8 @@ try{
    foreach($entry in $archive.Entries){
     $path=[IO.Path]::GetFullPath((Join-Path $dest $entry.FullName))
     if(!$path.StartsWith($dest.TrimEnd('\')+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Package entry outside restore directory'}
-    if(!$entry.Name){New-Item -ItemType Directory -Force $path|Out-Null;continue}
-    New-Item -ItemType Directory -Force ([IO.Path]::GetDirectoryName($path))|Out-Null
+    if(!$entry.Name){[IO.Directory]::CreateDirectory($path)|Out-Null;continue}
+    [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($path))|Out-Null
     [IO.Compression.ZipFileExtensions]::ExtractToFile($entry,$path,$true)
    }
   }finally{$archive.Dispose()}
