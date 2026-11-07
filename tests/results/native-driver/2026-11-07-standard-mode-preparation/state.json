@@ -1,0 +1,14 @@
+{
+  "NextBootTestSigning": "No",
+  "RebootPerformed": false,
+  "SecureBootReenablePending": true,
+  "NativeInstance": "ROOT\\MEDIA\\0002",
+  "PublishedInf": "oem54.inf",
+  "NativeProblemCode": 22,
+  "NativeService": "Stopped",
+  "WDKRetained": true,
+  "TestRootTrustPresent": false,
+  "TestPublisherTrustPresent": false,
+  "StartupCommand": "\"C:\\Users\\wyurd\\AppData\\Local\\Programs\\SoundCurrent Studio\\soundcurrent-studio.exe\" --background",
+  "VBCableVolumeControl": 1
+}

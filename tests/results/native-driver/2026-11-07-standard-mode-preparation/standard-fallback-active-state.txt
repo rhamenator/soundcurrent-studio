@@ -1,0 +1,42 @@
+Default role=0 {0.0.0.00000000}.{b10d4d90-bb31-4469-9725-ef7d206d85bd}
+Default role=1 {0.0.0.00000000}.{b10d4d90-bb31-4469-9725-ef7d206d85bd}
+Default role=2 {0.0.0.00000000}.{b10d4d90-bb31-4469-9725-ef7d206d85bd}
+{0.0.0.00000000}.{0251edad-ca47-4384-8b82-7e4f649dfa8b} master=1 dB=0 mute=False range=-65.25..0
+ channel=0 scalar=1 dB=0
+ channel=1 scalar=1 dB=0
+{0.0.0.00000000}.{b10d4d90-bb31-4469-9725-ef7d206d85bd} master=0.7 dB=-5.4097967 mute=False range=-96..0
+ channel=0 scalar=0.7 dB=-5.4097967
+ channel=1 scalar=0.6999999 dB=-5.409798
+ channel=2 scalar=0.6999999 dB=-5.409798
+ channel=3 scalar=0.6999999 dB=-5.409798
+ channel=4 scalar=0.6999999 dB=-5.409798
+ channel=5 scalar=0.6999999 dB=-5.409798
+ channel=6 scalar=0.6999999 dB=-5.409798
+ channel=7 scalar=0.6999999 dB=-5.409798
+ channel=8 scalar=0.6999999 dB=-5.409798
+ channel=9 scalar=0.6999999 dB=-5.409798
+ channel=10 scalar=0.6999999 dB=-5.409798
+ channel=11 scalar=0.6999999 dB=-5.409798
+ channel=12 scalar=0.6999999 dB=-5.409798
+ channel=13 scalar=0.6999999 dB=-5.409798
+ channel=14 scalar=0.6999999 dB=-5.409798
+ channel=15 scalar=0.6999999 dB=-5.409798
+{0.0.0.00000000}.{ed1f82ac-4fe2-4df7-984a-8c7c741c03d5} master=0.6958476 dB=-5.5 mute=False range=-96..0
+ channel=0 scalar=0.6958476 dB=-5.5
+ channel=1 scalar=0.6958476 dB=-5.5
+ channel=2 scalar=0.6958476 dB=-5.5
+ channel=3 scalar=0.6958476 dB=-5.5
+ channel=4 scalar=0.6958476 dB=-5.5
+ channel=5 scalar=0.6958476 dB=-5.5
+ channel=6 scalar=0.6958476 dB=-5.5
+ channel=7 scalar=0.6958476 dB=-5.5
+ channel=8 scalar=0.6958476 dB=-5.5
+ channel=9 scalar=0.6958476 dB=-5.5
+ channel=10 scalar=0.6958476 dB=-5.5
+ channel=11 scalar=0.6958476 dB=-5.5
+ channel=12 scalar=0.6958476 dB=-5.5
+ channel=13 scalar=0.6958476 dB=-5.5
+ channel=14 scalar=0.6958476 dB=-5.5
+ channel=15 scalar=0.6958476 dB=-5.5
+{0.0.0.00000000}.{f7373c9e-fb11-4c24-8ca2-eaeaf5e9af8c} master=1 dB=0 mute=False range=-96..0
+ channel=0 scalar=1 dB=0

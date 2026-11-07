@@ -1,5 +1,35 @@
 # Native Windows transport and Studio integration — November 7, 2026
 
+## Latest machine state: prepared to leave test mode
+
+After confirming all PR changes were pushed and new Studio issues #14–#18 were
+available, the user requested return to standard Windows mode and explicitly
+asked to retain the WDK. The installed tested Studio build is retained, with
+its sign-in startup entry intact. The exact native test device
+`ROOT\MEDIA\0002 / oem54.inf` is now disabled (problem code 22); its kernel
+service is stopped. The package/source/bundles and nonexportable signing key
+remain preserved for future work. The WDK remains globally installed.
+
+`bcdedit /set {current} testsigning off` succeeded, and the saved boot entry
+reads `testsigning No`. No restart has occurred, so this is the next-boot
+configuration, not verification of a completed standard-mode boot. Secure Boot
+will be re-enabled by the user in firmware during that restart. No other
+boot/security policy was changed. Only the test-added certificate with
+thumbprint `1108F79C7624852BACD68546E3E92CE2DB80D8CE` was removed from
+LocalMachine Root and TrustedPublisher, using its original ownership journal.
+
+Studio now automatically falls back to the installed VB-CABLE route through
+Realtek. The installed GUI enable/disable/re-enable/Quit test and VB-CABLE
+volume/mute/owner-crash/guardian-failure recovery tests passed. VB-CABLE's saved
+Windows Volume Control setting remains 1. Studio is left running in the
+background with all three output roles on CABLE Input. Current user presets
+and gain settings were retained. Previous native test results below remain
+historical evidence, not a claim that the native driver is active now.
+
+The preparation script and complete local boot before/after logs are retained
+in the installation backup directory. Selected non-boot-inventory evidence is
+under `tests/results/native-driver/2026-11-07-standard-mode-preparation/`.
+
 ## Follow-up: installed for normal use
 
 Automatic startup was subsequently enabled at the user's request using the
