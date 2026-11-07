@@ -1,3 +1,4 @@
+#include "microphone_access.h"
 #include "windows_endpoint_identity.h"
 // SPDX-License-Identifier: GPL-3.0-only
 #ifdef _WIN32
@@ -284,6 +285,7 @@ std::vector<std::int16_t> WindowsBridge::takeMeterPcm() {
 WindowsBridge::~WindowsBridge() { stop(); }
 
 bool WindowsBridge::start(std::wstring captureId, std::wstring outputId, bool microphone, bool renderLoopback, int bufferMs) {
+    if(microphone && !soundcurrent::microphone::allowed()){stop();std::lock_guard lock(stateMutex_);error_="Microphone access is disabled.";return false;}
     if (captureId.empty() || outputId.empty() || worker_.joinable()) return false;
     // Capturing the destination's mix would feed processed audio back into itself.
     if ((renderLoopback && microphone) || captureId == outputId) {
@@ -469,7 +471,7 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
         { std::lock_guard lock(stateMutex_); ready_ = true; running_ = true; }
         initialized_.notify_all();
         if (status_) status_(L"Processing audio through the selected output");
-        while (!stopRequested_) {
+        while (!stopRequested_ && (!microphone || soundcurrent::microphone::allowed())) {
             BOOL sourceMuted = FALSE;
             if (loopbackVolume) check(loopbackVolume->GetMute(&sourceMuted), "Read loopback mute");
             Profile pending;
