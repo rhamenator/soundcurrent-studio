@@ -511,11 +511,11 @@ ENDPOINT_MINIPAIR MicArray3Miniports =
 static WCHAR ScMicFeedName[] = L"SoundCurrent Microphone Feed";
 static WCHAR ScMicCaptureName[] = L"SoundCurrent Microphone";
 static const SYSVAD_DEVPROPERTY ScMicFeedProperties[] = {
-    {&DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_TYPE_STRING,
+    {&DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_TYPE_STRING_INDIRECT,
      sizeof(ScMicFeedName), ScMicFeedName}
 };
 static const SYSVAD_DEVPROPERTY ScMicCaptureProperties[] = {
-    {&DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_TYPE_STRING,
+    {&DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_TYPE_STRING_INDIRECT,
      sizeof(ScMicCaptureName), ScMicCaptureName}
 };
 static ENDPOINT_MINIPAIR ScMicFeedMiniports = {
