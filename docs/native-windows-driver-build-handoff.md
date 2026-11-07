@@ -1,5 +1,17 @@
 # Build handoff: native Windows audio driver for local testing
 
+## Latest result: local format fix passes (November 7, 2026)
+
+The destination PC now has a global WDK installation and has built and loaded
+source `69f116b661777cf887615fc05449fefbcd452997`. All three native endpoints
+pass format negotiation and silent stream start/stop, including 15 repeated
+opens. See [the local fix report](native-windows-driver-local-fix-2026-11-07.md)
+for exact changes, evidence, limitations, preserved artifacts and rollback.
+The next sections describe the historical failure and original work request;
+do not overwrite the passing candidate or recreate the existing root device.
+Remaining work includes signal-bearing loopback/microphone transport and
+Studio integration testing, plus independent review. Keep this PR draft.
+
 ## Current task: fix first native runtime failure (November 7, 2026)
 
 The first build below was test-signed and installed on the destination PC.

@@ -1,0 +1,82 @@
+**********************
+PowerShell transcript start
+Start time: 20261107143422
+Username: OPTIPLEX-7040\wyurd
+RunAs User: OPTIPLEX-7040\wyurd
+Configuration Name: 
+Machine: OPTIPLEX-7040 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\powershell\pwsh.dll -NoProfile -File C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-59dbb99b\local-test-signing\build-local-fix.ps1
+Process ID: 11012
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-59dbb99b\local-test-signing\logs\local-driver-build.txt
+
+Restored Microsoft.Windows.WDK.x64
+
+Restored Microsoft.Windows.SDK.CPP
+
+Restored Microsoft.Windows.SDK.CPP.x64
+MSBuild version 18.11.1-1.26513.3+940033be3 for .NET Framework
+
+  Building 'EndpointsCommon' with toolset 'WindowsKernelModeDriver10.0' and the 'Windows Driver' target platform.
+  a2dphpminwavert.cpp
+  a2dphpspeakertopo.cpp
+  a2dphptopo.cpp
+  AudioModuleHelper.cpp
+  bthhfpmictopo.cpp
+  bthhfpminwavert.cpp
+  bthhfpspeakertopo.cpp
+  bthhfptopo.cpp
+  micarraytopo.cpp
+  MiniportAudioEngineNode.cpp
+  MiniportStreamAudioEngineNode.cpp
+  mintopo.cpp
+  minwavert.cpp
+  minwavertstream.cpp
+  NewDelete.cpp
+  speakerhptopo.cpp
+  speakertopo.cpp
+  usbhsminwavert.cpp
+  usbhsmictopo.cpp
+  usbhsspeakertopo.cpp
+  Generating Code...
+  Compiling...
+  usbhstopo.cpp
+  Generating Code...
+  EndpointsCommon.vcxproj -> E:\E-work-current\soundcurrent-studio\native\windows\virtual-driver\vendor\sysvad\Endpoint
+  sCommon\x64\Release\EndpointsCommon.lib
+MSBuild version 18.11.1-1.26513.3+940033be3 for .NET Framework
+
+  Building 'TabletAudioSample' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\soundcurrentvad.inf
+  Stamping [Version] section with DriverVer=11/07/2026,14.35.13.278
+  A2dpHpDevice.cpp
+  adapter.cpp
+  basetopo.cpp
+  BthhfpDevice.cpp
+  common.cpp
+  hw.cpp
+  kshelper.cpp
+  savedata.cpp
+  tonegenerator.cpp
+  UsbHsDevice.cpp
+  hdmitopo.cpp
+  micintopo.cpp
+  spdiftopo.cpp
+  Generating Code...
+  TabletAudioSample.vcxproj -> E:\E-work-current\soundcurrent-studio\native\windows\virtual-driver\vendor\sysvad\Tablet
+  AudioSample\x64\Release\soundcurrentvad.sys
+  Driver is 'Universal'.
+  DrvCat task was skipped as there was no catalog file to process
+**********************
+PowerShell transcript end
+End time: 20261107143528
+**********************

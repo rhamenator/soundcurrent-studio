@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "69f116b661777cf887615fc05449fefbcd452997",
+  "wdk": "10.0.28000.2526",
+  "configuration": "Release",
+  "architecture": "x64",
+  "localTestCertificate": "1108F79C7624852BACD68546E3E92CE2DB80D8CE",
+  "validation": "build, InfVerif, ApiValidator, Inf2Cat and SignTool passed",
+  "runtimeTested": true,
+  "runtimeResult": "All three endpoints pass format negotiation and silent stream start/stop; 15 repeated opens pass. End-to-end signal transport not yet tested."
+}
