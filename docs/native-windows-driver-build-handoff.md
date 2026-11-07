@@ -1,5 +1,10 @@
 # Build handoff: native Windows audio driver for local testing
 
+For new work, follow the [portable build requirements and Codex delivery gates](native-windows-driver-reproduction.md)
+and [end-user setup/rollback instructions](native-windows-driver-user-guide.md).
+The historical bundle scripts are machine-specific evidence, not generic
+installers. New scripts live under `native/windows/virtual-driver/`.
+
 The final tested bundle and every source fix are available through GitHub.
 See [Linux retrieval and checksum instructions](native-windows-driver-linux-retrieval-2026-11-07.md).
 A fresh GitHub download was verified against the frozen local bundle, including
