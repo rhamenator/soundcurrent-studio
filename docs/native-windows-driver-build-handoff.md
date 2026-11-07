@@ -1,5 +1,10 @@
 # Build handoff: native Windows audio driver for local testing
 
+The final tested bundle and every source fix are available through GitHub.
+See [Linux retrieval and checksum instructions](native-windows-driver-linux-retrieval-2026-11-07.md).
+A fresh GitHub download was verified against the frozen local bundle, including
+unsigned/signed driver inputs and the complete source snapshot.
+
 ## Latest: full digital transport and Studio integration pass locally
 
 Source `30d064a0c9f7d75297cf8c9819263b8353a1d98f` was rebuilt, locally signed
