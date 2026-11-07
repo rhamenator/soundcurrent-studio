@@ -1,5 +1,32 @@
 # Retrieve the final Windows native-driver retest bundle from Linux
 
+## Portable instructions and scripts supplement
+
+The same draft release also contains
+`SoundCurrent-native-driver-workflow-0216e38.zip` and its SHA-256 sidecar,
+frozen from commit `0216e38bd3ede28789ebd0c971d4b87b4e3e14e4`.
+It includes developer requirements/reproduction commands, end-user setup and
+rollback guidance, portable build/test-sign/manager-wrapper scripts and their
+validation evidence. It supplements, rather than replaces, the frozen driver
+bundle below; it is not a production installer.
+
+```sh
+gh release download native-driver-test-inputs-30d064a \
+  --repo rhamenator/soundcurrent-studio \
+  --pattern 'SoundCurrent-native-driver-workflow-0216e38.zip*' \
+  --dir native-driver-workflow-0216e38
+```
+
+Supplement ZIP SHA-256:
+`97de410ce15c13254208c6ba80a9e8d4711c0e77b19256396e014ba112d731fd`.
+Read [developer reproduction](native-windows-driver-reproduction.md) and the
+[user guide](native-windows-driver-user-guide.md) on the latest PR branch.
+The new unsigned build script passed a real rebuild and validators. Status,
+unsigned-input rejection and PowerShell compatibility checks passed; full
+first-install/update/shared-owner removal and test signing still require an
+independent authorized Windows worker. The standard-mode PC was not used for
+those mutations.
+
 All driver and Studio integration fixes are pushed on Studio PR #13, branch
 `codex/native-windows-driver-build-handoff`. The frozen tested build source is
 `30d064a0c9f7d75297cf8c9819263b8353a1d98f`; later commits add deployment,
