@@ -216,6 +216,8 @@ inline QString audioErrorText(const QString &diagnostic) {
         if (action == QStringLiteral("Read output buffer level")) translatedAction = SC_TR("Read output buffer level");
         if (action == QStringLiteral("Read output level")) translatedAction = SC_TR("Read output level");
         if (action == QStringLiteral("Read output mute")) translatedAction = SC_TR("Read output mute");
+        if (action == QStringLiteral("Read loopback mute control")) translatedAction = SC_TR("Read output mute");
+        if (action == QStringLiteral("Read loopback mute")) translatedAction = SC_TR("Read output mute");
         if (action == QStringLiteral("Read speaker level")) translatedAction = SC_TR("Read speaker level");
         if (action == QStringLiteral("Read speaker mix format")) translatedAction = SC_TR("Read speaker mix format");
         if (action == QStringLiteral("Read speaker mute")) translatedAction = SC_TR("Read speaker mute");
