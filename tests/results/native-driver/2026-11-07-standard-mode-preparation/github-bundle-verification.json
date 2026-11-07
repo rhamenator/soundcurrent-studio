@@ -1,0 +1,9 @@
+{
+  "Release": "native-driver-test-inputs-30d064a",
+  "SourceCommit": "30d064a0c9f7d75297cf8c9819263b8353a1d98f",
+  "SHA256": "367E3DDF132C565F8C6054FEB1F764884FD3AE1604F6F6214E3CFCC61447FC15",
+  "GitHubDownloadVerified": true,
+  "RequiredFilesPresent": true,
+  "RuntimeTested": true,
+  "EntryCount": 50
+}
