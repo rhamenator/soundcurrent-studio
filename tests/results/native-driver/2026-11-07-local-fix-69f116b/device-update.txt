@@ -1,0 +1,27 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261107143755
+Username: OPTIPLEX-7040\wyurd
+RunAs User: OPTIPLEX-7040\wyurd
+Configuration Name: 
+Machine: OPTIPLEX-7040 (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-69f116b\update-test-device.ps1
+Process ID: 7552
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-69f116b\logs\device-update.txt
+Updating drivers for Root\SOUNDCURRENTVAD from C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-69f116b\signed-d
+river\soundcurrentvad.inf.
+Drivers installed successfully.
+DevConUpdateExit=0
+**********************
+Windows PowerShell transcript end
+End time: 20261107143805
+**********************
