@@ -210,7 +210,9 @@ std::vector<AudioEndpoint> windowsAudioEndpoints(bool capture) {
             endpoint.soundCurrentMicCapture = kind == ManagedEndpointKind::MicrophoneCapture;
             if (endpoint.soundCurrentMicFeed) endpoint.name = L"SoundCurrent Microphone Feed";
             if (endpoint.soundCurrentMicCapture) endpoint.name = L"SoundCurrent Microphone";
-            endpoint.virtualCable = kind != ManagedEndpointKind::Other || interfaceText.find(L"VB-Audio") != std::wstring::npos;
+            // An unavailable/unknown native topology must never be offered as
+            // a physical fallback output, even when its role cannot be resolved.
+            endpoint.virtualCable = managedEndpointKind(interfaceText) != ManagedEndpointKind::Other || interfaceText.find(L"VB-Audio") != std::wstring::npos;
         }
         PropVariantClear(&interfaceName);
         ComPtr<IAudioClient> audio;
@@ -420,6 +422,13 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
             throw std::runtime_error("Unsupported speaker channel layout or sample rate");
         const auto sampleType = outputSampleType(outputFormat.get());
         OutputVolumeLease volume(outputDevice.Get());
+        // Loopback samples can continue while the source endpoint is muted.
+        // Honor the user's endpoint mute explicitly without applying its volume
+        // a second time (loopback samples already contain that attenuation).
+        ComPtr<IAudioEndpointVolume> loopbackVolume;
+        if (renderLoopback)
+            check(captureDevice->Activate(__uuidof(IAudioEndpointVolume), CLSCTX_ALL, nullptr,
+                reinterpret_cast<void **>(loopbackVolume.GetAddressOf())), "Read loopback mute control");
         const REFERENCE_TIME bufferTime = buffering::windowsDuration(bufferMs);
         check(captureAudio->Initialize(AUDCLNT_SHAREMODE_SHARED,
                                         renderLoopback ? AUDCLNT_STREAMFLAGS_LOOPBACK :
@@ -461,6 +470,8 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
         initialized_.notify_all();
         if (status_) status_(L"Processing audio through the selected output");
         while (!stopRequested_) {
+            BOOL sourceMuted = FALSE;
+            if (loopbackVolume) check(loopbackVolume->GetMute(&sourceMuted), "Read loopback mute");
             Profile pending;
             bool changed = false;
             if (profileMutex_.try_lock()) {
@@ -506,9 +517,10 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                     studioRouter->process(block, destination); const auto report = studioEngine->process(destination);
                     std::copy(destination.begin(), destination.end(), block.begin()); peak_ = float(report.peakBeforeClip);
                 } else peak_ = eq.process(scratch.data(), packetFrames);
+                if (sourceMuted) { std::fill_n(scratch.data(), samples, 0.0f); peak_ = 0.0f; }
                 if (!microphone && meterMutex_.try_lock()) {
                     if (studioEngine) for (std::size_t c = 0; c < processingChannels; ++c)
-                        channelPeaks_[c] = std::max(channelPeaks_[c], studioEngine->channelPeaks()[c]);
+                            channelPeaks_[c] = sourceMuted ? 0.0f : std::max(channelPeaks_[c], studioEngine->channelPeaks()[c]);
                     // Only the visible UI consumes this bounded tap. Never block audio.
                     constexpr std::size_t limit = 32768;
                     if (meterSamples_ + packetFrames * 2 > limit) meterSamples_ = 0;
@@ -546,7 +558,7 @@ void WindowsBridge::run(std::wstring captureId, std::wstring outputId, bool micr
                         for (std::size_t c = 0; c < processingChannels; ++c) {
                             const auto sample = float(ring[readPosition * processingChannels + c] * (1.0 - resamplePhase) +
                                                       ring[next * processingChannels + c] * resamplePhase);
-                            writeSample(destination + c * bytesPerSample, sampleType, sample);
+                            writeSample(destination + c * bytesPerSample, sampleType, sourceMuted ? 0.0f : sample);
                         }
                         resamplePhase += sourceFramesPerOutputFrame;
                         while (resamplePhase >= 1.0 && queued) {

@@ -55,6 +55,12 @@ public:
         }
     }
     ~TestSourceVolume() { if(volume_) { volume_->SetMasterVolumeLevelScalar(level_, nullptr); volume_->SetMute(mute_, nullptr); } }
+    float set(float level, bool mute) {
+        check(volume_->SetMasterVolumeLevelScalar(level, nullptr), "Set diagnostic volume");
+        check(volume_->SetMute(mute ? TRUE : FALSE, nullptr), "Set diagnostic mute");
+        float db = 0; check(volume_->GetMasterVolumeLevel(&db), "Read diagnostic dB");
+        return db;
+    }
 };
 struct Measurement { double left = 0, right = 0; std::size_t frames = 0; };
 class Probe {
@@ -96,7 +102,7 @@ public:
         check(render_->Start(), "Start tone");
     }
     ~Probe() { if (render_) render_->Stop(); if (capture_) capture_->Stop(); }
-    Measurement measure(double frequency, unsigned durationMs = 1600) {
+    Measurement measure(double frequency, unsigned durationMs = 1600, double amplitude = .02) {
         Measurement result;
         const auto begin = GetTickCount64();
         while (GetTickCount64() - begin < durationMs) {
@@ -109,7 +115,7 @@ public:
                 auto *samples = reinterpret_cast<float *>(raw);
                 std::fill_n(samples, available * renderFormat_->nChannels, 0.0f);
                 for (UINT32 frame = 0; frame < available; ++frame) {
-                    const auto value = static_cast<float>(0.02 * std::sin(phase_));
+                    const auto value = static_cast<float>(amplitude * std::sin(phase_));
                     phase_ = std::fmod(phase_ + 2 * std::numbers::pi * frequency /
                                        renderFormat_->nSamplesPerSec, 2 * std::numbers::pi);
                     samples[frame * renderFormat_->nChannels] = value;
@@ -193,6 +199,10 @@ int main(int argc, char **argv) {
             std::printf("Native microphone transport frames=%zu RMS L=%.6f R=%.6f\n", measured.frames, measured.left, measured.right);
             if (measured.left < .005 || measured.right < .005 || measured.left > .03 || measured.right > .03)
                 throw std::runtime_error("Native microphone transport missing or incorrect signal level");
+            const auto silence = probe.measure(997, 1600, 0);
+            std::printf("Native microphone silence RMS L=%.8f R=%.8f\n", silence.left, silence.right);
+            if (silence.left > 2.0/32768 || silence.right > 2.0/32768)
+                throw std::runtime_error("Native microphone retained signal after producer silence");
             std::puts("PASS: native microphone feed reaches capture with bounded stereo signal");
             return 0;
         }
@@ -298,6 +308,32 @@ int main(int argc, char **argv) {
         std::printf("Studio live: gain %.2f dB, channel cut %.2f dB; independent mute, effects, bypass and rejected-layout preservation passed.\n",
             decibels(studioGain.left,studioFlat.left),decibels(studioCut.left,studioFlat.left));
         bridge.stop();
+        if (native) {
+            bridge.setProfile({}, 0, 0, true);
+            if (!bridge.start(cableInput, speakers, false, true)) throw std::runtime_error("Volume bridge restart failed");
+            const auto fullDb = sourceVolume.set(1, false);
+            const auto full = probe.measure(1000);
+            const auto halfDb = sourceVolume.set(.5f, false);
+            const auto half = probe.measure(1000);
+            const auto change = decibels(half.left, full.left);
+            std::printf("Native source volume measured %.2f dB, endpoint reported %.2f dB\n", change, halfDb-fullDb);
+            if (std::abs(change-(halfDb-fullDb)) > .7) throw std::runtime_error("Native source volume did not affect transport");
+            sourceVolume.set(.5f, true);
+            const auto muted = probe.measure(1000);
+            std::printf("Native source muted RMS L=%.8f R=%.8f\n", muted.left, muted.right);
+            if (muted.left > silentLimit || muted.right > silentLimit) throw std::runtime_error("Native source mute did not silence transport");
+            sourceVolume.set(1, false);
+            const auto unmuted = probe.measure(1000);
+            if (std::abs(decibels(unmuted.left, full.left)) > .5) throw std::runtime_error("Native unmute did not restore transport");
+            const auto sustained = probe.measure(1000, 30000);
+            std::printf("Native 30-second transport frames=%zu RMS L=%.6f R=%.6f\n", sustained.frames, sustained.left, sustained.right);
+            if (sustained.frames < 48000*28 || sustained.frames > 48000*31 ||
+                std::abs(decibels(sustained.left, full.left)) > .5 ||
+                std::abs(decibels(sustained.right, full.right)) > .5 || !bridge.running())
+                throw std::runtime_error("Native sustained transport failed");
+            bridge.stop();
+            std::puts("PASS: native source volume, mute and unmute affect the complete Studio transport");
+        }
         std::vector<std::int16_t> stereo(calibrationRate * 2);
         for (int i = 0; i < calibrationRate; ++i) {
             const auto value = std::int16_t(std::lround(100 * std::sin(2 * std::numbers::pi * 1000 * i / calibrationRate)));
