@@ -1,7 +1,7 @@
 # Build handoff: native Windows audio driver for local testing
 
-Status: discovery/build/package work requested; this draft PR contains instructions,
-not driver binaries or completed build results.
+Status: fresh build and unsigned-input packaging completed. The report below
+supersedes the initial build-only request; runtime acceptance is still pending.
 
 ## Objective and destination
 
@@ -160,3 +160,79 @@ and precise next steps on the Windows PC. Update the PR with any source/build
 fixes and evidence. Leave it a draft until the requested handoff is reviewable.
 This task is separate from the Windows Volume Control installer PRs (#12 here
 and rhamenator/soundcurrent-eq#12); do not merge or disturb their work.
+
+## Fresh build completion — November 6, 2026 (America/Detroit)
+
+Source frozen before building: `59dbb99b126654a7e53b208a387fba87574c0385`,
+this PR's original handoff revision. Native implementation matches current Studio
+main and EQ main; the repositories differ only in dated native audit/evidence
+files. The bookmark is older audit evidence, not newer implementation. The other
+local EQ worktree has no newer native implementation and was left untouched.
+No source/build fixes were required. This report commit changes documentation only.
+
+The independent `soundcurrent-win11-dev` worker rebuilt both libraries/driver in a
+new extracted source workspace, using the existing cache rather than copying or
+reinstalling the SDK/WDK. Worker Windows 11 Pro `10.0.26300`, Visual Studio
+`18.10.12201.205`, MSVC `14.51.36231`, SDK/WDK NuGet `10.0.28000.2526`, target
+`10.0.28000.0`, x64 Release. Primary commands:
+
+- `powershell.exe -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -File native/windows/virtual-driver/build-baseline.ps1 -Configuration Release`
+- WDK `infverif.exe /u <fresh-package>/soundcurrentvad.inf`
+
+The wrapper uses process-scoped RemoteSigned because the default script invocation
+was rejected; no persistent execution or boot policy was changed. The unchanged
+build script retains its signed Microsoft NuGet executable check and exact package
+restore pins/source. Full commands, paths and output are in the bundle logs.
+
+Results: EndpointsCommon and TabletAudioSample each built with zero warnings and
+errors; the build's Universal ApiValidator passed; explicit InfVerif `/u` returned
+zero; Inf2Cat signability and catalog generation passed without warnings/errors
+for `10_NI_X64,10_GE_X64,10_25H2_X64`. PE inspection confirms x64. SYS and CAT
+report NotSigned. INF is not independently Authenticode-signed; catalog membership
+and trust must be checked again after local signing. These checks do not certify
+runtime behavior or Insider-build compatibility.
+
+Package has exactly `soundcurrentvad.inf`, `soundcurrentvad.sys`, and
+`soundcurrentvad.cat`. INF CopyFiles references only that SYS. Current source
+includes playback, dedicated mic feed and mic capture with SPSC transport;
+48 kHz stereo 16-bit PCM at the kernel boundary. Neither kernel path was loaded
+or tested. No driver, certificate or trust/security setting was installed/changed;
+Realtek/VB-CABLE were preserved. The build VM was confirmed shut off afterward.
+
+### Download and verification
+
+The owner-review bundle is attached to a **draft test-input release**, keeping
+unsigned binaries out of the source tree and ordinary public release downloads:
+
+[Draft unsigned test-input bundle](https://github.com/rhamenator/soundcurrent-studio/releases/tag/untagged-2ce7dc46a2056e247657)
+
+Authenticate to GitHub as an authorized repository owner/editor, then:
+
+```sh
+gh release download native-driver-test-inputs-59dbb99b --repo rhamenator/soundcurrent-studio
+```
+
+ZIP: `soundcurrent-native-driver-unsigned-x64-59dbb99b126654a7e53b208a387fba87574c0385.zip`
+
+SHA-256: `07c7569c50e7f6587418a8d308297a4d1f59e17dd586d81f22ca73a86a1cdb63`
+
+Its sidecar and internal SHA256SUMS are included. The archive contains all exact
+tracked source files and licenses, INF/SYS/CAT, full compiler/validator output,
+worker/build manifest with per-file hashes, and README-TESTING.md. Every source
+blob was checked against Git; every archived payload file was read back and
+checksum-verified. The uploaded assets were downloaded and verified independently.
+The draft release is not a production release and does not change latest v1.3.0.
+
+### Next Windows-PC step (not executed)
+
+Verify hashes and inspect README-TESTING.md first. Reconfirm the PC build and its
+working analog wiring/output. Review local test-signing, Secure Boot/HVCI and
+recovery prerequisites before any change; use an independent disposable clone for
+the first kernel load. The instructions separate unsigned inputs from signed test
+outputs, require SYS signing followed by final catalog regeneration/signing, and
+preserve the production manager/installer trust gates. The manager uses catalog
+trust checks; acceptance of a locally trusted self-signed test certificate is
+unverified. No release trust bypass was added. Rollback removes only the exact
+recorded root device and OEM INF, retaining Realtek and the VB-CABLE fallback.
+All audible playback/mic, volume/mute, reboot, crash/quit and removal tests remain
+explicitly unrun. Leave this PR draft for review of those prerequisites.

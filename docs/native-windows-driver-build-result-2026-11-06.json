@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "59dbb99b126654a7e53b208a387fba87574c0385",
+  "archiveSHA256": "07c7569c50e7f6587418a8d308297a4d1f59e17dd586d81f22ca73a86a1cdb63",
+  "draftURL": "https://github.com/rhamenator/soundcurrent-studio/releases/tag/untagged-2ce7dc46a2056e247657",
+  "buildPassed": true,
+  "infPassed": true,
+  "apiValidatorPassed": true,
+  "catalogGenerated": true,
+  "signed": false,
+  "runtimeTested": false,
+  "vmShutDown": true
+}
