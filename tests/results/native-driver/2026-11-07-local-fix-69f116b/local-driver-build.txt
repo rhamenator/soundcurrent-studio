@@ -3,7 +3,7 @@ PowerShell transcript start
 Start time: 20261107143422
 Username: OPTIPLEX-7040\wyurd
 RunAs User: OPTIPLEX-7040\wyurd
-Configuration Name: 
+Configuration Name:
 Machine: OPTIPLEX-7040 (Microsoft Windows NT 10.0.26300.0)
 Host Application: C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\dependencies\native\powershell\pwsh.dll -NoProfile -File C:\Users\wyurd\Downloads\SoundCurrent-native-driver-test-59dbb99b\local-test-signing\build-local-fix.ps1
 Process ID: 11012
