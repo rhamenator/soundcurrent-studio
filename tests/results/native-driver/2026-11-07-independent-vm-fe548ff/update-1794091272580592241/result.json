@@ -1,0 +1,6 @@
+{
+    "phase":  "Update",
+    "utc":  "2026-11-07T22:41:07.8517381Z",
+    "success":  false,
+    "error":  "System.Management.Automation.ItemNotFoundException: Cannot find path \u0027C:\\Windows\\System32\\drivers\\soundcurrentvad.sys\u0027 because it does not exist.\r\n   at System.Management.Automation.LocationGlobber.ExpandMshGlobPath(String path, Boolean allowNonexistingPaths, PSDriveInfo drive, ContainerCmdletProvider provider, CmdletProviderContext context)\r\n   at System.Management.Automation.LocationGlobber.ResolveDriveQualifiedPath(String path, CmdletProviderContext context, Boolean allowNonexistingPaths, CmdletProvider\u0026 providerInstance)\r\n   at System.Management.Automation.LocationGlobber.GetGlobbedMonadPathsFromMonadPath(String path, Boolean allowNonexistingPaths, CmdletProviderContext context, CmdletProvider\u0026 providerInstance)\r\n   at Microsoft.PowerShell.Commands.ResolvePathCommand.ProcessRecord()"
+}

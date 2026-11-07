@@ -1,0 +1,1 @@
+PASS: trusted package accepted; altered INF, SYS and CAT rejected

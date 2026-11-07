@@ -1,0 +1,6 @@
+PASS: 71% copied to owned endpoint, physical output unity while active, changed volume/mute restored on stop
+PASS: forced owner termination recovered changed volume/mute and all three output roles
+PASS: guardian failure stopped live bridge and recovered muted and unity/unmuted volume changes while owner stayed alive
+
+
+Exit=0

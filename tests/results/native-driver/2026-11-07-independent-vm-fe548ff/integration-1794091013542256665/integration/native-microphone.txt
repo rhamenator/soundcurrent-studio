@@ -1,0 +1,22 @@
+Render: Speakers (SoundCurrent Audio)
+  id={0.0.0.00000000}.{1b5c1cf2-e797-4a87-aba5-687a589c5b3d} playback=1 feed=0 microphone=0
+Render: Speakers (High Definition Audio Device)
+  id={0.0.0.00000000}.{3b925689-b97e-464a-802e-7f198dc1040e} playback=0 feed=0 microphone=0
+Render: SoundCurrent Microphone Feed
+  id={0.0.0.00000000}.{fa8e4b07-3839-4318-a268-23caa232fa8a} playback=0 feed=1 microphone=0
+Capture: Line In (High Definition Audio Device)
+  id={0.0.1.00000000}.{5eece62b-78ee-4541-83d5-5d80f5e782ca} playback=0 feed=0 microphone=0
+Capture: SoundCurrent Microphone
+  id={0.0.1.00000000}.{c61d1603-1266-41c5-b591-f59f3ac45f9a} playback=0 feed=0 microphone=1
+Test source original volume 1.000, mute 0
+Tone mix: 48000 Hz, 2 channels; loopback: 48000 Hz, 2 channels
+Native microphone transport frames=153120 RMS L=0.014142 R=0.014142
+Native microphone silence RMS L=0.00001462 R=0.00001462
+Native feed muted RMS L=0.00000000 R=0.00000000
+Test source original volume 0.537, mute 0
+Native capture volume measured -31.08 dB, endpoint reported -31.08 dB
+Native capture muted RMS L=0.00000000 R=0.00000000
+PASS: native microphone feed reaches capture with bounded stereo signal
+
+
+Exit=0

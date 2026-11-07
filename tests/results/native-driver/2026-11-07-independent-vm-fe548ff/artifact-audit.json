@@ -1,0 +1,13 @@
+{
+  "driverPackageHashes": "all six matched",
+  "source": {
+    "commit": "30d064a0c9f7d75297cf8c9819263b8353a1d98f",
+    "exactFiles": 1033,
+    "crlfOnlyFiles": 2110,
+    "otherDifferences": []
+  },
+  "supplement": {
+    "commit": "0216e38bd3ede28789ebd0c971d4b87b4e3e14e4",
+    "verifiedFiles": 19
+  }
+}

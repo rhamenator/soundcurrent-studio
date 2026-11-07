@@ -238,3 +238,16 @@ disallowed, untrusted, and mismatched files remain rejected.
 
 For an independently generated local test certificate, see
 [the owner certificate workflow](native-driver-own-test-certificate.md).
+
+### Installation and default-device behavior
+
+The manager snapshots all available render/capture default roles before install,
+and restores a role only if Windows changed it to an identified SoundCurrent
+native endpoint while the original endpoint is still active. It leaves a new
+non-SoundCurrent user/application choice alone and does not change physical
+volume/mute. A bounded five-second settling check covers asynchronous endpoint
+publication. Failure is reported rather than silently declaring setup complete.
+This does not prove that no transient Windows default change can occur, or that
+an abrupt termination of the elevated manager recovers defaults. Keep those
+interruption/late-publication cases in release qualification. The internal feed
+is not intended as a user-selected playback destination.

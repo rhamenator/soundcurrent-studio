@@ -1,0 +1,23 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20261107173533
+Username: CF-WIN11-TEST\copperfin
+RunAs User: CF-WIN11-TEST\copperfin
+Configuration Name: 
+Machine: CF-WIN11-TEST (Microsoft Windows NT 10.0.26200.0)
+Host Application: powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File d:\AUDIT.PS1 -Phase Integration
+Process ID: 5268
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\SoundCurrentNativeAudit20261107\logs-integration-20261107173533\transcript.txt
+**********************
+Windows PowerShell transcript end
+End time: 20261107173651
+**********************

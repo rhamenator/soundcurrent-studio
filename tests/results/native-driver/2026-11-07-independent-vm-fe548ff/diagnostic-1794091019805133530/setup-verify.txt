@@ -1,0 +1,1 @@
+ok=False error=0xE0000241 catalog=C:\SoundCurrentNativeAudit20261107\signed-driver\soundcurrentvad.cat signer=SoundCurrent Local Driver Test 2026-11-07
