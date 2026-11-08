@@ -11,6 +11,11 @@ The existing draft bundle's certificate and signatures are historical test
 artifacts. Its public certificate cannot sign a new build: it contains no private
 key. Do not copy its thumbprint into the commands for your own certificate.
 
+Use the full reviewed Git checkout, including `driver-inputs.ps1` beside
+`test-sign-package.ps1`. The historical `0216e38` workflow supplement predates
+signing-input hardening; retain it as evidence, rather than substituting it for
+the current checked-out tooling.
+
 ## 1. Build and validate fresh unsigned inputs
 
 Follow [the reproduction guide](native-windows-driver-reproduction.md), using a

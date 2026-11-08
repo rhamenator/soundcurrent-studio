@@ -172,7 +172,7 @@ PipeWire desktop session. RHEL 9 is not a build target.
 
 ### Windows 10/11 x64
 
-Run `SoundCurrent-Studio-1.1.0-windows-x64-setup.exe`. It installs for the current
+Run `SoundCurrent-Studio-<version>-windows-x64-setup.exe`. It installs for the current
 user, bundles Qt and the Microsoft runtime, and adds desktop/Start menu shortcuts.
 The optional standard signed VB-CABLE setup is retained from the EQ installer;
 restart Windows after installing the driver. Multichannel playback requires a
