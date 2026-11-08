@@ -1,4 +1,5 @@
 #include "responsive_ui.h"
+#include "linux_child_lifetime.h"
 #ifdef Q_OS_WIN
 #ifndef NOMINMAX
 #define NOMINMAX
@@ -877,7 +878,7 @@ public:
         process_.setProgram("pipewire");
         process_.setArguments({"-c", config.fileName()});
         process_.setProcessChannelMode(QProcess::MergedChannels);
-        process_.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
+        process_.setChildProcessModifier(soundcurrent::terminateWithParent());
         process_.start();
         if (!process_.waitForStarted(2000)) throw std::runtime_error(SC_TR("Could not start microphone filter").toStdString());
         QElapsedTimer clock;
@@ -1152,7 +1153,7 @@ int runCalibration(const QString &output, const QString &input, int levelDb, boo
         recorder.setProgram("parec");
         recorder.setArguments({"--raw", "-d", input, "--format=s16le", "--rate=96000",
                                "--channels=1", "--latency-msec=10", "--process-time-msec=5"});
-        recorder.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
+        recorder.setChildProcessModifier(soundcurrent::terminateWithParent());
         recorder.start();
         if (!recorder.waitForStarted(2000)) throw std::runtime_error(SC_TR("Could not start microphone capture").toStdString());
         auto collect = [&recorder](int milliseconds) {
@@ -1172,7 +1173,7 @@ int runCalibration(const QString &output, const QString &input, int levelDb, boo
             QProcess player;
             player.setProgram("paplay");
             player.setArguments({"-d", output, path});
-            player.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
+            player.setChildProcessModifier(soundcurrent::terminateWithParent());
             player.start();
             if (!player.waitForStarted(2000)) throw std::runtime_error(SC_TR("Could not play quiet test audio").toStdString());
             QByteArray recorded;
@@ -1755,7 +1756,7 @@ public:
         process_.setArguments({"--raw", "-d", QString(kSink) + ".monitor", "--format=s16le",
                                "--rate=48000", "--channels=2", "--latency-msec=10",
                                "--process-time-msec=5"});
-        process_.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
+        process_.setChildProcessModifier(soundcurrent::terminateWithParent());
         process_.start();
 #endif
         timer_.start();
@@ -2551,7 +2552,7 @@ public:
             calibration_.kill();
         });
 #ifndef Q_OS_WIN
-        calibration_.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
+        calibration_.setChildProcessModifier(soundcurrent::terminateWithParent());
 #endif
         connect(&calibration_, &QProcess::readyReadStandardError, this, [this] {
             readCalibrationMessages();
@@ -2661,7 +2662,7 @@ public:
 #ifndef Q_OS_WIN
         volumeEvents_.setProgram("pactl");
         volumeEvents_.setArguments({"subscribe"});
-        volumeEvents_.setChildProcessModifier([] { prctl(PR_SET_PDEATHSIG, SIGTERM); });
+        volumeEvents_.setChildProcessModifier(soundcurrent::terminateWithParent());
         connect(&volumeEvents_, &QProcess::readyReadStandardOutput, this, [this] {
             volumeEventBuffer_.append(volumeEvents_.readAllStandardOutput());
             if (volumeEventBuffer_.size() > 4096) volumeEventBuffer_.remove(0, volumeEventBuffer_.size() - 4096);
