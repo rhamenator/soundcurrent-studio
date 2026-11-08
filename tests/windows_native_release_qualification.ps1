@@ -59,7 +59,7 @@ function Get-SecurityState {
         secureBoot = $secureBoot
         hvciRunning = [bool]($deviceGuard.SecurityServicesRunning -contains 2)
         verifier = (& verifier.exe /querysettings 2>&1 | Out-String)
-        soundCurrentDevices = @(Get-PnpDevice -PresentOnly -ErrorAction SilentlyContinue |
+        soundCurrentDevices = @(Get-PnpDevice -ErrorAction SilentlyContinue |
             Where-Object InstanceId -like ($driverHardwareId + '*') | Select-Object InstanceId,Status,Class,FriendlyName)
     }
 }
@@ -164,7 +164,12 @@ switch ($Phase) {
     'Uninstall' {
         if (!$manager) { throw 'Uninstall requires -ManagerPath.' }
         [array]::Reverse($owners)
-        foreach ($owner in $owners) { Invoke-Native ("remove-$owner") $manager @('--remove',$owner) @(0,3010) }
+        for ($index = 0; $index -lt $owners.Count; $index++) {
+            $owner = $owners[$index]
+            Invoke-Native ("remove-$owner") $manager @('--remove',$owner) @(0,3010)
+            if ($index -lt ($owners.Count - 1)) { Invoke-Native ("shared-owner-status-$owner") $manager @('--status') }
+        }
+        Invoke-Native 'removed-driver-status' $manager @('--status') @(10)
         & verifier.exe /reset | Set-Content -LiteralPath (Join-Path $ResultDirectory 'verifier-reset.log')
         if ($LASTEXITCODE -ne 0) { throw 'Driver Verifier reset failed.' }
     }
