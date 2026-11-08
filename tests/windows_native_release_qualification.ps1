@@ -9,7 +9,7 @@ param(
     [string]$ManagerPath,
     [string]$PackageDirectory,
     [string]$BinaryDirectory,
-    [string]$RepositoryRoot = (Split-Path $PSScriptRoot -Parent),
+    [string]$RepositoryRoot,
     [string]$ResultDirectory,
     [string]$DisposableVmApprovalFile,
     [ValidateRange(1,240)][int]$StressMinutes = 30,
@@ -20,6 +20,8 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
+$scriptDirectory = $PSScriptRoot
+if (!$RepositoryRoot) { $RepositoryRoot = Split-Path $scriptDirectory -Parent }
 $programData = if ($env:ProgramData) { $env:ProgramData } else { [IO.Path]::GetTempPath() }
 if (!$ResultDirectory) { $ResultDirectory = Join-Path $programData 'SoundCurrent\NativeQualification' }
 if (!$DisposableVmApprovalFile) { $DisposableVmApprovalFile = Join-Path $programData 'SoundCurrent\disposable-native-qualification.json' }
