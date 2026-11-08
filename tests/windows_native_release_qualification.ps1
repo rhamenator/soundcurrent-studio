@@ -132,6 +132,16 @@ switch ($Phase) {
     }
     'Install' {
         if (!$manager -or !$package) { throw 'Install requires -ManagerPath and -PackageDirectory.' }
+        $managerSignature = Get-AuthenticodeSignature -LiteralPath $manager
+        if ($managerSignature.Status -ne 'Valid') { throw 'Driver manager signature is not valid in this VM.' }
+        $inputHashes = [ordered]@{ 'soundcurrent-driver-manager.exe' = (Get-FileHash -LiteralPath $manager -Algorithm SHA256).Hash.ToLowerInvariant() }
+        foreach ($member in @('soundcurrentvad.inf','soundcurrentvad.sys','soundcurrentvad.cat')) {
+            $inputHashes[$member] = (Get-FileHash -LiteralPath (Join-Path $package $member) -Algorithm SHA256).Hash.ToLowerInvariant()
+        }
+        Write-Json (Join-Path $ResultDirectory 'signed-inputs.json') ([ordered]@{
+            hashes = $inputHashes; managerSignerThumbprint = $managerSignature.SignerCertificate.Thumbprint
+            managerSignatureStatus = [string]$managerSignature.Status; capturedUtc = [DateTime]::UtcNow.ToString('o')
+        })
         Invoke-Native 'package-verify' $manager @('--verify',$package)
         foreach ($owner in $owners) { Invoke-Native ("install-$owner") $manager @('--install',$owner,$package) @(0,3010) }
         if ($EnableDriverVerifier) {
