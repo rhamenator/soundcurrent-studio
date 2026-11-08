@@ -148,13 +148,79 @@ if (app.arguments().contains("--windows-live-ui-test")) {
             power->setChecked(true);
             if (!power->isChecked()) throw std::runtime_error("UI failed to start audio");
             verify(true);
+            // End-to-end regression: real Studio widgets -> callback -> WASAPI
+            // processing -> physical-output loopback, with isolated settings.
+            soundcurrent::studio::StudioPanel *panel=nullptr;
+            for(auto *widget:window.findChildren<QWidget *>())
+                if(auto *candidate=dynamic_cast<soundcurrent::studio::StudioPanel *>(widget))panel=candidate;
+            auto *input=window.findChild<QSlider *>("inputGain");
+            auto *mixer=window.findChild<QTableWidget *>("channelMixer");
+            auto *apply=window.findChild<QPushButton *>("applyStudioSettings");
+            if(!panel||!input||!mixer||!apply)throw std::runtime_error("Studio controls unavailable");
+            auto *offline=panel->findChild<QPushButton *>("studioOfflineEditing");
+            if(!offline||panel->session().offline)throw std::runtime_error("Normal Studio session is offline");
+            auto measure=[&] {
+                std::vector<std::int16_t> tone(48000*3*2);
+                for(std::size_t f=0;f<tone.size()/2;++f)
+                    tone[2*f]=tone[2*f+1]=std::int16_t(655*std::sin(2*std::numbers::pi*997*f/48000));
+                soundcurrent::WindowsRecorder recorder;
+                const auto destination=before[1];
+                recorder.start(destination,48000,2,true);
+                auto play=std::async(std::launch::async,[&]{soundcurrent::windowsPlayPcm(owned,tone,48000,2);});
+                QElapsedTimer elapsed;elapsed.start();double left=0,right=0;std::size_t frames=0;
+                while(play.wait_for(std::chrono::milliseconds(0))!=std::future_status::ready) {
+                    QCoreApplication::processEvents();QThread::msleep(10);
+                    const auto pcm=recorder.take();
+                    if(elapsed.elapsed()<1400)continue;
+                    for(std::size_t i=0;i+1<pcm.size();i+=2){left+=double(pcm[i])*pcm[i];right+=double(pcm[i+1])*pcm[i+1];++frames;}
+                }
+                play.get();recorder.stop();
+                if(!frames)throw std::runtime_error("No Studio UI loopback frames");
+                return std::array<double,2>{std::sqrt(left/frames)/32768,std::sqrt(right/frames)/32768};
+            };
+            auto db=[](double value,double reference){return 20*std::log10(value/reference);};
+            const auto flat=measure();
+            if(flat[0]<.0001||flat[1]<.0001)throw std::runtime_error("Studio UI route is silent");
+            offline->setChecked(true);input->setValue(-600);
+            const auto staged=measure();
+            if(std::abs(db(staged[0],flat[0]))>.6)throw std::runtime_error("Offline UI edits changed playback");
+            apply->click();const auto applied=measure();
+            if(panel->session().offline||std::abs(db(applied[0],flat[0])+6)>.6)
+                throw std::runtime_error("Apply settings did not deliver live input gain");
+            input->setValue(0);
+            auto *channelMute=qobject_cast<QCheckBox *>(mixer->cellWidget(0,2));
+            channelMute->setChecked(true);const auto muted=measure();
+            if(muted[0]>flat[0]*.01||std::abs(db(muted[1],flat[1]))>.6)
+                throw std::runtime_error("Live mixer channel mute failed");
+            channelMute->setChecked(false);
+            auto *trim=qobject_cast<QDoubleSpinBox *>(mixer->cellWidget(0,1));
+            trim->setValue(-9);const auto trimmed=measure();
+            if(std::abs(db(trimmed[0],flat[0])+9)>.6||std::abs(db(trimmed[1],flat[1]))>.6)
+                throw std::runtime_error("Live mixer channel trim failed");
+            trim->setValue(0);
+            auto *solo=qobject_cast<QCheckBox *>(mixer->cellWidget(0,3));
+            solo->setChecked(true);const auto soloed=measure();
+            if(soloed[1]>flat[1]*.01||std::abs(db(soloed[0],flat[0]))>.6)
+                throw std::runtime_error("Live mixer solo failed");
+            solo->setChecked(false);
+            QComboBox *preset=nullptr;
+            for(auto *box:panel->findChildren<QComboBox *>())
+                if(box->accessibleName()=="Studio effect preset")preset=box;
+            if(!preset)throw std::runtime_error("Effect preset control missing");
+            QMetaObject::invokeMethod(preset,"activated",Qt::DirectConnection,Q_ARG(int,1));
+            const auto effect=measure();
+            if(!panel->session().engine.delay.enabled||std::abs(db(effect[0],flat[0]))<.1)
+                throw std::runtime_error("Live effect preset did not change audio");
+            QMetaObject::invokeMethod(preset,"activated",Qt::DirectConnection,Q_ARG(int,0));
+            QTextStream(stdout)<<"PASS: Studio UI offline staging preserved playback; Apply input gain "
+                <<db(applied[0],flat[0])<<" dB; live channel mute RMS "<<muted[0]<<" / "<<muted[1]
+                <<"; trim "<<db(trimmed[0],flat[0])<<" dB; solo RMS "<<soloed[0]<<" / "<<soloed[1]
+                <<"; effect change "<<db(effect[0],flat[0])<<" dB"<<Qt::endl;
             power->setChecked(false);
             verify(false);
             power->setChecked(true);
             verify(true);
-            QPushButton *quit=nullptr;
-            for (auto *button:window.findChildren<QPushButton *>())
-                if (button->text()=="Quit app") {quit=button;break;}
+            auto *quit=window.findChild<QPushButton *>("persistentQuit");
             if (!quit) throw std::runtime_error("Quit control unavailable");
             QTimer::singleShot(0,quit,&QPushButton::click);
             if (app.exec()!=0) throw std::runtime_error("Quit event loop failed");

@@ -73,15 +73,25 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
         const auto data = QSettings().value("studioSession").toByteArray();
         if (!data.isEmpty() && data.size() <= 8 * 1024 * 1024) session_ = Session::parse(QJsonDocument::fromJson(data).object());
     } catch (const std::exception &) {} // Malformed saved state falls back to dry stereo.
+    // Serialized setups include transient rejection staging. Only an
+    // explicit editing-mode preference may keep normal startup offline.
+    if (persist) session_.offline = QSettings().value("studioOfflineEditing", false).toBool();
     auto *root = new QVBoxLayout(this);
     auto *layoutBox = new QGroupBox(SC_TR("Channels and routing")); auto *layoutForm = new QFormLayout(layoutBox);
     layout_ = new QComboBox; layout_->addItems({SC_TR("Stereo"), SC_TR("Mono"), "5.1", "7.1", SC_TR("16 channels"), SC_TR("Custom")});
     count_ = new soundcurrent::AcceleratingSpinBox; count_->setRange(1, int(maxChannels)); count_->setAccessibleName(SC_TR("Studio channel count"));
     auto *layoutRow = new QHBoxLayout; layoutRow->addWidget(layout_); layoutRow->addWidget(count_);
     layoutForm->addRow(SC_TR("Layout"), layoutRow);
-    offline_ = new QCheckBox(SC_TR("Offline editing — keep current playback unchanged")); layoutForm->addRow(offline_);
-    modeHint_=new QLabel;modeHint_->setWordWrap(true);layoutForm->addRow(modeHint_);
-    apply_=new QPushButton(SC_TR("Apply settings"));apply_->setObjectName("applyStudioSettings");layoutForm->addRow(apply_);
+    modePanel_=new QWidget;modePanel_->setObjectName("studioPlaybackMode");
+    auto *modeLayout=new QVBoxLayout(modePanel_);modeLayout->setContentsMargins(14,12,14,12);
+    auto *modeActions=new QHBoxLayout;
+    offline_ = new QPushButton;offline_->setCheckable(true);offline_->setObjectName("studioOfflineEditing");
+    offline_->setAccessibleName(SC_TR("Offline editing — keep current playback unchanged"));
+    offline_->setMinimumHeight(44);modeActions->addWidget(offline_,1);
+    apply_=new QPushButton(SC_TR("Apply settings"));apply_->setObjectName("applyStudioSettings");apply_->setMinimumHeight(44);modeActions->addWidget(apply_);
+    modeLayout->addLayout(modeActions);
+    modeHint_=new QLabel;modeHint_->setWordWrap(true);modeLayout->addWidget(modeHint_);
+    root->addWidget(modePanel_);
     connect(apply_,&QPushButton::clicked,this,[this]{if(!locked_)offline_->setChecked(false);});
     auto *ioHint = new QLabel(SC_TR("Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels."));
     ioHint->setWordWrap(true); layoutForm->addRow(ioHint);
@@ -183,7 +193,11 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     });
     connect(layout_, &QComboBox::activated, this, [this](int i) { constexpr int counts[]{2,1,6,8,16}; if(i<5) count_->setValue(counts[i]); });
     connect(channel_, &QComboBox::currentIndexChanged, this, [this] { if (!rebuilding_) loadChannel(); });
-    connect(offline_, &QCheckBox::toggled, this, [this](bool on) { change([&](Session &s){s.offline=on;}); });
+    connect(offline_, &QPushButton::toggled, this, [this](bool on) {
+        if (rebuilding_ || locked_) return;
+        if (persist_) QSettings().setValue("studioOfflineEditing", on);
+        change([&](Session &s){s.offline=on;});
+    });
     connect(name_, &QLineEdit::editingFinished, this, [this] { if(name_->text().trimmed().isEmpty()) return;
         const int channel = channel_->currentIndex();
         if (name_->text().trimmed() == channelNameText(session_,channel)) return;
@@ -274,6 +288,10 @@ void StudioPanel::loadChannel() {
     rebuilding_=false;syncMixer();
 }
 void StudioPanel::updateApplyState() {
+    const auto color=session_.offline?QStringLiteral("#f4c46a"):QStringLiteral("#55d7c3");
+    modePanel_->setStyleSheet(QStringLiteral("QWidget#studioPlaybackMode { border: 2px solid %1; border-radius: 8px; } "
+        "QPushButton#studioOfflineEditing { background-color: %1; color: #101820; font-weight: 700; padding: 10px 16px; border-radius: 5px; }").arg(color));
+    offline_->setText(session_.offline?SC_TR("Offline editing — keep current playback unchanged"):SC_TR("Changes apply immediately"));
     showMeters_->setEnabled(monitoringAvailable());
     apply_->setVisible(session_.offline);apply_->setEnabled(!locked_&&session_.offline);
     modeHint_->setText(session_.offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):SC_TR("Changes apply immediately"));
@@ -322,7 +340,7 @@ void StudioPanel::saveProfile() {
 void StudioPanel::openProfile() {
     if(locked_)return;const auto filename=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Open Studio setup"),{},SC_TR("Studio setup (*.scstudio)"));if(filename.isEmpty())return;
     try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
-        auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));
+        auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;if(persist_)QSettings().setValue("studioOfflineEditing",true);const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));
     }catch(const std::exception &e){status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
 }
 void StudioPanel::startPreview() {
@@ -513,6 +531,34 @@ void StudioPanel::selfTest() {
         production.showMonitoring();if(production.monitorDialog_->isVisible())qFatal("Production mono dialog unexpectedly opened");
         production.count_->setValue(6);
         if(!production.monitoringAvailable() || !production.showMeters_->isEnabled() || production.session_.offline)qFatal("Live multichannel layout should enable monitoring without staging");
+    }
+    {
+        QSettings settings;
+        const auto savedSession = settings.value("studioSession");
+        const auto savedPreference = settings.value("studioOfflineEditing");
+        Session staged(2); staged.offline = true;
+        settings.setValue("studioSession", QJsonDocument(staged.json()).toJson(QJsonDocument::Compact));
+        settings.remove("studioOfflineEditing");
+        {
+            StudioPanel restored(true);
+            if (restored.session_.offline) qFatal("Legacy staged session trapped startup offline");
+            restored.offline_->setChecked(true);
+            StudioPanel intentional(true);
+            if (!intentional.session_.offline) qFatal("Intentional offline preference was lost");
+            int liveChanges = 0;
+            restored.onChanged = [&] { if (!restored.session_.offline) ++liveChanges; };
+            restored.apply_->click();
+            if (restored.session_.offline || settings.value("studioOfflineEditing").toBool() || liveChanges != 1)
+                qFatal("Apply settings did not clear preference and notify backend");
+            restored.mute_->setChecked(true);
+            if (!restored.session_.engine.channels[0].muted || liveChanges != 2)
+                qFatal("Compatible live channel mute was not delivered");
+            restored.liveStatus("Rejected fixture", true);
+            StudioPanel afterRejection(true);
+            if (afterRejection.session_.offline) qFatal("Rejected layout persisted accidental offline preference");
+        }
+        if (savedSession.isValid()) settings.setValue("studioSession", savedSession); else settings.remove("studioSession");
+        if (savedPreference.isValid()) settings.setValue("studioOfflineEditing", savedPreference); else settings.remove("studioOfflineEditing");
     }
     const auto provenanceSession = session_;
     const auto provenanceHistory = history_;

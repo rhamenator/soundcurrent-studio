@@ -1,0 +1,32 @@
+Render: Speakers / Headphones (Realtek Audio)
+  id={0.0.0.00000000}.{0251edad-ca47-4384-8b82-7e4f649dfa8b} playback=0 feed=0 microphone=0
+Render: CABLE In 16ch (VB-Audio Virtual Cable)
+  id={0.0.0.00000000}.{2ce43ffc-bf79-4b3b-9b3d-b7224fabd93b} playback=0 feed=0 microphone=0
+Render: CABLE Input (VB-Audio Virtual Cable)
+  id={0.0.0.00000000}.{43e8ff42-5297-48f9-b325-4d5a91865431} playback=0 feed=0 microphone=0
+Render: FxSound Speakers (FxSound Audio Enhancer)
+  id={0.0.0.00000000}.{f7373c9e-fb11-4c24-8ca2-eaeaf5e9af8c} playback=0 feed=0 microphone=0
+Capture: CABLE Output (VB-Audio Virtual Cable)
+  id={0.0.1.00000000}.{552625b7-5f10-48b7-8ad2-e3a768959dc9} playback=0 feed=0 microphone=0
+Test source original volume 0.300, mute 0
+Bridge: Processing audio through the selected output
+Tone mix: 48000 Hz, 2 channels; loopback: 48000 Hz, 2 channels
+Captured meter samples: 9600
+Flat frames: 47520, bridge peak: 0.020000, RMS: 0.014142 / 0.014142
+Flat RMS: L 0.014142, R 0.014142
+VB-CABLE 50% endpoint volume: -10.10 dB (endpoint reports -10.51)
+VB-CABLE muted RMS: L 0.000000, R 0.000000
+Live post gain: 6.00 dB (expected +6)
+Live 1 kHz EQ cut: -12.00 dB (expected -12)
+Bypass: 0.00 dB relative to Flat (expected 0)
+Full-left balance RMS: L 0.014142, R 0.000000
+Bridge: Equalizer stopped; normal output is available
+Bridge: Processing audio through the selected output
+Bridge: Equalizer stopped; normal output is available
+Bridge: Processing audio through the selected output
+Studio Windows volume -10.10 dB (expected -10.51); media mute RMS 0.00000000 / 0.00000000; media unmute and volume-down passed.
+Studio input gain -6.00 dB; independent channel trim -9.00 dB.
+Studio live: gain 6.00 dB, channel cut -12.00 dB; independent mute, effects, bypass and rejected-layout preservation passed.
+Bridge: Equalizer stopped; normal output is available
+Stereo calibration duration: 1.034 seconds (expected 1)
+PASS: live route, post gain, EQ, bypass, balance, and restart
