@@ -254,7 +254,7 @@ void StudioPanel::commit(const Session &before) {
     updateApplyState();syncMixer();
 }
 void StudioPanel::setLocked(bool locked) { locked_=locked;for(int i=0;i<3;++i)pages_->widget(i)->setEnabled(!locked);roomBalanceBox_->setEnabled(!locked);updateApplyState();count_->setEnabled(!locked);layout_->setEnabled(!locked);offline_->setEnabled(!locked);undo_->setEnabled(!locked&&!history_.empty()); }
-void StudioPanel::undo() { if(locked_||history_.empty())return;session_=history_.back();history_.pop_back();rebuild();if(persist_)QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));if(preview_->isChecked())startPreview();if(onChanged)onChanged(); }
+void StudioPanel::undo() { if(locked_||history_.empty())return;const bool wasOffline=session_.offline;session_=history_.back();history_.pop_back();rebuild();if(persist_){QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));if(wasOffline!=session_.offline)QSettings().setValue("studioOfflineEditing",session_.offline);}if(preview_->isChecked())startPreview();if(onChanged)onChanged(); }
 void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
@@ -542,6 +542,10 @@ void StudioPanel::selfTest() {
         {
             StudioPanel restored(true);
             if (restored.session_.offline) qFatal("Legacy staged session trapped startup offline");
+            restored.offline_->setChecked(true);
+            restored.undo();
+            if(restored.session_.offline || settings.value("studioOfflineEditing").toBool())
+                qFatal("Undo left an unintended offline startup preference");
             restored.offline_->setChecked(true);
             StudioPanel intentional(true);
             if (!intentional.session_.offline) qFatal("Intentional offline preference was lost");
