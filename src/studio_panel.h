@@ -27,6 +27,16 @@ class StudioPanel : public QWidget {
 public:
     explicit StudioPanel(bool persist, QWidget *parent = nullptr, bool testControls = false);
     ~StudioPanel() override;
+    QSize minimumSizeHint() const override {
+        auto hint = QWidget::minimumSizeHint();
+        hint.setWidth(0);
+        return hint;
+    }
+    QSize sizeHint() const override {
+        auto hint = QWidget::sizeHint();
+        hint.setWidth(0);
+        return hint;
+    }
     Session session() const { return session_; }
     void setShared(std::span<const EqBand>, double gain, int balance);
     void setLocked(bool);
