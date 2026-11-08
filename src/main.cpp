@@ -1959,6 +1959,9 @@ public:
         shellLayout->setSizeConstraint(QLayout::SetNoConstraint);
         auto *container = new QWidget;
         auto *root = new QVBoxLayout(container);
+        // This page is resized to the outer viewport. Wide children provide
+        // their own scrolling and must not create a second page-level bar.
+        root->setSizeConstraint(QLayout::SetNoConstraint);
         root->setContentsMargins(14, 22, 14, 24);
         root->setSpacing(16);
         scroll_->setWidget(container);
