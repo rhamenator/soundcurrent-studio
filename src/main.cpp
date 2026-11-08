@@ -2599,7 +2599,7 @@ public:
             monitorChannels->setEnabled(studio_->monitoringAvailable());
             balanceControls_->setVisible(studio_->session().engine.channels.size()==2);
             try { audio_.setStudio(studio_->session());applyChanges();
-                studio_->liveStatus(studio_->session().offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):
+                studio_->liveStatus(studio_->session().offline?QString():
                                     audio_.active()?SC_TR("Studio settings applied to live playback."):SC_TR("Studio settings ready. Enable playback on the Equalizer tab."));
             }
             catch(const std::exception &error){showError(error.what());studio_->liveStatus(soundcurrent::i18n::audioErrorText(QString::fromUtf8(error.what())),true);}

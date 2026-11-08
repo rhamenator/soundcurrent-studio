@@ -369,7 +369,10 @@ void StudioPanel::updateDisplayedLevels(std::span<const float> levels) {
         item->setForeground(value>=1?QColor("#ff6868"):value>=.7?QColor("#ffc66d"):QColor("#55d7c3"));}
 }
 void StudioPanel::liveStatus(const QString &message,bool rejected) {
-    status_->setText(message);
+    // Mode guidance already has a dedicated, always-visible label. Keep the
+    // operational status line for distinct results and errors instead of
+    // rendering the same guidance twice.
+    status_->setText(message == modeHint_->text() ? QString() : message);
     if(rejected) {
         session_.offline=true;updateApplyState();offline_->blockSignals(true);offline_->setChecked(true);offline_->blockSignals(false);
         if(persist_)QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));
@@ -631,6 +634,8 @@ void StudioPanel::selfTest() {
     if(!apply_->isHidden()||apply_->isEnabled())qFatal("Live editing exposed Apply settings");
     if(live_->minimumHeight()<40||offline_->minimumHeight()<40||apply_->minimumHeight()<40||live_->minimumWidth()<96||offline_->minimumWidth()<96||apply_->minimumWidth()<140)qFatal("Studio mode buttons are too small");
     const auto initial=session_.json();offline_->setChecked(true);count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline||apply_->isHidden()||!apply_->isEnabled()||mixer_->rowCount()!=256)qFatal("Studio 256-channel UI failed");
+    liveStatus(SC_TR("Offline editing. Current playback keeps its last live Studio setup."));
+    if(!status_->text().isEmpty()||modeHint_->text().isEmpty())qFatal("Offline editing guidance was rendered twice");
     apply_->click();if(session_.offline||apply_->isEnabled()||!apply_->isHidden()||!live_->isChecked()||offline_->isChecked())qFatal("Apply settings did not switch staged settings to live state");
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");
