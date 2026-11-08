@@ -5,6 +5,7 @@ $tokens = $null; $errors = $null
 [Management.Automation.Language.Parser]::ParseFile($script,[ref]$tokens,[ref]$errors) | Out-Null
 if ($errors.Count) { throw ($errors | Out-String) }
 $text = Get-Content -LiteralPath $script -Raw
+if ($text -match '\[string\]\$RepositoryRoot\s*=') { throw 'RepositoryRoot must not evaluate PSScriptRoot inside the parameter default on Windows PowerShell 5.1.' }
 foreach ($required in @(
     'Assert-DisposableVm','copperfin-clean-win11','soundcurrent-win11-dev','HypervisorPresent','allowDriverChanges',
     "verifier.exe /standard /driver `$driverName",'verifier.exe /reset','Confirm-SecureBootUEFI',
