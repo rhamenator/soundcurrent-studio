@@ -24,6 +24,8 @@ The microphone transport uses a fixed-capacity single-producer/single-consumer r
 
 The userspace `windows_mic_transport.cpp` fixture passed Clang 21 AddressSanitizer + UndefinedBehaviorSanitizer and a separate ThreadSanitizer run, including concurrent stress. These tools exercised the portable transport fixture, not the kernel binary or the entirety of vendored SysVAD. Functional Windows tests covered gain/EQ/mute, routing and recovery. They do not establish resistance to malformed Kernel Streaming requests, low-resource failures or hostile local applications.
 
+A bounded inventory found no actual private-key PEM armor in tracked native-branch files and no `.pfx`, `.p12`, `.pvk` or `.key` filename candidates in the frozen outer package ZIP. This complements the source/archive provenance check; it is not an exhaustive secret scan or proof against deliberately disguised secrets.
+
 ## Open release qualifications
 
 1. Actual kernel Driver Verifier, malformed format/property request testing and longer low-resource/concurrency stress on a disposable VM are still required before a production security claim. Hardware/HVCI combinations need their own coverage.
