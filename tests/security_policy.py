@@ -82,6 +82,22 @@ for relative in tracked:
     if lower.endswith(private_suffixes) or pathlib.PurePosixPath(lower).name in {"id_rsa", "id_ed25519"}:
         fail(f"private key container is tracked: {relative}")
 
+qualification = text("tests/windows_native_release_qualification.ps1")
+for contract in (
+    "Assert-DisposableVm",
+    "copperfin-clean-win11",
+    "soundcurrent-win11-dev",
+    "HypervisorPresent",
+    "allowDriverChanges",
+    "verifier.exe /standard /driver $driverName",
+    "verifier.exe /reset",
+):
+    if contract not in qualification:
+        fail(f"native release qualification lost safety contract: {contract}")
+for forbidden in ("bcdedit /set", "TESTSIGNING ON", "Import-Certificate", "Set-ExecutionPolicy"):
+    if forbidden.lower() in qualification.lower():
+        fail(f"native release qualification may not weaken Windows policy: {forbidden}")
+
 pin = re.compile(r"^[0-9a-f]{40}$")
 for workflow in sorted((ROOT / ".github/workflows").glob("*.y*ml")):
     for line_number, line in enumerate(workflow.read_text(encoding="utf-8").splitlines(), 1):

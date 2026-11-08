@@ -75,6 +75,7 @@ jobs:
           cmake --build build-driver-manager --config Release --parallel 2
           python tests/security_policy.py
           powershell.exe -NoProfile -NonInteractive -File tests/windows_driver_signing_inputs.ps1
+          powershell.exe -NoProfile -NonInteractive -File tests/windows_native_release_qualification_contract.ps1
       - uses: github/codeql-action/analyze@33d7b85da1a04171e211befe2c739303b9a4c066 # v4.39.3
         with:
           category: /language:c-cpp/platform:windows-driver-manager
