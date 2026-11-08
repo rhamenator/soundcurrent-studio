@@ -1912,6 +1912,21 @@ protected:
     }
 };
 
+class ScrollPage : public QWidget {
+public:
+    QSize minimumSizeHint() const override {
+        auto hint = QWidget::minimumSizeHint();
+        hint.setWidth(0);
+        return hint;
+    }
+
+    QSize sizeHint() const override {
+        auto hint = QWidget::sizeHint();
+        hint.setWidth(0);
+        return hint;
+    }
+};
+
 static soundcurrent::equipment::Profile measuredSystemProfile(const QString &input, const QString &output) {
     soundcurrent::equipment::Profile p;
     p.kind = "speaker"; p.brand = SC_TR("Custom"); p.family = SC_TR("Whole listening system"); p.model = SC_TR("Measured listening position"); p.custom = true;
@@ -1957,7 +1972,7 @@ public:
         playbackScroll->setWidget(playbackBar);playbackScroll->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Preferred);
         shellLayout->addWidget(playbackScroll);
         shellLayout->setSizeConstraint(QLayout::SetNoConstraint);
-        auto *container = new QWidget;
+        auto *container = new ScrollPage;
         auto *root = new QVBoxLayout(container);
         // This page is resized to the outer viewport. Wide children provide
         // their own scrolling and must not create a second page-level bar.
@@ -1967,7 +1982,7 @@ public:
         scroll_->setWidget(container);
         auto *settingsScroll = new QScrollArea;
         settingsScroll->setWidgetResizable(true);
-        auto *settingsContainer = new QWidget;
+        auto *settingsContainer = new ScrollPage;
         auto *settingsRoot = new QVBoxLayout(settingsContainer);
         settingsRoot->setSizeConstraint(QLayout::SetNoConstraint);
         settingsRoot->setContentsMargins(14, 22, 14, 24);
