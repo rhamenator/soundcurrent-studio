@@ -9,3 +9,5 @@
 *.swp
 
 /build-native-apo/
+__pycache__/
+*.pyc
