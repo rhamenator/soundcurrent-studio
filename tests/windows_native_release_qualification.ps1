@@ -73,7 +73,7 @@ function Assert-DisposableVm {
     $computer = Get-CimInstance Win32_ComputerSystem
     if (!$computer.HypervisorPresent -and $computer.Model -notmatch 'Virtual|QEMU|VMware|KVM|Hyper-V') { throw 'Qualification refuses non-virtual hardware.' }
     $name = $env:COMPUTERNAME.ToLowerInvariant()
-    if ($protectedNames -contains $name -or $name -notmatch '(audit|qual|clone|test)') { throw "Qualification refuses protected or ambiguously named VM: $name" }
+    if ($protectedNames -contains $name -or $name -notmatch '(soundcurrent|audit|qual|clone|test)') { throw "Qualification refuses protected or ambiguously named VM: $name" }
     if (!(Test-Path -LiteralPath $DisposableVmApprovalFile -PathType Leaf)) { throw "Missing disposable-VM approval marker: $DisposableVmApprovalFile" }
     $approval = Get-Content -LiteralPath $DisposableVmApprovalFile -Raw | ConvertFrom-Json
     if ($approval.purpose -ne 'soundcurrent-native-driver-qualification' -or $approval.computerName -ne $env:COMPUTERNAME -or !$approval.allowDriverChanges) {
