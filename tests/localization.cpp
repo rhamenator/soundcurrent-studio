@@ -767,7 +767,7 @@ int main(int argc,char **argv){
     const auto mapped=audioErrorText(QString::fromUtf8(source));
     require(mapped==text(source)&&mapped!=QString::fromUtf8(source),"Studio engine diagnostic was not localized");
    }
-   for(const char *source:{"Offline editing. Current playback keeps its last live Studio setup.","Studio settings applied to live playback.","Studio settings ready. Enable playback on the Equalizer tab."})
+   for(const char *source:{"Offline editing. Current playback keeps its last live Studio setup.","Studio settings ready. Enable playback on the Equalizer tab."})
     require(text(source)!=QString::fromUtf8(source),"Studio live status fell back to English");
    require(audioErrorText(QString::fromUtf8("Driver diagnostic 0x80070005 / Ω"))==QString::fromUtf8("Driver diagnostic 0x80070005 / Ω"),"Unknown backend detail changed");
    for(const char *source:{"Selected speakers are disconnected","Audio bridge did not start","Install the Windows audio route using Audio driver setup, then reopen the app."}) {

@@ -2127,10 +2127,6 @@ Do you want to delete it anyway?</source>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>چیدمان‌های زنده باید با دستگاه صوتی انتخاب‌شده سازگار باشند. رندر آفلاین و آزمون‌های بی‌صدای نشانگرها از همه 256 کانال پشتیبانی می‌کنند.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>لوفای</translation>
     </message>
@@ -2528,6 +2524,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>ویرایش غیربلادرنگ. پخش فعلی آخرین پیکربندی بلادرنگ Studio خود را حفظ می‌کند.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>رندر آفلاین و آزمون‌های بی‌صدای نشانگرها از همه کانال‌ها پشتیبانی می‌کنند.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>کانال انتخاب‌شده Studio</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>تنظیمات Studio روی پخش بلادرنگ اعمال شد.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

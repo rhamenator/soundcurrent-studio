@@ -2127,10 +2127,6 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Mipangilio ya moja kwa moja lazima itoshee kifaa cha sauti kilichochaguliwa. Uundaji wa faili nje ya mtandao na majaribio ya kimya ya mita hutumia chaneli zote 256.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Lo-Fi</translation>
     </message>
@@ -2528,6 +2524,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Uhariri nje ya wakati halisi. Uchezaji wa sasa huhifadhi usanidi wake wa mwisho wa Studio wa wakati halisi.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Uundaji wa faili nje ya mtandao na majaribio ya kimya ya mita hutumia chaneli zote.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Chaneli iliyochaguliwa ya Studio</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Mipangilio ya Studio imetumika kwa uchezaji wa wakati halisi.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

@@ -2127,10 +2127,6 @@ Chcete ho aj tak zmazať?</translation>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Živé rozloženia musia zodpovedať možnostiam vybraného zvukového zariadenia. Offline renderovanie a tiché testy ukazovateľov podporujú všetkých 256 kanálov.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Lo-Fi</translation>
     </message>
@@ -2528,6 +2524,10 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Offline úpravy. Aktuálne prehrávanie si ponechá poslednú konfiguráciu Studio pre živé spracovanie.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Offline renderovanie a tiché testy ukazovateľov podporujú všetky kanály.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Vybraný kanál Studio</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Nastavenia Studio boli použité na živé prehrávanie.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

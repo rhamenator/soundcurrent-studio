@@ -2127,10 +2127,6 @@ Vill du ta bort den ändå?</translation>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Live-layouter måste passa den valda ljudenheten. Offline-rendering och tysta indikatortester stöder alla 256 kanaler.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Lo-Fi</translation>
     </message>
@@ -2528,6 +2524,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Offlineredigering. Den aktuella uppspelningen behåller den senaste Studio-konfigurationen för realtid.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Offline-rendering och tysta indikatortester stöder alla kanaler.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Vald Studio-kanal</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Studio-inställningarna har tillämpats på realtidsuppspelningen.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

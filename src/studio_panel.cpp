@@ -6,6 +6,7 @@
 #include "channel_meter_view.h"
 #include "studio_name_text.h"
 #include "audio_error_text.h"
+#include "responsive_ui.h"
 #include "wav.h"
 #include <QCheckBox>
 #include <QButtonGroup>
@@ -79,9 +80,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     if (persist) session_.offline = QSettings().value("studioOfflineEditing", false).toBool();
     auto *root = new QVBoxLayout(this);
     auto *layoutBox = new QGroupBox(SC_TR("Channels and routing")); auto *layoutForm = new QFormLayout(layoutBox);
+    layoutForm->setRowWrapPolicy(QFormLayout::WrapLongRows);layoutForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
     layout_ = new QComboBox; layout_->addItems({SC_TR("Stereo"), SC_TR("Mono"), "5.1", "7.1", SC_TR("16 channels"), SC_TR("Custom")});
     count_ = new soundcurrent::AcceleratingSpinBox; count_->setRange(1, int(maxChannels)); count_->setAccessibleName(SC_TR("Studio channel count"));
-    auto *layoutRow = new QHBoxLayout; layoutRow->addWidget(layout_); layoutRow->addWidget(count_);
+    auto *layoutRow = new soundcurrent::ui::ResponsiveRow; layoutRow->addWidget(layout_,1); layoutRow->addWidget(count_);
     layoutForm->addRow(SC_TR("Layout"), layoutRow);
     modePanel_=new QWidget;modePanel_->setObjectName("studioPlaybackMode");
     auto *modeLayout=new QVBoxLayout(modePanel_);modeLayout->setContentsMargins(0,0,0,0);
@@ -97,7 +99,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     modeHint_=new QLabel;modeHint_->setWordWrap(true);modeLayout->addWidget(modeHint_);
     root->addWidget(modePanel_);
     connect(apply_,&QPushButton::clicked,this,[this]{if(!locked_)live_->setChecked(true);});
-    auto *ioHint = new QLabel(SC_TR("Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels."));
+    auto *ioHint = new QLabel(SC_TR("Offline rendering and silent meter tests support all channels."));
     ioHint->setWordWrap(true); layoutForm->addRow(ioHint);
     root->addWidget(layoutBox);
     editing_ = new QWidget; auto *editRoot = new QVBoxLayout(editing_); editRoot->setContentsMargins(0,0,0,0);
@@ -117,20 +119,21 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
         setLocked(wasLocked); // Center is an explicit reset, including in test mode.
     });
     editRoot->addWidget(roomBalanceBox_);
-    pages_=new QTabWidget;pages_->setObjectName("studioWorkPages");editRoot->addWidget(pages_);
+    pages_=new QTabWidget;pages_->setObjectName("studioWorkPages");pages_->setUsesScrollButtons(true);pages_->setElideMode(Qt::ElideRight);pages_->setSizePolicy(QSizePolicy::Ignored,QSizePolicy::Expanding);editRoot->addWidget(pages_);
     auto *effectsPage=new QWidget;auto *effectsLayout=new QVBoxLayout(effectsPage);pages_->addTab(effectsPage,SC_TR("Effects"));
-    auto *inputRow=new QHBoxLayout;inputRow->addWidget(new QLabel(SC_TR("Input gain")));
+    auto *inputRow=new soundcurrent::ui::ResponsiveRow;inputRow->addWidget(new QLabel(SC_TR("Input gain")));
     preGain_=slider(-6000,2400,0);preGain_->setSingleStep(50);preGain_->setPageStep(100);preGain_->setObjectName("inputGain");preGain_->setAccessibleName(SC_TR("Input gain"));inputRow->addWidget(preGain_,1);
-    preGainValue_=new QLabel;preGainValue_->setMinimumWidth(76);inputRow->addWidget(preGainValue_);effectsLayout->addLayout(inputRow);
+    preGainValue_=new QLabel;preGainValue_->setMinimumWidth(76);inputRow->addWidget(preGainValue_);effectsLayout->addWidget(inputRow);
     connect(preGain_,&QSlider::valueChanged,this,[this](int gain){change([&](Session &s){s.engine.preGainDb=gain/100.;});preGainValue_->setText(QLocale().toString(gain/100.,'f',2)+SC_TR(" dB"));});
     mixer_=table({SC_TR("Channel"),SC_TR("Gain"),SC_TR("Mute"),SC_TR("Solo")});mixer_->setObjectName("channelMixer");mixer_->setMaximumHeight(480);pages_->addTab(mixer_,SC_TR("Mixer"));
     auto *channelPage=new QWidget;auto *channelLayout=new QVBoxLayout(channelPage);pages_->addTab(channelPage,SC_TR("Selected channel"));
     auto *fx = new QGroupBox(SC_TR("Effects")); auto *fxForm = new QFormLayout(fx);
+    fxForm->setRowWrapPolicy(QFormLayout::WrapLongRows);fxForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
     preset_ = new QComboBox; preset_->setAccessibleName(SC_TR("Studio effect preset"));
     preset_->addItems({SC_TR("Dry"), SC_TR("Slapback echo"), SC_TR("Rhythmic echo"), SC_TR("Small room"), SC_TR("Warm hall"), SC_TR("Large hall"), SC_TR("Echo and space"), SC_TR("Custom")});
     fxForm->addRow(SC_TR("Effect preset"), preset_);
     bypass_ = new QCheckBox(SC_TR("Bypass Studio processing")); headroom_ = new QCheckBox(SC_TR("Automatic EQ headroom"));
-    auto *powerRow = new QHBoxLayout; powerRow->addWidget(bypass_); powerRow->addWidget(headroom_); fxForm->addRow(powerRow);
+    auto *powerRow = new soundcurrent::ui::ResponsiveRow; powerRow->addWidget(bypass_); powerRow->addWidget(headroom_); fxForm->addRow(powerRow);
     delay_ = new QCheckBox(SC_TR("Delay / echo")); delayMs_ = spin(1,2000,250,1); delayMs_->setSuffix(" ms");
     feedback_ = spin(0,.9,.35,.01); wetDelay_ = slider(0,100,20); wetDelay_->setAccessibleName(SC_TR("Delay wet mix percent"));
     fxForm->addRow(delay_); fxForm->addRow(SC_TR("Delay time"), delayMs_); fxForm->addRow(SC_TR("Feedback"), feedback_); fxForm->addRow(SC_TR("Delay wet mix"), wetDelay_);
@@ -148,6 +151,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     enhancements_->onEdited=[this]{change([this](Session &s){s.engine.enhancements=enhancements_->settings();});if(!rebuilding_)preset_->setCurrentIndex(7);};
     effectsLayout->addWidget(fx);effectsLayout->addStretch();
     auto *channelBox = new QGroupBox(SC_TR("Selected channel")); auto *ch = new QFormLayout(channelBox);
+    ch->setRowWrapPolicy(QFormLayout::WrapLongRows);ch->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
     channel_ = new QComboBox; channel_->setAccessibleName(SC_TR("Studio selected channel")); name_ = new QLineEdit; name_->setMaxLength(80);
     trim_ = slider(-120,48,0); trim_->setAccessibleName(SC_TR("Channel gain in half dB steps"));
     mute_ = new QCheckBox(SC_TR("Mute")); solo_ = new QCheckBox(SC_TR("Solo")); auto *muteRow = new QHBoxLayout; muteRow->addWidget(mute_); muteRow->addWidget(solo_);
@@ -160,23 +164,24 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     filterHz_ = spin(20,20000,1000,10); filterDb_ = spin(-24,24,0,.5); filterQ_ = spin(.1,20,1);
     ch->addRow(SC_TR("Filter type"), filterType_); ch->addRow(SC_TR("Frequency"), filterHz_); ch->addRow(SC_TR("Gain"), filterDb_); ch->addRow("Q", filterQ_);
     auto *add = new QPushButton(SC_TR("Add filter")), *replace = new QPushButton(SC_TR("Update selected")), *remove = new QPushButton(SC_TR("Remove selected"));
-    auto *filterButtons = new QHBoxLayout; filterButtons->addWidget(add); filterButtons->addWidget(replace); filterButtons->addWidget(remove); ch->addRow(filterButtons);
+    auto *filterButtons = new soundcurrent::ui::ResponsiveRow; filterButtons->addWidget(add); filterButtons->addWidget(replace); filterButtons->addWidget(remove); ch->addRow(filterButtons);
     routes_ = table({SC_TR("Input channel"), SC_TR("Gain / polarity")}); routes_->setAccessibleName(SC_TR("Routes into selected output channel")); ch->addRow(routes_);
     routeInput_ = new soundcurrent::AcceleratingSpinBox; routeInput_->setRange(1,2); routeGain_ = spin(-4,4,1,.05);
     ch->addRow(SC_TR("Input channel"), routeInput_); ch->addRow(SC_TR("Linear route gain (negative = invert)"), routeGain_);
     auto *route = new QPushButton(SC_TR("Set route")), *unroute = new QPushButton(SC_TR("Remove selected route")), *identity = new QPushButton(SC_TR("Reset all routing"));
-    auto *routeButtons = new QHBoxLayout; routeButtons->addWidget(route); routeButtons->addWidget(unroute); routeButtons->addWidget(identity); ch->addRow(routeButtons);
+    auto *routeButtons = new soundcurrent::ui::ResponsiveRow; routeButtons->addWidget(route); routeButtons->addWidget(unroute); routeButtons->addWidget(identity); ch->addRow(routeButtons);
     channelLayout->addWidget(channelBox);channelLayout->addStretch();root->addWidget(editing_);
-    auto *tools = new QHBoxLayout; auto *save = new QPushButton(SC_TR("Save Studio setup")), *open = new QPushButton(SC_TR("Open Studio setup"));
-    undo_ = new QPushButton(SC_TR("Undo Studio change")); tools->addWidget(save); tools->addWidget(open); tools->addWidget(undo_); root->addLayout(tools);
+    auto *tools = new soundcurrent::ui::ResponsiveRow; auto *save = new QPushButton(SC_TR("Save Studio setup")), *open = new QPushButton(SC_TR("Open Studio setup"));
+    undo_ = new QPushButton(SC_TR("Undo Studio change")); tools->addWidget(save); tools->addWidget(open); tools->addWidget(undo_); root->addWidget(tools);
     meterBank_=new QComboBox;meterBank_->setAccessibleName(SC_TR("Studio channel output levels"));meterBank_->setObjectName("channelMeterBank");
     meterView_=new ChannelMeterView;
     connect(meterBank_,&QComboBox::currentIndexChanged,this,[this](int bank){if(!rebuilding_)meterView_->setBank(bank);});
     preview_ = new QCheckBox(SC_TR("Test channel meters with a silent generated signal"));
     meters_ = table({SC_TR("Channel"), SC_TR("Peak")}); meters_->setAccessibleName(SC_TR("Studio channel output levels"));
     auto *renderBox = new QGroupBox(SC_TR("Offline WAVE rendering")); auto *rf = new QFormLayout(renderBox);
+    rf->setRowWrapPolicy(QFormLayout::WrapLongRows);rf->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
     tail_ = spin(0,30,3,.5); tail_->setSuffix(" s"); rf->addRow(SC_TR("Effect tail"), tail_);
-    auto *renderRow = new QHBoxLayout; render_ = new QPushButton(SC_TR("Render audio file…")); cancel_ = new QPushButton(SC_TR("Cancel render")); cancel_->setEnabled(false);
+    auto *renderRow = new soundcurrent::ui::ResponsiveRow; render_ = new QPushButton(SC_TR("Render audio file…")); cancel_ = new QPushButton(SC_TR("Cancel render")); cancel_->setEnabled(false);
     renderRow->addWidget(render_); renderRow->addWidget(cancel_); rf->addRow(renderRow);
     progress_ = new QProgressBar; progress_->setRange(0,100); rf->addRow(progress_);
     pages_->addTab(renderBox,SC_TR("Offline WAVE rendering"));

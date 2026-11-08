@@ -2127,10 +2127,6 @@ Do you want to delete it anyway?</source>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Οι διατάξεις πραγματικού χρόνου πρέπει να ταιριάζουν στην επιλεγμένη συσκευή ήχου. Η απόδοση μη πραγματικού χρόνου και οι αθόρυβες δοκιμές ενδείξεων υποστηρίζουν και τα 256 κανάλια.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Λόου φάι</translation>
     </message>
@@ -2528,6 +2524,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Επεξεργασία εκτός πραγματικού χρόνου. Η τρέχουσα αναπαραγωγή διατηρεί την τελευταία διαμόρφωση Studio σε πραγματικό χρόνο.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Η απόδοση μη πραγματικού χρόνου και οι αθόρυβες δοκιμές ενδείξεων υποστηρίζουν όλα τα κανάλια.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Επιλεγμένο κανάλι Studio</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Οι ρυθμίσεις Studio εφαρμόστηκαν στην αναπαραγωγή σε πραγματικό χρόνο.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

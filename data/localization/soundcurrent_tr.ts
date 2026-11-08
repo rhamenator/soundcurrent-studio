@@ -2127,10 +2127,6 @@ Yine de silmek istiyor musunuz?</translation>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Canlı düzenler seçili ses cihazına uygun olmalıdır. Çevrimdışı ses dosyası oluşturma ve sessiz gösterge testleri 256 kanalın tümünü destekler.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Lo-Fi</translation>
     </message>
@@ -2528,6 +2524,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Çevrimdışı düzenleme. Geçerli oynatma son canlı Studio yapılandırmasını korur.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Çevrimdışı ses dosyası oluşturma ve sessiz gösterge testleri tüm kanalları destekler.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio seçili kanalı</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Studio ayarları canlı oynatmaya uygulandı.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
