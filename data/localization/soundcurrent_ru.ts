@@ -2514,6 +2514,10 @@ Do you want to delete it anyway?</source>
       <translation>Октавная</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Офлайн</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Офлайн-рендеринг WAVE</translation>
     </message>

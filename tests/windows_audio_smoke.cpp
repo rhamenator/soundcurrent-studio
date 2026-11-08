@@ -330,6 +330,66 @@ int main(int argc, char **argv) {
         const auto studioFlat = probe.measure(1000);
         if (std::abs(decibels(studioFlat.left, flat.left)) > .5)
             throw std::runtime_error("Studio dry route changed level");
+        studio.preGainDb = -6;
+        bridge.setStudio(studio, identity);
+        const auto inputGain = probe.measure(1000);
+        if (std::abs(decibels(inputGain.left, studioFlat.left) + 6) > .5)
+            throw std::runtime_error("Studio input gain failed");
+        studio.preGainDb = 0; studio.channels[0].gainDb = -9;
+        bridge.setStudio(studio, identity);
+        const auto trim = probe.measure(1000);
+        if (std::abs(decibels(trim.left, studioFlat.left) + 9) > .5 ||
+            std::abs(decibels(trim.right, studioFlat.right)) > .5)
+            throw std::runtime_error("Studio independent channel trim failed");
+        studio.channels[0].gainDb = 0; bridge.setStudio(studio, identity);
+        if (!native && !loopback) {
+            // Exercise the same default endpoint API as Studio's system slider,
+            // then real Windows media keys, while the Studio engine is active.
+            soundcurrent::WindowsRouteLease route(false, cableInput, speakers, true);
+            for (int role = 0; role < 3; ++role)
+                if (soundcurrent::windowsDefaultEndpointId(false, role) != cableInput)
+                    throw std::runtime_error("Studio media endpoint roles diverged");
+            soundcurrent::windowsSetSystemOutputVolume(.5f);
+            const auto state = soundcurrent::windowsSystemOutputVolume();
+            if (std::abs(state.level - .5f) > .01f || state.muted)
+                throw std::runtime_error("Studio system volume endpoint did not synchronize");
+            const auto half = probe.measure(1000);
+            const auto expected = sourceVolume.relativeDecibels();
+            const auto actual = decibels(half.left, studioFlat.left);
+            if (std::abs(actual - expected) > 1)
+                throw std::runtime_error("Studio Windows volume did not attenuate playback");
+            auto mediaKey = [](WORD key) {
+                INPUT input[2]{};
+                input[0].type = input[1].type = INPUT_KEYBOARD;
+                input[0].ki.wVk = input[1].ki.wVk = key;
+                input[1].ki.dwFlags = KEYEVENTF_KEYUP;
+                if (SendInput(2, input, sizeof(INPUT)) != 2)
+                    throw std::runtime_error("Could not send Windows media key");
+                Sleep(350);
+            };
+            mediaKey(VK_VOLUME_MUTE);
+            const auto muted = probe.measure(1000);
+            if (!soundcurrent::windowsSystemOutputVolume().muted ||
+                muted.left > studioFlat.left * .01 || muted.right > studioFlat.right * .01)
+                throw std::runtime_error("Studio Windows media mute did not silence playback");
+            mediaKey(VK_VOLUME_MUTE);
+            if (soundcurrent::windowsSystemOutputVolume().muted)
+                throw std::runtime_error("Studio Windows media unmute failed");
+            const auto restored = probe.measure(1000);
+            if (std::abs(decibels(restored.left, half.left)) > .5)
+                throw std::runtime_error("Studio media unmute changed volume");
+            mediaKey(VK_VOLUME_DOWN);
+            if (soundcurrent::windowsSystemOutputVolume().level >= state.level)
+                throw std::runtime_error("Studio media volume-down did not change endpoint");
+            const auto down = probe.measure(1000);
+            if (down.left >= restored.left)
+                throw std::runtime_error("Studio media volume-down did not attenuate playback");
+            sourceVolume.set(1.0f, FALSE);
+            std::printf("Studio Windows volume %.2f dB (expected %.2f); media mute RMS %.8f / %.8f; media unmute and volume-down passed.\n",
+                actual, expected, muted.left, muted.right);
+        }
+        std::printf("Studio input gain %.2f dB; independent channel trim %.2f dB.\n",
+            decibels(inputGain.left, studioFlat.left), decibels(trim.left, studioFlat.left));
         studio.postGainDb = 6;
         if (!bridge.setStudio(studio, identity)) throw std::runtime_error("Studio live gain rejected");
         const auto studioGain = probe.measure(1000);

@@ -2514,6 +2514,10 @@ Do you want to delete it anyway?</source>
       <translation>सप्तक</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>ऑफ़लाइन</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>ऑफ़लाइन WAVE रेंडरिंग</translation>
     </message>

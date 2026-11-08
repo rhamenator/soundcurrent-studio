@@ -2514,6 +2514,10 @@ Do you want to delete it anyway?</source>
       <translation>อ็อกเทฟ</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>ออฟไลน์</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>เรนเดอร์ WAVE ออฟไลน์</translation>
     </message>

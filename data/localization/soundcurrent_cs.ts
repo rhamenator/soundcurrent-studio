@@ -2514,6 +2514,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Oktávová</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline renderování WAVE</translation>
     </message>

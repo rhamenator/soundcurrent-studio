@@ -71,10 +71,11 @@ private:
     QLabel *preGainValue_, *stereoBalanceValue_;
     QWidget *stereoBalanceControls_;
     QPushButton *showMeters_, *centerBalance_;
-    QPushButton *apply_;
+    QPushButton *apply_, *offline_, *live_;
+    QWidget *modePanel_;
     QSpinBox *count_, *routeInput_;
     QComboBox *layout_, *channel_, *preset_, *filterType_;
-    QCheckBox *offline_, *mute_, *solo_, *delay_, *reverb_, *bypass_, *headroom_, *preview_;
+    QCheckBox *mute_, *solo_, *delay_, *reverb_, *bypass_, *headroom_, *preview_;
     QLineEdit *name_;
     QSlider *trim_, *wetDelay_, *wetReverb_;
     QDoubleSpinBox *delayMs_, *feedback_, *decay_, *damping_, *filterHz_, *filterDb_, *filterQ_, *routeGain_, *tail_;

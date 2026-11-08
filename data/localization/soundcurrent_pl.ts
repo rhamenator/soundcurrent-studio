@@ -2514,6 +2514,10 @@ Czy na pewno chcesz go usunąć?</translation>
       <translation>Oktawowa</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Renderowanie WAVE offline</translation>
     </message>

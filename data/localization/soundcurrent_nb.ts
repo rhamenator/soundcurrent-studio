@@ -2514,6 +2514,10 @@ Vil du slette den likevel?</translation>
       <translation>Oktav</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Frakoblet</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline WAVE-rendering</translation>
     </message>

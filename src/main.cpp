@@ -32,6 +32,7 @@
 #include "equipment_profiles.h"
 #include "processing_guard.h"
 #include "studio_panel.h"
+#include <QTableWidget>
 #include "studio_name_text.h"
 #ifndef _WIN32
 #include "linux_audio.h"

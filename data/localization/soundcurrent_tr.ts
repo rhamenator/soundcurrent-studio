@@ -2514,6 +2514,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Oktav</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Çevrimdışı</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Çevrimdışı WAVE dosyası oluşturma</translation>
     </message>

@@ -2514,6 +2514,10 @@ Do you want to delete it anyway?</source>
       <translation>אוקטבה</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>לא מקוון</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>עיבוד WAVE לקובץ ללא חיבור</translation>
     </message>

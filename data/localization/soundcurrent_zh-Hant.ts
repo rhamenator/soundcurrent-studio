@@ -2514,6 +2514,10 @@ Do you want to delete it anyway?</source>
       <translation>倍頻程</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>離線</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>離線 WAVE 算繪</translation>
     </message>
