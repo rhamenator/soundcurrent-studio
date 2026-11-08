@@ -2127,10 +2127,6 @@ Bạn vẫn muốn xóa không?</translation>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Bố cục xử lý trực tiếp phải phù hợp với số kênh của thiết bị âm thanh đã chọn. Kết xuất ngoại tuyến và thử đồng hồ bằng tín hiệu không tiếng hỗ trợ đủ 256 kênh.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Lo-Fi</translation>
     </message>
@@ -2528,6 +2524,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Chỉnh sửa ngoại tuyến. Phát âm thanh hiện tại giữ nguyên cấu hình Studio thời gian thực gần nhất.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Kết xuất ngoại tuyến và thử đồng hồ bằng tín hiệu không tiếng hỗ trợ tất cả các kênh.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Kênh Studio đã chọn</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Đã áp dụng cài đặt Studio cho phát âm thanh thời gian thực.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

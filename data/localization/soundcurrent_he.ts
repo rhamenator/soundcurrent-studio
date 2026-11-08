@@ -2127,10 +2127,6 @@ Do you want to delete it anyway?</source>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>תצורות לעיבוד חי חייבות להתאים למכשיר השמע שנבחר. עיבוד לקובץ ללא חיבור ובדיקות מחוונים שקטות תומכים בכל 256 הערוצים.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>לו־פיי</translation>
     </message>
@@ -2528,6 +2524,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>עריכה שאינה בזמן אמת. הניגון הנוכחי שומר על תצורת Studio האחרונה שלו לעיבוד בזמן אמת.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>עיבוד לא מקוון ובדיקות מחוונים שקטות תומכים בכל הערוצים.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>הערוץ הנבחר ב־Studio</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>הגדרות Studio הוחלו על הניגון בזמן אמת.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

@@ -2127,10 +2127,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>Tata letak live harus sesuai dengan kapasitas kanal perangkat audio yang dipilih. Rendering offline dan uji meter tanpa suara mendukung seluruh 256 kanal.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>Lo-Fi</translation>
     </message>
@@ -2528,6 +2524,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>Pengeditan offline. Pemutaran saat ini mempertahankan konfigurasi Studio waktu nyata terakhirnya.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>Rendering offline dan uji meter tanpa suara mendukung semua kanal.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Studio selected channel</source>
       <translation>Kanal Studio yang dipilih</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Pengaturan Studio diterapkan ke pemutaran waktu nyata.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>

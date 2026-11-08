@@ -2127,10 +2127,6 @@ Do you want to delete it anyway?</source>
       <extracomment>The live processing stream has a different channel count from the staged/editing layout. Do not assign its peaks to the draft speakers. Use matching live layout or silent test. Native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels.</source>
-      <translation>라이브 레이아웃의 채널 수는 선택한 오디오 장치에 맞아야 합니다. 오프라인 렌더링과 무음 미터 테스트는 전체 256채널을 지원합니다.</translation>
-    </message>
-    <message>
       <source>Lo-Fi</source>
       <translation>로파이</translation>
     </message>
@@ -2528,6 +2524,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Offline editing. Current playback keeps its last live Studio setup.</source>
       <translation>오프라인 편집. 현재 재생은 마지막 실시간 Studio 구성을 유지합니다.</translation>
+    </message>
+    <message>
+      <source>Offline rendering and silent meter tests support all channels.</source>
+      <translation>오프라인 렌더링과 무음 미터 테스트는 모든 채널을 지원합니다.</translation>
     </message>
     <message>
       <source>Omnidirectional speaker</source>
@@ -3704,10 +3704,6 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Studio selected channel</source>
       <translation>Studio 선택 채널</translation>
-    </message>
-    <message>
-      <source>Studio settings applied to live playback.</source>
-      <translation>Studio 설정이 실시간 재생에 적용되었습니다.</translation>
     </message>
     <message>
       <source>Studio settings ready. Enable playback on the Equalizer tab.</source>
