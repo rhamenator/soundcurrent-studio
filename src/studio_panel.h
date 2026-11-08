@@ -71,7 +71,7 @@ private:
     QLabel *preGainValue_, *stereoBalanceValue_;
     QWidget *stereoBalanceControls_;
     QPushButton *showMeters_, *centerBalance_;
-    QPushButton *apply_, *offline_;
+    QPushButton *apply_, *offline_, *live_;
     QWidget *modePanel_;
     QSpinBox *count_, *routeInput_;
     QComboBox *layout_, *channel_, *preset_, *filterType_;

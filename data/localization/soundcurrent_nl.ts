@@ -2514,6 +2514,10 @@ Wilt u het toch verwijderen?</translation>
       <translation>Octaaf</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline WAVE-renderen</translation>
     </message>

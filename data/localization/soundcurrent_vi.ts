@@ -2514,6 +2514,10 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Quãng tám</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Ngoại tuyến</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Kết xuất WAVE ngoại tuyến</translation>
     </message>

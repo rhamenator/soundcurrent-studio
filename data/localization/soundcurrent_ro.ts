@@ -2514,6 +2514,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Octavă</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Randare WAVE offline</translation>
     </message>

@@ -2514,6 +2514,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Oktáv</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline WAVE-renderelés</translation>
     </message>

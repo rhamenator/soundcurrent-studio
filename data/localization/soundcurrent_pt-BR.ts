@@ -2514,6 +2514,10 @@ Deseja excluí-lo mesmo assim?</translation>
       <translation>Oitava</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Renderização WAVE offline</translation>
     </message>

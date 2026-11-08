@@ -1,0 +1,6 @@
+UI test application initialized
+UI self-test: constructing window
+UI self-test: window constructed
+UI self-test: microphone privacy and saved choice checks passed
+QFont::setPointSize: Point size <= 0 (-1), must be greater than 0
+UI self-test passed with 34 presets and editable 5–31 band layout

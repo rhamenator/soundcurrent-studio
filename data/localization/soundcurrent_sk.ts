@@ -2514,6 +2514,10 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Oktávová</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline renderovanie WAVE</translation>
     </message>

@@ -2514,6 +2514,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Oktaavi</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline-WAVE-renderöinti</translation>
     </message>

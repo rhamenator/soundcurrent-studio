@@ -2514,6 +2514,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Octave</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Hors ligne</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Rendu WAVE hors ligne</translation>
     </message>

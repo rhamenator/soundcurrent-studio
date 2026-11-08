@@ -2514,6 +2514,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Oktava</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Nje ya mtandao</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Uundaji wa faili ya WAVE nje ya mtandao</translation>
     </message>

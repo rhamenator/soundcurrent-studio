@@ -2514,6 +2514,10 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Ottava</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Rendering WAVE offline</translation>
     </message>

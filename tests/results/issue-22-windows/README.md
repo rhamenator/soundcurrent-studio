@@ -30,3 +30,5 @@ Installed local patched executable SHA256: 522EB0EA94A1EC3B0FE0D0AD14E56A6CBA300
 
 
 Follow-up: Undo mode/preference synchronization passed the complete shared UI self-test. The final linked binary also repeated the live UI test successfully: Apply -5.98931 dB, mute 0 / 0.00176382, trim -8.98753 dB, solo 0.00176376 / 0, effects -2.80037 dB; route restoration passed.
+
+**Post-reboot update:** the initial Software-only volume persistence failed its first Windows reboot. See [the superseding report](post-reboot/POST-REBOOT-REPORT.md) for the dual-location correction, compact radio-style command buttons, passing current live tests, and the remaining second-reboot check.

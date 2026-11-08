@@ -8,6 +8,7 @@
 #include "audio_error_text.h"
 #include "wav.h"
 #include <QCheckBox>
+#include <QButtonGroup>
 #include <QDialog>
 #include <QTabWidget>
 #include <QScrollArea>
@@ -83,16 +84,19 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     auto *layoutRow = new QHBoxLayout; layoutRow->addWidget(layout_); layoutRow->addWidget(count_);
     layoutForm->addRow(SC_TR("Layout"), layoutRow);
     modePanel_=new QWidget;modePanel_->setObjectName("studioPlaybackMode");
-    auto *modeLayout=new QVBoxLayout(modePanel_);modeLayout->setContentsMargins(14,12,14,12);
+    auto *modeLayout=new QVBoxLayout(modePanel_);modeLayout->setContentsMargins(0,0,0,0);
     auto *modeActions=new QHBoxLayout;
-    offline_ = new QPushButton;offline_->setCheckable(true);offline_->setObjectName("studioOfflineEditing");
+    auto *modes=new QButtonGroup(this);modes->setExclusive(true);
+    live_=new QPushButton(SC_TR("Live"));live_->setCheckable(true);live_->setObjectName("studioLiveEditing");
+    live_->setToolTip(SC_TR("Changes apply immediately"));modes->addButton(live_);modeActions->addWidget(live_);
+    offline_ = new QPushButton(SC_TR("Offline"));offline_->setCheckable(true);offline_->setObjectName("studioOfflineEditing");modes->addButton(offline_);
     offline_->setAccessibleName(SC_TR("Offline editing — keep current playback unchanged"));
-    offline_->setMinimumHeight(44);modeActions->addWidget(offline_,1);
-    apply_=new QPushButton(SC_TR("Apply settings"));apply_->setObjectName("applyStudioSettings");apply_->setMinimumHeight(44);modeActions->addWidget(apply_);
+    offline_->setToolTip(SC_TR("Offline editing — keep current playback unchanged"));modeActions->addWidget(offline_);
+    apply_=new QPushButton(SC_TR("Apply settings"));apply_->setObjectName("applyStudioSettings");modeActions->addWidget(apply_);modeActions->addStretch(1);
     modeLayout->addLayout(modeActions);
     modeHint_=new QLabel;modeHint_->setWordWrap(true);modeLayout->addWidget(modeHint_);
     root->addWidget(modePanel_);
-    connect(apply_,&QPushButton::clicked,this,[this]{if(!locked_)offline_->setChecked(false);});
+    connect(apply_,&QPushButton::clicked,this,[this]{if(!locked_)live_->setChecked(true);});
     auto *ioHint = new QLabel(SC_TR("Live layouts must fit the selected audio device. Offline rendering and silent meter tests support all 256 channels."));
     ioHint->setWordWrap(true); layoutForm->addRow(ioHint);
     root->addWidget(layoutBox);
@@ -253,12 +257,12 @@ void StudioPanel::commit(const Session &before) {
     if(onChanged)onChanged();
     updateApplyState();syncMixer();
 }
-void StudioPanel::setLocked(bool locked) { locked_=locked;for(int i=0;i<3;++i)pages_->widget(i)->setEnabled(!locked);roomBalanceBox_->setEnabled(!locked);updateApplyState();count_->setEnabled(!locked);layout_->setEnabled(!locked);offline_->setEnabled(!locked);undo_->setEnabled(!locked&&!history_.empty()); }
+void StudioPanel::setLocked(bool locked) { locked_=locked;for(int i=0;i<3;++i)pages_->widget(i)->setEnabled(!locked);roomBalanceBox_->setEnabled(!locked);updateApplyState();count_->setEnabled(!locked);layout_->setEnabled(!locked);offline_->setEnabled(!locked);live_->setEnabled(!locked);undo_->setEnabled(!locked&&!history_.empty()); }
 void StudioPanel::undo() { if(locked_||history_.empty())return;const bool wasOffline=session_.offline;session_=history_.back();history_.pop_back();rebuild();if(persist_){QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));if(wasOffline!=session_.offline)QSettings().setValue("studioOfflineEditing",session_.offline);}if(preview_->isChecked())startPreview();if(onChanged)onChanged(); }
 void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
-    offline_->setChecked(session_.offline);channel_->clear();for(int c=0;c<int(session_.engine.channels.size());++c)channel_->addItem(channelNameText(session_,c));channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
+    live_->setChecked(!session_.offline);offline_->setChecked(session_.offline);channel_->clear();for(int c=0;c<int(session_.engine.channels.size());++c)channel_->addItem(channelNameText(session_,c));channel_->setCurrentIndex(selected);routeInput_->setMaximum(count_->value());
     preGain_->setValue(int(std::lround(session_.engine.preGainDb*100)));
     preGainValue_->setText(QLocale().toString(session_.engine.preGainDb,'f',2)+SC_TR(" dB"));
     updateApplyState();
@@ -288,12 +292,11 @@ void StudioPanel::loadChannel() {
     rebuilding_=false;syncMixer();
 }
 void StudioPanel::updateApplyState() {
-    const auto color=session_.offline?QStringLiteral("#f4c46a"):QStringLiteral("#55d7c3");
-    modePanel_->setStyleSheet(QStringLiteral("QWidget#studioPlaybackMode { border: 2px solid %1; border-radius: 8px; } "
-        "QPushButton#studioOfflineEditing { background-color: %1; color: #101820; font-weight: 700; padding: 10px 16px; border-radius: 5px; }").arg(color));
-    offline_->setText(session_.offline?SC_TR("Offline editing — keep current playback unchanged"):SC_TR("Changes apply immediately"));
+    modePanel_->setStyleSheet(QStringLiteral("QPushButton { padding: 6px 14px; border-radius: 4px; } "
+        "QPushButton#studioLiveEditing:checked { background-color: #55d7c3; color: #101820; font-weight: 700; } "
+        "QPushButton#studioOfflineEditing:checked { background-color: #f4c46a; color: #101820; font-weight: 700; }"));
     showMeters_->setEnabled(monitoringAvailable());
-    apply_->setVisible(session_.offline);apply_->setEnabled(!locked_&&session_.offline);
+    apply_->setVisible(true);apply_->setEnabled(!locked_&&session_.offline);
     modeHint_->setText(session_.offline?SC_TR("Offline editing. Current playback keeps its last live Studio setup."):SC_TR("Changes apply immediately"));
 }
 void StudioPanel::showMonitoring() {
@@ -626,7 +629,7 @@ void StudioPanel::selfTest() {
     if(session_.engine.preGainDb!=0)qFatal("Input gain undo failed");
     if(pages_->count()!=4 || pages_->tabText(0)!=SC_TR("Effects"))qFatal("Studio pages not organized");
     const auto initial=session_.json();offline_->setChecked(true);count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline||!apply_->isEnabled()||mixer_->rowCount()!=256)qFatal("Studio 256-channel UI failed");
-    apply_->click();if(session_.offline||apply_->isEnabled()||!apply_->isHidden())qFatal("Apply settings did not switch staged settings to live state");
+    apply_->click();if(session_.offline||apply_->isEnabled()||apply_->isHidden()||!live_->isChecked()||offline_->isChecked())qFatal("Apply settings did not switch staged settings to live state");
     channel_->setCurrentIndex(255);trim_->setValue(-12);if(session_.engine.channels[255].gainDb!=-6)qFatal("Channel 256 trim failed");
     undo();if(session_.engine.channels[255].gainDb!=0)qFatal("Studio undo failed");
     count_->setValue(1);showMonitoring();QCoreApplication::processEvents();

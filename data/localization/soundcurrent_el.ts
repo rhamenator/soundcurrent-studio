@@ -2514,6 +2514,10 @@ Do you want to delete it anyway?</source>
       <translation>Οκτάβα</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Εκτός σύνδεσης</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Απόδοση WAVE μη πραγματικού χρόνου</translation>
     </message>

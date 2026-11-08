@@ -2514,6 +2514,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Oktave</translation>
     </message>
     <message>
+      <source>Offline</source>
+      <translation>Offline</translation>
+    </message>
+    <message>
       <source>Offline WAVE rendering</source>
       <translation>Offline-WAVE-Rendern</translation>
     </message>
