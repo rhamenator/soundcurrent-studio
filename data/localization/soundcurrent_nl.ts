@@ -3280,10 +3280,6 @@ Wilt u het toch verwijderen?</translation>
       <translation>Studio-configuratie opslaan</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Alles opslaan</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Alles opslaan als…</translation>
     </message>

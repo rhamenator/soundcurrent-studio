@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>ذخیره پیکربندی Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>ذخیره همه</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>ذخیره همه با نام…</translation>
     </message>

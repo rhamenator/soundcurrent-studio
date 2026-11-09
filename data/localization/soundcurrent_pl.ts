@@ -3280,10 +3280,6 @@ Czy na pewno chcesz go usunąć?</translation>
       <translation>Zapisz konfigurację Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Zapisz wszystko</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Zapisz wszystko jako…</translation>
     </message>

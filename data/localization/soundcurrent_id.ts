@@ -3280,10 +3280,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Simpan konfigurasi Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Simpan semua</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Simpan semua sebagai…</translation>
     </message>

@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>บันทึกการตั้งค่า Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>บันทึกทั้งหมด</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>บันทึกทั้งหมดเป็น…</translation>
     </message>

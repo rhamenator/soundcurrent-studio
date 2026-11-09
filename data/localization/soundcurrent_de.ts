@@ -3280,10 +3280,6 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Studio-Konfiguration speichern</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Alles speichern</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Alles speichern unter…</translation>
     </message>

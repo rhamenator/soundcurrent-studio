@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>保存 Studio 设置</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>全部保存</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>全部另存为…</translation>
     </message>

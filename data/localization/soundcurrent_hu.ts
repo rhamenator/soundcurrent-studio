@@ -3280,10 +3280,6 @@ Mindenképp törölni szeretné?</translation>
       <translation>Studio-összeállítás mentése</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Összes mentése</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Összes mentése másként…</translation>
     </message>

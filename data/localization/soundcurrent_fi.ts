@@ -3280,10 +3280,6 @@ Haluatko silti poistaa sen?</translation>
       <translation>Tallenna Studio-kokoonpano</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Tallenna kaikki</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Tallenna kaikki nimellä…</translation>
     </message>

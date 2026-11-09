@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>שמירת תצורת Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>שמירת הכול</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>שמירת הכול בשם…</translation>
     </message>

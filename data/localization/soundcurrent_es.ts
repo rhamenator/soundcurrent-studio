@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>Guardar configuración de Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Guardar todo</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Guardar todo como…</translation>
     </message>

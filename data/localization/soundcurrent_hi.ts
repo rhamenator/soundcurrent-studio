@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>Studio सेटअप सहेजें</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>सभी सहेजें</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>सभी इस रूप में सहेजें…</translation>
     </message>

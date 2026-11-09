@@ -3280,10 +3280,6 @@ Deseja excluí-lo mesmo assim?</translation>
       <translation>Salvar configuração do Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Salvar tudo</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Salvar tudo como…</translation>
     </message>

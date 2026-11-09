@@ -3280,10 +3280,6 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Hifadhi usanidi wa Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Hifadhi zote</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Hifadhi zote kama…</translation>
     </message>

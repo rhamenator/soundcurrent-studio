@@ -3280,10 +3280,6 @@ Přesto chcete soubor smazat?</translation>
       <translation>Uložit nastavení Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Uložit vše</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Uložit vše jako…</translation>
     </message>

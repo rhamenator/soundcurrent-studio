@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>Studio 設定を保存</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>すべて保存</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>すべて名前を付けて保存…</translation>
     </message>

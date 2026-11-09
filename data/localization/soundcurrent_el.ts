@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>Αποθήκευση ρυθμίσεων Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Αποθήκευση όλων</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Αποθήκευση όλων ως…</translation>
     </message>

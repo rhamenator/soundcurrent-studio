@@ -3280,10 +3280,6 @@ Vil du slette den alligevel?</translation>
       <translation>Gem Studio-konfiguration</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Gem alle</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Gem alle som…</translation>
     </message>

@@ -2025,7 +2025,7 @@ public:
         auto *openStudio = new QPushButton(SC_TR("Open Studio setup"));openStudio->setObjectName("openStudioSetupHeader");openStudio->setToolTip(SC_TR("Open Studio setup"));
         auto *saveStudio = new QPushButton(SC_TR("Save Studio setup"));saveStudio->setObjectName("saveStudioSetupHeader");saveStudio->setToolTip(SC_TR("Save Studio setup"));
         auto *openAll = new QPushButton(SC_TR("Open all"));openAll->setObjectName("openCompleteSetup");openAll->setToolTip(SC_TR("Open all"));
-        auto *saveAll = new QPushButton(SC_TR("Save all"));saveAll->setObjectName("saveCompleteSetup");saveAll->setToolTip(SC_TR("Save all"));
+        auto *saveAll = new QPushButton(SC_TR("Save All"));saveAll->setObjectName("saveCompleteSetup");saveAll->setToolTip(SC_TR("Save All"));
         auto *saveAllAs = new QPushButton(SC_TR("Save all as…"));saveAllAs->setObjectName("saveCompleteSetupAs");saveAllAs->setToolTip(SC_TR("Save all as…"));
         auto *undoAll = new QPushButton(SC_TR("Undo"));undoAll->setObjectName("contextualUndo");undoAll->setToolTip(SC_TR("Undo the last change on the selected page (Ctrl+Z)"));undoActionButton_=undoAll;
         auto *resetAll = new QPushButton(SC_TR("Reset all"));resetAll->setObjectName("resetApplication");resetAll->setToolTip(SC_TR("Reset all"));
@@ -3150,8 +3150,8 @@ private:
         } catch(const std::exception &exception){if(error)*error=soundcurrent::i18n::audioErrorText(QString::fromUtf8(exception.what()));return false;}
     }
     void saveCompleteSetup(bool choosePath) {
-        QString path=completeSetupPath_;if(choosePath||path.isEmpty())path=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("Save all"),path,SC_TR("SoundCurrent complete setup (*.scall)"));if(path.isEmpty())return;if(!path.endsWith(".scall",Qt::CaseInsensitive))path+=".scall";
-        QSaveFile file(path);if(!file.open(QIODevice::WriteOnly)){QMessageBox::warning(this,SC_TR("Save all"),SC_TR("Cannot save setup"));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);file.write(QJsonDocument(completeSetupObject()).toJson());if(!file.commit()){QMessageBox::warning(this,SC_TR("Save all"),SC_TR("Cannot finish saving setup."));return;}completeSetupPath_=path;status_->setText(SC_TR("Studio setup saved."));
+        QString path=completeSetupPath_;if(choosePath||path.isEmpty())path=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("Save All"),path,SC_TR("SoundCurrent complete setup (*.scall)"));if(path.isEmpty())return;if(!path.endsWith(".scall",Qt::CaseInsensitive))path+=".scall";
+        QSaveFile file(path);if(!file.open(QIODevice::WriteOnly)){QMessageBox::warning(this,SC_TR("Save All"),SC_TR("Cannot save setup"));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);file.write(QJsonDocument(completeSetupObject()).toJson());if(!file.commit()){QMessageBox::warning(this,SC_TR("Save All"),SC_TR("Cannot finish saving setup."));return;}completeSetupPath_=path;status_->setText(SC_TR("Studio setup saved."));
     }
     void openCompleteSetup() {
         const auto path=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Open all"),completeSetupPath_,SC_TR("SoundCurrent complete setup (*.scall)"));if(path.isEmpty())return;QFile file(path);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024){QMessageBox::warning(this,SC_TR("Open all"),SC_TR("Setup cannot be read or exceeds 8 MiB"));return;}QJsonParseError parse;const auto document=QJsonDocument::fromJson(file.readAll(),&parse);QString error;if(parse.error!=QJsonParseError::NoError||!document.isObject()||!applyCompleteSetup(document.object(),&error)){QMessageBox::warning(this,SC_TR("Open all"),error.isEmpty()?SC_TR("Setup cannot be read or exceeds 8 MiB"):error);return;}completeSetupPath_=path;

@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>Зберегти налаштування Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Зберегти все</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Зберегти все як…</translation>
     </message>

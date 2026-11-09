@@ -3280,10 +3280,6 @@ Do you want to delete it anyway?</source>
       <translation>حفظ إعداد Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>حفظ الكل</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>حفظ الكل باسم…</translation>
     </message>

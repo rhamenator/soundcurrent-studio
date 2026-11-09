@@ -3280,10 +3280,6 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Lưu thiết lập Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Lưu tất cả</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Lưu tất cả thành…</translation>
     </message>

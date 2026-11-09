@@ -3280,10 +3280,6 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Salvați configurația Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Salvează tot</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Salvează tot ca…</translation>
     </message>

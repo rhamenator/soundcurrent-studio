@@ -3280,10 +3280,6 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Studio ayarlarını kaydet</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Tümünü kaydet</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Tümünü farklı kaydet…</translation>
     </message>

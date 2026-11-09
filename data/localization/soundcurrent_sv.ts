@@ -3280,10 +3280,6 @@ Vill du ta bort den ändå?</translation>
       <translation>Spara Studio-konfiguration</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Spara alla</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Spara alla som…</translation>
     </message>

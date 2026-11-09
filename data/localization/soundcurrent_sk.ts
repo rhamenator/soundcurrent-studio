@@ -3280,10 +3280,6 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Uložiť nastavenie Studio</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Uložiť všetko</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Uložiť všetko ako…</translation>
     </message>

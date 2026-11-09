@@ -3280,10 +3280,6 @@ Vil du likevel sletta ho?</translation>
       <translation>Lagre Studio-oppsett</translation>
     </message>
     <message>
-      <source>Save all</source>
-      <translation>Lagra alle</translation>
-    </message>
-    <message>
       <source>Save all as…</source>
       <translation>Lagra alle som…</translation>
     </message>
