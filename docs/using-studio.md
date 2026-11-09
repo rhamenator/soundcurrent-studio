@@ -12,6 +12,12 @@ for confirmation, preserves saved files and custom equipment profiles, clears
 application settings, disables start-at-login, and quits so defaults load on
 the next start.
 
+Automatic EQ headroom remains visible in this header on every page because it
+affects the active processing chain. Bypass Studio processing appears there
+only on Studio channels & effects, where its scope is unambiguous. The Effects
+page no longer reserves a bottom command-row spacer; its controls remain
+top-aligned while the persistent output controls stay fixed below the page.
+
 The standard shortcuts are Ctrl+O (open all), Ctrl+S (save all), Ctrl+Shift+S
 (save all as), Ctrl+Alt+O/Ctrl+Alt+S (open/save the Studio-only setup), Ctrl+Z
 (contextual undo), Ctrl+W (hide the window), and Ctrl+Q (quit). Save/open/undo
@@ -75,6 +81,15 @@ compatibility interface through `pactl`; Windows uses native WASAPI audio
 sessions. The list refreshes while visible, so inactive streams disappear and
 newly playing applications appear. These are live OS session levels and are not
 embedded in complete setup files.
+
+## Analyzer scheduling
+
+When Spectrogram is selected, its time history continues advancing through
+silence instead of freezing. Capture is delivered to the display in bounded
+50 ms batches, display refresh is capped, and high-DPI history storage is
+bounded. Analysis remains inactive when its tab is hidden. Playback processing
+never waits for analyzer painting or FFT work; visualization work is throttled
+independently of the audio path.
 
 ### Selected channel
 

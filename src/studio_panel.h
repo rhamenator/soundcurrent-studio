@@ -43,6 +43,8 @@ public:
     void setLocked(bool);
     void undo();
     bool canUndo() const { return !locked_ && !history_.empty(); }
+    QCheckBox *bypassControl() const { return bypass_; }
+    QCheckBox *automaticHeadroomControl() const { return headroom_; }
     void saveProfile();
     void openProfile();
     bool loadSession(const Session &, bool offlineReview = true);

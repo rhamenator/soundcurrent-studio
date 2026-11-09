@@ -2035,10 +2035,13 @@ public:
         quit->setObjectName("persistentQuit");
         auto *appActions = new QWidget;
         appActions->setLayoutDirection(Qt::LeftToRight);
-        auto *appActionLayout = new QHBoxLayout(appActions);appActionLayout->setContentsMargins(12,6,12,6);
+        auto *appActionLayout = new QVBoxLayout(appActions);appActionLayout->setContentsMargins(12,6,12,6);appActionLayout->setSpacing(4);
+        auto *commandRow=new QHBoxLayout;
         auto *commands=new QToolBar;commands->setObjectName("applicationCommands");commands->setMovable(false);commands->setFloatable(false);commands->setToolButtonStyle(Qt::ToolButtonTextOnly);
         for(auto *button:{openStudio,saveStudio,openAll,saveAll,saveAllAs,undoAll,resetAll})commands->addWidget(button);
-        appActionLayout->addWidget(commands,1);appActionLayout->addWidget(updateNow);appActionLayout->addWidget(quit);
+        commandRow->addWidget(commands,1);commandRow->addWidget(updateNow);commandRow->addWidget(quit);appActionLayout->addLayout(commandRow);
+        auto *processingHeader=new QWidget;processingHeader->setObjectName("processingHeader");auto *processingHeaderLayout=new QHBoxLayout(processingHeader);processingHeaderLayout->setContentsMargins(6,0,6,0);
+        processingHeaderLayout->addWidget(studio_->automaticHeadroomControl());processingHeaderLayout->addWidget(studio_->bypassControl());processingHeaderLayout->addStretch(1);appActionLayout->addWidget(processingHeader);
         shellLayout->insertWidget(0,appActions);
         connect(openStudio,&QPushButton::clicked,studio_,&soundcurrent::studio::StudioPanel::openProfile);
         connect(saveStudio,&QPushButton::clicked,studio_,&soundcurrent::studio::StudioPanel::saveProfile);
@@ -2048,7 +2051,9 @@ public:
         shortcut(QKeySequence::Open,[this]{openCompleteSetup();});shortcut(QKeySequence::Save,[this]{saveCompleteSetup(false);});shortcut(QKeySequence(Qt::CTRL|Qt::SHIFT|Qt::Key_S),[this]{saveCompleteSetup(true);});
         shortcut(QKeySequence(Qt::CTRL|Qt::ALT|Qt::Key_O),[this]{studio_->openProfile();});shortcut(QKeySequence(Qt::CTRL|Qt::ALT|Qt::Key_S),[this]{studio_->saveProfile();});
         shortcut(QKeySequence::Quit,[]{qApp->quit();});shortcut(QKeySequence::Close,[this]{close();});
-        studio_->onUndoAvailable=[this](bool){updateContextualUndo();};connect(tabs_,&QTabWidget::currentChanged,this,[this]{updateContextualUndo();});
+        studio_->onUndoAvailable=[this](bool){updateContextualUndo();};
+        const auto updateProcessingHeader=[this]{studio_->automaticHeadroomControl()->show();studio_->bypassControl()->setVisible(tabs_->currentIndex()==1);};
+        connect(tabs_,&QTabWidget::currentChanged,this,[this,updateProcessingHeader]{updateContextualUndo();updateProcessingHeader();});updateProcessingHeader();
         outputCombo_->setLayoutDirection(Qt::LeftToRight);
         systemVolume_ = new soundcurrent::SystemVolumeControl(startEnabled);
         outputRow->addWidget(systemVolume_,1);
@@ -2977,10 +2982,17 @@ public:
     void selfTestCompleteSetup() {
         auto *toolbar=findChild<QToolBar *>("applicationCommands");auto *open=findChild<QPushButton *>("openCompleteSetup"),*save=findChild<QPushButton *>("saveCompleteSetup"),*saveAs=findChild<QPushButton *>("saveCompleteSetupAs"),*reset=findChild<QPushButton *>("resetApplication");
         if(!toolbar||!open||!save||!saveAs||!reset||!toolbar->isAncestorOf(open)||!toolbar->isAncestorOf(save)||!toolbar->isAncestorOf(saveAs)||!toolbar->isAncestorOf(reset)||!reset->shortcut().isEmpty())qFatal("Application command header or click-only reset is incomplete");
+        auto *processing=findChild<QWidget *>("processingHeader");auto *headroom=findChild<QCheckBox *>("automaticEqHeadroom"),*bypass=findChild<QCheckBox *>("bypassStudioProcessing");
+        if(!processing||!headroom||!bypass||!processing->isAncestorOf(headroom)||!processing->isAncestorOf(bypass)||!headroom->isVisible()||bypass->isVisible())qFatal("Global processing header is incorrect outside Studio");
+        const int page=tabs_->currentIndex();tabs_->setCurrentIndex(1);QCoreApplication::processEvents();if(!headroom->isVisible()||!bypass->isVisible())qFatal("Studio processing controls are not visible on the Studio page");tabs_->setCurrentIndex(page);QCoreApplication::processEvents();
         const auto setup=completeSetupObject();if(setup.value("schema").toInt()!=1||setup.value("equalizer").toObject().value("bands").toArray().isEmpty()||setup.value("studio").toObject().isEmpty()||setup.value("analysis").toObject().isEmpty())qFatal("Complete setup omitted a page");
         QString error;if(!applyCompleteSetup(setup,&error)||!error.isEmpty())qFatal("Complete setup did not round trip");auto invalid=setup;invalid["schema"]=99;if(applyCompleteSetup(invalid,&error)||error.isEmpty())qFatal("Invalid complete setup was accepted silently");
         const QList<QKeySequence> required={QKeySequence::Open,QKeySequence::Save,QKeySequence(Qt::CTRL|Qt::SHIFT|Qt::Key_S),QKeySequence::Undo,QKeySequence::Quit,QKeySequence::Close};
         for(const auto &key:required){bool found=false;for(auto *shortcut:findChildren<QShortcut *>())if(shortcut->key()==key){found=true;break;}if(!found)qFatal("Application shortcut is missing: %s",qPrintable(key.toString()));}
+    }
+    void selfTestAnalysisIdle() {
+        const int page=tabs_->currentIndex();tabs_->setCurrentIndex(3);QCoreApplication::processEvents();auto *canvas=findChild<QWidget *>("analysisCanvas");if(!canvas)qFatal("Analysis canvas is missing");
+        const int before=canvas->property("idleFrames").toInt();QElapsedTimer wait;wait.start();while(wait.elapsed()<220){QCoreApplication::processEvents(QEventLoop::AllEvents,20);QThread::msleep(5);}if(canvas->property("idleFrames").toInt()<=before)qFatal("Selected spectrogram stopped while playback was silent");tabs_->setCurrentIndex(page);QCoreApplication::processEvents();
     }
     void selfTestQuitVisibility() const {
         const auto *quit=findChild<QPushButton*>("persistentQuit");
@@ -4985,6 +4997,7 @@ int main(int argc, char **argv) {
         app.processEvents();
         testWindow.selfTestBandScaling();
         testWindow.selfTestCompleteSetup();
+        testWindow.selfTestAnalysisIdle();
         testWindow.selfTestPlaybackLayout();
         if (auto *display = testWindow.screen()) {
             const auto available = display->availableGeometry();

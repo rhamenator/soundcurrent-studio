@@ -122,7 +122,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     });
     editRoot->addWidget(roomBalanceBox_);
     pages_=new QTabWidget;pages_->setObjectName("studioWorkPages");pages_->setUsesScrollButtons(true);pages_->setElideMode(Qt::ElideRight);pages_->setSizePolicy(QSizePolicy::Ignored,QSizePolicy::Expanding);editRoot->addWidget(pages_);
-    auto *effectsPage=new QWidget;auto *effectsLayout=new QVBoxLayout(effectsPage);pages_->addTab(effectsPage,SC_TR("Effects"));
+    auto *effectsPage=new QWidget;auto *effectsLayout=new QVBoxLayout(effectsPage);effectsLayout->setAlignment(Qt::AlignTop);pages_->addTab(effectsPage,SC_TR("Effects"));
     auto *inputRow=new soundcurrent::ui::ResponsiveRow;inputRow->addWidget(new QLabel(SC_TR("Input gain")));
     preGain_=slider(-6000,2400,0);preGain_->setSingleStep(50);preGain_->setPageStep(100);preGain_->setObjectName("inputGain");preGain_->setAccessibleName(SC_TR("Input gain"));inputRow->addWidget(preGain_,1);
     preGainValue_=new QLabel;preGainValue_->setMinimumWidth(76);inputRow->addWidget(preGainValue_);effectsLayout->addWidget(inputRow);
@@ -134,8 +134,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     preset_ = new QComboBox; preset_->setAccessibleName(SC_TR("Studio effect preset"));
     preset_->addItems({SC_TR("Dry"), SC_TR("Slapback echo"), SC_TR("Rhythmic echo"), SC_TR("Small room"), SC_TR("Warm hall"), SC_TR("Large hall"), SC_TR("Echo and space"), SC_TR("Custom")});
     fxForm->addRow(SC_TR("Effect preset"), preset_);
-    bypass_ = new QCheckBox(SC_TR("Bypass Studio processing")); headroom_ = new QCheckBox(SC_TR("Automatic EQ headroom"));
-    auto *powerRow = new soundcurrent::ui::ResponsiveRow; powerRow->addWidget(bypass_); powerRow->addWidget(headroom_); fxForm->addRow(powerRow);
+    bypass_ = new QCheckBox(SC_TR("Bypass Studio processing"),this);bypass_->setObjectName("bypassStudioProcessing");
+    bypass_->setToolTip(SC_TR("Bypass Studio processing"));
+    headroom_ = new QCheckBox(SC_TR("Automatic EQ headroom"),this);headroom_->setObjectName("automaticEqHeadroom");
+    headroom_->setToolTip(SC_TR("Automatic EQ headroom"));
     delay_ = new QCheckBox(SC_TR("Delay / echo")); delayMs_ = spin(1,2000,250,1); delayMs_->setSuffix(" ms");
     feedback_ = spin(0,.9,.35,.01); wetDelay_ = slider(0,100,20); wetDelay_->setAccessibleName(SC_TR("Delay wet mix percent"));
     fxForm->addRow(delay_); fxForm->addRow(SC_TR("Delay time"), delayMs_); fxForm->addRow(SC_TR("Feedback"), feedback_); fxForm->addRow(SC_TR("Delay wet mix"), wetDelay_);
@@ -151,7 +153,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     enhancements_=new soundcurrent::EnhancementControls(true);
     effectsLayout->addWidget(enhancements_);
     enhancements_->onEdited=[this]{change([this](Session &s){s.engine.enhancements=enhancements_->settings();});if(!rebuilding_)preset_->setCurrentIndex(7);};
-    effectsLayout->addWidget(fx);effectsLayout->addStretch();
+    effectsLayout->addWidget(fx);
     auto *channelBox = new QGroupBox(SC_TR("Selected channel")); auto *ch = new QFormLayout(channelBox);
     ch->setRowWrapPolicy(QFormLayout::WrapLongRows);ch->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
     channel_ = new QComboBox; channel_->setAccessibleName(SC_TR("Studio selected channel")); name_ = new QLineEdit; name_->setMaxLength(80);
@@ -192,7 +194,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     meterSource_=new QLabel;meterSource_->setObjectName("channelMeterSource");meterSource_->setWordWrap(true);monitorLayout->addWidget(meterSource_);
     monitorLayout->addWidget(meterBank_);monitorLayout->addWidget(meterView_);monitorLayout->addWidget(preview_);monitorLayout->addWidget(roomBalanceBox_);monitorLayout->addWidget(centerBalance_);monitorLayout->addWidget(meters_);
     showMeters_=new QPushButton(SC_TR("Channel meters"));showMeters_->setObjectName("studioShowMeters");layoutForm->addRow(showMeters_);connect(showMeters_,&QPushButton::clicked,this,[this]{showMonitoring();});
-    status_ = new QLabel; status_->setWordWrap(true);root->insertWidget(1,status_);root->addStretch();
+    status_ = new QLabel; status_->setWordWrap(true);root->insertWidget(1,status_);
     connect(count_, &QSpinBox::valueChanged, this, [this](int count) {
         if (rebuilding_) return;
         if(monitorDialog_->isVisible()){const QSignalBlocker blocked(count_);count_->setValue(int(session_.engine.channels.size()));return;}
