@@ -345,6 +345,18 @@ Mindenképp törölni szeretné?</translation>
       <translation>Másik hangszínszabályzó-útvonal található: %1. Lépjen ki belőle a SoundCurrent használata előtt.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Alkalmazáskeverő</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Az alkalmazás-adatfolyamok nem érhetők el. A PipeWire PulseAudio-kompatibilitási szolgáltatása és a pactl szükséges.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Alkalmazás-adatfolyamok az aktuális kimeneti eszközön. Ezekkel a vezérlőkkel az operációs rendszer alkalmazásonkénti hangereje módosítható.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Alkalmazásfrissítés</translation>
     </message>
@@ -787,6 +799,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Channel meters</source>
       <translation>Csatornamérők</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Csatornakeverő</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Nem</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Nincsenek aktív alkalmazás-hangfolyamok.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Nincs kiválasztott importált eszközkorrekció.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE vezérlőpult megnyitása</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Összes megnyitása</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>A referencia-összehasonlítás tartalmazza a hangforrás, a szoba és a referenciamikrofon hatását. Ez nem a mikrofon elkülönített vagy hitelesített mérése.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Alkalmazások frissítése</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Eszközök frissítése</translation>
     </message>
@@ -3115,6 +3143,14 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Reset</source>
       <translation>Visszaállítás</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Összes visszaállítása</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Visszaállítja az alkalmazás összes beállítását és kilép? Az egyéni eszközprofilok és a mentett fájlok megmaradnak. Ez nem vonható vissza.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio-összeállítás mentése</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Összes mentése</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Összes mentése másként…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Mindenképp törölni szeretné?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Beállítások &amp;&amp; kalibráció</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>A beállítások visszaálltak.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Mindenképp törölni szeretné?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio offline renderelő (nincs szükség hangeszközre)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Teljes SoundCurrent-beállítás (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Mindenképp törölni szeretné?</translation>
       <translation>Visszavonás</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Studio-módosítás visszavonása</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Utolsó hangszínszabályzó-módosítás visszavonása</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>A kijelölt oldal utolsó módosításának visszavonása (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Mindenképp törölni szeretné?</translation>
       <source>Unknown</source>
       <translation>Ismeretlen</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Ismeretlen alkalmazás</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

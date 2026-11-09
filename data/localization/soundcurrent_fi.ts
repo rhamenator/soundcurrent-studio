@@ -345,6 +345,18 @@ Haluatko silti poistaa sen?</translation>
       <translation>Toinen taajuuskorjainreitti on käytössä: %1. Lopeta se ennen SoundCurrentin käyttöä.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Sovellusmikseri</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Sovellusvirtoja ei ole käytettävissä. PipeWiren PulseAudio-yhteensopivuuspalvelu ja pactl vaaditaan.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Nykyisen ulostulolaitteen sovellusvirrat. Näillä säätimillä muutetaan käyttöjärjestelmän sovelluskohtaisia äänenvoimakkuuksia.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Sovelluspäivitys</translation>
     </message>
@@ -787,6 +799,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Channel meters</source>
       <translation>Kanavamittarit</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kanavamikseri</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Ei</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Ei aktiivisia sovellusten äänivirtoja.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Tuotua laitekorjausta ei ole valittu.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Avaa VB-CABLE-ohjauspaneeli</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Avaa kaikki</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Haluatko silti poistaa sen?</translation>
       <translation>Vertailut sisältävät äänilähteen, huoneen ja vertailumikrofonin vaikutukset. Ne eivät ole erillinen tai sertifioitu mikrofonimittaus.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Päivitä sovellukset</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Päivitä laitteet</translation>
     </message>
@@ -3115,6 +3143,14 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Reset</source>
       <translation>Palauta</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Palauta kaikki</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Palautetaanko kaikki sovelluksen asetukset ja lopetetaanko? Mukautetut laiteprofiilit ja tallennetut tiedostot säilytetään. Tätä ei voi kumota.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Tallenna Studio-kokoonpano</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Tallenna kaikki</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Tallenna kaikki nimellä…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Haluatko silti poistaa sen?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Asetukset &amp;&amp; kalibrointi</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Asetukset palautettiin.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Haluatko silti poistaa sen?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio offline-renderöijä (äänilaitetta ei tarvita)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Täydellinen SoundCurrent-kokoonpano (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Haluatko silti poistaa sen?</translation>
       <translation>Kumoa</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Kumoa Studio-muutos</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Kumoa viimeisin taajuuskorjausmuutos</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Kumoa valitun sivun viimeisin muutos (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Haluatko silti poistaa sen?</translation>
       <source>Unknown</source>
       <translation>Tuntematon</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Tuntematon sovellus</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

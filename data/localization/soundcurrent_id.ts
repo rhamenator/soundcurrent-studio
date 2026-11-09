@@ -345,6 +345,18 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Ada jalur equalizer lain: %1. Tutup sebelum menggunakan SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Mixer aplikasi</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Stream aplikasi tidak tersedia. Layanan kompatibilitas PulseAudio milik PipeWire dan pactl diperlukan.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Stream aplikasi pada perangkat keluaran saat ini. Kontrol ini mengubah volume setiap aplikasi pada sistem operasi.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Pembaruan aplikasi</translation>
     </message>
@@ -787,6 +799,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>Channel meters</source>
       <translation>Meter kanal</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Mixer kanal</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Tidak</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Tidak ada stream audio aplikasi yang aktif.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Tidak ada koreksi peralatan yang diimpor dipilih.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Buka panel kontrol VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Buka semua</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Perbandingan referensi mencakup sumber suara, ruangan, dan mikrofon referensi. Ini bukan pengukuran mikrofon secara terpisah atau tersertifikasi.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Segarkan aplikasi</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Perbarui daftar perangkat</translation>
     </message>
@@ -3115,6 +3143,14 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Reset</source>
       <translation>Atur ulang</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Atur ulang semua</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Atur ulang semua pengaturan aplikasi dan keluar? Profil peralatan khusus serta berkas yang disimpan akan dipertahankan. Tindakan ini tidak dapat dibatalkan.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Simpan konfigurasi Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Simpan semua</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Simpan semua sebagai…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Pengaturan &amp;&amp; kalibrasi</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Pengaturan telah diatur ulang.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Perender offline SoundCurrent Studio (tidak memerlukan perangkat audio)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Penyiapan lengkap SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Urungkan</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Urungkan perubahan Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Urungkan perubahan equalizer terakhir</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Urungkan perubahan terakhir pada halaman yang dipilih (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>Unknown</source>
       <translation>Tidak diketahui</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Aplikasi tidak dikenal</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

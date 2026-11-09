@@ -345,6 +345,18 @@ Přesto chcete soubor smazat?</translation>
       <translation>Je přítomna signálová cesta jiného ekvalizéru: %1. Před použitím SoundCurrent jej ukončete.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Směšovač aplikací</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Proudy aplikací nejsou dostupné. Je vyžadována služba kompatibility PulseAudio systému PipeWire a pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Proudy aplikací na aktuálním výstupním zařízení. Tyto ovládací prvky mění hlasitost jednotlivých aplikací v operačním systému.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Aktualizace aplikace</translation>
     </message>
@@ -787,6 +799,10 @@ Přesto chcete soubor smazat?</translation>
       <source>Channel meters</source>
       <translation>Měřiče kanálů</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Směšovač kanálů</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Ne</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Žádné aktivní zvukové proudy aplikací.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Není vybrána žádná importovaná korekce zařízení.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Otevřít ovládací panel VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Otevřít vše</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Referenční porovnání zahrnuje zdroj zvuku, místnost a referenční mikrofon. Nejde o izolované ani certifikované měření mikrofonu.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Obnovit aplikace</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Obnovit seznam zařízení</translation>
     </message>
@@ -3115,6 +3143,14 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Reset</source>
       <translation>Obnovit výchozí</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Obnovit vše</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Obnovit všechna nastavení aplikace a ukončit ji? Vlastní profily zařízení a uložené soubory zůstanou zachovány. Tuto akci nelze vrátit zpět.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Uložit nastavení Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Uložit vše</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Uložit vše jako…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Nastavení &amp;&amp; kalibrace</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Nastavení byla obnovena.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Přesto chcete soubor smazat?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Offline renderer SoundCurrent Studio (není potřeba zvukové zařízení)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Úplná konfigurace SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Přesto chcete soubor smazat?</translation>
       <translation>Zpět</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Vrátit změnu Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Vrátit poslední změnu ekvalizéru</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Vrátit poslední změnu na vybrané stránce (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Přesto chcete soubor smazat?</translation>
       <source>Unknown</source>
       <translation>Neznámé</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Neznámá aplikace</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

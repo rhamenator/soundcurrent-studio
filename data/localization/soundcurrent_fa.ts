@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>یک مسیر اکولایزر دیگر وجود دارد: %1. پیش از استفاده از SoundCurrent از آن خارج شوید.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>میکسر برنامه‌ها</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>جریان‌های برنامه در دسترس نیستند. سرویس سازگاری PulseAudio در PipeWire و ابزار pactl لازم هستند.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>جریان‌های برنامه روی دستگاه خروجی فعلی. این کنترل‌ها بلندی صدای هر برنامه را در سیستم‌عامل تغییر می‌دهند.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>به‌روزرسانی برنامه</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>سطح‌سنج‌های کانال</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>میکسر کانال</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>خیر</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>هیچ جریان صوتی فعالی از برنامه‌ها وجود ندارد.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>هیچ اصلاح تجهیزات واردشده‌ای انتخاب نشده است.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>باز کردن پنل کنترل VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>باز کردن همه</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>مقایسه‌های مرجع شامل منبع صدا، اتاق و میکروفون مرجع هستند. این مقایسه‌ها اندازه‌گیری مستقل یا تأییدشدهٔ میکروفون نیستند.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>تازه‌سازی برنامه‌ها</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>تازه‌سازی دستگاه‌ها</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>بازنشانی</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>بازنشانی همه</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>همه تنظیمات برنامه بازنشانی و برنامه بسته شود؟ نمایه‌های سفارشی تجهیزات و فایل‌های ذخیره‌شده حفظ می‌شوند. این کار قابل بازگشت نیست.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>ذخیره پیکربندی Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>ذخیره همه</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>ذخیره همه با نام…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>تنظیمات &amp;&amp; کالیبراسیون</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>تنظیمات بازنشانی شدند.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>رندرکنندهٔ آفلاین SoundCurrent Studio (بدون نیاز به دستگاه صوتی)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>پیکربندی کامل SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Do you want to delete it anyway?</source>
       <translation>واگرد</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>واگرد تغییر Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>واگرد آخرین تغییر اکولایزر</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>واگرد آخرین تغییر در صفحه انتخاب‌شده (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>نامشخص</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>برنامه ناشناخته</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

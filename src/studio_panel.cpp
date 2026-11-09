@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 #include "accelerating_spinbox.h"
 #include "studio_panel.h"
+#include "application_mixer.h"
 #include "channel_meter_view.h"
 #include "studio_name_text.h"
 #include "audio_error_text.h"
@@ -126,7 +127,7 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     preGain_=slider(-6000,2400,0);preGain_->setSingleStep(50);preGain_->setPageStep(100);preGain_->setObjectName("inputGain");preGain_->setAccessibleName(SC_TR("Input gain"));inputRow->addWidget(preGain_,1);
     preGainValue_=new QLabel;preGainValue_->setMinimumWidth(76);inputRow->addWidget(preGainValue_);effectsLayout->addWidget(inputRow);
     connect(preGain_,&QSlider::valueChanged,this,[this](int gain){change([&](Session &s){s.engine.preGainDb=gain/100.;});preGainValue_->setText(QLocale().toString(gain/100.,'f',2)+SC_TR(" dB"));});
-    mixer_=table({SC_TR("Channel"),SC_TR("Gain"),SC_TR("Mute"),SC_TR("Solo")});mixer_->setObjectName("channelMixer");mixer_->setMaximumHeight(480);pages_->addTab(mixer_,SC_TR("Mixer"));
+    mixer_=table({SC_TR("Channel"),SC_TR("Gain"),SC_TR("Mute"),SC_TR("Solo")});mixer_->setObjectName("channelMixer");mixer_->setMaximumHeight(480);pages_->addTab(mixer_,SC_TR("Channel mixer"));
     auto *channelPage=new QWidget;auto *channelLayout=new QVBoxLayout(channelPage);pages_->addTab(channelPage,SC_TR("Selected channel"));
     auto *fx = new QGroupBox(SC_TR("Effects")); auto *fxForm = new QFormLayout(fx);
     fxForm->setRowWrapPolicy(QFormLayout::WrapLongRows);fxForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
@@ -171,9 +172,8 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     ch->addRow(SC_TR("Input channel"), routeInput_); ch->addRow(SC_TR("Linear route gain (negative = invert)"), routeGain_);
     auto *route = new QPushButton(SC_TR("Set route")), *unroute = new QPushButton(SC_TR("Remove selected route")), *identity = new QPushButton(SC_TR("Reset all routing"));
     auto *routeButtons = new soundcurrent::ui::ResponsiveRow; routeButtons->addWidget(route); routeButtons->addWidget(unroute); routeButtons->addWidget(identity); ch->addRow(routeButtons);
-    channelLayout->addWidget(channelBox);channelLayout->addStretch();root->addWidget(editing_);
-    auto *tools = new soundcurrent::ui::ResponsiveRow; auto *save = new QPushButton(SC_TR("Save Studio setup")), *open = new QPushButton(SC_TR("Open Studio setup"));
-    undo_ = new QPushButton(SC_TR("Undo Studio change")); tools->addWidget(save); tools->addWidget(open); tools->addWidget(undo_); root->addWidget(tools);
+    channelLayout->addWidget(channelBox);channelLayout->addStretch();
+    applicationMixer_=new ApplicationMixer(testControls_);applicationMixer_->setObjectName("applicationMixer");pages_->addTab(applicationMixer_,SC_TR("Application mixer"));root->addWidget(editing_);
     meterBank_=new QComboBox;meterBank_->setAccessibleName(SC_TR("Studio channel output levels"));meterBank_->setObjectName("channelMeterBank");
     meterView_=new ChannelMeterView;
     connect(meterBank_,&QComboBox::currentIndexChanged,this,[this](int bank){if(!rebuilding_)meterView_->setBank(bank);});
@@ -240,7 +240,6 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     connect(unroute,&QPushButton::clicked,this,[this]{const int row=routes_->currentRow();if(row<0)return;const auto input=routes_->item(row,0)->data(Qt::UserRole).toInt();
         change([&](Session &s){s.routing[std::size_t(channel_->currentIndex())*s.engine.channels.size()+std::size_t(input)]=0;});loadChannel();});
     connect(identity,&QPushButton::clicked,this,[this]{change([](Session &s){s.routing=Session(s.engine.channels.size()).routing;});loadChannel();});
-    connect(save,&QPushButton::clicked,this,[this]{saveProfile();});connect(open,&QPushButton::clicked,this,[this]{openProfile();});connect(undo_,&QPushButton::clicked,this,[this]{undo();});
     connect(preview_,&QCheckBox::toggled,this,[this](bool on){if(on){startPreview();meterSource_->setText(SC_TR("Test channel meters with a silent generated signal"));}else {previewEngine_.reset();setLiveLevels({});}});
     connect(render_,&QPushButton::clicked,this,[this]{render();});connect(cancel_,&QPushButton::clicked,this,[this]{cancelJob_=true;});
     connect(&timer_,&QTimer::timeout,this,[this]{tick();});timer_.start(20);rebuild();
@@ -257,14 +256,14 @@ void StudioPanel::change(const std::function<void(Session &)> &fn) {
 }
 void StudioPanel::commit(const Session &before) {
     if(session_.json()==before.json())return;
-    if(history_.size()==64)history_.erase(history_.begin());history_.push_back(before);undo_->setEnabled(!locked_);
+    if(history_.size()==64)history_.erase(history_.begin());history_.push_back(before);if(onUndoAvailable)onUndoAvailable(canUndo());
     if(persist_)QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));
     if(preview_->isChecked())startPreview();
     if(onChanged)onChanged();
     updateApplyState();syncMixer();
 }
-void StudioPanel::setLocked(bool locked) { locked_=locked;for(int i=0;i<3;++i)pages_->widget(i)->setEnabled(!locked);roomBalanceBox_->setEnabled(!locked);updateApplyState();count_->setEnabled(!locked);layout_->setEnabled(!locked);offline_->setEnabled(!locked);live_->setEnabled(!locked);undo_->setEnabled(!locked&&!history_.empty()); }
-void StudioPanel::undo() { if(locked_||history_.empty())return;const bool wasOffline=session_.offline;session_=history_.back();history_.pop_back();rebuild();if(persist_){QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));if(wasOffline!=session_.offline)QSettings().setValue("studioOfflineEditing",session_.offline);}if(preview_->isChecked())startPreview();if(onChanged)onChanged(); }
+void StudioPanel::setLocked(bool locked) { locked_=locked;for(int i=0;i<3;++i)pages_->widget(i)->setEnabled(!locked);roomBalanceBox_->setEnabled(!locked);updateApplyState();count_->setEnabled(!locked);layout_->setEnabled(!locked);offline_->setEnabled(!locked);live_->setEnabled(!locked);if(onUndoAvailable)onUndoAvailable(canUndo()); }
+void StudioPanel::undo() { if(locked_||history_.empty())return;const bool wasOffline=session_.offline;session_=history_.back();history_.pop_back();rebuild();if(persist_){QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));if(wasOffline!=session_.offline)QSettings().setValue("studioOfflineEditing",session_.offline);}if(preview_->isChecked())startPreview();if(onChanged)onChanged();if(onUndoAvailable)onUndoAvailable(canUndo()); }
 void StudioPanel::rebuild() {
     rebuilding_=true;const int selected=std::clamp(channel_->currentIndex(),0,int(session_.engine.channels.size())-1);
     count_->setValue(int(session_.engine.channels.size()));layout_->setCurrentIndex(count_->value()==2?0:count_->value()==1?1:count_->value()==6?2:count_->value()==8?3:count_->value()==16?4:5);
@@ -283,7 +282,7 @@ void StudioPanel::rebuild() {
     const auto &d=session_.engine.delay;const auto &r=session_.engine.reverb;
     delay_->setChecked(d.enabled);delayMs_->setValue(d.milliseconds);feedback_->setValue(d.feedback);wetDelay_->setValue(int(std::lround(d.mix*100)));
     reverb_->setChecked(r.enabled);decay_->setValue(r.decaySeconds);damping_->setValue(r.damping);wetReverb_->setValue(int(std::lround(r.mix*100)));
-    bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);undo_->setEnabled(!locked_&&!history_.empty());
+    bypass_->setChecked(session_.engine.bypass);headroom_->setChecked(session_.engine.automaticHeadroom);if(onUndoAvailable)onUndoAvailable(canUndo());
     preset_->setCurrentIndex(!d.enabled && !r.enabled && !session_.engine.enhancements.active() ? 0 : 7);
     meters_->setRowCount(count_->value());for(int c=0;c<count_->value();++c){cell(meters_,c,0,QString("%1 · %2").arg(QLocale().toString(c+1)).arg(channelNameText(session_,c)));cell(meters_,c,1,SC_TR("−∞ dBFS"));}
     meters_->setFixedHeight(std::min(190,meters_->horizontalHeader()->sizeHint().height()+count_->value()*meters_->verticalHeader()->defaultSectionSize()+2*meters_->frameWidth()));
@@ -351,6 +350,10 @@ void StudioPanel::openProfile() {
     try {QFile file(filename);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
         auto next=Session::parse(QJsonDocument::fromJson(file.readAll()).object());next.offline=true;if(persist_)QSettings().setValue("studioOfflineEditing",true);const auto before=session_;session_=std::move(next);rebuild();commit(before);status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));
     }catch(const std::exception &e){status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));}
+}
+bool StudioPanel::loadSession(const Session &loaded,bool offlineReview) {
+    if(locked_)return false;
+    try {auto next=loaded;next.offline=offlineReview;AudioEngine validate(48000,next.engine.channels.size());std::string error;if(!validate.configure(next.effective(shared_,sharedGain_,balance_),&error))throw std::runtime_error(error);const auto before=session_;session_=std::move(next);rebuild();commit(before);if(persist_){QSettings().setValue("studioOfflineEditing",session_.offline);QSettings().setValue("studioSession",QJsonDocument(session_.json()).toJson(QJsonDocument::Compact));}return true;}catch(const std::exception &e){status_->setText(soundcurrent::i18n::audioErrorText(QString::fromUtf8(e.what())));return false;}
 }
 void StudioPanel::startPreview() {
     try {previewEngine_=std::make_unique<AudioEngine>(48000,session_.engine.channels.size());std::string error;
@@ -636,7 +639,9 @@ void StudioPanel::selfTest() {
     undo();undo();
     preGain_->setValue(300);if(session_.engine.preGainDb!=3)qFatal("Input gain not applied immediately");undo();
     if(session_.engine.preGainDb!=0)qFatal("Input gain undo failed");
-    if(pages_->count()!=4 || pages_->tabText(0)!=SC_TR("Effects"))qFatal("Studio pages not organized");
+    if(pages_->count()!=5 || pages_->tabText(0)!=SC_TR("Effects") || pages_->tabText(1)!=SC_TR("Channel mixer") ||
+       pages_->tabText(3)!=SC_TR("Application mixer") || applicationMixer_->sliderCount()!=2)
+        qFatal("Studio pages or application mixer are not organized");
     if(!apply_->isHidden()||apply_->isEnabled())qFatal("Live editing exposed Apply settings");
     if(live_->minimumHeight()<40||offline_->minimumHeight()<40||apply_->minimumHeight()<40||live_->minimumWidth()<96||offline_->minimumWidth()<96||apply_->minimumWidth()<140)qFatal("Studio mode buttons are too small");
     const auto initial=session_.json();offline_->setChecked(true);count_->setValue(256);if(count_->value()!=256||channel_->count()!=256||!session_.offline||apply_->isHidden()||!apply_->isEnabled()||mixer_->rowCount()!=256)qFatal("Studio 256-channel UI failed");

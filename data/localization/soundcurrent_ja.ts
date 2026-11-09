@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>別のイコライザー経路が存在します: %1。SoundCurrent を使用する前に終了してください。</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>アプリケーションミキサー</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>アプリケーションストリームを利用できません。PipeWire の PulseAudio 互換サービスと pactl が必要です。</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>現在の出力デバイス上のアプリケーションストリーム。これらのコントロールは、OS のアプリケーション別音量を変更します。</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>アプリの更新</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>チャンネルメーター</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>チャンネルミキサー</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>いいえ</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>アクティブなアプリケーション音声ストリームはありません。</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>インポートした機器補正が選択されていません。</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE コントロールパネルを開く</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>すべて開く</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>基準との比較には音源、部屋、基準マイクの影響が含まれます。マイク単体の測定でも、認証された測定でもありません。</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>アプリケーションを更新</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>デバイスを再検出</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>リセット</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>すべてリセット</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>すべてのアプリケーション設定をリセットして終了しますか？カスタム機器プロファイルと保存済みファイルは保持されます。この操作は元に戻せません。</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio 設定を保存</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>すべて保存</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>すべて名前を付けて保存…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>設定 &amp;&amp; キャリブレーション</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>設定をリセットしました。</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio オフラインレンダラー（オーディオデバイス不要）</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>SoundCurrent 完全設定 (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Do you want to delete it anyway?</source>
       <translation>元に戻す</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Studio の変更を元に戻す</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>直前のイコライザー変更を元に戻す</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>選択したページの最後の変更を元に戻す (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>不明</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>不明なアプリケーション</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

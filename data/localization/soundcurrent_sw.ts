@@ -345,6 +345,18 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Njia nyingine ya kisawazishi ipo: %1. Ifunge kabla ya kutumia SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Kichanganyaji cha programu</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Mitiririko ya programu haipatikani. Huduma ya uoanifu ya PulseAudio ya PipeWire na pactl zinahitajika.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Mitiririko ya programu kwenye kifaa cha sasa cha kutoa sauti. Vidhibiti hivi hubadilisha sauti ya kila programu ya mfumo wa uendeshaji.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Sasisho la programu</translation>
     </message>
@@ -787,6 +799,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Channel meters</source>
       <translation>Vipima kiwango vya chaneli</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kichanganyaji cha chaneli</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Hapana</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Hakuna mitiririko ya sauti ya programu inayotumika.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Hakuna usahihishaji wa kifaa ulioingizwa uliochaguliwa.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Fungua paneli ya udhibiti ya VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Fungua zote</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Ulinganisho wa rejea unajumuisha chanzo cha sauti, chumba na maikrofoni ya rejea. Hauwakilishi kipimo cha maikrofoni pekee wala kipimo kilichothibitishwa.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Onyesha upya programu</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Onyesha vifaa upya</translation>
     </message>
@@ -3115,6 +3143,14 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Reset</source>
       <translation>Weka upya</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Weka upya zote</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Uweke upya mipangilio yote ya programu na uondoke? Wasifu maalum wa vifaa na faili ulizohifadhi zitaachwa. Hili haliwezi kutenduliwa.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Hifadhi usanidi wa Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Hifadhi zote</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Hifadhi zote kama…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Mipangilio &amp;&amp; urekebishaji</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Mipangilio iliwekwa upya.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Kichakataji cha faili cha SoundCurrent Studio (hakihitaji kifaa cha sauti)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Usanidi kamili wa SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Tendua</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Tendua mabadiliko ya Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Tendua mabadiliko ya mwisho ya kisawazishi</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Tendua badiliko la mwisho kwenye ukurasa uliochaguliwa (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Unataka kuifuta hata hivyo?</translation>
       <source>Unknown</source>
       <translation>Haijulikani</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Programu isiyojulikana</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

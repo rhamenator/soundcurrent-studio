@@ -42,6 +42,7 @@
 #include "windows_managed_route.h"
 #endif
 #include <QApplication>
+#include <QAction>
 #include <QDebug>
 #include <QDesktopServices>
 #include <QUrl>
@@ -97,6 +98,8 @@
 #include <QStandardPaths>
 #include <QSystemTrayIcon>
 #include <QTabWidget>
+#include <QToolBar>
+#include <QToolButton>
 #include <QTemporaryDir>
 #include <QThread>
 #include <QTextStream>
@@ -2019,18 +2022,33 @@ public:
         updateNow->setObjectName("availableUpdate");
         updateNow->setToolTip(SC_TR("Open release downloads"));
         updateNow->hide();
+        auto *openStudio = new QPushButton(SC_TR("Open Studio setup"));openStudio->setObjectName("openStudioSetupHeader");openStudio->setToolTip(SC_TR("Open Studio setup"));
+        auto *saveStudio = new QPushButton(SC_TR("Save Studio setup"));saveStudio->setObjectName("saveStudioSetupHeader");saveStudio->setToolTip(SC_TR("Save Studio setup"));
+        auto *openAll = new QPushButton(SC_TR("Open all"));openAll->setObjectName("openCompleteSetup");openAll->setToolTip(SC_TR("Open all"));
+        auto *saveAll = new QPushButton(SC_TR("Save all"));saveAll->setObjectName("saveCompleteSetup");saveAll->setToolTip(SC_TR("Save all"));
+        auto *saveAllAs = new QPushButton(SC_TR("Save all as…"));saveAllAs->setObjectName("saveCompleteSetupAs");saveAllAs->setToolTip(SC_TR("Save all as…"));
+        auto *undoAll = new QPushButton(SC_TR("Undo"));undoAll->setObjectName("contextualUndo");undoAll->setToolTip(SC_TR("Undo the last change on the selected page (Ctrl+Z)"));undoActionButton_=undoAll;
+        auto *resetAll = new QPushButton(SC_TR("Reset all"));resetAll->setObjectName("resetApplication");resetAll->setToolTip(SC_TR("Reset all"));
         auto *quit = new QPushButton(SC_TR("Quit"));
         quit->setAccessibleName(SC_TR("Quit SoundCurrent Studio"));
         quit->setToolTip(SC_TR("Exit SoundCurrent Studio and restore normal audio"));
         quit->setObjectName("persistentQuit");
         auto *appActions = new QWidget;
         appActions->setLayoutDirection(Qt::LeftToRight);
-        auto *appActionLayout = new QHBoxLayout(appActions);
-        appActionLayout->setContentsMargins(12, 6, 12, 6);
-        appActionLayout->addStretch();
-        appActionLayout->addWidget(updateNow);
-        appActionLayout->addWidget(quit);
+        auto *appActionLayout = new QHBoxLayout(appActions);appActionLayout->setContentsMargins(12,6,12,6);
+        auto *commands=new QToolBar;commands->setObjectName("applicationCommands");commands->setMovable(false);commands->setFloatable(false);commands->setToolButtonStyle(Qt::ToolButtonTextOnly);
+        for(auto *button:{openStudio,saveStudio,openAll,saveAll,saveAllAs,undoAll,resetAll})commands->addWidget(button);
+        appActionLayout->addWidget(commands,1);appActionLayout->addWidget(updateNow);appActionLayout->addWidget(quit);
         shellLayout->insertWidget(0,appActions);
+        connect(openStudio,&QPushButton::clicked,studio_,&soundcurrent::studio::StudioPanel::openProfile);
+        connect(saveStudio,&QPushButton::clicked,studio_,&soundcurrent::studio::StudioPanel::saveProfile);
+        connect(openAll,&QPushButton::clicked,this,[this]{openCompleteSetup();});connect(saveAll,&QPushButton::clicked,this,[this]{saveCompleteSetup(false);});connect(saveAllAs,&QPushButton::clicked,this,[this]{saveCompleteSetup(true);});
+        connect(undoAll,&QPushButton::clicked,this,[this]{contextualUndo();});connect(resetAll,&QPushButton::clicked,this,[this]{resetApplication();});
+        auto shortcut=[this](const QKeySequence &key,const std::function<void()> &fn){auto *s=new QShortcut(key,this);s->setContext(Qt::WindowShortcut);connect(s,&QShortcut::activated,this,fn);};
+        shortcut(QKeySequence::Open,[this]{openCompleteSetup();});shortcut(QKeySequence::Save,[this]{saveCompleteSetup(false);});shortcut(QKeySequence(Qt::CTRL|Qt::SHIFT|Qt::Key_S),[this]{saveCompleteSetup(true);});
+        shortcut(QKeySequence(Qt::CTRL|Qt::ALT|Qt::Key_O),[this]{studio_->openProfile();});shortcut(QKeySequence(Qt::CTRL|Qt::ALT|Qt::Key_S),[this]{studio_->saveProfile();});
+        shortcut(QKeySequence::Quit,[]{qApp->quit();});shortcut(QKeySequence::Close,[this]{close();});
+        studio_->onUndoAvailable=[this](bool){updateContextualUndo();};connect(tabs_,&QTabWidget::currentChanged,this,[this]{updateContextualUndo();});
         outputCombo_->setLayoutDirection(Qt::LeftToRight);
         systemVolume_ = new soundcurrent::SystemVolumeControl(startEnabled);
         outputRow->addWidget(systemVolume_,1);
@@ -2956,6 +2974,14 @@ public:
         if(curve_->geometry()!=curveGeometry || outputGain_->geometry()!=outputGeometry)qFatal("Band-count change moved unrelated controls");
         bar->setValue(0);countBox_->setValue(original);QCoreApplication::processEvents();
     }
+    void selfTestCompleteSetup() {
+        auto *toolbar=findChild<QToolBar *>("applicationCommands");auto *open=findChild<QPushButton *>("openCompleteSetup"),*save=findChild<QPushButton *>("saveCompleteSetup"),*saveAs=findChild<QPushButton *>("saveCompleteSetupAs"),*reset=findChild<QPushButton *>("resetApplication");
+        if(!toolbar||!open||!save||!saveAs||!reset||!toolbar->isAncestorOf(open)||!toolbar->isAncestorOf(save)||!toolbar->isAncestorOf(saveAs)||!toolbar->isAncestorOf(reset)||!reset->shortcut().isEmpty())qFatal("Application command header or click-only reset is incomplete");
+        const auto setup=completeSetupObject();if(setup.value("schema").toInt()!=1||setup.value("equalizer").toObject().value("bands").toArray().isEmpty()||setup.value("studio").toObject().isEmpty()||setup.value("analysis").toObject().isEmpty())qFatal("Complete setup omitted a page");
+        QString error;if(!applyCompleteSetup(setup,&error)||!error.isEmpty())qFatal("Complete setup did not round trip");auto invalid=setup;invalid["schema"]=99;if(applyCompleteSetup(invalid,&error)||error.isEmpty())qFatal("Invalid complete setup was accepted silently");
+        const QList<QKeySequence> required={QKeySequence::Open,QKeySequence::Save,QKeySequence(Qt::CTRL|Qt::SHIFT|Qt::Key_S),QKeySequence::Undo,QKeySequence::Quit,QKeySequence::Close};
+        for(const auto &key:required){bool found=false;for(auto *shortcut:findChildren<QShortcut *>())if(shortcut->key()==key){found=true;break;}if(!found)qFatal("Application shortcut is missing: %s",qPrintable(key.toString()));}
+    }
     void selfTestQuitVisibility() const {
         const auto *quit=findChild<QPushButton*>("persistentQuit");
         if(!quit || !quit->isVisible() ||
@@ -3083,6 +3109,59 @@ public:
     }
 
 private:
+    static QStringList completeSettingKeys() {
+        QStringList keys={"outputGainDb","balancePercent","speakerModelId","amplifierModelId","equipment/speaker","equipment/amplifier","equipment/microphone","microphoneEnabled","micGain","audio/bufferMs","levelRefreshMs","showPeakMarkers","view/responseGraph","analysis/view","analysis/settings","i18n/language","i18n/formatLocale","updates/reminders","updates/previews"};
+        for(int i=0;i<4;++i)keys<<QString("micBand%1").arg(i);
+        return keys;
+    }
+    static QJsonObject encodeSetting(const QVariant &value) {
+        if(value.typeId()==QMetaType::QByteArray)return {{"type","bytes"},{"value",QString::fromLatin1(value.toByteArray().toBase64())}};
+        if(value.typeId()==QMetaType::Bool)return {{"type","bool"},{"value",value.toBool()}};
+        if(value.canConvert<double>() && value.typeId()!=QMetaType::QString)return {{"type","number"},{"value",value.toDouble()}};
+        return {{"type","string"},{"value",value.toString()}};
+    }
+    static std::optional<QVariant> decodeSetting(const QJsonValue &value) {
+        if(!value.isObject())return {};
+        const auto object=value.toObject();const auto type=object.value("type").toString();const auto stored=object.value("value");
+        if(type=="bytes"&&stored.isString())return QByteArray::fromBase64(stored.toString().toLatin1());
+        if(type=="bool"&&stored.isBool())return stored.toBool();
+        if(type=="number"&&stored.isDouble())return stored.toDouble();
+        if(type=="string"&&stored.isString())return stored.toString();
+        return {};
+    }
+    QJsonObject completeSetupObject() {
+        saveListeningState();QSettings settings;QJsonObject values;for(const auto &key:completeSettingKeys())if(settings.contains(key))values.insert(key,encodeSetting(settings.value(key)));
+        const QJsonObject equalizer{{"schema",1},{"preset",presetCombo_->currentData().toString()},{"bands",serializeBands(bands_)}};
+        return {{"schema",1},{"product","SoundCurrent Studio"},{"equalizer",equalizer},{"studio",studio_->session().json()},{"analysis",analysis_?analysis_->engine().settings.json():QJsonObject{}},{"settings",values}};
+    }
+    bool applyCompleteSetup(const QJsonObject &root,QString *error=nullptr) {
+        try {
+            if(root.value("schema").toInt()!=1||root.value("product").toString()!="SoundCurrent Studio")throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
+            const auto equalizer=root.value("equalizer").toObject();const auto parsedBands=parseBands(equalizer);if(!parsedBands)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
+            const auto nextStudio=soundcurrent::studio::Session::parse(root.value("studio").toObject());const auto nextAnalysis=soundcurrent::analysis::Settings::parse(root.value("analysis").toObject());if(!nextAnalysis)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
+            QSettings settings;for(const auto &key:completeSettingKeys())settings.remove(key);const auto stored=root.value("settings").toObject();for(const auto &key:completeSettingKeys())if(stored.contains(key)){const auto decoded=decodeSetting(stored.value(key));if(!decoded)throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());settings.setValue(key,*decoded);}settings.setValue("listening/state",QJsonDocument(equalizer).toJson(QJsonDocument::Compact));settings.sync();
+            bands_=*parsedBands;selected_=0;{const QSignalBlocker block(countBox_);countBox_->setValue(int(bands_.size()));}rebuildPresetList(equalizer.value("preset").toString("Custom"));rebuildBandControls();syncBandControls();
+            outputGain_->setValue(std::clamp(int(std::lround(settings.value("outputGainDb",0.).toDouble()*2)),-120,48));balance_->setValue(std::clamp(settings.value("balancePercent",0).toInt(),-100,100));
+            ensureSpeakerChoice(settings.value("speakerModelId").toString());speakerCombo_->setCurrentIndex(std::max(0,speakerCombo_->findData(settings.value("speakerModelId").toString())));ampCombo_->setCurrentIndex(std::max(0,ampCombo_->findData(settings.value("amplifierModelId").toString())));
+            micPower_->setChecked(settings.value("microphoneEnabled",false).toBool());micGain_->setValue(std::clamp(settings.value("micGain",0).toInt(),-24,24));for(int i=0;i<4;++i)micSliders_[i]->setValue(std::clamp(settings.value(QString("micBand%1").arg(i),0).toInt(),-24,24));
+            levelRefresh_->setValue(std::clamp(settings.value("levelRefreshMs",16).toInt(),1,100));peakMarkers_->setChecked(settings.value("showPeakMarkers",false).toBool());if(auto *show=findChild<QCheckBox *>("showResponseGraph"))show->setChecked(settings.value("view/responseGraph",true).toBool());
+            if(!analysis_->applySettings(*nextAnalysis)||!studio_->loadSession(nextStudio,true))throw std::runtime_error(SC_TR("Setup cannot be read or exceeds 8 MiB").toStdString());
+            applyChanges();refreshEquipmentStatus();status_->setText(SC_TR("Studio setup loaded for offline review. Uncheck offline editing to use it live."));currentSnapshot_=snapshot();undoStack_.clear();updateContextualUndo();return true;
+        } catch(const std::exception &exception){if(error)*error=soundcurrent::i18n::audioErrorText(QString::fromUtf8(exception.what()));return false;}
+    }
+    void saveCompleteSetup(bool choosePath) {
+        QString path=completeSetupPath_;if(choosePath||path.isEmpty())path=soundcurrent::i18n::FileDialogs::getSaveFileName(this,SC_TR("Save all"),path,SC_TR("SoundCurrent complete setup (*.scall)"));if(path.isEmpty())return;if(!path.endsWith(".scall",Qt::CaseInsensitive))path+=".scall";
+        QSaveFile file(path);if(!file.open(QIODevice::WriteOnly)){QMessageBox::warning(this,SC_TR("Save all"),SC_TR("Cannot save setup"));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);file.write(QJsonDocument(completeSetupObject()).toJson());if(!file.commit()){QMessageBox::warning(this,SC_TR("Save all"),SC_TR("Cannot finish saving setup."));return;}completeSetupPath_=path;status_->setText(SC_TR("Studio setup saved."));
+    }
+    void openCompleteSetup() {
+        const auto path=soundcurrent::i18n::FileDialogs::getOpenFileName(this,SC_TR("Open all"),completeSetupPath_,SC_TR("SoundCurrent complete setup (*.scall)"));if(path.isEmpty())return;QFile file(path);if(!file.open(QIODevice::ReadOnly)||file.size()>8*1024*1024){QMessageBox::warning(this,SC_TR("Open all"),SC_TR("Setup cannot be read or exceeds 8 MiB"));return;}QJsonParseError parse;const auto document=QJsonDocument::fromJson(file.readAll(),&parse);QString error;if(parse.error!=QJsonParseError::NoError||!document.isObject()||!applyCompleteSetup(document.object(),&error)){QMessageBox::warning(this,SC_TR("Open all"),error.isEmpty()?SC_TR("Setup cannot be read or exceeds 8 MiB"):error);return;}completeSetupPath_=path;
+    }
+    void contextualUndo(){if(tabs_->currentIndex()==1)studio_->undo();else if(tabs_->currentIndex()==0)undoChange();updateContextualUndo();}
+    void updateContextualUndo(){if(undoActionButton_)undoActionButton_->setEnabled(tabs_&&((tabs_->currentIndex()==0&&!undoStack_.isEmpty())||(tabs_->currentIndex()==1&&studio_&&studio_->canUndo())));}
+    void resetApplication() {
+        QMessageBox box(QMessageBox::Warning,SC_TR("Reset all"),SC_TR("Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone."),QMessageBox::Cancel,this);auto *reset=box.addButton(SC_TR("Reset all"),QMessageBox::DestructiveRole);box.setDefaultButton(QMessageBox::Cancel);box.exec();if(box.clickedButton()!=reset)return;
+        soundcurrent::StartupRegistration(QCoreApplication::applicationFilePath()).setEnabled(false);QSettings settings;settings.clear();settings.sync();QMessageBox::information(this,SC_TR("Reset all"),SC_TR("Settings were reset."));qApp->quit();
+    }
     QWidget *activeSetupParent() {
         auto *modal=QApplication::activeModalWidget();
         return modal && (modal==this || isAncestorOf(modal))?modal:this;
@@ -3110,6 +3189,7 @@ private:
         lastChangeSource_ = source;
         changeClock_.restart();
         undoButton_->setEnabled(true);
+        updateContextualUndo();
     }
 
     void commitChange() {
@@ -3156,6 +3236,7 @@ private:
         lastChangeSource_ = nullptr;
         changeClock_.invalidate();
         undoButton_->setEnabled(!undoStack_.isEmpty());
+        updateContextualUndo();
     }
 
     void updateControlsLock() {
@@ -4295,6 +4376,7 @@ private:
     QPushButton *resetButton_ = nullptr;
     QPushButton *lockButton_ = nullptr;
     QPushButton *undoButton_ = nullptr;
+    QPushButton *undoActionButton_ = nullptr;
     QCheckBox *power_ = nullptr;
     QWidget *balanceControls_ = nullptr;
     soundcurrent::SystemVolumeControl *systemVolume_ = nullptr;
@@ -4337,6 +4419,7 @@ private:
     bool restoring_ = false;
     bool changing_ = false;
     bool backgroundNoticeShown_ = false;
+    QString completeSetupPath_;
 };
 
 } // namespace
@@ -4901,6 +4984,7 @@ int main(int argc, char **argv) {
         testWindow.show();
         app.processEvents();
         testWindow.selfTestBandScaling();
+        testWindow.selfTestCompleteSetup();
         testWindow.selfTestPlaybackLayout();
         if (auto *display = testWindow.screen()) {
             const auto available = display->availableGeometry();

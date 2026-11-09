@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>다른 이퀄라이저 경로가 있습니다: %1. SoundCurrent를 사용하기 전에 종료하세요.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>애플리케이션 믹서</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>애플리케이션 스트림을 사용할 수 없습니다. PipeWire의 PulseAudio 호환 서비스와 pactl이 필요합니다.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>현재 출력 장치의 애플리케이션 스트림입니다. 이 컨트롤은 운영 체제의 애플리케이션별 볼륨을 변경합니다.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>앱 업데이트</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>채널 미터</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>채널 믹서</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>아니요</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>활성 애플리케이션 오디오 스트림이 없습니다.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>가져온 장비 보정이 선택되지 않았습니다.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE 제어판 열기</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>모두 열기</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>기준 비교에는 음원, 방, 기준 마이크의 영향이 포함됩니다. 마이크만 따로 측정한 결과나 인증된 측정이 아닙니다.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>애플리케이션 새로 고침</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>장치 새로 고침</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>초기화</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>모두 초기화</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>모든 애플리케이션 설정을 초기화하고 종료하시겠습니까? 사용자 지정 장비 프로필과 저장된 파일은 유지됩니다. 이 작업은 실행 취소할 수 없습니다.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio 설정 저장</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>모두 저장</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>모두 다른 이름으로 저장…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>설정 &amp;&amp; 캘리브레이션</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>설정이 초기화되었습니다.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio 오프라인 렌더러 (오디오 장치 불필요)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>전체 SoundCurrent 설정 (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Do you want to delete it anyway?</source>
       <translation>실행 취소</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Studio 변경 실행 취소</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>마지막 이퀄라이저 변경 실행 취소</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>선택한 페이지의 마지막 변경 실행 취소 (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>알 수 없음</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>알 수 없는 애플리케이션</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

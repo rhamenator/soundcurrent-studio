@@ -345,6 +345,18 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Có tuyến cân bằng âm khác: %1. Thoát chương trình đó trước khi dùng SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Bộ trộn ứng dụng</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Luồng ứng dụng không khả dụng. Cần dịch vụ tương thích PulseAudio của PipeWire và pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Luồng ứng dụng trên thiết bị đầu ra hiện tại. Các điều khiển này thay đổi âm lượng từng ứng dụng của hệ điều hành.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Cập nhật ứng dụng</translation>
     </message>
@@ -787,6 +799,10 @@ Bạn vẫn muốn xóa không?</translation>
       <source>Channel meters</source>
       <translation>Đồng hồ mức kênh</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Bộ trộn kênh</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Không</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Không có luồng âm thanh ứng dụng đang hoạt động.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Chưa chọn hiệu chỉnh thiết bị đã nhập.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Mở bảng điều khiển VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Mở tất cả</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>So sánh tham chiếu bao gồm ảnh hưởng của nguồn âm, căn phòng và micrô tham chiếu. Đây không phải phép đo riêng biệt hay được chứng nhận của micrô.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Làm mới ứng dụng</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Làm mới thiết bị</translation>
     </message>
@@ -3115,6 +3143,14 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Reset</source>
       <translation>Đặt lại</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Đặt lại tất cả</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Đặt lại mọi cài đặt ứng dụng và thoát? Hồ sơ thiết bị tùy chỉnh và các tệp đã lưu sẽ được giữ lại. Không thể hoàn tác thao tác này.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Lưu thiết lập Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Lưu tất cả</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Lưu tất cả thành…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Bạn vẫn muốn xóa không?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Cài đặt &amp;&amp; hiệu chuẩn</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Đã đặt lại cài đặt.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Bạn vẫn muốn xóa không?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Bộ kết xuất ngoại tuyến SoundCurrent Studio (không cần thiết bị âm thanh)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Thiết lập SoundCurrent hoàn chỉnh (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Bạn vẫn muốn xóa không?</translation>
       <translation>Hoàn tác</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Hoàn tác thay đổi Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Hoàn tác thay đổi bộ cân bằng âm gần nhất</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Hoàn tác thay đổi gần nhất trên trang đã chọn (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Bạn vẫn muốn xóa không?</translation>
       <source>Unknown</source>
       <translation>Không xác định</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Ứng dụng không xác định</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

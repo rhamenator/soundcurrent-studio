@@ -23,6 +23,7 @@ class QTabWidget;
 namespace soundcurrent::studio {
 class ChannelMeterView;
 class RoomBalancePad;
+class ApplicationMixer;
 class StudioPanel : public QWidget {
 public:
     explicit StudioPanel(bool persist, QWidget *parent = nullptr, bool testControls = false);
@@ -41,6 +42,10 @@ public:
     void setShared(std::span<const EqBand>, double gain, int balance);
     void setLocked(bool);
     void undo();
+    bool canUndo() const { return !locked_ && !history_.empty(); }
+    void saveProfile();
+    void openProfile();
+    bool loadSession(const Session &, bool offlineReview = true);
     void setLiveLevels(std::span<const float>);
     void showMonitoring();
     bool monitoringAvailable() const { return testControls_ || session_.engine.channels.size()>1; }
@@ -51,6 +56,7 @@ public:
     void selfTestRenderErrors();
     void selfTestChannelNames();
     std::function<void()> onChanged;
+    std::function<void(bool)> onUndoAvailable;
 private:
     void rebuild();
     void loadChannel();
@@ -61,8 +67,6 @@ private:
     void commit(const Session &before);
     void change(const std::function<void(Session &)> &);
     void effectPreset(int);
-    void saveProfile();
-    void openProfile();
     void render();
     void renderFiles(const QString &input, const QString &output);
     void tick();
@@ -77,6 +81,7 @@ private:
     QDialog *monitorDialog_;
     QTabWidget *pages_;
     QTableWidget *mixer_;
+    ApplicationMixer *applicationMixer_;
     QSlider *preGain_, *stereoBalance_;
     QLabel *preGainValue_, *stereoBalanceValue_;
     QWidget *stereoBalanceControls_;
@@ -95,7 +100,7 @@ private:
     RoomBalancePad *roomBalance_;
     QWidget *roomBalanceBox_;
     QLabel *status_, *modeHint_, *meterSource_;
-    QPushButton *undo_, *render_, *cancel_;
+    QPushButton *render_, *cancel_;
     QProgressBar *progress_;
     QWidget *editing_;
     QTimer timer_;

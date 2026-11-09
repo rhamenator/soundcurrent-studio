@@ -32,6 +32,7 @@
 #include <QScreen>
 #include <QScrollArea>
 #include <QSettings>
+#include <QShortcut>
 #include <QShowEvent>
 #include <QSlider>
 #include <QVBoxLayout>
@@ -373,6 +374,9 @@ void Panel::settingsDialog(){
     connect(apply,&QPushButton::clicked,&dialog,[&]{perform();});connect(close,&QPushButton::clicked,&dialog,&QDialog::reject);
     connect(save,&QPushButton::clicked,&dialog,[&]{const auto s=read();if(!s.valid()){perform();return;}const auto path=i18n::FileDialogs::getSaveFileName(&dialog,SC_TR("Save preset"),{},"JSON (*.json)");if(path.isEmpty())return;QSaveFile file(path);if(!file.open(QIODevice::WriteOnly)){feedback->setText(SC_TR("Could not save preset."));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);file.write(QJsonDocument(s.json()).toJson());if(!file.commit())feedback->setText(SC_TR("Could not finish saving preset."));});
     connect(load,&QPushButton::clicked,&dialog,[&]{const auto path=i18n::FileDialogs::getOpenFileName(&dialog,SC_TR("Load preset"),{},"JSON / PRESET / TXT (*.json *.preset *.txt)");if(path.isEmpty())return;QFile file(path);if(!file.open(QIODevice::ReadOnly) || file.size()>65536)return;auto settings=Settings::parsePreset(file.readAll());if(!settings){feedback->setText(SC_TR("Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth."));return;}write(*settings);});
+    auto *saveKey=new QShortcut(QKeySequence::Save,&dialog);connect(saveKey,&QShortcut::activated,save,&QPushButton::click);
+    auto *openKey=new QShortcut(QKeySequence::Open,&dialog);connect(openKey,&QShortcut::activated,load,&QPushButton::click);
+    auto *closeKey=new QShortcut(QKeySequence::Close,&dialog);connect(closeKey,&QShortcut::activated,&dialog,&QDialog::reject);
     ui::protectScrollControls(scroll);
     dialog.resize(std::min(620,screen()->availableGeometry().width()-30),std::min(650,screen()->availableGeometry().height()-40));ui::describeButton(apply);ui::describeButton(save);ui::describeButton(load);dialog.exec();suspendForDialog(false);
 }

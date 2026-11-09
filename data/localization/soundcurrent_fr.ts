@@ -345,6 +345,18 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Un autre chemin d’égalisation est présent : %1. Quittez l’application correspondante avant d’utiliser SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Mélangeur d’applications</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Les flux d’applications ne sont pas disponibles. Le service de compatibilité PulseAudio de PipeWire et pactl sont requis.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Flux d’applications sur le périphérique de sortie actuel. Ces commandes modifient les volumes par application du système d’exploitation.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Mise à jour de l’application</translation>
     </message>
@@ -787,6 +799,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <source>Channel meters</source>
       <translation>Indicateurs de niveau des canaux</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Mélangeur de canaux</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Non</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Aucun flux audio d’application actif.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Aucune correction d’équipement importée n’est sélectionnée.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Ouvrir le panneau de contrôle VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Tout ouvrir</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Les comparaisons de référence incluent la source sonore, la pièce et le microphone de référence. Elles ne constituent pas une mesure isolée ou certifiée du microphone.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Actualiser les applications</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Actualiser les appareils</translation>
     </message>
@@ -3115,6 +3143,14 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Reset</source>
       <translation>Réinitialiser</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Tout réinitialiser</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Réinitialiser tous les paramètres de l’application et quitter ? Les profils d’équipement personnalisés et les fichiers enregistrés seront conservés. Cette action est irréversible.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Enregistrer la configuration Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Tout enregistrer</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Tout enregistrer sous…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Réglages &amp;&amp; étalonnage</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Les paramètres ont été réinitialisés.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Moteur de rendu hors ligne SoundCurrent Studio (aucun périphérique audio requis)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Configuration complète SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Annuler la modification</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Annuler la modification Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Annuler la dernière modification de l’égaliseur</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Annuler la dernière modification de la page sélectionnée (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <source>Unknown</source>
       <translation>Inconnu</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Application inconnue</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

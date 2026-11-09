@@ -345,6 +345,18 @@ Vil du slette den alligevel?</translation>
       <translation>En anden equalizers signalvej findes: %1. Afslut den, før du bruger SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Programblander</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Programstreams er ikke tilgængelige. PipeWires PulseAudio-kompatibilitetstjeneste og pactl er påkrævet.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Programstreams på den aktuelle outputenhed. Disse kontroller ændrer operativsystemets lydstyrke for hvert program.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Appopdatering</translation>
     </message>
@@ -787,6 +799,10 @@ Vil du slette den alligevel?</translation>
       <source>Channel meters</source>
       <translation>Kanalmålere</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kanalblander</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Vil du slette den alligevel?</translation>
       <translation>Nej</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Ingen aktive lydstreams fra programmer.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Ingen importeret udstyrskorrektion valgt.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Åbn VB-CABLE-kontrolpanelet</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Åbn alle</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Vil du slette den alligevel?</translation>
       <translation>Referencesammenligninger omfatter lydkilden, rummet og referencemikrofonen. De er ikke en isoleret eller certificeret mikrofonmåling.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Opdater programmer</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Opdatér enheder</translation>
     </message>
@@ -3115,6 +3143,14 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Reset</source>
       <translation>Nulstil</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Nulstil alle</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Nulstil alle programindstillinger og afslut? Brugerdefinerede udstyrsprofiler og gemte filer bevares. Dette kan ikke fortrydes.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Gem Studio-konfiguration</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Gem alle</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Gem alle som…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Indstillinger &amp;&amp; kalibrering</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Indstillingerne blev nulstillet.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Vil du slette den alligevel?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio offline-renderer (kræver ingen lydenhed)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Komplet SoundCurrent-konfiguration (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Vil du slette den alligevel?</translation>
       <translation>Fortryd</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Fortryd Studio-ændring</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Fortryd sidste equalizerændring</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Fortryd den seneste ændring på den valgte side (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Vil du slette den alligevel?</translation>
       <source>Unknown</source>
       <translation>Ukendt</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Ukendt program</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

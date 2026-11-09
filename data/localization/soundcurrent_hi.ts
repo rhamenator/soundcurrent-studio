@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>एक अन्य इक्वलाइज़र रूट मौजूद है: %1। SoundCurrent इस्तेमाल करने से पहले उसे बंद करें।</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>ऐप्लिकेशन मिक्सर</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>ऐप्लिकेशन स्ट्रीम उपलब्ध नहीं हैं। PipeWire की PulseAudio संगतता सेवा और pactl आवश्यक हैं।</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>वर्तमान आउटपुट डिवाइस पर ऐप्लिकेशन स्ट्रीम। ये नियंत्रण ऑपरेटिंग सिस्टम में प्रत्येक ऐप्लिकेशन की आवाज़ बदलते हैं।</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>ऐप अपडेट</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>चैनल मीटर</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>चैनल मिक्सर</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>नहीं</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>कोई सक्रिय ऐप्लिकेशन ऑडियो स्ट्रीम नहीं है।</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>कोई आयात किया गया उपकरण सुधार चयनित नहीं है।</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE कंट्रोल पैनल खोलें</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>सभी खोलें</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>संदर्भ तुलना में ध्वनि स्रोत, कमरा और संदर्भ माइक्रोफ़ोन शामिल होते हैं। यह केवल माइक्रोफ़ोन का अलग या प्रमाणित मापन नहीं है।</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>ऐप्लिकेशन रीफ़्रेश करें</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>उपकरण सूची अपडेट करें</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>रीसेट करें</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>सभी रीसेट करें</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>सभी ऐप्लिकेशन सेटिंग रीसेट करके बाहर निकलें? कस्टम उपकरण प्रोफ़ाइल और सहेजी गई फ़ाइलें रखी जाएँगी। इसे पूर्ववत नहीं किया जा सकता।</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio सेटअप सहेजें</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>सभी सहेजें</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>सभी इस रूप में सहेजें…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>सेटिंग &amp;&amp; कैलिब्रेशन</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>सेटिंग रीसेट कर दी गईं।</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio ऑफ़लाइन रेंडरर (ऑडियो उपकरण आवश्यक नहीं)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>पूर्ण SoundCurrent सेटअप (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Do you want to delete it anyway?</source>
       <translation>पूर्ववत करें</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Studio बदलाव पूर्ववत करें</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>पिछला इक्वलाइज़र बदलाव पूर्ववत करें</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>चुने गए पृष्ठ पर अंतिम बदलाव पूर्ववत करें (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>अज्ञात</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>अज्ञात ऐप्लिकेशन</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

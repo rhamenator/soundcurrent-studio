@@ -345,6 +345,18 @@ Vill du ta bort den ändå?</translation>
       <translation>En annan equalizers signalväg finns: %1. Avsluta den innan du använder SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Programmixare</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Programströmmar är inte tillgängliga. PipeWires PulseAudio-kompatibilitetstjänst och pactl krävs.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Programströmmar på den aktuella utdataenheten. Dessa reglage ändrar operativsystemets volym per program.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Appuppdatering</translation>
     </message>
@@ -787,6 +799,10 @@ Vill du ta bort den ändå?</translation>
       <source>Channel meters</source>
       <translation>Kanalmätare</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kanalmixare</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Nej</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Inga aktiva ljudströmmar från program.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Ingen importerad utrustningskorrigering vald.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Öppna VB-CABLE-kontrollpanelen</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Öppna alla</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Vill du ta bort den ändå?</translation>
       <translation>Referensjämförelser omfattar ljudkällan, rummet och referensmikrofonen. De är inte en isolerad eller certifierad mikrofonmätning.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Uppdatera program</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Uppdatera enheter</translation>
     </message>
@@ -3115,6 +3143,14 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Reset</source>
       <translation>Återställ</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Återställ alla</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Återställa alla programinställningar och avsluta? Anpassade utrustningsprofiler och sparade filer behålls. Detta kan inte ångras.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Spara Studio-konfiguration</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Spara alla</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Spara alla som…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Vill du ta bort den ändå?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Inställningar &amp;&amp; kalibrering</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Inställningarna återställdes.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Vill du ta bort den ändå?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio offlinerenderare (ingen ljudenhet krävs)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Fullständig SoundCurrent-konfiguration (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Vill du ta bort den ändå?</translation>
       <translation>Ångra</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Ångra Studio-ändring</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Ångra senaste equalizerändringen</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Ångra den senaste ändringen på den valda sidan (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Vill du ta bort den ändå?</translation>
       <source>Unknown</source>
       <translation>Okänd</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Okänt program</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

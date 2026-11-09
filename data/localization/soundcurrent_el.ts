@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>Υπάρχει διαδρομή άλλου ισοσταθμιστή: %1. Τερματίστε τον πριν χρησιμοποιήσετε το SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Μίκτης εφαρμογών</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Οι ροές εφαρμογών δεν είναι διαθέσιμες. Απαιτούνται η υπηρεσία συμβατότητας PulseAudio του PipeWire και το pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Ροές εφαρμογών στην τρέχουσα συσκευή εξόδου. Αυτά τα στοιχεία αλλάζουν την ένταση ανά εφαρμογή του λειτουργικού συστήματος.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Ενημέρωση εφαρμογής</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>Μετρητές καναλιών</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Μίκτης καναλιών</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>Όχι</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Δεν υπάρχουν ενεργές ροές ήχου εφαρμογών.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Δεν έχει επιλεγεί εισαγμένη διόρθωση εξοπλισμού.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Άνοιγμα πίνακα ελέγχου VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Άνοιγμα όλων</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>Οι συγκρίσεις αναφοράς περιλαμβάνουν την πηγή ήχου, τον χώρο και το μικρόφωνο αναφοράς. Δεν αποτελούν απομονωμένη ή πιστοποιημένη μέτρηση μικροφώνου.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Ανανέωση εφαρμογών</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Ανανέωση συσκευών</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>Επαναφορά</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Επαναφορά όλων</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Επαναφορά όλων των ρυθμίσεων της εφαρμογής και έξοδος; Τα προσαρμοσμένα προφίλ εξοπλισμού και τα αποθηκευμένα αρχεία θα διατηρηθούν. Δεν είναι δυνατή η αναίρεση.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Αποθήκευση ρυθμίσεων Studio</translation>
+    </message>
+    <message>
+      <source>Save all</source>
+      <translation>Αποθήκευση όλων</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Αποθήκευση όλων ως…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3431,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Ρυθμίσεις &amp;&amp; βαθμονόμηση</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Έγινε επαναφορά των ρυθμίσεων.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3591,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Μηχανή απόδοσης εκτός σύνδεσης SoundCurrent Studio (δεν απαιτείται συσκευή ήχου)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Πλήρης ρύθμιση SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3991,12 @@ Do you want to delete it anyway?</source>
       <translation>Αναίρεση</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Αναίρεση αλλαγής Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Αναίρεση τελευταίας αλλαγής ισοσταθμιστή</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Αναίρεση της τελευταίας αλλαγής στην επιλεγμένη σελίδα (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4007,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>Άγνωστο</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Άγνωστη εφαρμογή</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>
