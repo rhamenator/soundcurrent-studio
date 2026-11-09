@@ -81,9 +81,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     auto *root = new QVBoxLayout(this);
     auto *layoutBox = new QGroupBox(SC_TR("Channels and routing")); auto *layoutForm = new QFormLayout(layoutBox);
     layoutForm->setRowWrapPolicy(QFormLayout::WrapLongRows);layoutForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
-    layout_ = new QComboBox; layout_->addItems({SC_TR("Stereo"), SC_TR("Mono"), "5.1", "7.1", SC_TR("16 channels"), SC_TR("Custom")});
+    layout_ = new QComboBox;layout_->setObjectName("studioLayoutSelector");layout_->setAccessibleName(SC_TR("Layout"));
+    layout_->addItems({SC_TR("Stereo"), SC_TR("Mono"), "5.1", "7.1", SC_TR("16 channels"), SC_TR("Custom")});
     count_ = new soundcurrent::AcceleratingSpinBox; count_->setRange(1, int(maxChannels)); count_->setAccessibleName(SC_TR("Studio channel count"));
-    auto *layoutRow = new soundcurrent::ui::ResponsiveRow; layoutRow->addWidget(layout_,1); layoutRow->addWidget(count_);
+    auto *layoutRow = new soundcurrent::ui::ResponsiveRow;layoutRow->setObjectName("studioLayoutRow");layoutRow->addWidget(layout_,1);layoutRow->addWidget(count_);
     layoutForm->addRow(SC_TR("Layout"), layoutRow);
     modePanel_=new QWidget;modePanel_->setObjectName("studioPlaybackMode");
     auto *modeLayout=new QVBoxLayout(modePanel_);modeLayout->setContentsMargins(0,0,0,0);
