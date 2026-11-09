@@ -32,8 +32,10 @@
 #include <QScreen>
 #include <QScrollArea>
 #include <QSettings>
+#include <QShortcut>
 #include <QShowEvent>
 #include <QSlider>
+#include <QTimer>
 #include <QVBoxLayout>
 #include <algorithm>
 #include <cmath>
@@ -59,9 +61,19 @@ public:
     void resetClock(){clock.invalidate();}
     QSize historyPixelSize() const {return {image.width,image.height};}
     void clearImage(){image={};ensureImageSize();previousColumn.clear();credit=0;clock.invalidate();update();}
+    bool advanceIdle() {
+        if(!isVisible()||frozen||mode!=View::Waterfall)return false;
+        constexpr double interval=60.;
+        if(clock.isValid()&&clock.elapsed()<interval)return false;
+        const double elapsed=clock.isValid()?clock.elapsed()/1000.:interval/1000.;clock.restart();ensureImageSize();
+        const auto &s=data->settings;credit+=elapsed*image.width*s.speed/s.history;const int columns=std::min(image.width,int(credit));credit-=columns;
+        if(columns<=0)return false;
+        for(int y=0;y<image.height;++y){auto *row=image.pixels.data()+y*image.width;std::memmove(row,row+columns,std::size_t(image.width-columns)*sizeof(*row));std::fill(row+image.width-columns,row+image.width,0xff000000);}
+        previousColumn.assign(std::size_t(image.height),-240.);setProperty("idleFrames",property("idleFrames").toInt()+1);if(onFrame)onFrame();update();return true;
+    }
     bool push(const QByteArray &pcm) {
         if(!isVisible() || frozen)return false;
-        const auto &s=data->settings;const double interval=(mode==View::Waveform || mode==View::Vectorscope)?40:std::max(40.,250.*s.fft/s.rate);
+        const auto &s=data->settings;const double interval=(mode==View::Microphone || mode==View::Average)?40:(mode==View::Waveform || mode==View::Vectorscope)?50:std::max(60.,250.*s.fft/s.rate);
         if(clock.isValid() && clock.elapsed()<interval)return false;
         const double elapsed=clock.isValid()?clock.elapsed()/1000.:interval/1000.;
         if(!data->push(pcm,mode))return false;
@@ -216,7 +228,7 @@ private:
     std::vector<double> previousColumn;
     void ensureImageSize() {
         const auto plot=plotRect();const double dpr=devicePixelRatioF();
-        const int w=std::clamp(int(std::ceil(plot.width()*dpr)),1,2048),h=std::clamp(int(std::ceil(plot.height()*dpr)),2,2048);
+        const int w=std::clamp(int(std::ceil(plot.width()*dpr)),1,1280),h=std::clamp(int(std::ceil(plot.height()*dpr)),2,1280);
         if(image.width==w && image.height==h)return;
         auto replacement=gram::make_image(w,h);gram::clear_image(replacement,0xff000000);
         if(!image.pixels.empty()) {
@@ -251,6 +263,7 @@ Panel::Panel(QWidget *parent):QWidget(parent) {
     const auto saved=Settings::parse(QJsonDocument::fromJson(QSettings().value("analysis/settings").toByteArray()).object());if(saved)canvas_->data->configure(*saved);
     canvas_->onVisibility=[this](bool visible){if(visible){captureFailed_=false;refreshSources();}if(onActivity)onActivity(source(),visible && active());};
     canvas_->onFrame=[this]{availability();};
+    auto *displayHeartbeat=new QTimer(this);displayHeartbeat->setInterval(50);displayHeartbeat->setTimerType(Qt::CoarseTimer);connect(displayHeartbeat,&QTimer::timeout,canvas_,[this]{canvas_->advanceIdle();});displayHeartbeat->start();
     connect(view_,&QComboBox::currentIndexChanged,this,[this](int index){canvas_->data->resetAverage();setView(View(index));canvas_->clearImage();canvas_->setAccessibleName(view_->currentText());availability();});
     connect(source_,&QComboBox::currentIndexChanged,this,[this]{sourceReady_=true;captureFailed_=false;reset();QSettings().setValue("analysis/source",source());QSettings().setValue("analysis/sourceName",source_->currentText());if(onActivity)onActivity(source(),active());});
     connect(freeze_,&QCheckBox::toggled,this,[this](bool on){canvas_->frozen=on;});
@@ -373,6 +386,9 @@ void Panel::settingsDialog(){
     connect(apply,&QPushButton::clicked,&dialog,[&]{perform();});connect(close,&QPushButton::clicked,&dialog,&QDialog::reject);
     connect(save,&QPushButton::clicked,&dialog,[&]{const auto s=read();if(!s.valid()){perform();return;}const auto path=i18n::FileDialogs::getSaveFileName(&dialog,SC_TR("Save preset"),{},"JSON (*.json)");if(path.isEmpty())return;QSaveFile file(path);if(!file.open(QIODevice::WriteOnly)){feedback->setText(SC_TR("Could not save preset."));return;}file.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner);file.write(QJsonDocument(s.json()).toJson());if(!file.commit())feedback->setText(SC_TR("Could not finish saving preset."));});
     connect(load,&QPushButton::clicked,&dialog,[&]{const auto path=i18n::FileDialogs::getOpenFileName(&dialog,SC_TR("Load preset"),{},"JSON / PRESET / TXT (*.json *.preset *.txt)");if(path.isEmpty())return;QFile file(path);if(!file.open(QIODevice::ReadOnly) || file.size()>65536)return;auto settings=Settings::parsePreset(file.readAll());if(!settings){feedback->setText(SC_TR("Invalid analysis settings. Keep the FFT window at or below 250 ms and frequencies within the captured bandwidth."));return;}write(*settings);});
+    auto *saveKey=new QShortcut(QKeySequence::Save,&dialog);connect(saveKey,&QShortcut::activated,save,&QPushButton::click);
+    auto *openKey=new QShortcut(QKeySequence::Open,&dialog);connect(openKey,&QShortcut::activated,load,&QPushButton::click);
+    auto *closeKey=new QShortcut(QKeySequence::Close,&dialog);connect(closeKey,&QShortcut::activated,&dialog,&QDialog::reject);
     ui::protectScrollControls(scroll);
     dialog.resize(std::min(620,screen()->availableGeometry().width()-30),std::min(650,screen()->availableGeometry().height()-40));ui::describeButton(apply);ui::describeButton(save);ui::describeButton(load);dialog.exec();suspendForDialog(false);
 }

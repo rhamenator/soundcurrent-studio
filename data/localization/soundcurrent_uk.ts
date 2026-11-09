@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>Виявлено аудіотракт іншого еквалайзера: %1. Завершіть його роботу перед використанням SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Мікшер програм</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Потоки програм недоступні. Потрібні служба сумісності PulseAudio у PipeWire та pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Потоки програм на поточному пристрої виведення. Ці регулятори змінюють гучність окремих програм в операційній системі.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Оновлення програми</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>Індикатори каналів</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Мікшер каналів</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>Ні</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Немає активних аудіопотоків програм.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Імпортовану корекцію обладнання не вибрано.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Відкрити панель керування VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Відкрити все</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>Порівняння з еталоном охоплює джерело звуку, кімнату та еталонний мікрофон. Це не ізольоване чи сертифіковане вимірювання мікрофона.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Оновити програми</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Оновити список пристроїв</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>Скинути</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Скинути все</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Скинути всі налаштування програми й вийти? Користувацькі профілі обладнання та збережені файли залишаться. Цю дію неможливо скасувати.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Зберегти налаштування Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Зберегти все як…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Налаштування &amp;&amp; калібрування</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Налаштування скинуто.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Офлайн-рендерер SoundCurrent Studio (аудіопристрій не потрібен)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Повна конфігурація SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</source>
       <translation>Скасувати дію</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Скасувати зміну Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Скасувати останню зміну еквалайзера</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Скасувати останню зміну на вибраній сторінці (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>Невідомо</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Невідома програма</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

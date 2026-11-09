@@ -345,6 +345,18 @@ Vil du likevel sletta ho?</translation>
       <translation>Ei anna equalizerruting finst: %1. Avslutt henne før du brukar SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Programmikser</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Programstraumar er ikkje tilgjengelege. PulseAudio-kompatibilitetstenesta til PipeWire og pactl er påkravde.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Programstraumar på gjeldande utdataeining. Desse kontrollane endrar volumet for kvart program i operativsystemet.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Appoppdatering</translation>
     </message>
@@ -787,6 +799,10 @@ Vil du likevel sletta ho?</translation>
       <source>Channel meters</source>
       <translation>Kanalmålarar</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kanalmikser</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Vil du likevel sletta ho?</translation>
       <translation>Nei</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Ingen aktive lydstraumar frå program.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Ingen importert utstyrskorreksjon er vald.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Opne VB-CABLE-kontrollpanel</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Opna alle</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Vil du likevel sletta ho?</translation>
       <translation>Referansesamanlikningar omfattar lydkjelda, rommet og referansemikrofonen. Dei er ikkje ei isolert eller sertifisert mikrofonmåling.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Oppdater program</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Oppdater einingar</translation>
     </message>
@@ -3115,6 +3143,14 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Reset</source>
       <translation>Tilbakestill</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Nullstill alle</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Nullstilla alle programinnstillingar og avslutta? Eigendefinerte utstyrsprofilar og lagra filer blir tekne vare på. Dette kan ikkje angrast.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Lagre Studio-oppsett</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Lagra alle som…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Innstillingar &amp;&amp; kalibrering</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Innstillingane vart nullstilte.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Vil du likevel sletta ho?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio filbasert rendrar (inga lydeining er nødvendig)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Fullstendig SoundCurrent-oppsett (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Vil du likevel sletta ho?</translation>
       <extracomment>Reverse the previous editable setting change.</extracomment>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Angre Studio-endring</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Angre siste equalizerendring</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Angra den siste endringa på den valde sida (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Vil du likevel sletta ho?</translation>
       <source>Unknown</source>
       <translation>Ukjend</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Ukjent program</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

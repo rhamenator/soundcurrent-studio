@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>存在另一个均衡器路由：%1。使用 SoundCurrent 前请先退出它。</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>应用混音器</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>应用音频流不可用。需要 PipeWire 的 PulseAudio 兼容服务和 pactl。</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>当前输出设备上的应用音频流。这些控件可更改操作系统中各应用的音量。</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>应用更新</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>声道电平表</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>声道混音器</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>否</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>没有活动的应用音频流。</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>未选择导入的设备校正。</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>打开 VB-CABLE 控制面板</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>全部打开</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>参考比较包含声源、房间和参考麦克风的影响，并非对麦克风单独进行的测量或经认证的测量。</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>刷新应用</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>刷新设备</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>重置</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>全部重置</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>要重置所有应用设置并退出吗？自定义设备配置和已保存的文件将会保留。此操作无法撤销。</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>保存 Studio 设置</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>全部另存为…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>设置 &amp;&amp; 校准</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>设置已重置。</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio 离线渲染器（无需音频设备）</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>完整 SoundCurrent 设置 (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</source>
       <translation>撤销</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>撤销 Studio 更改</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>撤销上一次均衡器更改</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>撤销所选页面上的最后一次更改 (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>未知</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>未知应用</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

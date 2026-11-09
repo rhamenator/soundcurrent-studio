@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>يوجد مسار معادل صوت آخر: %1. أنهه قبل استخدام SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>مازج التطبيقات</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>تدفقات التطبيقات غير متاحة. تلزم خدمة توافق PulseAudio في PipeWire والأداة pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>تدفقات التطبيقات على جهاز الإخراج الحالي. تغيّر عناصر التحكم هذه مستوى صوت كل تطبيق في نظام التشغيل.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>تحديث التطبيق</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>مقاييس القنوات</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>مازج القنوات</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>لا</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>لا توجد تدفقات صوتية نشطة للتطبيقات.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>لم يتم تحديد تصحيح مستورد للمعدات.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>فتح لوحة تحكم VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>فتح الكل</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>تشمل المقارنات المرجعية مصدر الصوت والغرفة والميكروفون المرجعي. وهي ليست قياسًا معزولًا أو معتمدًا للميكروفون.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>تحديث التطبيقات</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>تحديث الأجهزة</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>إعادة الضبط</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>إعادة تعيين الكل</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>هل تريد إعادة تعيين جميع إعدادات التطبيق والخروج؟ سيتم الاحتفاظ بملفات تعريف المعدات المخصصة والملفات المحفوظة. لا يمكن التراجع عن ذلك.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>حفظ إعداد Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>حفظ الكل باسم…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>الإعدادات &amp;&amp; المعايرة</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>تمت إعادة تعيين الإعدادات.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>مصيّر SoundCurrent Studio دون اتصال (لا يتطلب جهاز صوت)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>إعداد SoundCurrent الكامل (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</source>
       <translation>تراجع</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>التراجع عن تغيير Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>التراجع عن آخر تغيير لمعادل الصوت</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>التراجع عن آخر تغيير في الصفحة المحددة (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>غير معروف</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>تطبيق غير معروف</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

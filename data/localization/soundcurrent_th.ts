@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>พบเส้นทางอีควอไลเซอร์อื่น: %1 ให้ออกจากโปรแกรมนั้นก่อนใช้ SoundCurrent</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>ตัวปรับเสียงแอปพลิเคชัน</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>สตรีมของแอปพลิเคชันไม่พร้อมใช้งาน ต้องใช้บริการความเข้ากันได้ PulseAudio ของ PipeWire และ pactl</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>สตรีมแอปพลิเคชันบนอุปกรณ์เอาต์พุตปัจจุบัน ตัวควบคุมเหล่านี้เปลี่ยนระดับเสียงของแต่ละแอปพลิเคชันในระบบปฏิบัติการ</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>อัปเดตแอป</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>มิเตอร์ช่องเสียง</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>ตัวปรับเสียงช่องสัญญาณ</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>ไม่</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>ไม่มีสตรีมเสียงของแอปพลิเคชันที่ทำงานอยู่</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>ไม่ได้เลือกการชดเชยอุปกรณ์ที่นำเข้า</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>เปิดแผงควบคุม VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>เปิดทั้งหมด</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>การเปรียบเทียบอ้างอิงรวมผลจากแหล่งเสียง ห้อง และไมโครโฟนอ้างอิง จึงไม่ใช่การวัดไมโครโฟนเพียงอย่างเดียวหรือการวัดที่ผ่านการรับรอง</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>รีเฟรชแอปพลิเคชัน</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>รีเฟรชอุปกรณ์</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>รีเซ็ต</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>รีเซ็ตทั้งหมด</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>รีเซ็ตการตั้งค่าแอปพลิเคชันทั้งหมดและออกหรือไม่ โปรไฟล์อุปกรณ์ที่กำหนดเองและไฟล์ที่บันทึกไว้จะยังคงอยู่ การดำเนินการนี้ไม่สามารถเลิกทำได้</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>บันทึกการตั้งค่า Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>บันทึกทั้งหมดเป็น…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>การตั้งค่า &amp;&amp; การปรับเทียบ</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>รีเซ็ตการตั้งค่าแล้ว</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>ตัวเรนเดอร์แบบออฟไลน์ SoundCurrent Studio (ไม่ต้องใช้อุปกรณ์เสียง)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>การตั้งค่า SoundCurrent ฉบับสมบูรณ์ (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</source>
       <translation>เลิกทำ</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>เลิกทำการเปลี่ยน Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>เลิกทำการเปลี่ยนอีควอไลเซอร์ล่าสุด</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>เลิกทำการเปลี่ยนแปลงล่าสุดในหน้าที่เลือก (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>ไม่ทราบ</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>แอปพลิเคชันที่ไม่รู้จัก</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

@@ -2,8 +2,30 @@
 
 ## Always-visible controls
 
-Quit app is beside the top-level tabs. It exits the application and unloads its
-audio processing. Closing the main window can leave processing in the background.
+The command header stays above the top-level tabs. Open Studio setup and Save
+Studio setup operate only on channel/effect routing. Open all, Save all, and
+Save all as use one `.scall` file for the equalizer, Studio engine, analyzer,
+and portable settings. Device routes, microphone consent, update folders,
+live meters, and other host/transient state are deliberately excluded. Undo
+targets the selected Equalizer or Studio page. Reset all is click-only, asks
+for confirmation, preserves saved files and custom equipment profiles, clears
+application settings, disables start-at-login, and quits so defaults load on
+the next start.
+
+Automatic EQ headroom remains visible in this header on every page because it
+affects the active processing chain. Bypass Studio processing appears there
+only on Studio channels & effects, where its scope is unambiguous. The Effects
+page no longer reserves a bottom command-row spacer; its controls remain
+top-aligned while the persistent output controls stay fixed below the page.
+
+The standard shortcuts are Ctrl+O (open all), Ctrl+S (save all), Ctrl+Shift+S
+(save all as), Ctrl+Alt+O/Ctrl+Alt+S (open/save the Studio-only setup), Ctrl+Z
+(contextual undo), Ctrl+W (hide the window), and Ctrl+Q (quit). Save/open/undo
+shortcuts in modal editors apply to that editor and cannot trigger a hidden
+main-window action.
+
+Quit is beside the command bar. It exits the application and unloads its audio
+processing. Closing the main window can leave processing in the background.
 
 The bottom control strip combines the former Playback box with the listening
 controls. It remains visible while any page scrolls:
@@ -41,17 +63,33 @@ Delay/echo and reverb have separate enable switches and wet-mix controls. Dry
 means no enabled effect contribution; selecting an effect preset can replace
 the existing effect settings.
 
-### Mixer
+### Channel mixer
 
 Each logical output channel has gain, mute and solo controls. These edit the
 same state as Selected channel, including undo and saved setups. They are a
-channel mixer inside Studio, not a mixer for the separate apps running in the
-OS. The OS still handles per-application stream volumes.
+channel mixer inside Studio.
 
 This mixer and Input gain use the shared C++ engine on Linux and Windows.
 They do not depend on a signed custom driver. A future driver/backend can feed
-the same engine and UI; these controls need not be rewritten. OS per-app mixer
-integration would be a separate backend feature.
+the same engine and UI; these controls need not be rewritten.
+
+### Application mixer
+
+Application mixer controls active application streams on the current output
+device with volume sliders and mute switches. Linux uses the PipeWire/PulseAudio
+compatibility interface through `pactl`; Windows uses native WASAPI audio
+sessions. The list refreshes while visible, so inactive streams disappear and
+newly playing applications appear. These are live OS session levels and are not
+embedded in complete setup files.
+
+## Analyzer scheduling
+
+When Spectrogram is selected, its time history continues advancing through
+silence instead of freezing. Capture is delivered to the display in bounded
+50 ms batches, display refresh is capped, and high-DPI history storage is
+bounded. Analysis remains inactive when its tab is hidden. Playback processing
+never waits for analyzer painting or FFT work; visualization work is throttled
+independently of the audio path.
 
 ### Selected channel
 

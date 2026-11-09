@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>קיים נתיב אקולייזר אחר: %1. יש לסיים אותו לפני השימוש ב־SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>מערבל יישומים</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>זרמי היישומים אינם זמינים. נדרשים שירות התאימות PulseAudio של PipeWire והכלי pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>זרמי יישומים בהתקן הפלט הנוכחי. פקדים אלה משנים את עוצמת הקול לכל יישום במערכת ההפעלה.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>עדכון האפליקציה</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>מדי ערוצים</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>מערבל ערוצים</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>לא</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>אין זרמי שמע פעילים של יישומים.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>לא נבחר תיקון ציוד מיובא.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>פתיחת לוח הבקרה של VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>פתיחת הכול</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>השוואות הייחוס כוללות את מקור הקול, החדר ומיקרופון הייחוס. הן אינן מדידה מבודדת או מוסמכת של המיקרופון.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>רענון יישומים</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>רענון מכשירים</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>איפוס</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>איפוס הכול</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>לאפס את כל הגדרות היישום ולצאת? פרופילי ציוד מותאמים אישית וקבצים שמורים יישמרו. לא ניתן לבטל פעולה זו.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>שמירת תצורת Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>שמירת הכול בשם…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>הגדרות &amp;&amp; כיול</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>ההגדרות אופסו.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>מנוע רינדור לא מקוון של SoundCurrent Studio (לא נדרש התקן שמע)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>הגדרת SoundCurrent מלאה (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</source>
       <translation>ביטול הפעולה האחרונה</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>ביטול שינוי ב־Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>ביטול השינוי האחרון באקולייזר</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>ביטול השינוי האחרון בדף שנבחר (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>לא ידוע</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>יישום לא מוכר</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

@@ -345,6 +345,18 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Există o altă rută de egalizator: %1. Închideți-o înainte de a utiliza SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Mixer de aplicații</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Fluxurile aplicațiilor nu sunt disponibile. Sunt necesare serviciul de compatibilitate PulseAudio al PipeWire și pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Fluxurile aplicațiilor pe dispozitivul de ieșire curent. Aceste controale modifică volumele pe aplicație ale sistemului de operare.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Actualizare aplicație</translation>
     </message>
@@ -787,6 +799,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Channel meters</source>
       <translation>Indicatoare de canale</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Mixer de canale</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Nu</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Nu există fluxuri audio active ale aplicațiilor.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Nu este selectată nicio corecție de echipament importată.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Deschideți panoul de control VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Deschide tot</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Comparațiile cu referința includ sursa sonoră, camera și microfonul de referință. Nu reprezintă o măsurare izolată sau certificată a microfonului.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Reîmprospătează aplicațiile</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Actualizați dispozitivele</translation>
     </message>
@@ -3115,6 +3143,14 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Reset</source>
       <translation>Resetați</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Resetează tot</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Resetați toate setările aplicației și ieșiți? Profilurile personalizate de echipamente și fișierele salvate vor fi păstrate. Acest lucru nu poate fi anulat.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Salvați configurația Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Salvează tot ca…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Setări &amp;&amp; calibrare</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Setările au fost resetate.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Motor de randare offline SoundCurrent Studio (nu necesită dispozitiv audio)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Configurație completă SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Anulați ultima acțiune</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Anulați modificarea Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Anulați ultima modificare a egalizatorului</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Anulează ultima modificare de pe pagina selectată (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Doriți să îl ștergeți totuși?</translation>
       <source>Unknown</source>
       <translation>Necunoscut</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Aplicație necunoscută</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

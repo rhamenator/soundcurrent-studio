@@ -345,6 +345,18 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Başka bir ekolayzırın ses yolu mevcut: %1. SoundCurrent'ı kullanmadan önce ondan çıkın.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Uygulama mikseri</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Uygulama akışları kullanılamıyor. PipeWire PulseAudio uyumluluk hizmeti ve pactl gereklidir.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Geçerli çıkış aygıtındaki uygulama akışları. Bu denetimler işletim sisteminin uygulama başına ses düzeylerini değiştirir.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Uygulama güncellemesi</translation>
     </message>
@@ -787,6 +799,10 @@ Yine de silmek istiyor musunuz?</translation>
       <source>Channel meters</source>
       <translation>Kanal göstergeleri</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kanal mikseri</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Hayır</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Etkin uygulama ses akışı yok.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Aktarılan ekipman düzeltmesi seçili değil.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE denetim masasını aç</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Tümünü aç</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Referans karşılaştırmaları ses kaynağını, odayı ve referans mikrofonunu içerir. Bunlar bağımsız veya sertifikalı bir mikrofon ölçümü değildir.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Uygulamaları yenile</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Cihazları yenile</translation>
     </message>
@@ -3115,6 +3143,14 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Reset</source>
       <translation>Sıfırla</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Tümünü sıfırla</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Tüm uygulama ayarları sıfırlanıp çıkılsın mı? Özel ekipman profilleri ve kaydettiğiniz dosyalar korunacaktır. Bu işlem geri alınamaz.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio ayarlarını kaydet</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Tümünü farklı kaydet…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Ayarlar &amp;&amp; kalibrasyon</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Ayarlar sıfırlandı.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Yine de silmek istiyor musunuz?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio çevrimdışı işleyicisi (ses aygıtı gerekmez)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Tam SoundCurrent kurulumu (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Geri al</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Studio değişikliğini geri al</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Son ekolayzır değişikliğini geri al</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Seçili sayfadaki son değişikliği geri al (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Yine de silmek istiyor musunuz?</translation>
       <source>Unknown</source>
       <translation>Bilinmiyor</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Bilinmeyen uygulama</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

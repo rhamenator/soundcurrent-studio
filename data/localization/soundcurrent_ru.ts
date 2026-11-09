@@ -345,6 +345,18 @@ Do you want to delete it anyway?</source>
       <translation>Обнаружен аудиотракт другого эквалайзера: %1. Завершите его работу перед использованием SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Микшер приложений</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Потоки приложений недоступны. Требуются служба совместимости PulseAudio в PipeWire и pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Потоки приложений на текущем устройстве вывода. Эти регуляторы изменяют громкость отдельных приложений в операционной системе.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Обновление приложения</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</source>
       <source>Channel meters</source>
       <translation>Индикаторы каналов</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Микшер каналов</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</source>
       <translation>Нет</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Нет активных аудиопотоков приложений.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Импортированная коррекция оборудования не выбрана.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Открыть панель управления VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Открыть всё</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</source>
       <translation>Сравнение с эталоном включает источник звука, комнату и эталонный микрофон. Это не изолированное или сертифицированное измерение микрофона.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Обновить приложения</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Обновить список устройств</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Reset</source>
       <translation>Сбросить</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Сбросить всё</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Сбросить все настройки приложения и выйти? Пользовательские профили оборудования и сохранённые файлы останутся. Это действие нельзя отменить.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Save Studio setup</source>
       <translation>Сохранить настройки Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Сохранить всё как…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Настройки &amp;&amp; калибровка</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Настройки сброшены.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</source>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Офлайн-рендерер SoundCurrent Studio (аудиоустройство не требуется)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Полная конфигурация SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</source>
       <translation>Отменить действие</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Отменить изменение Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Отменить последнее изменение эквалайзера</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Отменить последнее изменение на выбранной странице (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</source>
       <source>Unknown</source>
       <translation>Неизвестно</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Неизвестное приложение</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

@@ -345,6 +345,18 @@ Do you want to delete it anyway?</translation>
       <translation>Another equalizer route is present: %1. Quit it before using SoundCurrent.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Application mixer</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Application streams on the current output device. These controls change the operating system's per-application volumes.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Application update</translation>
     </message>
@@ -787,6 +799,10 @@ Do you want to delete it anyway?</translation>
       <source>Channel meters</source>
       <translation>Channel meters</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Channel mixer</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Do you want to delete it anyway?</translation>
       <translation>No</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>No active application audio streams.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>No imported equipment correction selected.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Open VB-CABLE control panel</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Open all</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Do you want to delete it anyway?</translation>
       <translation>Reference comparisons include the source, room and reference microphone. They are not an isolated or certified microphone measurement.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Refresh applications</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Refresh devices</translation>
     </message>
@@ -3115,6 +3143,14 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Reset</source>
       <translation>Reset</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Reset all</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Save Studio setup</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Save all as…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Do you want to delete it anyway?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Settings &amp;&amp; calibration</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Settings were reset.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Do you want to delete it anyway?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio offline renderer (no audio device required)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>SoundCurrent complete setup (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Do you want to delete it anyway?</translation>
       <translation>Undo</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Undo Studio change</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Undo last equalizer change</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Undo the last change on the selected page (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Do you want to delete it anyway?</translation>
       <source>Unknown</source>
       <translation>Unknown</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Unknown application</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

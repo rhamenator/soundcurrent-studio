@@ -345,6 +345,18 @@ Wilt u het toch verwijderen?</translation>
       <translation>Er is een andere equalizerroute aanwezig: %1. Sluit die af voordat u SoundCurrent gebruikt.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Toepassingsmixer</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Toepassingsstreams zijn niet beschikbaar. De PulseAudio-compatibiliteitsservice van PipeWire en pactl zijn vereist.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Toepassingsstreams op het huidige uitvoerapparaat. Met deze regelaars wijzigt u de volumes per toepassing van het besturingssysteem.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>App-update</translation>
     </message>
@@ -787,6 +799,10 @@ Wilt u het toch verwijderen?</translation>
       <source>Channel meters</source>
       <translation>Kanaalmeters</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Kanaalmixer</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Wilt u het toch verwijderen?</translation>
       <translation>Nee</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Geen actieve audiostreams van toepassingen.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Geen geïmporteerde apparatuurcorrectie geselecteerd.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE-configuratiescherm openen</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Alles openen</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Wilt u het toch verwijderen?</translation>
       <translation>Referentievergelijkingen bevatten de invloeden van de geluidsbron, de ruimte en de referentiemicrofoon. Dit is geen geïsoleerde of gecertificeerde microfoonmeting.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Toepassingen vernieuwen</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Apparaten verversen</translation>
     </message>
@@ -3115,6 +3143,14 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Reset</source>
       <translation>Resetten</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Alles opnieuw instellen</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Alle toepassingsinstellingen opnieuw instellen en afsluiten? Aangepaste apparatuurprofielen en opgeslagen bestanden blijven behouden. Dit kan niet ongedaan worden gemaakt.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Studio-configuratie opslaan</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Alles opslaan als…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Instellingen &amp;&amp; kalibratie</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>De instellingen zijn opnieuw ingesteld.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Wilt u het toch verwijderen?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>SoundCurrent Studio offline renderer (geen audioapparaat nodig)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Volledige SoundCurrent-configuratie (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Wilt u het toch verwijderen?</translation>
       <translation>Ongedaan maken</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Studio-wijziging ongedaan maken</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Laatste equalizerwijziging ongedaan maken</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>De laatste wijziging op de geselecteerde pagina ongedaan maken (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Wilt u het toch verwijderen?</translation>
       <source>Unknown</source>
       <translation>Onbekend</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Onbekende toepassing</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>

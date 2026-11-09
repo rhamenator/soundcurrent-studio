@@ -512,6 +512,10 @@ class Editor : public QDialog {
         });
         auto *undoKey = new QShortcut(QKeySequence::Undo, this);
         connect(undoKey, &QShortcut::activated, undo, &QPushButton::click);
+        auto *saveKey = new QShortcut(QKeySequence::Save, this);
+        connect(saveKey, &QShortcut::activated, buttons->button(QDialogButtonBox::Save), &QPushButton::click);
+        auto *closeKey = new QShortcut(QKeySequence::Close, this);
+        connect(closeKey, &QShortcut::activated, this, &Editor::reject);
         connect(flat, &QPushButton::clicked, this, [this] {
             remember();
             for (auto &b : draft.filters)
@@ -1533,6 +1537,9 @@ void openLibrary(QWidget *parent, const std::function<void(const Profile &)> &ap
     primary->addWidget(close);
     close->button(QDialogButtonBox::Close)->setToolTip(SC_TR("Close the dialog; keep the applied correction."));
     QObject::connect(close, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+    auto *openKey=new QShortcut(QKeySequence::Open,&dialog);QObject::connect(openKey,&QShortcut::activated,import,&QPushButton::click);
+    auto *saveKey=new QShortcut(QKeySequence::Save,&dialog);QObject::connect(saveKey,&QShortcut::activated,exportButton,&QPushButton::click);
+    auto *closeKey=new QShortcut(QKeySequence::Close,&dialog);QObject::connect(closeKey,&QShortcut::activated,&dialog,&QDialog::reject);
     refresh();
     if (initialProfile && !initialProfile->id.isEmpty()) {
         refreshing = true;

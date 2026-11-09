@@ -345,6 +345,18 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Je prítomná signálová cesta iného ekvalizéra: %1. Pred použitím SoundCurrent ho ukončite.</translation>
     </message>
     <message>
+      <source>Application mixer</source>
+      <translation>Zmiešavač aplikácií</translation>
+    </message>
+    <message>
+      <source>Application streams are unavailable. PipeWire's PulseAudio compatibility service and pactl are required.</source>
+      <translation>Prúdy aplikácií nie sú dostupné. Vyžaduje sa služba kompatibility PulseAudio systému PipeWire a pactl.</translation>
+    </message>
+    <message>
+      <source>Application streams on the current output device. These controls change the operating system's per-application volumes.</source>
+      <translation>Prúdy aplikácií na aktuálnom výstupnom zariadení. Tieto ovládacie prvky menia hlasitosť jednotlivých aplikácií v operačnom systéme.</translation>
+    </message>
+    <message>
       <source>Application update</source>
       <translation>Aktualizácia aplikácie</translation>
     </message>
@@ -787,6 +799,10 @@ Chcete ho aj tak zmazať?</translation>
       <source>Channel meters</source>
       <translation>Merače kanálov</translation>
       <extracomment>Command opening a modeless dialog containing channel meters and room balance. Unverified native review.</extracomment>
+    </message>
+    <message>
+      <source>Channel mixer</source>
+      <translation>Zmiešavač kanálov</translation>
     </message>
     <message>
       <source>Channels</source>
@@ -2450,6 +2466,10 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Nie</translation>
     </message>
     <message>
+      <source>No active application audio streams.</source>
+      <translation>Žiadne aktívne zvukové prúdy aplikácií.</translation>
+    </message>
+    <message>
       <source>No imported equipment correction selected.</source>
       <translation>Nie je vybraná žiadna importovaná korekcia zariadenia.</translation>
     </message>
@@ -2567,6 +2587,10 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Otvoriť ovládací panel VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open all</source>
+      <translation>Otvoriť všetko</translation>
     </message>
     <message>
       <source>Open audio stream</source>
@@ -3027,6 +3051,10 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Referenčné porovnania zahŕňajú zdroj zvuku, miestnosť a referenčný mikrofón. Nejde o izolované ani certifikované meranie mikrofónu.</translation>
     </message>
     <message>
+      <source>Refresh applications</source>
+      <translation>Obnoviť aplikácie</translation>
+    </message>
+    <message>
       <source>Refresh devices</source>
       <translation>Obnoviť zoznam zariadení</translation>
     </message>
@@ -3115,6 +3143,14 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Reset</source>
       <translation>Obnoviť predvolené</translation>
+    </message>
+    <message>
+      <source>Reset all</source>
+      <translation>Obnoviť všetko</translation>
+    </message>
+    <message>
+      <source>Reset all application settings and quit? Custom equipment profiles and files you saved will be kept. This cannot be undone.</source>
+      <translation>Obnoviť všetky nastavenia aplikácie a ukončiť ju? Vlastné profily zariadení a uložené súbory zostanú zachované. Túto akciu nemožno vrátiť späť.</translation>
     </message>
     <message>
       <source>Reset all routing</source>
@@ -3242,6 +3278,10 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Save Studio setup</source>
       <translation>Uložiť nastavenie Studio</translation>
+    </message>
+    <message>
+      <source>Save all as…</source>
+      <translation>Uložiť všetko ako…</translation>
     </message>
     <message>
       <source>Save as</source>
@@ -3387,6 +3427,10 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Settings &amp;&amp; calibration</source>
       <translation>Nastavenia &amp;&amp; kalibrácia</translation>
+    </message>
+    <message>
+      <source>Settings were reset.</source>
+      <translation>Nastavenia boli obnovené.</translation>
     </message>
     <message>
       <source>Setup cannot be read or exceeds 8 MiB</source>
@@ -3543,6 +3587,10 @@ Chcete ho aj tak zmazať?</translation>
       <source>SoundCurrent Studio offline renderer (no audio device required)</source>
       <extracomment>Standalone renderer works on files without opening an audio device or live stream. Offline means non-live rendering, not a requirement to disconnect from the Internet. Preserve product name SoundCurrent Studio.</extracomment>
       <translation>Offline renderer SoundCurrent Studio (zvukové zariadenie nie je potrebné)</translation>
+    </message>
+    <message>
+      <source>SoundCurrent complete setup (*.scall)</source>
+      <translation>Úplná konfigurácia SoundCurrent (*.scall)</translation>
     </message>
     <message>
       <source>SoundCurrent sweep or tone measurement; relative to median; microphone EQ bypassed. Playback EQ may be included.</source>
@@ -3939,12 +3987,12 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Späť</translation>
     </message>
     <message>
-      <source>Undo Studio change</source>
-      <translation>Vrátiť zmenu Studio</translation>
-    </message>
-    <message>
       <source>Undo last equalizer change</source>
       <translation>Vrátiť poslednú zmenu ekvalizéra</translation>
+    </message>
+    <message>
+      <source>Undo the last change on the selected page (Ctrl+Z)</source>
+      <translation>Vrátiť poslednú zmenu na vybratej stránke (Ctrl+Z)</translation>
     </message>
     <message>
       <source>Uninstall</source>
@@ -3955,6 +4003,10 @@ Chcete ho aj tak zmazať?</translation>
       <source>Unknown</source>
       <translation>Neznáme</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
+    </message>
+    <message>
+      <source>Unknown application</source>
+      <translation>Neznáma aplikácia</translation>
     </message>
     <message>
       <source>Unknown option: %1</source>
