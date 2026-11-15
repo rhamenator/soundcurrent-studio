@@ -321,6 +321,10 @@ Do you want to delete it anyway?</source>
       <translation>Se ha instalado una actualización de la aplicación. Use Salir y vuelva a abrirla para cargarla; cerrar esta ventana mantiene en ejecución la versión anterior.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Análisis</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Frecuencia de muestreo de análisis</translation>
     </message>
@@ -2214,6 +2218,10 @@ Do you want to delete it anyway?</source>
       <translation>Medir</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Mida con un micrófono cómo los altavoces y la sala cambian el sonido y previsualice las correcciones de EQ de reproducción sugeridas.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Medir la respuesta de los altavoces, la sala y el micrófono</translation>
     </message>
@@ -2587,6 +2595,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Abrir panel de control de VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Abrir una configuración completa guardada (.scall) para Studio y EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Corrección del modelo de altavoz</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Perfil del modelo de altavoz</translation>
     </message>
@@ -3659,6 +3667,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Speaker type</source>
       <translation>Tipo de altavoz</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Corrección del modelo de altavoz/amplificador</translation>
     </message>
     <message>
       <source>Spectrogram</source>

@@ -321,6 +321,10 @@ Do you want to delete it anyway?</source>
       <translation>已安裝應用程式更新。請使用「結束」並重新開啟以載入更新；關閉此視窗會讓舊版本繼續執行。</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>分析</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>分析取樣率</translation>
     </message>
@@ -2214,6 +2218,10 @@ Do you want to delete it anyway?</source>
       <translation>測量</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>使用麥克風測量喇叭和房間如何改變聲音，然後預覽建議的播放 EQ 校正。</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>測量喇叭、房間及麥克風的響應</translation>
     </message>
@@ -2587,6 +2595,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>開啟 VB-CABLE 控制台</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>開啟已儲存的 Studio 與 EQ 完整設定 (.scall)</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>喇叭型號校正</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>喇叭型號設定檔</translation>
     </message>
@@ -3659,6 +3667,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Speaker type</source>
       <translation>喇叭類型</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>喇叭/擴大機型號校正</translation>
     </message>
     <message>
       <source>Spectrogram</source>

@@ -2024,7 +2024,7 @@ public:
         updateNow->hide();
         auto *openStudio = new QPushButton(SC_TR("Open Studio setup"));openStudio->setObjectName("openStudioSetupHeader");openStudio->setToolTip(SC_TR("Open Studio setup"));
         auto *saveStudio = new QPushButton(SC_TR("Save Studio setup"));saveStudio->setObjectName("saveStudioSetupHeader");saveStudio->setToolTip(SC_TR("Save Studio setup"));
-        auto *openAll = new QPushButton(SC_TR("Open all"));openAll->setObjectName("openCompleteSetup");openAll->setToolTip(SC_TR("Open all"));
+        auto *openAll = new QPushButton(SC_TR("Open"));openAll->setObjectName("openCompleteSetup");openAll->setToolTip(SC_TR("Open a saved complete setup (.scall) for Studio and EQ"));
         auto *saveAll = new QPushButton(SC_TR("Save All"));saveAll->setObjectName("saveCompleteSetup");saveAll->setToolTip(SC_TR("Save All"));
         auto *saveAllAs = new QPushButton(SC_TR("Save all as…"));saveAllAs->setObjectName("saveCompleteSetupAs");saveAllAs->setToolTip(SC_TR("Save all as…"));
         auto *undoAll = new QPushButton(SC_TR("Undo"));undoAll->setObjectName("contextualUndo");undoAll->setToolTip(SC_TR("Undo the last change on the selected page (Ctrl+Z)"));undoActionButton_=undoAll;
@@ -2223,7 +2223,7 @@ public:
         connect(driverSetup, &QPushButton::clicked, this, [launch] { launch(true); });
         connect(cableSettings, &QPushButton::clicked, this, [launch] { launch(false); });
 #endif
-        auto *speakerBox = new QGroupBox(SC_TR("Speaker model correction"));
+        auto *speakerBox = new QGroupBox(SC_TR("Speaker/amplifier model correction"));
         auto *speakerLayout = new QVBoxLayout(speakerBox);
         auto *speakerRow = new QHBoxLayout;
         speakerCombo_ = new PresetComboBox;
@@ -2398,6 +2398,7 @@ public:
 
         soundcurrent::ui::settingsSection(settingsRoot, inputBox, this, "microphoneSetup");
         auto *calibrationBox = new QGroupBox(SC_TR("Speaker && room calibration"));
+        calibrationBox->setToolTip(SC_TR("Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections."));
         auto *calibrationLayout = new QVBoxLayout(calibrationBox);
         auto *calibrationRow = new QGridLayout;
         calibrationRow->addWidget(new QLabel(SC_TR("Speaker + room check")), 0, 0);
@@ -2434,7 +2435,7 @@ public:
         settingsRoot->addStretch();
         analysis_ = new soundcurrent::analysis::Panel;
         auto *analysisScroll=new QScrollArea;analysisScroll->setWidgetResizable(true);analysisScroll->setWidget(analysis_);
-        tabs_->addTab(analysisScroll, SC_TR("Spectrogram"));
+        tabs_->addTab(analysisScroll, SC_TR("Analysis"));
         analysisCapture_ = new soundcurrent::analysis::Capture(this);
         analysis_->microphoneSources = [] {
             QVector<QPair<QString,QString>> result;
