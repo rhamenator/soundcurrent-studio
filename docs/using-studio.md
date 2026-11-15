@@ -3,7 +3,7 @@
 ## Always-visible controls
 
 The command header stays above the top-level tabs. Open Studio setup and Save
-Studio setup operate only on channel/effect routing. Open all, Save all, and
+Studio setup operate only on channel/effect routing. Open, Save all, and
 Save all as use one `.scall` file for the equalizer, Studio engine, analyzer,
 and portable settings. Device routes, microphone consent, update folders,
 live meters, and other host/transient state are deliberately excluded. Undo
