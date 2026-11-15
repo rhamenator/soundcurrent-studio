@@ -321,6 +321,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Pembaruan aplikasi telah diinstal. Gunakan Keluar lalu buka kembali untuk memuatnya; menutup jendela ini membuat versi lama tetap berjalan.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Analisis</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Laju sampel analisis</translation>
     </message>
@@ -2214,6 +2218,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Ukur</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Ukur dengan mikrofon bagaimana speaker dan ruangan mengubah suara, lalu pratinjau saran koreksi EQ pemutaran.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Ukur respons speaker, ruangan, dan mikrofon</translation>
     </message>
@@ -2587,6 +2595,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Buka panel kontrol VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Buka pengaturan lengkap tersimpan (.scall) untuk Studio dan EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Koreksi model speaker</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Profil model speaker</translation>
     </message>
@@ -3659,6 +3667,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Jenis speaker</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Koreksi model speaker/amplifier</translation>
     </message>
     <message>
       <source>Spectrogram</source>

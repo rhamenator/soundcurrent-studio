@@ -321,6 +321,10 @@ Do you want to delete it anyway?</source>
       <translation>ติดตั้งอัปเดตแอปแล้ว ใช้ ออกจากแอป แล้วเปิดใหม่เพื่อโหลดอัปเดต การปิดหน้าต่างนี้จะทำให้เวอร์ชันเก่ายังคงทำงานอยู่</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>การวิเคราะห์</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>อัตราสุ่มตัวอย่างการวิเคราะห์</translation>
     </message>
@@ -2214,6 +2218,10 @@ Do you want to delete it anyway?</source>
       <translation>วัด</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>วัดด้วยไมโครโฟนว่าลำโพงและห้องเปลี่ยนเสียงอย่างไร แล้วดูตัวอย่างการแก้ไข EQ การเล่นที่แนะนำ</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>วัดการตอบสนองของลำโพง ห้อง และไมโครโฟน</translation>
     </message>
@@ -2587,6 +2595,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>เปิดแผงควบคุม VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>เปิดการตั้งค่าทั้งหมดที่บันทึกไว้ (.scall) สำหรับ Studio และ EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>การชดเชยรุ่นลำโพง</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>โปรไฟล์รุ่นลำโพง</translation>
     </message>
@@ -3659,6 +3667,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Speaker type</source>
       <translation>ประเภทลำโพง</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>การแก้ไขตามรุ่นลำโพง/แอมป์</translation>
     </message>
     <message>
       <source>Spectrogram</source>

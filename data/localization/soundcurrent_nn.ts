@@ -321,6 +321,10 @@ Vil du likevel sletta ho?</translation>
       <translation>Ei appoppdatering er installert. Bruk Avslutt og opne att for å laste henne; lukking av dette vindauget lèt den gamle versjonen halde fram med å køyre.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Analyse</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Samplingsfrekvens for analyse</translation>
     </message>
@@ -2214,6 +2218,10 @@ Vil du likevel sletta ho?</translation>
       <translation>Mål</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Mål med ein mikrofon korleis høgtalarane og rommet endrar lyden, og førehandsvis foreslåtte EQ-korrigeringar for avspeling.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Mål frekvensresponsen til høgtalar, rom og mikrofon</translation>
     </message>
@@ -2587,6 +2595,10 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Opne VB-CABLE-kontrollpanel</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Opne eit lagra fullstendig oppsett (.scall) for Studio og EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Vil du likevel sletta ho?</translation>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Korreksjon for høgtalarmodell</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Profil for høgtalarmodell</translation>
     </message>
@@ -3659,6 +3667,10 @@ Vil du likevel sletta ho?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Høgtalartype</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Modellkorrigering for høgtalar/forsterkar</translation>
     </message>
     <message>
       <source>Spectrogram</source>

@@ -321,6 +321,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Byla nainstalována aktualizace aplikace. Použijte Ukončit a aplikaci znovu otevřete, aby se aktualizace načetla; zavřením tohoto okna zůstane stará verze spuštěná.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Analýza</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Vzorkovací frekvence analýzy</translation>
     </message>
@@ -2214,6 +2218,10 @@ Přesto chcete soubor smazat?</translation>
       <translation>Změřit</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Pomocí mikrofonu změřte, jak reproduktory a místnost mění zvuk, a zobrazte náhled navržených korekcí ekvalizéru přehrávání.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Změřit odezvu reproduktorů, místnosti a mikrofonu</translation>
     </message>
@@ -2587,6 +2595,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Otevřít ovládací panel VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Otevřít uloženou úplnou sestavu (.scall) pro Studio a EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Přesto chcete soubor smazat?</translation>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Korekce modelu reproduktoru</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Profil modelu reproduktoru</translation>
     </message>
@@ -3659,6 +3667,10 @@ Přesto chcete soubor smazat?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Typ reproduktoru</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Korekce modelu reproduktoru/zesilovače</translation>
     </message>
     <message>
       <source>Spectrogram</source>

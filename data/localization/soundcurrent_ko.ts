@@ -321,6 +321,10 @@ Do you want to delete it anyway?</source>
       <translation>앱 업데이트가 설치되었습니다. 적용하려면 종료한 후 다시 여세요. 이 창만 닫으면 이전 버전이 계속 실행됩니다.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>분석</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>분석 샘플 레이트</translation>
     </message>
@@ -2214,6 +2218,10 @@ Do you want to delete it anyway?</source>
       <translation>측정</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>마이크로 스피커와 공간이 소리를 어떻게 바꾸는지 측정하고, 제안된 재생 EQ 보정을 미리 봅니다.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>스피커, 실내 및 마이크 응답 측정</translation>
     </message>
@@ -2587,6 +2595,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>VB-CABLE 제어판 열기</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Studio와 EQ용으로 저장된 전체 설정(.scall) 열기</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>스피커 모델 보정</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>스피커 모델 프로파일</translation>
     </message>
@@ -3659,6 +3667,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Speaker type</source>
       <translation>스피커 유형</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>스피커/앰프 모델 보정</translation>
     </message>
     <message>
       <source>Spectrogram</source>

@@ -321,6 +321,10 @@ Do you want to delete it anyway?</source>
       <translation>הותקן עדכון לאפליקציה. יש לבחור יציאה ולפתוח מחדש כדי לטעון אותו; סגירת חלון זה משאירה את הגרסה הישנה פועלת.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>ניתוח</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>קצב דגימת הניתוח</translation>
     </message>
@@ -2214,6 +2218,10 @@ Do you want to delete it anyway?</source>
       <translation>מדידה</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>מדדו באמצעות מיקרופון כיצד הרמקולים והחדר משנים את הצליל, וצפו בתצוגה מקדימה של תיקוני האקולייזר המוצעים להשמעה.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>מדידת תגובת הרמקולים, החדר והמיקרופון</translation>
     </message>
@@ -2587,6 +2595,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>פתיחת לוח הבקרה של VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>פתיחת הגדרה מלאה שמורה (‎.scall) עבור Studio ו-EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>תיקון דגם הרמקול</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>פרופיל דגם הרמקול</translation>
     </message>
@@ -3659,6 +3667,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Speaker type</source>
       <translation>סוג הרמקול</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>תיקון דגם רמקול/מגבר</translation>
     </message>
     <message>
       <source>Spectrogram</source>

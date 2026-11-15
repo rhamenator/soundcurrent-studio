@@ -321,6 +321,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>A fost instalată o actualizare a aplicației. Folosiți Ieșire și redeschideți pentru a o încărca; închiderea acestei ferestre păstrează versiunea veche în funcțiune.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Analiză</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Rata de eșantionare a analizei</translation>
     </message>
@@ -2214,6 +2218,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Măsurați</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Măsurați cu un microfon cum modifică boxele și încăperea sunetul, apoi previzualizați corecțiile EQ de redare sugerate.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Măsurați răspunsul boxei, camerei și microfonului</translation>
     </message>
@@ -2587,6 +2595,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Deschideți panoul de control VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Deschide o configurare completă salvată (.scall) pentru Studio și EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Corecție model de boxă</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Profil de model de boxă</translation>
     </message>
@@ -3659,6 +3667,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Tip de boxă</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Corecția modelului de boxă/amplificator</translation>
     </message>
     <message>
       <source>Spectrogram</source>

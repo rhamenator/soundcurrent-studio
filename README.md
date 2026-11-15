@@ -245,7 +245,7 @@ a 4 GiB limit. The output filesystem must support hard links, such as ext4 or NT
 
 ## Speaker and amplifier profiles
 
-**Speaker model correction** is an independent layer added to the listening
+**Speaker/amplifier model correction** is an independent layer added to the listening
 preset and manual bands. Selecting **Flat** resets the listening bands;
 selecting **None** removes the model correction. You can add **Bass Boost**,
 **Loudness**, or your own low-frequency adjustments after choosing a model.

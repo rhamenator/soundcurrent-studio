@@ -321,6 +321,10 @@ Do you want to delete it anyway?</source>
       <translation>Εγκαταστάθηκε ενημέρωση της εφαρμογής. Επιλέξτε έξοδο και ανοίξτε την ξανά για να φορτωθεί· το κλείσιμο αυτού του παραθύρου αφήνει την παλιά έκδοση σε λειτουργία.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Ανάλυση</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Ρυθμός δειγματοληψίας ανάλυσης</translation>
     </message>
@@ -2214,6 +2218,10 @@ Do you want to delete it anyway?</source>
       <translation>Μέτρηση</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Μετρήστε με μικρόφωνο πώς τα ηχεία και ο χώρος αλλάζουν τον ήχο και δείτε προεπισκόπηση των προτεινόμενων διορθώσεων EQ αναπαραγωγής.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Μέτρηση απόκρισης ηχείων, χώρου και μικροφώνου</translation>
     </message>
@@ -2587,6 +2595,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Άνοιγμα πίνακα ελέγχου VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Άνοιγμα αποθηκευμένης πλήρους ρύθμισης (.scall) για Studio και EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Do you want to delete it anyway?</source>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Διόρθωση μοντέλου ηχείου</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Προφίλ μοντέλου ηχείου</translation>
     </message>
@@ -3659,6 +3667,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Speaker type</source>
       <translation>Τύπος ηχείου</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Διόρθωση μοντέλου ηχείου/ενισχυτή</translation>
     </message>
     <message>
       <source>Spectrogram</source>

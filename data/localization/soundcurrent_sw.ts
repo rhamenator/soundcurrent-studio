@@ -321,6 +321,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Sasisho la programu limesakinishwa. Tumia Toka na ufungue tena ili kulipakia; kufunga dirisha hili huacha toleo la zamani likiendelea kufanya kazi.</translation>
     </message>
     <message>
+      <source>Analysis</source>
+      <translation>Uchambuzi</translation>
+    </message>
+    <message>
       <source>Analysis sample rate</source>
       <translation>Kiwango cha sampuli za uchanganuzi</translation>
     </message>
@@ -2214,6 +2218,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Pima</translation>
     </message>
     <message>
+      <source>Measure how your speakers and room change the sound with a microphone, then preview suggested playback EQ corrections.</source>
+      <translation>Pima kwa maikrofoni jinsi spika na chumba vinavyobadilisha sauti, kisha hakiki masahihisho ya EQ ya uchezaji yanayopendekezwa.</translation>
+    </message>
+    <message>
       <source>Measure speaker room and microphone response</source>
       <translation>Pima mwitikio wa spika, chumba na maikrofoni</translation>
     </message>
@@ -2587,6 +2595,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Open VB-CABLE control panel</source>
       <translation>Fungua paneli ya udhibiti ya VB-CABLE</translation>
+    </message>
+    <message>
+      <source>Open a saved complete setup (.scall) for Studio and EQ</source>
+      <translation>Fungua mpangilio kamili uliohifadhiwa (.scall) wa Studio na EQ</translation>
     </message>
     <message>
       <source>Open all</source>
@@ -3641,10 +3653,6 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Owned extensible WAVE metadata validation: nonzero speaker-position bitmask must have one set bit per audio channel. Mask means bitmask, not physical speaker covering or EQ curve. Not a hardware fault. Contextual AI review; native verification unverified.</extracomment>
     </message>
     <message>
-      <source>Speaker model correction</source>
-      <translation>Usahihishaji wa modeli ya spika</translation>
-    </message>
-    <message>
       <source>Speaker model profile</source>
       <translation>Wasifu wa modeli ya spika</translation>
     </message>
@@ -3659,6 +3667,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Speaker type</source>
       <translation>Aina ya spika</translation>
+    </message>
+    <message>
+      <source>Speaker/amplifier model correction</source>
+      <translation>Usahihishaji wa modeli ya spika/amplifaya</translation>
     </message>
     <message>
       <source>Spectrogram</source>
