@@ -4,6 +4,7 @@ param([Parameter(Mandatory=$true)][string]$QtPrefix,
       [string]$CablePackage,
       [string]$SignedDriverPackage,
       [string]$SignedDriverManager,
+      [switch]$UnofficialTestMode,
       [string]$Nsis = 'C:\Program Files (x86)\NSIS\makensis.exe')
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
@@ -13,11 +14,23 @@ try {
     if ($AudioRoute -eq 'Native') {
     $SignedDriverPackage = (Resolve-Path -LiteralPath $SignedDriverPackage).Path
     $SignedDriverManager = (Resolve-Path -LiteralPath $SignedDriverManager).Path
+    if ($UnofficialTestMode) {
+        # UNOFFICIAL test-mode build: the driver is signed only by a self-signed
+        # development certificate, so Windows trust checks cannot pass on this
+        # build machine. Pin the exact bytes instead and rely on the end user's
+        # own manual test-mode/trust setup on the install machine.
+        $pinned = Get-Content -Raw -LiteralPath (Join-Path $root 'packaging\windows\unofficial-test-driver\signed-driver-sha256.json') | ConvertFrom-Json
+        foreach ($entry in $pinned) {
+            $actual = (Get-FileHash -LiteralPath (Join-Path $SignedDriverPackage $entry.File) -Algorithm SHA256).Hash
+            if ($actual -ne $entry.Hash) { throw "Unofficial driver file hash mismatch: $($entry.File)" }
+        }
+    } else {
     if ((Get-AuthenticodeSignature -LiteralPath $SignedDriverManager).Status -ne 'Valid') {
         throw 'A signed build of the SoundCurrent driver manager is required for a release installer.'
     }
     & $SignedDriverManager --verify $SignedDriverPackage
     if ($LASTEXITCODE -ne 0) { throw 'The driver package is incomplete or its signature cannot be verified.' }
+    }
     } else {
         if (!$CablePackage) { $CablePackage = Join-Path $root '.cache\windows-package\VBCABLE_Driver_Pack45.zip' }
         if (!(Test-Path -LiteralPath $CablePackage)) {
@@ -223,9 +236,15 @@ try {
     $delete | Set-Content -Encoding utf8 build-windows-native\uninstall-payload.nsh
     New-Item -ItemType Directory -Force dist | Out-Null
     $installerSuffix = if ($AudioRoute -eq 'Native') { '-native' } else { '' }
+    if ($AudioRoute -eq 'Native' -and $UnofficialTestMode) { $installerSuffix = '-native-UNOFFICIAL-testmode' }
     $installer = Join-Path $root "dist\SoundCurrent-Studio-$version-windows-x64$installerSuffix-setup.exe"
-    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") } else { @("/DCABLE_ZIP=$CablePackage") }
+    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver", "/DLICENSE_PAGE_FILE=$unofficialLicense") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
     $installerScript = if ($AudioRoute -eq 'Native') { 'packaging\windows\soundcurrent-studio-native.nsi' } else { 'packaging\windows\soundcurrent-studio.nsi' }
+    $unofficialLicense = Join-Path $root 'build-windows-native\unofficial-license-page.txt'
+    if ($UnofficialTestMode) {
+        # Show the test-mode warning on the license page (a file, not new localized UI text).
+        ((Get-Content -Raw -LiteralPath 'packaging\windows\unofficial-test-driver\README-TEST-MODE.txt') + "`r`n`r`n" + '=' * 70 + "`r`n`r`n" + (Get-Content -Raw -LiteralPath 'LICENSE')) | Set-Content -Encoding utf8 $unofficialLicense
+    }
     & python tests/installer_language_activation.py
     if ($LASTEXITCODE -ne 0) { throw 'Installer language activation regression failed' }
     $generatedInstallerScript = Join-Path $root 'build-windows-native\localized-installer.nsi'

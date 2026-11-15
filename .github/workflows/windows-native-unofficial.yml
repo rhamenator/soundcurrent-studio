@@ -1,0 +1,43 @@
+name: Unofficial native-driver Windows installer (test mode)
+
+# UNOFFICIAL: bundles the self-signed development driver (30d064a). It loads
+# only on a Windows 11 PC in test mode that trusts the bundled public certificate.
+# Manual dispatch only; never published as an official release.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-native-unofficial:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          persist-credentials: false
+      - name: Install verified Qt SDK
+        shell: pwsh
+        run: ./scripts/install-windows-qt.ps1
+      - name: Ensure installer tools are available
+        shell: pwsh
+        run: |
+          if (!(Test-Path 'C:\Program Files (x86)\NSIS\makensis.exe')) { choco install nsis --yes --no-progress }
+      - name: Build the driver manager
+        shell: pwsh
+        run: |
+          cmake -S native/windows/driver-manager -B build-driver-manager -A x64
+          cmake --build build-driver-manager --config Release
+      - name: Build and package the unofficial native installer
+        shell: pwsh
+        run: >
+          ./scripts/build-windows.ps1 -QtPrefix 'C:\Qt\6.12.0\msvc2022_64'
+          -AudioRoute Native -UnofficialTestMode
+          -SignedDriverPackage 'packaging\windows\unofficial-test-driver'
+          -SignedDriverManager 'build-driver-manager\Release\soundcurrent-driver-manager.exe'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: unofficial-native-testmode-installer
+          path: |
+            dist/*UNOFFICIAL*.exe
+            dist/*UNOFFICIAL*.sha256

@@ -44,7 +44,11 @@ UninstallIcon "${SOURCE_ROOT}\data\soundcurrent-studio.ico"
 
 !define MUI_WELCOMEPAGE_TEXT "$(SCWelcome)"
 !insertmacro MUI_PAGE_WELCOME
+!ifdef LICENSE_PAGE_FILE
+!insertmacro MUI_PAGE_LICENSE "${LICENSE_PAGE_FILE}"
+!else
 !insertmacro MUI_PAGE_LICENSE "${SOURCE_ROOT}\LICENSE"
+!endif
 !insertmacro MUI_PAGE_DIRECTORY
 Page custom AudioPage AudioPageLeave
 !insertmacro MUI_PAGE_INSTFILES
@@ -140,6 +144,11 @@ Section "SoundCurrent Studio" main
   File "${DRIVER_DIR}\soundcurrentvad.inf"
   File "${DRIVER_DIR}\soundcurrentvad.sys"
   File "${DRIVER_DIR}\soundcurrentvad.cat"
+!ifdef UNOFFICIAL_TESTMODE
+  SetOutPath "$INSTDIR\unofficial-test-mode"
+  File "${UNOFFICIAL_TESTMODE}\SoundCurrent-Local-Test.cer"
+  File "${UNOFFICIAL_TESTMODE}\README-TEST-MODE.txt"
+!endif
   SetOutPath "$INSTDIR"
   ; Remove old bundled files/shortcut, preserving any existing VB-Audio driver.
   Delete "$SMPROGRAMS\SoundCurrent Studio\Install VB-CABLE.lnk"
@@ -213,6 +222,11 @@ Section "Uninstall"
   Delete "$INSTDIR\audio-driver\soundcurrentvad.sys"
   Delete "$INSTDIR\audio-driver\soundcurrentvad.cat"
   RMDir "$INSTDIR\audio-driver"
+!ifdef UNOFFICIAL_TESTMODE
+  Delete "$INSTDIR\unofficial-test-mode\SoundCurrent-Local-Test.cer"
+  Delete "$INSTDIR\unofficial-test-mode\README-TEST-MODE.txt"
+  RMDir "$INSTDIR\unofficial-test-mode"
+!endif
   Delete "$INSTDIR\licenses\SoundCurrent-driver-MS-PL.txt"
   RMDir "$INSTDIR\licenses"
   Delete "$INSTDIR\THIRD-PARTY-NOTICES.md"
