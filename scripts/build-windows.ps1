@@ -235,10 +235,16 @@ try {
     }
     $delete | Set-Content -Encoding utf8 build-windows-native\uninstall-payload.nsh
     New-Item -ItemType Directory -Force dist | Out-Null
-    $installerSuffix = if ($AudioRoute -eq 'Native' -and $UnofficialTestMode) { '-native-UNOFFICIAL-testmode' } elseif ($AudioRoute -eq 'Native') { '-native' } else { '' }
+    $installerSuffix = if ($AudioRoute -eq 'Native') { '-native' } else { '' }
+    if ($AudioRoute -eq 'Native' -and $UnofficialTestMode) { $installerSuffix = '-native-UNOFFICIAL-testmode' }
     $installer = Join-Path $root "dist\SoundCurrent-Studio-$version-windows-x64$installerSuffix-setup.exe"
-    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
+    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver", "/DLICENSE_PAGE_FILE=$unofficialLicense") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
     $installerScript = if ($AudioRoute -eq 'Native') { 'packaging\windows\soundcurrent-studio-native.nsi' } else { 'packaging\windows\soundcurrent-studio.nsi' }
+    $unofficialLicense = Join-Path $root 'build-windows-native\unofficial-license-page.txt'
+    if ($UnofficialTestMode) {
+        # Show the test-mode warning on the license page (a file, not new localized UI text).
+        ((Get-Content -Raw -LiteralPath 'packaging\windows\unofficial-test-driver\README-TEST-MODE.txt') + "`r`n`r`n" + '=' * 70 + "`r`n`r`n" + (Get-Content -Raw -LiteralPath 'LICENSE')) | Set-Content -Encoding utf8 $unofficialLicense
+    }
     & python tests/installer_language_activation.py
     if ($LASTEXITCODE -ne 0) { throw 'Installer language activation regression failed' }
     $generatedInstallerScript = Join-Path $root 'build-windows-native\localized-installer.nsi'

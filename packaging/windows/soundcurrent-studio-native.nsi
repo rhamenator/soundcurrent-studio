@@ -44,7 +44,11 @@ UninstallIcon "${SOURCE_ROOT}\data\soundcurrent-studio.ico"
 
 !define MUI_WELCOMEPAGE_TEXT "$(SCWelcome)"
 !insertmacro MUI_PAGE_WELCOME
+!ifdef LICENSE_PAGE_FILE
+!insertmacro MUI_PAGE_LICENSE "${LICENSE_PAGE_FILE}"
+!else
 !insertmacro MUI_PAGE_LICENSE "${SOURCE_ROOT}\LICENSE"
+!endif
 !insertmacro MUI_PAGE_DIRECTORY
 Page custom AudioPage AudioPageLeave
 !insertmacro MUI_PAGE_INSTFILES
@@ -78,10 +82,6 @@ Function .onInit
     IfFileExists "$2\soundcurrent-studio.exe" 0 +2
       StrCpy $INSTDIR $2
   ${EndIf}
-!ifdef UNOFFICIAL_TESTMODE
-  MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "UNOFFICIAL TEST BUILD: its audio driver is signed only with a self-signed development certificate and loads only on a Windows 11 PC in test mode, which weakens driver-signature protection for the whole PC. Use a virtual machine or dedicated test PC. Setup will NOT change test mode or certificate trust; see unofficial-test-mode\README-TEST-MODE.txt after installing. Continue?" /SD IDOK IDOK +2
-  Abort
-!endif
   StrCpy $InstallDriver 0 ; Silent app updates never install/elevate a driver.
   InitPluginsDir
   SetOutPath "$PLUGINSDIR"
