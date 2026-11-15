@@ -3,3 +3,4 @@
 data/localization/*.ts text eol=lf
 data/localization/*.json text eol=lf
 data/localization/*.qm -text
+packaging/windows/unofficial-test-driver/* -text

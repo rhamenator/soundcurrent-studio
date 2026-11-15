@@ -78,6 +78,10 @@ Function .onInit
     IfFileExists "$2\soundcurrent-studio.exe" 0 +2
       StrCpy $INSTDIR $2
   ${EndIf}
+!ifdef UNOFFICIAL_TESTMODE
+  MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "UNOFFICIAL TEST BUILD: its audio driver is signed only with a self-signed development certificate and loads only on a Windows 11 PC in test mode, which weakens driver-signature protection for the whole PC. Use a virtual machine or dedicated test PC. Setup will NOT change test mode or certificate trust; see unofficial-test-mode\README-TEST-MODE.txt after installing. Continue?" /SD IDOK IDOK +2
+  Abort
+!endif
   StrCpy $InstallDriver 0 ; Silent app updates never install/elevate a driver.
   InitPluginsDir
   SetOutPath "$PLUGINSDIR"
@@ -140,6 +144,11 @@ Section "SoundCurrent Studio" main
   File "${DRIVER_DIR}\soundcurrentvad.inf"
   File "${DRIVER_DIR}\soundcurrentvad.sys"
   File "${DRIVER_DIR}\soundcurrentvad.cat"
+!ifdef UNOFFICIAL_TESTMODE
+  SetOutPath "$INSTDIR\unofficial-test-mode"
+  File "${UNOFFICIAL_TESTMODE}\SoundCurrent-Local-Test.cer"
+  File "${UNOFFICIAL_TESTMODE}\README-TEST-MODE.txt"
+!endif
   SetOutPath "$INSTDIR"
   ; Remove old bundled files/shortcut, preserving any existing VB-Audio driver.
   Delete "$SMPROGRAMS\SoundCurrent Studio\Install VB-CABLE.lnk"
@@ -213,6 +222,11 @@ Section "Uninstall"
   Delete "$INSTDIR\audio-driver\soundcurrentvad.sys"
   Delete "$INSTDIR\audio-driver\soundcurrentvad.cat"
   RMDir "$INSTDIR\audio-driver"
+!ifdef UNOFFICIAL_TESTMODE
+  Delete "$INSTDIR\unofficial-test-mode\SoundCurrent-Local-Test.cer"
+  Delete "$INSTDIR\unofficial-test-mode\README-TEST-MODE.txt"
+  RMDir "$INSTDIR\unofficial-test-mode"
+!endif
   Delete "$INSTDIR\licenses\SoundCurrent-driver-MS-PL.txt"
   RMDir "$INSTDIR\licenses"
   Delete "$INSTDIR\THIRD-PARTY-NOTICES.md"
