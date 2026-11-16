@@ -50,6 +50,33 @@ class MixerGainSpin final : public soundcurrent::AcceleratingDoubleSpinBox {
 protected:
     void wheelEvent(QWheelEvent *event) override {event->ignore();}
 };
+// Like the spin box, a mixer slider never reacts to the wheel: scrolling the page must not change a gain.
+class MixerGainSlider final : public QSlider {
+public:
+    MixerGainSlider():QSlider(Qt::Horizontal){}
+protected:
+    void wheelEvent(QWheelEvent *event) override {event->ignore();}
+};
+// One mixer gain cell: a slider for quick moves plus the existing editable dB spin box for exact values.
+// The spin box stays the single source of truth; the slider mirrors it in 0.5 dB steps.
+class MixerGainCell final : public QWidget {
+public:
+    MixerGainCell(const QString &name,double value):slider_(new MixerGainSlider),spin_(new MixerGainSpin) {
+        spin_->setRange(-60,24);spin_->setSingleStep(.5);spin_->setDecimals(1);spin_->setSuffix(SC_TR(" dB"));spin_->setValue(value);
+        spin_->setAccessibleName(name+QStringLiteral(" · ")+SC_TR("Gain"));
+        slider_->setRange(-120,48);slider_->setSingleStep(1);slider_->setPageStep(10);slider_->setValue(int(std::lround(value*2)));slider_->setMinimumWidth(80);
+        slider_->setAccessibleName(name+QStringLiteral(" · ")+SC_TR("Gain"));
+        auto *layout=new QHBoxLayout(this);layout->setContentsMargins(4,0,4,0);layout->setSpacing(6);layout->addWidget(slider_,1);layout->addWidget(spin_);
+        connect(slider_,&QSlider::valueChanged,this,[this](int v){spin_->setValue(v/2.0);});
+        connect(spin_,&QDoubleSpinBox::valueChanged,this,[this](double v){const QSignalBlocker block(slider_);slider_->setValue(int(std::lround(v*2)));});
+    }
+    QDoubleSpinBox *spin() const {return spin_;}
+private:
+    QSlider *slider_;QDoubleSpinBox *spin_;
+};
+QDoubleSpinBox *mixerGainSpin(QTableWidget *table,int row) {
+    auto *cell=table->cellWidget(row,1);return cell?cell->findChild<QDoubleSpinBox *>():nullptr;
+}
 QDoubleSpinBox *spin(double low, double high, double value, double step = .1) {
     auto *s = new soundcurrent::AcceleratingDoubleSpinBox; s->setRange(low, high); s->setValue(value); s->setSingleStep(step); return s;
 }
@@ -127,7 +154,10 @@ StudioPanel::StudioPanel(bool persist, QWidget *parent, bool testControls) : QWi
     preGain_=slider(-6000,2400,0);preGain_->setSingleStep(50);preGain_->setPageStep(100);preGain_->setObjectName("inputGain");preGain_->setAccessibleName(SC_TR("Input gain"));inputRow->addWidget(preGain_,1);
     preGainValue_=new QLabel;preGainValue_->setMinimumWidth(76);inputRow->addWidget(preGainValue_);effectsLayout->addWidget(inputRow);
     connect(preGain_,&QSlider::valueChanged,this,[this](int gain){change([&](Session &s){s.engine.preGainDb=gain/100.;});preGainValue_->setText(QLocale().toString(gain/100.,'f',2)+SC_TR(" dB"));});
-    mixer_=table({SC_TR("Channel"),SC_TR("Gain"),SC_TR("Mute"),SC_TR("Solo")});mixer_->setObjectName("channelMixer");mixer_->setMaximumHeight(480);pages_->addTab(mixer_,SC_TR("Channel mixer"));
+    mixer_=table({SC_TR("Channel"),SC_TR("Gain"),SC_TR("Mute"),SC_TR("Solo")});mixer_->setObjectName("channelMixer");mixer_->setMaximumHeight(480);
+    // Give the room to the gain slider: Mute/Solo only need their (localized) header text plus a checkbox.
+    mixer_->horizontalHeader()->setSectionResizeMode(0,QHeaderView::ResizeToContents);mixer_->horizontalHeader()->setSectionResizeMode(1,QHeaderView::Stretch);
+    mixer_->horizontalHeader()->setSectionResizeMode(2,QHeaderView::ResizeToContents);mixer_->horizontalHeader()->setSectionResizeMode(3,QHeaderView::ResizeToContents);pages_->addTab(mixer_,SC_TR("Channel mixer"));
     auto *channelPage=new QWidget;auto *channelLayout=new QVBoxLayout(channelPage);pages_->addTab(channelPage,SC_TR("Selected channel"));
     auto *fx = new QGroupBox(SC_TR("Effects")); auto *fxForm = new QFormLayout(fx);
     fxForm->setRowWrapPolicy(QFormLayout::WrapLongRows);fxForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
@@ -320,7 +350,7 @@ void StudioPanel::rebuildMixer() {
     mixer_->clearContents();mixer_->setRowCount(int(session_.engine.channels.size()));
     for(int c=0;c<mixer_->rowCount();++c) {
         const auto name=channelNameText(session_,c);cell(mixer_,c,0,name);
-        auto *gain=new MixerGainSpin;gain->setRange(-60,24);gain->setSingleStep(.5);gain->setValue(session_.engine.channels[std::size_t(c)].gainDb);gain->setDecimals(1);gain->setSuffix(SC_TR(" dB"));gain->setAccessibleName(name+QStringLiteral(" · ")+SC_TR("Gain"));mixer_->setCellWidget(c,1,gain);
+        auto *gainCell=new MixerGainCell(name,session_.engine.channels[std::size_t(c)].gainDb);mixer_->setCellWidget(c,1,gainCell);auto *gain=gainCell->spin();
         auto *mute=new QCheckBox;mute->setChecked(session_.engine.channels[std::size_t(c)].muted);mute->setAccessibleName(name+QStringLiteral(" · ")+SC_TR("Mute"));mixer_->setCellWidget(c,2,mute);
         auto *solo=new QCheckBox;solo->setChecked(session_.solo[std::size_t(c)]);solo->setAccessibleName(name+QStringLiteral(" · ")+SC_TR("Solo"));mixer_->setCellWidget(c,3,solo);
         connect(gain,&QDoubleSpinBox::valueChanged,this,[this,c](double v){if(rebuilding_||locked_)return;if(c>=int(session_.engine.channels.size()))return;change([&](Session &s){s.engine.channels[std::size_t(c)].gainDb=v;});if(channel_->currentIndex()==c)loadChannel();});
@@ -330,7 +360,7 @@ void StudioPanel::rebuildMixer() {
 }
 void StudioPanel::syncMixer() {
     for(int c=0;c<std::min(mixer_->rowCount(),int(session_.engine.channels.size()));++c) {
-        auto *gain=qobject_cast<QDoubleSpinBox *>(mixer_->cellWidget(c,1));auto *mute=qobject_cast<QCheckBox *>(mixer_->cellWidget(c,2));auto *solo=qobject_cast<QCheckBox *>(mixer_->cellWidget(c,3));
+        auto *gain=mixerGainSpin(mixer_,c);auto *mute=qobject_cast<QCheckBox *>(mixer_->cellWidget(c,2));auto *solo=qobject_cast<QCheckBox *>(mixer_->cellWidget(c,3));
         if(!gain||!mute||!solo)continue;
         const QSignalBlocker b1(gain),b2(mute),b3(solo);
         gain->setValue(session_.engine.channels[std::size_t(c)].gainDb);mute->setChecked(session_.engine.channels[std::size_t(c)].muted);solo->setChecked(session_.solo[std::size_t(c)]);
@@ -629,13 +659,20 @@ void StudioPanel::selfTest() {
     if (session_.json() != noEdit) qFatal("Channel name/resize undo lost provenance");
     session_ = provenanceSession; history_ = provenanceHistory; rebuild();
     // The mixer and the selected-channel editor share the same immediate state.
-    auto *mixGain=qobject_cast<QDoubleSpinBox *>(mixer_->cellWidget(0,1));
+    auto *mixGain=mixerGainSpin(mixer_,0);
     const auto gainBeforeWheel=mixGain->value();
     QWheelEvent mixerWheel(QPointF(5,5),QPointF(5,5),QPoint(),QPoint(0,-120),Qt::NoButton,Qt::NoModifier,Qt::NoScrollPhase,false);
     QCoreApplication::sendEvent(mixGain,&mixerWheel);
     if(mixGain->value()!=gainBeforeWheel)qFatal("Scrolling changed a mixer gain");
     mixGain->setValue(-4.5);
     if(session_.engine.channels[0].gainDb!=-4.5 || trim_->value()!=-9)qFatal("Mixer gain is not immediate/shared");
+    auto *mixSlider=mixer_->cellWidget(0,1)->findChild<QSlider *>();
+    if(!mixSlider||mixSlider->value()!=-9)qFatal("Mixer gain slider does not mirror the gain");
+    QCoreApplication::sendEvent(mixSlider,&mixerWheel);
+    if(mixSlider->value()!=-9||mixGain->value()!=-4.5)qFatal("Scrolling changed a mixer gain slider");
+    mixSlider->setValue(-4);
+    if(session_.engine.channels[0].gainDb!=-2.0)qFatal("Mixer gain slider did not change the gain");
+    mixGain->setValue(-4.5);
     qobject_cast<QCheckBox *>(mixer_->cellWidget(0,2))->setChecked(true);
     if(!session_.engine.channels[0].muted || !mute_->isChecked())qFatal("Mixer mute is not immediate/shared");
     undo();undo();
