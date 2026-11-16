@@ -55,6 +55,7 @@
 #include <QDir>
 #include <QDoubleSpinBox>
 #include <QElapsedTimer>
+#include <QPointer>
 #include <QHash>
 #include <QMutex>
 #include <QFile>
@@ -2788,7 +2789,7 @@ public:
 #ifdef Q_OS_WIN
         monitor_.setInterval(1500);
 #else
-        monitor_.setInterval(5000); // safety net only: device changes arrive as pactl subscribe events (inputHotplug_), and each poll blocks the UI thread
+        monitor_.setInterval(15000); // safety net only: device changes arrive as pactl subscribe events (inputHotplug_), and each poll blocks the UI thread
 #endif
         connect(&monitor_, &QTimer::timeout, this, [this] { refreshDevices(); refreshInputs(); if(analysis_->isVisible()){analysis_->refreshSources();if(analysis_->active() && analysis_->onActivity)analysis_->onActivity(analysis_->source(),true);} });
         if(startEnabled)monitor_.start();
@@ -5735,9 +5736,19 @@ int main(int argc, char **argv) {
 #endif
     QTimer conflictMonitor;
     conflictMonitor.setInterval(2000);
+    // The check scans /proc and runs pw-dump (60-160 ms); run it off the UI thread so the live displays do not hitch every 2 s.
+    QPointer<QThread> conflictThread;
+    struct ConflictJoin{QPointer<QThread> &thread;~ConflictJoin(){if(thread)thread->wait(5000);}} conflictJoin{conflictThread}; // declared after `window`, so the worker is finished before the window is destroyed
     QObject::connect(&conflictMonitor,&QTimer::timeout,&window,[&]{
-        const auto reason=soundcurrent::otherEqualizerConflict(kSink);
-        if(!reason.isEmpty()){conflictMonitor.stop();window.stopForConflict();showConflict(reason);qApp->quit();}
+        if(conflictThread)return; // previous check still running
+        conflictThread=QThread::create([&window,&conflictMonitor,&showConflict]{
+            const auto reason=soundcurrent::otherEqualizerConflict(kSink);
+            QMetaObject::invokeMethod(&window,[&window,&conflictMonitor,&showConflict,reason]{
+                if(!reason.isEmpty()){conflictMonitor.stop();window.stopForConflict();showConflict(reason);qApp->quit();}
+            },Qt::QueuedConnection);
+        });
+        QObject::connect(conflictThread,&QThread::finished,conflictThread,&QObject::deleteLater);
+        conflictThread->start();
     });
     conflictMonitor.start();
 
