@@ -30,10 +30,6 @@ Unicode true
   !define AUDIO_SETUP_SOURCE "${SOURCE_ROOT}\packaging\windows\native-audio-setup.ps1"
 !endif
 
-!ifndef CABLE_ZIP
-  !error "Pass /DCABLE_ZIP=path-to-original-VBCABLE_Driver_Pack45.zip (used only by the optional VB-CABLE removal)"
-!endif
-
 !ifndef APP_VERSION
   !define APP_VERSION "1.3.5"
 !endif
@@ -225,7 +221,6 @@ Section "SoundCurrent Studio" main
     File "/oname=cable-setup.ps1" "${SOURCE_ROOT}\packaging\windows\cable-setup.ps1"
     File "/oname=setup-localization.ps1" "${DLL_DIR}\setup-localization.ps1"
     File "/oname=soundcurrent-cable-setup-guard.exe" "${DLL_DIR}\soundcurrent-cable-setup-guard.exe"
-    File "/oname=VBCABLE_Driver_Pack45.zip" "${CABLE_ZIP}"
     File "/oname=VB-CABLE-NOTICE.txt" "${SOURCE_ROOT}\packaging\windows\VB-CABLE-NOTICE.txt"
     nsExec::ExecToStack '"$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy RemoteSigned -File "$INSTDIR\vb-cable-removal\cable-setup.ps1" -Remove -SilentRemoval'
     Pop $0
