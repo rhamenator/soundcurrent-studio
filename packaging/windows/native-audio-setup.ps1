@@ -3,6 +3,9 @@ param([switch]$Check, [switch]$Install, [switch]$Remove, [switch]$Quiet,
       [ValidateSet('eq','studio')][string]$App = 'studio', [string]$Language = '')
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
+# Empty in every normal build. Only the UNOFFICIAL test-mode installer bakes in the
+# SHA-256 of its exact driver manager here (see scripts/build-windows.ps1).
+$UnofficialManagerSha256 = ''
 # Match the app's UTF-8 QProcess output decoder, including Windows PowerShell 5.1.
 [Console]::OutputEncoding = [Text.UTF8Encoding]::new($false)
 $OutputEncoding = [Console]::OutputEncoding
@@ -62,8 +65,10 @@ try {
         if ($LASTEXITCODE -ne 0) { throw (Get-SCSetupText 'The driver package is incomplete or Windows cannot verify its signature.' -Language $Language -Application ('soundcurrent-' + $App)) }
     }
     # Production setup elevates only the signed manager. Unsigned local builds
-    # can check status/package rejection, but cannot request privileged setup.
-    if ((Get-AuthenticodeSignature -LiteralPath $helper).Status -ne 'Valid') {
+    # can check status/package rejection, but cannot request privileged setup,
+    # except the UNOFFICIAL test-mode build whose exact manager hash is pinned.
+    $pinnedUnofficial = $UnofficialManagerSha256 -ne '' -and ((Get-FileHash -LiteralPath $helper -Algorithm SHA256).Hash -eq $UnofficialManagerSha256)
+    if ((Get-AuthenticodeSignature -LiteralPath $helper).Status -ne 'Valid' -and !$pinnedUnofficial) {
         throw (Get-SCSetupText 'The driver manager is not signed. Install a signed SoundCurrent release.' -Language $Language -Application ('soundcurrent-' + $App))
     }
     if ($Install) { $arguments = @('--install',$App,('"{0}"' -f $package),$sid) }

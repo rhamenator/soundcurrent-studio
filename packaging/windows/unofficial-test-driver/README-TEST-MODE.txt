@@ -16,23 +16,35 @@ Windows will load it ONLY if the PC is in TEST MODE and trusts that certificate.
     are responsible for changing your own system's security settings.
 
 This installer does NOT change test mode, Secure Boot or certificate trust for
-you. To try the driver, you do those steps yourself, in an elevated PowerShell,
-then reboot:
+you. Do these steps yourself in an ELEVATED PowerShell, then restart:
 
   bcdedit /set testsigning on
-  certutil -addstore Root          "<install folder>\unofficial-test-mode\SoundCurrent-Local-Test.cer"
-  certutil -addstore TrustedPublisher "<install folder>\unofficial-test-mode\SoundCurrent-Local-Test.cer"
+  certutil -f -addstore Root "<install folder>\unofficial-test-mode\SoundCurrent-Local-Test.cer"
+  certutil -f -addstore TrustedPublisher "<install folder>\unofficial-test-mode\SoundCurrent-Local-Test.cer"
 
-Then use "Audio driver setup" from the Start menu.
+(-f is required: a fresh Windows has no TrustedPublisher store yet.)
+
+After the restart, quit any SoundCurrent app and choose "Audio driver setup"
+from the Start menu. In this unofficial build the driver manager is not
+Authenticode-signed; setup accepts it only because its exact SHA-256 is pinned
+in the setup script. Windows still verifies the driver itself against the
+certificate you trusted above. Manual alternative, in an elevated PowerShell:
+
+  $sid = [Security.Principal.WindowsIdentity]::GetCurrent().User.Value
+  & "<install folder>\soundcurrent-driver-manager.exe" --install studio "<install folder>\audio-driver" $sid
+
+"SoundCurrent Audio" (speakers and microphone) should then appear in Windows
+Sound settings. Tested on Windows 11 Pro build 26100 in a virtual machine.
 
 To undo everything:
 
-  1. Uninstall SoundCurrent Studio (this removes the shared driver if no other
-     SoundCurrent app uses it).
-  2. bcdedit /set testsigning off
-  3. certutil -delstore Root          <thumbprint of SoundCurrent Local Test>
-     certutil -delstore TrustedPublisher <same thumbprint>
-  4. Reboot, then re-enable Secure Boot in firmware if you turned it off.
+  1. Quit SoundCurrent Studio, then in an elevated PowerShell:
+     & "<install folder>\soundcurrent-driver-manager.exe" --remove studio $sid
+  2. Uninstall SoundCurrent Studio.
+  3. bcdedit /set testsigning off
+  4. certutil -delstore Root "SoundCurrent Local Driver Test 2026-11-07"
+     certutil -delstore TrustedPublisher "SoundCurrent Local Driver Test 2026-11-07"
+  5. Restart, then re-enable Secure Boot in firmware if you turned it off.
 
 Driver build: development test bundle from source commit 30d064a (see
 docs/native-windows-driver-user-guide.md). The driver is derived from

@@ -24,6 +24,12 @@ Unicode true
   !error "Pass /DDRIVER_DIR=path-to-SoundCurrent-INF-SYS-CAT-package"
 !endif
 
+!ifdef AUDIO_SETUP_SCRIPT
+  !define AUDIO_SETUP_SOURCE "${AUDIO_SETUP_SCRIPT}"
+!else
+  !define AUDIO_SETUP_SOURCE "${SOURCE_ROOT}\packaging\windows\native-audio-setup.ps1"
+!endif
+
 !ifndef APP_VERSION
   !define APP_VERSION "1.3.5"
 !endif
@@ -85,7 +91,7 @@ Function .onInit
   StrCpy $InstallDriver 0 ; Silent app updates never install/elevate a driver.
   InitPluginsDir
   SetOutPath "$PLUGINSDIR"
-  File "/oname=audio-setup.ps1" "${SOURCE_ROOT}\packaging\windows\native-audio-setup.ps1"
+  File "/oname=audio-setup.ps1" "${AUDIO_SETUP_SOURCE}"
   nsExec::ExecToStack /TIMEOUT=20000 '"$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -File "$PLUGINSDIR\audio-setup.ps1" -Check'
   Pop $DriverCheck
   Pop $0
@@ -136,7 +142,7 @@ Section "SoundCurrent Studio" main
   File "${SOURCE_ROOT}\LICENSE"
   File "${SOURCE_ROOT}\COPYRIGHT"
   File "${SOURCE_ROOT}\README.md"
-  File "/oname=audio-setup.ps1" "${SOURCE_ROOT}\packaging\windows\native-audio-setup.ps1"
+  File "/oname=audio-setup.ps1" "${AUDIO_SETUP_SOURCE}"
   File "${SOURCE_ROOT}\THIRD-PARTY-NOTICES.md"
   SetOutPath "$INSTDIR\licenses"
   File "/oname=SoundCurrent-driver-MS-PL.txt" "${SOURCE_ROOT}\native\windows\virtual-driver\vendor\LICENSE-MS-PL.txt"
