@@ -32,9 +32,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'The driver package is incomplete or its signature cannot be verified.' }
     }
     }
-    # The VB-CABLE package is bundled by the cable route and used by the native
-    # route only for its optional VB-CABLE removal.
-    if ($true) {
+    if ($AudioRoute -ne 'Native') {
         if (!$CablePackage) { $CablePackage = Join-Path $root '.cache\windows-package\VBCABLE_Driver_Pack45.zip' }
         if (!(Test-Path -LiteralPath $CablePackage)) {
             New-Item -ItemType Directory -Force (Split-Path $CablePackage -Parent) | Out-Null
@@ -254,7 +252,7 @@ try {
         # Show the test-mode warning on the license page (a file, not new localized UI text).
         ((Get-Content -Raw -LiteralPath 'packaging\windows\unofficial-test-driver\README-TEST-MODE.txt') + "`r`n`r`n" + '=' * 70 + "`r`n`r`n" + (Get-Content -Raw -LiteralPath 'LICENSE')) | Set-Content -Encoding utf8 $unofficialLicense
     }
-    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage", "/DCABLE_ZIP=$CablePackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver", "/DLICENSE_PAGE_FILE=$unofficialLicense", "/DAUDIO_SETUP_SCRIPT=$unofficialSetup") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
+    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver", "/DLICENSE_PAGE_FILE=$unofficialLicense", "/DAUDIO_SETUP_SCRIPT=$unofficialSetup") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
     $installerScript = if ($AudioRoute -eq 'Native') { 'packaging\windows\soundcurrent-studio-native.nsi' } else { 'packaging\windows\soundcurrent-studio.nsi' }
     & python tests/installer_language_activation.py
     if ($LASTEXITCODE -ne 0) { throw 'Installer language activation regression failed' }
