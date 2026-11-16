@@ -55,6 +55,8 @@
 #include <QDir>
 #include <QDoubleSpinBox>
 #include <QElapsedTimer>
+#include <QHash>
+#include <QMutex>
 #include <QFile>
 #include <QFileDialog>
 #include <QCryptographicHash>
@@ -264,7 +266,36 @@ struct Device {
 struct InputDevice : Device { int channels = 1; };
 
 #ifndef Q_OS_WIN
+QString commandUncached(const QString &program, const QStringList &arguments, int timeout);
+// Read-only pactl queries are cached for a few hundred milliseconds. One refresh cycle used to run ~8 of them back to back on the UI thread (three `list sources`, two `get-default-sink`, ...) and stalled painting for 60-160 ms, which showed up as hitching in the spectrogram and waveform. Any state-changing pactl command, and every pactl subscribe event, invalidates the cache.
+QMutex &commandCacheMutex() { static QMutex mutex; return mutex; }
+QHash<QString, QPair<qint64, QString>> &commandCache() { static QHash<QString, QPair<qint64, QString>> cache; return cache; }
+void invalidateCommandCache() { QMutexLocker lock(&commandCacheMutex()); commandCache().clear(); }
+bool cacheableQuery(const QString &program, const QStringList &arguments) {
+    return program == "pactl" && !arguments.isEmpty() &&
+        (arguments.first() == "get-default-sink" || arguments.first() == "get-default-source" || arguments.contains("list"));
+}
+
 QString command(const QString &program, const QStringList &arguments, int timeout = 5000) {
+    constexpr qint64 kCacheMs = 400;
+    const bool cacheable = cacheableQuery(program, arguments);
+    const QString key = program + '\x1f' + arguments.join('\x1f');
+    if (cacheable) {
+        QMutexLocker lock(&commandCacheMutex());
+        const auto hit = commandCache().constFind(key);
+        if (hit != commandCache().constEnd() && QDateTime::currentMSecsSinceEpoch() - hit->first < kCacheMs) return hit->second;
+    } else if (program == "pactl") {
+        invalidateCommandCache();
+    }
+    const auto output = commandUncached(program, arguments, timeout);
+    if (cacheable) {
+        QMutexLocker lock(&commandCacheMutex());
+        commandCache().insert(key, {QDateTime::currentMSecsSinceEpoch(), output});
+    }
+    return output;
+}
+
+QString commandUncached(const QString &program, const QStringList &arguments, int timeout) {
     QProcess process;
     process.start(program, arguments);
     if (!process.waitForStarted(timeout) || !process.waitForFinished(timeout) ||
@@ -2753,8 +2784,12 @@ public:
         meter_.setProfile(bands_, outputGainDb(), balance_->value(), speakerCorrection());
         meter_.setInterval(levelRefresh_->value());
         inputHotplug_.setSingleShot(true);inputHotplug_.setInterval(150);
-        connect(&inputHotplug_,&QTimer::timeout,this,[this]{refreshInputs();});
+        connect(&inputHotplug_,&QTimer::timeout,this,[this]{refreshDevices();refreshInputs();});
+#ifdef Q_OS_WIN
         monitor_.setInterval(1500);
+#else
+        monitor_.setInterval(5000); // safety net only: device changes arrive as pactl subscribe events (inputHotplug_), and each poll blocks the UI thread
+#endif
         connect(&monitor_, &QTimer::timeout, this, [this] { refreshDevices(); refreshInputs(); if(analysis_->isVisible()){analysis_->refreshSources();if(analysis_->active() && analysis_->onActivity)analysis_->onActivity(analysis_->source(),true);} });
         if(startEnabled)monitor_.start();
 #ifndef Q_OS_WIN
@@ -2763,12 +2798,13 @@ public:
         volumeEvents_.setChildProcessModifier(soundcurrent::terminateWithParent());
         connect(&volumeEvents_, &QProcess::readyReadStandardOutput, this, [this] {
             volumeEventBuffer_.append(volumeEvents_.readAllStandardOutput());
+            invalidateCommandCache();
             if (volumeEventBuffer_.size() > 4096) volumeEventBuffer_.remove(0, volumeEventBuffer_.size() - 4096);
             int newline = 0;
             while ((newline = volumeEventBuffer_.indexOf('\n')) >= 0) {
                 const auto event = volumeEventBuffer_.left(newline);
                 volumeEventBuffer_.remove(0, newline + 1);
-                if(event.contains("on source ") || event.contains("on card "))inputHotplug_.start();
+                if(event.contains("on source ") || event.contains("on card ") || (event.contains("on sink ") && (event.contains("'new'") || event.contains("'remove'"))))inputHotplug_.start();
                 if (event.contains("on server") && power_->isChecked() && audio_.legacyVolumeManaged()) {
                     try { if (defaultSink() != kSink) power_->setChecked(false); }
                     catch (const std::exception &) {}
