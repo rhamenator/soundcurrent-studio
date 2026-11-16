@@ -238,12 +238,20 @@ try {
     $installerSuffix = if ($AudioRoute -eq 'Native') { '-native' } else { '' }
     if ($AudioRoute -eq 'Native' -and $UnofficialTestMode) { $installerSuffix = '-native-UNOFFICIAL-testmode' }
     $installer = Join-Path $root "dist\SoundCurrent-Studio-$version-windows-x64$installerSuffix-setup.exe"
+    $unofficialSetup = Join-Path $root 'build-windows-native\audio-setup-unofficial.ps1'
+    if ($UnofficialTestMode) {
+        # Pin the exact driver manager so only this build may elevate it unsigned.
+        $managerHash = (Get-FileHash -LiteralPath $SignedDriverManager -Algorithm SHA256).Hash
+        $template = Get-Content -Raw -LiteralPath 'packaging\windows\native-audio-setup.ps1'
+        if (!$template.Contains("`$UnofficialManagerSha256 = ''")) { throw 'Setup wrapper pin placeholder is missing' }
+        $template.Replace("`$UnofficialManagerSha256 = ''", "`$UnofficialManagerSha256 = '$managerHash'") | Set-Content -Encoding utf8 $unofficialSetup
+    }
     $unofficialLicense = Join-Path $root 'build-windows-native\unofficial-license-page.txt'
     if ($UnofficialTestMode) {
         # Show the test-mode warning on the license page (a file, not new localized UI text).
         ((Get-Content -Raw -LiteralPath 'packaging\windows\unofficial-test-driver\README-TEST-MODE.txt') + "`r`n`r`n" + '=' * 70 + "`r`n`r`n" + (Get-Content -Raw -LiteralPath 'LICENSE')) | Set-Content -Encoding utf8 $unofficialLicense
     }
-    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver", "/DLICENSE_PAGE_FILE=$unofficialLicense") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
+    [string[]]$audioOptions = if ($AudioRoute -eq 'Native') { @("/DDRIVER_DIR=$SignedDriverPackage") + $(if ($UnofficialTestMode) { @("/DUNOFFICIAL_TESTMODE=$root\packaging\windows\unofficial-test-driver", "/DLICENSE_PAGE_FILE=$unofficialLicense", "/DAUDIO_SETUP_SCRIPT=$unofficialSetup") } else { @() }) } else { @("/DCABLE_ZIP=$CablePackage") }
     $installerScript = if ($AudioRoute -eq 'Native') { 'packaging\windows\soundcurrent-studio-native.nsi' } else { 'packaging\windows\soundcurrent-studio.nsi' }
     & python tests/installer_language_activation.py
     if ($LASTEXITCODE -ne 0) { throw 'Installer language activation regression failed' }

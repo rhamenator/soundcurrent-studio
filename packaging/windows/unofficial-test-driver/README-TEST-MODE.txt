@@ -16,10 +16,7 @@ Windows will load it ONLY if the PC is in TEST MODE and trusts that certificate.
     are responsible for changing your own system's security settings.
 
 This installer does NOT change test mode, Secure Boot or certificate trust for
-you, and its "Audio driver setup" shortcut will refuse to run because the
-driver manager in this unofficial build is not Authenticode-signed (a
-deliberate rule of the normal release). Do these steps yourself in an
-ELEVATED PowerShell, then restart:
+you. Do these steps yourself in an ELEVATED PowerShell, then restart:
 
   bcdedit /set testsigning on
   certutil -f -addstore Root "<install folder>\unofficial-test-mode\SoundCurrent-Local-Test.cer"
@@ -27,7 +24,11 @@ ELEVATED PowerShell, then restart:
 
 (-f is required: a fresh Windows has no TrustedPublisher store yet.)
 
-After the restart, in an elevated PowerShell (quit any SoundCurrent app first):
+After the restart, quit any SoundCurrent app and choose "Audio driver setup"
+from the Start menu. In this unofficial build the driver manager is not
+Authenticode-signed; setup accepts it only because its exact SHA-256 is pinned
+in the setup script. Windows still verifies the driver itself against the
+certificate you trusted above. Manual alternative, in an elevated PowerShell:
 
   $sid = [Security.Principal.WindowsIdentity]::GetCurrent().User.Value
   & "<install folder>\soundcurrent-driver-manager.exe" --install studio "<install folder>\audio-driver" $sid
