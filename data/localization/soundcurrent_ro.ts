@@ -2750,6 +2750,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Pian</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>Zgomot roz</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>Fluxurile PipeWire în timp real acceptă cel mult 64 de canale; utilizați randarea offline pentru configurații mai mari</translation>
     </message>
@@ -2776,8 +2780,16 @@ Doriți să îl ștergeți totuși?</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>Se redă zgomot roz timp de aproximativ %1 secunde</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>Se redă sunet de test silențios. Opriți dacă este inconfortabil.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>Se redă zgomot alb timp de aproximativ %1 secunde</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Waveform</source>
       <translation>Formă de undă</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>Zgomot alb</translation>
     </message>
     <message>
       <source>Whole listening system</source>

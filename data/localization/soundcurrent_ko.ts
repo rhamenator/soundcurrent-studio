@@ -2750,6 +2750,10 @@ Do you want to delete it anyway?</source>
       <translation>피아노</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>핑크 노이즈</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>PipeWire 실시간 스트림은 최대 64개 채널을 지원합니다. 더 큰 채널 배치에는 오프라인 렌더링을 사용하세요</translation>
     </message>
@@ -2776,8 +2780,16 @@ Do you want to delete it anyway?</source>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>핑크 노이즈를 약 %1초 동안 재생 중</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>낮은 음량의 테스트 오디오를 재생 중입니다. 불편하면 중지하세요.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>화이트 노이즈를 약 %1초 동안 재생 중</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Waveform</source>
       <translation>파형</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>화이트 노이즈</translation>
     </message>
     <message>
       <source>Whole listening system</source>
