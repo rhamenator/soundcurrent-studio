@@ -3321,6 +3321,10 @@ Mindenképp törölni szeretné?</translation>
       <translation>Másolat mentése</translation>
     </message>
     <message>
+      <source>Save image</source>
+      <translation>Kép mentése</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>Menti a módosított profilt?</translation>
     </message>

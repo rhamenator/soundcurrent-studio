@@ -3321,6 +3321,10 @@ Do you want to delete it anyway?</source>
       <translation>Αποθήκευση αντιγράφου</translation>
     </message>
     <message>
+      <source>Save image</source>
+      <translation>Αποθήκευση εικόνας</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>Αποθήκευση τροποποιημένου προφίλ;</translation>
     </message>

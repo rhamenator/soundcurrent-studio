@@ -3321,6 +3321,10 @@ Czy na pewno chcesz go usunąć?</translation>
       <translation>Zapisz kopię</translation>
     </message>
     <message>
+      <source>Save image</source>
+      <translation>Zapisz obraz</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>Zapisać zmodyfikowany profil?</translation>
     </message>
