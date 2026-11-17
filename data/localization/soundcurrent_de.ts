@@ -2750,6 +2750,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Klavier</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>Rosa Rauschen</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>PipeWire-Livestreams unterstützen höchstens 64 Kanäle; verwenden Sie Offline-Rendering für größere Kanalbelegungen</translation>
     </message>
@@ -2776,8 +2780,16 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>Rosa Rauschen wird etwa %1 Sekunden lang abgespielt</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>Leises Testaudio wird wiedergegeben. Stoppen Sie es, wenn es unangenehm ist.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>Weißes Rauschen wird etwa %1 Sekunden lang abgespielt</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
     <message>
       <source>Waveform</source>
       <translation>Wellenform</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>Weißes Rauschen</translation>
     </message>
     <message>
       <source>Whole listening system</source>

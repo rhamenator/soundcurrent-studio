@@ -2750,6 +2750,10 @@ Do you want to delete it anyway?</source>
       <translation>鋼琴</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>粉紅雜訊</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>PipeWire 即時串流最多支援 64 個聲道；更大的聲道配置請使用離線算繪</translation>
     </message>
@@ -2776,8 +2780,16 @@ Do you want to delete it anyway?</source>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>正在播放粉紅雜訊，約 %1 秒</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>正在播放低音量測試音訊。如感到不適，請停止。</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>正在播放白雜訊，約 %1 秒</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Waveform</source>
       <translation>波形</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>白雜訊</translation>
     </message>
     <message>
       <source>Whole listening system</source>

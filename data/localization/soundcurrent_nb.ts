@@ -2750,6 +2750,10 @@ Vil du slette den likevel?</translation>
       <translation>Piano</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>Rosa støy</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>PipeWire-strømmer i sanntid støtter høyst 64 kanaler; bruk frakoblet rendering for større kanaloppsett</translation>
     </message>
@@ -2776,8 +2780,16 @@ Vil du slette den likevel?</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>Spiller rosa støy i omtrent %1 sekunder</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>Spiller av stille testlyd. Stopp hvis det er ubehagelig.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>Spiller hvit støy i omtrent %1 sekunder</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Vil du slette den likevel?</translation>
     <message>
       <source>Waveform</source>
       <translation>Bølgeform</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>Hvit støy</translation>
     </message>
     <message>
       <source>Whole listening system</source>

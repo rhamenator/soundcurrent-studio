@@ -2750,6 +2750,10 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Pianoforte</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>Rumore rosa</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>I flussi PipeWire dal vivo supportano al massimo 64 canali; usare il rendering offline per configurazioni più grandi</translation>
     </message>
@@ -2776,8 +2780,16 @@ Vuoi eliminarlo comunque?</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>Riproduzione di rumore rosa per circa %1 secondi</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>Riproduzione di audio di prova a basso volume. Interrompi se provoca fastidio.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>Riproduzione di rumore bianco per circa %1 secondi</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Waveform</source>
       <translation>Forma d’onda</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>Rumore bianco</translation>
     </message>
     <message>
       <source>Whole listening system</source>

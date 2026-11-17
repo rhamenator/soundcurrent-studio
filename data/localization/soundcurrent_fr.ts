@@ -2750,6 +2750,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Piano</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>Bruit rose</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>Les flux PipeWire en direct prennent en charge au maximum 64 canaux ; utilisez le rendu hors ligne pour des configurations plus grandes</translation>
     </message>
@@ -2776,8 +2780,16 @@ Voulez-vous quand même le supprimer ?</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>Lecture d’un bruit rose pendant environ %1 secondes</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>Lecture d’un signal de test à faible niveau. Arrêtez si le son est inconfortable.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>Lecture d’un bruit blanc pendant environ %1 secondes</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Waveform</source>
       <translation>Forme d’onde</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>Bruit blanc</translation>
     </message>
     <message>
       <source>Whole listening system</source>

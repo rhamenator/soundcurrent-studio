@@ -2750,6 +2750,10 @@ Unataka kuifuta hata hivyo?</translation>
       <translation>Piano</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>Kelele ya waridi</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>Mitiririko ya PipeWire ya wakati halisi hutumia hadi chaneli 64; tumia uundaji wa sauti nje ya wakati halisi kwa mipangilio mikubwa zaidi</translation>
     </message>
@@ -2776,8 +2780,16 @@ Unataka kuifuta hata hivyo?</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>Inacheza kelele ya waridi kwa takriban sekunde %1</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>Inacheza sauti hafifu ya majaribio. Sitisha ikiwa inakukera.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>Inacheza kelele nyeupe kwa takriban sekunde %1</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Unataka kuifuta hata hivyo?</translation>
     <message>
       <source>Waveform</source>
       <translation>Umbo la wimbi</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>Kelele nyeupe</translation>
     </message>
     <message>
       <source>Whole listening system</source>

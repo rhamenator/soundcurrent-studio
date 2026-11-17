@@ -2750,6 +2750,10 @@ Do you want to delete it anyway?</source>
       <translation>بيانو</translation>
     </message>
     <message>
+      <source>Pink noise</source>
+      <translation>ضجيج وردي</translation>
+    </message>
+    <message>
       <source>PipeWire live streams support at most 64 channels; use offline rendering for larger layouts</source>
       <translation>تدعم تدفقات PipeWire في الوقت الفعلي ما يصل إلى 64 قناة؛ استخدم التصيير غير الفوري للتخطيطات الأكبر</translation>
     </message>
@@ -2776,8 +2780,16 @@ Do you want to delete it anyway?</source>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
     </message>
     <message>
+      <source>Playing pink noise for about %1 seconds</source>
+      <translation>جارٍ تشغيل الضجيج الوردي لنحو %1 ثانية</translation>
+    </message>
+    <message>
       <source>Playing quiet test audio. Stop if it is uncomfortable.</source>
       <translation>يجري تشغيل صوت اختبار منخفض المستوى. أوقفه إذا كان مزعجًا.</translation>
+    </message>
+    <message>
+      <source>Playing white noise for about %1 seconds</source>
+      <translation>جارٍ تشغيل الضجيج الأبيض لنحو %1 ثانية</translation>
     </message>
     <message>
       <source>Plug in your microphone to select a microphone profile</source>
@@ -4269,6 +4281,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Waveform</source>
       <translation>شكل الموجة</translation>
+    </message>
+    <message>
+      <source>White noise</source>
+      <translation>ضجيج أبيض</translation>
     </message>
     <message>
       <source>Whole listening system</source>
