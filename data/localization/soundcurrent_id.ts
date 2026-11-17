@@ -583,6 +583,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Cerah</translation>
     </message>
     <message>
+      <source>Brown noise</source>
+      <translation>Derau cokelat</translation>
+    </message>
+    <message>
       <source>Browse all equipment profiles / editor</source>
       <translation>Jelajahi semua profil peralatan / editor</translation>
     </message>
@@ -2778,6 +2782,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <source>Playing a logarithmic sweep from 20 Hz to 25 kHz</source>
       <translation>Memutar sapuan logaritmik dari 20 Hz hingga 25 kHz</translation>
       <extracomment>Calibration worker progress while playing a logarithmic frequency sweep. Preserve the physical 20 Hz and 25 kHz bounds; do not change synthesis or sample rate.</extracomment>
+    </message>
+    <message>
+      <source>Playing brown noise for about %1 seconds</source>
+      <translation>Memutar derau cokelat selama sekitar %1 detik</translation>
     </message>
     <message>
       <source>Playing pink noise for about %1 seconds</source>
