@@ -3321,6 +3321,10 @@ Do you want to delete it anyway?</source>
       <translation>Guardar copia</translation>
     </message>
     <message>
+      <source>Save image</source>
+      <translation>Guardar imagen</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>¿Guardar el perfil modificado?</translation>
     </message>

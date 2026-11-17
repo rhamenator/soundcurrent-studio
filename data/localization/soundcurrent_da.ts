@@ -3321,6 +3321,10 @@ Vil du slette den alligevel?</translation>
       <translation>Gem kopi</translation>
     </message>
     <message>
+      <source>Save image</source>
+      <translation>Gem billede</translation>
+    </message>
+    <message>
       <source>Save modified profile?</source>
       <translation>Gem ændret profil?</translation>
     </message>
