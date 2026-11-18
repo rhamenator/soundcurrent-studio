@@ -184,6 +184,12 @@ Launch with `--preview` for an isolated UI session that starts without changing
 playback or microphone routing. Offline rendering and silent meter tests do not
 require a virtual cable or physical multichannel device.
 
+`soundcurrent-studio --help` and `--version` print and exit without opening the
+window. To record documentation videos in an isolated session, start with
+`--preview` and set `SOUNDCURRENT_RECORDING_MONITOR` to the name of an output;
+the Analysis page then reads that output's monitor (read-only, no routing,
+volume or default-device change). Without the variable `--preview` is unchanged.
+
 ## Build and test
 
 Linux desktop dependencies: C++20 compiler, CMake 3.20+, Qt 6.4+ Core/Network/Widgets,

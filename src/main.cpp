@@ -2611,10 +2611,14 @@ public:
             return result;
         };
         analysis_->onActivity = [this,startEnabled](const QString &source,bool active) {
-            if(!active || !startEnabled || (!source.isEmpty() && !soundcurrent::microphone::allowed())){analysisCapture_->stop();return;}
+            // Recording mode (documentation videos): with --preview, SOUNDCURRENT_RECORDING_MONITOR names an output whose monitor feeds the Analysis page. Capture only reads audio; no routing, volume or default-device change is made.
+            const QString recordingMonitor=qApp->arguments().contains("--preview")?qEnvironmentVariable("SOUNDCURRENT_RECORDING_MONITOR"):QString();
+            const bool recording=!startEnabled && !recordingMonitor.isEmpty();
+            if(!active || (!startEnabled && !recording) || (!source.isEmpty() && !soundcurrent::microphone::allowed())){analysisCapture_->stop();return;}
             QString endpoint=source;
             try {
-                if(source.isEmpty()) {
+                if(source.isEmpty() && recording) endpoint=recordingMonitor;
+                else if(source.isEmpty()) {
                     endpoint=audio_.active()?audio_.target():defaultSink();
                     if(endpoint==kSink || endpoint.isEmpty())endpoint=selectedDevice().name;
                 }
@@ -4631,7 +4635,36 @@ private:
 
 } // namespace
 
+// Printed before any Qt or audio start-up, so `soundcurrent-studio --help` works from a terminal without a display and never launches the window.
+static int printCommandLineHelp(bool versionOnly) {
+    if (versionOnly) { std::printf("SoundCurrent Studio %s\n", SOUNDCURRENT_VERSION); return 0; }
+    std::printf(
+        "SoundCurrent Studio %s\n"
+        "Equalizer, channel effects and analysis for your system audio.\n\n"
+        "Usage: soundcurrent-studio [options]\n\n"
+        "Options:\n"
+        "  -h, --help          Show this help and exit.\n"
+        "  --version           Show the version and exit.\n"
+        "  --background        Start hidden in the tray when a tray is available.\n"
+        "  --quit              Ask a running SoundCurrent Studio to quit, restoring normal audio.\n"
+        "  --language TAG      Interface language, for example es, pt-BR, fr, de, ja or zh-Hans.\n"
+        "  --preview           Isolated session: temporary settings, processing off, no change to\n"
+        "                      playback or microphone routing.\n"
+        "  --test-controls     With --preview, enable the controls that need active processing.\n\n"
+        "Environment (with --preview):\n"
+        "  SOUNDCURRENT_RECORDING_MONITOR=NAME  Let the Analysis page read the monitor of output NAME\n"
+        "                      (read-only; used to record documentation videos).\n\n"
+        "Developer tests: --ui-self-test and --localization-ui-test.\n"
+        "Offline rendering of a WAVE file: soundcurrent-studio-render --help\n",
+        SOUNDCURRENT_VERSION);
+    return 0;
+}
+
 int main(int argc, char **argv) {
+    for (int i = 1; i < argc; ++i) {
+        if (std::strcmp(argv[i], "--help") == 0 || std::strcmp(argv[i], "-h") == 0) return printCommandLineHelp(false);
+        if (std::strcmp(argv[i], "--version") == 0) return printCommandLineHelp(true);
+    }
     for (int i = 1; i < argc; ++i) {
         if (std::strcmp(argv[i], "--windows-audio-setup-test") == 0 || std::strcmp(argv[i], "--ui-self-test") == 0 || std::strcmp(argv[i], "--localization-ui-test") == 0 || std::strcmp(argv[i], "--windows-live-manual-route-test") == 0 || std::strcmp(argv[i], "--windows-live-conflict-test") == 0) {
             qInstallMessageHandler([](QtMsgType, const QMessageLogContext &, const QString &message) {
