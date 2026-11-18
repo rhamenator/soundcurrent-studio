@@ -728,6 +728,9 @@ QString gainControls(double outputGainDb, int balancePercent) {
 }
 
 #ifndef Q_OS_WIN
+// A --preview session never starts processing or changes audio routing; enforced here, where playback and microphone processing begin.
+inline bool previewSession() { return QCoreApplication::arguments().contains("--preview"); }
+
 class AudioEngine {
 public:
     bool active() const { return bridge_.running(); }
@@ -753,6 +756,7 @@ public:
 
     void start(const Device &device, const Bands &bands, double outputGainDb = 0.0,
                int balancePercent = 0) {
+        if (previewSession()) throw std::runtime_error("Processing is switched off in a preview session; no audio routing is changed.");
         stop();
         const auto previousDefault = defaultSink();
         bool found = false;
@@ -900,6 +904,7 @@ public:
     QString target() const { return target_.name; }
 
     void start(const InputDevice &device, const MicTuning &adjustments, double gainDb) {
+        if (previewSession()) throw std::runtime_error("Processing is switched off in a preview session; no audio routing is changed.");
         stop();
         soundcurrent::microphone::requireAccess();
         if (device.name.isEmpty() || device.channels < 1 || device.channels > 2)
@@ -5851,12 +5856,14 @@ int main(int argc, char **argv) {
         qCritical("%s", qUtf8Printable(SC_TR("A private user runtime directory is required")));
         return 1;
     }
+    // A preview session has its own instance lock and socket, so it never activates (or is mistaken for) the normal running application.
+    const bool previewInstance = app.arguments().contains("--preview");
     #ifdef Q_OS_WIN
-    const auto socketPath = QString("SoundCurrentStudio-%1").arg(QString::number(qHash(runtime), 16));
+    const auto socketPath = QString(previewInstance ? "SoundCurrentStudio-Preview-%1" : "SoundCurrentStudio-%1").arg(QString::number(qHash(runtime), 16));
 #else
-    const auto socketPath = QDir(runtime).filePath("soundcurrent-studio.sock");
+    const auto socketPath = QDir(runtime).filePath(previewInstance ? "soundcurrent-studio-preview.sock" : "soundcurrent-studio.sock");
 #endif
-    QLockFile instanceLock(QDir(runtime).filePath("soundcurrent-studio.lock"));
+    QLockFile instanceLock(QDir(runtime).filePath(previewInstance ? "soundcurrent-studio-preview.lock" : "soundcurrent-studio.lock"));
     instanceLock.setStaleLockTime(0);
     if (!instanceLock.tryLock(200)) {
         if (instanceLock.error() == QLockFile::LockFailedError) {
@@ -5912,8 +5919,8 @@ int main(int argc, char **argv) {
 #endif
         box.exec();
     };
-    if (!processingGuard.acquire(soundcurrent::processingGuardDirectory())) { showConflict(processingGuard.error()); return 1; }
-    const auto conflict=soundcurrent::otherEqualizerConflict(kSink);
+    if (!previewInstance && !processingGuard.acquire(soundcurrent::processingGuardDirectory())) { showConflict(processingGuard.error()); return 1; }
+    const auto conflict = previewInstance ? QString() : soundcurrent::otherEqualizerConflict(kSink);
     if (!conflict.isEmpty()) { showConflict(conflict); return 1; }
     MainWindow window(!app.arguments().contains("--preview"),
                       app.arguments().contains("--preview") || app.arguments().contains("--test-controls"));
@@ -5936,7 +5943,7 @@ int main(int argc, char **argv) {
         QObject::connect(conflictThread,&QThread::finished,conflictThread,&QObject::deleteLater);
         conflictThread->start();
     });
-    conflictMonitor.start();
+    if (!previewInstance) conflictMonitor.start();   // a preview session never processes audio, so it has nothing to conflict with
 
     QObject::connect(&instanceServer, &QLocalServer::newConnection, &window, [&] {
         while (instanceServer.hasPendingConnections()) {
