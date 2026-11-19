@@ -281,7 +281,8 @@
     "Now playing: %1",
     "Show now playing",
     "Show chords",
-    "Voice"
+    "Voice",
+    "Show quiet notes"
   ],
   "languages": {
     "de": [
@@ -567,7 +568,8 @@
       "Aktuelle Wiedergabe: %1",
       "Aktuelle Wiedergabe anzeigen",
       "Akkorde anzeigen",
-      "Stimme"
+      "Stimme",
+      "Leise Töne anzeigen"
     ],
     "fr": [
       "Français",
@@ -852,7 +854,8 @@
       "En cours de lecture : %1",
       "Afficher la lecture en cours",
       "Afficher les accords",
-      "Voix"
+      "Voix",
+      "Afficher les notes faibles"
     ],
     "es": [
       "Español",
@@ -1137,7 +1140,8 @@
       "Reproduciendo: %1",
       "Mostrar lo que se reproduce",
       "Mostrar acordes",
-      "Voz"
+      "Voz",
+      "Mostrar notas suaves"
     ],
     "it": [
       "Italiano",
@@ -1422,7 +1426,8 @@
       "In riproduzione: %1",
       "Mostra la riproduzione in corso",
       "Mostra gli accordi",
-      "Voce"
+      "Voce",
+      "Mostra le note deboli"
     ],
     "pt-PT": [
       "Português (Portugal)",
@@ -1707,7 +1712,8 @@
       "A reproduzir: %1",
       "Mostrar o que está a reproduzir",
       "Mostrar acordes",
-      "Voz"
+      "Voz",
+      "Mostrar notas baixas"
     ],
     "pt-BR": [
       "Português (Brasil)",
@@ -1992,7 +1998,8 @@
       "Tocando agora: %1",
       "Mostrar o que está tocando",
       "Mostrar acordes",
-      "Voz"
+      "Voz",
+      "Mostrar notas fracas"
     ],
     "nl": [
       "Nederlands",
@@ -2277,7 +2284,8 @@
       "Nu afspelend: %1",
       "Toon wat er wordt afgespeeld",
       "Akkoorden tonen",
-      "Stem"
+      "Stem",
+      "Zachte noten tonen"
     ],
     "pl": [
       "Polski",
@@ -2562,7 +2570,8 @@
       "Odtwarzanie: %1",
       "Pokaż, co jest odtwarzane",
       "Pokaż akordy",
-      "Głos"
+      "Głos",
+      "Pokaż ciche nuty"
     ],
     "cs": [
       "Čeština",
@@ -2847,7 +2856,8 @@
       "Právě hraje: %1",
       "Zobrazit, co hraje",
       "Zobrazit akordy",
-      "Hlas"
+      "Hlas",
+      "Zobrazit tiché tóny"
     ],
     "sk": [
       "Slovenčina",
@@ -3132,7 +3142,8 @@
       "Teraz hrá: %1",
       "Zobraziť, čo hrá",
       "Zobraziť akordy",
-      "Hlas"
+      "Hlas",
+      "Zobraziť tiché tóny"
     ],
     "uk": [
       "Українська",
@@ -3417,7 +3428,8 @@
       "Зараз грає: %1",
       "Показувати, що грає",
       "Показувати акорди",
-      "Голос"
+      "Голос",
+      "Показувати тихі ноти"
     ],
     "ru": [
       "Русский",
@@ -3702,7 +3714,8 @@
       "Сейчас играет: %1",
       "Показывать, что играет",
       "Показывать аккорды",
-      "Голос"
+      "Голос",
+      "Показывать тихие ноты"
     ],
     "el": [
       "Ελληνικά",
@@ -3987,7 +4000,8 @@
       "Αναπαράγεται: %1",
       "Εμφάνιση του τρέχοντος κομματιού",
       "Εμφάνιση συγχορδιών",
-      "Φωνή"
+      "Φωνή",
+      "Εμφάνιση σιγανών νότων"
     ],
     "tr": [
       "Türkçe",
@@ -4272,7 +4286,8 @@
       "Şimdi çalıyor: %1",
       "Çalanı göster",
       "Akorları göster",
-      "Ses"
+      "Ses",
+      "Sessiz notaları göster"
     ],
     "sv": [
       "Svenska",
@@ -4557,7 +4572,8 @@
       "Spelas nu: %1",
       "Visa vad som spelas",
       "Visa ackord",
-      "Röst"
+      "Röst",
+      "Visa svaga toner"
     ],
     "da": [
       "Dansk",
@@ -4842,7 +4858,8 @@
       "Afspiller nu: %1",
       "Vis hvad der afspilles",
       "Vis akkorder",
-      "Stemme"
+      "Stemme",
+      "Vis svage toner"
     ],
     "nb": [
       "Norsk bokmål",
@@ -5127,7 +5144,8 @@
       "Spilles nå: %1",
       "Vis hva som spilles",
       "Vis akkorder",
-      "Stemme"
+      "Stemme",
+      "Vis svake toner"
     ],
     "fi": [
       "Suomi",
@@ -5412,7 +5430,8 @@
       "Nyt soi: %1",
       "Näytä, mitä soi",
       "Näytä soinnut",
-      "Ääni"
+      "Ääni",
+      "Näytä hiljaiset sävelet"
     ],
     "ro": [
       "Română",
@@ -5697,7 +5716,8 @@
       "Se redă acum: %1",
       "Afișează ce se redă",
       "Afișează acordurile",
-      "Voce"
+      "Voce",
+      "Afișează notele slabe"
     ],
     "hu": [
       "Magyar",
@@ -5982,7 +6002,8 @@
       "Most szól: %1",
       "A szóló zene megjelenítése",
       "Akkordok megjelenítése",
-      "Hang"
+      "Hang",
+      "Halk hangok megjelenítése"
     ],
     "ar": [
       "العربية",
@@ -6267,7 +6288,8 @@
       "قيد التشغيل: %1",
       "إظهار ما يتم تشغيله",
       "إظهار الأوتار",
-      "صوت"
+      "صوت",
+      "إظهار النغمات الهادئة"
     ],
     "he": [
       "עברית",
@@ -6552,7 +6574,8 @@
       "מתנגן כעת: %1",
       "הצג מה מתנגן",
       "הצג אקורדים",
-      "קול"
+      "קול",
+      "הצג תווים שקטים"
     ],
     "fa": [
       "فارسی",
@@ -6837,7 +6860,8 @@
       "در حال پخش: %1",
       "نمایش آنچه پخش می‌شود",
       "نمایش آکوردها",
-      "صدا"
+      "صدا",
+      "نمایش نت‌های ضعیف"
     ],
     "zh-Hans": [
       "简体中文",
@@ -7122,7 +7146,8 @@
       "正在播放：%1",
       "显示正在播放的内容",
       "显示和弦",
-      "人声"
+      "人声",
+      "显示较弱的音符"
     ],
     "zh-Hant": [
       "繁體中文",
@@ -7407,7 +7432,8 @@
       "正在播放：%1",
       "顯示正在播放的內容",
       "顯示和弦",
-      "人聲"
+      "人聲",
+      "顯示較弱的音符"
     ],
     "ja": [
       "日本語",
@@ -7692,7 +7718,8 @@
       "再生中: %1",
       "再生中の曲を表示",
       "コードを表示",
-      "ボーカル"
+      "ボーカル",
+      "小さい音も表示"
     ],
     "ko": [
       "한국어",
@@ -7977,7 +8004,8 @@
       "재생 중: %1",
       "재생 중인 항목 표시",
       "코드 표시",
-      "보컬"
+      "보컬",
+      "작은 음 표시"
     ],
     "hi": [
       "हिन्दी",
@@ -8262,7 +8290,8 @@
       "अभी चल रहा है: %1",
       "जो चल रहा है उसे दिखाएँ",
       "कॉर्ड दिखाएँ",
-      "आवाज़"
+      "आवाज़",
+      "धीमे स्वर दिखाएँ"
     ],
     "id": [
       "Bahasa Indonesia",
@@ -8547,7 +8576,8 @@
       "Sedang diputar: %1",
       "Tampilkan yang sedang diputar",
       "Tampilkan kord",
-      "Suara"
+      "Suara",
+      "Tampilkan nada pelan"
     ],
     "vi": [
       "Tiếng Việt",
@@ -8832,7 +8862,8 @@
       "Đang phát: %1",
       "Hiển thị nội dung đang phát",
       "Hiển thị hợp âm",
-      "Giọng hát"
+      "Giọng hát",
+      "Hiển thị nốt nhỏ"
     ],
     "th": [
       "ไทย",
@@ -9117,7 +9148,8 @@
       "กำลังเล่น: %1",
       "แสดงสิ่งที่กำลังเล่น",
       "แสดงคอร์ด",
-      "เสียงร้อง"
+      "เสียงร้อง",
+      "แสดงโน้ตเบา"
     ],
     "sw": [
       "Kiswahili",
@@ -9402,7 +9434,8 @@
       "Inacheza sasa: %1",
       "Onyesha kinachochezwa",
       "Onyesha chodi",
-      "Sauti"
+      "Sauti",
+      "Onyesha noti hafifu"
     ],
     "nn": [
       "Norsk nynorsk",
@@ -9687,7 +9720,8 @@
       "Spelast no: %1",
       "Vis kva som spelast",
       "Vis akkordar",
-      "Stemme"
+      "Stemme",
+      "Vis svake tonar"
     ]
   },
   "requiredCompleteLocales": [

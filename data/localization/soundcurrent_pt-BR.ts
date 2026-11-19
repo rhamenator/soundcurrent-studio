@@ -3542,6 +3542,10 @@ Deseja excluí-lo mesmo assim?</translation>
       <translation>Mostrar marcadores de pico nos níveis de frequência</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>Mostrar notas fracas</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>Mostrar apenas perfis personalizados salvos.</translation>
     </message>

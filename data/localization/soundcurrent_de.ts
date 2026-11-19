@@ -3542,6 +3542,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Spitzenmarkierungen auf den Frequenzpegelanzeigen zeigen</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>Leise Töne anzeigen</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>Nur gespeicherte benutzerdefinierte Profile anzeigen.</translation>
     </message>

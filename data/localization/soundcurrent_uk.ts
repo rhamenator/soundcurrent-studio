@@ -3542,6 +3542,10 @@ Do you want to delete it anyway?</source>
       <translation>Показувати позначки піків на частотних рівнях</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>Показувати тихі ноти</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>Показати лише збережені власні профілі.</translation>
     </message>

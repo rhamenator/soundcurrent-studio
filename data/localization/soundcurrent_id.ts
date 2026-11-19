@@ -3542,6 +3542,10 @@ Apakah Anda tetap ingin menghapusnya?</translation>
       <translation>Tampilkan penanda puncak pada level frekuensi</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>Tampilkan nada pelan</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>Tampilkan hanya profil kustom tersimpan.</translation>
     </message>

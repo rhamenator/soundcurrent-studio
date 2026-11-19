@@ -3542,6 +3542,10 @@ Do you want to delete it anyway?</source>
       <translation>הצגת סמני שיא ברמות התדרים</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>הצג תווים שקטים</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>הצג רק פרופילים מותאמים אישית שנשמרו.</translation>
     </message>

@@ -3542,6 +3542,10 @@ Do you want to delete it anyway?</source>
       <translation>Mostrar marcadores de pico en los niveles de frecuencia</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>Mostrar notas suaves</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>Mostrar solo los perfiles personalizados guardados.</translation>
     </message>

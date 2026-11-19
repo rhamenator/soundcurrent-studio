@@ -3542,6 +3542,10 @@ Vil du likevel sletta ho?</translation>
       <translation>Vis toppmarkørar på frekvensnivåa</translation>
     </message>
     <message>
+      <source>Show quiet notes</source>
+      <translation>Vis svake tonar</translation>
+    </message>
+    <message>
       <source>Show saved custom profiles only.</source>
       <translation>Vis berre lagra eigendefinerte profilar.</translation>
     </message>
