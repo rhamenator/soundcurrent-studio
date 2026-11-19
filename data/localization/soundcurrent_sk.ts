@@ -3520,6 +3520,10 @@ Chcete ho aj tak zmazať?</translation>
       <translation>Zobraziť pokročilé ovládanie</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Zobraziť akordy</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Zobraziť dátum zmeny</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Chcete ho aj tak zmazať?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Zameranie na spev</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Hlas</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

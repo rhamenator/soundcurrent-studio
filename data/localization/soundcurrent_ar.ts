@@ -3520,6 +3520,10 @@ Do you want to delete it anyway?</source>
       <translation>إظهار عناصر التحكم المتقدمة</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>إظهار الأوتار</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>إظهار تاريخ التعديل</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Vocal Focus</source>
       <translation>تركيز على الصوت البشري</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>صوت</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

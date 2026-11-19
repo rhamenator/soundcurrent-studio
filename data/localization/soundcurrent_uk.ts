@@ -3520,6 +3520,10 @@ Do you want to delete it anyway?</source>
       <translation>Показати розширене керування</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Показувати акорди</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Показати дату зміни</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Do you want to delete it anyway?</source>
     <message>
       <source>Vocal Focus</source>
       <translation>Акцент на вокалі</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Голос</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

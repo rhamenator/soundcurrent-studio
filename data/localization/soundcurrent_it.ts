@@ -3520,6 +3520,10 @@ Vuoi eliminarlo comunque?</translation>
       <translation>Mostra controlli avanzati</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Mostra gli accordi</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Mostra data di modifica</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Vuoi eliminarlo comunque?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Voci in evidenza</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Voce</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

@@ -3520,6 +3520,10 @@ Wilt u het toch verwijderen?</translation>
       <translation>Geavanceerde regelaars tonen</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Akkoorden tonen</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Wijzigingsdatum tonen</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Wilt u het toch verwijderen?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Stemfocus</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Stem</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

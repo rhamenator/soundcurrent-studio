@@ -3520,6 +3520,10 @@ Vil du slette den alligevel?</translation>
       <translation>Vis avancerede kontroller</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Vis akkorder</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Vis ændringsdato</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Vil du slette den alligevel?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Vokalfokus</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Stemme</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

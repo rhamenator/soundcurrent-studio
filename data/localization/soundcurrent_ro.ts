@@ -3520,6 +3520,10 @@ Doriți să îl ștergeți totuși?</translation>
       <translation>Afișați controalele avansate</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Afișează acordurile</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Arată data modificării</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Doriți să îl ștergeți totuși?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Accent pe voce</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Voce</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

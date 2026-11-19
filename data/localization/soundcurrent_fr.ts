@@ -3520,6 +3520,10 @@ Voulez-vous quand même le supprimer ?</translation>
       <translation>Afficher les réglages avancés</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Afficher les accords</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Afficher la date de modification</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Voulez-vous quand même le supprimer ?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Mise en avant de la voix</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Voix</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>

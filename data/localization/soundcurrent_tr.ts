@@ -3520,6 +3520,10 @@ Yine de silmek istiyor musunuz?</translation>
       <translation>Gelişmiş kontrolleri göster</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Akorları göster</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Değiştirilme tarihini göster</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -4272,6 +4276,10 @@ Yine de silmek istiyor musunuz?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Vokal odağı</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Ses</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>
