@@ -1,6 +1,6 @@
 Name:           soundcurrent-studio
 %global debug_package %{nil}
-Version:        1.3.8
+Version:        1.3.9
 Release:        1%{?dist}
 Summary:        Adjustable desktop equalizer for PipeWire
 License:        GPL-3.0-only
@@ -61,6 +61,8 @@ DESTDIR=%{buildroot} cmake --install build
 %{_datadir}/doc/soundcurrent-studio/AudioSpectrogram-LICENSE
 
 %changelog
+* Thu Nov 19 2026 rhamenator <rhamenator@gmail.com> - 1.3.9-1
+- Tuner: scrolling note display, Voice instrument, steadier readout; optional Now playing line (Linux).
 * Thu Nov 19 2026 rhamenator <rhamenator@gmail.com> - 1.3.8-1
 - Command-line --help and --version, read-only recording mode for the Analysis page, and --preview hardening.
 

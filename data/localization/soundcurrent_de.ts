@@ -2530,6 +2530,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Notenraster</translation>
     </message>
     <message>
+      <source>Now playing: %1</source>
+      <translation>Aktuelle Wiedergabe: %1</translation>
+    </message>
+    <message>
       <source>Number and date format</source>
       <translation>Zahlen- und Datumsformat</translation>
     </message>
@@ -3516,6 +3520,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <translation>Erweiterte Regler anzeigen</translation>
     </message>
     <message>
+      <source>Show chords</source>
+      <translation>Akkorde anzeigen</translation>
+    </message>
+    <message>
       <source>Show date modified</source>
       <translation>Änderungsdatum anzeigen</translation>
       <extracomment>Whole file-list column visibility action. Show a filesystem size/type/modification-date column; not audio waveform size, effect type, or a date filter. Preserve full sentence grammar rather than joining Show to a noun.</extracomment>
@@ -3526,8 +3534,16 @@ Möchten Sie die Datei trotzdem löschen?</translation>
       <extracomment>Qt fallback file chooser caption. Navigation refers to folders/files, never audio playback or signal routing. User filenames and paths must remain unchanged.</extracomment>
     </message>
     <message>
+      <source>Show now playing</source>
+      <translation>Aktuelle Wiedergabe anzeigen</translation>
+    </message>
+    <message>
       <source>Show peak markers on frequency levels</source>
       <translation>Spitzenmarkierungen auf den Frequenzpegelanzeigen zeigen</translation>
+    </message>
+    <message>
+      <source>Show quiet notes</source>
+      <translation>Leise Töne anzeigen</translation>
     </message>
     <message>
       <source>Show saved custom profiles only.</source>
@@ -4264,6 +4280,10 @@ Möchten Sie die Datei trotzdem löschen?</translation>
     <message>
       <source>Vocal Focus</source>
       <translation>Stimmenfokus</translation>
+    </message>
+    <message>
+      <source>Voice</source>
+      <translation>Stimme</translation>
     </message>
     <message>
       <source>WAVE audio (*.wav)</source>
