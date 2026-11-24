@@ -146,6 +146,29 @@ int renderMain(int argc, char **argv) {
         }
         if (input.empty() || output.empty()) { help(); return 1; }
         if (tail < 0 || tail > 30) throw std::runtime_error("Tail must be between 0 and 30 seconds");
+        const auto validateCliPath = [](const std::filesystem::path &raw, bool mustExist) {
+            const auto fail = [mustExist]() -> void {
+                if (mustExist) throw std::runtime_error("Cannot open input WAVE file");
+                throw std::runtime_error("Cannot create output WAVE file");
+            };
+            const auto u8 = raw.u8string();
+            if (u8.find(u8'\0') != std::u8string::npos) fail();
+            for (const auto &part : raw) {
+                if (part == "..") fail();
+            }
+            const auto normalized = raw.lexically_normal();
+            if (mustExist) {
+                std::error_code ec;
+                const auto canonical = std::filesystem::canonical(normalized, ec);
+                if (ec || !std::filesystem::is_regular_file(canonical, ec)) {
+                    throw std::runtime_error("Cannot open input WAVE file");
+                }
+                return canonical;
+            }
+            return normalized;
+        };
+        input = validateCliPath(input, true);
+        output = validateCliPath(output, false);
         WaveReader reader(input);
         const auto source = reader.format();
         if (!outputChannels) outputChannels = source.channels;

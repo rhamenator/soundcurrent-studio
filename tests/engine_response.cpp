@@ -78,22 +78,24 @@ void identityAndBounds() {
     check(!huge.configure(heavy), "Unbounded delay allocation accepted");
 }
 void eqResponse() {
-    constexpr int channels = 8, frames = 48000;
-    AudioEngine engine(48000, channels);
-    auto s = settingsFor(channels);
+    constexpr std::size_t channels = 8, frames = 48000;
+    AudioEngine engine(48000, static_cast<int>(channels));
+    auto s = settingsFor(static_cast<int>(channels));
     s.channels[5].bands.push_back({1000, -12, 1});
     check(engine.configure(s), "Per-channel EQ rejected");
-    std::vector<float> audio(channels*frames);
-    for (int i = 0; i < frames; ++i) for (int c = 0; c < channels; ++c)
-        audio[i*channels+c] = float(.1 * std::sin(2*std::numbers::pi*1000*i/48000));
+    std::vector<float> audio(channels * frames);
+    for (std::size_t i = 0; i < frames; ++i) for (std::size_t c = 0; c < channels; ++c)
+        audio[i * channels + c] = float(.1 * std::sin(2 * std::numbers::pi * 1000 * static_cast<double>(i) / 48000));
     const auto report = engine.process(audio);
     check(report.validBuffer && !report.clippedSamples, "Quiet EQ tone clipped");
     double flat = 0, cut = 0;
-    for (int i = frames/2; i < frames; ++i) {
-        flat += audio[i*channels] * audio[i*channels];
-        cut += audio[i*channels+5] * audio[i*channels+5];
-        for (int c = 1; c < channels; ++c)
-            if (c != 5) check(audio[i*channels+c] == audio[i*channels], "EQ altered another channel");
+    for (std::size_t i = frames / 2; i < frames; ++i) {
+        const double refSample = audio[i * channels];
+        const double cutSample = audio[i * channels + 5];
+        flat += refSample * refSample;
+        cut += cutSample * cutSample;
+        for (std::size_t c = 1; c < channels; ++c)
+            if (c != 5) check(audio[i * channels + c] == audio[i * channels], "EQ altered another channel");
     }
     check(std::abs(10*std::log10(cut/flat)+12) < .1, "Per-channel 1 kHz cut has wrong response");
     const soundcurrent::EqBand lfe{120, 0, .707, soundcurrent::FilterType::LowPass};
@@ -142,7 +144,7 @@ void delayAndLiveGain() {
     check(std::all_of(tail.begin(), tail.end(), [](float f){return f==0;}), "Bypass restored stale tails");
 }
 void reverbAndBlocks() {
-    constexpr std::size_t channels = 8, frames = 48000*3;
+    constexpr std::size_t channels = 8, frames = std::size_t{48000} * 3;
     auto s = settingsFor(channels);
     s.reverb = {true, .4, .2, 1};
     s.delay = {true, 17, .3, .25};
@@ -176,8 +178,9 @@ void reverbAndBlocks() {
     for (std::size_t i = 0; i < frames; ++i) for (std::size_t c = 0; c < channels; ++c) {
         check(reference[i*channels+c] == planeData[c][i], "Planar and interleaved processing differ");
         if (c != 4) check(reference[i*channels+c]==0, "Reverb crosstalk");
-        if (i < 24000) early += reference[i*channels+c]*reference[i*channels+c];
-        if (i > frames-24000) late += reference[i*channels+c]*reference[i*channels+c];
+        const double sample = reference[i*channels+c];
+        if (i < 24000) early += sample * sample;
+        if (i > frames-24000) late += sample * sample;
     }
     check(early > 1e-5 && late < early*1e-6, "Reverb tail is absent or fails to decay");
     planes[1] = planes[0];
