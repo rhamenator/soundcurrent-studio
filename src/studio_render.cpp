@@ -153,10 +153,10 @@ int renderMain(int argc, char **argv) {
             };
             const auto u8 = raw.u8string();
             if (u8.find(u8'\0') != std::u8string::npos) fail();
-            const auto normalized = raw.lexically_normal();
-            for (const auto &part : normalized) {
+            for (const auto &part : raw) {
                 if (part == "..") fail();
             }
+            const auto normalized = raw.lexically_normal();
             if (mustExist) {
                 std::error_code ec;
                 const auto canonical = std::filesystem::canonical(normalized, ec);
