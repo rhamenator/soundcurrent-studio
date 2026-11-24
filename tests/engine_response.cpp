@@ -90,8 +90,10 @@ void eqResponse() {
     check(report.validBuffer && !report.clippedSamples, "Quiet EQ tone clipped");
     double flat = 0, cut = 0;
     for (std::size_t i = frames / 2; i < frames; ++i) {
-        flat += audio[i * channels] * audio[i * channels];
-        cut += audio[i * channels + 5] * audio[i * channels + 5];
+        const double refSample = audio[i * channels];
+        const double cutSample = audio[i * channels + 5];
+        flat += refSample * refSample;
+        cut += cutSample * cutSample;
         for (std::size_t c = 1; c < channels; ++c)
             if (c != 5) check(audio[i * channels + c] == audio[i * channels], "EQ altered another channel");
     }
@@ -176,8 +178,9 @@ void reverbAndBlocks() {
     for (std::size_t i = 0; i < frames; ++i) for (std::size_t c = 0; c < channels; ++c) {
         check(reference[i*channels+c] == planeData[c][i], "Planar and interleaved processing differ");
         if (c != 4) check(reference[i*channels+c]==0, "Reverb crosstalk");
-        if (i < 24000) early += reference[i*channels+c]*reference[i*channels+c];
-        if (i > frames-24000) late += reference[i*channels+c]*reference[i*channels+c];
+        const double sample = reference[i*channels+c];
+        if (i < 24000) early += sample * sample;
+        if (i > frames-24000) late += sample * sample;
     }
     check(early > 1e-5 && late < early*1e-6, "Reverb tail is absent or fails to decay");
     planes[1] = planes[0];
