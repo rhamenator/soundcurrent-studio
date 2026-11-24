@@ -1,6 +1,6 @@
 Name:           soundcurrent-studio
 %global debug_package %{nil}
-Version:        1.3.9
+Version:        1.3.10
 Release:        1%{?dist}
 Summary:        Adjustable desktop equalizer for PipeWire
 License:        GPL-3.0-only
